@@ -20,9 +20,11 @@ exports.LoginPage = class LoginPage {
     async goToLoginForm() {
         console.log('test OK');
         // await this.page.getByText('text=MyLV').click();
-        await expect(this.page.getByRole('button', { name: 'MyLV' })).toBeVisible({timeout: 500})
-        await this.page.getByRole('button', { name: 'MyLV' }).click();
-        await expect(this.page.getByRole('heading', { name: 'WELCOME BACK' })).toBeVisible({ timeout: 8000 });
+        await expect(this.page.getByRole('button', { name: 'MyLV' })).toBeVisible()
+        await this.page.getByRole('button', { name: 'MyLV' }).click({timeout: 800});
+        await expect(this.page.getByRole('heading', { name: 'WELCOME BACK' })).toBeVisible({ timeout: 10000 });
+        // await expect(this.page.getByText('p', { name: 'Sign in with your email address and your password' })).toBeVisible({ timeout: 10000 });
+        // Sign in with your email address and your password
         // await expect(this.loginFormPageTitle).toBeVisible();
     }
 

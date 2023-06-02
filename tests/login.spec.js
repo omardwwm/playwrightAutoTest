@@ -1,6 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('../pages/loginPage');
 const { HomePage } = require('../pages/homePage');
+const { PDPPage } = require('../pages/PDPPage');
 
 // 1- add a login failure test
 // 2- Refcartor this part to use goToLoginForm and fillCredentials as before each test (loginSuccess and loginFalilure)
@@ -19,6 +20,7 @@ const { HomePage } = require('../pages/homePage');
 test('Login Success', async ({ page }) => {
     const homePage = new HomePage(page);
     const loginPage = new LoginPage(page);
+    const pdpPage = new PDPPage(page);
     await homePage.goto();
     // await homePage.getStarted();
     await homePage.isCurrentEnvT1();
@@ -26,4 +28,6 @@ test('Login Success', async ({ page }) => {
     await loginPage.goToLoginForm();
     await loginPage.fillCredentials();
     await loginPage.successLoginCheck();
+    await pdpPage.serchProduct();
+    await pdpPage.fillSkuId();
 });
