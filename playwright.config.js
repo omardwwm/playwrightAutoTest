@@ -20,6 +20,13 @@ const config = {
 
         // Artifacts
         screenshot: 'only-on-failure',
+        trace: 'on'
+    },
+    helpers: {
+        Playwright: {
+            // ...
+            video: true
+        }
     },
 
     projects: [

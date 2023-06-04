@@ -24,7 +24,17 @@ test('Login Success', async ({ page }) => {
     await homePage.isCurrentEnvT1();
     await homePage.switchToT1Env();
     await pdpPage.goSerchProduct();
-    await pdpPage.fillSkuId();
-    await pdpPage.executeSearchProduct();
-    await pdpPage.goToProductPage();
+    await pdpPage.placeOneProductInCart('LP0001', 'Apogée');
+    await pdpPage.continueShopping();
+    await pdpPage.goSerchProduct();
+    await pdpPage.placeOneProductInCart('N41414', 'Keepall Bandoulière 55');
+    await pdpPage.goToMyCart();
+    await pdpPage.attacheEmailToCart('omar.boudraa.Ext+2@louisvuitton.com');
+    await pdpPage.continueCheckout();
+
+    // await pdpPage.fillSkuId();
+    // await pdpPage.executeSearchProduct();
+    // await pdpPage.goToProductPage();
+    // await pdpPage.placeInCart();
+    // await pdpPage.verifyIfAddedOK();
 });
