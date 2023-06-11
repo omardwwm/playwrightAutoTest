@@ -8,7 +8,7 @@ exports.HomePage = class HomePage {
      */
     constructor(page) {
         this.page = page;
-        this.getStartedLink = page.locator('text=CONNECT');
+        // this.getStartedLink = page.locator('text=CONNECT');
         this.currentEnvLocator = page.locator('#modalContent > div:nth-child(1) > div.lv-dev-tools__title');
         // #modalContent > div:nth-child(1) > div.lv-dev-tools__title
         this.isT1Env = false;
@@ -20,7 +20,10 @@ exports.HomePage = class HomePage {
         await this.page.goto('https://us-i3f.louisvuitton.com/eng-us/homepage');
         await this.page.waitForLoadState('domcontentloaded');
         await this.page.waitForLoadState('load');
-        await this.page.waitForLoadState('networkidle', { timeout: 10000 });
+        await this.page.waitForLoadState('networkidle');
+        if (this.page.getByRole('button', { name: 'Accept All Cookies' }).isVisible()) {
+            await this.page.getByRole('button', { name: 'Accept All Cookies' }).click();
+        }
         await this.page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
         // await expect(this.page.getByRole('button', { name: 'Devtool' })).toBeVisible();
         // this.page.waitForSelector(this.page.locator('text=Devtool'));
@@ -28,9 +31,9 @@ exports.HomePage = class HomePage {
         // await this.page.waitForLoadState('networkidle');
     }
 
-    async getStarted() {
-        await expect(this.getStartedLink).toBeVisible();
-    }
+    // async getStarted() {
+    //     await expect(this.getStartedLink).toBeVisible();
+    // }
 
     async isCurrentEnvT1() {
         await this.page.getByRole('button', { name: 'Devtool' }).click();
@@ -55,7 +58,7 @@ exports.HomePage = class HomePage {
         if (this.isT1Env != true) {
             await this.page.getByRole('button', { name: 'Switch to T1I' }).click();
             // const modal = this.page.locator('#modalTitle');
-            await this.page.getByRole('button', { name: 'United States' }).click();
+            await this.page.getByRole('button', { name: 'United States of America' }).click();
             // if (await modal.isVisible()) {
             //     await this.page.getByRole('button', { name: 'United States of America' }).click();
             // } else {

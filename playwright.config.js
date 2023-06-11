@@ -16,11 +16,12 @@ const config = {
         headless: true,
 
         // Context options
-        viewport: { width: 1280, height: 720 },
+        // viewport: { width: 1280, height: 720 },
 
         // Artifacts
         screenshot: 'only-on-failure',
-        trace: 'on'
+        trace: 'on',
+        video: 'on'
     },
     helpers: {
         Playwright: {

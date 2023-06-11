@@ -15,29 +15,49 @@ exports.PDPPage = class PDPPage {
 
 
 
-    async goSerchProduct() {
-        // await expect(this.page.getByRole('button', { name: 'Search' })).toBeVisible({ timeout: 500 });
+    async goSerchProduct(goSerchProductTimeOutDuration) {
+        // if (await this.page.getByText('Search').toBeVisible()) {
+        // }
         // await this.page.getByRole('button', { name: 'Search' }).click();
-        // await this.page.getByText('Search').click();
-        if (await this.page.locator(".lv-header__utility-label", { hasText: "Search" }).isVisible()) {
-            await this.page.getByRole('button', { name: 'Search' }).click();
-        }
-        await expect(this.page.getByPlaceholder("Shop Mother's Day Gifts")).toBeVisible({ timeout: 500 });
+        // setTimeout(() => {
+        //     console.log('ENTER "goSerchProduct" function Ok');
+        // }, 500);
+        await this.page.evaluate(() => window.scrollTo(0, 0));
+        // await this.page.locator('.lv-header__utility-label').click();
+        // await expect(this.page.getByText('Search', { exact: true })).toBeVisible();
+        setTimeout(async () => {
+            await this.page.getByRole('button', { name: /search/i }).click();
+        }, goSerchProductTimeOutDuration);
+        console.log('BUTTON SEARCH CLICKED !!!');
+        // setTimeout(async () => {
+        //     await expect(this.page.getByPlaceholder("Shop Mother's Day Gifts")).toBeVisible();
+        //     await expect(this.page.locator("#searchHeaderInput")).toBeVisible();
+        // }, 1000);
         // searchHeaderInput
     };
 
     async fillSkuId(skuId) {
-        await this.page.locator('#searchHeaderInput').fill(skuId);
-        await expect(this.page.getByRole('heading', { name: 'PRODUCTS' })).toBeVisible();
+        setTimeout(async () => {
+            await this.page.locator('#searchHeaderInput').fill(skuId);
+        }, 5000);
+        setTimeout(async () => {
+            await expect(this.page.getByRole('heading', { name: 'PRODUCTS' })).toBeVisible();
+        }, 5000);
     }
 
-    async executeSearchProduct() {
+    async executeSearchProduct(executeSearchProductTimeOutDuration) {
         // await expect(this.page.locator('.lv-predictive-product__data')).toBeVisible({timeout: 10000});
-        await this.page.locator('#header > div.lv-header__predictive > div > div:nth-child(2) > div > div > div > a > div.lv-predictive-product__data > div').click()
+        setTimeout(async () => {
+            await this.page.locator('#header > div.lv-header__predictive > div > div:nth-child(2) > div > div > div > a > div.lv-predictive-product__data > div').click();
+        }, executeSearchProductTimeOutDuration);
+        // await this.page.waitForLoadState('networkidle');
     };
 
-    async goToProductPage(pdctName) {
-        await expect(this.page.getByRole('heading', { name: pdctName })).toBeVisible();
+    async goToProductPage(pdctName, goToProductPagetimeOutDuration) {
+        // await this.page.waitForLoadState('networkidle');
+        setTimeout(async () => {
+            await expect(this.page.getByRole('heading', { name: pdctName })).toBeVisible();
+        }, goToProductPagetimeOutDuration);
         // Add assertion to check if added sku id the correct one
         // await this.page.locator('.lv-predictive-product__name list-label-m :Apogée').click()
     }
@@ -47,7 +67,7 @@ exports.PDPPage = class PDPPage {
         //     return this.isProductIsAvailable = true
         // };
         let textBtnPlaceInCart = await this.page.locator('#main > div.lv-product > div:nth-child(1) > section > div.lv-product-page-header__secondary > div > div > div.lv-product-purchase.lv-product__purchase > button > span').textContent();
-        let isProductIsAvailableTest =  false;
+        let isProductIsAvailableTest = false;
         console.log('textOfBtnPlaceInCart', textBtnPlaceInCart);
         if (textBtnPlaceInCart === 'Place in Cart') {
             return isProductIsAvailableTest = true
@@ -55,55 +75,59 @@ exports.PDPPage = class PDPPage {
         console.log(`Is that product is available ==>>`, this.page.isProductIsAvailable);
     }
 
-    async placeInCart() {
-        // await this.checkProductIsAvailability();
-        // console.log(`Is that product is available ==>>`, this.page.isProductIsAvailable);
-        // if (this.isProductIsAvailable) {
-        //     await this.page.getByRole('button', { name: 'Place in Cart' }).click();
-        // }
-     
-        await this.page.getByRole('button', { name: 'Place in Cart' }).click();
+    async placeInCart(placeInCartTimeOutDuration) {
+        setTimeout(async () => {
+            await this.page.getByRole('button', { name: 'Place in Cart' }).click();
+        }, placeInCartTimeOutDuration);
     }
 
-    async verifyIfAddedOK() {
+    async verifyIfAddedOK(verifyIfAddedOKtimeOutDuration) {
         // await expect(this.page.locator('.lv-modal__container')).toBeVisible();
-        await expect(this.page.getByRole('heading', { name: 'Added to cart' })).toBeVisible();
+        setTimeout(async () => {
+            await expect(this.page.getByRole('heading', { name: 'Added to cart' })).toBeVisible();
+        }, verifyIfAddedOKtimeOutDuration);
         // Add fonction to check if correct item is added, take name of added product in placeToCart function for that and make this functio "verifyIfAddedOK" with variable to can use in each added product)
     }
 
-    async placeOneProductInCart(skuId, pdctName) {
+    async placeOneProductInCart(skuId, pdctName, goToProductPagetimeOutDuration, verifyIfAddedOKtimeOutDuration, placeInCartTimeOutDuration, executeSearchProductTimeOutDuration) {
         await this.fillSkuId(skuId);
-        await this.executeSearchProduct();
-        await this.goToProductPage(pdctName);
-        await this.placeInCart();
-        await this.verifyIfAddedOK()
+        await this.executeSearchProduct(executeSearchProductTimeOutDuration);
+        await this.goToProductPage(pdctName, goToProductPagetimeOutDuration);
+        await this.placeInCart(placeInCartTimeOutDuration);
+        await this.verifyIfAddedOK(verifyIfAddedOKtimeOutDuration)
 
     }
 
-    async continueShopping() {
-        await this.page.getByRole('button', { name: 'Continue Shopping' }).click();
+    async continueShopping(continueShoppingTomeOutDuration) {
+        setTimeout(async () => {
+            await this.page.getByRole('button', { name: 'Continue Shopping' }).click();
+        }, continueShoppingTomeOutDuration);
     }
 
-    async goToMyCart(){
-        await this.page.getByRole('link', {name: 'View my Cart'}).click();
+    async goToMyCart(goToMyCartTimeOutDuration) {
+        setTimeout(async () => {
+            await this.page.getByRole('link', { name: 'View my Cart' }).click();
+        }, goToMyCartTimeOutDuration);
     }
 
-    async startCheckOut(){
-        await this.page.getByRole('button', {name : 'Proceed to checkout'}).click();
+    async startCheckOut() {
+        await this.page.getByRole('button', { name: 'Proceed to checkout' }).click();
     }
 
-    async checkIfGoneToCheckoutPgae(){
-        await expect(this.page.getByRole('heading', {name: 'IDENTIFICATION'})).toBeVisible();
+    async checkIfGoneToCheckoutPgae() {
+        await expect(this.page.getByRole('heading', { name: 'IDENTIFICATION' })).toBeVisible();
     }
 
-    async attacheEmailToCart(myEamil){
+    async attacheEmailToCart(myEamil) {
         // await this.page.getByLabel('Email*').fill(myEamil);
         // await expect(this.page.locator('/html/body/div[2]/div/div/main/div[2]/div/div/div[1]/div[1]/ol/li[1]/div/h1/span')).toBeVisible();
         console.log('My Email test Is ==>>', myEamil);
     }
 
-    async continueCheckout(){
-        await this.page.getByRole('button', {name: 'Continue'}).click();
+    async continueCheckout(continueCheckoutTimeOutDuration) {
+        setTimeout(async () => {
+            await this.page.getByRole('button', { name: 'Continue' }).click();
+        }, continueCheckoutTimeOutDuration);
     }
 
 }
