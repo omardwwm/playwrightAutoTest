@@ -4,7 +4,7 @@ const fs = require('fs');
 // Function to run all tests for a specific combination
 const runTest = () => {
     return new Promise((resolve) => {
-        const command = `cross-env npx playwright test`;
+        const command = `npx playwright test`;
         exec(command, (error, stdout, stderr) => {
             if (error) {
                 console.error(`Error executing ${command}: ${error.message}`);
