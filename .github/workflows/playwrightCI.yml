@@ -24,9 +24,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "20"
+          cash: "npm"
+          cash-dependency-path: "package-lock.json"
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run Playwright tests
         run: node utils/run-test.js
