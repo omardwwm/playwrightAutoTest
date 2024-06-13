@@ -4,7 +4,6 @@ const fs = require('fs');
 // Function to run all tests for a specific combination
 const runTest = () => {
     return new Promise((resolve) => {
-        deleteOldAllureResults();
         const command = "npx playwright test";
         exec(command, (error, stdout, stderr) => {
             if (error) {
@@ -21,17 +20,19 @@ const runTest = () => {
     });
 };
 
+// Function to delete old Allure results
 const deleteOldAllureResults = () => {
-    console.log('DELETING OLD REPORTS ALLURE');
-    if (fs.existsSync('allure-results')) {
-        fs.rmdirSync('allure-results'), { recursive: true };
+    const allureResultsDir = 'allure-results';
+    if (fs.existsSync(allureResultsDir)) {
+        fs.rmSync(allureResultsDir, { recursive: true, force: true });
     }
 };
+
 
 // Function to generate Allure report
 const generateAllureReport = () => {
     return new Promise((resolve, reject) => {
-        exec('allure generate ./allure-results --clean', (error, stdout, stderr) => {
+        exec('npx allure generate allure-results --clean', (error, stdout, stderr) => {
             if (error) {
                 console.error(`Error generating Allure report: ${error.message}`);
                 reject(error);

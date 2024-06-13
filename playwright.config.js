@@ -1,6 +1,6 @@
-import { PlaywrightTestConfig } from '@playwright/test';
+import { defineConfig } from '@playwright/test';
 
-const config = {
+module.exports = defineConfig({
     // Timeout
     // timeout: 80000,
     expect: {
@@ -15,21 +15,21 @@ const config = {
     reporter: [
         ["line"],
         [
-            "allure-playwright",
-            {
-                detail: true,
-                outputFolder: "allure-results",
-                suiteTitle: true,
-                categories: [
-                    {
-                        name: "Outdated tests",
-                        messageRegex: ".*FileNotFound",
-                    },
-                ],
-                environmentInfo: {
-                    framework: "playwright"
-                }
-            }
+            "allure-playwright"
+            // {
+            //     detail: true,
+            //     outputFolder: "allure-results",
+            //     suiteTitle: true,
+            //     categories: [
+            //         {
+            //             name: "Outdated tests",
+            //             messageRegex: ".*FileNotFound",
+            //         },
+            //     ],
+            //     environmentInfo: {
+            //         framework: "playwright"
+            //     }
+            // }
         ]
     ],
 
@@ -66,6 +66,6 @@ const config = {
         //     use: { browserName: 'webkit' },
         // },
     ],
-};
+});
 
-export default config;
+
