@@ -17,7 +17,11 @@ exports.HomePage = class HomePage {
         await this.page.waitForLoadState('networkidle');
     };
 
-    async checkH1Heading() {
+    async checkH1HeadingKO() {
+        await expect(this.page.locator('#signup-modal-title')).toBeVisible();
+    };
+
+    async checkH1HeadingOK() {
         await expect(this.page.locator('#signup-modal-title')).toBeHidden();
     }
 
