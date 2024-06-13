@@ -47,8 +47,9 @@ const generateAllureReport = () => {
 // Run the tests
 (async () => {
     const results = [];
+    console.log('start executions');
     deleteOldAllureResults();
- 
+
     const result = await runTest();
     results.push(result);
 
