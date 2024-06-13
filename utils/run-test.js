@@ -21,6 +21,7 @@ const runTest = () => {
 };
 
 const deleteOldAllureResults = () => {
+    console.log('DELETING OLD REPORTS ALLURE');
     if (fs.existsSync('allure-results')) {
         fs.rmdirSync('allure-results'), { recursive: true };
     }
@@ -29,7 +30,7 @@ const deleteOldAllureResults = () => {
 // Function to generate Allure report
 const generateAllureReport = () => {
     return new Promise((resolve, reject) => {
-        exec('npx allure generate --clean', (error, stdout, stderr) => {
+        exec('npx allure generate allure-results -o allure-reports --clean', (error, stdout, stderr) => {
             if (error) {
                 console.error(`Error generating Allure report: ${error.message}`);
                 reject(error);
