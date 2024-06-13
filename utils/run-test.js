@@ -4,6 +4,7 @@ const fs = require('fs');
 // Function to run all tests for a specific combination
 const runTest = () => {
     return new Promise((resolve) => {
+        deleteOldAllureResults();
         const command = "npx playwright test";
         exec(command, (error, stdout, stderr) => {
             if (error) {
