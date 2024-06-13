@@ -47,11 +47,8 @@ const generateAllureReport = () => {
 // Run the tests
 (async () => {
     const results = [];
-    // Determine the combinations to run based on the provided arguments
-    // const combinations = determineCombinations(givenLocale, givenRealm, givenEnvironment);
     deleteOldAllureResults();
-    // for (const { locale, realm, environment } of combinations) {
-    // }
+ 
     const result = await runTest();
     results.push(result);
 
