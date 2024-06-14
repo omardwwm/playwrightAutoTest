@@ -1,4 +1,4 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Fri Jun 14 22:44:39 UTC 2024","Fri Jun 14 22:44:42 UTC 2024","3040","Chrome","tests/home.spec.js","","","","GO HOME PAGE OK",""
-"broken","Fri Jun 14 22:44:42 UTC 2024","Fri Jun 14 22:45:14 UTC 2024","31381","Chrome","tests/homeNP.spec.js","","","","Go home page KO",""
-"failed","Fri Jun 14 22:44:39 UTC 2024","Fri Jun 14 22:44:42 UTC 2024","3037","Chrome","tests/failedTest.spec.js","","","","Test failed results",""
+"failed","Fri Jun 14 22:55:08 UTC 2024","Fri Jun 14 22:55:14 UTC 2024","5823","Chrome","tests/failedTest.spec.js","","","","Test failed results",""
+"passed","Fri Jun 14 22:55:08 UTC 2024","Fri Jun 14 22:55:14 UTC 2024","5898","Chrome","tests/home.spec.js","","","","GO HOME PAGE OK",""
+"broken","Fri Jun 14 22:55:15 UTC 2024","Fri Jun 14 22:55:46 UTC 2024","31405","Chrome","tests/homeNP.spec.js","","","","Go home page KO",""
