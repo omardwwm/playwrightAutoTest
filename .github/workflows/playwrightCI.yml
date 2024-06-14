@@ -33,12 +33,20 @@ jobs:
       - name: Install Playwright
         run: npx playwright install --with-deps
 
+      - name: Install Allure CLI
+        run: |
+          mkdir -p /usr/local/bin/allure
+          cd /usr/local/bin/allure
+          curl -OL https://github.com/allure-framework/allure2/releases/download/2.17.2/allure-2.17.2.tgz
+          tar -xzf allure-2.17.2.tgz
+          echo 'export PATH=$PATH:/usr/local/bin/allure/allure-2.17.2/bin' >> $GITHUB_ENV
+
+      - name: Verify allure version
+        run: npx allure --version    
+
       - name: Run Playwright tests
         run: node utils/run-test.js --verbose
         continue-on-error: true
-
-      - name: Verify allure version
-        run: npx allure --version
 
       - name: List allure results
         run: ls -alh  allure-results
