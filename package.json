@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node utils/run-testV2.js"
+    "test": "node utils/run-test.js"
   },
   "author": "",
   "license": "ISC",
