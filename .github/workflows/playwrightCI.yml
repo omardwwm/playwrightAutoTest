@@ -54,6 +54,7 @@ jobs:
           path: allure-results
 
       - name: Upload Allure Report
+        if: success() && steps.generate-report.outputs.report-generated == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
