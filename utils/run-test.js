@@ -32,7 +32,7 @@ const deleteOldAllureResults = () => {
 // Function to generate Allure report
 const generateAllureReport = () => {
     return new Promise((resolve, reject) => {
-        exec('npx allure generate allure-results --clean -o allure-report', (error, stdout, stderr) => {
+        exec('npx allure generate allure-results -o allure-report --clean ', (error, stdout, stderr) => {
             if (error) {
                 console.error(`Error generating Allure report: ${error.message}`);
                 reject(error);
