@@ -70,6 +70,12 @@ const generateAllureReport = () => {
     // Optionally, exit with a non-zero status if any tests failed
     const failedTests = results.filter((result) => result.status === "failed");
     if (failedTests.length > 0) {
+      // Generate Allure report regardless of test results
+      try {
+        await generateAllureReport();
+      } catch (error) {
+        console.error(`Error generating Allure report: ${error}`);
+      }
       process.exit(1);
     }
   } catch (error) {
