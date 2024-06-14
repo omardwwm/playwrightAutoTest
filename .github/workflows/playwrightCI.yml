@@ -54,12 +54,11 @@ jobs:
           path: allure-results
 
       - name: Upload Allure Report
-        if: always()
-        continue-on-error: true
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: allure-report
+          if-no-files-found: warn
 
       - name: Deploy Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
