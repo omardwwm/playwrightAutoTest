@@ -54,14 +54,15 @@ jobs:
           path: allure-results
 
       - name: Upload Allure Report
-        if: success() && steps.generate-report.outputs.report-generated == 'true'
+        if: always()
+        continue-on-error: true
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: allure-report
 
       - name: Deploy Allure Report to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./allure-report
