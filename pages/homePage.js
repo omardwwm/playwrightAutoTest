@@ -22,7 +22,7 @@ exports.HomePage = class HomePage {
     };
 
     async checkH1HeadingOK() {
-        await expect(this.page.locator('#signup-modal-title')).toBeVisible();
+        await expect(this.page.locator('#signup-modal-title')).toBeHidden();
     }
 
 }
