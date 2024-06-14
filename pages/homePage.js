@@ -24,8 +24,6 @@ exports.HomePage = class HomePage {
     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
   }
   async failedTest() {
-    await expect(this.page.locator("#signup-modal-title")).toContainText(
-      "Test is Failed"
-    );
+    expect(1).toEqual(2);
   }
 };
