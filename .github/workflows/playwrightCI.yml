@@ -36,10 +36,6 @@ jobs:
       - name: Install Allure CLI
         run: npm install allure-commandline
 
-      - name: Verify Allure CLI Installation
-        run: allure --version
-        continue-on-error: true
-
       - name: Verify allure version
         run: npx allure --version
         continue-on-error: true
@@ -56,6 +52,12 @@ jobs:
         with:
           name: allure-results
           path: allure-results
+
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: allure-report    
 
       - name: Get Allure history
         uses: actions/checkout@v4
