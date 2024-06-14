@@ -1,0 +1,1 @@
+[{"uid":"6c3602b5f8042957","name":"GO HOME PAGE OK","time":{"start":1718383237116,"stop":1718383240270,"duration":3154},"status":"passed","severity":"normal"},{"uid":"358ab553c4d5d984","name":"Go home page KO","time":{"start":1718383237123,"stop":1718383240360,"duration":3237},"status":"passed","severity":"normal"}]

@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Jun 14 16:40:37 UTC 2024","Fri Jun 14 16:40:40 UTC 2024","3154","Chrome","tests/home.spec.js","","","","GO HOME PAGE OK",""
+"passed","Fri Jun 14 16:40:37 UTC 2024","Fri Jun 14 16:40:40 UTC 2024","3237","Chrome","tests/homeNP.spec.js","","","","Go home page KO",""
