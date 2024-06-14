@@ -1,28 +1,31 @@
 // homePage.js
-const { expect } = require('@playwright/test');
+const { expect } = require("@playwright/test");
 
 exports.HomePage = class HomePage {
+  /**
+   * @param {import('@playwright/test').Page} page
+   */
+  constructor(page) {
+    this.page = page;
+  }
 
-    /**
-     * @param {import('@playwright/test').Page} page
-     */
-    constructor(page) {
-        this.page = page;
-    }
+  async goto() {
+    await this.page.goto("https://stackoverflow.com/");
+    await this.page.waitForLoadState("domcontentloaded");
+    await this.page.waitForLoadState("load");
+    await this.page.waitForLoadState("networkidle");
+  }
 
-    async goto() {
-        await this.page.goto('https://stackoverflow.com/');
-        await this.page.waitForLoadState('domcontentloaded');
-        await this.page.waitForLoadState('load');
-        await this.page.waitForLoadState('networkidle');
-    };
+  async checkH1HeadingKO() {
+    await expect(this.page.locator("#signup-modal-title")).toBeVisible();
+  }
 
-    async checkH1HeadingKO() {
-        await expect(this.page.locator('#signup-modal-title')).toBeVisible();
-    };
-
-    async checkH1HeadingOK() {
-        await expect(this.page.locator('#signup-modal-title')).toBeHidden();
-    }
-
-}
+  async checkH1HeadingOK() {
+    await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  }
+  async failedTest() {
+    await expect(this.page.locator("#signup-modal-title")).toContainText(
+      "Test is Failed"
+    );
+  }
+};
