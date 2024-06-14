@@ -35,14 +35,15 @@ jobs:
 
       - name: Install Allure CLI
         run: |
-          mkdir -p /usr/local/bin/allure
-          cd /usr/local/bin/allure
-          curl -OL https://github.com/allure-framework/allure2/releases/download/2.17.2/allure-2.17.2.tgz
-          tar -xzf allure-2.17.2.tgz
-          echo 'export PATH=$PATH:/usr/local/bin/allure/allure-2.17.2/bin' >> $GITHUB_ENV
+          mkdir allure
+          cd allure
+          wget https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.17.2/allure-commandline-2.17.2.zip
+          unzip allure-commandline-2.17.2.zip
+          export PATH=$PWD/allure-2.17.2/bin:$PATH
+          allure --version
 
       - name: Verify allure version
-        run: npx allure --version    
+        run: npx allure --version
 
       - name: Run Playwright tests
         run: node utils/run-test.js --verbose
