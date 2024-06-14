@@ -38,7 +38,6 @@ jobs:
 
       - name: Verify allure version
         run: npx allure --version
-        continue-on-error: true
 
       - name: Run Playwright tests
         run: node utils/run-test.js --verbose
@@ -61,7 +60,6 @@ jobs:
         with:
           name: allure-report
           path: allure-report
-          if-no-files-found: warn
 
       - name: Deploy Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
