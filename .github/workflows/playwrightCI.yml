@@ -46,9 +46,6 @@ jobs:
       - name: List allure results
         run: ls -alh allure-results
 
-      - name: Debug Allure Report Directory List
-        run: ls -alh allure-report
-
       - name: Upload Allure results
         uses: actions/upload-artifact@v4
         with:
