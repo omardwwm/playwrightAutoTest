@@ -13,23 +13,24 @@ module.exports = defineConfig({
 
     // REPORTER 
     reporter: [
-        ["line"],
+        ["html"],
         [
-            "allure-playwright",
-            {
-                detail: true,
-                outputFolder: "allure-results",
-                suiteTitle: true,
-                categories: [
-                    {
-                        name: "Outdated tests",
-                        messageRegex: ".*FileNotFound",
-                    },
-                ],
-                environmentInfo: {
-                    framework: "playwright"
-                }
-            }
+            "allure-playwright"
+            // ,
+            // {
+            //     detail: true,
+            //     outputFolder: "allure-results",
+            //     suiteTitle: true,
+            //     categories: [
+            //         {
+            //             name: "Outdated tests",
+            //             messageRegex: ".*FileNotFound",
+            //         },
+            //     ],
+            //     environmentInfo: {
+            //         framework: "playwright"
+            //     }
+            // }
         ]
     ],
 
