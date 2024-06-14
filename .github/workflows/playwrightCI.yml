@@ -43,7 +43,7 @@ jobs:
           allure --version
 
       - name: Verify allure version
-        run: npx allure --version
+        run: allure --version
 
       - name: Run Playwright tests
         run: node utils/run-test.js --verbose
