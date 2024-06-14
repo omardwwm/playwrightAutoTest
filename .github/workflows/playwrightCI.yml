@@ -34,7 +34,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Install Allure CLI
-        run: npm install allure-commandline
+        run: npm install allure-playwright
 
       - name: Verify allure version
         run: npx allure --version
