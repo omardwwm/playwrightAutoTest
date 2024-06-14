@@ -18,7 +18,7 @@ exports.HomePage = class HomePage {
     };
 
     async checkH1HeadingKO() {
-        await expect(this.page.locator('#signup-modal-title')).toBeHidden();
+        await expect(this.page.locator('#signup-modal-title')).toBeVisible();
     };
 
     async checkH1HeadingOK() {
