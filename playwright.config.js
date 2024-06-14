@@ -13,7 +13,7 @@ module.exports = defineConfig({
 
     // REPORTER 
     reporter: [
-        ["html"],
+        ["line"],
         [
             "allure-playwright"
             // ,

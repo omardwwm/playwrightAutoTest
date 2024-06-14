@@ -39,8 +39,8 @@ jobs:
       - name: Verify allure version
         run: npx allure --version
 
-      - name: Clean old Allure results
-        run: rm -rf allure-results allure-report
+      # - name: Clean old Allure results
+      #   run: rm -rf allure-results allure-report
 
       - name: Run Playwright tests
         run: node utils/run-test.js --verbose
