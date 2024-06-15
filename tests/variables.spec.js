@@ -3,7 +3,7 @@ const { HomePage } = require("../pages/homePage");
 require('dotenv').config()
 
 test("Test failed results", async ({ page }) => {
-  const envvarTest = process.env.SECRET_KEY;
+  const envvarTest = process.env.S3_BUCKET;
   console.log("envvarTest", envvarTest);
   const homePage = new HomePage(page);
   await homePage.envTest(envvarTest);
