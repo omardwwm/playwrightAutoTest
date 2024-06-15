@@ -44,7 +44,7 @@ jobs:
         run: npm install allure-commandline
       
       - name: Install cross-'nv'
-        run: npm install cross-env  
+        run: npm install --save-dev cross-env  
 
       - name: Verify allure version
         run: npx allure --version
