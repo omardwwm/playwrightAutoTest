@@ -1,6 +1,11 @@
 const { exec } = require("child_process");
 const fs = require("fs");
 
+const path = require('path');
+
+// Absolute path to cross-env
+const crossEnvPath = path.join(__dirname, '..', 'node_modules', '.bin', 'cross-env');
+
 
 // Define the arrays of locales, realms, and environments
 const localesByRealm = {
@@ -17,7 +22,7 @@ const environments = ["int", "dev"];
 const runTest = (locale, realm, environment) => {
   return new Promise((resolve) => {
     // Define the command string with locale, realm, and environment parameters using cross-env
-    const command = `cross-env LOCALE=${locale} REALM=${realm} ENVIRONMENT=${environment} npx playwright test`;
+    const command = `${crossEnvPath} LOCALE=${locale} REALM=${realm} ENVIRONMENT=${environment} npx playwright test`;
     // const command = "npx playwright test";
     exec(command, (error, stdout, stderr) => {
       if (error) {
