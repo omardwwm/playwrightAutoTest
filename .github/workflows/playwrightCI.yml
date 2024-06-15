@@ -63,7 +63,7 @@ jobs:
       #   run: rm -rf allure-results allure-report
 
       - name: Run Playwright tests
-        run: node utils/run-test.js --verbose ${{ matrix.environment }} eu
+        run: node utils/run-test.js ${{ matrix.environment }} eu
         continue-on-error: true
 
       - name: List allure results
