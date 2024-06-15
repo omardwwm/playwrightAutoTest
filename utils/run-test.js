@@ -28,11 +28,19 @@ const deleteOldAllureResults = () => {
   }
 };
 
+// Function to delete old Allure report
+const deleteOldAllureReport = () => {
+  const allureRportDir = "allure-report";
+  if (fs.existsSync(allureRportDir)) {
+    fs.rmSync(allureRportDir, { recursive: true, force: true });
+  }
+};
+
 // Function to generate Allure report
 const generateAllureReport = () => {
   return new Promise((resolve, reject) => {
     exec(
-      "npx allure generate allure-results -o allure-report --clean ",
+      "npx allure generate allure-results --clean -o allure-report",
       (error, stdout, stderr) => {
         if (error) {
           console.error(`Error generating Allure report: ${error.message}`);
@@ -56,6 +64,7 @@ const generateAllureReport = () => {
   const results = [];
   console.log("start executions");
   deleteOldAllureResults();
+  deleteOldAllureReport();
 
   const result = await runTest();
   results.push(result);
@@ -66,11 +75,12 @@ const generateAllureReport = () => {
     console.log(result.output);
   });
 
+  await generateAllureReport();
+
   // Optionally, exit with a non-zero status if any tests failed
   const failedTests = results.filter((result) => result.status === "failed");
   if (failedTests.length > 0) {
     await generateAllureReport();
     process.exit(1);
   }
-  await generateAllureReport();
 })();

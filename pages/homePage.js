@@ -17,13 +17,18 @@ exports.HomePage = class HomePage {
   }
 
   async checkH1HeadingKO() {
-    await expect(this.page.locator("#signup-modal-title")).toBeVisible();
+    await expect(this.page.locator("#signup-modal-title")).toBeHidden();
   }
 
   async checkH1HeadingOK() {
     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
   }
+
   async failedTest() {
     expect(1).toEqual(2);
+  };
+
+  async envTest(envVar) {
+    expect(envVar).toStrictEqual('Env test');
   }
 };
