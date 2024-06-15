@@ -1,1 +1,0 @@
-envvarTest YOURS3BUCKET
