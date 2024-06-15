@@ -44,7 +44,7 @@ module.exports = defineConfig({
         // Artifacts
         screenshot: 'only-on-failure',
         trace: 'on',
-        video: 'only-on-failure'
+        video: 'on'
     },
     helpers: {
         Playwright: {

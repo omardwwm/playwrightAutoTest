@@ -12,13 +12,16 @@ on:
     branches:
       - "main"
 
-env:
-  SECRET_KEY: ${{ secrets.SECRET_KEY }}
-  S3_BUCKET: ${{ vars.S3_BUCKET }}
 
 jobs:
   test:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        environment:
+          - int
+          # - dev
 
     steps:
       - name: Checkout repository
@@ -43,11 +46,24 @@ jobs:
       - name: Verify allure version
         run: npx allure --version
 
+      
+      # - name: Set environment-specific variables
+      #   run: |
+      #     if [ "${{ matrix.environment }}" == "int" ]; then
+      #       export MY_VAR=${{ secrets.PROD_MY_VAR }}
+      #       export NODE_ENV=int
+      #     elif [ "${{ matrix.environment }}" == "dev" ]; then
+      #       export MY_VAR=${{ secrets.DEV_MY_VAR }}
+      #       export NODE_ENV=dev
+      #     fi
+      #     echo "Environment: $NODE_ENV"
+      #     echo "MY_VAR: $MY_VAR"  
+
       # - name: Clean old Allure results
       #   run: rm -rf allure-results allure-report
 
       - name: Run Playwright tests
-        run: node utils/run-test.js --verbose
+        run: node utils/run-test.js --verbose ${{ matrix.environment }} eu
         continue-on-error: true
 
       - name: List allure results
