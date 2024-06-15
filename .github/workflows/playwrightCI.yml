@@ -40,8 +40,11 @@ jobs:
       - name: Install Playwright
         run: npx playwright install --with-deps
 
-      - name: Install Allure CLI
+      - name: Install allure-commandline
         run: npm install allure-commandline
+      
+      - name: Install cross-'nv'
+        run: npm install cross-env  
 
       - name: Verify allure version
         run: npx allure --version

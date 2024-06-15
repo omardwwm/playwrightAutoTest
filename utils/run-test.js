@@ -1,6 +1,7 @@
 const { exec } = require("child_process");
 const fs = require("fs");
 
+
 // Define the arrays of locales, realms, and environments
 const localesByRealm = {
   eu: ["eng-gb", "deu-de"],
