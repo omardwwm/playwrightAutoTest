@@ -172,7 +172,7 @@ const generateAllureReport = () => {
   // Optionally, exit with a non-zero status if any tests failed
   const failedTests = results.filter((result) => result.status === "failed");
   if (failedTests.length > 0) {
-    // await generateAllureReport();
+    await generateAllureReport();
     process.exit(1);
   }
 
