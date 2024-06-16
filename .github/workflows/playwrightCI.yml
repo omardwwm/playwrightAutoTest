@@ -12,7 +12,6 @@ on:
     branches:
       - "main"
 
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -42,13 +41,12 @@ jobs:
 
       - name: Install allure-commandline
         run: npm install allure-commandline
-      
-      - name: Install cross-'nv'
-        run: npm install --save-dev cross-env  
-
+        
       - name: Verify allure version
         run: npx allure --version
 
+      # - name: Install cross-'nv'
+      #   run: npm install --save-dev cross-env
       
       # - name: Set environment-specific variables
       #   run: |
@@ -60,17 +58,20 @@ jobs:
       #       export NODE_ENV=dev
       #     fi
       #     echo "Environment: $NODE_ENV"
-      #     echo "MY_VAR: $MY_VAR"  
+      #     echo "MY_VAR: $MY_VAR"
 
-      # - name: Clean old Allure results
-      #   run: rm -rf allure-results allure-report
+      - name: Delete old Allure results
+        run: |
+          if [ -d "allure-results" ]; then
+            rm -rf allure-results
+          fi
 
       - name: Run Playwright tests
         run: npm run test:env ${{ matrix.environment }}
         continue-on-error: true
 
-      - name: List allure results
-        run: ls -alh allure-results
+      # - name: List allure results
+      #   run: ls -alh allure-results
 
       - name: Upload Allure results
         uses: actions/upload-artifact@v4

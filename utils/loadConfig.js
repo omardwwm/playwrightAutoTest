@@ -15,18 +15,18 @@ function loadConfig(realm, environment) {
   // , business_group, client_id, client_secret
 
   switch (`${environment}_${realm}`) {
-    case "dev_us":
-    case "dev_eu":
-    case "dev_as":
+    case "dev_america":
+    case "dev_europe":
+    case "dev_asia":
       baseUrl = process.env.DEV_ALL_REALM_BASE_URL;
       break;
-    case "int_us":
+    case "int_america":
       baseUrl = process.env.INT_REALM_US_BASE_URL;
       break;
-    case "int_eu":
+    case "int_europe":
       baseUrl = process.env.INT_REALM_EU_BASE_URL;
       break;
-    case "int_as":
+    case "int_asia":
       baseUrl = process.env.INT_REALM_AS_BASE_URL;
       break;
     default:
