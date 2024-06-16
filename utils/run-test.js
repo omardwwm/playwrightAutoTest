@@ -1,17 +1,22 @@
 const { exec } = require("child_process");
-const fs = require("fs");
+// const fs = require("fs");
 
-const path = require('path');
+const path = require("path");
 
 // Absolute path to cross-env
-const crossEnvPath = path.join(__dirname, '..', 'node_modules', '.bin', 'cross-env');
-
+const crossEnvPath = path.join(
+  __dirname,
+  "..",
+  "node_modules",
+  ".bin",
+  "cross-env"
+);
 
 // Define the arrays of locales, realms, and environments
 const localesByRealm = {
-  eu: ["eng-gb", "deu-de"],
-  us: ["eng-us", "eng-ca"],
-  as: ["jpn-jp", "eng-nz"],
+  europe: ["GB", "DE"],
+  america: ["US", "CA"],
+  asia: ["JP", "NZ"],
 };
 const allLocales = Object.values(localesByRealm).flat();
 const realms = Object.keys(localesByRealm);
@@ -22,8 +27,8 @@ const environments = ["int", "dev"];
 const runTest = (locale, realm, environment) => {
   return new Promise((resolve) => {
     // Define the command string with locale, realm, and environment parameters using cross-env
-    // const command = `${crossEnvPath} LOCALE=${locale} REALM=${realm} ENVIRONMENT=${environment} npx playwright test`;
-    const command = `cross-env LOCALE=${locale} REALM=${realm} ENVIRONMENT=${environment} npx playwright test`;
+    const command = `${crossEnvPath} LOCALE=${locale} REALM=${realm} ENVIRONMENT=${environment} npx playwright test`;
+    // const command = `cross-env LOCALE=${locale} REALM=${realm} ENVIRONMENT=${environment} npx playwright test`;
     // const command = "npx playwright test";
     exec(command, (error, stdout, stderr) => {
       if (error) {
@@ -33,7 +38,7 @@ const runTest = (locale, realm, environment) => {
           realm,
           environment,
           status: "failed",
-          output: stderr,
+          output: stderr|| error.message,
         });
       } else if (stderr) {
         console.error(`Error output for ${command}: ${stderr}`);
@@ -59,48 +64,47 @@ const runTest = (locale, realm, environment) => {
 };
 
 // Function to delete old Allure results
-const deleteOldAllureResults = () => {
-  const allureResultsDir = "allure-results";
-  if (fs.existsSync(allureResultsDir)) {
-    fs.rmSync(allureResultsDir, { recursive: true, force: true });
-  }
-};
+// const deleteOldAllureResults = () => {
+//   const allureResultsDir = "allure-results";
+//   if (fs.existsSync(allureResultsDir)) {
+//     fs.rmSync(allureResultsDir, { recursive: true, force: true });
+//   }
+// };
 
 // Function to delete old Allure report
-const deleteOldAllureReport = () => {
-  const allureRportDir = "allure-report";
-  if (fs.existsSync(allureRportDir)) {
-    fs.rmSync(allureRportDir, { recursive: true, force: true });
-  }
-};
+// const deleteOldAllureReport = () => {
+//   const allureRportDir = "allure-report";
+//   if (fs.existsSync(allureRportDir)) {
+//     fs.rmSync(allureRportDir, { recursive: true, force: true });
+//   }
+// };
 
-// Function to determine combinations to run based on given arguments
-const determineCombinations = (givenLocale, givenRealm, givenEnvironment) => {
+// Generate combinations based on the provided arguments
+const determineCombinations = (locale, realm, environment) => {
   const combinations = [];
-
-  const environmentsToRun = givenEnvironment
-    ? [givenEnvironment]
-    : environments;
-  const realmsToRun = givenRealm ? [givenRealm] : realms;
-
-  for (const environment of environmentsToRun) {
-    if (givenLocale) {
-      const validRealms = realms.filter((realm) =>
-        localesByRealm[realm].includes(givenLocale)
-      );
-      for (const realm of validRealms) {
-        combinations.push({ locale: givenLocale, realm, environment });
-      }
-    } else {
-      for (const realm of realmsToRun) {
-        const availableLocales = localesByRealm[realm];
-        for (const locale of availableLocales) {
-          combinations.push({ locale, realm, environment });
+  if (locale && realm && environment) {
+    combinations.push({ locale, realm, environment });
+  } else if (!locale && realm && environment) {
+    for (const loc of localesByRealm[realm]) {
+      combinations.push({ locale: loc, realm, environment });
+    }
+  } else if (locale && !realm && environment) {
+    for (const r of realms) {
+      combinations.push({ locale, realm: r, environment });
+    }
+  } else if (locale && realm && !environment) {
+    for (const env of environments) {
+      combinations.push({ locale, realm, environment: env });
+    }
+  } else {
+    for (const loc of allLocales) {
+      for (const r of realms) {
+        for (const env of environments) {
+          combinations.push({ locale: loc, realm: r, environment: env });
         }
       }
     }
   }
-
   return combinations;
 };
 
@@ -157,15 +161,35 @@ const generateAllureReport = () => {
   );
 
   console.log("start executions");
-  deleteOldAllureResults();
-  deleteOldAllureReport();
+  // console.log("COMBINATIONS ARE ===>> ", combinations);
+  // deleteOldAllureResults();
+  // deleteOldAllureReport();
 
   //   const result = await runTest();
   //   results.push(result);
+  // Run tests for each combination
+  // for (const { locale, realm, environment } of combinations) {
+  //   const result = await runTest(locale, realm, environment);
+  //   results.push(result);
+  // }
 
+  //  Imporooved version for run all tests
   for (const { locale, realm, environment } of combinations) {
-    const result = await runTest(locale, realm, environment);
-    results.push(result);
+    try {
+      const result = await runTest(locale, realm, environment);
+      results.push(result);
+    } catch (error) {
+      console.error(
+        `Error running test for ${locale}, ${realm}, ${environment}: ${error.message}`
+      );
+      results.push({
+        locale,
+        realm,
+        environment,
+        status: "failed",
+        output: error.message,
+      });
+    }
   }
 
   console.log("All tests completed.");
@@ -176,12 +200,16 @@ const generateAllureReport = () => {
     console.log(result.output);
   });
 
+  // Generate the Allure report (locally not blocking if not generated, can dispaly report with commande "npx allure serve allure-results" BUT for github actions report must be generated in all cases to can deploy it in github pages )
+  try {
+    await generateAllureReport();
+  } catch (error) {
+    console.error("Failed to generate Allure report:", error);
+  }
+
   // Optionally, exit with a non-zero status if any tests failed
   const failedTests = results.filter((result) => result.status === "failed");
   if (failedTests.length > 0) {
-    await generateAllureReport();
     process.exit(1);
   }
-
-  await generateAllureReport();
 })();

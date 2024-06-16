@@ -32,7 +32,7 @@ exports.HomePage = class HomePage {
   }
 
   async failedTest() {
-    expect(1).toEqual(1);
+    expect(1).toEqual(2);
   }
 
   async envTest(envVar) {
