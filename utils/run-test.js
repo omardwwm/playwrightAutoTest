@@ -27,8 +27,8 @@ const environments = ["int", "dev"];
 const runTest = (locale, realm, environment) => {
   return new Promise((resolve) => {
     // Define the command string with locale, realm, and environment parameters using cross-env
-    const command = `${crossEnvPath} LOCALE=${locale} REALM=${realm} ENVIRONMENT=${environment} npx playwright test`;
-    // const command = `cross-env LOCALE=${locale} REALM=${realm} ENVIRONMENT=${environment} npx playwright test`;
+    // const command = `${crossEnvPath} LOCALE=${locale} REALM=${realm} ENVIRONMENT=${environment} npx playwright test`;
+    const command = `cross-env LOCALE=${locale} REALM=${realm} ENVIRONMENT=${environment} npx playwright test`;
     // const command = "npx playwright test";
     exec(command, (error, stdout, stderr) => {
       if (error) {
