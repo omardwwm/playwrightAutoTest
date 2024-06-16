@@ -22,6 +22,13 @@ jobs:
           - int
           # - dev
 
+    env:
+        DEV_ALL_REALM_BASE_URL: ${{vars.DEV_ALL_REALM_BASE_URL}}
+        INT_REALM_AS_BASE_URL: ${{vars.INT_REALM_AS_BASE_URL}}
+        INT_REALM_EU_BASE_URL: ${{vars.INT_REALM_EU_BASE_URL}}
+        INT_REALM_US_BASE_URL: ${{vars.INT_REALM_US_BASE_URL}}
+        S3_BUCKET: ${{vars.S3_BUCKET}}     
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

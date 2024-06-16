@@ -98,7 +98,7 @@ const args = process.argv.slice(2);
 
 let givenLocale, givenRealm, givenEnvironment;
 for (const arg of args) {
-  if (localesByRealm[givenRealm]?.includes(arg)) {
+  if (allLocales.includes(arg)) {
     givenLocale = arg;
   } else if (realms.includes(arg)) {
     givenRealm = arg;

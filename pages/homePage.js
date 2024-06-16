@@ -11,10 +11,10 @@ exports.HomePage = class HomePage {
   }
 
   async goto() {
-    const env = process.env.ENVIRONMENT;
+    const environment = process.env.ENVIRONMENT;
     // const locale = process.env.LOCALE;
     const realm = process.env.REALM;
-    const config = loadConfig(realm, env);
+    const config = loadConfig(realm, environment);
     const url = config.baseUrl;
     console.log(config);
     await this.page.goto(url);
