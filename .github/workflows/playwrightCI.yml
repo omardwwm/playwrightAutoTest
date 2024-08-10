@@ -20,6 +20,7 @@ jobs:
         environment:
           - int
           # - dev
+        shard: [1, 2, 3, 4] 
 
     env:
         DEV_ALL_REALM_BASE_URL: ${{vars.DEV_ALL_REALM_BASE_URL}}
@@ -73,7 +74,7 @@ jobs:
           fi
 
       - name: Run Playwright tests
-        run: npm run test:env ${{ matrix.environment }}
+        run: npm run test:env ${{ matrix.environment }} ${{ matrix.shard }}
         continue-on-error: true
 
       # - name: List allure results
