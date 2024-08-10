@@ -20,15 +20,15 @@ jobs:
         environment:
           - int
           # - dev
-        shard: [1, 2] 
+        shard: [1, 2]
 
     env:
-        DEV_ALL_REALM_BASE_URL: ${{vars.DEV_ALL_REALM_BASE_URL}}
-        INT_REALM_AS_BASE_URL: ${{vars.INT_REALM_AS_BASE_URL}}
-        INT_REALM_EU_BASE_URL: ${{vars.INT_REALM_EU_BASE_URL}}
-        INT_REALM_US_BASE_URL: ${{vars.INT_REALM_US_BASE_URL}}
-        S3_BUCKET: ${{vars.S3_BUCKET}}
-        CI_ENV: ${{vars.CI_ENV}}    
+      DEV_ALL_REALM_BASE_URL: ${{vars.DEV_ALL_REALM_BASE_URL}}
+      INT_REALM_AS_BASE_URL: ${{vars.INT_REALM_AS_BASE_URL}}
+      INT_REALM_EU_BASE_URL: ${{vars.INT_REALM_EU_BASE_URL}}
+      INT_REALM_US_BASE_URL: ${{vars.INT_REALM_US_BASE_URL}}
+      S3_BUCKET: ${{vars.S3_BUCKET}}
+      CI_ENV: ${{vars.CI_ENV}}
 
     steps:
       - name: Checkout repository
@@ -49,13 +49,13 @@ jobs:
 
       - name: Install allure-commandline
         run: npm install allure-commandline
-        
+
       - name: Verify allure version
         run: npx allure --version
 
       # - name: Install cross-'nv'
       #   run: npm install --save-dev cross-env
-      
+
       # - name: Set environment-specific variables
       #   run: |
       #     if [ "${{ matrix.environment }}" == "int" ]; then
@@ -94,7 +94,7 @@ jobs:
       #     name: allure-report
       #     path: allure-report
 
-  generate_report:
+  merge_results:
     runs-on: ubuntu-latest
     needs: test
     steps:
@@ -104,14 +104,30 @@ jobs:
       - name: Download Allure results from all shards
         uses: actions/download-artifact@v4
         with:
-          name: allure-results-${{ matrix.shard }}
-          path: allure-results/${{ matrix.shard }}
+          name: allure-results-1
+          path: allure-results/1
         continue-on-error: true
 
-      - name: Install Node.js
-        uses: actions/setup-node@v4
+      - name: Download Allure results from all shards
+        uses: actions/download-artifact@v4
         with:
-          node-version: 20
+          name: allure-results-2
+          path: allure-results/2
+        continue-on-error: true
+
+      # - name: Download Allure results from all shards
+      #   uses: actions/download-artifact@v4
+      #   with:
+      #     name: allure-results-3
+      #     path: allure-results/3
+      #   continue-on-error: true
+
+      # - name: Download Allure results from all shards
+      #   uses: actions/download-artifact@v4
+      #   with:
+      #     name: allure-results-4
+      #     path: allure-results/4
+      #   continue-on-error: true
 
       - name: Install allure-commandline
         run: npm install -g allure-commandline
@@ -121,16 +137,14 @@ jobs:
 
       - name: Merge Allure results and generate report
         run: |
-          # Ensure directories are present
-          mkdir -p allure-results
-          mkdir -p allure-report
-
-          # Merge results from all shards
-          npx allure merge allure-results/* -o allure-results/merged
-
+          mkdir -p allure-results/combined
+          # Combine results from all shards into a single directory
+          cp -r allure-results/1/* allure-results/combined/ || true
+          cp -r allure-results/2/* allure-results/combined/ || true
+          # cp -r allure-results/3/* allure-results/combined/ || true
+          # cp -r allure-results/4/* allure-results/combined/ || true
           # Generate the Allure report
-          npx allure generate allure-results/merged --clean -o allure-report
-
+          npx allure generate allure-results/combined --clean -o allure-report
           # List contents of the report directory for debugging
           ls -alh allure-report
 
@@ -139,11 +153,10 @@ jobs:
         with:
           name: allure-report
           path: allure-report
-    
 
   deploy:
     runs-on: ubuntu-latest
-    needs: generate_report
+    needs: merge_results
 
     steps:
       - name: Checkout repository
