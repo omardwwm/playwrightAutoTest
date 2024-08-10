@@ -26,7 +26,7 @@ const environments = ["int", "dev"]; // Add more environments if needed
 const workers = process.env.CI_ENV ? 2 : 4;
 
 // Set fixed shard values
-const TOTAL_SHARDS = 4; // Total number of shards
+const TOTAL_SHARDS = 2; // Total number of shards
 const SHARD_INDEX_START = 1; // Start index for sharding
 
 // Function to run all tests for a specific combination
