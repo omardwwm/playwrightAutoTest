@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:env": "node utils/run-test.js"
+    "test:env": "node utils/run-testsWithShards.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,8 +14,7 @@
     "allure-playwright": "^3.0.0-beta.3",
     "cross-env": "^7.0.3",
     "expect-playwright": "^0.8.0",
-    "nodemon": "^3.0.3",
-    "playwright": "^1.33.0"
+    "nodemon": "^3.0.3"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
