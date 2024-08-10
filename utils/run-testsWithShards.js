@@ -226,43 +226,43 @@ const generateAllureReport = () => {
 
     // VERSION WITH SHARDS
     // Run tests for each combination and each shard
-    // for (const { locale, realm, environment } of combinations) {
-    //   for (
-    //     let shardIndex = SHARD_INDEX_START;
-    //     shardIndex <= TOTAL_SHARDS;
-    //     shardIndex++
-    //   ) {
-    //     try {
-    //       const result = await runTest(locale, realm, environment, shardIndex);
-    //       results.push(result);
-    //     } catch (error) {
-    //       console.error(
-    //         `Error running test for ${locale}, ${realm}, ${environment} on shard ${shardIndex}: ${error.message}`
-    //       );
-    //       results.push({
-    //         locale,
-    //         realm,
-    //         environment,
-    //         shardIndex,
-    //         status: "failed",
-    //         output: error.message,
-    //       });
-    //     }
-    //   }
-    // }
     for (const { locale, realm, environment } of combinations) {
-      const shardPromises = [];
-
-      for (let shardIndex = 1; shardIndex <= TOTAL_SHARDS; shardIndex++) {
-        shardPromises.push(
-          await runTest(locale, realm, environment, shardIndex)
-        );
+      for (
+        let shardIndex = SHARD_INDEX_START;
+        shardIndex <= TOTAL_SHARDS;
+        shardIndex++
+      ) {
+        try {
+          const result = await runTest(locale, realm, environment, shardIndex);
+          results.push(result);
+        } catch (error) {
+          console.error(
+            `Error running test for ${locale}, ${realm}, ${environment} on shard ${shardIndex}: ${error.message}`
+          );
+          results.push({
+            locale,
+            realm,
+            environment,
+            shardIndex,
+            status: "failed",
+            output: error.message,
+          });
+        }
       }
-
-      const shardResults = await Promise.all(shardPromises);
-
-      results.push(...shardResults);
     }
+    // for (const { locale, realm, environment } of combinations) {
+    //   const shardPromises = [];
+
+    //   for (let shardIndex = 1; shardIndex <= TOTAL_SHARDS; shardIndex++) {
+    //     shardPromises.push(
+    //       await runTest(locale, realm, environment, shardIndex)
+    //     );
+    //   }
+
+    //   const shardResults = await Promise.all(shardPromises);
+
+    //   results.push(...shardResults);
+    // }
 
     console.log("All tests completed.");
     // results.forEach((result) => {
