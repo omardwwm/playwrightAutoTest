@@ -147,7 +147,7 @@ const determineCombinations = (givenLocale, givenRealm, givenEnvironment) => {
 // Get the arguments from command-line
 const args = process.argv.slice(2);
 
-let givenLocale, givenRealm, givenEnvironment;
+let givenLocale, givenRealm, givenEnvironment, givenShard;
 for (const arg of args) {
   if (allLocales.includes(arg)) {
     givenLocale = arg;
@@ -155,9 +155,11 @@ for (const arg of args) {
     givenRealm = arg;
   } else if (environments.includes(arg)) {
     givenEnvironment = arg;
+  } else if (!isNaN(arg)) {
+    givenShard = parseInt(arg, 10);
   } else {
     console.error(
-      `Invalid argument: ${arg}. Please provide a valid locale, realm, or environment.`
+      `Invalid argument: ${arg}. Please provide a valid locale, realm, or environment or shard number.`
     );
     process.exit(1);
   }
@@ -252,7 +254,9 @@ const generateAllureReport = () => {
       const shardPromises = [];
 
       for (let shardIndex = 1; shardIndex <= TOTAL_SHARDS; shardIndex++) {
-        shardPromises.push(await runTest(locale, realm, environment, shardIndex));
+        shardPromises.push(
+          await runTest(locale, realm, environment, shardIndex)
+        );
       }
 
       const shardResults = await Promise.all(shardPromises);

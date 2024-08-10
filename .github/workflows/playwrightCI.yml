@@ -17,7 +17,9 @@ jobs:
 
     strategy:
       matrix:
-        environment: [int]
+        environment:
+          - int
+          # - dev
         shard: [1, 2, 3, 4] 
 
     env:
