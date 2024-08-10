@@ -7,9 +7,6 @@ const locale = process.env.LOCALE;
 const realm = process.env.REALM;
 
 test(`Test failed results for Locale ${locale} in ${env} Einvironment and Realm ${realm}`, async ({ page }) => {
-  // const homePage = new HomePage(page);
-  // await homePage.failedTest();
   const homePage = new HomePage(page);
-  await homePage.goto();
-  await homePage.checkH1HeadingOK();
+  await homePage.failedTest();
 });
