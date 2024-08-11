@@ -23,10 +23,11 @@ console.log("allLocales are ==>>", allLocales);
 const realms = Object.keys(localesByRealm);
 const environments = ["int", "dev"]; // Add more environments if needed
 
-const workers = process.env.CI_ENV ? 2 : 4;
+const isCIRun = process.env.CI_ENV;
+const workers = isCIRun ? 2 : 4;
 
 // Set fixed shard values
-const TOTAL_SHARDS = 4; // Total number of shards
+const TOTAL_SHARDS = isCIRun ? 4 : 1; // Total number of shards
 const SHARD_INDEX_START = 1; // Start index for sharding
 
 // Function to run all tests for a specific combination
@@ -71,11 +72,15 @@ const SHARD_INDEX_START = 1; // Start index for sharding
 // Function to run tests for a specific locale, realm, and environment
 const runTest = async (locale, realm, environment, shardIndex) => {
   console.log(
-    `RUNING TEST FOR LOCALE=> ${locale} in REALM=> ${realm} in ENVIRONMENT=> ${environment} on SHARD ${shardIndex}/${TOTAL_SHARDS}`
+    `RUNING TEST FOR LOCALE=> ${locale} in REALM=> ${realm} in ENVIRONMENT=> ${environment}` +
+      (shardIndex ? `on SHARD ${shardIndex}/${TOTAL_SHARDS}` : "")
   );
 
   // Define the command string with locale, realm, and environment parameters using cross-env
-  const command = `cross-env LOCALE=${locale} REALM=${realm} ENVIRONMENT=${environment} npx playwright test --shard=${shardIndex}/${TOTAL_SHARDS} --workers ${workers}`;
+  const shardCommand = shardIndex
+    ? ` --shard=${shardIndex}/${TOTAL_SHARDS}`
+    : "";
+  const command = `cross-env LOCALE=${locale} REALM=${realm} ENVIRONMENT=${environment} npx playwright test${shardCommand} --workers ${workers}`;
   return new Promise((resolve) => {
     // Execute the command
     exec(command, (error, stdout, stderr) => {
@@ -172,7 +177,7 @@ const deleteOldAllureResults = () => {
 
   try {
     if (fs.existsSync(allureResultsDir)) {
-      fs.rmdirSync(allureResultsDir, { recursive: true, force: true });
+      fs.rmSync(allureResultsDir, { recursive: true, force: true });
       console.log(`Deleted old Allure results in ${allureResultsDir}`);
     } else {
       console.log(`No old Allure results found in ${allureResultsDir}`);
@@ -224,7 +229,7 @@ const generateAllureReport = () => {
     // Delete old Allure results before running tests
     deleteOldAllureResults();
 
-    const shardIndex = givenShard;
+    const shardIndex = isCIRun ? givenShard : 1;
 
     // VERSION WITH SHARDS
     // Run tests for each combination and each shard
@@ -279,7 +284,9 @@ const generateAllureReport = () => {
 
     // Generate the Allure report within try-catch for error handling
     try {
-      await generateAllureReport();
+      if (!isCIRun) {
+        await generateAllureReport();
+      }
       console.log("Allure report generated successfully.");
     } catch (error) {
       console.error("Failed to generate Allure report:", error);
