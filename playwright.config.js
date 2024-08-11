@@ -19,7 +19,6 @@ module.exports = defineConfig({
   // REPORTER
   reporter: [
     ["line"],
-    ["blob"],
     [
       "allure-playwright",
       // ,
