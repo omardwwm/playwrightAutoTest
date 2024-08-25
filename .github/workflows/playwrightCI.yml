@@ -137,7 +137,7 @@ jobs:
           # Generate the Allure report
           npx allure generate allure-results/combined --clean -o allure-report-${{ matrix.environment }}
           # List contents of the report directory for debugging
-          ls -alh allure-report
+          ls -alh allure-report-${{ matrix.environment }}
 
       - name: Upload Allure Report
         uses: actions/upload-artifact@v4
