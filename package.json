@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:env": "node utils/run-testsWithShards.js"
+    "test:env": "node utils/run-testsAllEnv.js"
   },
   "author": "",
   "license": "ISC",

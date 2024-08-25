@@ -84,8 +84,9 @@ jobs:
       - name: Upload Allure results for shard ${{ matrix.shard }}
         uses: actions/upload-artifact@v4
         with:
-          name: allure-results-${{ matrix.shard }}
+          name: allure-results-${{ matrix.environment }}-${{ matrix.shard }}
           path: allure-results
+          retention-days: 30
 
       # - name: Upload Allure Report
       #   uses: actions/upload-artifact@v4
@@ -97,62 +98,29 @@ jobs:
   merge_results:
     runs-on: ubuntu-latest
     needs: test
+    strategy:
+      matrix:
+        environment:
+          - int
+          # - dev
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Download Allure results from all shards
-        uses: actions/download-artifact@v4
-        with:
-          name: allure-results-1
-          path: allure-results/1
-        continue-on-error: true
-
-      - name: Download Allure results from all shards
-        uses: actions/download-artifact@v4
-        with:
-          name: allure-results-2
-          path: allure-results/2
-        continue-on-error: true
-
-      - name: Download Allure results from all shards
-        uses: actions/download-artifact@v4
-        with:
-          name: allure-results-3
-          path: allure-results/3
-        continue-on-error: true
-
-      - name: Download Allure results from all shards
-        uses: actions/download-artifact@v4
-        with:
-          name: allure-results-4
-          path: allure-results/4
-        continue-on-error: true
-
-      - name: Install allure-commandline
-        run: npm install -g allure-commandline
-
-      - name: Verify allure version
-        run: npx allure --version
-
-      - name: Merge Allure results and generate report
+      - name: Download Allure results from all shards for ${{ matrix.environment }}
         run: |
           mkdir -p allure-results/combined
-          # Combine results from all shards into a single directory
-          cp -r allure-results/1/* allure-results/combined/ || true
-          cp -r allure-results/2/* allure-results/combined/ || true
-          cp -r allure-results/3/* allure-results/combined/ || true
-          cp -r allure-results/4/* allure-results/combined/ || true
-          # Generate the Allure report
-          npx allure generate allure-results/combined --clean -o allure-report
-          # List contents of the report directory for debugging
-          ls -alh allure-report
+          for shard in {1..4}; do
+            actions/download-artifact@v4 --name allure-results-${{ matrix.environment }}-$shard --path allure-results/shard_$shard/
+            cp -r allure-results/shard_$shard/* allure-results/combined/ || true
+          done
 
-      - name: Upload Allure Report
+      - name: Upload combined Allure results for ${{ matrix.environment }}
         uses: actions/upload-artifact@v4
         with:
-          name: allure-report
-          path: allure-report
+          name: combined-allure-results-${{ matrix.environment }}
+          path: allure-results/combined
 
   deploy:
     runs-on: ubuntu-latest
@@ -170,11 +138,14 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: Download Allure Report
-        uses: actions/download-artifact@v4
-        with:
-          name: allure-report
-          path: ./allure-report
+      - name: Download Combined Allure Results for Environment
+        run: |
+          mkdir -p docs/${{ matrix.environment }}
+          actions/download-artifact@v4 --name combined-allure-results-${{ matrix.environment }} --path docs/${{ matrix.environment }}/
+
+      - name: Generate Allure Report
+        run: |
+          npx allure generate docs/${{ matrix.environment }} --clean -o docs/${{ matrix.environment }}/allure-report
 
       - name: Deploy Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
