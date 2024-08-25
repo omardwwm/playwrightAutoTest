@@ -148,6 +148,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: merge_results
+    strategy:
+      matrix:
+        environment:
+          - int
+          # - dev
 
     steps:
       - name: Checkout repository
