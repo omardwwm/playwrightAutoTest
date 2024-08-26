@@ -158,13 +158,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Get Allure history
-        uses: actions/checkout@v4
-        if: always()
-        continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages
+      # - name: Get Allure history
+      #   uses: actions/checkout@v4
+      #   if: always()
+      #   continue-on-error: true
+      #   with:
+      #     ref: gh-pages
+      #     path: gh-pages
 
       - name: Download Allure Report
         uses: actions/download-artifact@v4
@@ -187,8 +187,8 @@ jobs:
           git add -A
           git commit -m "Deploy Allure report" || echo "No changes to commit"
           git push origin gh-pages --force
-          # uses: peaceiris/actions-gh-pages@v4
-          
+
+        # uses: peaceiris/actions-gh-pages@v4
         # if: always()
         # with:
         #   github_token: ${{ secrets.GITHUB_TOKEN }}
