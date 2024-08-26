@@ -177,4 +177,4 @@ jobs:
         if: always()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./allure-report-${{ matrix.environment }}
+          publish_dir: ./docs
