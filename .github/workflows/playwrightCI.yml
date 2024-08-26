@@ -18,8 +18,8 @@ jobs:
     strategy:
       matrix:
         environment:
-          - int
-          # - dev
+          # - int
+          - dev
         shard: [1, 2, 3, 4]
 
     env:
@@ -85,8 +85,8 @@ jobs:
     strategy:
       matrix:
         environment:
-          - int
-          # - dev
+          # - int
+          - dev
 
     steps:
       - name: Checkout repository
@@ -151,8 +151,8 @@ jobs:
     strategy:
       matrix:
         environment:
-          - int
-          # - dev
+          # - int
+          - dev
 
     steps:
       - name: Checkout repository
