@@ -170,7 +170,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: allure-report-${{ matrix.environment }}
-          path: ./allure-report-${{ matrix.environment }}
+          path: .docs/${{ matrix.environment }}/allure-report-${{ matrix.environment }}
 
       - name: Deploy Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
