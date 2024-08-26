@@ -171,7 +171,7 @@ jobs:
           mkdir -p docs/${{ matrix.environment }}
 
       - name: List Verify docs Directory
-        run: 
+        run: |
           ls -alh docs
           ls -alh docs/${{ matrix.environment }}
        
