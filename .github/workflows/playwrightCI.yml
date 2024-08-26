@@ -170,7 +170,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: allure-report-${{ matrix.environment }}
-          path: .docs/${{ matrix.environment }}/allure-report-${{ matrix.environment }}
+          path: docs/${{ matrix.environment }}/allure-report-${{ matrix.environment }}
 
       - name: Configure Git User
         run: |
@@ -183,7 +183,7 @@ jobs:
 
       - name: Deploy Allure Report to GitHub Pages
         run: |
-          cd docs/
+          cd docs/${{ matrix.environment }}/allure-report-${{ matrix.environment }}
           git add -A
           git commit -m "Deploy Allure report" || echo "No changes to commit"
           git push origin gh-pages --force
