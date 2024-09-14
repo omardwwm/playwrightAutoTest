@@ -14,7 +14,6 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         environment:
@@ -58,14 +57,13 @@ jobs:
           if [ -d "allure-results-${{ matrix.environment }}-${{ matrix.shard }}" ]; then
             rm -rf allure-results-${{ matrix.environment }}-${{ matrix.shard }}
           fi
+        if: ${{ github.event_name == 'push' && matrix.environment == 'dev' || github.event_name == 'schedule' && (github.event.schedule == '0 17 * * *' && matrix.environment == 'dev' || github.event.schedule == '0 18 * * *' && matrix.environment == 'int') }}
 
       - name: Run Playwright tests
         run: npm run test:env ${{ matrix.environment }} ${{ matrix.shard }}
         continue-on-error: true
-        if: |
-          (github.event_name == 'push' && matrix.environment == 'dev') ||
-          (github.event_name == 'schedule' && github.event.schedule == '0 16 * * *' && matrix.environment == 'dev') ||
-          (github.event_name == 'schedule' && github.event.schedule == '0 17 * * *' && matrix.environment == 'int')
+        if: ${{ github.event_name == 'push' && matrix.environment == 'dev' || github.event_name == 'schedule' && (github.event.schedule == '0 17 * * *' && matrix.environment == 'dev' || github.event.schedule == '0 18 * * *' && matrix.environment == 'int') }}
+
       # - name: List allure results
       #   run: ls -alh allure-results
 
@@ -74,6 +72,7 @@ jobs:
         with:
           name: allure-results-${{ matrix.environment }}-${{ matrix.shard }}
           path: allure-results
+        if: ${{ github.event_name == 'push' && matrix.environment == 'dev' || github.event_name == 'schedule' && (github.event.schedule == '0 17 * * *' && matrix.environment == 'dev' || github.event.schedule == '0 18 * * *' && matrix.environment == 'int') }}
 
   merge_results:
     runs-on: ubuntu-latest
