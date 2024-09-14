@@ -63,10 +63,9 @@ jobs:
         run: npm run test:env ${{ matrix.environment }} ${{ matrix.shard }}
         continue-on-error: true
         if: |
-          github.event_name == 'push' && matrix.environment == 'dev' ||
-          github.event_name == 'schedule' && github.event.schedule == '0 9 * * *' && matrix.environment == 'dev' || 
-          github.event_name == 'schedule' && github.event.schedule == '0 21 * * *' && matrix.environment == 'int'
-
+          (github.event_name == 'push' && matrix.environment == 'dev') ||
+          (github.event_name == 'schedule' && github.event.schedule == '0 16 * * *' && matrix.environment == 'dev') ||
+          (github.event_name == 'schedule' && github.event.schedule == '0 17 * * *' && matrix.environment == 'int')
       # - name: List allure results
       #   run: ls -alh allure-results
 
