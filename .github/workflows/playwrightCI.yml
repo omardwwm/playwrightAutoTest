@@ -16,12 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        environment:
-          - int
-          - dev
+        environment: [int, dev]
         shard: [1, 2, 3, 4]
-
-    # Only run the test job under specific conditions
 
     env:
       DEV_ALL_REALM_BASE_URL: ${{vars.DEV_ALL_REALM_BASE_URL}}
@@ -30,6 +26,14 @@ jobs:
       INT_REALM_US_BASE_URL: ${{vars.INT_REALM_US_BASE_URL}}
       S3_BUCKET: ${{vars.S3_BUCKET}}
       CI_ENV: ${{vars.CI_ENV}}
+
+      if: |
+        (
+          (github.event_name == 'push' && matrix.environment == 'dev') ||
+          (github.event_name == 'schedule' && 
+            ((github.event.schedule == '0 17 * * *' && matrix.environment == 'dev') ||
+              (github.event.schedule == '0 18 * * *' && matrix.environment == 'int')))
+        )
 
     steps:
       - name: Checkout repository
@@ -72,9 +76,6 @@ jobs:
         with:
           name: allure-results-${{ matrix.environment }}-${{ matrix.shard }}
           path: allure-results
-
-        # Conditional execution for environments
-        if: ${{ github.event_name == 'push' && matrix.environment == 'dev' || (github.event_name == 'schedule' && (github.event.schedule == '0 9 * * *' && matrix.environment == 'dev' || github.event.schedule == '0 21 * * *' && matrix.environment == 'int')) }}
 
   merge_results:
     runs-on: ubuntu-latest
