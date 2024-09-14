@@ -20,9 +20,9 @@ jobs:
       - name: Determine environment
         id: set_environment
         run: |
-          if [[ ${{ github.event_name }} == 'push' ]]; then
+          if [[ "${{ github.event_name }}" == "push" ]]; then
             echo "env=dev" >> $GITHUB_ENV
-          elif [[ ${{ github.event.schedule }} == '0 17 * * *' ]]; then
+          elif [[ "${{ github.event.schedule }}" == "0 17 * * *" ]]; then
             echo "env=int" >> $GITHUB_ENV
           else
             echo "env=dev" >> $GITHUB_ENV
@@ -36,7 +36,7 @@ jobs:
     if: ${{ needs.determine_environment.outputs.env == 'dev' || needs.determine_environment.outputs.env == 'int' }}
     strategy:
       matrix:
-        environment: ${{ needs.determine_environment.outputs.env }}
+        environment: ["${{ needs.determine_environment.outputs.env }}"]
         shard: [1, 2, 3, 4]
 
     env:
