@@ -21,23 +21,25 @@ jobs:
       - name: Determine environment
         id: set_environment
         run: |
-         if [ "${{ github.event_name }}" == "push" ]; then
-            echo "env=dev" >> $GITHUB_ENV
-            echo "::set-output name=env::dev"
-          elif [ "${{ github.event.schedule }}" == "0 20 * * *" ]; then
-            echo "env=int" >> $GITHUB_ENV
-            echo "::set-output name=env::int"
+         echo "Determining environment..."
+          if [ "${{ github.event_name }}" == "push" ]; then
+            echo "ENV=dev" >> $GITHUB_ENV
+          elif [ "${{ github.event.schedule }}" == "0 17 * * *" ]; then
+            echo "ENV=int" >> $GITHUB_ENV
           else
-            echo "env=dev" >> $GITHUB_ENV
-            echo "::set-output name=env::dev"
+            echo "ENV=dev" >> $GITHUB_ENV
           fi
+
+          echo "::set-output name=env::${{ env.ENV }}"
+
 
   test:
     runs-on: ubuntu-latest
     needs: determine_environment
+    if: needs.determine_environment.outputs.env == 'dev' || needs.determine_environment.outputs.env == 'int' # Conditional execution based on environment
     strategy:
       matrix:
-        environment: ${{ needs.determine_environment.outputs.env }}
+        # environment: [${{ needs.determine_environment.outputs.env }}]
         shard: [1, 2, 3, 4]
 
     env:
@@ -47,6 +49,7 @@ jobs:
       INT_REALM_US_BASE_URL: ${{vars.INT_REALM_US_BASE_URL}}
       S3_BUCKET: ${{vars.S3_BUCKET}}
       CI_ENV: ${{vars.CI_ENV}}
+      ENV: ${{ needs.determine_environment.outputs.env }}
 
     steps:
       - name: Checkout repository
@@ -73,30 +76,33 @@ jobs:
 
       - name: Delete old Allure results for environment and shard
         run: |
-          if [ -d "allure-results-${{ matrix.environment }}-${{ matrix.shard }}" ]; then
-            rm -rf allure-results-${{ matrix.environment }}-${{ matrix.shard }}
+          if [ -d "allure-results-${{ env.ENV  }}-${{ matrix.shard }}" ]; then
+            rm -rf allure-results-${{ env.ENV  }}-${{ matrix.shard }}
           fi
 
       - name: Run Playwright tests
-        run: npm run test:env ${{ matrix.environment }} ${{ matrix.shard }}
+        run: npm run test:env ${{ env.ENV  }} ${{ matrix.shard }}
         continue-on-error: true
 
       # - name: List allure results
       #   run: ls -alh allure-results
 
-      - name: Upload Allure results for ${{ matrix.environment }} -shard ${{ matrix.shard }}
+      - name: Upload Allure results for ${{ env.ENV  }} -shard ${{ matrix.shard }}
         uses: actions/upload-artifact@v4
         with:
-          name: allure-results-${{ matrix.environment }}-${{ matrix.shard }}
+          name: allure-results-${{ env.ENV  }}-${{ matrix.shard }}
           path: allure-results
 
 
   merge_results:
     runs-on: ubuntu-latest
     needs: test
-    strategy:
-      matrix:
-        environment: ${{ needs.determine_environment.outputs.env }}
+    # strategy:
+    #   matrix:
+    #     environment: ${{ needs.determine_environment.outputs.env }}
+
+    env:
+      ENV: ${{ needs.determine_environment.outputs.env }}
 
     steps:
       - name: Checkout repository
@@ -106,7 +112,7 @@ jobs:
         run: |
           mkdir -p allure-results/combined
           for shard in 1 2 3 4; do
-            cp -r allure-results-${{ matrix.environment }}-shard-${shard}/* allure-results/combined/ || true
+            cp -r allure-results-${{ env.ENV }}-shard-${shard}/* allure-results/combined/ || true
           done
 
       - name: Install allure-commandline
@@ -117,14 +123,14 @@ jobs:
 
       - name: Merge Allure results and generate report
         run: |
-          npx allure generate allure-results/combined --clean -o allure-report-${{ matrix.environment }}
-          ls -alh allure-report-${{ matrix.environment }}
+          npx allure generate allure-results/combined --clean -o allure-report-${{ env.ENV  }}
+          ls -alh allure-report-${{ env.ENV  }}
 
       - name: Upload Mrged Allure Report
         uses: actions/upload-artifact@v4
         with:
-          name: allure-report-${{ matrix.environment }}
-          path: allure-report-${{ matrix.environment }}
+          name: allure-report-${{ env.ENV  }}
+          path: allure-report-${{ env.ENV  }}
 
       # Conditional execution based on environment
     if: needs.test.result == 'success'
@@ -133,10 +139,13 @@ jobs:
     runs-on: ubuntu-latest
     needs: merge_results
     if: always()
-    strategy:
-      matrix:
-        environment: ${{ needs.determine_environment.outputs.env }}
-      max-parallel: 1 # Avoid parallel deployment to prevent conflicts
+    # strategy:
+    #   matrix:
+    #     environment: ${{ needs.determine_environment.outputs.env }}
+    #   max-parallel: 1 # Avoid parallel deployment to prevent conflicts
+
+    env:
+      ENV: ${{ needs.determine_environment.outputs.env }}
 
     steps:
       - name: Checkout repository
@@ -148,19 +157,19 @@ jobs:
           git config --global user.email "git@mail.com"
 
       - name: Ensure environment directory exists
-        run: mkdir -p docs/allure-report-${{ matrix.environment }}
+        run: mkdir -p docs/allure-report-${{ env.ENV }}
 
       - name: Remove old report files
-        run: rm -rf docs/allure-report-${{ matrix.environment }}/*
+        run: rm -rf docs/allure-report-${{ env.ENV}}/*
 
       - name: Download Allure Report
         uses: actions/download-artifact@v4
         with:
-          name: allure-report-${{ matrix.environment }}
-          path: docs/allure-report-${{ matrix.environment }}
+          name: allure-report-${{ env.ENV }}
+          path: docs/allure-report-${{ env.ENV }}
 
       - name: Commit and Deploy Allure Report to GitHub Pages
         run: |
           git add docs/
-          git commit -m "Update Allure report for ${{ matrix.environment }}"
+          git commit -m "Update Allure report for ${{ env.ENV }}"
           git push origin gh-pages --force
