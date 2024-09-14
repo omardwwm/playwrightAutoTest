@@ -27,7 +27,7 @@ jobs:
           else
             echo "env=dev" >> $GITHUB_ENV
           fi
-          echo "::set-output name=env::${{ env.env }}"
+          echo "env=${{ env.env }}" >> $GITHUB_ENV
         shell: bash
 
   test:
@@ -36,7 +36,7 @@ jobs:
     if: ${{ needs.determine_environment.outputs.env == 'dev' || needs.determine_environment.outputs.env == 'int' }}
     strategy:
       matrix:
-        environment: ["${{ needs.determine_environment.outputs.env }}"]
+        environment: ${{ needs.determine_environment.outputs.env }}
         shard: [1, 2, 3, 4]
 
     env:
