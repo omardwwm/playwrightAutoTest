@@ -204,28 +204,25 @@ jobs:
       - name: Configure Git User
         run: |
           git config --global user.name "omardwwm"
-          git config --global user.email "boudraa.omar@gmail.com"    
+          git config --global user.email "boudraa.omar@gmail.com"
 
-      - name: Checkout switch to gh-pages branch
-        run: |
-          git checkout gh-pages || git checkout -b gh-pages
+      - name: Ensure environment directory exists
+        run: mkdir -p docs/allure-report-${{ matrix.environment }}
 
-      - name: Deploy Allure Report for dev
-        if: matrix.environment == 'dev'
-        run: |
-          cd docs/dev 
-          git add -A
-          git commit -m "Deploy Allure report for dev" || echo "No changes to commit"
-          git push origin gh-pages --force
-  
-      - name: Deploy Allure Report for int
-        if: matrix.environment == 'int'
-        run: |
-          cd docs/int 
-          git add -A  
-          git commit -m "Deploy Allure report for int" || echo "No changes to commit"  
-          git push origin gh-pages --force
+      - name: Remove old report files
+        run: rm -rf docs/allure-report-${{ matrix.environment }}/*
 
+      - name: Download Allure Report
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-report-${{ matrix.environment }}
+          path: docs/allure-report-${{ matrix.environment }}
+
+      - name: Deploy Allure Report to GitHub Pages
+        run: |
+          git add docs/
+          git commit -m "Update Allure reports for ${{ matrix.environment }}"
+          git push origin gh-pages
 
       # - name: Create in docs for report
       #   run: |
@@ -248,8 +245,8 @@ jobs:
       #     git commit -m "Deploy Allure report" || echo "No changes to commit"
       #     git push origin gh-pages --force
 
-        # uses: peaceiris/actions-gh-pages@v4
-        # if: always()
-        # with:
-        #   github_token: ${{ secrets.GITHUB_TOKEN }}
-        #   publish_dir: ./docs/${{ matrix.environment }}/allure-report-${{ matrix.environment }}
+      # uses: peaceiris/actions-gh-pages@v4
+      # if: always()
+      # with:
+      #   github_token: ${{ secrets.GITHUB_TOKEN }}
+      #   publish_dir: ./docs/${{ matrix.environment }}/allure-report-${{ matrix.environment }}
