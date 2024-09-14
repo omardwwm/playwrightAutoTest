@@ -12,11 +12,30 @@ on:
       - "main"
 
 jobs:
+
+  determine_environment:
+    runs-on: ubuntu-latest
+    outputs:
+      env: ${{ steps.set_environment.outputs.env }}
+    steps:
+      - name: Determine environment
+        id: set_environment
+        run: |
+          if [[ ${{ github.event_name }} == 'push' ]]; then
+            echo "env=dev" >> $GITHUB_ENV
+          elif [[ ${{ github.event.schedule }} == '0 17 * * *' ]]; then
+            echo "env=int" >> $GITHUB_ENV
+          else
+            echo "env=dev" >> $GITHUB_ENV
+          fi
+          echo "env=${{ env.env }}" >> $GITHUB_ENV
+
+
   test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        environment: [int, dev]
+        environment: ${{ needs.determine_environment.outputs.env }} 
         shard: [1, 2, 3, 4]
 
     env:
