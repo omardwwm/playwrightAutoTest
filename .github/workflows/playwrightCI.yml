@@ -21,6 +21,8 @@ jobs:
           - dev
         shard: [1, 2, 3, 4]
 
+    # Only run the test job under specific conditions
+
     env:
       DEV_ALL_REALM_BASE_URL: ${{vars.DEV_ALL_REALM_BASE_URL}}
       INT_REALM_AS_BASE_URL: ${{vars.INT_REALM_AS_BASE_URL}}
@@ -57,12 +59,10 @@ jobs:
           if [ -d "allure-results-${{ matrix.environment }}-${{ matrix.shard }}" ]; then
             rm -rf allure-results-${{ matrix.environment }}-${{ matrix.shard }}
           fi
-        if: ${{ github.event_name == 'push' && matrix.environment == 'dev' || github.event_name == 'schedule' && (github.event.schedule == '0 17 * * *' && matrix.environment == 'dev' || github.event.schedule == '0 18 * * *' && matrix.environment == 'int') }}
 
       - name: Run Playwright tests
         run: npm run test:env ${{ matrix.environment }} ${{ matrix.shard }}
         continue-on-error: true
-        if: ${{ github.event_name == 'push' && matrix.environment == 'dev' || github.event_name == 'schedule' && (github.event.schedule == '0 17 * * *' && matrix.environment == 'dev' || github.event.schedule == '0 18 * * *' && matrix.environment == 'int') }}
 
       # - name: List allure results
       #   run: ls -alh allure-results
@@ -72,7 +72,8 @@ jobs:
         with:
           name: allure-results-${{ matrix.environment }}-${{ matrix.shard }}
           path: allure-results
-        if: ${{ github.event_name == 'push' && matrix.environment == 'dev' || github.event_name == 'schedule' && (github.event.schedule == '0 17 * * *' && matrix.environment == 'dev' || github.event.schedule == '0 18 * * *' && matrix.environment == 'int') }}
+
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main' || (github.event_name == 'schedule' && (github.event.schedule == '0 9 * * *' && matrix.environment == 'dev') || (github.event.schedule == '0 21 * * *' && matrix.environment == 'int'))
 
   merge_results:
     runs-on: ubuntu-latest
