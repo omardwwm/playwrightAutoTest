@@ -23,16 +23,17 @@ jobs:
         run: |
           if [[ ${{ github.event_name }} == 'push' ]]; then
             echo "env=dev" >> $GITHUB_ENV
-          elif [[ ${{ github.event.schedule }} == '0 17 * * *' ]]; then
+          elif [[ ${{ github.event.schedule }} == '0 19 * * *' ]]; then
             echo "env=int" >> $GITHUB_ENV
           else
             echo "env=dev" >> $GITHUB_ENV
           fi
-          echo "env=${{ env.env }}" >> $GITHUB_ENV
+          echo "::set-output name=env::$(grep '^env=' $GITHUB_ENV | cut -d '=' -f2)"
 
 
   test:
     runs-on: ubuntu-latest
+    needs: determine_environment
     strategy:
       matrix:
         environment: ${{ needs.determine_environment.outputs.env }} 
