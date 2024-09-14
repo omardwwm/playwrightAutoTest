@@ -104,7 +104,7 @@ jobs:
     needs: test
     strategy:
       matrix:
-        environment: [int, dev]
+        environment: ${{ needs.determine_environment.outputs.env }}
 
     steps:
       - name: Checkout repository
@@ -143,7 +143,7 @@ jobs:
     if: always()
     strategy:
       matrix:
-        environment: [int, dev]
+        environment: ${{ needs.determine_environment.outputs.env }}
       max-parallel: 1 # Avoid parallel deployment to prevent conflicts
 
     steps:
