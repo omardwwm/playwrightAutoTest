@@ -43,7 +43,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     needs: determine_environment
-    if: needs.determine_environment.outputs.env == 'dev' || needs.determine_environment.outputs.env == 'int' # Conditional execution based on environment
     strategy:
       matrix:
         # environment: [${{ needs.determine_environment.outputs.env }}]
@@ -56,7 +55,8 @@ jobs:
       INT_REALM_US_BASE_URL: ${{vars.INT_REALM_US_BASE_URL}}
       S3_BUCKET: ${{vars.S3_BUCKET}}
       CI_ENV: ${{vars.CI_ENV}}
-      ENV: ${{ needs.determine_environment.outputs.env }}
+      # ENV: ${{ needs.determine_environment.outputs.env }}
+      ENV: "dev"
 
     steps:
       - name: Checkout repository
