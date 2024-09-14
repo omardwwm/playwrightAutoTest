@@ -21,7 +21,6 @@ jobs:
           - int
           - dev
         shard: [1, 2, 3, 4]
-      fail-fast: false
 
     env:
       DEV_ALL_REALM_BASE_URL: ${{vars.DEV_ALL_REALM_BASE_URL}}
@@ -63,6 +62,10 @@ jobs:
       - name: Run Playwright tests
         run: npm run test:env ${{ matrix.environment }} ${{ matrix.shard }}
         continue-on-error: true
+        if: |
+          github.event_name == 'push' && matrix.environment == 'dev' ||
+          github.event_name == 'schedule' && github.event.schedule == '0 9 * * *' && matrix.environment == 'dev' || 
+          github.event_name == 'schedule' && github.event.schedule == '0 21 * * *' && matrix.environment == 'int'
 
       # - name: List allure results
       #   run: ls -alh allure-results
@@ -72,14 +75,6 @@ jobs:
         with:
           name: allure-results-${{ matrix.environment }}-${{ matrix.shard }}
           path: allure-results
-
-        # Conditional execution based on schedule and environment
-        if: |
-          (github.event_name == 'push' && matrix.environment == 'dev') || 
-          (github.event_name == 'schedule' && (
-            (github.event.schedule == '0 9 * * *' && matrix.environment == 'dev') || 
-            (github.event.schedule == '0 21 * * *' && matrix.environment == 'int')
-          ))
 
   merge_results:
     runs-on: ubuntu-latest
