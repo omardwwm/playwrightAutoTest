@@ -36,6 +36,10 @@ jobs:
           echo "env=$(grep '^env=' $GITHUB_ENV | cut -d '=' -f2)" >> $GITHUB_ENV
         shell: bash
 
+      - name: Set output
+        id: set_output
+        run: echo "env=${{ env.env }}" >> $GITHUB_ENV
+
   test:
     runs-on: ubuntu-latest
     needs: determine_environment
