@@ -3,8 +3,8 @@ name: Run Playwright Tests
 on:
   schedule:
     # - cron: "*/5 * * * *" # Every 5 MINUTES
-    - cron: "0 9 * * *" # Every day at 09:00 UTC
-    - cron: "0 21 * * *" # Every day at 21:00 UTC
+    - cron: "0 16 * * *" # Every day at 09:00 UTC
+    - cron: "0 17 * * *" # Every day at 21:00 UTC
   push:
     branches: [main, develop]
   pull_request:
@@ -73,10 +73,13 @@ jobs:
           name: allure-results-${{ matrix.environment }}-${{ matrix.shard }}
           path: allure-results
 
-      # Conditional execution based on schedule and environment
-        if: | 
-          (github.event_name == 'push' && matrix.environment == 'dev') ||
-          (github.event_name == 'schedule' && ((matrix.environment == 'dev' && github.event.schedule == '0 16 * * *') || (matrix.environment == 'int' && github.event.schedule == '0 17 * * *')))
+        # Conditional execution based on schedule and environment
+        if: |
+          (github.event_name == 'push' && matrix.environment == 'dev') || 
+          (github.event_name == 'schedule' && (
+            (github.event.schedule == '0 9 * * *' && matrix.environment == 'dev') || 
+            (github.event.schedule == '0 21 * * *' && matrix.environment == 'int')
+          ))
 
   merge_results:
     runs-on: ubuntu-latest
@@ -123,7 +126,7 @@ jobs:
     strategy:
       matrix:
         environment: [int, dev]
-      max-parallel: 1  # Avoid parallel deployment to prevent conflicts
+      max-parallel: 1 # Avoid parallel deployment to prevent conflicts
 
     steps:
       - name: Checkout repository
@@ -136,10 +139,10 @@ jobs:
 
       - name: Ensure environment directory exists
         run: mkdir -p docs/allure-report-${{ matrix.environment }}
-  
+
       - name: Remove old report files
         run: rm -rf docs/allure-report-${{ matrix.environment }}/*
-  
+
       - name: Download Allure Report
         uses: actions/download-artifact@v4
         with:
