@@ -21,16 +21,23 @@ jobs:
       - name: Determine environment
         id: set_environment
         run: |
-         echo "Determining environment..."
+          echo "Determining environment..."
+
+          # Determine the environment based on the event
           if [ "${{ github.event_name }}" == "push" ]; then
             echo "ENV=dev" >> $GITHUB_ENV
+            echo "env=dev" >> $GITHUB_ENV # Set the environment variable for output
           elif [ "${{ github.event.schedule }}" == "0 17 * * *" ]; then
             echo "ENV=int" >> $GITHUB_ENV
+            echo "env=int" >> $GITHUB_ENV # Set the environment variable for output
           else
             echo "ENV=dev" >> $GITHUB_ENV
+            echo "env=dev" >> $GITHUB_ENV # Default to dev if none of the conditions are met
           fi
 
-          echo "::set-output name=env::${{ env.ENV }}"
+          # Set output for use in other jobs
+          echo "env=${{ env.ENV }}" >> $GITHUB_ENV
+        shell: bash
 
 
   test:
