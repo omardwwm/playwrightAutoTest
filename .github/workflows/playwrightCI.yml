@@ -6,7 +6,7 @@ on:
     - cron: "0 16 * * *" # Every day at 09:00 UTC
     - cron: "0 17 * * *" # Every day at 21:00 UTC
   push:
-    branches: [main, develop]
+    branches: [main]
   pull_request:
     branches:
       - "main"
@@ -27,13 +27,6 @@ jobs:
       S3_BUCKET: ${{vars.S3_BUCKET}}
       CI_ENV: ${{vars.CI_ENV}}
 
-      if: |
-        (
-          (github.event_name == 'push' && matrix.environment == 'dev') ||
-          (github.event_name == 'schedule' && 
-            ((github.event.schedule == '0 17 * * *' && matrix.environment == 'dev') ||
-              (github.event.schedule == '0 18 * * *' && matrix.environment == 'int')))
-        )
 
     steps:
       - name: Checkout repository
@@ -76,6 +69,16 @@ jobs:
         with:
           name: allure-results-${{ matrix.environment }}-${{ matrix.shard }}
           path: allure-results
+
+        # Condition to only run for push events or specific schedules
+        if: |
+          (github.event_name == 'push' && matrix.environment == 'dev') ||
+          (github.event_name == 'schedule' &&
+            ((github.event.schedule == '0 16 * * *' && matrix.environment == 'dev') ||
+              (github.event.schedule == '0 17 * * *' && matrix.environment == 'int'))
+          )
+
+
 
   merge_results:
     runs-on: ubuntu-latest
