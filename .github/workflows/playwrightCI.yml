@@ -99,13 +99,6 @@ jobs:
           name: allure-results-${{ matrix.environment }}-${{ matrix.shard }}
           path: allure-results
 
-        # Condition to only run for push events or specific schedules
-        if: |
-          (github.event_name == 'push' && matrix.environment == 'dev') ||
-          (github.event_name == 'schedule' &&
-            ((github.event.schedule == '0 16 * * *' && matrix.environment == 'dev') ||
-              (github.event.schedule == '0 17 * * *' && matrix.environment == 'int'))
-          )
 
   merge_results:
     runs-on: ubuntu-latest
