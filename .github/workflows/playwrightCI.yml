@@ -12,6 +12,7 @@ on:
       - "main"
 
 jobs:
+
   determine_environment:
     runs-on: ubuntu-latest
     outputs:
@@ -20,25 +21,16 @@ jobs:
       - name: Determine environment
         id: set_environment
         run: |
-          # Debugging output
-
-          echo "GitHub event name: ${{ github.event_name }}"
-          echo "GitHub event schedule: ${{ github.event.schedule }}"
-
-          if [[ "${{ github.event_name }}" == "push" ]]; then
+         if [ "${{ github.event_name }}" == "push" ]; then
             echo "env=dev" >> $GITHUB_ENV
-          elif [[ "${{ github.event.schedule }}" == "0 17 * * *" ]]; then
+            echo "::set-output name=env::dev"
+          elif [ "${{ github.event.schedule }}" == "0 20 * * *" ]; then
             echo "env=int" >> $GITHUB_ENV
+            echo "::set-output name=env::int"
           else
             echo "env=dev" >> $GITHUB_ENV
+            echo "::set-output name=env::dev"
           fi
-          # Read the environment value from $GITHUB_ENV and set it as an output
-          echo "env=$(grep '^env=' $GITHUB_ENV | cut -d '=' -f2)" >> $GITHUB_ENV
-        shell: bash
-
-      - name: Set output
-        id: set_output
-        run: echo "env=${{ env.env }}" >> $GITHUB_ENV
 
   test:
     runs-on: ubuntu-latest
