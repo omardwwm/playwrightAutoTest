@@ -157,47 +157,63 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Checkout gh-pages branch
-        uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-          path: gh-pages
-
-      - name: Verify .git directory exists before cleanup
-        run: | 
-          ls -la .git || echo ".git directory not found"
-
-      - name: Clean up old files, keeping only the docs folder
-        run: |
-          # Remove everything except docs and .git
-          find . -mindepth 1 -maxdepth 1 ! -name 'docs' ! -name '.git' -exec rm -rf {} +
-          find docs -mindepth 1 ! -name 'docs' -exec rm -rf {} +
-
-      - name: Download Allure Report
-        uses: actions/download-artifact@v4
-        with:
-          name: allure-report-${{ matrix.environment }}
-          path: gh-pages/docs/${{ matrix.environment }}/
-
-      - name: Manage Ran Env folders
-        run: |
-          # Ensure environment folder exists
-          mkdir -p gh-pages/docs/${{ matrix.environment }}
-          # Clean the current environment folder
-          find gh-pages/docs/${{ matrix.environment }} -mindepth 1 -exec rm -rf {} +
-          # Copy the new report into the environment folder
-          cp -r gh-pages/docs/${{ matrix.environment }}/* gh-pages/docs/${{ matrix.environment }}/  
-
       - name: Configure Git User
         run: |
           git config --global user.name "omardwwm"
           git config --global user.email "boudraa.omar@gmail.com"
 
+      - name: Checkout gh-pages branch
+        run: |
+          git checkout gh-pages || git checkout -b gh-pages
+
+      - name: Verify .git directory exists before cleanup
+        run: | 
+          ls -la .git || echo ".git directory not found"
+
+      # Clean up all files except docs and .git
+      - name: Clean up all files except docs and .git
+        run: |
+          find . -mindepth 1 -maxdepth 1 ! -name 'docs' ! -name '.git' -exec rm -rf {} +
+          ls -alh  # Verify remaining files and folders
+
+      # List the docs directory before cleaning the specific environment folder
+      - name: List the docs directory before cleanup
+        run: ls -alh docs || echo "docs directory not found"
+
+
+      # Clean only the folder for the current environment being run
+      - name: Clean up the current environment's report folder
+        run: |
+          if [ -d "docs/${{ matrix.environment }}" ]; then
+            find docs/${{ matrix.environment }} -mindepth 1 -exec rm -rf {} +
+          fi    
+      # Verify docs Directory after cleanup
+      - name: Verify docs Directory after cleanup
+        run: |
+          ls -alh docs
+          ls -alh docs/${{ matrix.environment }}
+
+      # Download the Allure report for the current environment
+      - name: Download Allure Report
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-report-${{ matrix.environment }}
+          path: docs/${{ matrix.environment }}/allure-report-${{ matrix.environment }}  
+
+      # List new report after download
+      - name: List new report after download
+        run: |
+          s -alh docs/${{ matrix.environment }}
+
       - name: Check git status
         run: git status
 
-      - name: Commit and push updated report
+      # Add and commit the changes to gh-pages
+      - name: Add and Commit the new report
         run: |
-          git add docs/
-          git commit -m "Update Allure report for ${{ matrix.environment }}"
-          git push origin gh-pages --force
+          git add docs/${{ matrix.environment }}/allure-report-${{ matrix.environment }}
+          git commit -m "Update Allure report for ${{ matrix.environment }}" || echo "No changes to commit"
+
+      # Push the changes to the gh-pages branch
+      - name: Push changes to gh-pages
+        run: git push origin gh-pages --force
