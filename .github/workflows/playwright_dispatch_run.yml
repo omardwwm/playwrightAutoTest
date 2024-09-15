@@ -141,13 +141,6 @@ jobs:
             mkdir -p docs
           fi
 
-      # - name: Ensure environment folder exists
-      #   run: mkdir -p docs/${{ env.ENV }}
-    
-      # - name: Remove old report for the current environment
-      #   run: |
-      #     rm -rf docs/${{ env.ENV }}/*
-
       - name: Ensure docs directory exists
         run: mkdir -p docs/allure-report-${{ env.ENV }}
 

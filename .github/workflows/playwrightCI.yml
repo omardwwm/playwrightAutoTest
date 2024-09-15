@@ -168,7 +168,13 @@ jobs:
 
       - name: Verify .git directory exists before cleanup
         run: | 
-          ls -la .git || echo ".git directory not found"
+          if [ -d ".git" ]; then 
+            echo ".git directory found"; 
+            ls -la .git; 
+          else 
+            echo ".git directory not found"; 
+            exit 1; 
+          fi
 
       # Clean up all files except docs and .git
       - name: Clean up all files except docs and .git
@@ -220,7 +226,7 @@ jobs:
           ls -alh docs/${{ matrix.environment }}
 
       - name: Check git status
-        run: git status
+        run: git status || exit 1
 
       # Add and commit the changes to gh-pages
       - name: Add and Commit the new report
