@@ -195,13 +195,17 @@ jobs:
       - name: Clean up the current environment's report folder
         run: |
           if [ -d "docs/${{ matrix.environment }}" ]; then
+            echo "Cleaning up folder docs/${{ matrix.environment }}"
             find docs/${{ matrix.environment }} -mindepth 1 -exec rm -rf {} +
-          fi    
-      # Verify docs Directory after cleanup
+          else
+            echo "Directory docs/${{ matrix.environment }} does not exist, skipping cleanup"
+          fi   
+      
       - name: Verify docs Directory after cleanup
         run: |
+          echo "docs directory contents after cleanup:"
           ls -alh docs
-          ls -alh docs/${{ matrix.environment }}
+          ls -alh docs/${{ matrix.environment }} || echo "docs/${{ matrix.environment }} directory not found"
 
       # Download the Allure report for the current environment
       - name: Download Allure Report
