@@ -156,6 +156,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # Ensure the full repository is checked out to work with Git
+          fetch-depth: 0
 
       - name: Configure Git User
         run: |
