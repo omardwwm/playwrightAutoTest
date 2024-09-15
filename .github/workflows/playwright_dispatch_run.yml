@@ -1,0 +1,156 @@
+name: Run Playwright Tests
+
+on:
+  workflow_dispatch:  # Allow manual triggering with environment selection
+    inputs:
+      environment:
+        description: 'Select the environment'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+          - dev
+          - int    
+jobs:
+
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        shard: [1, 2, 3, 4]
+
+    env:
+      DEV_ALL_REALM_BASE_URL: ${{vars.DEV_ALL_REALM_BASE_URL}}
+      INT_REALM_AS_BASE_URL: ${{vars.INT_REALM_AS_BASE_URL}}
+      INT_REALM_EU_BASE_URL: ${{vars.INT_REALM_EU_BASE_URL}}
+      INT_REALM_US_BASE_URL: ${{vars.INT_REALM_US_BASE_URL}}
+      S3_BUCKET: ${{vars.S3_BUCKET}}
+      CI_ENV: ${{vars.CI_ENV}} 
+      ENV: ${{ github.event.inputs.environment }} 
+
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cash: "npm"
+          cash-dependency-path: "package-lock.json"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+
+      - name: Install allure-commandline
+        run: npm install allure-commandline
+
+      - name: Verify allure version
+        run: npx allure --version
+
+      - name: Delete old Allure results for environment and shard
+        run: |
+          if [ -d "allure-results-${{ env.ENV  }}-${{ matrix.shard }}" ]; then
+            rm -rf allure-results-${{ env.ENV  }}-${{ matrix.shard }}
+          fi
+
+      - name: Run Playwright tests
+        run: npm run test:env ${{ env.ENV  }} ${{ matrix.shard }}
+        continue-on-error: true
+
+      # - name: List allure results
+      #   run: ls -alh allure-results
+
+      - name: Upload Allure results for ${{ env.ENV  }} -shard ${{ matrix.shard }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results-${{ env.ENV  }}-${{ matrix.shard }}
+          path: allure-results
+
+  merge_results:
+    runs-on: ubuntu-latest
+    needs: test
+   
+    env:
+     ENV: ${{ github.event.inputs.environment }} 
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download Allure results from shards
+        run: |
+          mkdir -p allure-results/combined
+          for shard in 1 2 3 4; do
+            cp -r allure-results-${{ env.ENV }}-shard-${shard}/* allure-results/combined/ || true
+          done
+
+      - name: Install allure-commandline
+        run: npm install -g allure-commandline
+
+      - name: Verify allure version
+        run: npx allure --version
+
+      - name: Merge Allure results and generate report
+        run: |
+          npx allure generate allure-results/combined --clean -o allure-report-${{ env.ENV  }}
+          ls -alh allure-report-${{ env.ENV  }}
+
+      - name: Upload Mrged Allure Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report-${{ env.ENV  }}
+          path: allure-report-${{ env.ENV  }}
+
+      # Conditional execution based on environment
+    if: needs.test.result == 'success'
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: merge_results
+    if: always()
+    env:
+      ENV: ${{ github.event.inputs.environment }} 
+   
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure Git User
+        run: |
+          git config --global user.name "testgit"
+          git config --global user.email "git@mail.com"
+
+      - name: Switch to gh-pages branch
+        run: |
+          git fetch origin gh-pages
+          git checkout gh-pages
+          git pull origin gh-pages  
+          
+      - name: Remove all files except the docs folder
+        run: |
+          find . ! -name 'docs' -type d -exec rm -rf {} +
+          find . ! -name 'docs' -type f -exec rm -f {} +
+
+      - name: Ensure environment folder exists
+        run: mkdir -p docs/${{ env.ENV }}
+    
+      - name: Remove old report for the current environment
+        run: |
+          rm -rf docs/${{ env.ENV }}/*
+    
+      - name: Download Allure Report for ${{ env.ENV }}
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-report-${{ env.ENV }}
+          path: docs/${{ env.ENV }}
+    
+      - name: Commit and Deploy Allure Report for ${{ env.ENV }} to GitHub Pages
+        run: |
+          git add docs/
+          git commit -m "Update Allure report for ${{ env.ENV }}"
+          git push origin gh-pages --force
