@@ -185,9 +185,9 @@ jobs:
         run: |
           echo "Before cleanup:"
           ls -la
-        
-          # Remove all files except .git
-          find . -mindepth 1 -type f ! -name '.git' -exec rm -f {} +
+
+          # Ensure to remove all files but not the .git directory
+          find . -mindepth 1 -type f ! -path './.git/*' -exec rm -f {} +
 
           # Remove all directories except docs and .git
           find . -mindepth 1 -type d ! -name 'docs' ! -name '.git' -exec rm -rf {} +
@@ -228,7 +228,12 @@ jobs:
           ls -alh docs/${{ matrix.environment }}
 
       - name: Check git status
-        run: git status || exit 1
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Contents of the directory:"
+          ls -la
+          git status || exit 1
 
       # Add and commit the changes to gh-pages
       - name: Add and Commit the new report
