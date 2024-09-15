@@ -183,17 +183,15 @@ jobs:
       # Clean up all files except docs and .git
       - name: Clean up all files except docs and .git
         run: |
-          # First list the current files/folders to verify what is present
           echo "Before cleanup:"
           ls -la
         
           # Remove all files except .git
           find . -mindepth 1 -type f ! -name '.git' -exec rm -f {} +
-        
-          # Remove all directories except docs and .git, avoiding '.'
+
+          # Remove all directories except docs and .git
           find . -mindepth 1 -type d ! -name 'docs' ! -name '.git' -exec rm -rf {} +
-          
-          # List the files again to verify cleanup
+
           echo "After cleanup:"
           ls -la
 
