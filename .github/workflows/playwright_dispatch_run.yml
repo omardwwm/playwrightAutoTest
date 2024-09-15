@@ -1,18 +1,17 @@
 name: WITH DISPATCH/INPUTS Run Playwright Tests
 
 on:
-  workflow_dispatch:  # Allow manual triggering with environment selection
+  workflow_dispatch: # Allow manual triggering with environment selection
     inputs:
       environment:
-        description: 'Select the environment'
+        description: "Select the environment"
         required: true
-        default: 'dev'
+        default: "dev"
         type: choice
         options:
           - dev
-          - int    
+          - int
 jobs:
-
   test:
     runs-on: ubuntu-latest
     strategy:
@@ -25,11 +24,10 @@ jobs:
       INT_REALM_EU_BASE_URL: ${{vars.INT_REALM_EU_BASE_URL}}
       INT_REALM_US_BASE_URL: ${{vars.INT_REALM_US_BASE_URL}}
       S3_BUCKET: ${{vars.S3_BUCKET}}
-      CI_ENV: ${{vars.CI_ENV}} 
-      ENV: ${{ github.event.inputs.environment }} 
+      CI_ENV: ${{vars.CI_ENV}}
+      ENV: ${{ github.event.inputs.environment }}
 
     steps:
-
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -74,9 +72,9 @@ jobs:
   merge_results:
     runs-on: ubuntu-latest
     needs: test
-   
+
     env:
-     ENV: ${{ github.event.inputs.environment }} 
+      ENV: ${{ github.event.inputs.environment }}
 
     steps:
       - name: Checkout repository
@@ -114,47 +112,71 @@ jobs:
     needs: merge_results
     if: always()
     env:
-      ENV: ${{ github.event.inputs.environment }} 
-   
+      ENV: ${{ github.event.inputs.environment }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # Ensure the full repository is checked out to work with Git
+          fetch-depth: 0
 
       - name: Configure Git User
         run: |
-          git config --global user.name "testgit"
-          git config --global user.email "git@mail.com"
+          git config --global user.name "omardwwm"
+          git config --global user.email "boudraa.omar@gmail.com"
 
-      - name: Switch to gh-pages branch
+      - name: Checkout gh-pages branch
         run: |
           git fetch origin gh-pages
-          git checkout gh-pages
-          git pull origin gh-pages  
-          
-      - name: Clean up old files, keeping only the docs folder
+          git checkout gh-pages || git checkout -b gh-pages
+        # List the docs directory before cleaning the specific environment folder
+      - name: List the docs directory before cleanup
+        run: ls -alh docs || echo "docs directory not found"
+
+        # Clean only the folder for the current environment being run
+      - name: Clean up the current environment's report folder
         run: |
-          # Remove all files and directories except for the 'docs' folder
-          find . -mindepth 1 -maxdepth 1 ! -name 'docs' -exec rm -rf {} +
-    
-          # Optional: Check if 'docs' folder is present, if not create it
-          if [ ! -d "docs" ]; then
-            mkdir -p docs
+          if [ -d "docs/${{ env.ENV }}" ]; then
+            echo "Cleaning up folder docs/${{ env.ENV }}"
+            find docs/${{ env.ENV }} -mindepth 1 -exec rm -rf {} +
+          else
+            echo "Directory docs/${{ env.ENV }} does not exist, skipping cleanup"
           fi
 
-      - name: Ensure docs directory exists
-        run: mkdir -p docs/allure-report-${{ env.ENV }}
-
-      - name: Remove old report files
-        run: rm -rf docs/allure-report-${{ env.ENV }}/*
-
-      - name: Download Allure Report for ${{ env.ENV }}
+      - name: Verify docs Directory after cleanup
+        run: |
+          echo "docs directory contents after cleanup:"
+          ls -alh docs
+          ls -alh docs/${{ env.ENV }} || echo "docs/${{ env.ENV }} directory not found"
+              
+        # Download the Allure report for the current environment
+      - name: Download Allure Report
         uses: actions/download-artifact@v4
         with:
           name: allure-report-${{ env.ENV }}
-          path: docs/${{ env.ENV }}
-    
-      - name: Commit and Deploy Allure Report for ${{ env.ENV }} to GitHub Pages
+          path: docs/${{ env.ENV }}/allure-report-${{ env.ENV }} 
+
+
+          # List new report after download
+      - name: List new report after download
         run: |
-          git add docs/
-          git commit -m "Update Allure report for ${{ env.ENV }}"
-          git push origin gh-pages --force
+          ls -alh docs/${{ env.ENV }}
+
+      - name: Check git status
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Contents of the directory:"
+          ls -la
+          git status || exit 1
+
+      # Add and commit the changes to gh-pages
+      - name: Add and Commit the new report
+        run: |
+          git add docs/${{ env.ENV }}/allure-report-${{ env.ENV }}
+          git commit -m "Update Allure report for ${{ env.ENV }}" || echo "No changes to commit"
+
+      # Push the changes to the gh-pages branch
+      - name: Push changes to gh-pages
+        run: git push origin gh-pages --force
