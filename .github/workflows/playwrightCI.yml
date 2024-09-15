@@ -203,7 +203,7 @@ jobs:
       # List new report after download
       - name: List new report after download
         run: |
-          s -alh docs/${{ matrix.environment }}
+          ls -alh docs/${{ matrix.environment }}
 
       - name: Check git status
         run: git status
