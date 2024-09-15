@@ -162,32 +162,36 @@ jobs:
         with:
           ref: gh-pages
 
-      - name: Download Allure Report
-        uses: actions/download-artifact@v4
-        with:
-          name: allure-report-${{ matrix.environment }}
-          path: docs/${{ matrix.environment }}/allure-report-${{ matrix.environment }}
+      - name: Verify .git directory exists before cleanup
+        run: | 
+          ls -la .git || echo ".git directory not found"
 
       - name: Clean up old files, keeping only the docs folder
         run: |
-          # Remove all files and directories except the 'docs' folder
-          find . -mindepth 1 -maxdepth 1 ! -name 'docs' -exec rm -rf {} +
-          # Also remove old files within the docs folder
-          find docs -mindepth 1 -maxdepth 1 ! -name 'docs' -exec rm -rf {} +
-  
+          # Remove all files and directories except the 'docs' folder and the '.git' directory
+          find . -mindepth 1 -maxdepth 1 ! -name 'docs' ! -name '.git' -exec rm -rf {} +
+          # Remove all files in the docs folder except for the docs folder itself
+          find docs -mindepth 1 -exec rm -rf {} +
+
       - name: Ensure docs directories exist
         run: |
           mkdir -p docs/allure-report-${{ matrix.environment }}
-  
+
       - name: Remove old report files
         run: rm -rf docs/allure-report-${{ matrix.environment }}/*
-  
+
       - name: Download Allure Report
         uses: actions/download-artifact@v4
         with:
           name: allure-report-${{ matrix.environment }}
           path: docs/allure-report-${{ matrix.environment }}
-  
+
+      # - name: Download Allure Report
+      #   uses: actions/download-artifact@v4
+      #   with:
+      #     name: allure-report-${{ matrix.environment }}
+      #     path: docs/${{ matrix.environment }}/allure-report-${{ matrix.environment }}
+
       - name: Configure Git User
         run: |
           git config --global user.name "omardwwm"
