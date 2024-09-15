@@ -157,22 +157,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # - name: Get Allure history
-      #   uses: actions/checkout@v4
-      #   if: always()
-      #   continue-on-error: true
-      #   with:
-      #     ref: gh-pages
-      #     path: gh-pages
-
-      - name: Create in docs for report
-        run: |
-          mkdir -p docs/${{ matrix.environment }}
-
-      - name: List Verify docs Directory
-        run: |
-          ls -alh docs
-          ls -alh docs/${{ matrix.environment }}
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
 
       - name: Download Allure Report
         uses: actions/download-artifact@v4
@@ -180,27 +168,16 @@ jobs:
           name: allure-report-${{ matrix.environment }}
           path: docs/${{ matrix.environment }}/allure-report-${{ matrix.environment }}
 
-      - name: Configure Git User
-        run: |
-          git config --global user.name "omardwwm"
-          git config --global user.email "boudraa.omar@gmail.com"
-
-      - name: Checkout switch to gh-pages branch
-        run: |
-          git checkout gh-pages || git checkout -b gh-pages
-
-
       - name: Clean up old files, keeping only the docs folder
         run: |
-          # Remove all files and directories except for the 'docs' folder
+          # Remove all files and directories except the 'docs' folder
           find . -mindepth 1 -maxdepth 1 ! -name 'docs' -exec rm -rf {} +
-          # Optional: Check if 'docs' folder is present, if not create it
-          if [ ! -d "docs" ]; then
-            mkdir -p docs
-          fi
+          # Also remove old files within the docs folder
+          find docs -mindepth 1 -maxdepth 1 ! -name 'docs' -exec rm -rf {} +
   
-      - name: Ensure docs directory exists
-        run: mkdir -p docs/allure-report-${{ matrix.environment }}
+      - name: Ensure docs directories exist
+        run: |
+          mkdir -p docs/allure-report-${{ matrix.environment }}
   
       - name: Remove old report files
         run: rm -rf docs/allure-report-${{ matrix.environment }}/*
@@ -213,6 +190,8 @@ jobs:
   
       - name: Commit and push updated report
         run: |
+          git config --global user.name "testgit"
+          git config --global user.email "git@mail.com"
           git add docs/
           git commit -m "Update Allure report for ${{ matrix.environment }}"
           git push origin gh-pages --force      
