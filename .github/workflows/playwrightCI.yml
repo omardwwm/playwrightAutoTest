@@ -170,30 +170,30 @@ jobs:
           git fetch origin gh-pages
           git checkout gh-pages || git checkout -b gh-pages
 
-      - name: Verify .git directory exists before cleanup
-        run: | 
-          if [ -d ".git" ]; then 
-            echo ".git directory found"; 
-            ls -la .git; 
-          else 
-            echo ".git directory not found"; 
-            exit 1; 
-          fi
+      # - name: Verify .git directory exists before cleanup
+      #   run: | 
+      #     if [ -d ".git" ]; then 
+      #       echo ".git directory found"; 
+      #       ls -la .git; 
+      #     else 
+      #       echo ".git directory not found"; 
+      #       exit 1; 
+      #     fi
 
       # Clean up all files except docs and .git
-      - name: Clean up all files except docs and .git
-        run: |
-          echo "Before cleanup:"
-          ls -la
+      # - name: Clean up all files except docs and .git
+      #   run: |
+      #     echo "Before cleanup:"
+      #     ls -la
 
-          # Ensure to remove all files but not the .git directory
-          find . -mindepth 1 -type f ! -path './.git/*' -exec rm -f {} +
+      #     # Ensure to remove all files but not the .git directory
+      #     find . -mindepth 1 -type f ! -path './.git/*' -exec rm -f {} +
 
-          # Remove all directories except docs and .git
-          find . -mindepth 1 -type d ! -name 'docs' ! -name '.git' -exec rm -rf {} +
+      #     # Remove all directories except docs and .git
+      #     find . -mindepth 1 -type d ! -name 'docs' ! -name '.git' -exec rm -rf {} +
 
-          echo "After cleanup:"
-          ls -la
+      #     echo "After cleanup:"
+      #     ls -la
 
       # List the docs directory before cleaning the specific environment folder
       - name: List the docs directory before cleanup
