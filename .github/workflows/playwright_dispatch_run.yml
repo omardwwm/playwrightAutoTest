@@ -1,4 +1,4 @@
-name: Run Playwright Tests
+name: WITH DISPATCH/INPUTS Run Playwright Tests
 
 on:
   workflow_dispatch:  # Allow manual triggering with environment selection
@@ -131,18 +131,29 @@ jobs:
           git checkout gh-pages
           git pull origin gh-pages  
           
-      - name: Remove all files except the docs folder
+      - name: Clean up old files, keeping only the docs folder
         run: |
-          find . ! -name 'docs' -type d -exec rm -rf {} +
-          find . ! -name 'docs' -type f -exec rm -f {} +
+          # Remove all files and directories except for the 'docs' folder
+          find . -mindepth 1 -maxdepth 1 ! -name 'docs' -exec rm -rf {} +
+    
+          # Optional: Check if 'docs' folder is present, if not create it
+          if [ ! -d "docs" ]; then
+            mkdir -p docs
+          fi
 
-      - name: Ensure environment folder exists
-        run: mkdir -p docs/${{ env.ENV }}
+      # - name: Ensure environment folder exists
+      #   run: mkdir -p docs/${{ env.ENV }}
     
-      - name: Remove old report for the current environment
-        run: |
-          rm -rf docs/${{ env.ENV }}/*
-    
+      # - name: Remove old report for the current environment
+      #   run: |
+      #     rm -rf docs/${{ env.ENV }}/*
+
+      - name: Ensure docs directory exists
+        run: mkdir -p docs/allure-report-${{ env.ENV }}
+
+      - name: Remove old report files
+        run: rm -rf docs/allure-report-${{ env.ENV }}/*
+
       - name: Download Allure Report for ${{ env.ENV }}
         uses: actions/download-artifact@v4
         with:

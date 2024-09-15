@@ -1,4 +1,4 @@
-name: Run Playwright Tests
+name: CI PUSH & SCHEDULED Run Playwright Tests
 
 on:
   schedule:
@@ -189,11 +189,40 @@ jobs:
         run: |
           git checkout gh-pages || git checkout -b gh-pages
 
-      - name: Deploy Allure Report to GitHub Pages
+
+      - name: Clean up old files, keeping only the docs folder
         run: |
-          git add docs/${{ matrix.environment }}/allure-report-${{ matrix.environment }}
-          git commit -m "Deploy Allure report" || echo "No changes to commit"
-          git push origin gh-pages --force
+          # Remove all files and directories except for the 'docs' folder
+          find . -mindepth 1 -maxdepth 1 ! -name 'docs' -exec rm -rf {} +
+          # Optional: Check if 'docs' folder is present, if not create it
+          if [ ! -d "docs" ]; then
+            mkdir -p docs
+          fi
+  
+      - name: Ensure docs directory exists
+        run: mkdir -p docs/allure-report-${{ matrix.environment }}
+  
+      - name: Remove old report files
+        run: rm -rf docs/allure-report-${{ matrix.environment }}/*
+  
+      - name: Download Allure Report
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-report-${{ matrix.environment }}
+          path: docs/allure-report-${{ matrix.environment }}
+  
+      - name: Commit and push updated report
+        run: |
+          git add docs/
+          git commit -m "Update Allure report for ${{ matrix.environment }}"
+          git push origin gh-pages --force      
+
+
+      # - name: Deploy Allure Report to GitHub Pages
+      #   run: |
+      #     git add docs/${{ matrix.environment }}/allure-report-${{ matrix.environment }}
+      #     git commit -m "Deploy Allure report" || echo "No changes to commit"
+      #     git push origin gh-pages --force
 
         # uses: peaceiris/actions-gh-pages@v4
         # if: always()
