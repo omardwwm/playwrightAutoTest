@@ -186,7 +186,7 @@ jobs:
           # Clean the current environment folder
           find gh-pages/docs/${{ matrix.environment }} -mindepth 1 -exec rm -rf {} +
           # Copy the new report into the environment folder
-          cp -r gh-pages/docs/${{ matrix.environment }}/allure-report-${{ matrix.environment }}/* gh-pages/docs/${{ matrix.environment }}/  
+          cp -r gh-pages/docs/${{ matrix.environment }}/* gh-pages/docs/${{ matrix.environment }}/  
 
       - name: Configure Git User
         run: |
