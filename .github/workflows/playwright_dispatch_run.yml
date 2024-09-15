@@ -50,11 +50,12 @@ jobs:
       - name: Verify allure version
         run: npx allure --version
 
-      - name: Delete old Allure results for environment and shard
+      - name: Delete old Allure results
         run: |
-          if [ -d "allure-results-${{ env.ENV  }}-${{ matrix.shard }}" ]; then
-            rm -rf allure-results-${{ env.ENV  }}-${{ matrix.shard }}
+          if [ -d "allure-results" ]; then
+            rm -rf allure-results
           fi
+
 
       - name: Run Playwright tests
         run: npm run test:env ${{ env.ENV  }} ${{ matrix.shard }}
@@ -80,12 +81,33 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Download Allure results from shards
-        run: |
-          mkdir -p allure-results/combined
-          for shard in 1 2 3 4; do
-            cp -r allure-results-${{ env.ENV }}-shard-${shard}/* allure-results/combined/ || true
-          done
+      - name: Download Allure results from all shards
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-results-${{ env.ENV  }}-1
+          path: allure-results-${{ env.ENV  }}/1
+        continue-on-error: true
+
+      - name: Download Allure results from all shards
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-results-${{ env.ENV }}-2
+          path: allure-results-${{ env.ENV }}/2
+        continue-on-error: true
+
+      - name: Download Allure results from all shards
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-results-${{ env.ENV  }}-3
+          path: allure-results-${{ env.ENV  }}/3
+        continue-on-error: true
+
+      - name: Download Allure results from all shards
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-results-${{ env.ENV  }}-4
+          path: allure-results-${{ env.ENV  }}/4
+        continue-on-error: true
 
       - name: Install allure-commandline
         run: npm install -g allure-commandline
@@ -95,17 +117,22 @@ jobs:
 
       - name: Merge Allure results and generate report
         run: |
+          mkdir -p allure-results/combined
+          # Combine results from all shards into a single directory
+          cp -r allure-results-${{ env.ENV  }}/1/* allure-results/combined/ || true
+          cp -r allure-results-${{ env.ENV  }}/2/* allure-results/combined/ || true
+          cp -r allure-results-${{ env.ENV  }}/3/* allure-results/combined/ || true
+          cp -r allure-results-${{ env.ENV  }}/4/* allure-results/combined/ || true
+          # Generate the Allure report
           npx allure generate allure-results/combined --clean -o allure-report-${{ env.ENV  }}
+          # List contents of the report directory for debugging
           ls -alh allure-report-${{ env.ENV  }}
 
-      - name: Upload Mrged Allure Report
+      - name: Upload Allure Report
         uses: actions/upload-artifact@v4
         with:
           name: allure-report-${{ env.ENV  }}
           path: allure-report-${{ env.ENV  }}
-
-      # Conditional execution based on environment
-    if: needs.test.result == 'success'
 
   deploy:
     runs-on: ubuntu-latest
