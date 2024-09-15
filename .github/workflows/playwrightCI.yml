@@ -190,8 +190,8 @@ jobs:
   
       - name: Commit and push updated report
         run: |
-          git config --global user.name "testgit"
-          git config --global user.email "git@mail.com"
+          git config --global user.name "omardwwm"
+          git config --global user.email "boudraa.omar@gmail.com"
           git add docs/
           git commit -m "Update Allure report for ${{ matrix.environment }}"
           git push origin gh-pages --force      
