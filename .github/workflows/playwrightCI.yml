@@ -188,23 +188,16 @@ jobs:
           name: allure-report-${{ matrix.environment }}
           path: docs/allure-report-${{ matrix.environment }}
   
-      - name: Commit and push updated report
+      - name: Configure Git User
         run: |
           git config --global user.name "omardwwm"
           git config --global user.email "boudraa.omar@gmail.com"
+
+      - name: Check git status
+        run: git status
+
+      - name: Commit and push updated report
+        run: |
           git add docs/
           git commit -m "Update Allure report for ${{ matrix.environment }}"
-          git push origin gh-pages --force      
-
-
-      # - name: Deploy Allure Report to GitHub Pages
-      #   run: |
-      #     git add docs/${{ matrix.environment }}/allure-report-${{ matrix.environment }}
-      #     git commit -m "Deploy Allure report" || echo "No changes to commit"
-      #     git push origin gh-pages --force
-
-        # uses: peaceiris/actions-gh-pages@v4
-        # if: always()
-        # with:
-        #   github_token: ${{ secrets.GITHUB_TOKEN }}
-        #   publish_dir: ./docs/${{ matrix.environment }}/allure-report-${{ matrix.environment }}
+          git push origin gh-pages --force
