@@ -1,51 +1,33 @@
 name: Run Playwright Tests
 
 on:
-  schedule:
-    # - cron: "*/5 * * * *" # Every 5 MINUTES
-    - cron: "0 16 * * *" # Every day at 09:00 UTC
-    - cron: "0 17 * * *" # Every day at 21:00 UTC
   push:
     branches: [main]
   pull_request:
     branches:
       - "main"
 
+  workflow_dispatch:  # Allow manual triggering with environment selection
+    inputs:
+      environment:
+        description: 'Select the environment'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+          - dev
+          - int    
+  schedule:
+    # - cron: "*/5 * * * *" # Every 5 MINUTES
+    - cron: "0 16 * * *" # Every day at 09:00 UTC
+    - cron: "0 17 * * *" # Every day at 21:00 UTC
+
 jobs:
-
-  determine_environment:
-    runs-on: ubuntu-latest
-    outputs:
-      env: ${{ steps.set_environment.outputs.env }}
-    steps:
-      - name: Determine environment
-        id: set_environment
-        run: |
-          echo "Determining environment..."
-
-          # Determine the environment based on the event
-          if [ "${{ github.event_name }}" == "push" ]; then
-            echo "ENV=dev" >> $GITHUB_ENV
-            echo "env=dev" >> $GITHUB_ENV # Set the environment variable for output
-          elif [ "${{ github.event.schedule }}" == "0 17 * * *" ]; then
-            echo "ENV=int" >> $GITHUB_ENV
-            echo "env=int" >> $GITHUB_ENV # Set the environment variable for output
-          else
-            echo "ENV=dev" >> $GITHUB_ENV
-            echo "env=dev" >> $GITHUB_ENV # Default to dev if none of the conditions are met
-          fi
-
-          # Set output for use in other jobs
-          echo "env=dev" >> $GITHUB_ENV
-        shell: bash
-
 
   test:
     runs-on: ubuntu-latest
-    needs: determine_environment
     strategy:
       matrix:
-        # environment: [${{ needs.determine_environment.outputs.env }}]
         shard: [1, 2, 3, 4]
 
     env:
@@ -54,11 +36,29 @@ jobs:
       INT_REALM_EU_BASE_URL: ${{vars.INT_REALM_EU_BASE_URL}}
       INT_REALM_US_BASE_URL: ${{vars.INT_REALM_US_BASE_URL}}
       S3_BUCKET: ${{vars.S3_BUCKET}}
-      CI_ENV: ${{vars.CI_ENV}}
-      # ENV: ${{ needs.determine_environment.outputs.env }}
-      ENV: "dev"
+      CI_ENV: ${{vars.CI_ENV}} 
+      ENV: ${{ github.event.inputs.environment || 'dev' }} 
+
+    outputs:
+      environment: ${{ steps.set_env.outputs.env }}
 
     steps:
+      - name: Set environment based on input or schedule
+        id: set_env
+        run: |
+          if [ "${{ github.event.inputs.environment }}" != "" ]; then
+            echo "ENV=${{ github.event.inputs.environment }}" >> $GITHUB_ENV
+            echo "ENV=${{ github.event.inputs.environment }}" >> $GITHUB_ENV
+          elif [ "${{ github.event.schedule }}" == "0 7 * * *" ]; then
+            echo "ENV=dev" >> $GITHUB_ENV
+          elif [ "${{ github.event.schedule }}" == "0 9 * * *" ]; then
+            echo "ENV=int" >> $GITHUB_ENV
+          else
+            echo "ENV=dev" >> $GITHUB_ENV
+
+      - name: Print environment variable
+        run: echo "Environment is set to $ENV"
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -100,16 +100,12 @@ jobs:
           name: allure-results-${{ env.ENV  }}-${{ matrix.shard }}
           path: allure-results
 
-
   merge_results:
     runs-on: ubuntu-latest
     needs: test
-    # strategy:
-    #   matrix:
-    #     environment: ${{ needs.determine_environment.outputs.env }}
-
+   
     env:
-      ENV: ${{ needs.determine_environment.outputs.env }}
+      ENV: "${{ needs.test.outputs.environment }}"
 
     steps:
       - name: Checkout repository
@@ -146,14 +142,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: merge_results
     if: always()
-    # strategy:
-    #   matrix:
-    #     environment: ${{ needs.determine_environment.outputs.env }}
-    #   max-parallel: 1 # Avoid parallel deployment to prevent conflicts
-
     env:
-      ENV: ${{ needs.determine_environment.outputs.env }}
-
+      ENV: "${{ needs.test.outputs.environment }}"
+   
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -163,19 +154,31 @@ jobs:
           git config --global user.name "testgit"
           git config --global user.email "git@mail.com"
 
-      - name: Ensure environment directory exists
-        run: mkdir -p docs/allure-report-${{ env.ENV }}
+      - name: Switch to gh-pages branch
+        run: |
+          git fetch origin gh-pages
+          git checkout gh-pages
+          git pull origin gh-pages  
+          
+      - name: Remove all files except the docs folder
+        run: |
+          find . ! -name 'docs' -type d -exec rm -rf {} +
+          find . ! -name 'docs' -type f -exec rm -f {} +
 
-      - name: Remove old report files
-        run: rm -rf docs/allure-report-${{ env.ENV}}/*
-
-      - name: Download Allure Report
+      - name: Ensure environment folder exists
+        run: mkdir -p docs/${{ env.ENV }}
+    
+      - name: Remove old report for the current environment
+        run: |
+          rm -rf docs/${{ env.ENV }}/*
+    
+      - name: Download Allure Report for ${{ env.ENV }}
         uses: actions/download-artifact@v4
         with:
           name: allure-report-${{ env.ENV }}
-          path: docs/allure-report-${{ env.ENV }}
-
-      - name: Commit and Deploy Allure Report to GitHub Pages
+          path: docs/${{ env.ENV }}
+    
+      - name: Commit and Deploy Allure Report for ${{ env.ENV }} to GitHub Pages
         run: |
           git add docs/
           git commit -m "Update Allure report for ${{ env.ENV }}"
