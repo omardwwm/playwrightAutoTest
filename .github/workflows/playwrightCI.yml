@@ -161,6 +161,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: gh-pages
+          path: gh-pages
 
       - name: Verify .git directory exists before cleanup
         run: | 
@@ -168,29 +169,24 @@ jobs:
 
       - name: Clean up old files, keeping only the docs folder
         run: |
-          # Remove all files and directories except the 'docs' folder and the '.git' directory
+          # Remove everything except docs and .git
           find . -mindepth 1 -maxdepth 1 ! -name 'docs' ! -name '.git' -exec rm -rf {} +
-          # Remove all files in the docs folder except for the docs folder itself
-          find docs -mindepth 1 -exec rm -rf {} +
-
-      - name: Ensure docs directories exist
-        run: |
-          mkdir -p docs/allure-report-${{ matrix.environment }}
-
-      - name: Remove old report files
-        run: rm -rf docs/allure-report-${{ matrix.environment }}/*
+          find docs -mindepth 1 ! -name 'docs' -exec rm -rf {} +
 
       - name: Download Allure Report
         uses: actions/download-artifact@v4
         with:
           name: allure-report-${{ matrix.environment }}
-          path: docs/allure-report-${{ matrix.environment }}
+          path: gh-pages/docs/${{ matrix.environment }}/
 
-      # - name: Download Allure Report
-      #   uses: actions/download-artifact@v4
-      #   with:
-      #     name: allure-report-${{ matrix.environment }}
-      #     path: docs/${{ matrix.environment }}/allure-report-${{ matrix.environment }}
+      - name: Manage Ran Env folders
+        run: |
+          # Ensure environment folder exists
+          mkdir -p gh-pages/docs/${{ matrix.environment }}
+          # Clean the current environment folder
+          find gh-pages/docs/${{ matrix.environment }} -mindepth 1 -exec rm -rf {} +
+          # Copy the new report into the environment folder
+          cp -r gh-pages/docs/${{ matrix.environment }}/allure-report-${{ matrix.environment }}/* gh-pages/docs/${{ matrix.environment }}/  
 
       - name: Configure Git User
         run: |
