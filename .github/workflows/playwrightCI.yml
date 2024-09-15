@@ -173,13 +173,19 @@ jobs:
       # Clean up all files except docs and .git
       - name: Clean up all files except docs and .git
         run: |
-          find . -mindepth 1 -maxdepth 1 ! -name 'docs' ! -name '.git' -exec rm -rf {} +
-          ls -alh  # Verify remaining files and folders
+          # First remove all files except .git
+          find . -type f ! -name '.git' -exec rm -f {} +
+          
+          # Then remove all directories except docs and .git
+          find . -type d ! -name 'docs' ! -name '.git' -exec rm -rf {} +
+          
+          # List the files again to verify cleanup
+          echo "After cleanup:"
+          ls -la
 
       # List the docs directory before cleaning the specific environment folder
       - name: List the docs directory before cleanup
         run: ls -alh docs || echo "docs directory not found"
-
 
       # Clean only the folder for the current environment being run
       - name: Clean up the current environment's report folder
