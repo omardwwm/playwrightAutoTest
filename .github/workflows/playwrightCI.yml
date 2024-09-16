@@ -2,8 +2,8 @@ name: CI PUSH & SCHEDULED Run Playwright Tests
 
 on:
   schedule:
-    - cron: '8 17 * * *'
-    - cron: '15 17 * * *'
+    - cron: '30 17 * * *'
+    - cron: '25 17 * * *'
       
   push:
     branches: [main, develop]
@@ -40,10 +40,12 @@ jobs:
       - name: Determine environment
         id: set-env
         run: |
-          if [[ "${{ github.event_name }}" == "schedule" && "${{ github.event.schedule }}" == 'cron: 8 17 * * *' ]]; then
-            ENVIRONMENT="dev"
-          elif [[ "${{ github.event_name }}" == "schedule" && "${{ github.event.schedule }}" == 'cron: 15 17 * * *' ]]; then
-            ENVIRONMENT="int"
+          if [[ "${{ github.event_name }}" == "schedule" ]]; then
+            if [[ "${{ github.event.schedule }}" == "30 17 * * *" ]]; then
+              ENVIRONMENT="dev"
+            elif [[ "${{ github.event.schedule }}" == "25 17 * * *" ]]; then
+              ENVIRONMENT="int"
+            fi
           elif [[ "${{ github.event_name }}" == "push" ]]; then
             if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
               ENVIRONMENT="dev"
@@ -51,7 +53,7 @@ jobs:
               ENVIRONMENT="dev"
             fi
           fi
-          echo "ENVIRONMENT=$ENVIRONMENT"
+          echo "ENVIRONMENT=$ENVIRONMENT
           # echo "::set-output name=environment::$ENVIRONMENT"  # Set the environment as output 
           echo "environment=$ENVIRONMENT" >> $GITHUB_OUTPUT  # Set the environment as output   
 
