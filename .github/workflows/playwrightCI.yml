@@ -2,8 +2,8 @@ name: CI PUSH & SCHEDULED Run Playwright Tests
 
 on:
   schedule:
-    - cron: '45 17 * * *'
-    - cron: '0 18 * * *'
+    - cron: '58 17 * * *'
+    - cron: '10 18 * * *'
       
   push:
     branches: [main, develop]
@@ -40,9 +40,9 @@ jobs:
       - name: Determine environment
         id: set-env
         run: |
-          if [[ "${{ github.event_name }}" == "schedule" && "${{ github.event.schedule }}" == 'cron: 0 17 * * *' ]]; then
+          if [[ "${{ github.event_name }}" == "schedule" && "${{ github.event.schedule }}" == 'cron: 58 17 * * *' ]]; then
             ENVIRONMENT="dev"
-          elif [[ "${{ github.event_name }}" == "schedule" && "${{ github.event.schedule }}" == 'cron: 0 18 * * *' ]]; then
+          elif [[ "${{ github.event_name }}" == "schedule" && "${{ github.event.schedule }}" == 'cron: 10 18 * * *' ]]; then
             ENVIRONMENT="int"
           elif [[ "${{ github.event_name }}" == "push" ]]; then
             if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
@@ -52,7 +52,8 @@ jobs:
             fi
           fi
           echo "ENVIRONMENT=$ENVIRONMENT"
-          echo "::set-output name=environment::$ENVIRONMENT"  # Set the environment as output   
+          # echo "::set-output name=environment::$ENVIRONMENT"  # Set the environment as output 
+          echo "environment=$ENVIRONMENT" >> $GITHUB_OUTPUT  # Set the environment as output   
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
