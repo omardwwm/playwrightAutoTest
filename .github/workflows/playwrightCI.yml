@@ -2,14 +2,14 @@ name: CI PUSH & SCHEDULED Run Playwright Tests
 
 on:
   schedule:
-    - cron: "45 18 * * *"
     - cron: "50 18 * * *"
+    - cron: "55 18 * * *"
 
-  # push:
-  #   branches: [main, develop]
-  # pull_request:
-  #   branches:
-  #     - "main"
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches:
+      - "main"
 
 jobs:
   test:
@@ -41,9 +41,9 @@ jobs:
         id: set-env
         run: |
           if [ ${{ github.event_name }} == "schedule" ]; then
-            if [ ${{ github.event.schedule }} == '45 18 * * *' ]; then
+            if [ ${{ github.event.schedule }} == '50 18 * * *' ]; then
               ENVIRONMENT="int"
-            elif [ "${{ github.event.schedule }}" == '50 18 * * *' ]; then
+            elif [ "${{ github.event.schedule }}" == '55 18 * * *' ]; then
               ENVIRONMENT="dev"
             fi
           elif [ ${{ github.event_name }} == "push" ]; then
