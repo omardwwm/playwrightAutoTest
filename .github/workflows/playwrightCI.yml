@@ -2,8 +2,9 @@ name: CI PUSH & SCHEDULED Run Playwright Tests
 
 on:
   schedule:
-    - cron: "0 9 * * *" # Every day at 09:00 UTC
-    - cron: "0 21 * * *" # Every day at 21:00 UTC
+    - cron: '0 17 * * *'
+    - cron: '0 18 * * *'
+      
   push:
     branches: [main, develop]
   pull_request:
@@ -21,6 +22,9 @@ jobs:
           - dev
         shard: [1, 2, 3, 4]
 
+    outputs:
+      environment: ${{ steps.set-env.outputs.environment }}
+
     env:
       DEV_ALL_REALM_BASE_URL: ${{vars.DEV_ALL_REALM_BASE_URL}}
       INT_REALM_AS_BASE_URL: ${{vars.INT_REALM_AS_BASE_URL}}
@@ -32,6 +36,23 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Determine environment
+        id: set-env
+        run: |
+          if [[ "${{ github.event_name }}" == "schedule" && "${{ github.event.schedule }}" == 'cron: 0 17 * * *' ]]; then
+            ENVIRONMENT="dev"
+          elif [[ "${{ github.event_name }}" == "schedule" && "${{ github.event.schedule }}" == 'cron: 0 18 * * *' ]]; then
+            ENVIRONMENT="int"
+          elif [[ "${{ github.event_name }}" == "push" ]]; then
+            if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+              ENVIRONMENT="dev"
+            elif [[ "${{ github.ref }}" == "refs/heads/develop" ]]; then
+              ENVIRONMENT="dev"
+            fi
+          fi
+          echo "ENVIRONMENT=$ENVIRONMENT"
+          echo "::set-output name=environment::$ENVIRONMENT"  # Set the environment as output   
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -59,28 +80,26 @@ jobs:
           fi
 
       - name: Run Playwright tests
-        run: npm run test:env ${{ matrix.environment }} ${{ matrix.shard }}
+        run: npm run test:env ${{ steps.set-env.outputs.environment }} ${{ matrix.shard }}
         continue-on-error: true
 
       # - name: List allure results
       #   run: ls -alh allure-results
 
-      - name: Upload Allure results for ${{ matrix.environment }} -shard ${{ matrix.shard }}
+      - name: Upload Allure results for ${{ steps.set-env.outputs.environment }} -shard ${{ matrix.shard }}
         uses: actions/upload-artifact@v4
         with:
-          name: allure-results-${{ matrix.environment }}-${{ matrix.shard }}
+          name: allure-results-${{ steps.set-env.outputs.environment }}-${{ matrix.shard }}
           path: allure-results
 
-      # - name: Upload Allure Report
-      #   uses: actions/upload-artifact@v4
-      #   if: always()
-      #   with:
-      #     name: allure-report
-      #     path: allure-report
 
   merge_results:
     runs-on: ubuntu-latest
     needs: test
+
+    env:
+       ENVIRONMENT: ${{ needs.test.outputs.environment }}
+
     strategy:
       matrix:
         environment:
@@ -94,29 +113,29 @@ jobs:
       - name: Download Allure results from all shards
         uses: actions/download-artifact@v4
         with:
-          name: allure-results-${{ matrix.environment }}-1
-          path: allure-results-${{ matrix.environment }}/1
+          name: allure-results-${{ env.ENVIRONMENT }}-1
+          path: allure-results-${{ env.ENVIRONMENT }}/1
         continue-on-error: true
 
       - name: Download Allure results from all shards
         uses: actions/download-artifact@v4
         with:
-          name: allure-results-${{ matrix.environment }}-2
-          path: allure-results-${{ matrix.environment }}/2
+          name: allure-results-${{ env.ENVIRONMENT }}-2
+          path: allure-results-${{ env.ENVIRONMENT }}/2
         continue-on-error: true
 
       - name: Download Allure results from all shards
         uses: actions/download-artifact@v4
         with:
-          name: allure-results-${{ matrix.environment }}-3
-          path: allure-results-${{ matrix.environment }}/3
+          name: allure-results-${{ env.ENVIRONMENT }}-3
+          path: allure-results-${{ env.ENVIRONMENT }}/3
         continue-on-error: true
 
       - name: Download Allure results from all shards
         uses: actions/download-artifact@v4
         with:
-          name: allure-results-${{ matrix.environment }}-4
-          path: allure-results-${{ matrix.environment }}/4
+          name: allure-results-${{ env.ENVIRONMENT }}-4
+          path: allure-results-${{ env.ENVIRONMENT }}/4
         continue-on-error: true
 
       - name: Install allure-commandline
@@ -129,29 +148,34 @@ jobs:
         run: |
           mkdir -p allure-results/combined
           # Combine results from all shards into a single directory
-          cp -r allure-results-${{ matrix.environment }}/1/* allure-results/combined/ || true
-          cp -r allure-results-${{ matrix.environment }}/2/* allure-results/combined/ || true
-          cp -r allure-results-${{ matrix.environment }}/3/* allure-results/combined/ || true
-          cp -r allure-results-${{ matrix.environment }}/4/* allure-results/combined/ || true
+          cp -r allure-results-${{ env.ENVIRONMENT }}/1/* allure-results/combined/ || true
+          cp -r allure-results-${{ env.ENVIRONMENT }}/2/* allure-results/combined/ || true
+          cp -r allure-results-${{ env.ENVIRONMENT }}/3/* allure-results/combined/ || true
+          cp -r allure-results-${{ env.ENVIRONMENT }}/4/* allure-results/combined/ || true
           # Generate the Allure report
-          npx allure generate allure-results/combined --clean -o allure-report-${{ matrix.environment }}
+          npx allure generate allure-results/combined --clean -o allure-report-${{ env.ENVIRONMENT }}
           # List contents of the report directory for debugging
-          ls -alh allure-report-${{ matrix.environment }}
+          ls -alh allure-report-${{ env.ENVIRONMENT }}
 
       - name: Upload Allure Report
         uses: actions/upload-artifact@v4
         with:
-          name: allure-report-${{ matrix.environment }}
-          path: allure-report-${{ matrix.environment }}
+          name: allure-report-${{ env.ENVIRONMENT }}
+          path: allure-report-${{ env.ENVIRONMENT }}
+    
+    outputs:
+      merged-environment: ${{ env.ENVIRONMENT }}
 
   deploy:
     runs-on: ubuntu-latest
     needs: merge_results
-    strategy:
-      matrix:
-        environment:
-          # - int
-          - dev
+    env:
+      ENVIRONMENT: ${{ needs.merge_results.outputs.merged-environment }}
+    # strategy:
+    #   matrix:
+    #     environment:
+    #       # - int
+    #       - dev
 
     steps:
       - name: Checkout repository
@@ -202,30 +226,30 @@ jobs:
       # Clean only the folder for the current environment being run
       - name: Clean up the current environment's report folder
         run: |
-          if [ -d "docs/${{ matrix.environment }}" ]; then
-            echo "Cleaning up folder docs/${{ matrix.environment }}"
-            find docs/${{ matrix.environment }} -mindepth 1 -exec rm -rf {} +
+          if [ -d "docs/${{ env.ENVIRONMENT }}" ]; then
+            echo "Cleaning up folder docs/${{ env.ENVIRONMENT }}"
+            find docs/${{ env.ENVIRONMENT }} -mindepth 1 -exec rm -rf {} +
           else
-            echo "Directory docs/${{ matrix.environment }} does not exist, skipping cleanup"
+            echo "Directory docs/${{ env.ENVIRONMENT }} does not exist, skipping cleanup"
           fi   
       
       - name: Verify docs Directory after cleanup
         run: |
           echo "docs directory contents after cleanup:"
           ls -alh docs
-          ls -alh docs/${{ matrix.environment }} || echo "docs/${{ matrix.environment }} directory not found"
+          ls -alh docs/${{ env.ENVIRONMENT }} || echo "docs/${{ env.ENVIRONMENT }} directory not found"
 
       # Download the Allure report for the current environment
       - name: Download Allure Report
         uses: actions/download-artifact@v4
         with:
-          name: allure-report-${{ matrix.environment }}
-          path: docs/${{ matrix.environment }}/allure-report-${{ matrix.environment }}  
+          name: allure-report-${{ env.ENVIRONMENT }}
+          path: docs/${{ env.ENVIRONMENT }}/allure-report-${{ env.ENVIRONMENT }}  
 
       # List new report after download
       - name: List new report after download
         run: |
-          ls -alh docs/${{ matrix.environment }}
+          ls -alh docs/${{ env.ENVIRONMENT }}
 
       - name: Check git status
         run: |
@@ -238,8 +262,8 @@ jobs:
       # Add and commit the changes to gh-pages
       - name: Add and Commit the new report
         run: |
-          git add docs/${{ matrix.environment }}/allure-report-${{ matrix.environment }}
-          git commit -m "Update Allure report for ${{ matrix.environment }}" || echo "No changes to commit"
+          git add docs/${{ env.ENVIRONMENT }}/allure-report-${{ env.ENVIRONMENT }}
+          git commit -m "Update Allure report for ${{ env.ENVIRONMENT }}" || echo "No changes to commit"
 
       # Push the changes to the gh-pages branch
       - name: Push changes to gh-pages
