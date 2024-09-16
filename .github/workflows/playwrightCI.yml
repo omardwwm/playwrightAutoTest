@@ -2,7 +2,7 @@ name: CI PUSH & SCHEDULED Run Playwright Tests
 
 on:
   schedule:
-    - cron: '0 17 * * *'
+    - cron: '45 17 * * *'
     - cron: '0 18 * * *'
       
   push:
@@ -17,9 +17,9 @@ jobs:
 
     strategy:
       matrix:
-        environment:
-          # - int
-          - dev
+        # environment:
+        #   # - int
+        #   - dev
         shard: [1, 2, 3, 4]
 
     outputs:
@@ -100,11 +100,11 @@ jobs:
     env:
        ENVIRONMENT: ${{ needs.test.outputs.environment }}
 
-    strategy:
-      matrix:
-        environment:
-          # - int
-          - dev
+    # strategy:
+    #   matrix:
+    #     environment:
+    #       # - int
+    #       - dev
 
     steps:
       - name: Checkout repository
@@ -171,6 +171,7 @@ jobs:
     needs: merge_results
     env:
       ENVIRONMENT: ${{ needs.merge_results.outputs.merged-environment }}
+
     # strategy:
     #   matrix:
     #     environment:
