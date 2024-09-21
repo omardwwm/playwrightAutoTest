@@ -58,7 +58,7 @@ jobs:
 
 
       - name: Run Playwright tests
-        run: npm run test:env ${{ env.ENV  }} ${{ matrix.shard }}
+        run: npm run test:env ${{ env.ENVIRONMENT }} ${{ matrix.shard }}
         continue-on-error: true
 
       # - name: List allure results
