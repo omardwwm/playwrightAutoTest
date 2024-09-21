@@ -45,7 +45,7 @@ jobs:
               fi
             elif [ "${{ github.event_name }}" == "push" ]; then
               if [ "${{ github.ref }}" == "refs/heads/main" ]; then
-                ENVIRONMENT="dev"
+                ENVIRONMENT="int"
               elif [ "${{ github.ref }}" == "refs/heads/develop" ]; then
                 ENVIRONMENT="dev"
               fi
