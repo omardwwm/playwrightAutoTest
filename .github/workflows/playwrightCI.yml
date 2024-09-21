@@ -70,25 +70,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Checkout gh-pages branch
-        run: |
-          git fetch origin gh-pages
-          git checkout gh-pages
-  
-      - name: Copy Allure History
-        run: |
-          if [ -d "docs/${{ env.ENVIRONMENT }}/allure-report-${{ env.ENVIRONMENT }}/history" ]; then
-            mkdir -p allure-results/history
-            cp -R docs/${{ env.ENVIRONMENT }}/allure-report-${{ env.ENVIRONMENT }}/history/* allure-results/history/
-          else
-            echo "No history found from gh-pages."
-          fi
-          
-        continue-on-error: true      
-      
-      - name: Checkout main branch
-        run: git checkout develop
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -127,12 +108,48 @@ jobs:
     outputs:
       test-environment: ${{ env.ENVIRONMENT }}
 
-  merge_results:
+  copy_old_history:
     runs-on: ubuntu-latest
     needs: test
-
     env:
       ENVIRONMENT: ${{ needs.test.outputs.test-environment }}
+
+    steps:
+      - name: Checkout gh-pages branch
+        run: |
+          git fetch origin gh-pages
+          git checkout gh-pages
+
+      - name: Copy Allure History
+        run: |
+          if [ -d "docs/${{ env.ENVIRONMENT }}/allure-report-${{ env.ENVIRONMENT }}/history" ]; then
+            mkdir -p allure-results/history
+            cp -R docs/${{ env.ENVIRONMENT }}/allure-report-${{ env.ENVIRONMENT }}/history/* allure-results/history/
+          else
+            echo "No history found from gh-pages."
+          fi
+
+      - name: Upload Old Allure report History
+        uses: actions/upload-artifact@v4
+        with:
+          name: old_allure-history-${{ env.ENVIRONMENT }}
+          path: allure-results/history
+
+        continue-on-error: true
+
+      - name: Checkout main branch
+        run: |
+            git checkout develop
+
+    outputs:
+        copy_old_history-environment: ${{ env.ENVIRONMENT }}
+
+  merge_results:
+    runs-on: ubuntu-latest
+    needs: copy_old_history
+
+    env:
+      ENVIRONMENT: ${{ needs.copy_old_history.outputs. copy_old_history-environment }}
 
     # strategy:
     #   matrix:
@@ -178,6 +195,13 @@ jobs:
       - name: Verify allure version
         run: npx allure --version
 
+      - name: Download Old Allure report History
+        uses: actions/download-artifact@v4
+        with:
+          name: old_allure-history-${{ env.ENVIRONMENT }}
+          path: old_allure-history-${{ env.ENVIRONMENT }}
+        continue-on-error: true
+
       - name: Merge Allure results and generate report
         run: |
           mkdir -p allure-results/combined
@@ -187,7 +211,7 @@ jobs:
           cp -r allure-results-${{ env.ENVIRONMENT }}/3/* allure-results/combined/ || true
           cp -r allure-results-${{ env.ENVIRONMENT }}/4/* allure-results/combined/ || true
           # Include the previous history
-          cp -r allure-results/history allure-results/combined/history || true
+          cp -r old_allure-history-${{ env.ENVIRONMENT }} allure-results/combined/history || true
           # Generate the Allure report
           npx allure generate allure-results/combined --clean -o allure-report-${{ env.ENVIRONMENT }}
           # List contents of the report directory for debugging
