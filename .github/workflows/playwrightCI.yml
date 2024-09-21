@@ -158,6 +158,14 @@ jobs:
       - name: Verify allure version
         run: npx allure --version
 
+      # Download the previous allure report to get the history folder for each environment
+      - name: Download Allure Report History (Previous Run)
+        uses: actions/download-artifact@v3
+        with:
+          name: allure-report-${{ env.ENVIRONMENT }}
+          path: previous-allure-report-${{ env.ENVIRONMENT }}
+
+
       - name: Merge Allure results and generate report
         run: |
           mkdir -p allure-results/combined
@@ -166,7 +174,16 @@ jobs:
           cp -r allure-results-${{ env.ENVIRONMENT }}/2/* allure-results/combined/ || true
           cp -r allure-results-${{ env.ENVIRONMENT }}/3/* allure-results/combined/ || true
           cp -r allure-results-${{ env.ENVIRONMENT }}/4/* allure-results/combined/ || true
-          # Generate the Allure report
+
+      # Move history from the previous report folder to the current allure-results folder
+      - name: Move Allure History to Results
+        run: |
+          mkdir -p allure-results/history
+          cp -R previous-allure-report-${{ env.ENVIRONMENT }}/history allure-results/history || echo "No history found from previous run."
+         
+      # Generate Allure report with the moved history
+      - name: Generate Allure Report for ${{ env.ENVIRONMENT }} environment
+        run: |
           npx allure generate allure-results/combined --clean -o allure-report-${{ env.ENVIRONMENT }}
           # List contents of the report directory for debugging
           ls -alh allure-report-${{ env.ENVIRONMENT }}
