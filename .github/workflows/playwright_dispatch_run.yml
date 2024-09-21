@@ -159,6 +159,13 @@ jobs:
       - name: Verify allure version
         run: npx allure --version
 
+      - name: Download Old Allure report History
+        uses: actions/download-artifact@v4
+        with:
+          name: old_allure-history-${{ env.ENVIRONMENT }}
+          path: old_allure-history-${{ env.ENVIRONMENT }}
+        continue-on-error: true
+
       - name: Merge Allure results and generate report
         run: |
           mkdir -p allure-results/combined
