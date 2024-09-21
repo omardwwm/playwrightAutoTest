@@ -87,7 +87,7 @@ jobs:
         continue-on-error: true      
       
       - name: Checkout main branch
-        run: git checkout main
+        run: git checkout develop
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
