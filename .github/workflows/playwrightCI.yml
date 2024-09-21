@@ -46,6 +46,16 @@ jobs:
             # echo "::set-output name=environment::$ENVIRONMENT"  # Set the environment as output 
             echo "environment=$ENVIRONMENT" >> $GITHUB_OUTPUT  # Set the environment as output
 
+      - name: Fetch previous allure report history from gh-pages
+        run: |
+          git fetch origin gh-pages
+          git checkout gh-pages
+          mkdir -p previous-allure-report-${{ steps.set-env.outputs.environment }}/history
+          cp -R docs/${{ steps.set-env.outputs.environment }}/allure-report-${{ steps.set-env.outputs.environment}}/history ./previous-allure-report-${{ steps.set-env.outputs.environment }}/history || echo "No history found in gh-pages."
+        
+      - name: Switch back to main to continue tests
+        run: git checkout ${{ github.ref_name }}
+
   test:
     runs-on: ubuntu-latest
     needs: determine-env
@@ -94,15 +104,15 @@ jobs:
             rm -rf allure-results
           fi
 
-      - name: Fetch previous allure report history from gh-pages
-        run: |
-          git fetch origin gh-pages
-          git checkout gh-pages
-          mkdir -p previous-allure-report-${{ env.ENVIRONMENT }}/history
-          cp -R .docs/${{ env.ENVIRONMENT }}/allure-report-${{ env.ENVIRONMENT }}/history ./previous-allure-report-${{ env.ENVIRONMENT }}/history || echo "No history found in gh-pages."
+      # - name: Fetch previous allure report history from gh-pages
+      #   run: |
+      #     git fetch origin gh-pages
+      #     git checkout gh-pages
+      #     mkdir -p previous-allure-report-${{ env.ENVIRONMENT }}/history
+      #     cp -R .docs/${{ env.ENVIRONMENT }}/allure-report-${{ env.ENVIRONMENT }}/history ./previous-allure-report-${{ env.ENVIRONMENT }}/history || echo "No history found in gh-pages."
         
-      - name: Switch back to main to continue tests
-        run: git checkout ${{ github.ref_name }}
+      # - name: Switch back to main to continue tests
+      #   run: git checkout ${{ github.ref_name }}
 
 
       - name: Run Playwright tests
