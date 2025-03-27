@@ -1,0 +1,553 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale US in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Discussions Labs"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,248,595 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 65"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 2 views
+  - heading "PHP Regular Expression - Characters (Big and Small) and max 1 space, and one hyphen" [level=3]:
+    - link "PHP Regular Expression - Characters (Big and Small) and max 1 space, and one hyphen"
+  - text: I need to create a regular expression that checks for a valid "City" name. City names of course have Capital alphabets,. and small alphabets, but also there are sometimes cities which have ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'regex'": regex
+  - link "Madventures's user avatar":
+    - img "Madventures's user avatar"
+  - link "Madventures"
+  - list:
+    - listitem: "119"
+  - time: asked 1 min ago
+  - text: "-1 votes 0 answers 5 views"
+  - heading "What are the key benefits of using a cloud-based contact center over an on-premise setup?" [level=3]:
+    - link "What are the key benefits of using a cloud-based contact center over an on-premise setup?"
+  - text: I’m facing constant challenges with my on-premise contact center. Scaling up is a headache because adding new agents means investing in more hardware and infrastructure. Maintenance is another ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'call'": call
+  - link "Harrystyles india's user avatar":
+    - img "Harrystyles india's user avatar"
+  - link "Harrystyles india"
+  - list:
+    - listitem: "1"
+  - time: asked 3 mins ago
+  - text: 0 votes 0 answers 3 views
+  - heading "Simplify index creation in Firestore" [level=3]:
+    - link "Simplify index creation in Firestore"
+  - text: I apologize if it sounds like a stupid question. I am trying to understand how I can simplify the index creation in Firestore. It keeps asking me to create new indexes for anything I do in my app. For ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'firebase'": firebase
+    - listitem:
+      - link "show questions tagged 'google-cloud-firestore'": google-cloud-firestore
+  - link "Varun Gupta's user avatar":
+    - img "Varun Gupta's user avatar"
+  - link "Varun Gupta"
+  - list:
+    - listitem: 3,132
+  - time: asked 4 mins ago
+  - text: 0 votes 0 answers 3 views
+  - heading "issue with UABB plugin, i cant see licence box to add and cant be istalled" [level=3]:
+    - link "issue with UABB plugin, i cant see licence box to add and cant be istalled"
+  - text: i just purchased Ultimate addons for beaver builder (U A B B), but when i install, error message say "there is serious error in website" i cant longer login why? I Tried to uninstall and ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+  - link "Denis julius peter's user avatar":
+    - img "Denis julius peter's user avatar"
+  - link "Denis julius peter"
+  - list:
+    - listitem: "1"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 2 views
+  - heading "Laravel env() function is not reading from .env file" [level=3]:
+    - link "Laravel env() function is not reading from .env file"
+  - text: I have this strange condition where "env()" function is not reading from .env file. I'm on laravel 11 and I have tried the following commands. php artisan cache:clear php artisan config:...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'laravel'": laravel
+    - listitem:
+      - link "show questions tagged 'environment-variables'": environment-variables
+  - link "KWARN KHAM's user avatar":
+    - img "KWARN KHAM's user avatar"
+  - link "KWARN KHAM"
+  - list:
+    - listitem: "77"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 2 views
+  - heading "v4l2loopback package build fail" [level=3]:
+    - link "v4l2loopback package build fail"
+  - text: I need help compiling and installing the package v4l2loopback. It's a kernel module. When I extract the package and do make, upon completion of the build it generates a v4l2loopback.ko file. And also ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'buildroot'": buildroot
+  - link "NayabSD's user avatar":
+    - img "NayabSD's user avatar"
+  - link "NayabSD"
+  - list:
+    - listitem: 1,120
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 2 views
+  - heading "Expo monorepo build fails with module not found" [level=3]:
+    - link "Expo monorepo build fails with module not found"
+  - text: "I am using react native and expo eas in my monorepo. The app lives in clients/mobile/<react native app> My metro.config.js lives inside the mobile folder const { getDefaultConfig } = require('..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'typescript'": typescript
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+    - listitem:
+      - link "show questions tagged 'expo'": expo
+    - listitem:
+      - link "show questions tagged 'modulenotfounderror'": modulenotfounderror
+    - listitem:
+      - link "show questions tagged 'eas'": eas
+  - link "sakib11's user avatar":
+    - img "sakib11's user avatar"
+  - link "sakib11"
+  - list:
+    - listitem: "536"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Simple BLAZOR app causing error with DOCKER" [level=3]:
+    - link "Simple BLAZOR app causing error with DOCKER"
+  - text: I have a created a very, very simple BLAZOR app for testing purposes. Its Visual Studio 2022 with .Net9.0. With ADD> "Docker support" I let Visual Studio 2022 create the DOCKER file. When ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'docker'": docker
+    - listitem:
+      - link "show questions tagged 'blazor'": blazor
+  - link "user676987's user avatar":
+    - img "user676987's user avatar"
+  - link "user676987"
+  - list:
+    - listitem: "73"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Python bokeh serve does not recognize local package located in the parent directory" [level=3]:
+    - link "Python bokeh serve does not recognize local package located in the parent directory"
+  - text: "I am hosting python script via: bokeh serve example.py and example.py loads local package 'local_module' located in the parent directory. When opening associated local host html (http://localhost:5006/..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'path'": path
+    - listitem:
+      - link "show questions tagged 'pycharm'": pycharm
+    - listitem:
+      - link "show questions tagged 'bokeh'": bokeh
+  - link "Mindaugas314's user avatar":
+    - img "Mindaugas314's user avatar"
+  - link "Mindaugas314"
+  - list:
+    - listitem: "1"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 2 views
+  - heading "apex globle page issue" [level=3]:
+    - link "apex globle page issue"
+  - text: aoa developers i am working in apex application globle page is deleted by mistake now i want to create new globle page 0 and set value for app user likei select user_code from users where userid = :...
+  - list:
+    - listitem:
+      - link "show questions tagged 'sql'": sql
+    - listitem:
+      - link "show questions tagged 'oracle-apex'": oracle-apex
+    - listitem:
+      - link "show questions tagged 'apex-code'": apex-code
+    - listitem:
+      - link "show questions tagged 'oracle-apex-5'": oracle-apex-5
+  - link "Eng Habib's user avatar":
+    - img "Eng Habib's user avatar"
+  - link "Eng Habib"
+  - list:
+    - listitem: "1"
+  - time: asked 12 mins ago
+  - text: "-1 votes 0 answers 7 views"
+  - heading "CSS Borders radius tricks" [level=3]:
+    - link "CSS Borders radius tricks"
+  - text: "How to do that with CSS? It is a site header with a logo hanging down with rounded borders. I tried everything like \"after, clip-path...etc\" but didn't succeed ): Even with AI it was pretty ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'border-radius'": border-radius
+  - link "Farook's user avatar":
+    - img "Farook's user avatar"
+  - link "Farook"
+  - list:
+    - listitem: "21"
+  - time: asked 13 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "snakemake public remote s3 without secret key" [level=3]:
+    - link "snakemake public remote s3 without secret key"
+  - text: "I am using snakemake with rule need visit public read-only s3 storage # test $ aws s3 ls 1000genomes/phase1/phase1.exome.alignment.index.bas.gz --no-sign-request 2012-05-01 03:58:41 423691 phase1...."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'amazon-s3'": amazon-s3
+    - listitem:
+      - link "show questions tagged 'storage'": storage
+    - listitem:
+      - link "show questions tagged 'snakemake'": snakemake
+  - link "zhang's user avatar":
+    - img "zhang's user avatar"
+  - link "zhang"
+  - list:
+    - listitem: "543"
+  - time: asked 15 mins ago
+  - text: 0 votes 1 answer 6 views
+  - heading "How can I open List without importing the type List.t?" [level=3]:
+    - link "How can I open List without importing the type List.t?"
+  - text: I'm using OCaml 5.3.0. I like to write open List at the top of my source files, since I use list functions so frequently that I don't want to have to prefix them as e.g. List.length or even L.length. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'ocaml'": ocaml
+  - link "Adam Dingle's user avatar":
+    - img "Adam Dingle's user avatar"
+  - link "Adam Dingle"
+  - list:
+    - listitem: 3,632
+  - time: asked 15 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "How to filter sequential event data according to whether record is followed by specific event within X minutes?" [level=3]:
+    - link "How to filter sequential event data according to whether record is followed by specific event within X minutes?"
+  - text: I have some data with a timestamp column t, an event category column cat, and a user_id column. cat can take n values, including value A. I want to select records which are followed (not necessarily ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python-polars'": python-polars
+    - listitem:
+      - link "show questions tagged 'polars'": polars
+  - link "Max Davy's user avatar":
+    - img "Max Davy's user avatar"
+  - link "Max Davy"
+  - list:
+    - listitem: "1"
+  - time: asked 17 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Sql Server Analysis Services(SSAS) not working with MFA Authentication" [level=3]:
+    - link "Sql Server Analysis Services(SSAS) not working with MFA Authentication"
+  - text: We were unable to connect Azure SQL Database from SSAS using MFA authentication, already enabled MFA in Azure sql server. Same time, we are able to connect Azure SQL Database from "Analysis ...
+  - list:
+    - listitem:
+      - link "show questions tagged '.net'": .net
+    - listitem:
+      - link "show questions tagged 'sql-server'": sql-server
+    - listitem:
+      - link "show questions tagged 'visual-studio-2010'": visual-studio-2010
+    - listitem:
+      - link "show questions tagged 'azure-devops'": azure-devops
+    - listitem:
+      - link "show questions tagged 'ssas-tabular'": ssas-tabular
+  - link "K Krishnamoorthy's user avatar":
+    - img "K Krishnamoorthy's user avatar"
+  - link "K Krishnamoorthy"
+  - list:
+    - listitem: "1"
+  - time: asked 18 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1616573"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "“The power of the humble embedding”"
+    - listitem: Featured on Meta
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 62k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 33k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 21k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2532640
+  - link "show questions tagged 'python'": python
+  - text: × 2213513
+  - link "show questions tagged 'java'": java
+  - text: × 1920618
+  - link "show questions tagged 'c#'": c#
+  - text: × 1625226
+  - link "show questions tagged 'php'": php
+  - text: × 1468340
+  - link "show questions tagged 'android'": android
+  - text: × 1420090
+  - link "show questions tagged 'html'": html
+  - text: × 1189074
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036531
+  - link "show questions tagged 'c++'": c++
+  - text: × 814054
+  - link "show questions tagged 'css'": css
+  - text: × 808016
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "If the wage of sin is death - why are those raptured exempt?"
+    - listitem:
+      - link "Is there a name for the following argument that observing (P & Q) implies there is evidence of (P implies Q)?"
+    - listitem:
+      - link "Which is the better PCB layout for decoupling capacitors?"
+    - listitem:
+      - link "Best way to publish an open-access text book"
+    - listitem:
+      - link "Is it possible to construct a sentence where any of they're / their / there could grammatically make sense?"
+    - listitem:
+      - link "Bold subscript's position in $ ... $ mode, way to high"
+    - listitem:
+      - link "Can Elemental Cleaver, Mighty Impel, and Tavern Brawler be used in conjuction?"
+    - listitem:
+      - link "Sci-fi novel written around 1960-70 about a spaceship that visits a distant planet to fix something"
+    - listitem:
+      - link "How can I distinguish different python processes in top? Or how can I see which python processes eat all my CPU?"
+    - listitem:
+      - link "Is Egypt a popular vacation destination in Ukraine?"
+    - listitem:
+      - link "Poset of equidimensional subspace arrangements"
+    - listitem:
+      - link "Can Denmark refuse entry for US officials to Greenland?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.3.26.24455
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
