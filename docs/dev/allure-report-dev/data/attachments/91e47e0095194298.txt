@@ -1,0 +1,576 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale US in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Discussions Labs"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,245,545 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 61"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 8 views
+  - heading "Adding a new product to a product list in Java" [level=3]:
+    - link "Adding a new product to a product list in Java"
+  - text: Making a display menu for a school assignment using Java. It's just this last thing that I need to do so that it's ready to submit. I'm trying to figure out how I can add a product to the list upon ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+  - link "Joel Gabud's user avatar":
+    - img "Joel Gabud's user avatar"
+  - link "Joel Gabud"
+  - list:
+    - listitem: "1"
+  - time: asked 8 mins ago
+  - text: 0 votes 0 answers 2 views
+  - heading "How do I track keydown events on my blogger site using GTM / Ga4" [level=3]:
+    - link "How do I track keydown events on my blogger site using GTM / Ga4"
+  - text: I am admittedly in way over my head. I have read countless articles (event listeners, firing triggers, custom events...) and I feel like I am reading a foreign language! Can someone please give me the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'google-tag-manager'": google-tag-manager
+    - listitem:
+      - link "show questions tagged 'blogger'": blogger
+    - listitem:
+      - link "show questions tagged 'event-listener'": event-listener
+    - listitem:
+      - link "show questions tagged 'google-analytics-4'": google-analytics-4
+    - listitem:
+      - link "show questions tagged 'keydown'": keydown
+  - link "Blaykey Bee's user avatar":
+    - img "Blaykey Bee's user avatar"
+  - link "Blaykey Bee"
+  - list:
+    - listitem: "1"
+  - time: asked 8 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "HeroUI(prev NextUI) build error in nextjs project" [level=3]:
+    - link "HeroUI(prev NextUI) build error in nextjs project"
+  - text: During build i am facing error, i am building a project and facing this error Failed to compile. ./app/dashboard/page.tsx + 206 modules Unexpected end of JSON input ./node_modules/@heroui/table/dist/...
+  - list:
+    - listitem:
+      - link "show questions tagged 'next.js'": next.js
+    - listitem:
+      - link "show questions tagged 'webpack'": webpack
+    - listitem:
+      - link "show questions tagged 'build'": build
+    - listitem:
+      - link "show questions tagged 'nextui'": nextui
+  - link "Satvik Virmani's user avatar":
+    - img "Satvik Virmani's user avatar"
+  - link "Satvik Virmani"
+  - list:
+    - listitem: "28"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "VBA - Document.SaveAs File Path Syntax" [level=3]:
+    - link "VBA - Document.SaveAs File Path Syntax"
+  - text: I am having trouble understanding the syntax for saving a copy of a WordDoc in VBA to a local file path via a Macro in my Excel. My macros does a search/replace function and then I need to save a copy ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'excel'": excel
+    - listitem:
+      - link "show questions tagged 'vba'": vba
+    - listitem:
+      - link "show questions tagged 'ms-word'": ms-word
+  - link "NMG's user avatar":
+    - img "NMG's user avatar"
+  - link "NMG"
+  - list:
+    - listitem: "1"
+  - time: asked 11 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Force SVG fill pattern to be relative to rect container" [level=3]:
+    - link "Force SVG fill pattern to be relative to rect container"
+  - text: For an SVG <rect> container, a fill background made with the <pattern> tag seems to start relative to the overall view. What's the cleanest way to make the <pattern> start relative ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'svg'": svg
+    - listitem:
+      - link "show questions tagged 'background'": background
+    - listitem:
+      - link "show questions tagged 'svg-pattern'": svg-pattern
+    - listitem:
+      - link "show questions tagged 'svg-rect'": svg-rect
+  - link "Dem Pilafian's user avatar":
+    - img "Dem Pilafian's user avatar"
+  - link "Dem Pilafian"
+  - list:
+    - listitem: 6,036
+  - time: asked 15 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "why does magick command involving libtiff fail after upgrading linux mint?" [level=3]:
+    - link "why does magick command involving libtiff fail after upgrading linux mint?"
+  - text: "I recently upgraded to Linux Mint 22.1 Cinnamon, and an ImageMagick script now throws an error: magick: symbol lookup error: /usr/local/lib/libMagickCore-7.Q16HDRI.so.10: undefined symbol: ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'imagemagick'": imagemagick
+    - listitem:
+      - link "show questions tagged 'tiff'": tiff
+    - listitem:
+      - link "show questions tagged 'linux-mint'": linux-mint
+    - listitem:
+      - link "show questions tagged 'undefined-symbol'": undefined-symbol
+    - listitem:
+      - link "show questions tagged 'libtiff'": libtiff
+  - link "ItHertz's user avatar":
+    - img "ItHertz's user avatar"
+  - link "ItHertz"
+  - list:
+    - listitem: "1"
+  - time: asked 17 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "How to properly manage 401 in jetpack compose" [level=3]:
+    - link "How to properly manage 401 in jetpack compose"
+  - text: I am working on an Android project using Jetpack Compose that involves multiple API calls, ViewModels, and Screens. I need to handle 401 Unauthorized responses by redirecting users to the LoginScreen ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'android-jetpack-compose'": android-jetpack-compose
+  - link "primo's user avatar":
+    - img "primo's user avatar"
+  - link "primo"
+  - list:
+    - listitem: 1,468
+  - time: asked 19 mins ago
+  - text: 0 votes 1 answer 15 views
+  - heading "I have issue in the video call recording in flutter" [level=3]:
+    - link "I have issue in the video call recording in flutter"
+  - text: "\"serverResponse\":{\"command\":\"StopCloudRecorder\",\"edgeIp\":\"164.52.86.163\",\"payload\":{\"message\":\"failed to find worker\"},&..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'flutter-dependencies'": flutter-dependencies
+    - listitem:
+      - link "show questions tagged 'video-recording'": video-recording
+    - listitem:
+      - link "show questions tagged 'videocall'": videocall
+    - listitem:
+      - link "show questions tagged 'agora-implementation'": agora-implementation
+  - link "Kunal Gurjar's user avatar":
+    - img "Kunal Gurjar's user avatar"
+  - link "Kunal Gurjar"
+  - list:
+    - listitem: "1"
+  - time: asked 37 mins ago
+  - text: "-1 votes 0 answers 21 views"
+  - heading "I am getting Docker limit error deploying angular app to azure app service" [level=3]:
+    - link "I am getting Docker limit error deploying angular app to azure app service"
+  - text: I am deploying my angular app to Azure Static web app using bitbucket pipelines. I followed this Microsoft documentation:https://learn.microsoft.com/en-us/azure/static-web-apps/bitbucket?tabs=angular ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'azure-static-web-app'": azure-static-web-app
+  - link "Butterfly's user avatar":
+    - img "Butterfly's user avatar"
+  - link "Butterfly"
+  - list:
+    - listitem: "1"
+  - time: asked 45 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "3 custom php web applications showing OH SNAP, INCORRECT USER AND PASSWORD" [level=3]:
+    - link "3 custom php web applications showing OH SNAP, INCORRECT USER AND PASSWORD"
+  - text: 3 custom php web applications showing OH SNAP, INCORRECT USER AND PASSWORD while I am using correct user and password for each. It happened suddenly. I am using hostinger.in cloud hosting. Is there ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+  - link "Narendra Kumar's user avatar":
+    - img "Narendra Kumar's user avatar"
+  - link "Narendra Kumar"
+  - list:
+    - listitem: "1"
+  - time: asked 45 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "How does this statement mimics a ternary operator in lua" [level=3]:
+    - link "How does this statement mimics a ternary operator in lua"
+  - text: This statement mimics a ternary operator in lua programing language. local result = condition and true_value or false_value But how does it work? Why does it give the true_value if the condition is ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'lua'": lua
+  - link "0747's user avatar":
+    - img "0747's user avatar"
+  - link "0747"
+  - list:
+    - listitem: "1"
+  - time: asked 48 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Gluestack-ui FlatList typescript issue" [level=3]:
+    - link "Gluestack-ui FlatList typescript issue"
+  - text: "I'm using FlatList from gluestack-ui/themed import { FlatList } from \"@gluestack-ui/themed\"; <FlatList data={galleryUrls} renderItem={({item, index}) => } /> galleryUrls is string ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'typescript'": typescript
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+    - listitem:
+      - link "show questions tagged 'gluestack'": gluestack
+  - link "Don Price's user avatar":
+    - img "Don Price's user avatar"
+  - link "Don Price"
+  - list:
+    - listitem: "1"
+  - time: asked 56 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "FastAPI fullfilmentmessage for DialogFlow - pdf file" [level=3]:
+    - link "FastAPI fullfilmentmessage for DialogFlow - pdf file"
+  - text: I´m using FastAPI as Webhook with DialogFlow. The DialogFlow intent sends a text parameter to Webhook (function below) and FastAPI has to return a pdf file. The function code (inside FastAPI) is ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'fastapi'": fastapi
+    - listitem:
+      - link "show questions tagged 'webhooks'": webhooks
+    - listitem:
+      - link "show questions tagged 'chatbot'": chatbot
+    - listitem:
+      - link "show questions tagged 'dialogflow-es-fulfillment'": dialogflow-es-fulfillment
+  - link "Mr Papiro's user avatar":
+    - img "Mr Papiro's user avatar"
+  - link "Mr Papiro"
+  - list:
+    - listitem: "1"
+  - time: asked 58 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Ionic Cordova Camera plugin issue with Android 13" [level=3]:
+    - link "Ionic Cordova Camera plugin issue with Android 13"
+  - text: I am working on a ionic cordova project and I am trying to integrate a functionality to take images from either camera or pick from gallery in base64 and for this functionality I am using cordova ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'angular'": angular
+    - listitem:
+      - link "show questions tagged 'cordova'": cordova
+    - listitem:
+      - link "show questions tagged 'ionic-framework'": ionic-framework
+    - listitem:
+      - link "show questions tagged 'cordova-plugins'": cordova-plugins
+  - link "Sparsh Sharma's user avatar":
+    - img "Sparsh Sharma's user avatar"
+  - link "Sparsh Sharma"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 1 answer 15 views
+  - heading "How to Bind to property within @Observable from within @Observable using SwiftUI?" [level=3]:
+    - link "How to Bind to property within @Observable from within @Observable using SwiftUI?"
+  - text: "I am not sure if it is a good concept, but let's start from it here. I have a simple View: struct InAppPurchaseView: View { private let viewModel = InAppPurchaseViewModel() var body: some View ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'swiftui'": swiftui
+    - listitem:
+      - link "show questions tagged 'binding'": binding
+  - link "Bartłomiej Semańczyk's user avatar":
+    - img "Bartłomiej Semańczyk's user avatar"
+  - link "Bartłomiej Semańczyk"
+  - list:
+    - listitem: 61.9k
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1616370"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "“The power of the humble embedding”"
+    - listitem:
+      - link "“Are AI agents ready for the enterprise?”"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Community Asks Sprint Announcement - March 2025"
+    - listitem:
+      - link "Experimenting with a new experiment opt-out option"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 62k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 21k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2532392
+  - link "show questions tagged 'python'": python
+  - text: × 2213095
+  - link "show questions tagged 'java'": java
+  - text: × 1920484
+  - link "show questions tagged 'c#'": c#
+  - text: × 1625147
+  - link "show questions tagged 'php'": php
+  - text: × 1468257
+  - link "show questions tagged 'android'": android
+  - text: × 1419922
+  - link "show questions tagged 'html'": html
+  - text: × 1188988
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036481
+  - link "show questions tagged 'c++'": c++
+  - text: × 814063
+  - link "show questions tagged 'css'": css
+  - text: × 807963
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Movie in which criminals are sent back in time to preserve an authoritarian government"
+    - listitem:
+      - link "Can an airliner fly with only 1 out of 4 engines operating?"
+    - listitem:
+      - link "Linear bases of infinite dimensional Hilbert spaces"
+    - listitem:
+      - link "The shell not redirecting output of tar to file"
+    - listitem:
+      - link "How to use scope to reproduce a figure by symmetry or rotation"
+    - listitem:
+      - link "Why do the Neimoidians build the 'Bridge Cities'?"
+    - listitem:
+      - link "Understanding The Lebesgue Differentiation Theorem"
+    - listitem:
+      - link "Is there a German word for \"life\" as in \"life in the universe\"?"
+    - listitem:
+      - link "Procedurally orient an object to set the normal of a selected face to align with a plane or surface"
+    - listitem:
+      - link "Does God change his mind?"
+    - listitem:
+      - link "Even if god exists, why would it be possible to establish existence by argument?"
+    - listitem:
+      - link "Is it an anti-pattern to support different parameter types when using a dynamically-typed language?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.3.27.24496
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
