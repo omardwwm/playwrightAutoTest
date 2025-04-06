@@ -1,0 +1,566 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale NZ in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Discussions Labs"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,238,193 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 59"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 2 views
+  - heading "Spring Boot - The application cannot start the server due to a bug in the database mapping" [level=3]:
+    - link "Spring Boot - The application cannot start the server due to a bug in the database mapping"
+  - text: The application compiles and runs with first version of pom.xml where the version of spring boot is 2.x.x. But in the second version of pom.xml, @ManyToMany(mappedBy = "excludedComponents") ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'spring'": spring
+    - listitem:
+      - link "show questions tagged 'spring-boot'": spring-boot
+    - listitem:
+      - link "show questions tagged 'hibernate'": hibernate
+    - listitem:
+      - link "show questions tagged 'hibernate-mapping'": hibernate-mapping
+  - link "Sajied Shah Yousuf's user avatar":
+    - img "Sajied Shah Yousuf's user avatar"
+  - link "Sajied Shah Yousuf"
+  - list:
+    - listitem: "21"
+  - time: asked 4 mins ago
+  - text: 0 votes 0 answers 3 views
+  - heading "trying to use XPATH to click this button, but getting nosuchattributeerror (Instagram)" [level=3]:
+    - link "trying to use XPATH to click this button, but getting nosuchattributeerror (Instagram)"
+  - text: "this is the code I'm trying to execute: search = driver.find_element(By.XPATH, '//*[@id=\"mount_0_0_SH\"]/div/div/div[2]/div/div/div[1]/div[1]/div[2]/div/div/div/div/div[2]/div[2]/span/div/..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'selenium-webdriver'": selenium-webdriver
+    - listitem:
+      - link "show questions tagged 'selenium-chromedriver'": selenium-chromedriver
+  - link "Zayd's user avatar":
+    - img "Zayd's user avatar"
+  - link "Zayd"
+  - list:
+    - listitem: "11"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Android webview not able to keep session of Microsoft SSO login if app opened after some hours" [level=3]:
+    - link "Android webview not able to keep session of Microsoft SSO login if app opened after some hours"
+  - text: I have got an app which is already developed by some other developer and I am now supporting it. App is basically wrapper for a website and handles pdf and image download also handles mailto etc. Now ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'android-webview'": android-webview
+  - link "Gitesh's user avatar":
+    - img "Gitesh's user avatar"
+  - link "Gitesh"
+  - list:
+    - listitem: "163"
+  - time: asked 9 mins ago
+  - text: 0 votes 0 answers 3 views
+  - heading "Informix db connection pool issue," [level=3]:
+    - link "Informix db connection pool issue,"
+  - text: I I am using Informix db and connection pool and it's not releasing ideal connections. AtomikosDataSourceBean ds = new AtomikosDataSourceBean(); ds.setUniqueResourceName("XADS-"+nodeId+&...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'hibernate'": hibernate
+    - listitem:
+      - link "show questions tagged 'jdbc'": jdbc
+    - listitem:
+      - link "show questions tagged 'informix'": informix
+  - link "Surya's user avatar":
+    - img "Surya's user avatar"
+  - link "Surya"
+  - list:
+    - listitem: "65"
+  - time: asked 9 mins ago
+  - text: 0 votes 0 answers 3 views
+  - heading "WPF Problem restoring ListBoxItem selection in ListBox" [level=3]:
+    - link "WPF Problem restoring ListBoxItem selection in ListBox"
+  - text: I have a TabControl where the ItemsSource is bound to an ObservableCollection. Each TabItem has a ListBox whose ItemsSource is also bound to other ObservableCollection (ListBoxes on different TabItems ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'wpf'": wpf
+    - listitem:
+      - link "show questions tagged 'data-binding'": data-binding
+    - listitem:
+      - link "show questions tagged 'listbox'": listbox
+    - listitem:
+      - link "show questions tagged 'wpf-controls'": wpf-controls
+    - listitem:
+      - link "show questions tagged 'listboxitem'": listboxitem
+  - link "NightLion's user avatar":
+    - img "NightLion's user avatar"
+  - link "NightLion"
+  - list:
+    - listitem: "1"
+  - time: asked 13 mins ago
+  - text: 0 votes 1 answer 12 views
+  - heading "Just asking for advice" [level=3]:
+    - link "Just asking for advice"
+  - text: "I'm new to JavaScript and I'm looking for some guidance from the experienced members of the community. I've noticed that there are two common ways to declare variables: using var and let. While I've ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'variables'": variables
+    - listitem:
+      - link "show questions tagged 'var'": var
+    - listitem:
+      - link "show questions tagged 'let'": let
+  - link "Lukas Schneider's user avatar":
+    - img "Lukas Schneider's user avatar"
+  - link "Lukas Schneider"
+  - list:
+    - listitem: "1"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 3 views
+  - heading "updateProfile function does not update the" [level=3]:
+    - link "updateProfile function does not update the"
+  - text: I'm working on an application that interacts with a PostgreSQL with drizzle-orm, and I'm having trouble updating a user's message count in their profile. The updateProfile function is supposed to ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'next.js'": next.js
+    - listitem:
+      - link "show questions tagged 'drizzle-orm'": drizzle-orm
+  - link "Simon Bakken-Jantasuk's user avatar":
+    - img "Simon Bakken-Jantasuk's user avatar"
+  - link "Simon Bakken-Jantasuk"
+  - list:
+    - listitem: "19"
+  - time: asked 16 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "react-native-compressor Error While compressing 4k video" [level=3]:
+    - link "react-native-compressor Error While compressing 4k video"
+  - text: "I am trying to compress this video with \"auto\" and \"manual\" both video link - 4k Video video is 4k resolution. metadata - length : 20 sec frame width : 3840 frame height : 2160 ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+  - link "Rishabh Garg's user avatar":
+    - img "Rishabh Garg's user avatar"
+  - link "Rishabh Garg"
+  - list:
+    - listitem: "83"
+  - time: asked 17 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Is failover in DestinationRule necessary when localityLbSetting is enabled in Istio?" [level=3]:
+    - link "Is failover in DestinationRule necessary when localityLbSetting is enabled in Istio?"
+  - text: "Let’s assume I have two regions: a and b, and my DestinationRule looks like this: apiVersion: networking.istio.io/v1alpha3 kind: DestinationRule metadata: name: sample spec: host: sample.default...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'istio'": istio
+    - listitem:
+      - link "show questions tagged 'failover'": failover
+  - link "hkjaaaip's user avatar":
+    - img "hkjaaaip's user avatar"
+  - link "hkjaaaip"
+  - list:
+    - listitem: "123"
+  - time: asked 21 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Should PDP have its own db?" [level=3]:
+    - link "Should PDP have its own db?"
+  - text: Having PDP as a separate service that makes decisions based on attributes coming from multiple bounded contexts and having on mind performance, question is should PDP have its own db which would get ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'abac'": abac
+  - link "tlt's user avatar":
+    - img "tlt's user avatar"
+  - link "tlt"
+  - list:
+    - listitem: 15.4k
+  - time: asked 23 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "React App Not Showing index.html After Vercel Deployment" [level=3]:
+    - link "React App Not Showing index.html After Vercel Deployment"
+  - text: I created a backend and a frontend folder, then deployed it to Vercel. But the index.html file is inside the folder ofenter image description here frontend, so Vercel couldn't read it. What could be ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'deployment'": deployment
+    - listitem:
+      - link "show questions tagged 'vercel'": vercel
+  - link "Daniela Enzo Parane's user avatar":
+    - img "Daniela Enzo Parane's user avatar"
+  - link "Daniela Enzo Parane"
+  - list:
+    - listitem: "1"
+  - time: asked 25 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Auth.js v5 Database Session Strategy for Credential Provider Session Is Returning Null" [level=3]:
+    - link "Auth.js v5 Database Session Strategy for Credential Provider Session Is Returning Null"
+  - text: "My Setup: Auth.js Version: v5 Provider: Credential Provider Session Strategy: Database Framework: Nextjs 15 Database: Supabase Postgres Adapter: Drizzle Config.ts import bcrypt from \"bcrypt&..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'authentication'": authentication
+    - listitem:
+      - link "show questions tagged 'next.js'": next.js
+    - listitem:
+      - link "show questions tagged 'next-auth'": next-auth
+    - listitem:
+      - link "show questions tagged 'session-management'": session-management
+  - link "Harsh Makwana's user avatar":
+    - img "Harsh Makwana's user avatar"
+  - link "Harsh Makwana"
+  - list:
+    - listitem: "1"
+  - time: asked 27 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "CI/CD setup for multiple Azure DevOps projects targeting a single Azure Web App" [level=3]:
+    - link "CI/CD setup for multiple Azure DevOps projects targeting a single Azure Web App"
+  - text: We have three Azure DevOps projects, each containing code written in ASP.NET Framework 4.8, with separate .sln files. There's a single Azure Web App service where we want to deploy the latest changes ...
+  - link
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'asp.net-mvc'": asp.net-mvc
+    - listitem:
+      - link "show questions tagged 'git'": git
+    - listitem:
+      - link "show questions tagged 'azure'": azure
+    - listitem:
+      - link "show questions tagged 'azure-devops'": azure-devops
+    - listitem:
+      - link "show questions tagged 'cicd'": cicd
+  - link "Rahul Kumar Surati's user avatar":
+    - img "Rahul Kumar Surati's user avatar"
+  - link "Rahul Kumar Surati"
+  - list:
+    - listitem: "1"
+  - time: asked 31 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "odd spacing in the title, bread crumbs and other headings when viewed on iphone 14 and later" [level=3]:
+    - link "odd spacing in the title, bread crumbs and other headings when viewed on iphone 14 and later"
+  - text: I have a site created in wordpress using Elementor. When viewed from iPhone, some HTML tags add space among characters. Everything works fine on laptops, other phones, and responsive browsers. I am ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'elementor'": elementor
+  - link "Adam.M's user avatar":
+    - img "Adam.M's user avatar"
+  - link "Adam.M"
+  - list:
+    - listitem: "1"
+  - time: asked 34 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "python, requests. How to intercept autogenerated request-cookies?" [level=3]:
+    - link "python, requests. How to intercept autogenerated request-cookies?"
+  - text: "I make POST request, that autogenerates two unique cookies: __ddg10_ \"1743918650\" __ddg8_ \"D8FWGLzQvNilnwR7\" Is it possible to intercept them while request is being made and ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python-3.x'": python-3.x
+    - listitem:
+      - link "show questions tagged 'python-requests'": python-requests
+  - link "user407971's user avatar":
+    - img "user407971's user avatar"
+  - link "user407971"
+  - list:
+    - listitem: "1"
+  - time: asked 37 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615880"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - 'link "From training to inference: The new role of web data in LLMs"'
+    - listitem:
+      - link "Is AI a bubble or a revolution? The answer is yes."
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Changes to reporting for the [status-review] escalation process"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "A discussion about closed (and potentially useful) posts on Stack Overflow"
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 33k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 10k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2531652
+  - link "show questions tagged 'python'": python
+  - text: × 2212204
+  - link "show questions tagged 'java'": java
+  - text: × 1920134
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624944
+  - link "show questions tagged 'php'": php
+  - text: × 1467955
+  - link "show questions tagged 'android'": android
+  - text: × 1419597
+  - link "show questions tagged 'html'": html
+  - text: × 1188730
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036329
+  - link "show questions tagged 'c++'": c++
+  - text: × 814003
+  - link "show questions tagged 'css'": css
+  - text: × 807825
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Adding new functions to Lyx"
+    - listitem:
+      - link "When did an Asimov robot have a discussion about emotions, following the Three Laws and feeling content?"
+    - listitem:
+      - link "History of invariant types in model theory"
+    - listitem:
+      - link "How do I create a new vector from a previous vector with elements in a specific order in R?"
+    - listitem:
+      - link "How can I assert myself and earn respect in a new team where the tech lead and architect dominate discussions and dismiss my input"
+    - listitem:
+      - link "Is nirvana not extinction?"
+    - listitem:
+      - link "Efficiently navigate a 6 sided die"
+    - listitem:
+      - link "Does it make sense to treat trade deficit as tariffs?"
+    - listitem:
+      - link "Test set imputation"
+    - listitem:
+      - link "Does the Gap-Theorist response towards the strengthened liar suffice?"
+    - listitem:
+      - link "Is it normal that a professor in a class I am taking asks to design a graduate course in return of 40% of the course grades?"
+    - listitem:
+      - link "Can decoupling capacitors still do their job when placed on the back layer?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.4.4.24803
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
