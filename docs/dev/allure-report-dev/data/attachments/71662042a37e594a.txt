@@ -1,0 +1,556 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale GB in dev Einvironment and Realm europe
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Discussions Labs"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,239,178 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 62"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: "-1 votes 0 answers 8 views"
+  - heading "How to control which tests are expanded in Playwright's UI mode" [level=3]:
+    - link "How to control which tests are expanded in Playwright's UI mode"
+  - text: Whenever I start playwright in UI mode, almost exactly first half of the tests are expanded and the rest is collapsed in the tree. It is always the same set of tests. Is there a way to control this? ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'playwright'": playwright
+  - link "Mike's user avatar":
+    - img "Mike's user avatar"
+  - link "Mike"
+  - list:
+    - listitem: "977"
+  - time: asked 2 mins ago
+  - text: "-2 votes 0 answers 8 views"
+  - heading "generate broken config files from the given valid json config file" [level=3]:
+    - link "generate broken config files from the given valid json config file"
+  - text: I have a valid json config file and I need to generate broken config files taking valid json config file as input by providing an invalid value for each of the fields/keys present inside the valid ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'json'": json
+  - link "Harry's user avatar":
+    - img "Harry's user avatar"
+  - link "Harry"
+  - list:
+    - listitem: 3,244
+  - time: asked 3 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Azure Function App Fails to Start Locally – \"An existing connection was forcibly closed by the remote host\"" [level=3]:
+    - link "Azure Function App Fails to Start Locally – \"An existing connection was forcibly closed by the remote host\""
+  - text: I'm trying to run my Azure Function App locally, but it fails to start. It's trying to connect with the azure eventhub I checked the test-netconnection for the iothub and the tcptestsucceeded is true ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'azure'": azure
+    - listitem:
+      - link "show questions tagged 'azure-functions'": azure-functions
+    - listitem:
+      - link "show questions tagged 'azure-eventhub'": azure-eventhub
+  - link "devram's user avatar":
+    - img "devram's user avatar"
+  - link "devram"
+  - list:
+    - listitem: "145"
+  - time: asked 4 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "Laravel/Mongo Not updating integer key in database" [level=3]:
+    - link "Laravel/Mongo Not updating integer key in database"
+  - text: "I have this code in my old version of jenssegers / mongodb $employee = Employee::findById($user_id, true); $employee->{'38'} = 'Php'; $employee->save(); And was updating fine, But now i have ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'laravel'": laravel
+    - listitem:
+      - link "show questions tagged 'mongodb'": mongodb
+    - listitem:
+      - link "show questions tagged 'eloquent'": eloquent
+    - listitem:
+      - link "show questions tagged 'lumen'": lumen
+  - link "Vipin Papnai's user avatar":
+    - img "Vipin Papnai's user avatar"
+  - link "Vipin Papnai"
+  - list:
+    - listitem: "1"
+  - time: asked 12 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Overriding built-in undo/redo in Vim/Neovim" [level=3]:
+    - link "Overriding built-in undo/redo in Vim/Neovim"
+  - text: I am writing a Neovim plugin where I need to hijack undo/redo on a buffer and redirect it to a different buffer. The alternatives I considered. I could remap the u, U, and CTRL_R, but this is not ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'vim'": vim
+    - listitem:
+      - link "show questions tagged 'lua'": lua
+    - listitem:
+      - link "show questions tagged 'neovim'": neovim
+    - listitem:
+      - link "show questions tagged 'vim-plugin'": vim-plugin
+    - listitem:
+      - link "show questions tagged 'neovim-plugin'": neovim-plugin
+  - link "MartinT's user avatar":
+    - img "MartinT's user avatar"
+  - link "MartinT"
+  - list:
+    - listitem: "654"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 18 views
+  - 'heading "Facebook Ads API: Ad Account Blocked (error 2859015) — No Clear Reason via API" [level=3]':
+    - 'link "Facebook Ads API: Ad Account Blocked (error 2859015) — No Clear Reason via API"'
+  - text: "I'm getting this error when trying to publish ads via the Facebook Ads API: errorCode: 10 errorSubCode: 2859015 \"Your account is restricted from publishing campaigns. I’ve checked all ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'facebook'": facebook
+    - listitem:
+      - link "show questions tagged 'facebook-graph-api'": facebook-graph-api
+    - listitem:
+      - link "show questions tagged 'facebook-opengraph'": facebook-opengraph
+  - link "Ashish Chaturvedi's user avatar":
+    - img "Ashish Chaturvedi's user avatar"
+  - link "Ashish Chaturvedi"
+  - list:
+    - listitem: 1,379
+  - time: asked 21 mins ago
+  - text: "-1 votes 0 answers 12 views"
+  - heading "How to Get Network related Stats from Google Meet without enterprise account?" [level=3]:
+    - link "How to Get Network related Stats from Google Meet without enterprise account?"
+  - text: Since I have already explored Chrome's WebRTC-Internals to monitor network statistics during a Google Meet session, I am now looking for alternative solutions. Specifically, I would like to know if ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'google-meet'": google-meet
+  - link "Abhi shek's user avatar":
+    - img "Abhi shek's user avatar"
+  - link "Abhi shek"
+  - list:
+    - listitem: "1"
+  - time: asked 22 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "Trying to access iceberg tables by adding iceberg Catalog in Trino but failed to add" [level=3]:
+    - link "Trying to access iceberg tables by adding iceberg Catalog in Trino but failed to add"
+  - text: I am trying to access my iceberg tables through trino which are in my s3 location but iam not having any success. I have added this catalog named iceberg.properties in the etc/catalog/ location this ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'apache'": apache
+    - listitem:
+      - link "show questions tagged 'amazon-s3'": amazon-s3
+    - listitem:
+      - link "show questions tagged 'trino'": trino
+    - listitem:
+      - link "show questions tagged 'apache-iceberg'": apache-iceberg
+  - link "khurram navid's user avatar":
+    - img "khurram navid's user avatar"
+  - link "khurram navid"
+  - list:
+    - listitem: "1"
+  - time: asked 24 mins ago
+  - text: "-1 votes 0 answers 7 views"
+  - heading "I am seeing an error related to flutter to debuting in my iPhone" [level=3]:
+    - link "I am seeing an error related to flutter to debuting in my iPhone"
+  - text: "Could not build the precompiled application for the device. Error (Xcode): stat cache file '/Users/VishwaRajSingh/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos18 .2-22C146-..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+  - link "Vishva Raj Singh's user avatar":
+    - img "Vishva Raj Singh's user avatar"
+  - link "Vishva Raj Singh"
+  - list:
+    - listitem: "1"
+  - time: asked 24 mins ago
+  - text: 0 votes 0 answers 10 views
+  - 'heading "msgraph API Go SDK and how to auth with additional roles; `/.default` gives 403 even though admin access granted" [level=3]':
+    - 'link "msgraph API Go SDK and how to auth with additional roles; `/.default` gives 403 even though admin access granted"'
+  - text: I'm using the new Go Lang SDK, but I just switched to it. Before refactoring to the SDK, I was using raw calls to the API endpoint, which was doing exactly the same thing. I'm building an application ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'go'": go
+    - listitem:
+      - link "show questions tagged 'microsoft-graph-teams'": microsoft-graph-teams
+  - link "Jim's user avatar":
+    - img "Jim's user avatar"
+  - link "Jim"
+  - list:
+    - listitem: 1,578
+  - time: asked 25 mins ago
+  - text: "-3 votes 0 answers 19 views"
+  - heading "Why is the library LwIP.h not working properly C++ in coding? [closed]" [level=3]:
+    - link "Why is the library LwIP.h not working properly C++ in coding? [closed]"
+  - text: I have a microcontroller stm34f407vgt6 that I have connected to lan8720. I am coding in Arduino. I have written code for it before and it was not a problem. Now the same code is not compiling anymore. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+  - link "iran fajr's user avatar":
+    - img "iran fajr's user avatar"
+  - link "iran fajr"
+  - list:
+    - listitem: "1"
+  - time: asked 25 mins ago
+  - text: 0 votes 0 answers 8 views
+  - 'heading "update to macos sequoia: open Xcode15 failed" [level=3]':
+    - 'link "update to macos sequoia: open Xcode15 failed"'
+  - text: "After upgrading to sequoia, I tried to start the Xcode process in \"Package Content\" and failed with the error \"zsh: killed /Users/admin/Xcode.app/Contents/MacOS/Xcode\"。"
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'xcode'": xcode
+  - link "chaochaochao33's user avatar":
+    - img "chaochaochao33's user avatar"
+  - link "chaochaochao33"
+  - list:
+    - listitem: "1"
+  - time: asked 25 mins ago
+  - text: 0 votes 0 answers 4 views
+  - 'heading "vscode packing error: yarn run gulp vscode-win32-x64-min error" [level=3]':
+    - 'link "vscode packing error: yarn run gulp vscode-win32-x64-min error"'
+  - text: "node version: 18.15.0 vscode version: 1.85.1 gulp : 4.0.0 When executing yarn watch, it runs normally without any errors. However, when executing yarn run gulp vscode-win32-x64, the following error ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'visual-studio-code'": visual-studio-code
+    - listitem:
+      - link "show questions tagged 'packing'": packing
+  - link "user30202621's user avatar":
+    - img "user30202621's user avatar"
+  - link "user30202621"
+  - list:
+    - listitem: "1"
+  - time: asked 26 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "get an Excel session under Win11 and Framework 8.0" [level=3]:
+    - link "get an Excel session under Win11 and Framework 8.0"
+  - text: i have to organise some programs from framework 4.8 to 8.0. In these i want to get an open Excel workbook. But in the For-loop nothing happens. Underneath there is my code for testing. Imports System....
+  - list:
+    - listitem:
+      - link "show questions tagged 'excel'": excel
+  - link "Felix's user avatar":
+    - img "Felix's user avatar"
+  - link "Felix"
+  - list:
+    - listitem: "1"
+  - time: asked 26 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "GitHub Action - Deploy Python to Azure Function - import azure.identity not working" [level=3]:
+    - link "GitHub Action - Deploy Python to Azure Function - import azure.identity not working"
+  - text: Problem I'm trying to deploy a Python Azure Function using GitHub Actions, but the deployment fails silently when my code includes azure-identity. The function works perfectly when deployed through VS ...
+  - link
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'azure'": azure
+    - listitem:
+      - link "show questions tagged 'azure-functions'": azure-functions
+    - listitem:
+      - link "show questions tagged 'github-actions'": github-actions
+    - listitem:
+      - link "show questions tagged 'azure-identity'": azure-identity
+  - link "Alex's user avatar":
+    - img "Alex's user avatar"
+  - link "Alex"
+  - list:
+    - listitem: "111"
+  - time: asked 27 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615946"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - 'link "Open-source AI: Are younger developers leading the way?"'
+    - listitem:
+      - 'link "Bottom of the first: A veteran VC’s take on the AI landscape"'
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Changes to reporting for the [status-review] escalation process"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "A discussion about closed (and potentially useful) posts on Stack Overflow"
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 33k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - heading "R Language" [level=1]:
+    - link "R Language"
+  - text: 13k Members
+  - button "Join"
+  - text: A collective where data scientists and AI researchers gather to find, share, and learn about R and other subtags like knitr and dplyr.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2531707
+  - link "show questions tagged 'python'": python
+  - text: × 2212333
+  - link "show questions tagged 'java'": java
+  - text: × 1920179
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624986
+  - link "show questions tagged 'php'": php
+  - text: × 1467975
+  - link "show questions tagged 'android'": android
+  - text: × 1419649
+  - link "show questions tagged 'html'": html
+  - text: × 1188760
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036332
+  - link "show questions tagged 'c++'": c++
+  - text: × 814047
+  - link "show questions tagged 'css'": css
+  - text: × 807841
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Eye disease counterfactual example from Elements of Causal Inference"
+    - listitem:
+      - link "Possible reason for \"wiggles\" in battery balancing PCB"
+    - listitem:
+      - link "Is it possible the homo genus could evolve if, magically, all of earth's fossil fuels had been burned within a 1000 year span?"
+    - listitem:
+      - link "Why does Matt 19:18-23 differ so significantly from the same story in Luke and Mark?"
+    - listitem:
+      - link "Is it possible to use coefficient of determination for non-regression models?"
+    - listitem:
+      - link "Is there any biblical basis that supports the prime age resurrection doctrine?"
+    - listitem:
+      - link "Higher topos theory- Circular argument"
+    - listitem:
+      - link "In my city, magic prevents people from harboring ill intent in their minds. Is there any reasonable need for a police force of any kind?"
+    - listitem:
+      - link "What should I do if I lack fundamental knowledge and only got into a PhD program due to luck?"
+    - listitem:
+      - link "How much damage does the Shifter's Claws feature do?"
+    - listitem:
+      - link "Is a planet with long nights and short days possible?"
+    - listitem:
+      - link "Does neutral wire carry power?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.4.7.24866
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
