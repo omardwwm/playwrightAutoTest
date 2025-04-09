@@ -1,0 +1,562 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale NZ in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Discussions Labs"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,239,816 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 55"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 3 views
+  - heading "How to set permissions for azure devops pipeline artifact" [level=3]:
+    - link "How to set permissions for azure devops pipeline artifact"
+  - text: I want to restrict the groups/users who can view the Azure devops pipeline artifact (published via PublishPipelineArtifact@1) The only resource which I found related to this topic is this resource ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'azure-devops'": azure-devops
+    - listitem:
+      - link "show questions tagged 'azure-pipelines'": azure-pipelines
+    - listitem:
+      - link "show questions tagged 'azure-artifacts'": azure-artifacts
+  - link "blister's user avatar":
+    - img "blister's user avatar"
+  - link "blister"
+  - list:
+    - listitem: "13"
+  - time: asked 3 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "How to correctly pass boolean parameters as strings to AnalysisParameterInput in libica.openapi.v2 without triggering ApiTypeError?" [level=3]:
+    - link "How to correctly pass boolean parameters as strings to AnalysisParameterInput in libica.openapi.v2 without triggering ApiTypeError?"
+  - text: "Here’s the relevant part of my code: for key, value in param_inputs.items(): # Convert boolean strings or actual booleans to string format \"True\"/\"False\" if isinstance(value, bool):..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'nextflow'": nextflow
+  - link "C0DiFire's user avatar":
+    - img "C0DiFire's user avatar"
+  - link "C0DiFire"
+  - list:
+    - listitem: "11"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "Texshop .log file starts with wrong tex file location" [level=3]:
+    - link "Texshop .log file starts with wrong tex file location"
+  - text: "My new Texshop installation from scratch today starts a. log file from the wrong location of my Tex file as tcsh: Trying to start from \"/users/my name\" and so it does not compile a pdf file...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'latex'": latex
+    - listitem:
+      - link "show questions tagged 'pdflatex'": pdflatex
+  - link "uhligfd's user avatar":
+    - img "uhligfd's user avatar"
+  - link "uhligfd"
+  - list:
+    - listitem: "1"
+  - time: asked 10 mins ago
+  - text: "-3 votes 0 answers 11 views"
+  - heading "How to hide content writer in wordpress?" [level=3]:
+    - link "How to hide content writer in wordpress?"
+  - text: How to hide content writer in wordpress and published date? .......................................................... I try to find in wordpress setting but can not use it. ..............................
+  - list:
+    - listitem:
+      - link "show questions tagged 'wordpress'": wordpress
+  - link "Sochivy Chet's user avatar":
+    - img "Sochivy Chet's user avatar"
+  - link "Sochivy Chet"
+  - list:
+    - listitem: "1"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Why are there multiple calls on the flame-chart?" [level=3]:
+    - link "Why are there multiple calls on the flame-chart?"
+  - text: "I console-logged to confirm that the $author$project$MainModule$view function is called only once for this click event. However, we can see it 20 times in this flame chart: Last I used this report, ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'performance'": performance
+    - listitem:
+      - link "show questions tagged 'google-chrome'": google-chrome
+    - listitem:
+      - link "show questions tagged 'google-chrome-devtools'": google-chrome-devtools
+  - link "Daniel Birowsky Popeski's user avatar":
+    - img "Daniel Birowsky Popeski's user avatar"
+  - link "Daniel Birowsky Popeski"
+  - list:
+    - listitem: 9,306
+  - time: asked 12 mins ago
+  - text: 0 votes 0 answers 3 views
+  - heading "Is it safe to use AWS SDK versions >1.12.681 with KCL 1.x?" [level=3]:
+    - link "Is it safe to use AWS SDK versions >1.12.681 with KCL 1.x?"
+  - text: I'm currently using the AWS Kinesis Client Library (KCL) 1.x in a Java application. The official documentation suggests that KCL 1.x supports AWS SDK versions only up to 1.12.681. However, our ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'amazon-web-services'": amazon-web-services
+    - listitem:
+      - link "show questions tagged 'amazon-kinesis'": amazon-kinesis
+  - link "Jainam Jain's user avatar":
+    - img "Jainam Jain's user avatar"
+  - link "Jainam Jain"
+  - list:
+    - listitem: "1"
+  - time: asked 13 mins ago
+  - text: 0 votes 0 answers 3 views
+  - heading "Custom Endpoint on Typo3 12.4" [level=3]:
+    - link "Custom Endpoint on Typo3 12.4"
+  - text: What is the most common and apropriate way to setup a custom endpoint which i can call via JS fetch to trigger a Server side method call and serve appropriate responses based on error or success as ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'typo3-12.x'": typo3-12.x
+  - link "Hannes Pi's user avatar":
+    - img "Hannes Pi's user avatar"
+  - link "Hannes Pi"
+  - list:
+    - listitem: "1"
+  - time: asked 13 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "adding alt text to all images WordPress gallery" [level=3]:
+    - link "adding alt text to all images WordPress gallery"
+  - text: When adding a WordPress gallery using the Gutenberg editor, none of the images are set an alt text. Is there a way to set the alt text for all images in a gallery without moving to the media library, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'wordpress'": wordpress
+    - listitem:
+      - link "show questions tagged 'gallery'": gallery
+    - listitem:
+      - link "show questions tagged 'wordpress-gutenberg'": wordpress-gutenberg
+  - link "vespino's user avatar":
+    - img "vespino's user avatar"
+  - link "vespino"
+  - list:
+    - listitem: 1,950
+  - time: asked 16 mins ago
+  - text: "-1 votes 0 answers 9 views"
+  - heading "Maven dependency for pdf content verification and format verification in Web Automation" [level=3]:
+    - link "Maven dependency for pdf content verification and format verification in Web Automation"
+  - text: Is there any AI tools or maven/java dependencies to verify the pdf contents and placements and format in automation testing?
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'maven'": maven
+    - listitem:
+      - link "show questions tagged 'automated-tests'": automated-tests
+    - listitem:
+      - link "show questions tagged 'itext'": itext
+    - listitem:
+      - link "show questions tagged 'pdfbox'": pdfbox
+  - link "Durvesh Pokade's user avatar":
+    - img "Durvesh Pokade's user avatar"
+  - link "Durvesh Pokade"
+  - list:
+    - listitem: "1"
+  - time: asked 18 mins ago
+  - text: "-1 votes 0 answers 16 views"
+  - heading "Want some suggestions on ISTQB [closed]" [level=3]:
+    - link "Want some suggestions on ISTQB [closed]"
+  - text: I want to be a manual tester. But I don't have a graduation degree & I am preparing for ISTQB Foundation level. Can I make career in testing or do I have to finish my grad.
+  - list:
+    - listitem:
+      - link "show questions tagged 'selenium-webdriver'": selenium-webdriver
+    - listitem:
+      - link "show questions tagged 'testing'": testing
+    - listitem:
+      - link "show questions tagged 'manual-testing'": manual-testing
+  - link "Sky's user avatar":
+    - img "Sky's user avatar"
+  - link "Sky"
+  - list:
+    - listitem: "1"
+  - time: asked 19 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "Sort values across different columns" [level=3]:
+    - link "Sort values across different columns"
+  - text: I have the following data frame I need to sort in a specific way. D1 and C1 are linked together D2 and C2 are linked together, D3 and C3 are linked together. I need columns D1, D2 and D3 to contain ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'r'": r
+    - listitem:
+      - link "show questions tagged 'dplyr'": dplyr
+    - listitem:
+      - link "show questions tagged 'datatable'": datatable
+  - link "szmple's user avatar":
+    - img "szmple's user avatar"
+  - link "szmple"
+  - list:
+    - listitem: "477"
+  - time: asked 19 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "Firewall issue or port blocking from a server-client application" [level=3]:
+    - link "Firewall issue or port blocking from a server-client application"
+  - text: I want to know how we can see a firewall issue or port issue for a server/client application via the Wireshark logs. When the client application fails, I have seen a RST,ACK. Is it due to the firewall ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'server'": server
+    - listitem:
+      - link "show questions tagged 'client'": client
+    - listitem:
+      - link "show questions tagged 'port'": port
+    - listitem:
+      - link "show questions tagged 'firewall'": firewall
+  - link "George's user avatar":
+    - img "George's user avatar"
+  - link "George"
+  - list:
+    - listitem: "1"
+  - time: asked 22 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "WordPress link by default only for gallery images" [level=3]:
+    - link "WordPress link by default only for gallery images"
+  - text: "The following code adds a link to the file itself when inserting an image using the WordPress editor: function my_new_default_image_settings() { update_option( 'image_default_link_type', 'file' ); ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'wordpress'": wordpress
+  - link "vespino's user avatar":
+    - img "vespino's user avatar"
+  - link "vespino"
+  - list:
+    - listitem: 1,950
+  - time: asked 23 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Kafka Mongo Source Connector to publish Json not String" [level=3]:
+    - link "Kafka Mongo Source Connector to publish Json not String"
+  - text: "I have below config. How to publish raw Json on kafka topic using source connector ? { \"output.format.key\":\"json\", \"output.format.value\":\"json\", \"..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'apache-kafka'": apache-kafka
+    - listitem:
+      - link "show questions tagged 'apache-kafka-connect'": apache-kafka-connect
+    - listitem:
+      - link "show questions tagged 'confluent-platform'": confluent-platform
+    - listitem:
+      - link "show questions tagged 'mongodb-kafka-connector'": mongodb-kafka-connector
+  - link "RRR's user avatar":
+    - img "RRR's user avatar"
+  - link "RRR"
+  - list:
+    - listitem: "1"
+  - time: asked 25 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Intermittent Crash at completeTransition in Custom Navigation Animation (Firebase Crashlytics)" [level=3]:
+    - link "Intermittent Crash at completeTransition in Custom Navigation Animation (Firebase Crashlytics)"
+  - text: I'm encountering an intermittent crash on iOS 18 only (not reproducible locally, reported in Firebase Crashlytics) at transitionContext.completeTransition(!transitionContext.transitionWasCancelled) ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'animation'": animation
+    - listitem:
+      - link "show questions tagged 'uikit'": uikit
+    - listitem:
+      - link "show questions tagged 'ios18'": ios18
+  - link "Trí Chồn's user avatar":
+    - img "Trí Chồn's user avatar"
+  - link "Trí Chồn"
+  - list:
+    - listitem: "652"
+  - time: asked 26 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615988"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - 'link "Open-source AI: Are younger developers leading the way?"'
+    - listitem:
+      - 'link "Bottom of the first: A veteran VC’s take on the AI landscape"'
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Changes to reporting for the [status-review] escalation process"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "A discussion about closed (and potentially useful) posts on Stack Overflow"
+  - text: Collectives
+  - link "see all"
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 26k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 19k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 10k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2531744
+  - link "show questions tagged 'python'": python
+  - text: × 2212383
+  - link "show questions tagged 'java'": java
+  - text: × 1920210
+  - link "show questions tagged 'c#'": c#
+  - text: × 1625014
+  - link "show questions tagged 'php'": php
+  - text: × 1467976
+  - link "show questions tagged 'android'": android
+  - text: × 1419671
+  - link "show questions tagged 'html'": html
+  - text: × 1188759
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036330
+  - link "show questions tagged 'c++'": c++
+  - text: × 814071
+  - link "show questions tagged 'css'": css
+  - text: × 807852
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Is there a rule of thumb for what frequencies analog vs. digital signal integrity starts to matter?"
+    - listitem:
+      - link "Where can I find out about a controller keyboard's latency before I buy?"
+    - listitem:
+      - link "Can an Archmage modify the shape of an ongoing spell with Mastery of Shaping?"
+    - listitem:
+      - link "How to remove every first duplicate line in a column from mac terminal?"
+    - listitem:
+      - 'link "The Oreo Problem: How to find the Excess"'
+    - listitem:
+      - link "How to show stack trace when an error occurs in paclet code"
+    - listitem:
+      - link "How \"close\" are genome-edited \"de-extinct\" animals to their extinct counterparts?"
+    - listitem:
+      - link "Is the expression “dumber than a sack of bricks” in common usage?"
+    - listitem:
+      - link "Bank switching and extra RAM on the Atari 2600, but there's no R/W line on the cartridge?"
+    - listitem:
+      - link "\"freeze\" the first row (at the top of the display) and the n (e.g. n= 4) characters of the first column on the left side of the display?"
+    - listitem:
+      - link "Was refused US visa as a minor, but found out only after submitting new tourist application a decade later"
+    - listitem:
+      - link "Should secondary flight computers run a RTOS, or use middleware?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.4.7.24866
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
