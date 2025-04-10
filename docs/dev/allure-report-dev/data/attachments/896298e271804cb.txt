@@ -1,0 +1,580 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale US in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Discussions Labs"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,240,339 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 53"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 5 views
+  - heading "tcp server receives first string and then waits on .nextline() and will not receive anything anymore from client" [level=3]:
+    - link "tcp server receives first string and then waits on .nextline() and will not receive anything anymore from client"
+  - text: "I am making a chat app in java with swing and I have a method called chatServer that sends what text was got from a jtextfield to a server if(e.getSource()==button3){ String val2 = text...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'swing'": swing
+    - listitem:
+      - link "show questions tagged 'sockets'": sockets
+    - listitem:
+      - link "show questions tagged 'tcp'": tcp
+  - link "Mike's user avatar":
+    - img "Mike's user avatar"
+  - link "Mike"
+  - list:
+    - listitem: "1"
+  - time: asked 3 mins ago
+  - text: 0 votes 0 answers 2 views
+  - 'heading "TypeError: ''bool'' object does not support the context manager protocol at odoo 17 th version stock" [level=3]':
+    - 'link "TypeError: ''bool'' object does not support the context manager protocol at odoo 17 th version stock"'
+  - text: "I am struggling to fix the error called \"TypeError: 'bool' object does not support the context manager protocol from button action called action_confirm in newly created module at odoo inventory ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'boolean'": boolean
+    - listitem:
+      - link "show questions tagged 'typeerror'": typeerror
+    - listitem:
+      - link "show questions tagged 'stock'": stock
+    - listitem:
+      - link "show questions tagged 'python-3.10'": python-3.10
+    - listitem:
+      - link "show questions tagged 'odoo-17'": odoo-17
+  - link "Tom Mike's user avatar":
+    - img "Tom Mike's user avatar"
+  - link "Tom Mike"
+  - list:
+    - listitem: "11"
+  - time: asked 4 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "how can i create a select that displays my query from rows to columns?" [level=3]:
+    - link "how can i create a select that displays my query from rows to columns?"
+  - text: this is my table bellow in postgreesql Data hora tamanho 08/04/2025 02:00:04 298 08/04/2025 01:30:05 136 08/04/2025 01:00:03 77 08/04/2025 00:30:09 3 The unique same ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'sql'": sql
+    - listitem:
+      - link "show questions tagged 'mysql'": mysql
+    - listitem:
+      - link "show questions tagged 'database'": database
+    - listitem:
+      - link "show questions tagged 'row'": row
+  - link "Almir Fiorio 's user avatar":
+    - img "Almir Fiorio 's user avatar"
+  - link "Almir Fiorio"
+  - list:
+    - listitem: "1"
+  - time: asked 4 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Getting blank point cloud window in Carla 0.9.5" [level=3]:
+    - link "Getting blank point cloud window in Carla 0.9.5"
+  - text: I have written the basic code for visualizing both camera data, semantic segmentation and Lidar point cloud data in Carla 0.9.5 (based on my hardware) which is given below but the problem is that the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'point-clouds'": point-clouds
+    - listitem:
+      - link "show questions tagged 'lidar'": lidar
+    - listitem:
+      - link "show questions tagged 'carla'": carla
+  - link "Arslan's user avatar":
+    - img "Arslan's user avatar"
+  - link "Arslan"
+  - list:
+    - listitem: "1"
+  - time: asked 5 mins ago
+  - text: "-6 votes 0 answers 17 views"
+  - 'heading "Sure! Here''s the English version of your question: [closed]" [level=3]':
+    - 'link "Sure! Here''s the English version of your question: [closed]"'
+  - text: "Sure! Here's the English version of your question: Does anyone have a working deep link for the old PS Plus Turkey price? I saw before that some people were using direct links that take you to the old ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'windows'": windows
+    - listitem:
+      - link "show questions tagged 'sharp-snmp'": sharp-snmp
+  - link "Zayed139's user avatar":
+    - img "Zayed139's user avatar"
+  - link "Zayed139"
+  - list:
+    - listitem: "1"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "change language for scene builder" [level=3]:
+    - link "change language for scene builder"
+  - text: is there any way to change the display language for Gluon scene builder? It seems like it takes OS language, and I can't find a way to override this. I want my scene builder to use English, but my ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'builder'": builder
+  - link "Henry N's user avatar":
+    - img "Henry N's user avatar"
+  - link "Henry N"
+  - list:
+    - listitem: "1"
+  - time: asked 6 mins ago
+  - text: "-1 votes 0 answers 6 views"
+  - heading "access key and secret key got compromised second time. as they were not hardcoded?" [level=3]:
+    - link "access key and secret key got compromised second time. as they were not hardcoded?"
+  - text: Aws IAM user secret key access key got compromised though they were not hardcoded also there were mfa enabled but the hacker used CLI to login to console. What could be the reason How to find the root ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'amazon-web-services'": amazon-web-services
+    - listitem:
+      - link "show questions tagged 'command-line-interface'": command-line-interface
+    - listitem:
+      - link "show questions tagged 'access-keys'": access-keys
+  - link "Kavita Pant's user avatar":
+    - img "Kavita Pant's user avatar"
+  - link "Kavita Pant"
+  - list:
+    - listitem: "1"
+  - time: asked 9 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "Argument '....' is not a function, got undefined" [level=3]:
+    - link "Argument '....' is not a function, got undefined"
+  - text: "Getting this persistent error: \"Error: [ng:areq] Argument 'myController' is not a function, got undefined\" in my console, trying to set up an email registration form within a Piano.io ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'angularjs'": angularjs
+    - listitem:
+      - link "show questions tagged 'forms'": forms
+    - listitem:
+      - link "show questions tagged 'email'": email
+  - link "pjldesign's user avatar":
+    - img "pjldesign's user avatar"
+  - link "pjldesign"
+  - list:
+    - listitem: "397"
+  - time: asked 13 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Recursion problem traversing deeply nested function constructors" [level=3]:
+    - link "Recursion problem traversing deeply nested function constructors"
+  - text: I've already failed to my exam for this task :( I can't iterate through all nested objects to get only '.js' files. The property check for the function is not working in all of the cases and can not ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'recursion'": recursion
+    - listitem:
+      - link "show questions tagged 'mocha.js'": mocha.js
+  - link "JVC's user avatar":
+    - img "JVC's user avatar"
+  - link "JVC"
+  - list:
+    - listitem: "1"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Unable to open nginx with domain and can't open checkmk in Firefox browser" [level=3]:
+    - link "Unable to open nginx with domain and can't open checkmk in Firefox browser"
+  - text: So I'm unable to open nginx with my domain name, arborhub.io and I can't open checkmk on the browser either. I decided to try & run checkmk behind nginx instead of apache, which I did successfully....
+  - list:
+    - listitem:
+      - link "show questions tagged 'django'": django
+    - listitem:
+      - link "show questions tagged 'nginx'": nginx
+    - listitem:
+      - link "show questions tagged 'ubuntu-20.04'": ubuntu-20.04
+    - listitem:
+      - link "show questions tagged 'check-mk'": check-mk
+  - link "Cordev87's user avatar":
+    - img "Cordev87's user avatar"
+  - link "Cordev87"
+  - list:
+    - listitem: "11"
+  - time: asked 16 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "How to prevent unnecessary re-renders of child component inside DevExtreme DataGrid MasterDetail (React)?" [level=3]:
+    - link "How to prevent unnecessary re-renders of child component inside DevExtreme DataGrid MasterDetail (React)?"
+  - text: "I'm using DevExtreme DataGrid (\"devextreme-react\": \"^22.2.4\") in a React application with a MasterDetail setup where a child component is rendered using the MasterDetail template. ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'npm'": npm
+    - listitem:
+      - link "show questions tagged 'devexpress'": devexpress
+    - listitem:
+      - link "show questions tagged 'redux-toolkit'": redux-toolkit
+    - listitem:
+      - link "show questions tagged 'devextreme-react'": devextreme-react
+  - link "Prem Chaube's user avatar":
+    - img "Prem Chaube's user avatar"
+  - link "Prem Chaube"
+  - list:
+    - listitem: "1"
+  - time: asked 21 mins ago
+  - text: "-2 votes 2 answers 18 views"
+  - heading "npm install error / I cannot do npm install on my laragon laravel project" [level=3]:
+    - link "npm install error / I cannot do npm install on my laragon laravel project"
+  - text: error npm install I need help with this error. I could not do npm install, this error keeps popping up. I've tried many things that GPT and my lecturer asked me to but it did not work. Do I need to ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'node.js'": node.js
+    - listitem:
+      - link "show questions tagged 'laravel'": laravel
+    - listitem:
+      - link "show questions tagged 'npm'": npm
+    - listitem:
+      - link "show questions tagged 'npm-install'": npm-install
+    - listitem:
+      - link "show questions tagged 'laragon'": laragon
+  - link "Accedix's user avatar":
+    - img "Accedix's user avatar"
+  - link "Accedix"
+  - list:
+    - listitem: "1"
+  - time: asked 22 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Best way of solve overdetermined system in CUDA(C++)" [level=3]:
+    - link "Best way of solve overdetermined system in CUDA(C++)"
+  - text: I tried to calculate density of substance by using Beer-lambert law. I have 41 wavelength 236 * 504 images and 4 substance's absorbance data. I tried cublasSgelsBatched(). this was enough speed. but ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'cuda'": cuda
+    - listitem:
+      - link "show questions tagged 'cublas'": cublas
+  - link "user27198967's user avatar":
+    - img "user27198967's user avatar"
+  - link "user27198967"
+  - list:
+    - listitem: "1"
+  - time: asked 23 mins ago
+  - text: "-3 votes 0 answers 25 views"
+  - heading "Virtual File System Errors [closed]" [level=3]:
+    - link "Virtual File System Errors [closed]"
+  - text: Hope you are doing well. I built my C++ project and got an error. I want to build an fs driver but when I run the project I get a runtime error. It looks like there is an error creating a virtual file....
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+  - link "Paul Aguire's user avatar":
+    - img "Paul Aguire's user avatar"
+  - link "Paul Aguire"
+  - list:
+    - listitem: "1"
+  - time: asked 23 mins ago
+  - text: 0 votes 0 answers 5 views
+  - 'heading "AWS Elasticache: LETTUCE - How to read from cache without providing a Key" [level=3]':
+    - 'link "AWS Elasticache: LETTUCE - How to read from cache without providing a Key"'
+  - text: We are using Lettuce java client to connect to AWS Elasticache (Valkey engine, Serverless, version 8.0) from Java springboot application (JDK 17 & springboot version 3.2.5) We have User ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'json'": json
+    - listitem:
+      - link "show questions tagged 'spring-boot'": spring-boot
+    - listitem:
+      - link "show questions tagged 'amazon-elasticache'": amazon-elasticache
+    - listitem:
+      - link "show questions tagged 'lettuce'": lettuce
+  - link "alex's user avatar":
+    - img "alex's user avatar"
+  - link "alex"
+  - list:
+    - listitem: "179"
+  - time: asked 24 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1616023"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - 'link "Open-source AI: Are younger developers leading the way?"'
+    - listitem:
+      - 'link "Bottom of the first: A veteran VC’s take on the AI landscape"'
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Changes to reporting for the [status-review] escalation process"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "A discussion about closed (and potentially useful) posts on Stack Overflow"
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 33k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 21k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 10k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2531776
+  - link "show questions tagged 'python'": python
+  - text: × 2212424
+  - link "show questions tagged 'java'": java
+  - text: × 1920236
+  - link "show questions tagged 'c#'": c#
+  - text: × 1625037
+  - link "show questions tagged 'php'": php
+  - text: × 1467986
+  - link "show questions tagged 'android'": android
+  - text: × 1419695
+  - link "show questions tagged 'html'": html
+  - text: × 1188768
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036330
+  - link "show questions tagged 'c++'": c++
+  - text: × 814090
+  - link "show questions tagged 'css'": css
+  - text: × 807857
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Ubuntu reports partition as 105GB, but Windows 7 shows only 30Gb"
+    - listitem:
+      - link "Any ideas what might have burnt up here"
+    - listitem:
+      - link "Fallback font size adjustment"
+    - listitem:
+      - link "Why do so many 3-letter verbs that go consonant-vowel-T conjugate the same in both past tenses as present tense?"
+    - listitem:
+      - link "Is using a mulcher mower exclusively bad for the lawn, in the long run?"
+    - listitem:
+      - link "Have any country leaders pledged to cut their trade surplus with the US to zero?"
+    - listitem:
+      - link "QGIS Symbology Geometry Generator - Create points at set density"
+    - listitem:
+      - link "Extend multiple globbing patterns with same additional pattern at the same time"
+    - listitem:
+      - link "Hanging/protrusion for cyrillic text in ConTeXt"
+    - listitem:
+      - link "what does it mean &[&[&[u8]]]?"
+    - listitem:
+      - link "Did Colonel Sanders drive 250,000 miles per year?"
+    - listitem:
+      - link "Why do U.S astronauts sometimes still launch on Russian Soyuz rockets when they have their own transportation to the ISS now via spacex?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.4.9.24965
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
