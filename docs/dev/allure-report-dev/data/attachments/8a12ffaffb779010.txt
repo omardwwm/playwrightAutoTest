@@ -1,0 +1,564 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale NZ in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Discussions Labs"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,238,813 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 42"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 3 views
+  - heading "How can a multi-Tenant data model be designed with some fields unique to each Tenant" [level=3]:
+    - link "How can a multi-Tenant data model be designed with some fields unique to each Tenant"
+  - text: Im working on a SAAS product where we have a multi-Tenant data model. Within the data model there are multiple fields that are specific to tenants. Iam using kafka as a message queue and postgres as ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'apache-kafka'": apache-kafka
+    - listitem:
+      - link "show questions tagged 'database-design'": database-design
+    - listitem:
+      - link "show questions tagged 'architecture'": architecture
+  - link "Farhaan Shaik's user avatar":
+    - img "Farhaan Shaik's user avatar"
+  - link "Farhaan Shaik"
+  - list:
+    - listitem: "173"
+  - time: asked 1 min ago
+  - text: 0 votes 0 answers 4 views
+  - heading "Is there any existing lib/other way to print files in ALT Linux/other Linux with GUI using C#?" [level=3]:
+    - link "Is there any existing lib/other way to print files in ALT Linux/other Linux with GUI using C#?"
+  - text: There's a way to use native Window's app for printing files via C# lib (System.Drawing.Printing), but this lib works only with Windows. However, Linux distributives with GUI have same functionality, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'linux'": linux
+    - listitem:
+      - link "show questions tagged 'printing'": printing
+  - link "Кирилл Мельников's user avatar":
+    - img "Кирилл Мельников's user avatar"
+  - link "Кирилл Мельников"
+  - list:
+    - listitem: "1"
+  - time: asked 2 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Trying to understand Liskov Substitution Principle" [level=3]:
+    - link "Trying to understand Liskov Substitution Principle"
+  - text: If interfaces can't be instantiated, how can we say 'objects of a superclass should be replaceable by objects of a subclass'? That sounds like you need to instantiate the superclass, but interfaces ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'solid-principles'": solid-principles
+    - listitem:
+      - link "show questions tagged 'liskov-substitution-principle'": liskov-substitution-principle
+  - link "Jai's user avatar":
+    - img "Jai's user avatar"
+  - link "Jai"
+  - list:
+    - listitem: "1"
+  - time: asked 4 mins ago
+  - text: 0 votes 0 answers 16 views
+  - 'heading "VS Code Python: Script runs with \"Run\" but fails with \"Debug\" when using symlinked python.exe" [level=3]':
+    - 'link "VS Code Python: Script runs with \"Run\" but fails with \"Debug\" when using symlinked python.exe"'
+  - text: "Background: I'm facing an issue in VS Code where my Python script runs fine using the \"Run\" button but fails silently when using \"Debug\". Environment: Windows 10 Python 3.10 VS ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'visual-studio-code'": visual-studio-code
+    - listitem:
+      - link "show questions tagged 'debugging'": debugging
+    - listitem:
+      - link "show questions tagged 'symlink'": symlink
+  - link "KLc3088's user avatar":
+    - img "KLc3088's user avatar"
+  - link "KLc3088"
+  - list:
+    - listitem: "119"
+  - time: asked 12 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "Native ads in flutter iOS NativeAdFactory is not in scope" [level=3]:
+    - link "Native ads in flutter iOS NativeAdFactory is not in scope"
+  - text: I am following the google codelab for adding native ads in flutter for android and ios. For android it is working properly. But when I run the iOS app, it gives me error that the "NativeAdFactory&...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'admob'": admob
+  - link "Ali Yar Khan's user avatar":
+    - img "Ali Yar Khan's user avatar"
+  - link "Ali Yar Khan"
+  - list:
+    - listitem: 1,354
+  - time: asked 13 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "VS Git When merge show all changed part not just Conflicting part" [level=3]:
+    - link "VS Git When merge show all changed part not just Conflicting part"
+  - text: "I have two branch both base on master. And have not been synchronized with master for a long time. But now I find a same Bug in all branches. I want to fix it in all branches like: original: master: ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'git'": git
+    - listitem:
+      - link "show questions tagged 'merge'": merge
+  - link "OooO's user avatar":
+    - img "OooO's user avatar"
+  - link "OooO"
+  - list:
+    - listitem: "1"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "Complicated recoding problem makes R run out of memory" [level=3]:
+    - link "Complicated recoding problem makes R run out of memory"
+  - text: I have a 180,000 row 30 column data frame one variable of which I need to recode. I tried hard but just caused me to run out of memory. This is part of the data that directs the recoding (called ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'r'": r
+    - listitem:
+      - link "show questions tagged 'dplyr'": dplyr
+  - link "Stuart's user avatar":
+    - img "Stuart's user avatar"
+  - link "Stuart"
+  - list:
+    - listitem: "607"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "Why does calling the contract function always fail?" [level=3]:
+    - link "Why does calling the contract function always fail?"
+  - text: "I have deployed the contract on the Polygon PoS mainnet，javascript code as follows: ···· const accounts = await ethereum.request({ method: 'eth_requestAccounts' }); const userAddress = ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'solidity'": solidity
+  - link "read word's user avatar":
+    - img "read word's user avatar"
+  - link "read word"
+  - list:
+    - listitem: "1"
+  - time: asked 16 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "Visual studio - turn off info-message banner" [level=3]:
+    - link "Visual studio - turn off info-message banner"
+  - text: At the top of my Visual Studio, I get a list of info-messages that reappear after closing them. For me, it's enough that they are listed in the error list; I find them distracting when they also ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'visual-studio'": visual-studio
+    - listitem:
+      - link "show questions tagged 'settings'": settings
+    - listitem:
+      - link "show questions tagged 'visual-studio-setup'": visual-studio-setup
+  - link "natalieDeveloper's user avatar":
+    - img "natalieDeveloper's user avatar"
+  - link "natalieDeveloper"
+  - list:
+    - listitem: "11"
+  - time: asked 19 mins ago
+  - text: 0 votes 1 answer 11 views
+  - 'heading "Visual Studio: Possibility to persist PCH files on rebuild to reduce build time" [level=3]':
+    - 'link "Visual Studio: Possibility to persist PCH files on rebuild to reduce build time"'
+  - text: I am using VS2022. Our codebase is huge and it takes around couple of hours for the build to complete. So, to improve it, we have introduced PCH files. With some amount of development done, there are ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'visual-studio-2022'": visual-studio-2022
+    - listitem:
+      - link "show questions tagged 'precompiled-headers'": precompiled-headers
+  - link "Gerard's user avatar":
+    - img "Gerard's user avatar"
+  - link "Gerard"
+  - list:
+    - listitem: "11"
+  - time: asked 19 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Disable logs and warnings when launching VSCode from console" [level=3]:
+    - link "Disable logs and warnings when launching VSCode from console"
+  - text: "I am using Visual Studio Code (VS Code) on Windows, and when I run it from the command line Code.exe, many unnecessary messages and warnings appear in the console. For example: PS C:\\> Code.exe [..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'powershell'": powershell
+    - listitem:
+      - link "show questions tagged 'visual-studio-code'": visual-studio-code
+    - listitem:
+      - link "show questions tagged 'console'": console
+  - link "Viktor Slobodianyk's user avatar":
+    - img "Viktor Slobodianyk's user avatar"
+  - link "Viktor Slobodianyk"
+  - list:
+    - listitem: "1"
+  - time: asked 21 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Setting lifetime for gunicorn workers" [level=3]:
+    - link "Setting lifetime for gunicorn workers"
+  - text: We have a project on FastAPI. It is still very lightly loaded, so after a few hours of inactivity we get an error of this kind . All sorts of recipes with pool_recycle and adding manipulations to the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'fastapi'": fastapi
+    - listitem:
+      - link "show questions tagged 'gunicorn'": gunicorn
+    - listitem:
+      - link "show questions tagged 'worker'": worker
+  - link "Aleksandr Ivanov's user avatar":
+    - img "Aleksandr Ivanov's user avatar"
+  - link "Aleksandr Ivanov"
+  - list:
+    - listitem: "1"
+  - time: asked 21 mins ago
+  - text: 0 votes 0 answers 6 views
+  - 'heading "Errno::EPERM: Operation not permitted" [level=3]':
+    - 'link "Errno::EPERM: Operation not permitted"'
+  - text: "I was trying to run this command on console -bundle exec sidekiq after that i'm getting this error What I've tried: Verified Redis is running (redis-cli ping responds with \"PONG\") Confirmed ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'ruby-on-rails'": ruby-on-rails
+    - listitem:
+      - link "show questions tagged 'sidekiq'": sidekiq
+  - link "Vineeta's user avatar":
+    - img "Vineeta's user avatar"
+  - link "Vineeta"
+  - list:
+    - listitem: "1"
+  - time: asked 22 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Mozilla Firefox forces my application to use system's MSVC runtime" [level=3]:
+    - link "Mozilla Firefox forces my application to use system's MSVC runtime"
+  - text: "I've described the issue here: Why are system's MSVC runtime DLLs used instead of ours ones sometimes?. In short, we use standalone version of MSVC runtime (it's located in the same folder with ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'windows'": windows
+    - listitem:
+      - link "show questions tagged 'winapi'": winapi
+    - listitem:
+      - link "show questions tagged 'visual-c++'": visual-c++
+  - link "Alexander Dyagilev's user avatar":
+    - img "Alexander Dyagilev's user avatar"
+  - link "Alexander Dyagilev"
+  - list:
+    - listitem: 1,324
+  - time: asked 23 mins ago
+  - text: 0 votes 0 answers 3 views
+  - heading "Vaadin Hilla - @BrowserCallable in dependency not generated for frontend" [level=3]:
+    - link "Vaadin Hilla - @BrowserCallable in dependency not generated for frontend"
+  - text: Simple question, I have a parent pom with 2 child projects. The first depends on the second. I have a service annotated with @BrowserCallable in the second project. Running vaadin:generate on the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'vaadin'": vaadin
+    - listitem:
+      - link "show questions tagged 'hilla'": hilla
+  - link "FatalCatharsis's user avatar":
+    - img "FatalCatharsis's user avatar"
+  - link "FatalCatharsis"
+  - list:
+    - listitem: 3,587
+  - time: asked 23 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615921"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Like self-driving cars, fully AI-automated sysadmins don't exist"
+    - listitem:
+      - link "How AI can prevent clinician burnout"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Changes to reporting for the [status-review] escalation process"
+    - listitem:
+      - link "Chat link being added to left navigation bar"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "A discussion about closed (and potentially useful) posts on Stack Overflow"
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 33k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 20k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - heading "R Language" [level=1]:
+    - link "R Language"
+  - text: 13k Members
+  - button "Join"
+  - text: A collective where data scientists and AI researchers gather to find, share, and learn about R and other subtags like knitr and dplyr.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2531632
+  - link "show questions tagged 'python'": python
+  - text: × 2212214
+  - link "show questions tagged 'java'": java
+  - text: × 1920229
+  - link "show questions tagged 'c#'": c#
+  - text: × 1625022
+  - link "show questions tagged 'php'": php
+  - text: × 1467898
+  - link "show questions tagged 'android'": android
+  - text: × 1419573
+  - link "show questions tagged 'html'": html
+  - text: × 1188728
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036277
+  - link "show questions tagged 'c++'": c++
+  - text: × 814144
+  - link "show questions tagged 'css'": css
+  - text: × 807836
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - 'link "How to add a Line spacing to `chapter` and `section`, .etc, themselves？"'
+    - listitem:
+      - link "How do I check the recurring contribution check box by default?"
+    - listitem:
+      - link "Why does this incorrect amplifier circuit work?"
+    - listitem:
+      - link "How can you convert a generalized regular expression to a standard regular expression?"
+    - listitem:
+      - link "Who first defined vector fields as derivations?"
+    - listitem:
+      - link "What is this icon (dots over a gray curving line) that momentarily appears in my GNOME status bar?"
+    - listitem:
+      - link "How to combine two tabulars into one?"
+    - listitem:
+      - link "Statistical analysis for 2 measures in intervention group and 1 measure in control group?"
+    - listitem:
+      - link "Best public transport card for Tokyo, Kyoto, and Osaka? Is debit card enough?"
+    - listitem:
+      - 'link "Non parametric multivariable analysis: effect of two categorical variables on a highly skewed discrete dependent variable"'
+    - listitem:
+      - link "Perl executes the code inside an if-block regardless of the condition itself"
+    - listitem:
+      - link "Insert result of sp_WhoIsActive in a remote table on remote sql server machine"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.4.15.25241
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
