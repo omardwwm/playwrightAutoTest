@@ -1,0 +1,568 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale CA in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Discussions Labs"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,239,397 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 39"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 2 views
+  - heading "Google Map not working in Pageview in Flutter" [level=3]:
+    - link "Google Map not working in Pageview in Flutter"
+  - text: "I several screen but every to add bottom navigation animation I used Pageview. Widget build(BuildContext context) { return Scaffold( backgroundColor: Colors.white, body: Column( ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'flutter-dependencies'": flutter-dependencies
+    - listitem:
+      - link "show questions tagged 'flutter-ui'": flutter-ui
+    - listitem:
+      - link "show questions tagged 'flutter-layoutbuilder'": flutter-layoutbuilder
+  - link "Modacher Mahmud Rafi's user avatar":
+    - img "Modacher Mahmud Rafi's user avatar"
+  - link "Modacher Mahmud Rafi"
+  - list:
+    - listitem: "1"
+  - time: asked 32 secs ago
+  - text: 0 votes 0 answers 4 views
+  - heading "Classic Report with Dynamic SQL Statement Using Oracle Apex" [level=3]:
+    - link "Classic Report with Dynamic SQL Statement Using Oracle Apex"
+  - text: I have a table with 2 column Query_Id and Sql_Stmt. | Qry_Id | Sql_Stmt | | -------| ---------------------------- | | 1 | select empno,empname,sal from emp;| | 2 ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'oracle-apex'": oracle-apex
+    - listitem:
+      - link "show questions tagged 'oracle-apex-5.1'": oracle-apex-5.1
+    - listitem:
+      - link "show questions tagged 'oracle-apex-5'": oracle-apex-5
+    - listitem:
+      - link "show questions tagged 'oracle-apex-19.1'": oracle-apex-19.1
+  - link "Munu's user avatar":
+    - img "Munu's user avatar"
+  - link "Munu"
+  - list:
+    - listitem: "135"
+  - time: asked 3 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "Setting time zone for apache/Litespeed server side includes" [level=3]:
+    - link "Setting time zone for apache/Litespeed server side includes"
+  - text: My website is on shared hosting, and the host has decided to standardize on UTC. All my code (crontab, SSI, etc) is based on it being a different timezone. I believe setting CRON_TZ = America/New_York ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'shared-hosting'": shared-hosting
+    - listitem:
+      - link "show questions tagged 'shtml'": shtml
+  - link "T G's user avatar":
+    - img "T G's user avatar"
+  - link "T G"
+  - list:
+    - listitem: "511"
+  - time: asked 4 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "Best Approach for Implementing Item Selection in a Custom GridView with Uniform Layout" [level=3]:
+    - link "Best Approach for Implementing Item Selection in a Custom GridView with Uniform Layout"
+  - text: What is the best way to implement item selection in a custom GridView control while ensuring that items are equally distributed in a uniform grid layout? The solution should support features like ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'winui-3'": winui-3
+  - link "Bevara Satyasairam's user avatar":
+    - img "Bevara Satyasairam's user avatar"
+  - link "Bevara Satyasairam"
+  - list:
+    - listitem: "23"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "angular project build on apche server live showing error This form is temporarily inaccessible while refresh the page" [level=3]:
+    - link "angular project build on apche server live showing error This form is temporarily inaccessible while refresh the page"
+  - text: This form is temporarily inaccessible. this is error come when angular build all files and folder paste on the apache live server if refresh the page then is got this erro
+  - list:
+    - listitem:
+      - link "show questions tagged 'angular'": angular
+  - link "Sumit Khowal's user avatar":
+    - img "Sumit Khowal's user avatar"
+  - link "Sumit Khowal"
+  - list:
+    - listitem: "1"
+  - time: asked 7 mins ago
+  - text: 0 votes 0 answers 7 views
+  - 'heading "Strange Speech-to-Text Transcription Issue: Earphones Work on One PC but Not Others Issue" [level=3]':
+    - 'link "Strange Speech-to-Text Transcription Issue: Earphones Work on One PC but Not Others Issue"'
+  - text: "Issue Description: I've encountered a bizarre problem with speech-to-text transcription across my computers. I have three PCs, and I'm experiencing inconsistent behavior with earphones: On my ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'azure'": azure
+    - listitem:
+      - link "show questions tagged 'azure-speech'": azure-speech
+  - link "Su Myat's user avatar":
+    - img "Su Myat's user avatar"
+  - link "Su Myat"
+  - list:
+    - listitem: "35"
+  - time: asked 7 mins ago
+  - text: "-2 votes 0 answers 6 views"
+  - heading "Running a Mainframe DB2 query from Python" [level=3]:
+    - link "Running a Mainframe DB2 query from Python"
+  - text: "I want to trigger an SQL query using my Python code in a Mainframe DB2 database. I have the following connection information: Mainframe ID, Password, Host Server Address, Port, Database Name Can ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'sql'": sql
+    - listitem:
+      - link "show questions tagged 'visual-studio-code'": visual-studio-code
+    - listitem:
+      - link "show questions tagged 'db2'": db2
+    - listitem:
+      - link "show questions tagged 'mainframe'": mainframe
+  - link "Aritra Nath's user avatar":
+    - img "Aritra Nath's user avatar"
+  - link "Aritra Nath"
+  - list:
+    - listitem: "17"
+  - time: asked 7 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Blazor server side, sending 302 IDP redirect for XHR, negotiate calls and accumulating cookies" [level=3]:
+    - link "Blazor server side, sending 302 IDP redirect for XHR, negotiate calls and accumulating cookies"
+  - text: How do we stop our blazor to send oauth 302 redirect for xhr calls, which will never be processed at browser. Problem is that before sending 302 redirect it created nonce and correlation cookies, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'blazor'": blazor
+    - listitem:
+      - link "show questions tagged 'blazor-server-side'": blazor-server-side
+  - link "codemirror's user avatar":
+    - img "codemirror's user avatar"
+  - link "codemirror"
+  - list:
+    - listitem: 3,580
+  - time: asked 7 mins ago
+  - text: "-2 votes 0 answers 8 views"
+  - heading "Configuring environment for java card development" [level=3]:
+    - link "Configuring environment for java card development"
+  - text: "Could someone please help me set up environment for Java Card development? I’ve already downloaded the following: eclipse-ide-2025-03.exe java_card_devkit_tools-bin-v24.1-b_284-06-OCT-2024.zip ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javacard'": javacard
+  - link "user24830237's user avatar":
+    - img "user24830237's user avatar"
+  - link "user24830237"
+  - list:
+    - listitem: "1"
+  - time: asked 7 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "android maui nested grid is not scrolling" [level=3]:
+    - link "android maui nested grid is not scrolling"
+  - text: <?xml version="1.0" encoding="utf-8" ?> <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'maui'": maui
+  - link "Angularjsguy's user avatar":
+    - img "Angularjsguy's user avatar"
+  - link "Angularjsguy"
+  - list:
+    - listitem: "39"
+  - time: asked 8 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Entra ID External - Access Token Validation Issues" [level=3]:
+    - link "Entra ID External - Access Token Validation Issues"
+  - text: "We have an API that we would like to enable access for using Microsoft Entra External ID. We performed the following steps: Created the API App Registration under Entra ID and exposed scopes Created ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'asp.net-core'": asp.net-core
+    - listitem:
+      - link "show questions tagged 'microsoft-entra-id'": microsoft-entra-id
+    - listitem:
+      - link "show questions tagged 'b2c'": b2c
+  - link "Anup Marwadi's user avatar":
+    - img "Anup Marwadi's user avatar"
+  - link "Anup Marwadi"
+  - list:
+    - listitem: 2,577
+  - time: asked 8 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "How to convert Number to Arabic Text in Vuejs" [level=3]:
+    - link "How to convert Number to Arabic Text in Vuejs"
+  - text: please let me know a way, how to convert number to arabic text. i need help in this regard. Thank you in advance.
+  - list:
+    - listitem:
+      - link "show questions tagged 'vue.js'": vue.js
+    - listitem:
+      - link "show questions tagged 'vuejs2'": vuejs2
+    - listitem:
+      - link "show questions tagged 'vuejs3'": vuejs3
+    - listitem:
+      - link "show questions tagged 'vue-component'": vue-component
+  - link "Vijay's user avatar":
+    - img "Vijay's user avatar"
+  - link "Vijay"
+  - list:
+    - listitem: 1,026
+  - time: asked 8 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "MS Graph SDK - How to perform date range query to get emails in certain time frame?" [level=3]:
+    - link "MS Graph SDK - How to perform date range query to get emails in certain time frame?"
+  - text: I'm using the python MS graph sdk to try to perform a query. I'm able to successfully get all of the user's emails, but I can't seem to be able to use the sdk to get the emails from a certain time ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'outlook'": outlook
+    - listitem:
+      - link "show questions tagged 'microsoft-graph-api'": microsoft-graph-api
+    - listitem:
+      - link "show questions tagged 'outlook-restapi'": outlook-restapi
+  - link "WHOATEMYNOODLES's user avatar":
+    - img "WHOATEMYNOODLES's user avatar"
+  - link "WHOATEMYNOODLES"
+  - list:
+    - listitem: 2,643
+  - time: asked 9 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "How to prevent prompt injection attacks in LLM-powered applications?" [level=3]:
+    - link "How to prevent prompt injection attacks in LLM-powered applications?"
+  - text: With the rise of LLM-based apps (e.g., chatbots using OpenAI's API), prompt injection has become a major security risk. What are the best practices to sanitize user inputs and prevent malicious actors ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'security'": security
+    - listitem:
+      - link "show questions tagged 'openai-api'": openai-api
+    - listitem:
+      - link "show questions tagged 'code-injection'": code-injection
+    - listitem:
+      - link "show questions tagged 'prompt'": prompt
+    - listitem:
+      - link "show questions tagged 'large-language-model'": large-language-model
+  - link "Satria Trader's user avatar":
+    - img "Satria Trader's user avatar"
+  - link "Satria Trader"
+  - list:
+    - listitem: "1"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "C++ Binary Size Increase in Xcode 16 Compared to Xcode 15" [level=3]:
+    - link "C++ Binary Size Increase in Xcode 16 Compared to Xcode 15"
+  - text: I've recently upgraded my project from Xcode 15 to Xcode 16. Without changing any build settings or compiler flags, I noticed that the final executable size has increased significantly when building ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'xcode'": xcode
+  - link "daxia.zhou's user avatar":
+    - img "daxia.zhou's user avatar"
+  - link "daxia.zhou"
+  - list:
+    - listitem: "31"
+  - time: asked 11 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615960"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "How AI can prevent clinician burnout"
+    - listitem:
+      - 'link "WBIT #7: Exploring WebAssembly with the first SO user to get 10k rep"'
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Changes to reporting for the [status-review] escalation process"
+    - listitem:
+      - link "Chat link being added to left navigation bar"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "A discussion about closed (and potentially useful) posts on Stack Overflow"
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 34k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 26k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 20k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2531645
+  - link "show questions tagged 'python'": python
+  - text: × 2212271
+  - link "show questions tagged 'java'": java
+  - text: × 1920265
+  - link "show questions tagged 'c#'": c#
+  - text: × 1625046
+  - link "show questions tagged 'php'": php
+  - text: × 1467914
+  - link "show questions tagged 'android'": android
+  - text: × 1419606
+  - link "show questions tagged 'html'": html
+  - text: × 1188741
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036279
+  - link "show questions tagged 'c++'": c++
+  - text: × 814168
+  - link "show questions tagged 'css'": css
+  - text: × 807849
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "How to represent a large pack of hounds in Exalted?"
+    - listitem:
+      - link "What does this H symbol on Jeppesen STAR charts mean?"
+    - listitem:
+      - link "Is There a Maximum Forward Voltage Limit for Diodes Like the 1N4007?"
+    - listitem:
+      - link "How to use minted for highlighting two languages in one code block (LuaLaTeX)"
+    - listitem:
+      - link "Not comfortable sharing original ideas with my advisor, yet I need to have them in my thesis. What to do?"
+    - listitem:
+      - link "How does a non-California spouse’s income affect California taxes of the other spouse who has only California income (Form 540NR)?"
+    - listitem:
+      - link "Use of EEPROM in automotive microcontroller when there is flash memory?"
+    - listitem:
+      - link "Unequal Radii, Equal Angular Impulse?"
+    - listitem:
+      - link "Change page margin for first page within environment"
+    - listitem:
+      - link "Legal framework and protections for \"natural insemination\" sperm donors"
+    - listitem:
+      - link "How can I professionally address repeated lack of detail in user stories without causing tension in the team?"
+    - listitem:
+      - link "Is there a simple convex 3D polytope with an odd number of facets, all of which have an even number of sides?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.4.16.25282
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
