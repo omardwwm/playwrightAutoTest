@@ -1,0 +1,552 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale JP in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Discussions Labs"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,235,622 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 40"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 2 views
+  - heading "Prateek Pal – A Rising Entrepreneur Making Waves in Real Estate & Frozen Foods" [level=3]:
+    - link "Prateek Pal – A Rising Entrepreneur Making Waves in Real Estate & Frozen Foods"
+  - text: enter image description here Prateek Pal, Director of SM Pal Group, is quickly becoming a name to watch in Uttarakhand’s business landscape. With ventures like Palam City, a modern residential ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'business-intelligence'": business-intelligence
+  - link "denny 's user avatar":
+    - img "denny 's user avatar"
+  - link "denny"
+  - list:
+    - listitem: "1"
+  - time: asked 1 min ago
+  - text: 0 votes 0 answers 2 views
+  - heading "Can't access global variable declared in c from arm assembly function" [level=3]:
+    - link "Can't access global variable declared in c from arm assembly function"
+  - text: "I have tried alot of things but I am not sure what is the issue and if it is possible I am developing an app for android using android ndk I have this variable in c extern \"C\"{ int ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c'": c
+    - listitem:
+      - link "show questions tagged 'android-studio'": android-studio
+    - listitem:
+      - link "show questions tagged 'assembly'": assembly
+    - listitem:
+      - link "show questions tagged 'arm'": arm
+  - link "John Am's user avatar":
+    - img "John Am's user avatar"
+  - link "John Am"
+  - list:
+    - listitem: "101"
+  - time: asked 2 mins ago
+  - text: 0 votes 0 answers 3 views
+  - heading "WPF Controls now showing up in design mode Visual Studio 2022" [level=3]:
+    - link "WPF Controls now showing up in design mode Visual Studio 2022"
+  - text: In WPF, Visual studio 2022, the design mode does not render the page. This is what I see. In visual studio 2019 it works. enter image description here I tryed to change Option "Control Display ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'wpf'": wpf
+    - listitem:
+      - link "show questions tagged 'visual-studio-2022'": visual-studio-2022
+    - listitem:
+      - link "show questions tagged 'designmode'": designmode
+  - link "Davide Catellani's user avatar":
+    - img "Davide Catellani's user avatar"
+  - link "Davide Catellani"
+  - list:
+    - listitem: "1"
+  - time: asked 4 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Array choose formula problem in google sheets" [level=3]:
+    - link "Array choose formula problem in google sheets"
+  - text: "I found weird problem with google sheets and CHOOSE formula. It looks like not works as the same in Excel and also cannot support arrays. For example: =FILTER(CHOOSE({1,2,3},H11:H22,I11:I22,L11:L22),((..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'google-sheets'": google-sheets
+  - link "Orghal's user avatar":
+    - img "Orghal's user avatar"
+  - link "Orghal"
+  - list:
+    - listitem: "1"
+  - time: asked 12 mins ago
+  - text: 0 votes 0 answers 8 views
+  - 'heading "Source map error: JSON.parse: unexpected character at line 1 column 1 of the JSON data" [level=3]':
+    - 'link "Source map error: JSON.parse: unexpected character at line 1 column 1 of the JSON data"'
+  - text: "I have enable the source map when using vite \"vite\": \"^5.4.18\" to build the react project like this: build: { outDir: \"build\", sourcemap: true, rollupOptions: ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'vite'": vite
+    - listitem:
+      - link "show questions tagged 'source-maps'": source-maps
+  - link "Dolphin's user avatar":
+    - img "Dolphin's user avatar"
+  - link "Dolphin"
+  - list:
+    - listitem: 39.4k
+  - time: asked 17 mins ago
+  - text: "-1 votes 0 answers 9 views"
+  - heading "LoRaWAN library for STM32f030 and sx1276 on stm32cubeide" [level=3]:
+    - link "LoRaWAN library for STM32f030 and sx1276 on stm32cubeide"
+  - text: I have connected stm32f030k6t6 and sx1276 to send raw lora data(and we have an internal library for encoding the data which doesn't seem to be working well). However, I want connect my lora to a ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'stm32'": stm32
+    - listitem:
+      - link "show questions tagged 'stm32cubeide'": stm32cubeide
+    - listitem:
+      - link "show questions tagged 'lorawan'": lorawan
+  - link "Hamid Rajabi's user avatar":
+    - img "Hamid Rajabi's user avatar"
+  - link "Hamid Rajabi"
+  - list:
+    - listitem: "65"
+  - time: asked 23 mins ago
+  - text: 0 votes 0 answers 6 views
+  - 'heading "MAUI: Notification icon is blank in Android 15" [level=3]':
+    - 'link "MAUI: Notification icon is blank in Android 15"'
+  - text: "I am using below code to show the push notification icon in my MAUI application: private void CreateNotificationChannel() { try { var channelId = $\"{PackageName}.general\"; ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'push-notification'": push-notification
+    - listitem:
+      - link "show questions tagged 'maui'": maui
+  - link "Matthew Pans's user avatar":
+    - img "Matthew Pans's user avatar"
+  - link "Matthew Pans"
+  - list:
+    - listitem: "877"
+  - time: asked 25 mins ago
+  - text: 0 votes 0 answers 5 views
+  - 'heading "EF Core 8: Properties<T>.HaveConversion<TValueConverter>() of base record type not using the supplied value converter" [level=3]':
+    - 'link "EF Core 8: Properties<T>.HaveConversion<TValueConverter>() of base record type not using the supplied value converter"'
+  - text: I have an ASP.Net Core Web API (8.0) project with EF Core, and I'm trying to use strongly-typed IDs. Previously, I had a couple models with these strongly-typed IDs and each have their own value ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'entity-framework-core'": entity-framework-core
+  - link "N.T. Dang's user avatar":
+    - img "N.T. Dang's user avatar"
+  - link "N.T. Dang"
+  - list:
+    - listitem: "95"
+  - time: asked 26 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Trying to make a pathway to put my files in a preferred folder and it doesn't work" [level=3]:
+    - link "Trying to make a pathway to put my files in a preferred folder and it doesn't work"
+  - text: I've tried multiple different ways of typing out setwd("C:\Users\jolee\OneDrive\Documents\Project Docs") including with only 1 , the /, and , "". the first time putting in setwd(&...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'r'": r
+    - listitem:
+      - link "show questions tagged 'rstudio'": rstudio
+  - link "Jolee Benson joleeConfirmed04's user avatar":
+    - img "Jolee Benson joleeConfirmed04's user avatar"
+  - link "Jolee Benson joleeConfirmed04"
+  - list:
+    - listitem: "1"
+  - time: asked 28 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "DWARF call stack unwinding with function calls to assembly files" [level=3]:
+    - link "DWARF call stack unwinding with function calls to assembly files"
+  - text: I am working on some low-level project. This project has many c files which has function calls to .s files. Now how to get the stack unwinding for this kind of situation, as dwarf cfi frames won't be ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'assembly'": assembly
+    - listitem:
+      - link "show questions tagged 'gcc'": gcc
+    - listitem:
+      - link "show questions tagged 'embedded'": embedded
+    - listitem:
+      - link "show questions tagged 'dwarf'": dwarf
+    - listitem:
+      - link "show questions tagged 'armclang'": armclang
+  - link "Chintha Siva Prasad's user avatar":
+    - img "Chintha Siva Prasad's user avatar"
+  - link "Chintha Siva Prasad"
+  - list:
+    - listitem: "39"
+  - time: asked 33 mins ago
+  - text: 0 votes 1 answer 12 views
+  - 'heading "Flutter amplify-authenticator-2.3.3 throws StateError (Bad state: No element)" [level=3]':
+    - 'link "Flutter amplify-authenticator-2.3.3 throws StateError (Bad state: No element)"'
+  - text: The code below seems faulty since it does not check if _authBlock.exceptions.first exists. Is there a way to avoid this issue? I have tried to rollback to version 2.0.0 but the error is still there. ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'aws-amplify'": aws-amplify
+  - link "Oscar Montoya's user avatar":
+    - img "Oscar Montoya's user avatar"
+  - link "Oscar Montoya"
+  - list:
+    - listitem: "315"
+  - time: asked 36 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "How to set AR8031 PHY chip to output PPS（Pulse Per Second ) signal?" [level=3]:
+    - link "How to set AR8031 PHY chip to output PPS（Pulse Per Second ) signal?"
+  - text: Has anyone used AR8031?A phy chip,PTP stamping is supported.I'm trying to implement the ptp functionality of the AR8031 using verilog code. The AR8031 also supports the output of PPSx signals, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'verilog'": verilog
+  - link "Maya Hawke's user avatar":
+    - img "Maya Hawke's user avatar"
+  - link "Maya Hawke"
+  - list:
+    - listitem: "1"
+  - time: asked 49 mins ago
+  - text: 1 vote 0 answers 12 views
+  - heading "How to fix unable to build chain to self-signed root for signer, while building macos app for appstore using electron?" [level=3]:
+    - link "How to fix unable to build chain to self-signed root for signer, while building macos app for appstore using electron?"
+  - text: I am trying to build my app into a mas file using electron on vscode so that I can share it to the app store. I have bought the dev membership, have certificates setup, have key on my keychain. So I ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'macos'": macos
+    - listitem:
+      - link "show questions tagged 'app-store'": app-store
+    - listitem:
+      - link "show questions tagged 'app-store-connect'": app-store-connect
+    - listitem:
+      - link "show questions tagged 'electron-builder'": electron-builder
+  - link "Sushant Gupta's user avatar":
+    - img "Sushant Gupta's user avatar"
+  - link "Sushant Gupta"
+  - list:
+    - listitem: "11"
+  - time: asked 49 mins ago
+  - text: 0 votes 0 answers 16 views
+  - heading "CSV File Data limit" [level=3]:
+    - link "CSV File Data limit"
+  - text: I have always wondered if there is a limit to the amount of data that i can store within a CSV file? I have set up my MVP to store data within a CSV file and currently the project grew to a very large ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'csv'": csv
+    - listitem:
+      - link "show questions tagged 'io'": io
+  - link "Mohammed Alaamri's user avatar":
+    - img "Mohammed Alaamri's user avatar"
+  - link "Mohammed Alaamri"
+  - list:
+    - listitem: "19"
+  - time: asked 50 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "How could I get the images in custom policy in metadrive?" [level=3]:
+    - link "How could I get the images in custom policy in metadrive?"
+  - text: I am trying to custom a policy using metadrive frame work.To make a decision, I want to get the rgb_camera information in vehicle. I've already check the official files and I just know I can get frame ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'reinforcement-learning'": reinforcement-learning
+  - link "Jiangde Tu's user avatar":
+    - img "Jiangde Tu's user avatar"
+  - link "Jiangde Tu"
+  - list:
+    - listitem: "1"
+  - time: asked 51 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615709"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Wait, what is agentic AI?"
+    - listitem:
+      - link "Generating components, not tokens"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Changes to reporting for the [status-review] escalation process"
+    - listitem:
+      - link "A discussion about closed (and potentially useful) posts on Stack Overflow"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 26k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 22k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 20k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2531373
+  - link "show questions tagged 'python'": python
+  - text: × 2211769
+  - link "show questions tagged 'java'": java
+  - text: × 1920120
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624942
+  - link "show questions tagged 'php'": php
+  - text: × 1467808
+  - link "show questions tagged 'android'": android
+  - text: × 1419443
+  - link "show questions tagged 'html'": html
+  - text: × 1188642
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036214
+  - link "show questions tagged 'c++'": c++
+  - text: × 814158
+  - link "show questions tagged 'css'": css
+  - text: × 807786
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Why doesn't the Department of State always notify international students when they revoke their student visa along with the reason for the revocation?"
+    - listitem:
+      - link "Can I take an Opportunity Attack when using the Push Weapon Mastery?"
+    - listitem:
+      - link "E. du Chatelet asserted that light must be massless -- is her reasoning known?"
+    - listitem:
+      - link "How do Trinitarians counter the argument that Jesus Christ is expressed as 'only human' in Romans 5:15?"
+    - listitem:
+      - link "Why do the current Google Maps pictures for Heathrow not show a single plane at any of the terminals?"
+    - listitem:
+      - link "What is סִפְרָא דְּאָדָם קַדְמָאָה quoted in the Zohar?"
+    - listitem:
+      - 'link "How (internally) does fd3>&fd1 after { fd1>&fd3 } put back (or not) original fd into fd1? (\"bad file descriptor\")"'
+    - listitem:
+      - link "Connection between finite state machines and algorithms"
+    - listitem:
+      - link "My name was removed from a paper I co-authored. I have documentation. What are my options?"
+    - listitem:
+      - link "What is the line separator (end of line) character of textfiles of the VMS operating system?"
+    - listitem:
+      - link "Playing treble and bass clef notes simultaneously on piano"
+    - listitem:
+      - link "Formulating the catenary problem as a variational problem"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.4.17.25340
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
