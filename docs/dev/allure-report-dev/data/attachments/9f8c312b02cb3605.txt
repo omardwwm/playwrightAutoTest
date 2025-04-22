@@ -1,0 +1,571 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale JP in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Discussions Labs"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,236,291 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 37"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 6 views
+  - heading "npx cucumber-js comment does not running over jenkins but running in jenkins machine directly" [level=3]:
+    - link "npx cucumber-js comment does not running over jenkins but running in jenkins machine directly"
+  - text: Especially based on the error which i got, tried several things to resolve this problem but cannot resolve it. All installation is correct. I checked already. And also when i login to jenkins machine ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'cucumber'": cucumber
+    - listitem:
+      - link "show questions tagged 'playwright'": playwright
+    - listitem:
+      - link "show questions tagged 'cucumberjs'": cucumberjs
+    - listitem:
+      - link "show questions tagged 'playwright-typescript'": playwright-typescript
+  - link "Erdem Aygüneş's user avatar":
+    - img "Erdem Aygüneş's user avatar"
+  - link "Erdem Aygüneş"
+  - list:
+    - listitem: "11"
+  - time: asked 3 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "Creating a Delta table with Parquet V2 checkpoints in databricks" [level=3]:
+    - link "Creating a Delta table with Parquet V2 checkpoints in databricks"
+  - text: I am creating a Delta table in Databricks with V2 checkpoints. To test some scenario in an application I am working on, I need the checkpoint files themselves and not just the sidecar files (e.g. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'apache-spark'": apache-spark
+    - listitem:
+      - link "show questions tagged 'databricks'": databricks
+    - listitem:
+      - link "show questions tagged 'delta-lake'": delta-lake
+    - listitem:
+      - link "show questions tagged 'databricks-python-sdk'": databricks-python-sdk
+  - link "Uri Shapira's user avatar":
+    - img "Uri Shapira's user avatar"
+  - link "Uri Shapira"
+  - list:
+    - listitem: "371"
+  - time: asked 4 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "function procedure wiith Oracle standrd execution" [level=3]:
+    - link "function procedure wiith Oracle standrd execution"
+  - text: I am working with multiple projects one using oracle 11g and the other with oracle 19c both of them has multiple databases which I need to share data between them so,.. Any procedure or function need ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'oracle-database'": oracle-database
+    - listitem:
+      - link "show questions tagged 'oracle11g'": oracle11g
+    - listitem:
+      - link "show questions tagged 'oracle19c'": oracle19c
+  - link "sam's user avatar":
+    - img "sam's user avatar"
+  - link "sam"
+  - list:
+    - listitem: 2,610
+  - time: asked 4 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "How to migrate tailwind.config.ts with tw-colors from Tailwind CSS v3 to v4 in a Next.js 15 project?" [level=3]:
+    - link "How to migrate tailwind.config.ts with tw-colors from Tailwind CSS v3 to v4 in a Next.js 15 project?"
+  - text: I'm in the process of upgrading a project from Next.js 14 + Tailwind CSS v3 to Next.js 15 + Tailwind CSS v4. My current project uses a tailwind.config.ts setup with tw-colors for generating dynamic ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'next.js'": next.js
+    - listitem:
+      - link "show questions tagged 'tailwind-css'": tailwind-css
+  - link "Chandima Maduwantha's user avatar":
+    - img "Chandima Maduwantha's user avatar"
+  - link "Chandima Maduwantha"
+  - list:
+    - listitem: "25"
+  - time: asked 8 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Turning on single stepping from user mode on linux on arm64" [level=3]:
+    - link "Turning on single stepping from user mode on linux on arm64"
+  - text: I'm playing around with writing a minimal in-process debugger on linux. The "in-process" bit means that it's part of the process being debugged (so ptrace-ing to the debugged process is not ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'linux'": linux
+    - listitem:
+      - link "show questions tagged 'arm64'": arm64
+  - link "neshone's user avatar":
+    - img "neshone's user avatar"
+  - link "neshone"
+  - list:
+    - listitem: "154"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Handling late replies in Spring Integration" [level=3]:
+    - link "Handling late replies in Spring Integration"
+  - text: "Lets assume the following scenerio: Caller ->Gateway -> Bridge -> Aggregator--- ===== output -> TCP ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'spring-integration'": spring-integration
+  - link "Shirshak55's user avatar":
+    - img "Shirshak55's user avatar"
+  - link "Shirshak55"
+  - list:
+    - listitem: "528"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 16 views
+  - heading "Is there a way to get a list of entities registered in a room database?" [level=3]:
+    - link "Is there a way to get a list of entities registered in a room database?"
+  - text: Is there a way to get a list of Class objects which is the same list that is specified in the Database annotation of the RoomDatabase implementation? I've tried to access that same annotation but for ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'kotlin'": kotlin
+    - listitem:
+      - link "show questions tagged 'android-room'": android-room
+  - link "Jan Thürmann's user avatar":
+    - img "Jan Thürmann's user avatar"
+  - link "Jan Thürmann"
+  - list:
+    - listitem: "33"
+  - time: asked 15 mins ago
+  - text: "-2 votes 0 answers 19 views"
+  - heading "How to deal with string with '\\' in it?" [level=3]:
+    - link "How to deal with string with '\\' in it?"
+  - text: "For example, a string '{\"a\":\"1\",\"b\":\"{\\\"c\\\": \\\"2\\\"}\"}'with '\\' in it. When I do JSON.parse('{\"a\":\"1\",\"b\":\"..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'json'": json
+    - listitem:
+      - link "show questions tagged 'replace'": replace
+  - link "Hunter's user avatar":
+    - img "Hunter's user avatar"
+  - link "Hunter"
+  - list:
+    - listitem: "132"
+  - time: asked 15 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "WebRTC inside webview on iOS not capturing audio from wireless USB microphones" [level=3]:
+    - link "WebRTC inside webview on iOS not capturing audio from wireless USB microphones"
+  - text: I’m using WebRTC for live streaming inside a WebView in an iOS app. Audio input works as expected when using wired microphones or wired headphones. However, wireless USB microphones are not recognized ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'webrtc'": webrtc
+  - link "Anirudh Jakhmola's user avatar":
+    - img "Anirudh Jakhmola's user avatar"
+  - link "Anirudh Jakhmola"
+  - list:
+    - listitem: "51"
+  - time: asked 16 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "How to rename the summary section?" [level=3]:
+    - link "How to rename the summary section?"
+  - text: "In Laravel Filament, I am using summaries to display the total amount to pay: TextColumn::make('price') ->summarize(Sum::make()) I can rename the default \"Sum\" label: TextColumn::..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'laravel'": laravel
+    - listitem:
+      - link "show questions tagged 'laravel-filament'": laravel-filament
+    - listitem:
+      - link "show questions tagged 'filamentphp'": filamentphp
+  - link "Billal BEGUERADJ's user avatar":
+    - img "Billal BEGUERADJ's user avatar"
+  - link "Billal BEGUERADJ"
+  - list:
+    - listitem: 22.8k
+  - time: asked 16 mins ago
+  - text: "-1 votes 0 answers 14 views"
+  - heading "Data import and export issue [duplicate]" [level=3]:
+    - link "Data import and export issue [duplicate]"
+  - text: I have an database in my postgresql15. Now I can able to export the data properly. But when importing that database in postgresql15 of another machine it is throwing issue. I tried the backup option ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'postgresql'": postgresql
+  - link "sadham hussain's user avatar":
+    - img "sadham hussain's user avatar"
+  - link "sadham hussain"
+  - list:
+    - listitem: "1"
+  - time: asked 17 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Swift Data do not save Model" [level=3]:
+    - link "Swift Data do not save Model"
+  - text: i have created a small Application that can read in a Sales Check Picture from a Vendor. In this case Rewe. Loading the Data and creating in the SalesCheckView is no Problem and the try catch block do ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'swiftui'": swiftui
+    - listitem:
+      - link "show questions tagged 'swiftdata'": swiftdata
+  - link "Petie Pete's user avatar":
+    - img "Petie Pete's user avatar"
+  - link "Petie Pete"
+  - list:
+    - listitem: "1"
+  - time: asked 18 mins ago
+  - text: 1 vote 0 answers 11 views
+  - heading "Identifying theme from screenshots" [level=3]:
+    - link "Identifying theme from screenshots"
+  - text: How to identify a vs code theme from a screenshot? Is there a specific tool, plugin or extension that can do this? Can anyone tell me what themes r these? I tried using some ai tools to identify them, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'visual-studio-code'": visual-studio-code
+    - listitem:
+      - link "show questions tagged 'themes'": themes
+    - listitem:
+      - link "show questions tagged 'vs-color-theme-editor'": vs-color-theme-editor
+  - link "Osama Tawfeq's user avatar":
+    - img "Osama Tawfeq's user avatar"
+  - link "Osama Tawfeq"
+  - list:
+    - listitem: "29"
+  - time: asked 21 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "Deployment Failed zip file exceeds 50MB/1GB limit due to model size and dependencies" [level=3]:
+    - link "Deployment Failed zip file exceeds 50MB/1GB limit due to model size and dependencies"
+  - text: I am stuck while deploying my model using an S3 bucket. The issue is that my zip file exceeds 50 MB and sometimes even reaches GBs in size. Could you please provide a solution for this? If possible, ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'amazon-web-services'": amazon-web-services
+    - listitem:
+      - link "show questions tagged 'aws-lambda'": aws-lambda
+  - link "Sarvesh's user avatar":
+    - img "Sarvesh's user avatar"
+  - link "Sarvesh"
+  - list:
+    - listitem: "9"
+  - time: asked 26 mins ago
+  - text: "-4 votes 0 answers 15 views"
+  - heading "Hardware Resources to deploy Llama 4 Maverick in On-perm environment [closed]" [level=3]:
+    - link "Hardware Resources to deploy Llama 4 Maverick in On-perm environment [closed]"
+  - text: "There is no clear answer for deploying Llama 4 in an on-prem environment, I need assistance with the following: I would like to deploy the one of the following LLM: Llama-4-Maverick-17B-128E-Instruct ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'artificial-intelligence'": artificial-intelligence
+    - listitem:
+      - link "show questions tagged 'large-language-model'": large-language-model
+    - listitem:
+      - link "show questions tagged 'on-premises-instances'": on-premises-instances
+    - listitem:
+      - link "show questions tagged 'vllm'": vllm
+  - link "Fayadh Alhinai's user avatar":
+    - img "Fayadh Alhinai's user avatar"
+  - link "Fayadh Alhinai"
+  - list:
+    - listitem: "1"
+  - time: asked 29 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615753"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Generating components, not tokens"
+    - listitem:
+      - link "Visually orchestrating data diagnostics but platform agnostic"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Changes to reporting for the [status-review] escalation process"
+    - listitem:
+      - link "Results of the March 2025 Community Asks Sprint"
+    - listitem:
+      - link "A discussion about closed (and potentially useful) posts on Stack Overflow"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 34k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 22k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2531399
+  - link "show questions tagged 'python'": python
+  - text: × 2211863
+  - link "show questions tagged 'java'": java
+  - text: × 1920151
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624958
+  - link "show questions tagged 'php'": php
+  - text: × 1467835
+  - link "show questions tagged 'android'": android
+  - text: × 1419471
+  - link "show questions tagged 'html'": html
+  - text: × 1188658
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036214
+  - link "show questions tagged 'c++'": c++
+  - text: × 814196
+  - link "show questions tagged 'css'": css
+  - text: × 807790
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - 'link "WizzAir : buying online a new seat if I don''t like my randomly allocated seat, some questions"'
+    - listitem:
+      - link "change app-center (snap-store) icon Ubuntu 25.04"
+    - listitem:
+      - link "High-tech clothing that allows someone to change disguises on the fly"
+    - listitem:
+      - link "Differentiating the Translation of \"Whipping Cream\" in Chinese (淡奶油 vs. 轻奶油)?"
+    - listitem:
+      - link "Does Apple offer shopping appointments?"
+    - listitem:
+      - link "Vertical Ordering / Priority of Lyrics Line in Lilypond"
+    - listitem:
+      - link "that day visitors could stay longer"
+    - listitem:
+      - link "Prove that the following formula is a theorem in natural deduction"
+    - listitem:
+      - link "CUDA Mandelbrot Kernel"
+    - listitem:
+      - link "Does offering women and children first priority for limited places on a lifeboat breach discrimination law?"
+    - listitem:
+      - link "Custom total points command"
+    - listitem:
+      - link "Is there an automatic spoke wrench?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.4.21.25386
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
