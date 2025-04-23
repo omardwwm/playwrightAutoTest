@@ -1,0 +1,579 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale GB in dev Einvironment and Realm europe
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Discussions Labs"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,236,818 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 36"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 2 views
+  - heading "Why ImageConvertHQ?" [level=3]:
+    - link "Why ImageConvertHQ?"
+  - text: "I built ImageConvertHQ to address a common problem: existing image conversion tools were either slow, filled with ads, or required unnecessary sign-ups. ImageConvertHQ offers a fast, ad-free platform ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'image'": image
+    - listitem:
+      - link "show questions tagged 'pdf'": pdf
+    - listitem:
+      - link "show questions tagged 'image-processing'": image-processing
+    - listitem:
+      - link "show questions tagged 'format'": format
+  - link "imageconverthq's user avatar":
+    - img "imageconverthq's user avatar"
+  - link "imageconverthq"
+  - list:
+    - listitem: "1"
+  - time: asked 1 min ago
+  - text: 0 votes 0 answers 4 views
+  - heading "WPF menu in MVVM" [level=3]:
+    - link "WPF menu in MVVM"
+  - text: I am writing an app in WPF with MVVM which needs a menu that will be present (although probably with slightly changed items) across multiple views (UserControl). What would be the best way to do this ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'wpf'": wpf
+    - listitem:
+      - link "show questions tagged '.net-core'": .net-core
+    - listitem:
+      - link "show questions tagged 'mvvm'": mvvm
+    - listitem:
+      - link "show questions tagged 'menu'": menu
+  - link "J.Valášek's user avatar":
+    - img "J.Valášek's user avatar"
+  - link "J.Valášek"
+  - list:
+    - listitem: "83"
+  - time: asked 2 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "WhatsApp API local development" [level=3]:
+    - link "WhatsApp API local development"
+  - text: I had a question. Since the WhatsApp API only allows a single webhook URL for receiving callbacks, how do you typically handle development and testing of a WhatsApp bot when there's already a ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'whatsapp-cloud-api'": whatsapp-cloud-api
+  - link "Gilad's user avatar":
+    - img "Gilad's user avatar"
+  - link "Gilad"
+  - list:
+    - listitem: "618"
+  - time: asked 3 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "How does transaction controller(JMeter) captures response time of parallel requests present in it?" [level=3]:
+    - link "How does transaction controller(JMeter) captures response time of parallel requests present in it?"
+  - text: I Inserted a parallel controller inside transaction controller in JMeter. In realistic behavior, transaction controller should consider max. response time from all parallel requests response time as ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'performance'": performance
+    - listitem:
+      - link "show questions tagged 'jmeter'": jmeter
+  - link "Mrunalini Kancharla's user avatar":
+    - img "Mrunalini Kancharla's user avatar"
+  - link "Mrunalini Kancharla"
+  - list:
+    - listitem: "1"
+  - time: asked 3 mins ago
+  - text: "-2 votes 0 answers 10 views"
+  - 'heading "I Know Nothing About Programming: How Can I Use Grishko.com with Stack Overflow for Print-on-Demand?" [level=3]':
+    - 'link "I Know Nothing About Programming: How Can I Use Grishko.com with Stack Overflow for Print-on-Demand?"'
+  - text: I’m completely new to programming and the print-on-demand business. I want to use Grishko.com to create custom products like t-shirts or mugs, but I have no idea where to start. How can Stack Overflow ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'web'": web
+    - listitem:
+      - link "show questions tagged 'mobile-website'": mobile-website
+  - link "Grishko Fashion's user avatar":
+    - img "Grishko Fashion's user avatar"
+  - link "Grishko Fashion"
+  - list:
+    - listitem: "1"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Unable to open H2 database file" [level=3]:
+    - link "Unable to open H2 database file"
+  - text: "Always getting error when trying to open H2 db file: \"Unsupported database file version or invalid file header in file\" Error code: \"[90048-224] 90048/90048\". I've tried different ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'database'": database
+    - listitem:
+      - link "show questions tagged 'h2'": h2
+  - link "Yurii's user avatar":
+    - img "Yurii's user avatar"
+  - link "Yurii"
+  - list:
+    - listitem: "311"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "How to convert CredHandle* to SafeHandle in C++/CLI to eliminate CA2004 warnings (and why IDisposable breaks)?" [level=3]:
+    - link "How to convert CredHandle* to SafeHandle in C++/CLI to eliminate CA2004 warnings (and why IDisposable breaks)?"
+  - text: I'm implementing a C++/CLI wrapper over Windows SSPI (Security Support Provider Interface), managing credential handles using AcquireCredentialsHandle. My initial implementation manually allocated a ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'garbage-collection'": garbage-collection
+    - listitem:
+      - link "show questions tagged 'c++-cli'": c++-cli
+  - link "Srikanth Nallabothula's user avatar":
+    - img "Srikanth Nallabothula's user avatar"
+  - link "Srikanth Nallabothula"
+  - list:
+    - listitem: "1"
+  - time: asked 6 mins ago
+  - text: 0 votes 1 answer 13 views
+  - heading "Runtime Error in Recursion in Subsequences DSA" [level=3]:
+    - link "Runtime Error in Recursion in Subsequences DSA"
+  - text: I am writing a recursive function to create all possible subsequences of a string and return the set of strings as a vector. This is a DSA question from Coding Ninjas. I recurse over each char in the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'recursion'": recursion
+    - listitem:
+      - link "show questions tagged 'runtime-error'": runtime-error
+  - link "Aayush's user avatar":
+    - img "Aayush's user avatar"
+  - link "Aayush"
+  - list:
+    - listitem: "1"
+  - time: asked 10 mins ago
+  - text: 0 votes 1 answer 7 views
+  - heading "Lookup from Excel database of specific dates to consecutive time series of dates" [level=3]:
+    - link "Lookup from Excel database of specific dates to consecutive time series of dates"
+  - text: I have a list of specific dates with data, as shown in the below table. Specific Dates Label 01-Jan-20 A 10-Jan-20 B 16-Jan-20 C 25-Jan-20 D How do I perform an Excel lookup into the Label column for ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'excel'": excel
+    - listitem:
+      - link "show questions tagged 'date'": date
+    - listitem:
+      - link "show questions tagged 'reference'": reference
+    - listitem:
+      - link "show questions tagged 'vlookup'": vlookup
+    - listitem:
+      - link "show questions tagged 'lookup'": lookup
+  - link "sjedi's user avatar":
+    - img "sjedi's user avatar"
+  - link "sjedi"
+  - list:
+    - listitem: "87"
+  - time: asked 12 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "How to detect and merge updates in nested Pydantic models (partial vs. full updates from LLM feedback)?" [level=3]:
+    - link "How to detect and merge updates in nested Pydantic models (partial vs. full updates from LLM feedback)?"
+  - text: I'm building a system where an LLM (through OpenAI Apis) generates a structured response conforming to this Pydantic schema (I am using open Ai structured output generation). After a user provides ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'json'": json
+    - listitem:
+      - link "show questions tagged 'openai-api'": openai-api
+    - listitem:
+      - link "show questions tagged 'pydantic'": pydantic
+    - listitem:
+      - link "show questions tagged 'large-language-model'": large-language-model
+    - listitem:
+      - link "show questions tagged 'python-deepdiff'": python-deepdiff
+  - link "Shrishvesh Reddy's user avatar":
+    - img "Shrishvesh Reddy's user avatar"
+  - link "Shrishvesh Reddy"
+  - list:
+    - listitem: "29"
+  - time: asked 12 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "How to add extra space between the first and second endpoints under one specifc tag in swagger page" [level=3]:
+    - link "How to add extra space between the first and second endpoints under one specifc tag in swagger page"
+  - text: I'd like to add extra vertical space between the first and second endpoints under one tag in swagger page from fastapi. I tried a few methods, but all of them failed. The current blocker is that I ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'swagger'": swagger
+    - listitem:
+      - link "show questions tagged 'fastapi'": fastapi
+  - link "Harry's user avatar":
+    - img "Harry's user avatar"
+  - link "Harry"
+  - list:
+    - listitem: "451"
+  - time: asked 12 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "How to combine and position title and legend in tmap in R?" [level=3]:
+    - link "How to combine and position title and legend in tmap in R?"
+  - text: I am struggling to place the title inside the frame of the legend, but on top of the legend and not below. Any guidance or working examples would be greatly appreciated! Thank you. The online help isn'...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'r'": r
+    - listitem:
+      - link "show questions tagged 'position'": position
+    - listitem:
+      - link "show questions tagged 'legend'": legend
+    - listitem:
+      - link "show questions tagged 'title'": title
+    - listitem:
+      - link "show questions tagged 'tmap'": tmap
+  - link "Mirc's user avatar":
+    - img "Mirc's user avatar"
+  - link "Mirc"
+  - list:
+    - listitem: "31"
+  - time: asked 13 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "PickMultipleVisualMedia Photo picker is never call ActivityResultCallback" [level=3]:
+    - link "PickMultipleVisualMedia Photo picker is never call ActivityResultCallback"
+  - text: "I'm trying to use \"new\" Photo picker google functionality instead of using READ_MEDIA_IMAGES I'v created this variable in my Fragment class: // Registers a photo picker activity launcher in ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+  - link "Vitaly's user avatar":
+    - img "Vitaly's user avatar"
+  - link "Vitaly"
+  - list:
+    - listitem: "435"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Not able to see all test details below in visual studio C#" [level=3]:
+    - link "Not able to see all test details below in visual studio C#"
+  - text: I am not able to view the test details due to some settings misplaced. I have attached the image of Visual Studio. The Text Explorer tab is blank even though shows the number of ran tests. Tried ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'visual-studio'": visual-studio
+    - listitem:
+      - link "show questions tagged 'testing'": testing
+  - link "MrBeast PewDiePie's user avatar":
+    - img "MrBeast PewDiePie's user avatar"
+  - link "MrBeast PewDiePie"
+  - list:
+    - listitem: "1"
+  - time: asked 15 mins ago
+  - text: 0 votes 0 answers 16 views
+  - heading "How to fix the warning \"The number of slides is not enough for loop mode\"?" [level=3]:
+    - link "How to fix the warning \"The number of slides is not enough for loop mode\"?"
+  - text: "Swiper Loop Warning: The number of slides is not enough for loop mode, it will be disabled and not function properly. You need to add more slides (or make duplicates) or lower the values of ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'swiper.js'": swiper.js
+  - link "Ravi Padaliya's user avatar":
+    - img "Ravi Padaliya's user avatar"
+  - link "Ravi Padaliya"
+  - list:
+    - listitem: "1"
+  - time: asked 25 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615788"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Visually orchestrating data diagnostics but platform agnostic"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Changes to reporting for the [status-review] escalation process"
+    - listitem:
+      - link "Results of the March 2025 Community Asks Sprint"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "What We Learned About Follow-up Questions and What's Next"
+  - text: Collectives
+  - link "see all"
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 22k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 20k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2531429
+  - link "show questions tagged 'python'": python
+  - text: × 2211933
+  - link "show questions tagged 'java'": java
+  - text: × 1920174
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624979
+  - link "show questions tagged 'php'": php
+  - text: × 1467852
+  - link "show questions tagged 'android'": android
+  - text: × 1419497
+  - link "show questions tagged 'html'": html
+  - text: × 1188667
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036219
+  - link "show questions tagged 'c++'": c++
+  - text: × 814205
+  - link "show questions tagged 'css'": css
+  - text: × 807794
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Destripe satellite image using FFT in python"
+    - listitem:
+      - link "Predicting the inverse of a quadratic relationship in a multiple regression"
+    - listitem:
+      - link "How to determine, with certainty, the filesystem type of a partition from the outputs of the Linux \"file -s\" command?"
+    - listitem:
+      - link "For what kind of problems was De Rham cohomology introduced?"
+    - listitem:
+      - link "Fully tighten adjustable wrench locking pliers"
+    - listitem:
+      - link "Preperiod of powers of matrices modulo m"
+    - listitem:
+      - link "A short story where an inventor makes a shield from perforated paper"
+    - listitem:
+      - link "What chemical database does Mathematica use?"
+    - listitem:
+      - link "With the wording of Sanctuary, can you grapple while warded?"
+    - listitem:
+      - link "What verb would you use to say buzz like an intercom or door buzzer?"
+    - listitem:
+      - link "How do the 2023-2024 university pro-Gaza protests compare to other political protests in the US in terms of violence/illegal acts?"
+    - listitem:
+      - link "Lightning protection for landscape lighting"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.4.22.25414
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
