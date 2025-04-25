@@ -1,0 +1,563 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale CA in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Discussions Labs"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,237,926 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 32"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 3 views
+  - heading "How to Add SMS Notifications to Your App Without Getting Lost in APIs?" [level=3]:
+    - link "How to Add SMS Notifications to Your App Without Getting Lost in APIs?"
+  - text: Recently, I worked on a project that required integrating SMS notifications for user verification. It seemed like a straightforward task, but once I started looking for a reliable service, I ran into ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+  - link "grizzlysms's user avatar":
+    - img "grizzlysms's user avatar"
+  - link "grizzlysms"
+  - list:
+    - listitem: "1"
+  - time: asked 1 min ago
+  - text: 0 votes 0 answers 12 views
+  - heading "Write to a std::vector or inplace_vector from C without overhead" [level=3]:
+    - link "Write to a std::vector or inplace_vector from C without overhead"
+  - text: I use a function from a C library. It writes to data and returns the size that was written. size_t uart_receive(uint8_t *data, size_t max_len); I want to use C++ objects, like std::inplace_vector, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'c'": c
+    - listitem:
+      - link "show questions tagged 'vector'": vector
+  - link "AlexLoss's user avatar":
+    - img "AlexLoss's user avatar"
+  - link "AlexLoss"
+  - list:
+    - listitem: "581"
+  - time: asked 4 mins ago
+  - text: "-1 votes 0 answers 6 views"
+  - heading "create a common wrapper around these two create agent apis" [level=3]:
+    - link "create a common wrapper around these two create agent apis"
+  - text: Send me a doc where you are showing two api calls (via curl or postman)-> one with provider Retell and one with provider Vapi and showing that in same api by changing the provider you are able to ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'flask'": flask
+  - link "Pratik Hepate's user avatar":
+    - img "Pratik Hepate's user avatar"
+  - link "Pratik Hepate"
+  - list:
+    - listitem: "1"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 18 views
+  - heading "Why nodes in public AKS needs internet to startup but it does not need in netwrok isolated cluster(preview)?" [level=3]:
+    - link "Why nodes in public AKS needs internet to startup but it does not need in netwrok isolated cluster(preview)?"
+  - text: I just need my nodes to be able to pull images from acr and contact api server and no other outbound access at all. I can't have private cluster because I need to run kubectl from local terminal. So ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'azure'": azure
+    - listitem:
+      - link "show questions tagged 'kubernetes'": kubernetes
+    - listitem:
+      - link "show questions tagged 'cloud'": cloud
+    - listitem:
+      - link "show questions tagged 'azure-aks'": azure-aks
+  - link "Balraj Kumar's user avatar":
+    - img "Balraj Kumar's user avatar"
+  - link "Balraj Kumar"
+  - list:
+    - listitem: "1"
+  - time: asked 14 mins ago
+  - text: "-1 votes 0 answers 14 views"
+  - heading "why am i getting a WebRtc connection issue in windows?" [level=3]:
+    - link "why am i getting a WebRtc connection issue in windows?"
+  - text: Hello there I am trying to setup a video calling app using webrtc but while setting up i am getting this error image description here You can see the error in the image and drop your reviews on that ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'webrtc'": webrtc
+  - link "Swastik Kotwal's user avatar":
+    - img "Swastik Kotwal's user avatar"
+  - link "Swastik Kotwal"
+  - list:
+    - listitem: "1"
+  - time: asked 16 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "Can't access external REST API using pyspark with Azure Synapse" [level=3]:
+    - link "Can't access external REST API using pyspark with Azure Synapse"
+  - text: "I am not able to connect to external REST API with azure synapse. Sample code is as below from the notebook which is throwing a Failed to establish a new connection: [Errno 101] Network is unreachable ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'rest'": rest
+    - listitem:
+      - link "show questions tagged 'azure-synapse-analytics'": azure-synapse-analytics
+    - listitem:
+      - link "show questions tagged 'axure'": axure
+  - link "Enem's user avatar":
+    - img "Enem's user avatar"
+  - link "Enem"
+  - list:
+    - listitem: "31"
+  - time: asked 20 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "Pins only appear when i refresh after i login . How do i fix this problem?" [level=3]:
+    - link "Pins only appear when i refresh after i login . How do i fix this problem?"
+  - text: I am building a Travel-log app using Node.js/Express where users can add pins on map and log entry for each pin. Currently when i login, i also need to refresh for the pins to appear. Also when i log ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'node.js'": node.js
+    - listitem:
+      - link "show questions tagged 'express'": express
+  - link "Anjay P.P's user avatar":
+    - img "Anjay P.P's user avatar"
+  - link "Anjay P.P"
+  - list:
+    - listitem: "13"
+  - time: asked 25 mins ago
+  - text: 0 votes 0 answers 17 views
+  - heading "ChartJS make container fill whole CSS grid item" [level=3]:
+    - link "ChartJS make container fill whole CSS grid item"
+  - text: I'm putting a chart (made using Chart.js) inside a CSS grid, and I want the chart to responsively fill the full width of its grid cell. However, even after turning on responsive and turning off ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'chart.js'": chart.js
+    - listitem:
+      - link "show questions tagged 'css-grid'": css-grid
+    - listitem:
+      - link "show questions tagged 'responsive'": responsive
+  - link "The-Coder-Who-Knew-Too-Little's user avatar":
+    - img "The-Coder-Who-Knew-Too-Little's user avatar"
+  - link "The-Coder-Who-Knew-Too-Little"
+  - list:
+    - listitem: "184"
+  - time: asked 27 mins ago
+  - text: "-1 votes 0 answers 8 views"
+  - heading "When I'm trying to install asterisk this error occurs, can anyone resolve it?" [level=3]:
+    - link "When I'm trying to install asterisk this error occurs, can anyone resolve it?"
+  - text: One of the configured repositories failed (Unknown), and yum doesn't have enough cached data to continue. At this point the only safe thing yum can do is fail. There are a few ways to work "fix&...
+  - list:
+    - listitem:
+      - link "show questions tagged 'centos'": centos
+    - listitem:
+      - link "show questions tagged 'centos7'": centos7
+    - listitem:
+      - link "show questions tagged 'asterisk'": asterisk
+  - link "Sunny Singh Devra's user avatar":
+    - img "Sunny Singh Devra's user avatar"
+  - link "Sunny Singh Devra"
+  - list:
+    - listitem: "1"
+  - time: asked 27 mins ago
+  - text: 0 votes 0 answers 11 views
+  - 'heading "Python Generator: Reading data from database" [level=3]':
+    - 'link "Python Generator: Reading data from database"'
+  - text: "Hello Just going over a code snippet for generator to read data from database def generate_dataset(cursor): cursor.execute(query) for row in cursor.fetchall(): # some tramsformation yield ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'python-3.x'": python-3.x
+  - link "Manish Visave's user avatar":
+    - img "Manish Visave's user avatar"
+  - link "Manish Visave"
+  - list:
+    - listitem: "176"
+  - time: asked 28 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "OpenCV VideoCapture not working with DSHOW backend on Windows" [level=3]:
+    - link "OpenCV VideoCapture not working with DSHOW backend on Windows"
+  - text: I'm trying to initialize the webcam using OpenCV on Windows with the DSHOW (DirectShow) backend to avoid potential issues with the default backend. However, it still throws the same error, and the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'opencv'": opencv
+    - listitem:
+      - link "show questions tagged 'webcam'": webcam
+    - listitem:
+      - link "show questions tagged 'video-capture'": video-capture
+  - link "chat free's user avatar":
+    - img "chat free's user avatar"
+  - link "chat free"
+  - list:
+    - listitem: "1"
+  - time: asked 28 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "EventAccessControl API not working in Windows 10 for setting DACL?" [level=3]:
+    - link "EventAccessControl API not working in Windows 10 for setting DACL?"
+  - text: "I am using the following code to set the DACL on my ETW session object using EventAccessControl, to only allow processes under SYSTEM to be able to access the session object: // Initialize the ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'winapi'": winapi
+    - listitem:
+      - link "show questions tagged 'etw'": etw
+  - link "OneAndOnly's user avatar":
+    - img "OneAndOnly's user avatar"
+  - link "OneAndOnly"
+  - list:
+    - listitem: 1,056
+  - time: asked 32 mins ago
+  - text: 0 votes 1 answer 11 views
+  - heading "#React native integration issue" [level=3]:
+    - link "#React native integration issue"
+  - text: BUILD FAILED in 6s info Run CLI with --verbose flag for more details. PS C:\Users\DELL\Desktop\RT\AnimalTrackingApp> npx react-native run-android info A dev server is already running for this ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+  - link "Gurpreet kaur's user avatar":
+    - img "Gurpreet kaur's user avatar"
+  - link "Gurpreet kaur"
+  - list:
+    - listitem: "1"
+  - time: asked 33 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Implementing Lock Feature After Writing to NFC Tag" [level=3]:
+    - link "Implementing Lock Feature After Writing to NFC Tag"
+  - text: I am currently facing an issue related to locking an NFC tag after writing data to it. By "locking," I mean making the tag's data read-only, so that once the data is written, it cannot be ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'tags'": tags
+    - listitem:
+      - link "show questions tagged 'locking'": locking
+    - listitem:
+      - link "show questions tagged 'nfc'": nfc
+    - listitem:
+      - link "show questions tagged 'rfid'": rfid
+  - link "Developer Account's user avatar":
+    - img "Developer Account's user avatar"
+  - link "Developer Account"
+  - list:
+    - listitem: "43"
+  - time: asked 37 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "How to adjust the layout in API36?" [level=3]:
+    - link "How to adjust the layout in API36?"
+  - text: My app targeted on API 34. All text can show properly without shielded by the camera or home button. When API 36 implemented, some of the content is covered by the front camera and home button, how ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'kotlin'": kotlin
+  - link "Chu Man Ki Morris's user avatar":
+    - img "Chu Man Ki Morris's user avatar"
+  - link "Chu Man Ki Morris"
+  - list:
+    - listitem: "27"
+  - time: asked 39 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615862"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Community Products roadmap update, April 2025"
+    - listitem:
+      - link "Grab bag! On the floor at HumanX"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Results of the March 2025 Community Asks Sprint"
+    - listitem:
+      - link "Upcoming initiatives on Stack Overflow and across the Stack Exchange network..."
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "What We Learned About Follow-up Questions and What's Next"
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 34k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 22k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2531480
+  - link "show questions tagged 'python'": python
+  - text: × 2212092
+  - link "show questions tagged 'java'": java
+  - text: × 1920245
+  - link "show questions tagged 'c#'": c#
+  - text: × 1625017
+  - link "show questions tagged 'php'": php
+  - text: × 1467871
+  - link "show questions tagged 'android'": android
+  - text: × 1419536
+  - link "show questions tagged 'html'": html
+  - text: × 1188684
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036225
+  - link "show questions tagged 'c++'": c++
+  - text: × 814248
+  - link "show questions tagged 'css'": css
+  - text: × 807816
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Why does cd '' succeed in bash?"
+    - listitem:
+      - link "How deep could \"dwarves\" dig their mines with pseudo-medieval technology?"
+    - listitem:
+      - link "Plot a periodic function"
+    - listitem:
+      - link "When are two fourdimensional real vector bundles isomorphic?"
+    - listitem:
+      - link "Can I publish a peer-review that I received on one of my proposals?"
+    - listitem:
+      - link "Is there a difference between Shimano chains inscribed WG and those inscribed UE?"
+    - listitem:
+      - link "How to create a uint64 whose lower and upper bits reference uint32s?"
+    - listitem:
+      - link "How to set to 0 all terms in a matrix which contain a minus, revisited"
+    - listitem:
+      - link "Why do Indian researchers accept to publish in predatory journals?"
+    - listitem:
+      - link "Creating columns in \\tcolorbox"
+    - listitem:
+      - link "What is the actus reus of an automated crime and when does it occur?"
+    - listitem:
+      - link "Remove \"Characters\" and \"Clocks\" laucher results"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.4.24.25566
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
