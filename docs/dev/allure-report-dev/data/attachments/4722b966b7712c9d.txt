@@ -1,0 +1,551 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale GB in dev Einvironment and Realm europe
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Discussions Labs"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,233,799 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 34"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: "-3 votes 1 answer 6 views"
+  - heading "Hope Fund Loan App Customer” Care Number©))+91-8018670747 @! 912 5420 150-!:!™Call" [level=3]:
+    - link "Hope Fund Loan App Customer” Care Number©))+91-8018670747 @! 912 5420 150-!:!™Call"
+  - text: Hope Fund Loan App Customer” Care Number©))+91-8018670747 @! 912 5420 150-!:!™Call.Hope Fund Loan App Customer” Care Number©))+91-8018670747 @! 912 5420 150-!:!™Call.Hope Fund Loan App Customer” Care ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'jquery'": jquery
+    - listitem:
+      - link "show questions tagged 'wordpress'": wordpress
+  - link "Ayeg Fucv's user avatar":
+    - img "Ayeg Fucv's user avatar"
+  - link "Ayeg Fucv"
+  - list:
+    - listitem: "1"
+  - time: asked 3 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "Attaching labels estimating proportion of posterior density within an interval in the ggdist package" [level=3]:
+    - link "Attaching labels estimating proportion of posterior density within an interval in the ggdist package"
+  - text: I would like to create some graphs showing draws from a model's posterior distribution. I recently discovered the ggdist package and can see it has incredible functionality for graphing all kinds of ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ggplot2'": ggplot2
+    - listitem:
+      - link "show questions tagged 'ggdist'": ggdist
+  - link "llewmills's user avatar":
+    - img "llewmills's user avatar"
+  - link "llewmills"
+  - list:
+    - listitem: 3,612
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Accepting Stripe Payments via Phone Call" [level=3]:
+    - link "Accepting Stripe Payments via Phone Call"
+  - text: "Anyone here who can help me answer this? My use case is: We have a customer care team that uses a telephony platform which transcribes entire calls. The issue is that, when agents take card ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'tokenize'": tokenize
+  - link "Jone Oh's user avatar":
+    - img "Jone Oh's user avatar"
+  - link "Jone Oh"
+  - list:
+    - listitem: "1"
+  - time: asked 7 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Flutter BLE GUIDENCE NEEDED" [level=3]:
+    - link "Flutter BLE GUIDENCE NEEDED"
+  - text: I'm working on a Flutter app that communicates with a Raspberry Pi 4 Model B over BLE. I'm using the flutter_blue_plus package in Flutter, and on the Raspberry Pi side, I'm planning to use Bluetooth ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'bluetooth-lowenergy'": bluetooth-lowenergy
+    - listitem:
+      - link "show questions tagged 'iot'": iot
+    - listitem:
+      - link "show questions tagged 'bluez'": bluez
+  - link "Cyber cadence's user avatar":
+    - img "Cyber cadence's user avatar"
+  - link "Cyber cadence"
+  - list:
+    - listitem: "3"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Tailwind CSS custom colors and standard colors not working in Next.js 15 project" [level=3]:
+    - link "Tailwind CSS custom colors and standard colors not working in Next.js 15 project"
+  - text: I'll help you diagnose the issue with your Tailwind CSS configuration and write a StackOverflow post that you can copy and paste. Let me analyze the files you've provided. The main issue appears to be ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'next.js'": next.js
+    - listitem:
+      - link "show questions tagged 'tailwind-css'": tailwind-css
+  - link "ryuma's user avatar":
+    - img "ryuma's user avatar"
+  - link "ryuma"
+  - list:
+    - listitem: "139"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Holding reference to struct in C# class member variable?" [level=3]:
+    - link "Holding reference to struct in C# class member variable?"
+  - text: I wonder the correct way in C# to essentially do the same thing as this C++ code where it holds a pointer (reference) to a class object or struct. I'll use struct for this example since C# treats ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+  - link "user3161924's user avatar":
+    - img "user3161924's user avatar"
+  - link "user3161924"
+  - list:
+    - listitem: 2,391
+  - time: asked 11 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "Docker does not download the specified image" [level=3]:
+    - link "Docker does not download the specified image"
+  - text: Docker-Compose is not downloading the specific version of PHP that I want. I want the version "php:8.4.5-fpm" and it only downloads the "latest" version. I tried several things, ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'docker'": docker
+    - listitem:
+      - link "show questions tagged 'nginx'": nginx
+  - link "user27445699's user avatar":
+    - img "user27445699's user avatar"
+  - link "user27445699"
+  - list:
+    - listitem: "11"
+  - time: asked 15 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "How to resolve Playwright missing dependencies error on Replit" [level=3]:
+    - link "How to resolve Playwright missing dependencies error on Replit"
+  - text: I'm trying to use Playwright in a Python project on Replit. I installed it using pip install playwright, and then ran playwright install. The download of Chromium, Firefox, and WebKit seemed to ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python-3.x'": python-3.x
+    - listitem:
+      - link "show questions tagged 'replit'": replit
+    - listitem:
+      - link "show questions tagged 'playwright-python'": playwright-python
+  - link "Æmmy's user avatar":
+    - img "Æmmy's user avatar"
+  - link "Æmmy"
+  - list:
+    - listitem: "35"
+  - time: asked 17 mins ago
+  - text: "-3 votes 0 answers 9 views"
+  - heading "i want to print the text file in dot matrix printer using vb.net.. please give me a code in vb.net .. thanks in advance [closed]" [level=3]:
+    - link "i want to print the text file in dot matrix printer using vb.net.. please give me a code in vb.net .. thanks in advance [closed]"
+  - text: SL_NO ROUTE_NO OPR_KMS COND_PM COND_AM REG_OT ADHOC_OT VOU_1 VOU_2 DUTY ---------------------------------------------------------------------------------------------------...
+  - list:
+    - listitem:
+      - link "show questions tagged 'vb.net'": vb.net
+    - listitem:
+      - link "show questions tagged 'file'": file
+    - listitem:
+      - link "show questions tagged 'text'": text
+  - link "siva johney's user avatar":
+    - img "siva johney's user avatar"
+  - link "siva johney"
+  - list:
+    - listitem: "9"
+  - time: asked 17 mins ago
+  - text: 0 votes 0 answers 16 views
+  - heading "MULTI LABEL IMAGE CLASSIFICATION" [level=3]:
+    - link "MULTI LABEL IMAGE CLASSIFICATION"
+  - text: "\"I am using the Roboflow tool to annotate my custom dataset for images. After annotating the images with rectangular bounding boxes, I exported the dataset. However, the exported labels are in ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+  - link "SATHYA PRIYA R's user avatar":
+    - img "SATHYA PRIYA R's user avatar"
+  - link "SATHYA PRIYA R"
+  - list:
+    - listitem: "1"
+  - time: asked 29 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Samsung devices (S20/S24 Ultra) fail to open activation link Intent for eSIM installation" [level=3]:
+    - link "Samsung devices (S20/S24 Ultra) fail to open activation link Intent for eSIM installation"
+  - text: I'm working on a Flutter app that installs an eSIM by launching a system activation link. On most devices, this works perfectly — but on Samsung devices (like S20 with Android 11 or S24 Ultra), the ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+  - link "Ajay Flutter's user avatar":
+    - img "Ajay Flutter's user avatar"
+  - link "Ajay Flutter"
+  - list:
+    - listitem: "1"
+  - time: asked 29 mins ago
+  - text: 0 votes 0 answers 15 views
+  - heading "Show all rows where is_back from another table is not null or not exist" [level=3]:
+    - link "Show all rows where is_back from another table is not null or not exist"
+  - text: I have a table named cars and another table named location_orders_cars. A employee can order a car for a day and can bring it back so there is a flag location_orders_cars table named is_back. Of ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'postgresql'": postgresql
+  - link "oemer ok's user avatar":
+    - img "oemer ok's user avatar"
+  - link "oemer ok"
+  - list:
+    - listitem: "63"
+  - time: asked 37 mins ago
+  - text: "-1 votes 0 answers 21 views"
+  - heading "Why does the first program return the closest number , while the second doesn't?" [level=3]:
+    - link "Why does the first program return the closest number , while the second doesn't?"
+  - text: "# Python implementation to find the number closest to n # and divisible by m def closest_number(n, m): # find the quotient closest = 0 min_difference = float('inf') # Check numbers ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'dsa'": dsa
+  - link "Ikram Wani's user avatar":
+    - img "Ikram Wani's user avatar"
+  - link "Ikram Wani"
+  - list:
+    - listitem: "25"
+  - time: asked 44 mins ago
+  - text: 0 votes 0 answers 17 views
+  - heading "How do I properly edit and save a file using Emacs from the terminal?" [level=3]:
+    - link "How do I properly edit and save a file using Emacs from the terminal?"
+  - text: "I'm new to Emacs and trying to edit a file from the terminal on a Linux system. I ran the following command: emacs /root/quote_dora It opens Emacs, but I'm confused about how to enter text, save the ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'linux'": linux
+    - listitem:
+      - link "show questions tagged 'command-line'": command-line
+    - listitem:
+      - link "show questions tagged 'emacs'": emacs
+  - link "Neha Verma's user avatar":
+    - img "Neha Verma's user avatar"
+  - link "Neha Verma"
+  - list:
+    - listitem: "1"
+  - time: asked 49 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "In UI Automation using nightwatch.js, getting pink screen (in jenkins) clicking on tabs through automation code , whereas locally it works fine" [level=3]:
+    - link "In UI Automation using nightwatch.js, getting pink screen (in jenkins) clicking on tabs through automation code , whereas locally it works fine"
+  - text: In UI Automation using Nightwatch.js, I am working on automating list screen pages. However, for the past few days, I have been encountering a pink screen issue (in Jenkins) when clicking on tabs ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'jenkins'": jenkins
+  - link "Sajid Khan's user avatar":
+    - img "Sajid Khan's user avatar"
+  - link "Sajid Khan"
+  - list:
+    - listitem: "1"
+  - time: asked 54 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615587"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Community Products roadmap update, April 2025"
+    - listitem:
+      - link "Grab bag! On the floor at HumanX"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Results of the March 2025 Community Asks Sprint"
+    - listitem:
+      - link "Upcoming initiatives on Stack Overflow and across the Stack Exchange network..."
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "What We Learned About Follow-up Questions and What's Next"
+  - text: Collectives
+  - link "see all"
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 22k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 10k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2531234
+  - link "show questions tagged 'python'": python
+  - text: × 2211531
+  - link "show questions tagged 'java'": java
+  - text: × 1920058
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624857
+  - link "show questions tagged 'php'": php
+  - text: × 1467758
+  - link "show questions tagged 'android'": android
+  - text: × 1419354
+  - link "show questions tagged 'html'": html
+  - text: × 1188608
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036184
+  - link "show questions tagged 'c++'": c++
+  - text: × 814205
+  - link "show questions tagged 'css'": css
+  - text: × 807777
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Numbers 12:13 mistranslation?"
+    - listitem:
+      - link "Should Protestant Trinitarians focus on lack of repentance as the reason for non-Trinitarian views of the Deity?"
+    - listitem:
+      - link "A man leaves a woman's uploaded consciousness alone for 1000 years to wipe it and make a personal assistant"
+    - listitem:
+      - link "How many occurrences of the formula \"משה\" in the Torah?"
+    - listitem:
+      - link "How does one implement Hadamard gate in Pauli-based computation?"
+    - listitem:
+      - link "In the US, if one had no \"income\" other than, say, $1,000,000 in long-term capital gains, how would that be taxed?"
+    - listitem:
+      - link "I'm staying in the US for a night at the beginning and end of my trip. Did I need to select the transit option on the ESTA?"
+    - listitem:
+      - link "Why do /usr/bin/gcc, /usr/bin/g++, /usr/bin/clang, /usr/bin/python3, /usr/bin/git, and other 71 files have the same inode number?"
+    - listitem:
+      - link "SSH key pair ONLY accepted by sshd in debug mode"
+    - listitem:
+      - link "A clockwise arrangement"
+    - listitem:
+      - link "Subtractor circuit is not subtracting voltages"
+    - listitem:
+      - link "Resistance Avalon - any strategy better than staying silent?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.4.24.25623
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
