@@ -1,0 +1,581 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale NZ in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Discussions Labs"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,233,861 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 30"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 2 views
+  - heading "Get URL without base URL" [level=3]:
+    - link "Get URL without base URL"
+  - text: "With this code, a [geturl] shortcode will be created. This shortcode shows the current page full URL address: add_shortcode ('geturl', 'get_current_page_url'); function get_current_page_url() { $..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'wordpress'": wordpress
+  - link "Mapa's user avatar":
+    - img "Mapa's user avatar"
+  - link "Mapa"
+  - list:
+    - listitem: "11"
+  - time: asked 50 secs ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Why is the cube defined by this .obj file missing a face?" [level=3]:
+    - link "Why is the cube defined by this .obj file missing a face?"
+  - text: "In order to better understand 3D modeling and the .obj format I want to write a simple model from scratch: a brick that is 1 x 2 x 3. To my way of thinking, a brick has 8 vertexes and 6 faces. Here is ..."
+  - list:
+    - listitem:
+      - link "show questions tagged '3d'": 3d
+    - listitem:
+      - link "show questions tagged 'mesh'": mesh
+    - listitem:
+      - link "show questions tagged '.obj'": .obj
+  - link "RobertAKARobin's user avatar":
+    - img "RobertAKARobin's user avatar"
+  - link "RobertAKARobin"
+  - list:
+    - listitem: 4,284
+  - time: asked 2 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "Why use a mutex and not a semaphore?" [level=3]:
+    - link "Why use a mutex and not a semaphore?"
+  - text: Looking here https://en.cppreference.com/w/cpp/thread/counting_semaphore, it seems to imply the a binary_semaphore may be more efficient than a mutex. Is there any reason not to use a std::...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'c++20'": c++20
+    - listitem:
+      - link "show questions tagged 'mutex'": mutex
+    - listitem:
+      - link "show questions tagged 'semaphore'": semaphore
+  - link "Baruch's user avatar":
+    - img "Baruch's user avatar"
+  - link "Baruch"
+  - list:
+    - listitem: 21.6k
+  - time: asked 3 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "JAVA assertEquals() Injection Attacks" [level=3]:
+    - link "JAVA assertEquals() Injection Attacks"
+  - text: In JAVA, for the assertEquals function, under the premise that only result can be modified, is there a way to make this function always (or almost always) true, no matter what xxx is？ assertEquals( &...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'testing'": testing
+    - listitem:
+      - link "show questions tagged 'passwords'": passwords
+    - listitem:
+      - link "show questions tagged 'assert'": assert
+    - listitem:
+      - link "show questions tagged 'code-injection'": code-injection
+  - link "ling's user avatar":
+    - img "ling's user avatar"
+  - link "ling"
+  - list:
+    - listitem: "1"
+  - time: asked 4 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "The output changes when changing print function's argument" [level=3]:
+    - link "The output changes when changing print function's argument"
+  - text: "I have this class that helps me calculate gradient during backpropagation. visited = set() class Value: def __init__(self, data, _children=None, _op=''): self.data = data self.grad ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'output'": output
+    - listitem:
+      - link "show questions tagged 'backpropagation'": backpropagation
+  - link "Icetroid's user avatar":
+    - img "Icetroid's user avatar"
+  - link "Icetroid"
+  - list:
+    - listitem: "1"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Any way to remove \"Collection from\" text in local pickup method on order received page and in e-mails?" [level=3]:
+    - link "Any way to remove \"Collection from\" text in local pickup method on order received page and in e-mails?"
+  - text: in the new Woocommerce 9 Local Pickup system in Order received page and in e-mails the system adds "Collection from" text before the pickup address. Is there any way to remove this text so ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'wordpress'": wordpress
+    - listitem:
+      - link "show questions tagged 'woocommerce'": woocommerce
+    - listitem:
+      - link "show questions tagged 'checkout'": checkout
+    - listitem:
+      - link "show questions tagged 'shipping-method'": shipping-method
+    - listitem:
+      - link "show questions tagged 'pickup'": pickup
+  - link "Tom Picka's user avatar":
+    - img "Tom Picka's user avatar"
+  - link "Tom Picka"
+  - list:
+    - listitem: "23"
+  - time: asked 11 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Changing alignment of a tick label in ggplot" [level=3]:
+    - link "Changing alignment of a tick label in ggplot"
+  - text: I have below ggplot library(dplyr) library(ggplot2) dat = data.frame(name=c("apple", "orange", "plum"), value=c(3,8,2), outlier=c(FALSE,TRUE,FALSE)) ggplot(dat, aes(x = ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'r'": r
+    - listitem:
+      - link "show questions tagged 'ggplot2'": ggplot2
+  - link "Bogaso's user avatar":
+    - img "Bogaso's user avatar"
+  - link "Bogaso"
+  - list:
+    - listitem: 3,532
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "svn status --xml with -u and --depth=empty lost the entry block" [level=3]:
+    - link "svn status --xml with -u and --depth=empty lost the entry block"
+  - text: When I run command svn status --depth=empty "H:/svn/UnityTest/Assets/ddd.meta", the output is <?xml version="1.0" encoding="UTF-8"?> <status> <target ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'svn'": svn
+    - listitem:
+      - link "show questions tagged 'tortoisesvn'": tortoisesvn
+  - link "Jian Wang's user avatar":
+    - img "Jian Wang's user avatar"
+  - link "Jian Wang"
+  - list:
+    - listitem: "61"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Issue while creating location for storage in firebase.error :The location for this project is already set to another value" [level=3]:
+    - link "Issue while creating location for storage in firebase.error :The location for this project is already set to another value"
+  - text: In firebase i created fire-store in location of asia-south1 when i try to set same location for this firebase storage (asia-south1) getting error of The location for this project is already set to ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'firebase'": firebase
+    - listitem:
+      - link "show questions tagged 'google-cloud-firestore'": google-cloud-firestore
+    - listitem:
+      - link "show questions tagged 'firebase-storage'": firebase-storage
+    - listitem:
+      - link "show questions tagged 'bucket'": bucket
+  - link "Ganesh Pandi's user avatar":
+    - img "Ganesh Pandi's user avatar"
+  - link "Ganesh Pandi"
+  - list:
+    - listitem: "1"
+  - time: asked 20 mins ago
+  - text: 0 votes 0 answers 3 views
+  - heading "Get Rows Of Data From DataAccess Class with Reflection Or Dynamic" [level=3]:
+    - link "Get Rows Of Data From DataAccess Class with Reflection Or Dynamic"
+  - text: I want to pass a type of dataaccess class to a function and dynamically extract all its rows I've gotten this far, but what should I do next? public ObjectQuery<T> GetAll<T>(string ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'reflection'": reflection
+  - link "mohammad Labbaf's user avatar":
+    - img "mohammad Labbaf's user avatar"
+  - link "mohammad Labbaf"
+  - list:
+    - listitem: "1"
+  - time: asked 20 mins ago
+  - text: "-1 votes 0 answers 8 views"
+  - 'heading "Deployment Failing: Chrome Non-Headless Mode Requires Xvfb Setup on Railway" [level=3]':
+    - 'link "Deployment Failing: Chrome Non-Headless Mode Requires Xvfb Setup on Railway"'
+  - text: I’m deploying a Python app that uses Botasaurus (a browser scrapping automation library) to parse a website requiring Chrome in non-headless mode (headless=False). The app works locally with Docker (...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'docker'": docker
+    - listitem:
+      - link "show questions tagged 'railway'": railway
+  - link "Tamerlan Rzayev's user avatar":
+    - img "Tamerlan Rzayev's user avatar"
+  - link "Tamerlan Rzayev"
+  - list:
+    - listitem: "1"
+  - time: asked 20 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Why the performance is bad if I use HashMap to solve Codility problem MinAbsSum?" [level=3]:
+    - link "Why the performance is bad if I use HashMap to solve Codility problem MinAbsSum?"
+  - text: Regarding the Codility problem MinAbsSum at https://app.codility.com/programmers/lessons/17-dynamic_programming/min_abs_sum/, the performance is bad if I use HashMap to solve the problem. I expect the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'arrays'": arrays
+    - listitem:
+      - link "show questions tagged 'performance'": performance
+    - listitem:
+      - link "show questions tagged 'hashmap'": hashmap
+  - link "James's user avatar":
+    - img "James's user avatar"
+  - link "James"
+  - list:
+    - listitem: "11"
+  - time: asked 20 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "ASP.NET Core Web API and email verification troubles" [level=3]:
+    - link "ASP.NET Core Web API and email verification troubles"
+  - text: "Let me give you some context: I know it's a fairly specific question which probably can be answered by googling. Which I've done and followed some guide but I feel like there is something I am doing ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'asp.net-core'": asp.net-core
+    - listitem:
+      - link "show questions tagged 'email'": email
+    - listitem:
+      - link "show questions tagged 'entity-framework-core'": entity-framework-core
+  - link "yzkael's user avatar":
+    - img "yzkael's user avatar"
+  - link "yzkael"
+  - list:
+    - listitem: "339"
+  - time: asked 21 mins ago
+  - text: "-2 votes 0 answers 23 views"
+  - heading "I need the Netflix source code to aid my learning process . anyone with the source code?" [level=3]:
+    - link "I need the Netflix source code to aid my learning process . anyone with the source code?"
+  - text: Pls i need the source code for netflix and youtube homepage i need the need the source code to start building similar projects using HTML,CSS,JS i'd be happy if i can get the source code to aid my ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'css'": css
+  - link "Abdulsalam Minkail's user avatar":
+    - img "Abdulsalam Minkail's user avatar"
+  - link "Abdulsalam Minkail"
+  - list:
+    - listitem: "1"
+  - time: asked 27 mins ago
+  - text: 1 vote 2 answers 22 views
+  - heading "How can I prevent an object from being modified after it’s created in Java?" [level=3]:
+    - link "How can I prevent an object from being modified after it’s created in Java?"
+  - text: I’m trying to make sure an object can’t be modified after it’s created in Java. For example, in the class below, I can change the values of model and year using setters. But I want to prevent that and ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'class'": class
+    - listitem:
+      - link "show questions tagged 'object'": object
+    - listitem:
+      - link "show questions tagged 'immutability'": immutability
+  - link "Hind27's user avatar":
+    - img "Hind27's user avatar"
+  - link "Hind27"
+  - list:
+    - listitem: "11"
+  - time: asked 29 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615591"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Community Products roadmap update, April 2025"
+    - listitem:
+      - link "Grab bag! On the floor at HumanX"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Results of the March 2025 Community Asks Sprint"
+    - listitem:
+      - link "Upcoming initiatives on Stack Overflow and across the Stack Exchange network..."
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "What We Learned About Follow-up Questions and What's Next"
+  - text: Collectives
+  - link "see all"
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 26k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - heading "R Language" [level=1]:
+    - link "R Language"
+  - text: 13k Members
+  - button "Join"
+  - text: A collective where data scientists and AI researchers gather to find, share, and learn about R and other subtags like knitr and dplyr.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2531216
+  - link "show questions tagged 'python'": python
+  - text: × 2211553
+  - link "show questions tagged 'java'": java
+  - text: × 1920064
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624868
+  - link "show questions tagged 'php'": php
+  - text: × 1467754
+  - link "show questions tagged 'android'": android
+  - text: × 1419354
+  - link "show questions tagged 'html'": html
+  - text: × 1188598
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036179
+  - link "show questions tagged 'c++'": c++
+  - text: × 814209
+  - link "show questions tagged 'css'": css
+  - text: × 807776
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Item text inside enumerate not aligned properly"
+    - listitem:
+      - link "Interaction between Keiga, the Tide Star and Aggressive Biomancy"
+    - listitem:
+      - link "Finding Special Parts in a Word"
+    - listitem:
+      - link "At what time does early check-in become a full night’s stay? (Hotel check-in policy ambiguity)"
+    - listitem:
+      - link "Best numerical scheme for solving an equation with several variables"
+    - listitem:
+      - link "A musical ratio"
+    - listitem:
+      - link "Isaac Asimov robot story about a robot that builds a mining machine to level a mountaintop"
+    - listitem:
+      - link "Confusion with Wikipedia's derivation of electric field for continuous charge distributions"
+    - listitem:
+      - link "What is the best way to build a level shifter?"
+    - listitem:
+      - link "Tasks package fails with \"Missing number... \\c@tasks\" error even in MWE (TeX Live 2025)"
+    - listitem:
+      - link "Using curly braces to process colon-separated variables"
+    - listitem:
+      - link "Does XLOOKUP in Excel not work with certain special characters?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.4.24.25623
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
