@@ -1,0 +1,557 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale NZ in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Discussions Labs"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,231,939 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 43"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 1 view
+  - heading "ECDSA-signed JWT validation failures between .NET and PHP" [level=3]:
+    - link "ECDSA-signed JWT validation failures between .NET and PHP"
+  - text: Why does a ECDSA-signed JWT in .NET fail validation in PHP when using OpenSSL, even with matching keys and algorithms? In .NET using System.Security.Cryptography and System.IdentityModel.Tokens.Jwt ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged '.net'": .net
+    - listitem:
+      - link "show questions tagged 'jwt'": jwt
+    - listitem:
+      - link "show questions tagged 'cryptography'": cryptography
+    - listitem:
+      - link "show questions tagged 'ecdsa'": ecdsa
+  - link "Yousha Aleayoub's user avatar":
+    - img "Yousha Aleayoub's user avatar"
+  - link "Yousha Aleayoub"
+  - list:
+    - listitem: 5,773
+  - time: asked 21 secs ago
+  - text: 0 votes 0 answers 7 views
+  - heading "DYNAMIC PLSQL SELECT QUERY Taking more time above 59 mins" [level=3]:
+    - link "DYNAMIC PLSQL SELECT QUERY Taking more time above 59 mins"
+  - text: I need to fetch the value of v_ref_cur2. But we exec ARUSHI_0105 procedure it is taking very long time (more than 59 mins). Please guide me how can reduce the cost and costtime create or replace ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'plsqldeveloper'": plsqldeveloper
+  - link "Arushi Singh's user avatar":
+    - img "Arushi Singh's user avatar"
+  - link "Arushi Singh"
+  - list:
+    - listitem: "1"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Apicurio Schema Registry 3.0.7 - unable to update multiple versions of schema for artifactId" [level=3]:
+    - link "Apicurio Schema Registry 3.0.7 - unable to update multiple versions of schema for artifactId"
+  - text: I have Apicurio Schema Registry 3.0.7 installed, and I'm trying to use the following code to publish a v2 of schema where GROUP = default, ARTIFACT_ID = com.versa.apicurio.confluent.Employee here is ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'apache-kafka'": apache-kafka
+    - listitem:
+      - link "show questions tagged 'apicurio-registry'": apicurio-registry
+  - link "Karan Alang's user avatar":
+    - img "Karan Alang's user avatar"
+  - link "Karan Alang"
+  - list:
+    - listitem: 1,063
+  - time: asked 13 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Issue in changing audio output using the VideoSDK" [level=3]:
+    - link "Issue in changing audio output using the VideoSDK"
+  - text: I am using VideoSDK (https://www.videosdk.live/) to add voice and video calling functionality in my app. The code however does not work as intended on Android 14+ devices while changing the audio ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'videosdk.live'": videosdk.live
+  - link "Arjun's user avatar":
+    - img "Arjun's user avatar"
+  - link "Arjun"
+  - list:
+    - listitem: 1,598
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Transform a sequence of strings containing delimiter" [level=3]:
+    - link "Transform a sequence of strings containing delimiter"
+  - text: I have a sequence of strings which may or may not contain a delimiter val words = Seq("1 $ cake", "2biscuit", "3brownie", "4 $ honey") I would need to create a ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'scala'": scala
+  - link "IUnknown's user avatar":
+    - img "IUnknown's user avatar"
+  - link "IUnknown"
+  - list:
+    - listitem: 9,871
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 3 views
+  - heading "Ubuntu 24.04 suspend or hibernate resume issues" [level=3]:
+    - link "Ubuntu 24.04 suspend or hibernate resume issues"
+  - text: Anytime I open Firefox or Vs code(or both) on Ubuntu 24.04 and try to suspend or hibernate my PC, it'll restart instead of resuming but it'd resume normally if I just open terminal or I didn't open ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'ubuntu'": ubuntu
+    - listitem:
+      - link "show questions tagged 'ubuntu-24.04'": ubuntu-24.04
+  - link "IAmTrust's user avatar":
+    - img "IAmTrust's user avatar"
+  - link "IAmTrust"
+  - list:
+    - listitem: "1"
+  - time: asked 15 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "What are userspace interrupts good for?" [level=3]:
+    - link "What are userspace interrupts good for?"
+  - text: Intel Sapphire Rapids implements userspace interrupts which allow userspace code in one thread / core to interrupt userspace code in another thread / core. This is significantly faster than delivering ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'linux-kernel'": linux-kernel
+    - listitem:
+      - link "show questions tagged 'interrupt'": interrupt
+  - link "Edison von Myosotis's user avatar":
+    - img "Edison von Myosotis's user avatar"
+  - link "Edison von Myosotis"
+  - list:
+    - listitem: "847"
+  - time: asked 16 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "Read input as unsigned number instead of string in ARMLite assembly?" [level=3]:
+    - link "Read input as unsigned number instead of string in ARMLite assembly?"
+  - text: How do I have the input stored as unsigned number and not string so I can use it to check length and subtract in ARMLite Assembly? (https://peterhigginson.co.uk/ARMlite/ / https://peterhigginson.co.uk/...
+  - list:
+    - listitem:
+      - link "show questions tagged 'assembly'": assembly
+    - listitem:
+      - link "show questions tagged 'arm'": arm
+  - link "Shade-OllieS1516's user avatar":
+    - img "Shade-OllieS1516's user avatar"
+  - link "Shade-OllieS1516"
+  - list:
+    - listitem: "9"
+  - time: asked 17 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "ESLint import sorting rule not enforcing React import at the top of the file" [level=3]:
+    - link "ESLint import sorting rule not enforcing React import at the top of the file"
+  - text: "Project Setup: I have a new React project set up with TypeScript and Vite. I'm using ESLint for code linting with a custom configuration that enforces proper import ordering. The project is set up ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'typescript'": typescript
+    - listitem:
+      - link "show questions tagged 'eslint'": eslint
+  - link "tyler's user avatar":
+    - img "tyler's user avatar"
+  - link "tyler"
+  - list:
+    - listitem: "311"
+  - time: asked 18 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "How to add/edit the changes in the open merge request in Git not GitLab" [level=3]:
+    - link "How to add/edit the changes in the open merge request in Git not GitLab"
+  - text: "I have two branches i.e. a) Feature development branch : feature_1 b) Master Branch : master Objective : Create a feature branch and raise the merge request for review to be merged in Master branch ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'git'": git
+    - listitem:
+      - link "show questions tagged 'merge'": merge
+  - link "Nitin Gupta's user avatar":
+    - img "Nitin Gupta's user avatar"
+  - link "Nitin Gupta"
+  - list:
+    - listitem: "202"
+  - time: asked 18 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "How do I increase LFS storage on Github with new UI?" [level=3]:
+    - link "How do I increase LFS storage on Github with new UI?"
+  - text: Github changed UI and now I can't find LFS storage packs page to buy extra ones. And I've just hit the ceiling and can't push into git any more. Does anyone know where to find them in the new UI? They ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'github'": github
+  - link "cubrman's user avatar":
+    - img "cubrman's user avatar"
+  - link "cubrman"
+  - list:
+    - listitem: "946"
+  - time: asked 25 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "\"useContext\" is not exported by \"node_modules/react/index.js\"" [level=3]:
+    - link "\"useContext\" is not exported by \"node_modules/react/index.js\""
+  - text: "when I tried to build the react project, shows error: node_modules/react-redux/es/hooks/useReduxContext.js (1:9): \"useContext\" is not exported by \"node_modules/react/index.js\", ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'vite'": vite
+  - link "Dolphin's user avatar":
+    - img "Dolphin's user avatar"
+  - link "Dolphin"
+  - list:
+    - listitem: 39.6k
+  - time: asked 30 mins ago
+  - text: 0 votes 1 answer 19 views
+  - 'heading "Why does the `dict[key]` operation fail in AWS Lambda when created from a non-Amazon image?" [level=3]':
+    - 'link "Why does the `dict[key]` operation fail in AWS Lambda when created from a non-Amazon image?"'
+  - text: I have an image c created by AWS Imagebuilder that uses debian:bookworm-slim as the base, and then runs apt install -y --no-install-suggests texlive-latex-extra python3.11 python3-pip && pip3 ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'dictionary'": dictionary
+    - listitem:
+      - link "show questions tagged 'aws-lambda'": aws-lambda
+  - link "DarkRise's user avatar":
+    - img "DarkRise's user avatar"
+  - link "DarkRise"
+  - list:
+    - listitem: "1"
+  - time: asked 38 mins ago
+  - text: 0 votes 0 answers 22 views
+  - heading "Missing \"cabinet.dll\" when using Microsoft.Deployment.Compression.Cab on Linux in C#" [level=3]:
+    - link "Missing \"cabinet.dll\" when using Microsoft.Deployment.Compression.Cab on Linux in C#"
+  - text: I'm working on an app in C# and I'm running into a library missing issue when trying to run my project https://github.com/AM7999/CLI-Installer-Framework With this project i wanted to create a cross ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'linux'": linux
+    - listitem:
+      - link "show questions tagged 'dll'": dll
+  - link "Angel Martin's user avatar":
+    - img "Angel Martin's user avatar"
+  - link "Angel Martin"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 13 views
+  - heading "How can I load all app data during the splash screen in Flutter?" [level=3]:
+    - link "How can I load all app data during the splash screen in Flutter?"
+  - text: I'm building a Flutter app where I need to load all essential data (such as user data, prayer times, and Qaza Namaz records) before navigating to the main screen. I want this loading to happen during ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'loading'": loading
+    - listitem:
+      - link "show questions tagged 'splash-screen'": splash-screen
+  - link "Ateekur Rehman's user avatar":
+    - img "Ateekur Rehman's user avatar"
+  - link "Ateekur Rehman"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615463"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Without foundational governance, every AI deployment is a liability in..."
+    - listitem:
+      - link "Improving on a 30-year-old hardware architecture"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Updates to advertising guidelines"
+    - listitem:
+      - 'link "Evolving comments: An experiment to encourage engagement and follow-up questions"'
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "Discussions learnings and potential next steps"
+    - listitem:
+      - 'link "2025 Developer Survey: Call for Feedback"'
+  - text: Collectives
+  - link "see all"
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 22k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 10k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2530998
+  - link "show questions tagged 'python'": python
+  - text: × 2211378
+  - link "show questions tagged 'java'": java
+  - text: × 1920002
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624837
+  - link "show questions tagged 'php'": php
+  - text: × 1467695
+  - link "show questions tagged 'android'": android
+  - text: × 1419232
+  - link "show questions tagged 'html'": html
+  - text: × 1188542
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036133
+  - link "show questions tagged 'c++'": c++
+  - text: × 814234
+  - link "show questions tagged 'css'": css
+  - text: × 807757
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Block covered cycles"
+    - listitem:
+      - link "Recent historical examples of how mineral deals or other resource agreements affected security?"
+    - listitem:
+      - link "How can my superhero avoid burning off his shoes?"
+    - listitem:
+      - link "When are the PS Plus games of the month updated?"
+    - listitem:
+      - link "Can a concurrent transaction see only part of committed changes?"
+    - listitem:
+      - link "Why would anyone use OP_RETURN over inscriptions, aside from fees?"
+    - listitem:
+      - link "Quotient groups of two finite groups"
+    - listitem:
+      - link "USGS' 2022 list of critical minerals lists 48 elements and only two minerals; why?"
+    - listitem:
+      - link "What force, what unit and what rank is this individual?"
+    - listitem:
+      - link "Create a Non-Persistent Shadow Copy for Backups on Windows 11 Pro?"
+    - listitem:
+      - link "Is it a problem if the antagonist appears later in the novel?"
+    - listitem:
+      - link "How to install dependencies from deb depends"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.5.2.25997
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
