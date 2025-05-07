@@ -1,0 +1,586 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale GB in dev Einvironment and Realm europe
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Discussions Labs"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,233,251 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 32"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 3 views
+  - heading "Merging large datasets in R" [level=3]:
+    - link "Merging large datasets in R"
+  - text: For my MSc. thesis i am using R studio. The goal is for me to merge a couple (6) of relatively large datasets (min of 200.000 and max of 2mil rows). I have now been able to do so, however I think ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'r'": r
+    - listitem:
+      - link "show questions tagged 'merge'": merge
+    - listitem:
+      - link "show questions tagged 'data.table'": data.table
+    - listitem:
+      - link "show questions tagged 'rstudio'": rstudio
+    - listitem:
+      - link "show questions tagged 'large-data'": large-data
+  - link "Mirjam's user avatar":
+    - img "Mirjam's user avatar"
+  - link "Mirjam"
+  - list:
+    - listitem: "1"
+  - time: asked 45 secs ago
+  - text: 0 votes 0 answers 2 views
+  - heading "non-dimensionalize V(x,t) for alpha/x condition" [level=3]:
+    - link "non-dimensionalize V(x,t) for alpha/x condition"
+  - text: https://enormous-punch-c06.notion.site/Project-on-which-i-need-help-1ec4da491c2180068e8cfdf5617060b1?pvs=4 the above link has what i want to do with this project. But for now I have been reading on ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'matlab'": matlab
+    - listitem:
+      - link "show questions tagged 'physics'": physics
+    - listitem:
+      - link "show questions tagged 'discrete-mathematics'": discrete-mathematics
+    - listitem:
+      - link "show questions tagged 'astronomy'": astronomy
+    - listitem:
+      - link "show questions tagged 'orbital-mechanics'": orbital-mechanics
+  - link "Ritesh Roshan's user avatar":
+    - img "Ritesh Roshan's user avatar"
+  - link "Ritesh Roshan"
+  - list:
+    - listitem: "1"
+  - time: asked 1 min ago
+  - text: 0 votes 0 answers 6 views
+  - heading "does calling a function means leaving the scope of an object declared prior to that call in C?" [level=3]:
+    - link "does calling a function means leaving the scope of an object declared prior to that call in C?"
+  - text: In the C17's final draft N2176 document, the 7th paragraph of 6.2.4 section says For such an object that does have a variable length array type, its lifetime extends from the declaration of the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c'": c
+    - listitem:
+      - link "show questions tagged 'scope'": scope
+    - listitem:
+      - link "show questions tagged 'lifetime'": lifetime
+    - listitem:
+      - link "show questions tagged 'variable-length-array'": variable-length-array
+    - listitem:
+      - link "show questions tagged 'c17'": c17
+  - link "Cinverse's user avatar":
+    - img "Cinverse's user avatar"
+  - link "Cinverse"
+  - list:
+    - listitem: "139"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "MongoDB Upgrade Issue v5 to v8 RHEL" [level=3]:
+    - link "MongoDB Upgrade Issue v5 to v8 RHEL"
+  - text: Initially I have installed MongoDB 5.0.27 in one of my RHEL VM with the help of below script. "export releasever=$releasever; echo -e '[mongodb-org-5.0]\nname=MongoDB Repository\nbaseurl=https://...
+  - list:
+    - listitem:
+      - link "show questions tagged 'linux'": linux
+    - listitem:
+      - link "show questions tagged 'mongodb'": mongodb
+    - listitem:
+      - link "show questions tagged 'rhel'": rhel
+  - link "Ayush Prasad's user avatar":
+    - img "Ayush Prasad's user avatar"
+  - link "Ayush Prasad"
+  - list:
+    - listitem: "1"
+  - time: asked 11 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Use Lottie in CMP project" [level=3]:
+    - link "Use Lottie in CMP project"
+  - text: "I want to add lottie to my CMP project for Ios, but I do not want to use any library like kottie in my project and I want to implement it from base. like Kottie: I downloaded Lottie.xcframework from ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'lottie'": lottie
+    - listitem:
+      - link "show questions tagged 'compose-multiplatform'": compose-multiplatform
+    - listitem:
+      - link "show questions tagged 'compose'": compose
+  - link "melikaafrakhteh's user avatar":
+    - img "melikaafrakhteh's user avatar"
+  - link "melikaafrakhteh"
+  - list:
+    - listitem: "367"
+  - time: asked 12 mins ago
+  - text: "-3 votes 1 answer 17 views"
+  - heading "I'm looking for feedback on the structure and design of my .NET project (GitHub repo link included) [closed]" [level=3]:
+    - link "I'm looking for feedback on the structure and design of my .NET project (GitHub repo link included) [closed]"
+  - text: "I've recently made my GitHub repository public and would appreciate your feedback on the overall structure and design of my .NET project. 🔗 GitHub Repository: https://github.com/ErdemKoray/Beavask My ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged '.net'": .net
+    - listitem:
+      - link "show questions tagged 'angular'": angular
+    - listitem:
+      - link "show questions tagged 'clean-architecture'": clean-architecture
+  - link "Koray Erdem's user avatar":
+    - img "Koray Erdem's user avatar"
+  - link "Koray Erdem"
+  - list:
+    - listitem: "1"
+  - time: asked 12 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "In ASP.NET Core 9, should I use controller-based API or Minimal API to build web?" [level=3]:
+    - link "In ASP.NET Core 9, should I use controller-based API or Minimal API to build web?"
+  - text: I am using .NET 9 to build a web, but I am starting building a web, with the condition not using MVC models
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'asp.net-core-webapi'": asp.net-core-webapi
+    - listitem:
+      - link "show questions tagged '.net-9.0'": .net-9.0
+  - link "Trng Cao Vn Danjoo's user avatar":
+    - img "Trng Cao Vn Danjoo's user avatar"
+  - link "Trng Cao Vn Danjoo"
+  - list:
+    - listitem: "1"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 18 views
+  - heading "MetaTrader 5 Manager API - PositionGet returns \"Not found\" error despite open positions" [level=3]:
+    - link "MetaTrader 5 Manager API - PositionGet returns \"Not found\" error despite open positions"
+  - text: I am working with the MT5Manager library to retrieve client positions in MetaTrader 5. However, despite verifying that the client exists and has an open position for the specified symbol, my request ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'metatrader5'": metatrader5
+  - link "sanjugohel's user avatar":
+    - img "sanjugohel's user avatar"
+  - link "sanjugohel"
+  - list:
+    - listitem: "11"
+  - time: asked 21 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "jaxb generated java class needs same element name as in xsd" [level=3]:
+    - link "jaxb generated java class needs same element name as in xsd"
+  - text: Here is my xsd <BatchTotalsQuery xmlns="https://transaction.elementexpress.com"> <Application> <ApplicationID>12</ApplicationID> </Application&...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'jaxb'": jaxb
+    - listitem:
+      - link "show questions tagged 'jaxb2-maven-plugin'": jaxb2-maven-plugin
+  - link "Martin Joseph's user avatar":
+    - img "Martin Joseph's user avatar"
+  - link "Martin Joseph"
+  - list:
+    - listitem: "1"
+  - time: asked 24 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "Error while inserting values to SqlCommand as parameter" [level=3]:
+    - link "Error while inserting values to SqlCommand as parameter"
+  - text: I'm trying to insert 2 values to a SQL statement as parameters. These 2 values are taken into a function as parameters namely "table name" and "column name" and this function ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'sql-server'": sql-server
+    - listitem:
+      - link "show questions tagged 'database'": database
+    - listitem:
+      - link "show questions tagged 'vb.net'": vb.net
+  - link "lakshitha dilhan's user avatar":
+    - img "lakshitha dilhan's user avatar"
+  - link "lakshitha dilhan"
+  - list:
+    - listitem: "85"
+  - time: asked 26 mins ago
+  - text: 0 votes 0 answers 18 views
+  - heading "Possible null reference argument for parameter 'value' in implicit operator Z(Y value)'" [level=3]:
+    - link "Possible null reference argument for parameter 'value' in implicit operator Z(Y value)'"
+  - text: "I have a method public async Task<Y?> GetYAsync(Guid productId) { var cosmosResponse = await _cosmosRepository.GetYAsync(productId); return cosmosResponse; } CosmosRepository ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+  - link "Emilija Vilija Trečiokaitė's user avatar":
+    - img "Emilija Vilija Trečiokaitė's user avatar"
+  - link "Emilija Vilija Trečiokaitė"
+  - list:
+    - listitem: "951"
+  - time: asked 27 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "Create controllers automatically from model" [level=3]:
+    - link "Create controllers automatically from model"
+  - text: "I work with ASP.NET Core and have written an API controller as follows: public class AcademicController : GenericController<Academic> { public AcademicController(IRepository<Academic> ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'asp.net-core'": asp.net-core
+    - listitem:
+      - link "show questions tagged 'controller'": controller
+    - listitem:
+      - link "show questions tagged 'generalization'": generalization
+    - listitem:
+      - link "show questions tagged 't4scaffolding'": t4scaffolding
+  - link "amir's user avatar":
+    - img "amir's user avatar"
+  - link "amir"
+  - list:
+    - listitem: "25"
+  - time: asked 35 mins ago
+  - text: 0 votes 0 answers 23 views
+  - heading "Does SAP JCo hold memory if all heavy logic is in ABAP and Java just waits for the result?" [level=3]:
+    - link "Does SAP JCo hold memory if all heavy logic is in ABAP and Java just waits for the result?"
+  - text: "I'm using SAP Java Connector (JCo 3.x) to call an ABAP remote-enabled function module (FM) from a Java application. The scenario: The FM performs heavy processing entirely inside ABAP Importing/..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'abap'": abap
+    - listitem:
+      - link "show questions tagged 'jco'": jco
+    - listitem:
+      - link "show questions tagged 'sapjco3'": sapjco3
+  - link "bagere's user avatar":
+    - img "bagere's user avatar"
+  - link "bagere"
+  - list:
+    - listitem: "276"
+  - time: asked 36 mins ago
+  - text: "-1 votes 0 answers 10 views"
+  - heading "How to verify a user via Photon in a custom Telegram bot? Is there a Photon API for sign up verification?" [level=3]:
+    - link "How to verify a user via Photon in a custom Telegram bot? Is there a Photon API for sign up verification?"
+  - text: I'm currently developing a TypeScript Telegram bot using node-telegram-bot-api, and I want to verify whether a user has signed up on Photon. When a user clicks the "Verify" button in the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'typescript'": typescript
+    - listitem:
+      - link "show questions tagged 'telegram-bot'": telegram-bot
+    - listitem:
+      - link "show questions tagged 'photon'": photon
+  - link "pawsol4406's user avatar":
+    - img "pawsol4406's user avatar"
+  - link "pawsol4406"
+  - list:
+    - listitem: "1"
+  - time: asked 37 mins ago
+  - text: 0 votes 0 answers 21 views
+  - heading "Constexpr parser string literal to std::array<std::uint8_t, Size> c++ 17" [level=3]:
+    - link "Constexpr parser string literal to std::array<std::uint8_t, Size> c++ 17"
+  - text: "I need to write a constexpr parser for string literal into an std::array of std::uint8_t in c++ 17. By parsing I mean convert string literals of hex octets into std::array like: constexpr auto arr1 = ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'c++17'": c++17
+    - listitem:
+      - link "show questions tagged 'metaprogramming'": metaprogramming
+  - link "bugdruhman's user avatar":
+    - img "bugdruhman's user avatar"
+  - link "bugdruhman"
+  - list:
+    - listitem: "21"
+  - time: asked 42 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615551"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "The consensus is TypeScript is the easiest way to build on blockchain"
+    - listitem:
+      - link "Mastering microservices with a former Uber and Netflix architect"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Updates to advertising guidelines"
+    - listitem:
+      - 'link "Evolving comments: An experiment to encourage engagement and follow-up questions"'
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "Discussions learnings and potential next steps"
+    - listitem:
+      - 'link "2025 Developer Survey: Call for Feedback"'
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 34k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 26k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2531070
+  - link "show questions tagged 'python'": python
+  - text: × 2211525
+  - link "show questions tagged 'java'": java
+  - text: × 1920074
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624910
+  - link "show questions tagged 'php'": php
+  - text: × 1467716
+  - link "show questions tagged 'android'": android
+  - text: × 1419289
+  - link "show questions tagged 'html'": html
+  - text: × 1188573
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036131
+  - link "show questions tagged 'c++'": c++
+  - text: × 814292
+  - link "show questions tagged 'css'": css
+  - text: × 807784
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "What is the probability that the graph remains connected?"
+    - listitem:
+      - link "Union does not always eliminate duplicates"
+    - listitem:
+      - link "Where did the Cohanim and Leviim bury their dead when the temple was still standing?"
+    - listitem:
+      - link "Is consciousness just an illusion?"
+    - listitem:
+      - link "Why do some restaurants that work well in suburbs not open an outlet in the city?"
+    - listitem:
+      - link "How does Hookes' law predict that a guitar string's frequency is inversely proportional to its length?"
+    - listitem:
+      - link "Correcting coordinates of point objects in QGIS"
+    - listitem:
+      - link "How the Kramers escape rate relates to the diffusion?"
+    - listitem:
+      - link "Publishing in a journal your own original work from a Stack Exchange site?"
+    - listitem:
+      - link "Where is potential energy stored in a human body?"
+    - listitem:
+      - link "FiraMono and numbers"
+    - listitem:
+      - link "Why/when will negative binomial regression flip the sign of the effect from analogous Poisson regression, after covariate adjustment"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.5.6.26140
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
