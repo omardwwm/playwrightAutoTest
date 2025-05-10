@@ -1,0 +1,579 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale GB in dev Einvironment and Realm europe
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Discussions Labs"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,230,449 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 37"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 6 views
+  - heading "Is this a memory leak or something else?" [level=3]:
+    - link "Is this a memory leak or something else?"
+  - text: "Circumstances of the problem: Windows 8.1, application written in Pascal/Lazarus 2.2.6 (fpc 3.2.2), 11 days of uptime. This is a parser of one web system, and it used external cURL.exe to send ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'curl'": curl
+    - listitem:
+      - link "show questions tagged 'windows-8.1'": windows-8.1
+    - listitem:
+      - link "show questions tagged 'freepascal'": freepascal
+    - listitem:
+      - link "show questions tagged 'lazarus'": lazarus
+  - link "Nirnaeth's user avatar":
+    - img "Nirnaeth's user avatar"
+  - link "Nirnaeth"
+  - list:
+    - listitem: "1"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "SwiftUI TextField with textInputSuggestions" [level=3]:
+    - link "SwiftUI TextField with textInputSuggestions"
+  - text: I have a SwiftUI TextField and I'm trying to use textInputSuggestions. My problem is that, once I’ve selected a suggested item, subsequent suggestions show the previous selection preselected. Below is ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'swiftui'": swiftui
+  - link "user2962393's user avatar":
+    - img "user2962393's user avatar"
+  - link "user2962393"
+  - list:
+    - listitem: 1,165
+  - time: asked 8 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Python matplotlib library" [level=3]:
+    - link "Python matplotlib library"
+  - text: "For below code, i keep getting the warning as below, can someone help to take a look and help me solve it? thank you! def prettify_graph(graph): graph.set_title(\"Results of 500 slot machine ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+  - link "Parida Shohrat's user avatar":
+    - img "Parida Shohrat's user avatar"
+  - link "Parida Shohrat"
+  - list:
+    - listitem: "1"
+  - time: asked 9 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Detect CarPlay from a background state?" [level=3]:
+    - link "Detect CarPlay from a background state?"
+  - text: I am wondering if you can detect carplay connection when woken up from a background state? As in my app is suspended, but woken up in the background by some event (i.e. user hasn't opened app), and ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'core-bluetooth'": core-bluetooth
+    - listitem:
+      - link "show questions tagged 'carplay'": carplay
+  - link "Mahdiur Rahman's user avatar":
+    - img "Mahdiur Rahman's user avatar"
+  - link "Mahdiur Rahman"
+  - list:
+    - listitem: "25"
+  - time: asked 12 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Docker pull from JFrog Artifactory into VM with Azure DevOps" [level=3]:
+    - link "Docker pull from JFrog Artifactory into VM with Azure DevOps"
+  - text: "In my pipeline I need to pull an image into a VM. I'm using the following code, but it returns an error. - task: AzureCLI@2 displayName: Deploy image to test VM ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'azure'": azure
+    - listitem:
+      - link "show questions tagged 'docker'": docker
+    - listitem:
+      - link "show questions tagged 'command-line-interface'": command-line-interface
+    - listitem:
+      - link "show questions tagged 'devops'": devops
+    - listitem:
+      - link "show questions tagged 'jfrog'": jfrog
+  - link "Gosia Wiśniewska's user avatar":
+    - img "Gosia Wiśniewska's user avatar"
+  - link "Gosia Wiśniewska"
+  - list:
+    - listitem: "47"
+  - time: asked 13 mins ago
+  - text: 0 votes 0 answers 8 views
+  - 'heading "React: \"Element type is invalid\" when trying to render a modal component" [level=3]':
+    - 'link "React: \"Element type is invalid\" when trying to render a modal component"'
+  - text: "I'm working on a React project and encountering this error when trying to open a modal: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'import'": import
+    - listitem:
+      - link "show questions tagged 'modal-dialog'": modal-dialog
+    - listitem:
+      - link "show questions tagged 'vite'": vite
+  - link "duytdx's user avatar":
+    - img "duytdx's user avatar"
+  - link "duytdx"
+  - list:
+    - listitem: "1"
+  - time: asked 19 mins ago
+  - text: 0 votes 0 answers 11 views
+  - 'heading "Nextcloud: ONLYOFFICE cannot be reached" [level=3]':
+    - 'link "Nextcloud: ONLYOFFICE cannot be reached"'
+  - text: "I'm trying to run an onlyoffice community server on my nextcloud but it drives me crazy: when I open a docx file all it shows is \"ONLYOFFICE cannot be reached. Please contact admin\" The ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'docker'": docker
+    - listitem:
+      - link "show questions tagged 'debian'": debian
+    - listitem:
+      - link "show questions tagged 'nextcloud'": nextcloud
+    - listitem:
+      - link "show questions tagged 'onlyoffice'": onlyoffice
+  - link "muab's user avatar":
+    - img "muab's user avatar"
+  - link "muab"
+  - list:
+    - listitem: "1"
+  - time: asked 24 mins ago
+  - text: "-1 votes 0 answers 11 views"
+  - heading "How can I optimize a slow SQL query with multiple JOINs on large tables?" [level=3]:
+    - link "How can I optimize a slow SQL query with multiple JOINs on large tables?"
+  - text: I'm working on a web application that uses a PostgreSQL database. I have a SQL query that retrieves user data along with associated posts, comments, and likes using several JOIN statements. The query ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'mysql'": mysql
+  - link "Dawa Tshering's user avatar":
+    - img "Dawa Tshering's user avatar"
+  - link "Dawa Tshering"
+  - list:
+    - listitem: "1"
+  - time: asked 35 mins ago
+  - text: 1 vote 1 answer 21 views
+  - heading "Code snippets appears as a second choice in C#" [level=3]:
+    - link "Code snippets appears as a second choice in C#"
+  - text: Code snippets are easier to enter repeating code patterns, such as loops or conditional statements. In VS Code, the code snippets appear as the second choice, so I can't use Tab to generate code ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'visual-studio-code'": visual-studio-code
+    - listitem:
+      - link "show questions tagged 'code-snippets'": code-snippets
+  - link "Abdulsalam Elsharif's user avatar":
+    - img "Abdulsalam Elsharif's user avatar"
+  - link "Abdulsalam Elsharif"
+  - list:
+    - listitem: 5,161
+  - time: asked 45 mins ago
+  - text: "-1 votes 0 answers 8 views"
+  - heading "Application Monitoring" [level=3]:
+    - link "Application Monitoring"
+  - text: I am researching about Application monitoring tools like data dog and splunk for applications deployed on cloud. Should we use the managed services provided by cloud provider or go with external ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'cloud'": cloud
+    - listitem:
+      - link "show questions tagged 'splunk'": splunk
+    - listitem:
+      - link "show questions tagged 'sentry'": sentry
+    - listitem:
+      - link "show questions tagged 'datadog'": datadog
+    - listitem:
+      - link "show questions tagged 'application-monitoring'": application-monitoring
+  - link "Mayur Mahale's user avatar":
+    - img "Mayur Mahale's user avatar"
+  - link "Mayur Mahale"
+  - list:
+    - listitem: "1"
+  - time: asked 49 mins ago
+  - text: 0 votes 1 answer 8 views
+  - heading "Loading a file with multiple sexp in OCaml" [level=3]:
+    - link "Loading a file with multiple sexp in OCaml"
+  - text: I want to load a file with multiple sexp and get a list of sexp, and convert the list to a list of some custom type. I know that Core.Sexp.load_sexp_conv_exn filename ty_of_sexp can load a file with a ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'ocaml'": ocaml
+  - link "Cs_J's user avatar":
+    - img "Cs_J's user avatar"
+  - link "Cs_J"
+  - list:
+    - listitem: "91"
+  - time: asked 56 mins ago
+  - text: 0 votes 0 answers 6 views
+  - 'heading "Error: Component auth has not been registered yet [React, Typescript, Firebase on Mac Studio]" [level=3]':
+    - 'link "Error: Component auth has not been registered yet [React, Typescript, Firebase on Mac Studio]"'
+  - text: "I'm trying to start a small React application using Typescript templates and Firebase backend. I'm using npx expo to run the application and simulate in an android emulator/device: npx expo start --..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'typescript'": typescript
+    - listitem:
+      - link "show questions tagged 'firebase'": firebase
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+  - link "Saju Chacko Rajan's user avatar":
+    - img "Saju Chacko Rajan's user avatar"
+  - link "Saju Chacko Rajan"
+  - list:
+    - listitem: "1"
+  - time: asked 59 mins ago
+  - text: 1 vote 0 answers 17 views
+  - heading "How to optimize the bundle size of the imported shadcn Select component in next.js?" [level=3]:
+    - link "How to optimize the bundle size of the imported shadcn Select component in next.js?"
+  - text: <Select> <SelectTrigger className="w-full"> <SelectValue placeholder="select something..." /> </SelectTrigger> <SelectContent className="w-...
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'next.js'": next.js
+    - listitem:
+      - link "show questions tagged 'shadcnui'": shadcnui
+  - link "NoobMaster's user avatar":
+    - img "NoobMaster's user avatar"
+  - link "NoobMaster"
+  - list:
+    - listitem: "33"
+  - time: asked 59 mins ago
+  - text: "-1 votes 0 answers 12 views"
+  - heading "Segmentation Fault while using Raylib to load image and draw it on canvas" [level=3]:
+    - link "Segmentation Fault while using Raylib to load image and draw it on canvas"
+  - text: I am new to raylib and C++ and experimenting to make the code as modular as possible. I have made a class in button header file and the definition in button.cpp file. But while implementing it in my ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'raylib'": raylib
+  - link "Navneet Singh's user avatar":
+    - img "Navneet Singh's user avatar"
+  - link "Navneet Singh"
+  - list:
+    - listitem: "1"
+  - time: asked 59 mins ago
+  - text: "-1 votes 0 answers 20 views"
+  - heading "can't find libc++ packages on el9" [level=3]:
+    - link "can't find libc++ packages on el9"
+  - text: I have a c++ application that I automatically build and release for various platforms. I use docker images to build for Linux distros. Recently I ran into a libstdc++ bug in std::regex (very old, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'clang'": clang
+    - listitem:
+      - link "show questions tagged 'std'": std
+    - listitem:
+      - link "show questions tagged 'rhel'": rhel
+    - listitem:
+      - link "show questions tagged 'libc++'": libc++
+  - link "Neil Stephens's user avatar":
+    - img "Neil Stephens's user avatar"
+  - link "Neil Stephens"
+  - list:
+    - listitem: "144"
+  - time: asked 59 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615364"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "A new look for what’s next"
+    - listitem:
+      - link "Using AI to find patient zero in marketing campaigns"
+    - listitem: Featured on Meta
+    - listitem:
+      - 'link "Evolving comments: An experiment to encourage engagement and follow-up questions"'
+    - listitem:
+      - link "After 16 years, we’re renewing the Brand"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "Discussions learnings and potential next steps"
+    - listitem:
+      - 'link "2025 Developer Survey: Call for Feedback"'
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 34k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 22k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 20k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2530829
+  - link "show questions tagged 'python'": python
+  - text: × 2211261
+  - link "show questions tagged 'java'": java
+  - text: × 1919967
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624821
+  - link "show questions tagged 'php'": php
+  - text: × 1467632
+  - link "show questions tagged 'android'": android
+  - text: × 1419126
+  - link "show questions tagged 'html'": html
+  - text: × 1188489
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036086
+  - link "show questions tagged 'c++'": c++
+  - text: × 814261
+  - link "show questions tagged 'css'": css
+  - text: × 807742
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Kosmos 482 altitude is below perigee?"
+    - listitem:
+      - link "How can you predict with any accuracy the number of hours needed to develop an app"
+    - listitem:
+      - link "Delta-Sigma output from microcontroller hardware timers?"
+    - listitem:
+      - link "Traditional German recipe involving boiled and fried bread, with seasoned Tuna and Lemon Juice?"
+    - listitem:
+      - link "Why would chemical weapons never be used in a science-fiction setting?"
+    - listitem:
+      - link "Is mkswap hw dependent?"
+    - listitem:
+      - link "Can Truesight reveal a mimic?"
+    - listitem:
+      - link "Why is the translation of he is healthy 'он здорóв'"
+    - listitem:
+      - link "Package clash fontspec,mathastext,amssymb,amsfonts,plain,showframe"
+    - listitem:
+      - link "What does this (1 1) mean above the two adjacent notes?"
+    - listitem:
+      - link "Help identify novel in which hero kills an assassin via a paper trick"
+    - listitem:
+      - link "All subspaces Hausdorff then Hausdorff?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.5.8.26374
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
