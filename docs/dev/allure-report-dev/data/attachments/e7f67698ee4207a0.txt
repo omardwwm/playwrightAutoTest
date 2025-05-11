@@ -1,0 +1,584 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale DE in dev Einvironment and Realm europe
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Discussions Labs"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,230,591 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 35"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 9 views
+  - heading "Why every time when I save to Core Data my app hangs for a while?" [level=3]:
+    - link "Why every time when I save to Core Data my app hangs for a while?"
+  - text: "There is always a warning: App is being debugged, do not track this hang Hang detected: 0.30s (debugger attached, not reporting) How do I save my changes to core data? I think it is standard ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'swiftui'": swiftui
+  - link "Bartłomiej Semańczyk's user avatar":
+    - img "Bartłomiej Semańczyk's user avatar"
+  - link "Bartłomiej Semańczyk"
+  - list:
+    - listitem: 62.1k
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "could not deduce ‘FromJSON ABC' and Could not deduce ‘ToJSON ABC'" [level=3]:
+    - link "could not deduce ‘FromJSON ABC' and Could not deduce ‘ToJSON ABC'"
+  - text: "I'm using aeson to convert json to data and vice versa. import ClassyPrelude import Data.Aeson import Data.Aeson.TH data EmailVerificationPayload = EmailVerificationPayload { ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'haskell'": haskell
+    - listitem:
+      - link "show questions tagged 'aeson'": aeson
+  - link "user51's user avatar":
+    - img "user51's user avatar"
+  - link "user51"
+  - list:
+    - listitem: 10.4k
+  - time: asked 20 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Why is my flask application taking soo long to connect to the Oracle database from PCF?" [level=3]:
+    - link "Why is my flask application taking soo long to connect to the Oracle database from PCF?"
+  - text: So, i have been stuck with the connection timeouts happening from the PCF server. I am using oracledb.connect() and i'm fetching the role from the database. Until I restart the application in PCF it ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'flask'": flask
+    - listitem:
+      - link "show questions tagged 'pcf'": pcf
+    - listitem:
+      - link "show questions tagged 'python-oracledb'": python-oracledb
+  - link "Gracy Stephen's user avatar":
+    - img "Gracy Stephen's user avatar"
+  - link "Gracy Stephen"
+  - list:
+    - listitem: "1"
+  - time: asked 23 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Is it possible to generically access the properties of a structure in a type-safe manner in Typescript?" [level=3]:
+    - link "Is it possible to generically access the properties of a structure in a type-safe manner in Typescript?"
+  - text: "Handling structures (or tagged unions) in typescript in a type-safe manner is a pain (at least for me). Take a look at the following code: type Data = { a?: string; b?: number; }; function ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'typescript'": typescript
+  - link "Kiuhnm's user avatar":
+    - img "Kiuhnm's user avatar"
+  - link "Kiuhnm"
+  - list:
+    - listitem: "478"
+  - time: asked 25 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "AdMob TCF 10.1 Error and U.S. State Privacy Message Not Showing – Despite UMP SDK Integration" [level=3]:
+    - link "AdMob TCF 10.1 Error and U.S. State Privacy Message Not Showing – Despite UMP SDK Integration"
+  - text: I'm integrating Google AdMob + UMP SDK into my Android app to handle GDPR and U.S. state-level privacy requirements (California/CCPA, Virginia, etc.). My implementation is based on Google’s official ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'admob'": admob
+    - listitem:
+      - link "show questions tagged 'admob-cookieconsent'": admob-cookieconsent
+  - link "Shayegan's user avatar":
+    - img "Shayegan's user avatar"
+  - link "Shayegan"
+  - list:
+    - listitem: "37"
+  - time: asked 32 mins ago
+  - text: 0 votes 1 answer 16 views
+  - 'heading "TypeError: sequence item 0: expected str instance, int found. what should I do to show this list as a matrix form" [level=3]':
+    - 'link "TypeError: sequence item 0: expected str instance, int found. what should I do to show this list as a matrix form"'
+  - text: matrix1=[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]] m2="\n".join(["\t".join([ritem for ritem in item]) for item in matrix1]) print(m2) where am i wrong that i receive this ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'list-comprehension'": list-comprehension
+  - link "mohammad saeed heidari's user avatar":
+    - img "mohammad saeed heidari's user avatar"
+  - link "mohammad saeed heidari"
+  - list:
+    - listitem: "3"
+  - time: asked 38 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "Problem regarding getting old UI in credential manager API in android" [level=3]:
+    - link "Problem regarding getting old UI in credential manager API in android"
+  - text: I am trying to make login flow using google sign-in in android using credential manager but I always end up getting old traditional google sign-in UI. Here is my code for reference. import android....
+  - link
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'firebase'": firebase
+    - listitem:
+      - link "show questions tagged 'kotlin'": kotlin
+    - listitem:
+      - link "show questions tagged 'credential-manager'": credential-manager
+  - link "Dhyeeey's user avatar":
+    - img "Dhyeeey's user avatar"
+  - link "Dhyeeey"
+  - list:
+    - listitem: "1"
+  - time: asked 40 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "Raylib simple snow particle system flickering problem" [level=3]:
+    - link "Raylib simple snow particle system flickering problem"
+  - text: I'm quite new to Raylib and trying to make a simple snow particle system. I managed to make it as below code and built it. But when I run it, the snowflakes flicker and I can easily notice it. Here's ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c'": c
+    - listitem:
+      - link "show questions tagged 'flicker'": flicker
+    - listitem:
+      - link "show questions tagged 'particles'": particles
+    - listitem:
+      - link "show questions tagged 'raylib'": raylib
+    - listitem:
+      - link "show questions tagged 'snow'": snow
+  - link "Sean's user avatar":
+    - img "Sean's user avatar"
+  - link "Sean"
+  - list:
+    - listitem: "1"
+  - time: asked 48 mins ago
+  - text: 0 votes 0 answers 19 views
+  - heading "Race conditions in Entity Framework Core FirstOrDefaultAsync() followed by AddAsync used in xUnit InitializeAsync" [level=3]:
+    - link "Race conditions in Entity Framework Core FirstOrDefaultAsync() followed by AddAsync used in xUnit InitializeAsync"
+  - text: "I use xUnit with different test collections: [CollectionDefinition(Name)] public class ControllerTestsCollection : ICollectionFixture<CustomWebApplicationFactory<Program>> { public ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'asp.net-core'": asp.net-core
+    - listitem:
+      - link "show questions tagged 'async-await'": async-await
+    - listitem:
+      - link "show questions tagged 'entity-framework-core'": entity-framework-core
+    - listitem:
+      - link "show questions tagged 'atomic'": atomic
+    - listitem:
+      - link "show questions tagged 'race-condition'": race-condition
+  - link "khteh's user avatar":
+    - img "khteh's user avatar"
+  - link "khteh"
+  - list:
+    - listitem: 4,100
+  - time: asked 51 mins ago
+  - text: 0 votes 1 answer 19 views
+  - heading "Multithread background worker calling a method" [level=3]:
+    - link "Multithread background worker calling a method"
+  - text: I thank you for your help in advance. I have a background worker that actually calls a method (DirectoryMethod) which opens up the FolderBrowserDialog and does a hash on all of the files within the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'windows'": windows
+    - listitem:
+      - link "show questions tagged 'forms'": forms
+  - link "DemarcPoint's user avatar":
+    - img "DemarcPoint's user avatar"
+  - link "DemarcPoint"
+  - list:
+    - listitem: "195"
+  - time: asked 56 mins ago
+  - text: 0 votes 0 answers 18 views
+  - heading "Embedding @Observable @MainActor in swift concurrency based class" [level=3]:
+    - link "Embedding @Observable @MainActor in swift concurrency based class"
+  - text: I'm working on a Swift package that will use asynchronous work. I want it to be easier for other developers to implement in SwiftUI directly without an intermediate view model, as shown in many "...
+  - list:
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'concurrency'": concurrency
+    - listitem:
+      - link "show questions tagged 'observable'": observable
+    - listitem:
+      - link "show questions tagged 'swift6'": swift6
+    - listitem:
+      - link "show questions tagged 'mainactor'": mainactor
+  - link "Jim M's user avatar":
+    - img "Jim M's user avatar"
+  - link "Jim M"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 11 views
+  - heading "AWS Elastic Beanstalk Docker app timing out after 60 seconds" [level=3]:
+    - link "AWS Elastic Beanstalk Docker app timing out after 60 seconds"
+  - text: I'm running a Docker-based application on AWS Elastic Beanstalk (Amazon Linux 2). The app works correctly on my local machine, but after deployment, any HTTP request that takes more than 60 seconds ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'amazon-elastic-beanstalk'": amazon-elastic-beanstalk
+    - listitem:
+      - link "show questions tagged 'connection-timeout'": connection-timeout
+  - link "Pushpender Rawat's user avatar":
+    - img "Pushpender Rawat's user avatar"
+  - link "Pushpender Rawat"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 10 views
+  - heading "Jetpack Compose - understanding the subscription mechanism" [level=3]:
+    - link "Jetpack Compose - understanding the subscription mechanism"
+  - text: "I'm looking at this working code: class MainActivity : AppCompatActivity() { var progress by mutableStateOf(0f) override fun onCreate(savedInstanceState: Bundle?) { super...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'android-jetpack-compose'": android-jetpack-compose
+  - link "Uriel Frankel's user avatar":
+    - img "Uriel Frankel's user avatar"
+  - link "Uriel Frankel"
+  - list:
+    - listitem: 14.6k
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 18 views
+  - heading "Realtime Database structure creation fails – values disappear or produce errors" [level=3]:
+    - link "Realtime Database structure creation fails – values disappear or produce errors"
+  - text: I'm attempting to manually create base data structures in the Realtime Database for a project called “Viral Content Platform.” The platform is being built to support campaign creation, sharing, and ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'json'": json
+    - listitem:
+      - link "show questions tagged 'firebase'": firebase
+    - listitem:
+      - link "show questions tagged 'firebase-realtime-database'": firebase-realtime-database
+    - listitem:
+      - link "show questions tagged 'data-structures'": data-structures
+    - listitem:
+      - link "show questions tagged 'null'": "null"
+  - link "S. Davis's user avatar":
+    - img "S. Davis's user avatar"
+  - link "S. Davis"
+  - list:
+    - listitem: "11"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 20 views
+  - heading "Jenkins - No such file or directory after moving to Linux" [level=3]:
+    - link "Jenkins - No such file or directory after moving to Linux"
+  - text: "I get the following error when running the following groovy code since moving jenkins node to linux: java.io.FileNotFoundException: /home/jenkins/agent/workspace/tompia_system/.conf/config.json (No ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'linux'": linux
+    - listitem:
+      - link "show questions tagged 'jenkins'": jenkins
+    - listitem:
+      - link "show questions tagged 'groovy'": groovy
+  - link "Martin1999's user avatar":
+    - img "Martin1999's user avatar"
+  - link "Martin1999"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615373"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "A new look for what’s next"
+    - listitem:
+      - link "Using AI to find patient zero in marketing campaigns"
+    - listitem: Featured on Meta
+    - listitem:
+      - 'link "Evolving comments: An experiment to encourage engagement and follow-up questions"'
+    - listitem:
+      - link "After 16 years, we’re renewing the Brand"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "Discussions learnings and potential next steps"
+    - listitem:
+      - 'link "2025 Developer Survey: Call for Feedback"'
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 34k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 22k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "R Language" [level=1]:
+    - link "R Language"
+  - text: 13k Members
+  - button "Join"
+  - text: A collective where data scientists and AI researchers gather to find, share, and learn about R and other subtags like knitr and dplyr.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2530843
+  - link "show questions tagged 'python'": python
+  - text: × 2211304
+  - link "show questions tagged 'java'": java
+  - text: × 1919972
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624826
+  - link "show questions tagged 'php'": php
+  - text: × 1467628
+  - link "show questions tagged 'android'": android
+  - text: × 1419130
+  - link "show questions tagged 'html'": html
+  - text: × 1188497
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036087
+  - link "show questions tagged 'c++'": c++
+  - text: × 814261
+  - link "show questions tagged 'css'": css
+  - text: × 807751
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "What does \"fragrant\" mean in \"a fragrant offering and sacrifice to God\" Ephesians 5:2?"
+    - listitem:
+      - link "How can I check if my employer's high deductible health plan meets the minimum value standard?"
+    - listitem:
+      - link "Why does Liszt use the article \"le\" before Dante's name?"
+    - listitem:
+      - link "Does Pope Leo XIV lose his citizenships?"
+    - listitem:
+      - link "A utopia with matter control in a dying universe"
+    - listitem:
+      - link "Pgfplots tick label values are incorrect"
+    - listitem:
+      - link "Sed - Help Matching with Multi-Line Match"
+    - listitem:
+      - link "How to remove old teflon tape from shower elbow drop that is hard to reach"
+    - listitem:
+      - link "Does Fridge Friend extend the life of produce in your fridge?"
+    - listitem:
+      - link "The phrase “the gym” instead of “a gym” in a conversation with a stranger"
+    - listitem:
+      - link "Is 40 pages too long for a math/cs research paper?"
+    - listitem:
+      - link "Does the lowest altitude of a star depend on the latitude?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.5.8.26374
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
