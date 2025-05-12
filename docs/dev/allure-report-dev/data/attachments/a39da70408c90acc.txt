@@ -1,0 +1,584 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale NZ in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Discussions Labs"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,230,750 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 36"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 2 views
+  - heading "How can I design an algorithm to counterbalance urban overrepresentation in electoral districts?" [level=3]:
+    - link "How can I design an algorithm to counterbalance urban overrepresentation in electoral districts?"
+  - text: In Canada, federal electoral districts are redrawn after each census to ensure each riding has a maximum population of around 100,000 people. This is intended to create equal representation, but in ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'algorithm'": algorithm
+    - listitem:
+      - link "show questions tagged 'math'": math
+  - link "puk's user avatar":
+    - img "puk's user avatar"
+  - link "puk"
+  - list:
+    - listitem: 16.8k
+  - time: asked 2 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "Azure Routes for Egress and ingress flows" [level=3]:
+    - link "Azure Routes for Egress and ingress flows"
+  - text: i just want to verify something that related to Azure UDR (routes) if i have a network topology as for the example hub and spoke, in the hub i have some FW it can be NVA/Azure FW. in the spoke i have ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'azure'": azure
+  - link "Eldos's user avatar":
+    - img "Eldos's user avatar"
+  - link "Eldos"
+  - list:
+    - listitem: "613"
+  - time: asked 2 mins ago
+  - text: 0 votes 0 answers 2 views
+  - heading "How to handle multi-class classification where subclasses across different superclasses are more semantically similar than within the same superclass?" [level=3]:
+    - link "How to handle multi-class classification where subclasses across different superclasses are more semantically similar than within the same superclass?"
+  - text: I have a malicious traffic feature dataset with 10 major categories label, and I know there are 207 fine-grained subclasses, each belonging to one of those 10 superclasses, and I don't have the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'machine-learning'": machine-learning
+    - listitem:
+      - link "show questions tagged 'conv-neural-network'": conv-neural-network
+    - listitem:
+      - link "show questions tagged 'classification'": classification
+  - link "Cacciatore's user avatar":
+    - img "Cacciatore's user avatar"
+  - link "Cacciatore"
+  - list:
+    - listitem: "1"
+  - time: asked 3 mins ago
+  - text: "-2 votes 0 answers 6 views"
+  - heading "How can I prevent race conditions in PHP when multiple users update the same row in MySQL simultaneously?" [level=3]:
+    - link "How can I prevent race conditions in PHP when multiple users update the same row in MySQL simultaneously?"
+  - text: I'm building an inventory management system using PHP and MySQL (InnoDB). When two users attempt to update the stock quantity at the same time, the latest write seems to overwrite the previous one, ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'mysql'": mysql
+    - listitem:
+      - link "show questions tagged 'database'": database
+    - listitem:
+      - link "show questions tagged 'prestashop'": prestashop
+    - listitem:
+      - link "show questions tagged 'e-commerce'": e-commerce
+  - link "josephchain440's user avatar":
+    - img "josephchain440's user avatar"
+  - link "josephchain440"
+  - list:
+    - listitem: "1"
+  - time: asked 4 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "Sol2 error \"incomplete type \"sol::state\" is not allowed\"" [level=3]:
+    - link "Sol2 error \"incomplete type \"sol::state\" is not allowed\""
+  - text: I am pretty new to C++, used C and now C#, so I'm clearly missing something. But I have created a VS C++ solution and added the most basic Sol2 example I could find, however I am getting the following ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'lua'": lua
+    - listitem:
+      - link "show questions tagged 'incomplete-type'": incomplete-type
+  - link "TheGrovesy's user avatar":
+    - img "TheGrovesy's user avatar"
+  - link "TheGrovesy"
+  - list:
+    - listitem: "273"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Dropdown affected button for updating value" [level=3]:
+    - link "Dropdown affected button for updating value"
+  - text: I have a dropdown list (from a range), and would like a button that inputs the value from a cell outside of this range into a cell within the range. However the cell the button updates the value of ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'google-apps-script'": google-apps-script
+    - listitem:
+      - link "show questions tagged 'google-workspace'": google-workspace
+  - link "Jesse Ashton's user avatar":
+    - img "Jesse Ashton's user avatar"
+  - link "Jesse Ashton"
+  - list:
+    - listitem: "1"
+  - time: asked 6 mins ago
+  - text: "-1 votes 0 answers 6 views"
+  - heading "How to use Twig (twigphp) display_end" [level=3]:
+    - link "How to use Twig (twigphp) display_end"
+  - text: The documentation doesn't provide information on how to use display_end. My search for a way to act on rendered content showed me, that display_end is the way to achieve what i need. But i don't ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'twig'": twig
+    - listitem:
+      - link "show questions tagged 'hook'": hook
+  - link "Sebastian Fischer's user avatar":
+    - img "Sebastian Fischer's user avatar"
+  - link "Sebastian Fischer"
+  - list:
+    - listitem: "185"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 11 views
+  - 'heading "TypeError: Cannot add property selectedAnswer, object is not extensible" [level=3]':
+    - 'link "TypeError: Cannot add property selectedAnswer, object is not extensible"'
+  - text: "Getting object not extensible error for selectedAnswer const answer = data.question_answers?.[ques.id]; if (answer) { if (ques.isOnlyBool) { ques...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'angular'": angular
+    - listitem:
+      - link "show questions tagged 'typescript'": typescript
+  - link "Ajinkya Kulkarni's user avatar":
+    - img "Ajinkya Kulkarni's user avatar"
+  - link "Ajinkya Kulkarni"
+  - list:
+    - listitem: "51"
+  - time: asked 8 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "IBM Websphere 9.5 is keep calling class loader resulting severe application performance issues" [level=3]:
+    - link "IBM Websphere 9.5 is keep calling class loader resulting severe application performance issues"
+  - text: I have an application which had a web war file & an ear file (contains my mdbs & ejbs) deployed in IBM Websphere 9.5. I have also mapped my application's dependencies in WAS Shared library ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'websphere'": websphere
+    - listitem:
+      - link "show questions tagged 'classloader'": classloader
+    - listitem:
+      - link "show questions tagged 'unzip'": unzip
+  - link "Manohar Amkem's user avatar":
+    - img "Manohar Amkem's user avatar"
+  - link "Manohar Amkem"
+  - list:
+    - listitem: "35"
+  - time: asked 11 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Google Fit Consent Screen Not Showing After Migration from Xamarin Forms to .NET MAUI" [level=3]:
+    - link "Google Fit Consent Screen Not Showing After Migration from Xamarin Forms to .NET MAUI"
+  - text: "Description: We recently migrated our application from Xamarin Forms to .NET MAUI, and since then, the Google Fit consent screen is no longer visible during the authorization flow. Previous State: In ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'xamarin.forms'": xamarin.forms
+    - listitem:
+      - link "show questions tagged 'oauth-2.0'": oauth-2.0
+    - listitem:
+      - link "show questions tagged 'migration'": migration
+    - listitem:
+      - link "show questions tagged 'maui'": maui
+    - listitem:
+      - link "show questions tagged 'google-fit'": google-fit
+  - link "Radu Paul's user avatar":
+    - img "Radu Paul's user avatar"
+  - link "Radu Paul"
+  - list:
+    - listitem: "9"
+  - time: asked 13 mins ago
+  - text: 1 vote 0 answers 9 views
+  - heading "Redis 8 x86_64 RPM with CentOS" [level=3]:
+    - link "Redis 8 x86_64 RPM with CentOS"
+  - text: For my project, I'm using Redis (version 6.2) as a cache. both a cluster and a single node. I now wish to begin using Redis with Vector databases. I looked into the Redis stack for the same thing, but ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'redis'": redis
+    - listitem:
+      - link "show questions tagged 'redis-stack'": redis-stack
+  - link "S_K's user avatar":
+    - img "S_K's user avatar"
+  - link "S_K"
+  - list:
+    - listitem: "11"
+  - time: asked 16 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "qemu/kvm guest physical address (GPA) mapping using intel EPT on host" [level=3]:
+    - link "qemu/kvm guest physical address (GPA) mapping using intel EPT on host"
+  - text: I'm running a qemu/kvm VM on a physical host having support for Intel EPT enabled. By using qemu monitor, I'd like to check the mapping of GPA (Guest Physical Address) to HPA (Host Physical Address). ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'virtual-machine'": virtual-machine
+    - listitem:
+      - link "show questions tagged 'qemu'": qemu
+    - listitem:
+      - link "show questions tagged 'kvm'": kvm
+    - listitem:
+      - link "show questions tagged 'page-tables'": page-tables
+    - listitem:
+      - link "show questions tagged 'ept'": ept
+  - link "CarloC's user avatar":
+    - img "CarloC's user avatar"
+  - link "CarloC"
+  - list:
+    - listitem: "313"
+  - time: asked 17 mins ago
+  - text: 0 votes 0 answers 21 views
+  - heading "Correct way to get an array through low-level allocation functions" [level=3]:
+    - link "Correct way to get an array through low-level allocation functions"
+  - text: Most low-level allocation functions are returning void *. If I want to have pointer arithmetic on the obtained memory and/or to just allocate an array, is this the correct way to do that, without ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'arrays'": arrays
+    - listitem:
+      - link "show questions tagged 'memory-management'": memory-management
+    - listitem:
+      - link "show questions tagged 'pointer-arithmetic'": pointer-arithmetic
+  - link "Oersted's user avatar":
+    - img "Oersted's user avatar"
+  - link "Oersted"
+  - list:
+    - listitem: 3,093
+  - time: asked 20 mins ago
+  - text: 0 votes 0 answers 17 views
+  - heading "How to persist resources across API calls in AWS Lambda with FastAPI and Mangum?" [level=3]:
+    - link "How to persist resources across API calls in AWS Lambda with FastAPI and Mangum?"
+  - text: I am running a FastAPI application on AWS Lambda using the Mangum adapter. The application is triggered via an Application Load Balancer (ALB). I am facing an issue where certain resources (e.g., ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'aws-lambda'": aws-lambda
+    - listitem:
+      - link "show questions tagged 'fastapi'": fastapi
+    - listitem:
+      - link "show questions tagged 'resource-management'": resource-management
+    - listitem:
+      - link "show questions tagged 'mangum'": mangum
+  - link "achu prasad's user avatar":
+    - img "achu prasad's user avatar"
+  - link "achu prasad"
+  - list:
+    - listitem: "1"
+  - time: asked 22 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Error when running ./gradlew clean with expo" [level=3]:
+    - link "Error when running ./gradlew clean with expo"
+  - text: I am running my expo react native project on an android emulator. So i ran these commands npx expo prebuild cd android ./gradlew clean but it always meets this error ./gradlew clean [Incubating] ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+    - listitem:
+      - link "show questions tagged 'expo'": expo
+  - link "Nhung's user avatar":
+    - img "Nhung's user avatar"
+  - link "Nhung"
+  - list:
+    - listitem: "1"
+  - time: asked 24 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615384"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "A new look for what’s next"
+    - listitem:
+      - link "Using AI to find patient zero in marketing campaigns"
+    - listitem: Featured on Meta
+    - listitem:
+      - 'link "Evolving comments: An experiment to encourage engagement and follow-up questions"'
+    - listitem:
+      - link "After 16 years, we’re renewing the Brand"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "Discussions learnings and potential next steps"
+    - listitem:
+      - 'link "2025 Developer Survey: Call for Feedback"'
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 63k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 26k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 10k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2530856
+  - link "show questions tagged 'python'": python
+  - text: × 2211331
+  - link "show questions tagged 'java'": java
+  - text: × 1919981
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624837
+  - link "show questions tagged 'php'": php
+  - text: × 1467582
+  - link "show questions tagged 'android'": android
+  - text: × 1419145
+  - link "show questions tagged 'html'": html
+  - text: × 1188503
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036087
+  - link "show questions tagged 'c++'": c++
+  - text: × 814271
+  - link "show questions tagged 'css'": css
+  - text: × 807759
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Measurement of potential difference between two identical phases not at equilibrium"
+    - listitem:
+      - link "My paper was submitted without my consent, accepted, then replaced by substantially different camera-ready version when I complained"
+    - listitem:
+      - link "Best beginner-friendly book on quantum computing with intuitive explanations and classical analogies?"
+    - listitem:
+      - link "Does a Non Jew fall into the category of אינו מצווה ועושה"
+    - listitem:
+      - link "Pair Correlation Function for ideal polymer chain"
+    - listitem:
+      - link "Does Pope Leo XIV lose his citizenships?"
+    - listitem:
+      - link "Why do both Hebrew and Arabic both geminate consonants after the definite article?"
+    - listitem:
+      - link "1970 Ford E300 302 V8, Automatic. Battery New fully charged. No start or even a click when key is turned"
+    - listitem:
+      - link "Should I say \"the light is blinking or flickering\" when there is a technical glitch?"
+    - listitem:
+      - link "Reconciling the various ways to picture vectors (or \"contravariant vectors\") and dual vectors (or \"covariant vectors\")"
+    - listitem:
+      - link "Infinite precision integer in C++20"
+    - listitem:
+      - link "Make a square frame of equal size around some distinct characters"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.5.8.26374
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
