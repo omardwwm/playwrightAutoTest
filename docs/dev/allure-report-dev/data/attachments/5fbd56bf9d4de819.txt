@@ -1,0 +1,569 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale CA in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Discussions Labs"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,231,669 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 31"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 5 views
+  - heading "Using React-pdf-Viewer library search and highlight plugins, is there any way I can restrict to highlight just the first match?" [level=3]:
+    - link "Using React-pdf-Viewer library search and highlight plugins, is there any way I can restrict to highlight just the first match?"
+  - text: In my React app, I have rendered pdf using the library on left side of the page. On the right side, i am showing extracted data from the pdf in tabular format. Whenever a user clicks on the displayed ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'search'": search
+    - listitem:
+      - link "show questions tagged 'highlight'": highlight
+    - listitem:
+      - link "show questions tagged 'react-pdf-viewer'": react-pdf-viewer
+  - link "Vaishali Valavade's user avatar":
+    - img "Vaishali Valavade's user avatar"
+  - link "Vaishali Valavade"
+  - list:
+    - listitem: "1"
+  - time: asked 4 mins ago
+  - text: 0 votes 0 answers 3 views
+  - heading "Compile error that shows 'instance is undefined entity \"(symbol name)\"" [level=3]:
+    - link "Compile error that shows 'instance is undefined entity \"(symbol name)\""
+  - text: I'm new to quartus2 13.1. I made a symbol of 4 to 1 line multiplexer to use it, but when I made other circuit using it and compiled it, there's and error that shows "Node instance instantiates ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'compiler-errors'": compiler-errors
+    - listitem:
+      - link "show questions tagged 'quartus'": quartus
+  - link "Unknown's user avatar":
+    - img "Unknown's user avatar"
+  - link "Unknown"
+  - list:
+    - listitem: "1"
+  - time: asked 4 mins ago
+  - text: 1 vote 0 answers 5 views
+  - heading "how to hide black border on side near camera on full screen game android studio" [level=3]:
+    - link "how to hide black border on side near camera on full screen game android studio"
+  - text: On the left side, there is a black color. I tried to find a way to remove it but I still can't. I tried switching the screen to the other side and it was the same, but it would switch to the other ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'android-studio'": android-studio
+  - link "ifudth's user avatar":
+    - img "ifudth's user avatar"
+  - link "ifudth"
+  - list:
+    - listitem: "11"
+  - time: asked 4 mins ago
+  - text: "-1 votes 0 answers 6 views"
+  - heading "React 19 project not working after installing React Router DOM" [level=3]:
+    - link "React 19 project not working after installing React Router DOM"
+  - text: "I started a new project using React 19. After setting up the project, I installed react-router-dom, but my application stopped working. I'm not sure what's going wrong. Here’s what I did: Created a ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'react-router'": react-router
+  - link "Syed Muhammad Ali Raza's user avatar":
+    - img "Syed Muhammad Ali Raza's user avatar"
+  - link "Syed Muhammad Ali Raza"
+  - list:
+    - listitem: "376"
+  - time: asked 7 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "why snap7 polling return miss data?" [level=3]:
+    - link "why snap7 polling return miss data?"
+  - text: I encountered a problem, when I used the as_db_read to read the DB, I found that there is a data in the returned result that is inconsistent with the return result of the db_read, which is amazing, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'ctypes'": ctypes
+    - listitem:
+      - link "show questions tagged 'plc'": plc
+    - listitem:
+      - link "show questions tagged 'snap7'": snap7
+  - link "黄大胆's user avatar":
+    - img "黄大胆's user avatar"
+  - link "黄大胆"
+  - list:
+    - listitem: "1"
+  - time: asked 8 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "What does 'arduino-builder returned 139' when uploading a sketch?" [level=3]:
+    - link "What does 'arduino-builder returned 139' when uploading a sketch?"
+  - text: "Setup: I am using an Apple M2 Mac (running Sequoia) in conjunction with an Arduino Uno to program a basic ATTiny85 chip. The boards are all up-to-date in the board manager. The electronics are set up ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'arduino'": arduino
+    - listitem:
+      - link "show questions tagged 'attiny'": attiny
+  - link "Ash's user avatar":
+    - img "Ash's user avatar"
+  - link "Ash"
+  - list:
+    - listitem: 9,403
+  - time: asked 13 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Unable to unpair Matter accessory" [level=3]:
+    - link "Unable to unpair Matter accessory"
+  - text: "I’m using the MatterSupport framework to integrate Matter devices in my iOS app, following this documentation Here’s the code I’m using to trigger the Apple UI for commissioning Matter devices: import ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'iot'": iot
+    - listitem:
+      - link "show questions tagged 'apple-developer'": apple-developer
+  - link "Abhishek Kohli's user avatar":
+    - img "Abhishek Kohli's user avatar"
+  - link "Abhishek Kohli"
+  - list:
+    - listitem: "1"
+  - time: asked 13 mins ago
+  - text: 1 vote 0 answers 13 views
+  - heading "How is np.repeat so fast?" [level=3]:
+    - link "How is np.repeat so fast?"
+  - text: I am implementing the Poisson bootstrap in Rust and wanted to benchmark my repeat function against numpy's. Briefly, repeat takes in two arguments, data and weight, and repeats each element of data by ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'arrays'": arrays
+    - listitem:
+      - link "show questions tagged 'numpy'": numpy
+    - listitem:
+      - link "show questions tagged 'rust'": rust
+  - link "stressed's user avatar":
+    - img "stressed's user avatar"
+  - link "stressed"
+  - list:
+    - listitem: "452"
+  - time: asked 13 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "Sending email in Jenkins with content from a file" [level=3]:
+    - link "Sending email in Jenkins with content from a file"
+  - text: "I am unable to access the content of my file through Jenkin's Email System under post build actions. However, the email that I received says: ERROR: File 'D:/dontdelete/jenkinslogs/tvendpalltestmail/..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'email'": email
+    - listitem:
+      - link "show questions tagged 'jenkins'": jenkins
+  - link "Winston Leonard's user avatar":
+    - img "Winston Leonard's user avatar"
+  - link "Winston Leonard"
+  - list:
+    - listitem: "1"
+  - time: asked 13 mins ago
+  - text: 0 votes 0 answers 3 views
+  - heading "why WrongTypeOfReturnValue has been returned when i mock Thread.isAlive()?" [level=3]:
+    - link "why WrongTypeOfReturnValue has been returned when i mock Thread.isAlive()?"
+  - text: "I was trying to mock Thread.isAlive() in my UT,my code is as follows: Thread mockThread0 = PowerMockito.mock(Thread.class); PowerMockito.doReturn(false).when(mockThread0).isAlive(); but an error is ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'mockito'": mockito
+  - link "mathisdifficult's user avatar":
+    - img "mathisdifficult's user avatar"
+  - link "mathisdifficult"
+  - list:
+    - listitem: "1"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "Same python script works in base environment but not in created environment in vs code" [level=3]:
+    - link "Same python script works in base environment but not in created environment in vs code"
+  - text: "I have multiple python scripts meant for geospatial data processing. I had created an environment to run these scripts with following specific libraries installed: gdal, pandas tqdm geopandas numpy ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'geospatial'": geospatial
+    - listitem:
+      - link "show questions tagged 'development-environment'": development-environment
+    - listitem:
+      - link "show questions tagged 'gdal'": gdal
+  - link "HarshUp's user avatar":
+    - img "HarshUp's user avatar"
+  - link "HarshUp"
+  - list:
+    - listitem: "17"
+  - time: asked 16 mins ago
+  - text: 0 votes 1 answer 6 views
+  - heading "How to trigger GitHub Actions workflow only for specific label events (not all labels)" [level=3]:
+    - link "How to trigger GitHub Actions workflow only for specific label events (not all labels)"
+  - text: "I have a CI orchestration workflow that I want to trigger only when: A PR is opened, synchronized, or reopened A specific label (let's call it \"run-special-ci\") is added or removed from a ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'github-actions'": github-actions
+  - link "telomelonia's user avatar":
+    - img "telomelonia's user avatar"
+  - link "telomelonia"
+  - list:
+    - listitem: "1"
+  - time: asked 18 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "Specify multiple constraints on generic type when implementing method on generic struct" [level=3]:
+    - link "Specify multiple constraints on generic type when implementing method on generic struct"
+  - text: When implementation of some method is no different for multiple types but different for some other types, how can I write only one implementation that will encapsulate implementations for those types ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'rust'": rust
+  - link "Milos Stojanovic's user avatar":
+    - img "Milos Stojanovic's user avatar"
+  - link "Milos Stojanovic"
+  - list:
+    - listitem: 1,044
+  - time: asked 18 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "dotnet publish fails intermittently when publishing a WinForms app via code to automate setup buildig" [level=3]:
+    - link "dotnet publish fails intermittently when publishing a WinForms app via code to automate setup buildig"
+  - text: I'm automating the setup generation (.msi) file of a of a WinForms app using a C# console tool that invokes dotnet publish via code. The reason I'm automating it is because I need to create multiple ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'visual-studio'": visual-studio
+    - listitem:
+      - link "show questions tagged 'visual-studio-setup-proje'": visual-studio-setup-proje
+    - listitem:
+      - link "show questions tagged 'devenv'": devenv
+    - listitem:
+      - link "show questions tagged 'dotnet-publish'": dotnet-publish
+  - link "Zubair Khakwani's user avatar":
+    - img "Zubair Khakwani's user avatar"
+  - link "Zubair Khakwani"
+  - list:
+    - listitem: "446"
+  - time: asked 19 mins ago
+  - text: "-1 votes 0 answers 7 views"
+  - 'heading "light.exe : error LGHT0306 : An error (E_FAIL) was returned while finalizing a CAB file" [level=3]':
+    - 'link "light.exe : error LGHT0306 : An error (E_FAIL) was returned while finalizing a CAB file"'
+  - text: Running two Windows 11 Pro vms on Fedora Linux. One vm runs light.exe 3.11.2 just fine and creates the .msi. The other vm has this error when trying to create the .msi using the exact same codebase, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'linux'": linux
+    - listitem:
+      - link "show questions tagged 'wix'": wix
+    - listitem:
+      - link "show questions tagged 'virtual-machine'": virtual-machine
+    - listitem:
+      - link "show questions tagged 'fedora'": fedora
+    - listitem:
+      - link "show questions tagged 'light'": light
+  - link "doncooper's user avatar":
+    - img "doncooper's user avatar"
+  - link "doncooper"
+  - list:
+    - listitem: "59"
+  - time: asked 21 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615445"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - 'link "Next-level observability: live breakpoint debugging"'
+    - listitem:
+      - link "Is the enterprise (actually) ready for AI?"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "After 16 years, we’re renewing the Brand"
+    - listitem:
+      - 'link "Inviting more thoughts: Do these challenges resonate beyond Stack Overflow?..."'
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "Discussions learnings and potential next steps"
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 63k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 34k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 10k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2530899
+  - link "show questions tagged 'python'": python
+  - text: × 2211460
+  - link "show questions tagged 'java'": java
+  - text: × 1920033
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624874
+  - link "show questions tagged 'php'": php
+  - text: × 1467561
+  - link "show questions tagged 'android'": android
+  - text: × 1419182
+  - link "show questions tagged 'html'": html
+  - text: × 1188526
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036085
+  - link "show questions tagged 'c++'": c++
+  - text: × 814314
+  - link "show questions tagged 'css'": css
+  - text: × 807781
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "How do practitioners make actual use of filtrations?"
+    - listitem:
+      - 'link "`.initial:n` leads to an error when after `.inherit:n`?"'
+    - listitem:
+      - link "What is the best interpretation of Psalm 7:2? Does \"dragging\" or \"rending\" capture the intended meaning?"
+    - listitem:
+      - link "Using Out (%) with control flow"
+    - listitem:
+      - link "How to strum guitar chords; Em and E sound the same"
+    - listitem:
+      - link "Compiler is out of heap when compiling recursive consteval function"
+    - listitem:
+      - link "New train track elements"
+    - listitem:
+      - link "Regular pentagon dissection into five congruent polygons with same perimeter length of pentagon itself"
+    - listitem:
+      - link "A big rectangle filled with letters"
+    - listitem:
+      - link "Why am I getting different answers?"
+    - listitem:
+      - link "Show that one of the sets is bounded."
+    - listitem:
+      - link "How is Bernoulli's principle applied on airfoil bottom and top surface when they aren't on the same streamline?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.5.13.26653
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
