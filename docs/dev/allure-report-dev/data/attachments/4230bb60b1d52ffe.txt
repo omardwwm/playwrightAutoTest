@@ -1,0 +1,567 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale US in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Discussions Labs"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,229,693 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 27"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 6 views
+  - heading "\"/.well-known/appspecific/com.chrome.devtools.json\"' request" [level=3]:
+    - link "\"/.well-known/appspecific/com.chrome.devtools.json\"' request"
+  - text: "I have an app with Remix and Prisma. On the server side console I get this error: status: 404, statusText: 'Not Found', internal: true, data: 'Error: No route matches URL \"/.well- known/..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'google-chrome'": google-chrome
+    - listitem:
+      - link "show questions tagged 'google-chrome-devtools'": google-chrome-devtools
+    - listitem:
+      - link "show questions tagged 'remix'": remix
+    - listitem:
+      - link "show questions tagged 'remix.run'": remix.run
+  - link "Chen Peleg's user avatar":
+    - img "Chen Peleg's user avatar"
+  - link "Chen Peleg"
+  - list:
+    - listitem: 2,214
+  - time: asked 3 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "What are conditions for the WinAPI's FILE_FLAG_NO_BUFFERING alignment requirement to be enforced?" [level=3]:
+    - link "What are conditions for the WinAPI's FILE_FLAG_NO_BUFFERING alignment requirement to be enforced?"
+  - text: Various functions in the Windows API (e.g., CreateFile and subsequently, ReadFile/WriteFile) support the FILE_FLAG_NO_BUFFERING flag, compare CreateFileA function (fileapi.h) and most importantly File ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'windows'": windows
+    - listitem:
+      - link "show questions tagged 'performance'": performance
+    - listitem:
+      - link "show questions tagged 'alignment'": alignment
+    - listitem:
+      - link "show questions tagged 'disk'": disk
+    - listitem:
+      - link "show questions tagged 'buffering'": buffering
+  - link "bers's user avatar":
+    - img "bers's user avatar"
+  - link "bers"
+  - list:
+    - listitem: 6,045
+  - time: asked 3 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Teams Bot fails to send messages after a while — findAllChannels missing expected channels" [level=3]:
+    - link "Teams Bot fails to send messages after a while — findAllChannels missing expected channels"
+  - text: We are experiencing a recurring issue with our Teams bot that affects our customers periodically. In our service, whenever a notification event occurs, we send an alert message to the customer’s ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'botframework'": botframework
+    - listitem:
+      - link "show questions tagged 'microsoft-teams'": microsoft-teams
+  - link "Hyunsu Kim's user avatar":
+    - img "Hyunsu Kim's user avatar"
+  - link "Hyunsu Kim"
+  - list:
+    - listitem: "1"
+  - time: asked 5 mins ago
+  - text: 0 votes 1 answer 9 views
+  - heading "MsSQL server random shutdowns" [level=3]:
+    - link "MsSQL server random shutdowns"
+  - text: I'm running MsSQL server as a container deployment on Linux (Ubuntu 22.04), which initially appears to be working fine, I can connect to the database, I can create users etc. everything seems fine. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'sql-server'": sql-server
+  - link "V O's user avatar":
+    - img "V O's user avatar"
+  - link "V O"
+  - list:
+    - listitem: "113"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 3 views
+  - heading "MQTT over SSL, and NGINX stream module" [level=3]:
+    - link "MQTT over SSL, and NGINX stream module"
+  - text: Im building an MQTT system, but currently running on port 1883 because Im unable to implement SSL/TLS I have tried using nginx, but I just learnt that nginx is only best for browser/web based traffic, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'ssl'": ssl
+    - listitem:
+      - link "show questions tagged 'tcp'": tcp
+    - listitem:
+      - link "show questions tagged 'mqtt'": mqtt
+  - link "alpha's user avatar":
+    - img "alpha's user avatar"
+  - link "alpha"
+  - list:
+    - listitem: "1"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "EF Core Migration Conflicts Between develop and feature Branches (Code-First Approach)" [level=3]:
+    - link "EF Core Migration Conflicts Between develop and feature Branches (Code-First Approach)"
+  - text: "We're using Entity Framework Core with the Code-First approach, and our application has multiple active branches: develop (main integration branch) feature/x (feature-specific branch) Both branches ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'entity-framework-core'": entity-framework-core
+    - listitem:
+      - link "show questions tagged 'database-migration'": database-migration
+    - listitem:
+      - link "show questions tagged 'entity-framework-migrations'": entity-framework-migrations
+  - link "kaushal sharma's user avatar":
+    - img "kaushal sharma's user avatar"
+  - link "kaushal sharma"
+  - list:
+    - listitem: "3"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "How do delivery apps like Swiggy or Zepto mark societies/complexes when reverse geocoding isn't accurate?" [level=3]:
+    - link "How do delivery apps like Swiggy or Zepto mark societies/complexes when reverse geocoding isn't accurate?"
+  - text: I was wondering how delivery apps like Swiggy, Zomato, Zepto, or BigBasket are able to accurately identify and mark specific societies or apartment complexes, even when Google Maps reverse geocoding ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'google-maps'": google-maps
+    - listitem:
+      - link "show questions tagged 'reverse-geocoding'": reverse-geocoding
+  - link "Arun Vinod K's user avatar":
+    - img "Arun Vinod K's user avatar"
+  - link "Arun Vinod K"
+  - list:
+    - listitem: "46"
+  - time: asked 13 mins ago
+  - text: "-1 votes 0 answers 13 views"
+  - heading "Trying to Make a Review System in FireStore but having Permission Issues" [level=3]:
+    - link "Trying to Make a Review System in FireStore but having Permission Issues"
+  - text: "I'm trying to develop a review system. However, I've been getting a permission error: Uncaught (in promise) FirebaseError: Missing or Insufficient Permissions error. These aren't my full rules, but ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'firebase'": firebase
+    - listitem:
+      - link "show questions tagged 'google-cloud-firestore'": google-cloud-firestore
+    - listitem:
+      - link "show questions tagged 'permissions'": permissions
+  - link "Jason Zhang's user avatar":
+    - img "Jason Zhang's user avatar"
+  - link "Jason Zhang"
+  - list:
+    - listitem: "19"
+  - time: asked 15 mins ago
+  - text: 1 vote 1 answer 12 views
+  - heading "Why Tailwind is not recognized as an internal or external command, operable program or batch file?" [level=3]:
+    - link "Why Tailwind is not recognized as an internal or external command, operable program or batch file?"
+  - text: "I've been trying to install Tailwind CSS in my React app, But I got an error saying: 'tailwind' is not recognized as an internal or external command, operable program or batch file. I ran this ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+  - link "San's user avatar":
+    - img "San's user avatar"
+  - link "San"
+  - list:
+    - listitem: "11"
+  - time: asked 22 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "React native maximum update depth exceeded when calling <Redirect />. using expo routing" [level=3]:
+    - link "React native maximum update depth exceeded when calling <Redirect />. using expo routing"
+  - text: "My project structure is: I get a maximum update depth exceeded when pressing sign out on this screen. export default function TabTwoScreen() { const { session } = useAuth(); let profile; if (..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+    - listitem:
+      - link "show questions tagged 'expo'": expo
+  - link "user30585045's user avatar":
+    - img "user30585045's user avatar"
+  - link "user30585045"
+  - list:
+    - listitem: "1"
+  - time: asked 24 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "How to Pass custom SecuirtyCredentials from a node(thick client) in ignite 2.17" [level=3]:
+    - link "How to Pass custom SecuirtyCredentials from a node(thick client) in ignite 2.17"
+  - text: I am using a pluginprovider to customize the login process whenever a new node joins. I was passing the credentials by extending the TcpDiscoverSpi and passing the credentials using the node ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'security'": security
+    - listitem:
+      - link "show questions tagged 'ignite'": ignite
+    - listitem:
+      - link "show questions tagged 'apacheignite'": apacheignite
+  - link "TARA MISHRA's user avatar":
+    - img "TARA MISHRA's user avatar"
+  - link "TARA MISHRA"
+  - list:
+    - listitem: "55"
+  - time: asked 26 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "Reading client certificates in an Azure web app using Application Gateway/WAF" [level=3]:
+    - link "Reading client certificates in an Azure web app using Application Gateway/WAF"
+  - text: I have an Azure account and I'm running a C# web application under an App Service. One of my endpoints needs to read the client certificate to validate the request and do some look-ups to see who is ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'azure'": azure
+    - listitem:
+      - link "show questions tagged 'azure-application-gateway'": azure-application-gateway
+    - listitem:
+      - link "show questions tagged 'waf'": waf
+  - link "Simon Parker's user avatar":
+    - img "Simon Parker's user avatar"
+  - link "Simon Parker"
+  - list:
+    - listitem: 1,836
+  - time: asked 28 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "How to calculate maximum conveyer speed for a computer vision application?" [level=3]:
+    - link "How to calculate maximum conveyer speed for a computer vision application?"
+  - text: "I have to select cameras and check feasibility of for a given defect detection application. Here are the given parameters: Conveyer speed = max 550m/min (assume 10m/s) Product dimension = max 1.5 m ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'computer-vision'": computer-vision
+  - link "Atmadeep Arya's user avatar":
+    - img "Atmadeep Arya's user avatar"
+  - link "Atmadeep Arya"
+  - list:
+    - listitem: "11"
+  - time: asked 29 mins ago
+  - text: 0 votes 0 answers 15 views
+  - heading "Qdialog error in Python module - Unbound method QDialog.exec() needs an argument" [level=3]:
+    - link "Qdialog error in Python module - Unbound method QDialog.exec() needs an argument"
+  - text: In python I am attempting to execute a Qdialog. I get the error message in the heading but am not sure what it is telling me is wrong and therefore how to fix it. The dialog execution code is dlg = ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'qt'": qt
+  - link "Walt Mayhew's user avatar":
+    - img "Walt Mayhew's user avatar"
+  - link "Walt Mayhew"
+  - list:
+    - listitem: "1"
+  - time: asked 31 mins ago
+  - text: 1 vote 1 answer 9 views
+  - heading "Serivce Hook over Private Link on Azure Devops" [level=3]:
+    - link "Serivce Hook over Private Link on Azure Devops"
+  - text: Can Azure DevOps Service Hooks (SaaS) access a private endpoint in an Azure VNet via Private Link? I have an internal Azure Function App that is deployed inside a VNet and is not exposed to the public ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'azure'": azure
+    - listitem:
+      - link "show questions tagged 'azure-devops'": azure-devops
+    - listitem:
+      - link "show questions tagged 'webhooks'": webhooks
+    - listitem:
+      - link "show questions tagged 'azure-private-link'": azure-private-link
+    - listitem:
+      - link "show questions tagged 'azure-service-hooks'": azure-service-hooks
+  - link "Ofer.W's user avatar":
+    - img "Ofer.W's user avatar"
+  - link "Ofer.W"
+  - list:
+    - listitem: "11"
+  - time: asked 32 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615313"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Salesforce wants to do for agentic AI what they did for SaaS"
+    - listitem:
+      - link "Research roadmap update, May 2025"
+    - listitem: Featured on Meta
+    - listitem:
+      - 'link "Inviting more thoughts: Do these challenges resonate beyond Stack Overflow?..."'
+    - listitem:
+      - link "Two New Chat Rooms Experiment Geared Towards New Users"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "Discussions learnings and potential next steps"
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 63k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 26k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 20k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2530744
+  - link "show questions tagged 'python'": python
+  - text: × 2211331
+  - link "show questions tagged 'java'": java
+  - text: × 1919984
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624831
+  - link "show questions tagged 'php'": php
+  - text: × 1467466
+  - link "show questions tagged 'android'": android
+  - text: × 1419074
+  - link "show questions tagged 'html'": html
+  - text: × 1188486
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036049
+  - link "show questions tagged 'c++'": c++
+  - text: × 814353
+  - link "show questions tagged 'css'": css
+  - text: × 807801
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Usage of に in this context? Causative passive?"
+    - listitem:
+      - link "What are some unsolved problems in group theory which can be explained to a beginner?"
+    - listitem:
+      - link "Generalization of Viète's Formula for pi"
+    - listitem:
+      - link "How to derive the output voltage expression for an op-amp circuit with a DC offset at the non-inverting input?"
+    - listitem:
+      - link "Is there a critical number density of snowflakes after which snow becomes white?"
+    - listitem:
+      - link "The circle game"
+    - listitem:
+      - link "Clarification on Wick contraction for Dirac fields"
+    - listitem:
+      - link "Aligning equations at non-relations"
+    - listitem:
+      - link "A chip firing game on triangular grid"
+    - listitem:
+      - link "Can a Wooden Staff (Druidic Focus) also be used as an Arcane Focus?"
+    - listitem:
+      - link "textup vs normaltext for descriptive subscripts in physics"
+    - listitem:
+      - link "How to make icon files bigger and clearer?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.5.19.27123
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
