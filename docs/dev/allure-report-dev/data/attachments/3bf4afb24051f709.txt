@@ -1,0 +1,577 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale US in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- alert:
+  - alertdialog:
+    - text: This site is currently in read-only mode. We’ll return with full functionality soon. Visit
+    - link "our status page"
+    - text: or search
+    - link "our recent meta posts on the topic"
+    - text: for more info.
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Discussions Labs"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,230,091 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 30"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 1 view
+  - heading "🚧 Need Help Debugging a React Native + Firebase App" [level=3]:
+    - link "🚧 Need Help Debugging a React Native + Firebase App"
+  - text: "I’m building a React Native app using expo-router, Firebase Authentication, and Firebase Storage. I’m currently stuck on an error that’s blocking progress: 🔁 Issue: When launching the app via Expo Go,..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'firebase'": firebase
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+    - listitem:
+      - link "show questions tagged 'firebase-authentication'": firebase-authentication
+    - listitem:
+      - link "show questions tagged 'expo'": expo
+    - listitem:
+      - link "show questions tagged 'react-navigation'": react-navigation
+  - link "Sanjay Gorantla's user avatar":
+    - img "Sanjay Gorantla's user avatar"
+  - link "Sanjay Gorantla"
+  - list:
+    - listitem: "1"
+  - time: asked 3 hours ago
+  - text: 0 votes 0 answers 6 views
+  - heading "How can I get each snapshot size in VMware vSphere by using PyVmomi SDK?" [level=3]:
+    - link "How can I get each snapshot size in VMware vSphere by using PyVmomi SDK?"
+  - text: How can I get each snapshot size in VMware vSphere by using PyVmomi SDK? I got a snapshot object by PyVmomi, but there is not any info about size of the snapshot. Is there any way to get size of the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'vmware'": vmware
+    - listitem:
+      - link "show questions tagged 'vsphere'": vsphere
+  - link "jax fang's user avatar":
+    - img "jax fang's user avatar"
+  - link "jax fang"
+  - list:
+    - listitem: "1"
+  - time: asked 3 hours ago
+  - text: "-2 votes 0 answers 13 views"
+  - heading "ProxMox with GPU Pass through displaying start failed" [level=3]:
+    - link "ProxMox with GPU Pass through displaying start failed"
+  - text: I have an Nvidia 1060 which is currently not used. I would like to assign this graphics card to be used by a virtual machine. I'm thinking the output can be mapped directly to the hdmi output? or back ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'nvidia'": nvidia
+    - listitem:
+      - link "show questions tagged 'qemu'": qemu
+    - listitem:
+      - link "show questions tagged 'proxmox'": proxmox
+  - link "ffejrekaburb's user avatar":
+    - img "ffejrekaburb's user avatar"
+  - link "ffejrekaburb"
+  - list:
+    - listitem: "759"
+  - time: asked 3 hours ago
+  - text: 0 votes 0 answers 11 views
+  - heading "Laravel Redirect Type Error when using livewire on middleware routes" [level=3]:
+    - link "Laravel Redirect Type Error when using livewire on middleware routes"
+  - text: I have fresh installed laravel application, I add Livewire on that project. After I install breeze with php artisan breeze:install then I choose livewire, I got error when I go to some routes with ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'laravel'": laravel
+  - link "dwijonarko's user avatar":
+    - img "dwijonarko's user avatar"
+  - link "dwijonarko"
+  - list:
+    - listitem: "11"
+  - time: asked 3 hours ago
+  - text: "-3 votes 0 answers 14 views"
+  - heading "Device black screen and logs going mad while trying to launch ancient apk with Android Studio 2.3.3 on x86_64 linux [closed]" [level=3]:
+    - link "Device black screen and logs going mad while trying to launch ancient apk with Android Studio 2.3.3 on x86_64 linux [closed]"
+  - text: Prelude So there is a game from circa 2014-16 (called Build an Empire, if you're interested), and I've found its .apk file, but it cannot be launched with modern Android devices, nor with emulators ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'android-emulator'": android-emulator
+    - listitem:
+      - link "show questions tagged 'android-studio-2.3'": android-studio-2.3
+  - link "Doubtful's user avatar":
+    - img "Doubtful's user avatar"
+  - link "Doubtful"
+  - list:
+    - listitem: "77"
+  - time: asked 3 hours ago
+  - text: 0 votes 0 answers 7 views
+  - heading "c# winform webBrowser control, the content of web page would not load with a script error" [level=3]:
+    - link "c# winform webBrowser control, the content of web page would not load with a script error"
+  - text: This is a continuation from a previous post. I decided to use a web browser control in order to read a String of current URL, because once it reaches desired URL I can perform certain functions. I ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'winforms'": winforms
+    - listitem:
+      - link "show questions tagged 'webbrowser-control'": webbrowser-control
+  - link "Gennady G.'s user avatar":
+    - img "Gennady G.'s user avatar"
+  - link "Gennady G."
+  - list:
+    - listitem: "1"
+  - time: asked 4 hours ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Remove or skip DefaultJob" [level=3]:
+    - link "Remove or skip DefaultJob"
+  - text: In the program I am currently working on, everything is contained within a single project. For benchmarking, I have modified my project file so that the BenchmarkDotNet package and benchmark source ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'jobs'": jobs
+    - listitem:
+      - link "show questions tagged 'benchmarkdotnet'": benchmarkdotnet
+  - link "Duel Trimble's user avatar":
+    - img "Duel Trimble's user avatar"
+  - link "Duel Trimble"
+  - list:
+    - listitem: "141"
+  - time: asked 4 hours ago
+  - text: 0 votes 0 answers 11 views
+  - heading "Apache Doris INSERT INTO ... SELECT ... results in unexpected NULLs after upgrade, despite correct SELECT output" [level=3]:
+    - link "Apache Doris INSERT INTO ... SELECT ... results in unexpected NULLs after upgrade, despite correct SELECT output"
+  - text: We recently upgraded our Apache Doris cluster from version 1.2.7 to version 2.1.9. Since the upgrade, we've encountered an issue specifically with INSERT INTO target_table SELECT ... FROM source_data; ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'database'": database
+    - listitem:
+      - link "show questions tagged 'olap'": olap
+    - listitem:
+      - link "show questions tagged 'apache-doris'": apache-doris
+  - link "Hayden's user avatar":
+    - img "Hayden's user avatar"
+  - link "Hayden"
+  - list:
+    - listitem: "36"
+  - time: asked 4 hours ago
+  - text: "-5 votes 1 answer 20 views"
+  - heading "como aplicar validação de atributos da classe [closed]" [level=3]:
+    - link "como aplicar validação de atributos da classe [closed]"
+  - text: "quando passo informações para os atributos de uma classe , gostaria de poder selecionar ou aplicar regras sobre eles , exemplo : O atributo double nota só pode receber valores menores que 30.00 como ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+  - link "DevRenan's user avatar":
+    - img "DevRenan's user avatar"
+  - link "DevRenan"
+  - list:
+    - listitem: "1"
+  - time: asked 4 hours ago
+  - text: "-1 votes 0 answers 8 views"
+  - heading "Microservices user auth with better-auth in Expressjs" [level=3]:
+    - link "Microservices user auth with better-auth in Expressjs"
+  - text: I am trying to build a software based on a microservices infrastructure and I just learned how powerful better-auth is, however I don't know how to handle route protection in a microservices approach, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'node.js'": node.js
+    - listitem:
+      - link "show questions tagged 'express'": express
+    - listitem:
+      - link "show questions tagged 'authentication'": authentication
+    - listitem:
+      - link "show questions tagged 'better-auth'": better-auth
+  - link "nicoiscoding's user avatar":
+    - img "nicoiscoding's user avatar"
+  - link "nicoiscoding"
+  - list:
+    - listitem: "79"
+  - time: asked 4 hours ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Is there a way to launch an RDP file with batch?" [level=3]:
+    - link "Is there a way to launch an RDP file with batch?"
+  - text: I have a file on my Desktop named 3390.rdp, complete with all login credentials. I'm trying to use it to connect to a Ubuntu installation on WSL2. When I open the Ubuntu "app" manually, and ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'batch-file'": batch-file
+    - listitem:
+      - link "show questions tagged 'windows-subsystem-for-linux'": windows-subsystem-for-linux
+    - listitem:
+      - link "show questions tagged 'rdp'": rdp
+  - link "Robert Goddard-Wright's user avatar":
+    - img "Robert Goddard-Wright's user avatar"
+  - link "Robert Goddard-Wright"
+  - list:
+    - listitem: "105"
+  - time: asked 4 hours ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Prevent rerender of child with Suspense and use" [level=3]:
+    - link "Prevent rerender of child with Suspense and use"
+  - text: "I have the following code: import { Suspense, use, useState } from 'react' function FirstChild({ setSecondContent }) { const promise = new Promise(resolve => { setTimeout(() => { ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'react-suspense'": react-suspense
+  - link "pdacostaporto's user avatar":
+    - img "pdacostaporto's user avatar"
+  - link "pdacostaporto"
+  - list:
+    - listitem: "21"
+  - time: asked 4 hours ago
+  - text: 0 votes 0 answers 19 views
+  - heading "A qusetion about CPLEX constraints in Green Filed mode" [level=3]:
+    - link "A qusetion about CPLEX constraints in Green Filed mode"
+  - text: In my scenario, there are customer points and warehouse points, where the warehouse coordinates are the variables I optimize, and the optimization purpose is to minimize the transportation distance. I ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'cplex'": cplex
+    - listitem:
+      - link "show questions tagged 'or-tools'": or-tools
+    - listitem:
+      - link "show questions tagged 'gurobi'": gurobi
+  - link "Eason Con's user avatar":
+    - img "Eason Con's user avatar"
+  - link "Eason Con"
+  - list:
+    - listitem: "1"
+  - time: asked 4 hours ago
+  - text: 0 votes 0 answers 11 views
+  - heading "Ktor server with KMP Frontend, cookie not sent" [level=3]:
+    - link "Ktor server with KMP Frontend, cookie not sent"
+  - text: I'm implementing a simple project using Ktor backend server and KMP Wasm. I am implementing the Google login feature. Google login was successful and saved the session information after authentication....
+  - list:
+    - listitem:
+      - link "show questions tagged 'ktor'": ktor
+    - listitem:
+      - link "show questions tagged 'ktor-client'": ktor-client
+    - listitem:
+      - link "show questions tagged 'kmp'": kmp
+  - link "dev.farmer's user avatar":
+    - img "dev.farmer's user avatar"
+  - link "dev.farmer"
+  - list:
+    - listitem: 2,821
+  - time: asked 4 hours ago
+  - text: 0 votes 0 answers 25 views
+  - heading "How can I transport variable datas throughout different classes/voids? I'm kind of new to c# and can use support" [level=3]:
+    - link "How can I transport variable datas throughout different classes/voids? I'm kind of new to c# and can use support"
+  - text: "I'm trying to figure out how to transport the last segment of my code to another void(bottom void to top void), I'll try to answer responses asap. if (key == 'B') { BuyX (bstr, bstrCost, ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'variables'": variables
+  - link "Jeeroy Lankins's user avatar":
+    - img "Jeeroy Lankins's user avatar"
+  - link "Jeeroy Lankins"
+  - list:
+    - listitem: "1"
+  - time: asked 4 hours ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615340"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Salesforce wants to do for agentic AI what they did for SaaS"
+    - listitem:
+      - link "Research roadmap update, May 2025"
+    - listitem: Featured on Meta
+    - listitem:
+      - 'link "Inviting more thoughts: Do these challenges resonate beyond Stack Overflow?..."'
+    - listitem:
+      - link "Two New Chat Rooms Experiment Geared Towards New Users"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "Discussions learnings and potential next steps"
+    - listitem:
+      - link "2025 Moderator Election Q&A – Question Collection"
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 63k Members
+  - button "Join" [disabled]
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 26k Members
+  - button "Join" [disabled]
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 22k Members
+  - button "Join" [disabled]
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2530769
+  - link "show questions tagged 'python'": python
+  - text: × 2211377
+  - link "show questions tagged 'java'": java
+  - text: × 1920003
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624844
+  - link "show questions tagged 'php'": php
+  - text: × 1467476
+  - link "show questions tagged 'android'": android
+  - text: × 1419092
+  - link "show questions tagged 'html'": html
+  - text: × 1188487
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036053
+  - link "show questions tagged 'c++'": c++
+  - text: × 814356
+  - link "show questions tagged 'css'": css
+  - text: × 807802
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "How do I travel with ADHD medication to Japan?"
+    - listitem:
+      - link "Using a coordinate defined relative to one node, on different nodes. Why does it work? orthogonal coordinates?"
+    - listitem:
+      - link "Stop Electric Motor (No Wireless Communication Nor Software Hacking) Wirelessly (Electromagnetic)?"
+    - listitem:
+      - link "Clarification on Wick contraction for Dirac fields"
+    - listitem:
+      - link "\"enclosed by\" VS \"enclosed with\""
+    - listitem:
+      - link "Deleting a file before it has finished downloading"
+    - listitem:
+      - link "Best response to \"servant of god\" listed on resume"
+    - listitem:
+      - link "Why does my 3 year old custard apple tree keep dropping flowers without setting fruit?"
+    - listitem:
+      - link "Did Tolkien have some unnamed \"mystery helper\" aiding him when writing LotR?"
+    - listitem:
+      - link "What are some unsolved problems in group theory which can be explained to a beginner?"
+    - listitem:
+      - link "Why de here instead of con?"
+    - listitem:
+      - 'link "Blamed by coworkers in meeting: Any pitfalls if I send an email with my side of the story?"'
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.5.20.27168
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
