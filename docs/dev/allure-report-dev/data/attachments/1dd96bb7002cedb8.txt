@@ -1,0 +1,583 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale JP in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Discussions Labs"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,228,150 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 33"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 2 views
+  - heading "How can I add Microsoft OAuth to my React Native mobile app?" [level=3]:
+    - link "How can I add Microsoft OAuth to my React Native mobile app?"
+  - text: I'm working on a mobile app that people will login with their Microsoft account. I searched a lot but couldn't find any documentation for MS OAuth. I would like to use libs that are still being ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+    - listitem:
+      - link "show questions tagged 'mobile'": mobile
+    - listitem:
+      - link "show questions tagged 'oauth-2.0'": oauth-2.0
+  - link "Mehmet Kaan Aksoy's user avatar":
+    - img "Mehmet Kaan Aksoy's user avatar"
+  - link "Mehmet Kaan Aksoy"
+  - list:
+    - listitem: "3"
+  - time: asked 54 secs ago
+  - text: 0 votes 0 answers 2 views
+  - heading "Specify VS code with Qt Cmake tool" [level=3]:
+    - link "Specify VS code with Qt Cmake tool"
+  - text: "I created Qt VS Code project with the QtConfigure: new project wizard: When I build the project, it's actually using the VS2022 cmake tool. How do I specify the Qt cmake tool? Here's the cmakelists...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'qt'": qt
+    - listitem:
+      - link "show questions tagged 'cmake'": cmake
+  - link "Administrator's user avatar":
+    - img "Administrator's user avatar"
+  - link "Administrator"
+  - list:
+    - listitem: "372"
+  - time: asked 57 secs ago
+  - text: 0 votes 0 answers 3 views
+  - heading "xgettext detects false positives due to java.sql.ResultSet::getString" [level=3]:
+    - link "xgettext detects false positives due to java.sql.ResultSet::getString"
+  - text: If I run find src -iname "*.java" | xargs xgettext -ktrc -ktr -kmarktr -ktrn:1,2 -o po/keys.pot --from-code=utf-8 to create the keys.pot file, then this contains all strings given to i18n::...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'gettext'": gettext
+    - listitem:
+      - link "show questions tagged 'xgettext'": xgettext
+  - link "timlg07's user avatar":
+    - img "timlg07's user avatar"
+  - link "timlg07"
+  - list:
+    - listitem: "716"
+  - time: asked 1 min ago
+  - text: 0 votes 0 answers 3 views
+  - heading "Use subdomain's localhost using Traefik and Docker" [level=3]:
+    - link "Use subdomain's localhost using Traefik and Docker"
+  - text: I (my boss) installed Docker Desktop on Windows and I'm using the Ubuntu distro in WSL. I don't have access to the hosts file as I don't have admin rights. I want to use subdomains of localhost to run ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'docker'": docker
+    - listitem:
+      - link "show questions tagged 'localhost'": localhost
+    - listitem:
+      - link "show questions tagged 'traefik'": traefik
+  - link "julesvil's user avatar":
+    - img "julesvil's user avatar"
+  - link "julesvil"
+  - list:
+    - listitem: "61"
+  - time: asked 4 mins ago
+  - text: "-2 votes 0 answers 15 views"
+  - heading "How to add logic in ratings and reviews section? [closed]" [level=3]:
+    - link "How to add logic in ratings and reviews section? [closed]"
+  - text: anybody help me how to add logic in user ratings and reviews in ReactJS? When user gives ratings and reviews container and automatically add logic in ReactJS. i was expecting logic in user ratings and ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+  - link "Manikanta's user avatar":
+    - img "Manikanta's user avatar"
+  - link "Manikanta"
+  - list:
+    - listitem: "1"
+  - time: asked 11 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Asterisk SMTP settings for voiceamail" [level=3]:
+    - link "Asterisk SMTP settings for voiceamail"
+  - text: We inherited an Asterisk with FreePBX. From log files I can see, that it is trying to send voicemail notifications through certain smtp server. Also, with some rsearch I've found that Astersik is ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'smtp'": smtp
+    - listitem:
+      - link "show questions tagged 'asterisk'": asterisk
+  - link "GregoryA's user avatar":
+    - img "GregoryA's user avatar"
+  - link "GregoryA"
+  - list:
+    - listitem: "1"
+  - time: asked 12 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Why are some phone Bluetooth logs in .cfa format while others are in .log format? What factors influence this?" [level=3]:
+    - link "Why are some phone Bluetooth logs in .cfa format while others are in .log format? What factors influence this?"
+  - text: Today, when I used ADB to copy data, I found that the HCI records for Bluetooth were in .cfa format. However, after asking a friend, his phone's logs were in .log format, and the .log format logs ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'bluetooth'": bluetooth
+    - listitem:
+      - link "show questions tagged 'wireshark'": wireshark
+  - link "KAMABARA's user avatar":
+    - img "KAMABARA's user avatar"
+  - link "KAMABARA"
+  - list:
+    - listitem: "1"
+  - time: asked 12 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "How to select unique records in sql union based on latest updated time value?" [level=3]:
+    - link "How to select unique records in sql union based on latest updated time value?"
+  - text: I have incremental data loaded everyday in different folders like ./././day=26/<time>/<name>.parquet. Sometime the pipelines fails and we run it and we get multiple time folders under a ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'sql'": sql
+    - listitem:
+      - link "show questions tagged 'jinja2'": jinja2
+    - listitem:
+      - link "show questions tagged 'parquet'": parquet
+    - listitem:
+      - link "show questions tagged 'dbt'": dbt
+    - listitem:
+      - link "show questions tagged 'dbt-cloud'": dbt-cloud
+  - link "Tushar Singh's user avatar":
+    - img "Tushar Singh's user avatar"
+  - link "Tushar Singh"
+  - list:
+    - listitem: "1"
+  - time: asked 13 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Why is my Microsoft Fabric notebook taking 2–3 minutes to start a session now, when it used to start in 30 seconds?" [level=3]:
+    - link "Why is my Microsoft Fabric notebook taking 2–3 minutes to start a session now, when it used to start in 30 seconds?"
+  - text: I'm using Microsoft Fabric Notebooks, and initially, when I launched a notebook, the session used to start quickly—typically within 30 seconds. However, recently, I'm noticing a significant delay. It ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'pyspark'": pyspark
+    - listitem:
+      - link "show questions tagged 'fabric'": fabric
+    - listitem:
+      - link "show questions tagged 'microsoft-fabric'": microsoft-fabric
+    - listitem:
+      - link "show questions tagged 'spark-notebook'": spark-notebook
+    - listitem:
+      - link "show questions tagged 'notebook'": notebook
+  - link "Need a Gadget's user avatar":
+    - img "Need a Gadget's user avatar"
+  - link "Need a Gadget"
+  - list:
+    - listitem: "1"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "How would you generate a copy of a Yocto project's man pages for offline references?" [level=3]:
+    - link "How would you generate a copy of a Yocto project's man pages for offline references?"
+  - text: Often in embedded systems, storage is a bit limited that you rather not bundle in all the man pages onboard. Does Yocto have any official method of generating all the man pages that a yocto build ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'pdf'": pdf
+    - listitem:
+      - link "show questions tagged 'yocto'": yocto
+    - listitem:
+      - link "show questions tagged 'auto-generate'": auto-generate
+    - listitem:
+      - link "show questions tagged 'manpage'": manpage
+    - listitem:
+      - link "show questions tagged 'manual'": manual
+  - link "Brian's user avatar":
+    - img "Brian's user avatar"
+  - link "Brian"
+  - list:
+    - listitem: "586"
+  - time: asked 16 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Missing CIS Rule IDs in OpenSCAP Audit Reports for RHEL" [level=3]:
+    - link "Missing CIS Rule IDs in OpenSCAP Audit Reports for RHEL"
+  - text: "I'm running into some inconsistencies with CIS hardening on RHEL9 servers and could really use some advice from anyone who's dealt with similar issues. Current Setup: OS: RHEL9 Hardening Tool: Ansible ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'security'": security
+    - listitem:
+      - link "show questions tagged 'rhel'": rhel
+    - listitem:
+      - link "show questions tagged 'hardening'": hardening
+  - link "Clément A.'s user avatar":
+    - img "Clément A.'s user avatar"
+  - link "Clément A."
+  - list:
+    - listitem: "1"
+  - time: asked 17 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Oracle 19c error [DBT-50000] Unable to check for available memory" [level=3]:
+    - link "Oracle 19c error [DBT-50000] Unable to check for available memory"
+  - text: I am trying to install oracle 19c database in RHEL 9.5 server and it is CIS hardened level 2 server, but the installation doesn't work like below. I tried to install this as admin install, but doesn't ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'database'": database
+    - listitem:
+      - link "show questions tagged 'oracle-database'": oracle-database
+    - listitem:
+      - link "show questions tagged 'oracle19c'": oracle19c
+  - link "Dhanesh Ande's user avatar":
+    - img "Dhanesh Ande's user avatar"
+  - link "Dhanesh Ande"
+  - list:
+    - listitem: "21"
+  - time: asked 20 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "Prediction by trained model of sjwhitworth/golearn" [level=3]:
+    - link "Prediction by trained model of sjwhitworth/golearn"
+  - text: Lately I tried a random forest model by golearn. I want to use saved model (.gob) and only explain variables. As long as I explored, the only way I found was to prepare a template base.FixedDataGrid ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'csv'": csv
+    - listitem:
+      - link "show questions tagged 'go'": go
+    - listitem:
+      - link "show questions tagged 'machine-learning'": machine-learning
+    - listitem:
+      - link "show questions tagged 'random-forest'": random-forest
+    - listitem:
+      - link "show questions tagged 'gob'": gob
+  - link "os tk's user avatar":
+    - img "os tk's user avatar"
+  - link "os tk"
+  - list:
+    - listitem: "1"
+  - time: asked 23 mins ago
+  - text: "-2 votes 0 answers 14 views"
+  - heading "RepeatButton Of WPF is not rendering after migration to .net core (.net 9) [closed]" [level=3]:
+    - link "RepeatButton Of WPF is not rendering after migration to .net core (.net 9) [closed]"
+  - text: Recently I have migrated .net 4.8.1 project to .net core, however RepeatButton is not rendering in UI. Below MS Url have sample code of Repeat button, I tried to execute on .net 9 however Repeat ...
+  - list:
+    - listitem:
+      - link "show questions tagged '.net'": .net
+    - listitem:
+      - link "show questions tagged 'wpf'": wpf
+    - listitem:
+      - link "show questions tagged '.net-core'": .net-core
+  - link "dilipkumar katre's user avatar":
+    - img "dilipkumar katre's user avatar"
+  - link "dilipkumar katre"
+  - list:
+    - listitem: "162"
+  - time: asked 23 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "DaemonSets on all nodes or some nodes?" [level=3]:
+    - link "DaemonSets on all nodes or some nodes?"
+  - text: Are there any guiding principles on when a DaemonSet should be installed on all nodes, including control plane (master) nodes? While the general guidance suggests deploying DaemonSets across all nodes,...
+  - list:
+    - listitem:
+      - link "show questions tagged 'kubernetes'": kubernetes
+    - listitem:
+      - link "show questions tagged 'daemonset'": daemonset
+  - link "iamsecb's user avatar":
+    - img "iamsecb's user avatar"
+  - link "iamsecb"
+  - list:
+    - listitem: "21"
+  - time: asked 27 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615210"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - 'link "WBIT #8: Typescript for gut biomes"'
+    - listitem:
+      - 'link "“The future is agents”: Building a platform for RAG agents"'
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Two New Chat Rooms Experiment Geared Towards New Users"
+    - listitem:
+      - link "How Can We Bring More Fun to the Stack Ecosystem? Community Ideas Welcome!"
+    - listitem:
+      - link "How can I revert the style/layout changes to comments?"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "2025 Moderator Election Q&A – Question Collection"
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 34k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 26k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "R Language" [level=1]:
+    - link "R Language"
+  - text: 13k Members
+  - button "Join"
+  - text: A collective where data scientists and AI researchers gather to find, share, and learn about R and other subtags like knitr and dplyr.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2530557
+  - link "show questions tagged 'python'": python
+  - text: × 2211250
+  - link "show questions tagged 'java'": java
+  - text: × 1919945
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624786
+  - link "show questions tagged 'php'": php
+  - text: × 1467351
+  - link "show questions tagged 'android'": android
+  - text: × 1418969
+  - link "show questions tagged 'html'": html
+  - text: × 1188417
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036000
+  - link "show questions tagged 'c++'": c++
+  - text: × 814382
+  - link "show questions tagged 'css'": css
+  - text: × 807780
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "What's the point of pre/post-nuptial agreements if they have to be subject to \"Fairness and Equity\"?"
+    - listitem:
+      - link "What is a \"grapple's range\"?"
+    - listitem:
+      - link "SATGUS orbit question"
+    - listitem:
+      - link "Can I stay in China long-term on Q2 visa"
+    - listitem:
+      - link "'Norm' or 'norm induced by an inner product'?"
+    - listitem:
+      - link "When can product of cosine signals be written as sum of cosine signals?"
+    - listitem:
+      - link "Why did Neo evade Bugs' question?"
+    - listitem:
+      - link "Are there some super-irreducible polynomials?"
+    - listitem:
+      - link "Can any PC take an Origin Feat instead of an Ability Score Improvement?"
+    - listitem:
+      - link "Why is my modified ISO not bootable?"
+    - listitem:
+      - link "Is the fastest relaxation peak in DRT real or a mathematical artifact?"
+    - listitem:
+      - link "Does simp tactic in lean 4 assume double negation?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.5.26.27581
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
