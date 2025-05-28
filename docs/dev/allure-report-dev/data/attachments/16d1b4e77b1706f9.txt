@@ -1,0 +1,575 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale JP in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat"
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,228,617 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 32"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 1 answer 2 views
+  - heading "Merge table cells in a column if the text of the cells is the same using python-docx library" [level=3]:
+    - link "Merge table cells in a column if the text of the cells is the same using python-docx library"
+  - text: I am using python and the python-docx library to create tables in a docx file. I want to merge cell values in a column if the value in the previous row is the same as the current value. I also want to ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'docx'": docx
+  - link "Comrade Che's user avatar":
+    - img "Comrade Che's user avatar"
+  - link "Comrade Che"
+  - list:
+    - listitem: "741"
+  - time: asked 23 secs ago
+  - text: 0 votes 0 answers 2 views
+  - heading "Issue with adding depedency for api gateway in spring cloud for eureka server discovery" [level=3]:
+    - link "Issue with adding depedency for api gateway in spring cloud for eureka server discovery"
+  - text: I am using spring boot 3.5 when I am adding gateway dependency I am getting spring-cloud-starter-gateway-server-webmvc.But actually I need to get spring-cloud-starter-gateway in lower versions so ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'spring'": spring
+    - listitem:
+      - link "show questions tagged 'netflix-eureka'": netflix-eureka
+    - listitem:
+      - link "show questions tagged 'api-gateway'": api-gateway
+  - link "Swarup reddy Nallamilli's user avatar":
+    - img "Swarup reddy Nallamilli's user avatar"
+  - link "Swarup reddy Nallamilli"
+  - list:
+    - listitem: "1"
+  - time: asked 1 min ago
+  - text: 0 votes 0 answers 4 views
+  - heading "MOOC 2025 - Course grading, part 2" [level=3]:
+    - link "MOOC 2025 - Course grading, part 2"
+  - text: "The link to the exercise: MOOC Python Course 2025 The exercise expects the output to be: pekka peloton 0 jaana javanainen 1 liisa virtanen 3 But I am getting an output as follow: pekka peloton 0 ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+  - link "TheSelfTaughtNoob's user avatar":
+    - img "TheSelfTaughtNoob's user avatar"
+  - link "TheSelfTaughtNoob"
+  - list:
+    - listitem: "43"
+  - time: asked 3 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "BizTalk Double looping from the input to the output node" [level=3]:
+    - link "BizTalk Double looping from the input to the output node"
+  - text: I am stuck at one point in the boztalk I need to do somemapping - this is how my input file looks like - AW1AA2502K1 field1 field2 field3..... AW2C15VA00335536938 2field1 field2 field3..... ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'schema'": schema
+    - listitem:
+      - link "show questions tagged 'biztalk'": biztalk
+    - listitem:
+      - link "show questions tagged 'biztalk-2016'": biztalk-2016
+    - listitem:
+      - link "show questions tagged 'biztalk-mapper'": biztalk-mapper
+    - listitem:
+      - link "show questions tagged 'biztalk-2020'": biztalk-2020
+  - link "moderator's user avatar":
+    - img "moderator's user avatar"
+  - link "moderator"
+  - list:
+    - listitem: "25"
+  - time: asked 6 mins ago
+  - text: "-1 votes 0 answers 4 views"
+  - heading "How do I change a dependency and track changes to my GitHub project?" [level=3]:
+    - link "How do I change a dependency and track changes to my GitHub project?"
+  - text: I'm making changes to a GitHub repo I cloned to my machine. I also need to make changes to the code of one of its dependencies (listed as solana-vote-interface = "2.2.3" in Cargo.toml under [...
+  - list:
+    - listitem:
+      - link "show questions tagged 'git'": git
+    - listitem:
+      - link "show questions tagged 'github'": github
+    - listitem:
+      - link "show questions tagged 'rust'": rust
+    - listitem:
+      - link "show questions tagged 'rust-cargo'": rust-cargo
+  - link "Bobby Dore's user avatar":
+    - img "Bobby Dore's user avatar"
+  - link "Bobby Dore"
+  - list:
+    - listitem: "911"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Chromedriver with proxy" [level=3]:
+    - link "Chromedriver with proxy"
+  - text: We have a test software based on chromedriver. The test is a site check from one computer, but under different proxies. The proxy is connected via a javascript script. About a month ago I had to edit ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'google-chrome'": google-chrome
+    - listitem:
+      - link "show questions tagged 'selenium-webdriver'": selenium-webdriver
+    - listitem:
+      - link "show questions tagged 'selenium-chromedriver'": selenium-chromedriver
+    - listitem:
+      - link "show questions tagged 'webdriver'": webdriver
+    - listitem:
+      - link "show questions tagged 'manifest'": manifest
+  - link "Yuri's user avatar":
+    - img "Yuri's user avatar"
+  - link "Yuri"
+  - list:
+    - listitem: "1"
+  - time: asked 10 mins ago
+  - text: "-1 votes 0 answers 7 views"
+  - heading "Cypress Mochawesome report create multiple reports per thread" [level=3]:
+    - link "Cypress Mochawesome report create multiple reports per thread"
+  - text: It is observed that when we execute cypress automation tests using Cypress Parallel command with multiple threads, multiple Cypress Mochawesome reports are getting created based on the number of ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'cypress'": cypress
+    - listitem:
+      - link "show questions tagged 'mochawesome'": mochawesome
+  - link "Abhiram S L's user avatar":
+    - img "Abhiram S L's user avatar"
+  - link "Abhiram S L"
+  - list:
+    - listitem: "3"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "PySpark aggregations fail" [level=3]:
+    - link "PySpark aggregations fail"
+  - text: I have a PySpark dataframe that contains 100M rows. I'm trying to do a series of aggregations on multiple columns, after a groupby. df_agg = df.groupby("colA","colB","colC&...
+  - list:
+    - listitem:
+      - link "show questions tagged 'dataframe'": dataframe
+    - listitem:
+      - link "show questions tagged 'pyspark'": pyspark
+    - listitem:
+      - link "show questions tagged 'aggregation'": aggregation
+  - link "Rayne's user avatar":
+    - img "Rayne's user avatar"
+  - link "Rayne"
+  - list:
+    - listitem: 15k
+  - time: asked 11 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "How do I submit a Microsoft Form from either JS or PHP?" [level=3]:
+    - link "How do I submit a Microsoft Form from either JS or PHP?"
+  - text: My employer is a small company and not particularly tech savvy so they use Microsoft Teams and other generic Microsoft products to manage resources and communication in a very slow, clunky manner. I'...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'forms'": forms
+    - listitem:
+      - link "show questions tagged 'sharepoint'": sharepoint
+    - listitem:
+      - link "show questions tagged 'power-automate'": power-automate
+    - listitem:
+      - link "show questions tagged 'microsoft-forms'": microsoft-forms
+  - link "perky's user avatar":
+    - img "perky's user avatar"
+  - link "perky"
+  - list:
+    - listitem: "1"
+  - time: asked 11 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "Eclipse Sirius add String to List of Strings" [level=3]:
+    - link "Eclipse Sirius add String to List of Strings"
+  - text: "class Script { attribute commands : String[*|1] { ordered }; attribute name : String[?]; } This is my ECore metamodel. I am creating a DSL of sorts in Eclipse Sirius. I am almost done, but I ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'eclipse'": eclipse
+    - listitem:
+      - link "show questions tagged 'dsl'": dsl
+    - listitem:
+      - link "show questions tagged 'eclipse-emf'": eclipse-emf
+    - listitem:
+      - link "show questions tagged 'eclipse-sirius'": eclipse-sirius
+  - link "Kaskapa's user avatar":
+    - img "Kaskapa's user avatar"
+  - link "Kaskapa"
+  - list:
+    - listitem: "1"
+  - time: asked 15 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Selenium c# Latest version of chrome not installing local extensions" [level=3]:
+    - link "Selenium c# Latest version of chrome not installing local extensions"
+  - text: In selenium c#, I am installing extensions and it was working fine from few months, with latest update from chrome, it is no longer working. ChromeOptions options = new ChromeOptions(); options....
+  - list:
+    - listitem:
+      - link "show questions tagged 'google-chrome'": google-chrome
+    - listitem:
+      - link "show questions tagged 'selenium-webdriver'": selenium-webdriver
+  - link "Zubair Khakwani's user avatar":
+    - img "Zubair Khakwani's user avatar"
+  - link "Zubair Khakwani"
+  - list:
+    - listitem: "446"
+  - time: asked 16 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "SuspendedEV inside OCPP backend in NodeJS" [level=3]:
+    - link "SuspendedEV inside OCPP backend in NodeJS"
+  - text: I am currently building up an adapter for ioBroker, which should handle my wallbox via OCPP - usind ocpp-rpc library. I know, there are many OCPP backend systems out there, but they are not working as ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'node.js'": node.js
+    - listitem:
+      - link "show questions tagged 'pulsar'": pulsar
+    - listitem:
+      - link "show questions tagged 'ocpp'": ocpp
+  - link "Stef's user avatar":
+    - img "Stef's user avatar"
+  - link "Stef"
+  - list:
+    - listitem: "13"
+  - time: asked 17 mins ago
+  - text: 0 votes 1 answer 9 views
+  - 'heading "Datepicker: ''readonly'' attribute doesn''t work with bsDatepicker" [level=3]':
+    - 'link "Datepicker: ''readonly'' attribute doesn''t work with bsDatepicker"'
+  - text: The link below provides the issue's specifics and an example. This problem has been there since ngxbootstrap version 12. Date picker Example I tried marking it as readonly using property binding and a ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'ngx-bootstrap'": ngx-bootstrap
+  - link "Paramhans's user avatar":
+    - img "Paramhans's user avatar"
+  - link "Paramhans"
+  - list:
+    - listitem: "1"
+  - time: asked 19 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "How to only run unit tests for sub-modules that have source code changes?" [level=3]:
+    - link "How to only run unit tests for sub-modules that have source code changes?"
+  - text: I am aware of this question, but mine is slightly different. I have a multi-module maven project. To simplify, let's say Parent is the parent pom of 2 modules -- ChildA and ChildB. ChildA is the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'maven'": maven
+    - listitem:
+      - link "show questions tagged 'verify'": verify
+    - listitem:
+      - link "show questions tagged 'recompile'": recompile
+  - link "davidalayachew's user avatar":
+    - img "davidalayachew's user avatar"
+  - link "davidalayachew"
+  - list:
+    - listitem: "625"
+  - time: asked 19 mins ago
+  - text: 0 votes 0 answers 19 views
+  - heading "How can I get handle the situation when window.scrollY to be 0?" [level=3]:
+    - link "How can I get handle the situation when window.scrollY to be 0?"
+  - text: "I'm now using throttle to optimize the window's scroll event, but sometimes I scroll to the top too fast and cannot get the window.scrollY to be 0 function throttle(fn, delay) { let timer = null ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+  - link "Francis Abate's user avatar":
+    - img "Francis Abate's user avatar"
+  - link "Francis Abate"
+  - list:
+    - listitem: "1"
+  - time: asked 21 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615242"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - 'link "WBIT #8: Typescript for gut biomes"'
+    - listitem:
+      - 'link "“The future is agents”: Building a platform for RAG agents"'
+    - listitem: Upcoming Events
+    - listitem:
+      - link "2025 Community Moderator Election"
+      - text: ends June 11
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Two New Chat Rooms Experiment Geared Towards New Users"
+    - listitem:
+      - link "How Can We Bring More Fun to the Stack Ecosystem? Community Ideas Welcome!"
+    - listitem:
+      - link "How can I revert the style/layout changes to comments?"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "An experiment on pairing askers with experts in the community"
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 34k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 26k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 10k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2530581
+  - link "show questions tagged 'python'": python
+  - text: × 2211317
+  - link "show questions tagged 'java'": java
+  - text: × 1919960
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624804
+  - link "show questions tagged 'php'": php
+  - text: × 1467360
+  - link "show questions tagged 'android'": android
+  - text: × 1418979
+  - link "show questions tagged 'html'": html
+  - text: × 1188427
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1036001
+  - link "show questions tagged 'c++'": c++
+  - text: × 814407
+  - link "show questions tagged 'css'": css
+  - text: × 807790
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Does the Law of Sonority apply to languages such as Hawaiian or Proto-Uralic, which do not allow consonant clusters word-initially or word-finally?"
+    - listitem:
+      - link "Blender Python 4.3 CPU racing 100% while moving five Objects between two Collections"
+    - listitem:
+      - link "Can translational kinetic energy always be calculated by treating an object as a point particle?"
+    - listitem:
+      - link "what are the reasons why show advanced options is a security threat when left enabled?"
+    - listitem:
+      - link "Was Solomon's marriage to Pharaoh's Daughter acceptable to God? 1 Kings 11:1-2"
+    - listitem:
+      - link "Does every geometrically connected scheme have a rational point?"
+    - listitem:
+      - link "When is my coworker's next birthday?"
+    - listitem:
+      - link "Calculating confidence intervals via bootstrapping for statistics derived from dependent observations in a distance matrix"
+    - listitem:
+      - link "How Did 1988 PCs Achieve 12 MHz DRAM Cycles with 80 ns Chips"
+    - listitem:
+      - link "Corrplot top labels distance"
+    - listitem:
+      - link "A simple generalization of the Mountain Pass Theorem in finite dimensions"
+    - listitem:
+      - link "How to make the curve to stick on the objects surface"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.5.27.27734
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
