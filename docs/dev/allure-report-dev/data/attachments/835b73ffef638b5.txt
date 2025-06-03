@@ -1,0 +1,577 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale NZ in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- text: The 2025 Annual Developer Survey is live —
+- link "take the Survey today!"
+- link "dismiss"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- paragraph: NEW
+- button "Close"
+- paragraph: Beginner-friendly chat rooms. Join real-time conversations, regardless of your reputation score.
+- link "Try Chat"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,226,734 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 34"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 18 views
+  - heading "Is use of uninitialized static object well-defined in C++?" [level=3]:
+    - link "Is use of uninitialized static object well-defined in C++?"
+  - text: "In the following example, #include <print> struct C { int x; }; int main() { static C obj = [] { obj.x = 3; return obj; }(); std::print(\"{}\", obj.x); } ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+  - link "con ko's user avatar":
+    - img "con ko's user avatar"
+  - link "con ko"
+  - list:
+    - listitem: 1,416
+  - time: asked 3 mins ago
+  - text: "-1 votes 0 answers 10 views"
+  - heading "Error referencia de servicio de Visual Studio [closed]" [level=3]:
+    - link "Error referencia de servicio de Visual Studio [closed]"
+  - text: I recently changed my computer and I'm having trouble cloning my website repository. All my projects are on Github, and I was able to clone them without any issues, but the website can't detect the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'visual-studio'": visual-studio
+    - listitem:
+      - link "show questions tagged 'github'": github
+    - listitem:
+      - link "show questions tagged 'service-reference'": service-reference
+  - link "user30704965's user avatar":
+    - img "user30704965's user avatar"
+  - link "user30704965"
+  - list:
+    - listitem: "1"
+  - time: asked 6 mins ago
+  - text: "-1 votes 0 answers 10 views"
+  - heading "How to convert a 1 dimensional array buffer to a 2 dimensonal format" [level=3]:
+    - link "How to convert a 1 dimensional array buffer to a 2 dimensonal format"
+  - text: "I have this intermediary buffer that has the entire contents of a file: char intermediary_buffer[]. I need to convert it to a 2D format, where a new row is started every time the \\n escape sequence is ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'arrays'": arrays
+    - listitem:
+      - link "show questions tagged 'c'": c
+    - listitem:
+      - link "show questions tagged 'multidimensional-array'": multidimensional-array
+  - link "Everlee Jones's user avatar":
+    - img "Everlee Jones's user avatar"
+  - link "Everlee Jones"
+  - list:
+    - listitem: "31"
+  - time: asked 8 mins ago
+  - text: 0 votes 0 answers 3 views
+  - heading "CSP form-action blocking self" [level=3]:
+    - link "CSP form-action blocking self"
+  - text: "My app URL is: https://test.myapp.maindomain.com I have this CSP: form-action 'self'; During log out, I use this URL to POST a form https://test.myapp.maindomain.com/Account/LogOff and I see that ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'google-chrome'": google-chrome
+    - listitem:
+      - link "show questions tagged 'content-security-policy'": content-security-policy
+  - link "anl's user avatar":
+    - img "anl's user avatar"
+  - link "anl"
+  - list:
+    - listitem: "1"
+  - time: asked 9 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "MediaPipe HandLandmarker is null in Android app using .task file" [level=3]:
+    - link "MediaPipe HandLandmarker is null in Android app using .task file"
+  - text: "[I have the file][1] [1]: https://i.sstatic.net/7tUPlbeK.png [logcat][2] [2]: https://i.sstatic.net/LfluHbdr.png I'm trying to run MediaPipe on a mobile device using Kotlin in Android Studio, but I'm ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'kotlin'": kotlin
+    - listitem:
+      - link "show questions tagged 'android-studio'": android-studio
+    - listitem:
+      - link "show questions tagged 'mediapipe'": mediapipe
+  - link "majun1234's user avatar":
+    - img "majun1234's user avatar"
+  - link "majun1234"
+  - list:
+    - listitem: "1"
+  - time: asked 11 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "eager loading of associations being dropped on further select command" [level=3]:
+    - link "eager loading of associations being dropped on further select command"
+  - text: "a rails controller action eager loads a series of associations: [...] .all.includes(child_join: [parent: [ [...] when a subsequent process invokes parent_for_child_join = @parents.select{ |i| i.id =..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'ruby-on-rails'": ruby-on-rails
+  - link "Jerome's user avatar":
+    - img "Jerome's user avatar"
+  - link "Jerome"
+  - list:
+    - listitem: 6,259
+  - time: asked 12 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "How to get high-resolution PayPal branded buttons with Recurly integration?" [level=3]:
+    - link "How to get high-resolution PayPal branded buttons with Recurly integration?"
+  - text: We have Recurly integration in our application and are using Recurly’s PayPal integration to initiate the PayPal flow. At the same time, we want to display PayPal-branded buttons to keep our UI in ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'paypal'": paypal
+    - listitem:
+      - link "show questions tagged 'recurly'": recurly
+  - link "Varsha Jadhav's user avatar":
+    - img "Varsha Jadhav's user avatar"
+  - link "Varsha Jadhav"
+  - list:
+    - listitem: "413"
+  - time: asked 15 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Excessive Delay in Loading Login Page During Automation Execution Each Time" [level=3]:
+    - link "Excessive Delay in Loading Login Page During Automation Execution Each Time"
+  - text: I’m facing an issue where, after running the automation script to launch the URL "https://compleoform2504-tst-weu.azurewebsites.net/", the login page takes an excessive amount of time to ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'selenium-webdriver'": selenium-webdriver
+    - listitem:
+      - link "show questions tagged 'browser-automation'": browser-automation
+  - link "Kajal Shete's user avatar":
+    - img "Kajal Shete's user avatar"
+  - link "Kajal Shete"
+  - list:
+    - listitem: "1"
+  - time: asked 17 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Truncation occurred when synchronizing VARCHAR type data from MySQL" [level=3]:
+    - link "Truncation occurred when synchronizing VARCHAR type data from MySQL"
+  - text: "In MySQL, a column was defined as: image_mode varchar(10) NOT NULL, And in Doris, a VARCHAR column with the same length was defined: image_mode varchar(10) NOT NULL, However, after synchronizing ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'mysql'": mysql
+    - listitem:
+      - link "show questions tagged 'database'": database
+    - listitem:
+      - link "show questions tagged 'olap'": olap
+    - listitem:
+      - link "show questions tagged 'apache-doris'": apache-doris
+  - link "Chris's user avatar":
+    - img "Chris's user avatar"
+  - link "Chris"
+  - list:
+    - listitem: "1"
+  - time: asked 17 mins ago
+  - text: "-1 votes 0 answers 16 views"
+  - heading "requiring specific sourcecode to exist at later point in file" [level=3]:
+    - link "requiring specific sourcecode to exist at later point in file"
+  - text: In C++, is there any way to write a piece of code such that compilation will generate a compilation error (not a linker error or a compilation warning) unless a subsequent piece of sourcecode (of any ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'compiler-errors'": compiler-errors
+    - listitem:
+      - link "show questions tagged 'header-files'": header-files
+  - link "xaxazak's user avatar":
+    - img "xaxazak's user avatar"
+  - link "xaxazak"
+  - list:
+    - listitem: "918"
+  - time: asked 19 mins ago
+  - text: 1 vote 1 answer 26 views
+  - heading "<input/> element must have a text alternative, even though it does" [level=3]:
+    - link "<input/> element must have a text alternative, even though it does"
+  - text: "First ESLint kept complaining that there were click handlers without keydown events and focus, so I changed the code from this: <img src=\"start-button.png\" alt=\"Start Button\" ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'angular'": angular
+    - listitem:
+      - link "show questions tagged 'eslint'": eslint
+    - listitem:
+      - link "show questions tagged 'typescript-eslint'": typescript-eslint
+    - listitem:
+      - link "show questions tagged 'angular-eslint'": angular-eslint
+  - link "UncleBob's user avatar":
+    - img "UncleBob's user avatar"
+  - link "UncleBob"
+  - list:
+    - listitem: 1,401
+  - time: asked 22 mins ago
+  - text: 0 votes 1 answer 11 views
+  - heading "Main Methdology steps to configure multi-languages application" [level=3]:
+    - link "Main Methdology steps to configure multi-languages application"
+  - text: "I want to make my application multi-languagas and achieves following conditions: Navigation Bar has the list of languages that make the language changing easly from any in the appplication. The ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'oracle-apex'": oracle-apex
+    - listitem:
+      - link "show questions tagged 'globalization'": globalization
+  - link "shady's user avatar":
+    - img "shady's user avatar"
+  - link "shady"
+  - list:
+    - listitem: "122"
+  - time: asked 24 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "Cluster size issue while trying to read the parsed JSON data" [level=3]:
+    - link "Cluster size issue while trying to read the parsed JSON data"
+  - text: Databricks cluster output issue I validated,filtered the data in pyspark in databricks. Now I'm trying to read the data in JSON string but it says max output size exceedes. I've been trying to convert ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'databricks'": databricks
+    - listitem:
+      - link "show questions tagged 'azure-databricks'": azure-databricks
+  - link "nitin newton's user avatar":
+    - img "nitin newton's user avatar"
+  - link "nitin newton"
+  - list:
+    - listitem: "1"
+  - time: asked 27 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Why my steps are highlighting as undefined in feature file even thought having right path set for both feature and step definition in wdio.conf.ts?" [level=3]:
+    - link "Why my steps are highlighting as undefined in feature file even thought having right path set for both feature and step definition in wdio.conf.ts?"
+  - text: I have restructured my folders and kept features and step definition folders inside "test" folder. Aftr that it is showing steps written in feature files as undefined even though having ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'webdriver-io'": webdriver-io
+  - link "Dinesh Bharathi's user avatar":
+    - img "Dinesh Bharathi's user avatar"
+  - link "Dinesh Bharathi"
+  - list:
+    - listitem: "1"
+  - time: asked 28 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "visibilitychange event not working on chromeos, when laptop is turned on from sleep mode in vuejs" [level=3]:
+    - link "visibilitychange event not working on chromeos, when laptop is turned on from sleep mode in vuejs"
+  - text: "when user turns on his laptop, I am trying to check user's last activity time on mounted in vuejs3, i am using below code for it: document.addEventListener('visibilitychange', () => { if (..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'vue.js'": vue.js
+    - listitem:
+      - link "show questions tagged 'vuejs3'": vuejs3
+    - listitem:
+      - link "show questions tagged 'dom-events'": dom-events
+    - listitem:
+      - link "show questions tagged 'google-chrome-os'": google-chrome-os
+  - link "kvell support's user avatar":
+    - img "kvell support's user avatar"
+  - link "kvell support"
+  - list:
+    - listitem: "1"
+  - time: asked 30 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615116"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Not just a vibe, the Stack Overflow Developer Survey is really here"
+    - listitem:
+      - link "In a deterministic simulation, you can debug with time travel"
+    - listitem: Upcoming Events
+    - listitem:
+      - link "2025 Community Moderator Election"
+      - text: ends in 9 days
+    - listitem: Featured on Meta
+    - listitem:
+      - link "How Can We Bring More Fun to the Stack Ecosystem? Community Ideas Welcome!"
+    - listitem:
+      - link "Thoughts on the future of Stack Exchange site customisation"
+    - listitem:
+      - link "How can I revert the style/layout changes to comments?"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "Experimenting with the Commenting Reputation Requirement"
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 63k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 26k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 22k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2530436
+  - link "show questions tagged 'python'": python
+  - text: × 2211172
+  - link "show questions tagged 'java'": java
+  - text: × 1919874
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624750
+  - link "show questions tagged 'php'": php
+  - text: × 1467276
+  - link "show questions tagged 'android'": android
+  - text: × 1418890
+  - link "show questions tagged 'html'": html
+  - text: × 1188376
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1035941
+  - link "show questions tagged 'c++'": c++
+  - text: × 814451
+  - link "show questions tagged 'css'": css
+  - text: × 807768
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Are there any WOTC-published monsters that can make an opportunity attack against a creature that has Disengaged?"
+    - listitem:
+      - link "A conjecture concerning odd binomial coefficients"
+    - listitem:
+      - link "Add a dot (in a weird way) to make the equation true"
+    - listitem:
+      - link "How not to hurt the low back in ushiro ukemi in Aikido?"
+    - listitem:
+      - link "Moral conundrum"
+    - listitem:
+      - link "Note vs Notice in Mathematics"
+    - listitem:
+      - link "How full should a fridge be to work properly?"
+    - listitem:
+      - link "Where can I find the initial version of the /etc/magic file used by the file(1) command?"
+    - listitem:
+      - link "I need help in checking the Exactness of the following Differential Equation"
+    - listitem:
+      - link "Does 1 Kings 19:8 strongly imply that Mt. Horeb (Mt. Sinai), the mountain of God, was in northern Midian?"
+    - listitem:
+      - link "How can I draw \"rounded stars\" in TikZ?"
+    - listitem:
+      - link "Definition of equivalence of statistical tests"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.6.2.28096
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
