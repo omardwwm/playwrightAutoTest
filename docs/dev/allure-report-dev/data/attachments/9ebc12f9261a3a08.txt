@@ -1,0 +1,575 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale US in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- text: The 2025 Annual Developer Survey is live —
+- link "take the Survey today!"
+- link "dismiss"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- paragraph: NEW
+- button "Close"
+- paragraph: Beginner-friendly chat rooms. Join real-time conversations, regardless of your reputation score.
+- button "Try Chat"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,227,541 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 34"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 8 views
+  - heading "Detect when the user of a winforms .net application is idle" [level=3]:
+    - link "Detect when the user of a winforms .net application is idle"
+  - text: I have made a winforms application (.Net Framework) in which there is a form with a datagridview that displays data fetched from database. I need to detect when the user is not working on the form's ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged '.net'": .net
+    - listitem:
+      - link "show questions tagged 'winforms'": winforms
+  - link "user1238784's user avatar":
+    - img "user1238784's user avatar"
+  - link "user1238784"
+  - list:
+    - listitem: 2,470
+  - time: asked 7 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "How can i make error highlighter for python IDE" [level=3]:
+    - link "How can i make error highlighter for python IDE"
+  - text: I’m currently building a simple Python IDE using Python and PyQt6. So far, I’ve implemented syntax highlighting and basic auto-completion features. Now, I want to add real-time syntax error ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'pyqt6'": pyqt6
+  - link "Scxve Ve's user avatar":
+    - img "Scxve Ve's user avatar"
+  - link "Scxve Ve"
+  - list:
+    - listitem: "1"
+  - time: asked 8 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "How I can color a st.data_editor cell based on a condition" [level=3]:
+    - link "How I can color a st.data_editor cell based on a condition"
+  - text: "I using streamlit st.data_editor, I have this dataframe : import streamlit as st import pandas as pd df = pd.DataFrame( [ {\"command\": \"test 1\", \"rating\": 4, &..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'pandas'": pandas
+    - listitem:
+      - link "show questions tagged 'streamlit'": streamlit
+  - link "user29295031's user avatar":
+    - img "user29295031's user avatar"
+  - link "user29295031"
+  - list:
+    - listitem: "345"
+  - time: asked 8 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "MQTT Mosquito Broker dropping client subscriptions without disconnecting" [level=3]:
+    - link "MQTT Mosquito Broker dropping client subscriptions without disconnecting"
+  - text: I am running MQTT5 on an ESP-32 using IDF with the Mosquito Broker. When I send a few large messages (5 messages of around 400 bytes each) I am finding messages occasionally being dropped in my ESP32 ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'mqtt'": mqtt
+    - listitem:
+      - link "show questions tagged 'esp32'": esp32
+    - listitem:
+      - link "show questions tagged 'mosquitto'": mosquitto
+  - link "ADL's user avatar":
+    - img "ADL's user avatar"
+  - link "ADL"
+  - list:
+    - listitem: "101"
+  - time: asked 17 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "How to set custom application and data log paths for all Confluent Kafka components in KRaft mode using Ansible?" [level=3]:
+    - link "How to set custom application and data log paths for all Confluent Kafka components in KRaft mode using Ansible?"
+  - text: I've successfully set up a multi-node Confluent Kafka cluster in KRaft mode using the official confluent.platform Ansible Galaxy role. However, I'm facing a blocker with custom log directory ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'confluent-platform'": confluent-platform
+    - listitem:
+      - link "show questions tagged 'ansible-galaxy'": ansible-galaxy
+    - listitem:
+      - link "show questions tagged 'kraft'": kraft
+  - link "shaheer's user avatar":
+    - img "shaheer's user avatar"
+  - link "shaheer"
+  - list:
+    - listitem: "1"
+  - time: asked 17 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Why does Dafny verify this?" [level=3]:
+    - link "Why does Dafny verify this?"
+  - text: "I apologize for the somewhat vague question title -- I honestly don't know how to ask this more precisely. Why does the following code verify? ghost function {:axiom} max(a: int, b: int) : int ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'dafny'": dafny
+    - listitem:
+      - link "show questions tagged 'formal-verification'": formal-verification
+  - link "LTB's user avatar":
+    - img "LTB's user avatar"
+  - link "LTB"
+  - list:
+    - listitem: "53"
+  - time: asked 19 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Playwright Re-Runs beforeAll and Reseeds Data When a Test Block Fails" [level=3]:
+    - link "Playwright Re-Runs beforeAll and Reseeds Data When a Test Block Fails"
+  - text: We use a feature‐testing approach, where each Playwright test file covers an entire feature from start to finish. In these files, I generate random data (e.g., school name, leader email) at the module ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'playwright'": playwright
+    - listitem:
+      - link "show questions tagged 'playwright-test'": playwright-test
+    - listitem:
+      - link "show questions tagged 'playwright-typescript'": playwright-typescript
+  - link "yasirghouri's user avatar":
+    - img "yasirghouri's user avatar"
+  - link "yasirghouri"
+  - list:
+    - listitem: "1"
+  - time: asked 22 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "Why Lua uses decimal in a '\\ddd' escape sequence instead of octal?" [level=3]:
+    - link "Why Lua uses decimal in a '\\ddd' escape sequence instead of octal?"
+  - text: "The following quote is from the reference manual: We can specify any byte in a short literal string by its numeric value (including embedded zeros). This can be done (...) with the escape sequence \\..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'lua'": lua
+  - link "JustLoveCode's user avatar":
+    - img "JustLoveCode's user avatar"
+  - link "JustLoveCode"
+  - list:
+    - listitem: "1"
+  - time: asked 29 mins ago
+  - text: 0 votes 0 answers 18 views
+  - heading "How to see the most recently added project in a visual studio solution?" [level=3]:
+    - link "How to see the most recently added project in a visual studio solution?"
+  - text: I have a legacy application whose visual studio solution contains more than 300 projects. Now I need to add a new project to the solution. Problem here sounds a bit fishy. Once the new project is ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'windows'": windows
+    - listitem:
+      - link "show questions tagged 'visual-studio'": visual-studio
+  - link "Jyothish Bhaskaran's user avatar":
+    - img "Jyothish Bhaskaran's user avatar"
+  - link "Jyothish Bhaskaran"
+  - list:
+    - listitem: "559"
+  - time: asked 32 mins ago
+  - text: 0 votes 0 answers 11 views
+  - 'heading "pipminizip 0.2.6 Compilation error on macOS 15.4 Apple Silicon (ARM) #56" [level=3]':
+    - 'link "pipminizip 0.2.6 Compilation error on macOS 15.4 Apple Silicon (ARM) #56"'
+  - text: "Looks like with the macOS update 15.4, I also get a new version of clang; New: Apple clang version 17.0.0 (clang-1700.0.13.3) When I tried this command \"pip3 install pyminizip\"and it fails ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python-3.x'": python-3.x
+    - listitem:
+      - link "show questions tagged 'macos'": macos
+    - listitem:
+      - link "show questions tagged 'pip'": pip
+  - link "王建飞's user avatar":
+    - img "王建飞's user avatar"
+  - link "王建飞"
+  - list:
+    - listitem: "1"
+  - time: asked 33 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "How to give option \"/FAcs Machine, source, and assembly code; .cod\" through makefile" [level=3]:
+    - link "How to give option \"/FAcs Machine, source, and assembly code; .cod\" through makefile"
+  - text: I have a setup wherein I am building the solution through makefile rather than Visual Studio IDE, I need to give "/FAcs Machine, source, and assembly code; .cod" option by providing as an ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'visual-studio'": visual-studio
+    - listitem:
+      - link "show questions tagged 'assembly'": assembly
+    - listitem:
+      - link "show questions tagged 'makefile'": makefile
+  - link "MiVoice Integrations's user avatar":
+    - img "MiVoice Integrations's user avatar"
+  - link "MiVoice Integrations"
+  - list:
+    - listitem: "1"
+  - time: asked 35 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Apisix on Docker can not access etcd instance" [level=3]:
+    - link "Apisix on Docker can not access etcd instance"
+  - text: I'm encountering an issue with the APISIX Docker installation. I created a custom Docker network and launched both the etcd and apisix containers within it. The etcd container is assigned the IP ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'apache-apisix'": apache-apisix
+  - link "ussrback's user avatar":
+    - img "ussrback's user avatar"
+  - link "ussrback"
+  - list:
+    - listitem: "621"
+  - time: asked 38 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "Determine IP address of Raspberry Pi from its PiName.local designation [closed]" [level=3]:
+    - link "Determine IP address of Raspberry Pi from its PiName.local designation [closed]"
+  - text: I have a Raspberry Pi 4b (bookworm) which can be accessed via putty using its Pi-Name.local. This works whether the Pi is attached to our Intranet (eth0 or WiFi) or directly to a Windows 11 pc (...
+  - list:
+    - listitem:
+      - link "show questions tagged 'linux'": linux
+    - listitem:
+      - link "show questions tagged 'windows'": windows
+    - listitem:
+      - link "show questions tagged 'raspberry-pi4'": raspberry-pi4
+    - listitem:
+      - link "show questions tagged 'debian-bookworm'": debian-bookworm
+  - link "RDK's user avatar":
+    - img "RDK's user avatar"
+  - link "RDK"
+  - list:
+    - listitem: "405"
+  - time: asked 41 mins ago
+  - text: 0 votes 0 answers 18 views
+  - heading "How to address line (or similar) elements in a matplotlib window" [level=3]:
+    - link "How to address line (or similar) elements in a matplotlib window"
+  - text: How do I address a matplotlib element in a window? In this code, a window is created and three lines a re drawn. with the "m" key you can add another line, "l" lists all lines with ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'matplotlib'": matplotlib
+    - listitem:
+      - link "show questions tagged 'plot'": plot
+  - link "Esrly Bird's user avatar":
+    - img "Esrly Bird's user avatar"
+  - link "Esrly Bird"
+  - list:
+    - listitem: "11"
+  - time: asked 44 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "VS Code is not auto formatting my own customer XXXX-docker-compose.yml file" [level=3]:
+    - link "VS Code is not auto formatting my own customer XXXX-docker-compose.yml file"
+  - text: I have openSUSE linux with VS Code and I installed Docker, yaml extensions. I am trying to write my own docker-compose file <<r25transact-docker-compose.yml>>. However VS Code is not auto ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'visual-studio-code'": visual-studio-code
+    - listitem:
+      - link "show questions tagged 'docker-compose'": docker-compose
+    - listitem:
+      - link "show questions tagged 'yaml'": yaml
+    - listitem:
+      - link "show questions tagged 'autoformatting'": autoformatting
+  - link "Manohar Amkem's user avatar":
+    - img "Manohar Amkem's user avatar"
+  - link "Manohar Amkem"
+  - list:
+    - listitem: "33"
+  - time: asked 44 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615170"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Stack Exchange knowledge is for everyone (and now available on Snowflake..."
+    - listitem:
+      - link "If an attacker can edit your mobile code, how do you defend your app?"
+    - listitem: Upcoming Events
+    - listitem:
+      - link "2025 Community Moderator Election"
+      - text: ends in 7 days
+    - listitem: Featured on Meta
+    - listitem:
+      - link "How Can We Bring More Fun to the Stack Ecosystem? Community Ideas Welcome!"
+    - listitem:
+      - link "Thoughts on the future of Stack Exchange site customisation"
+    - listitem:
+      - link "How can I revert the style/layout changes to comments?"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "Experimenting with the Commenting Reputation Requirement"
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 63k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 23k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 15k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2530472
+  - link "show questions tagged 'python'": python
+  - text: × 2211275
+  - link "show questions tagged 'java'": java
+  - text: × 1919914
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624790
+  - link "show questions tagged 'php'": php
+  - text: × 1467277
+  - link "show questions tagged 'android'": android
+  - text: × 1418934
+  - link "show questions tagged 'html'": html
+  - text: × 1188384
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1035943
+  - link "show questions tagged 'c++'": c++
+  - text: × 814478
+  - link "show questions tagged 'css'": css
+  - text: × 807767
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Short story about shipwrecked humans who come across a cache of strange alien items"
+    - listitem:
+      - link "How to deal with/prevent widely differing review reports for conference submissions?"
+    - listitem:
+      - link "Short story about a robot proxy battle with humanity sheltering and watching. Angels descend from heaven and lift up the robots(!) to heaven"
+    - listitem:
+      - link "In which rings does the Chinese Remainder Theorem hold for an infinite class of ideals?"
+    - listitem:
+      - link "When is the earliest a planet in an eccentric near-polar orbit of Sol could have been detected?"
+    - listitem:
+      - link "Variation of variance for bounded random variables"
+    - listitem:
+      - link "In MTG, why aren't mono-color decks optimal?"
+    - listitem:
+      - link "Simple mutation simulation for use in science class"
+    - listitem:
+      - link "To which \"lady-mathematician\" is Weil referring?"
+    - listitem:
+      - link "Ultrafilter Problem"
+    - listitem:
+      - link "Does Smiting with a Crystal Blade give extra healing?"
+    - listitem:
+      - link "Send encryption key through UART"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.6.4.28397
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
