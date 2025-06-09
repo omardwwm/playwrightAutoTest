@@ -1,0 +1,567 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale CA in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- text: Stack Overflow's 2025 Annual Developer Survey is still open —
+- link "take the Survey before it closes"
+- link "dismiss"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,224,837 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 36"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 2 views
+  - heading "react zustand state persistance behavior not the same between browser and private browser" [level=3]:
+    - link "react zustand state persistance behavior not the same between browser and private browser"
+  - text: I am trying to persist state management to session storage. Currently I can save the state on the browser and state is shared on all tabs (new and old) for as long as any one tab is open. However when ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'zustand'": zustand
+  - link "Mr. Kenneth's user avatar":
+    - img "Mr. Kenneth's user avatar"
+  - link "Mr. Kenneth"
+  - list:
+    - listitem: "962"
+  - time: asked 44 secs ago
+  - text: 0 votes 0 answers 2 views
+  - 'heading "ActiveMQ Artemis 2.41.0 : Disaster Recovery Failover Issues" [level=3]':
+    - 'link "ActiveMQ Artemis 2.41.0 : Disaster Recovery Failover Issues"'
+  - text: "We are running ActiveMQ Artemis 2.41.0 with mirroring between two brokers in different data centers (Region A and Region B) for disaster recovery (DR). System Overview Mirroring: Artemis broker(2.41...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'activemq-artemis'": activemq-artemis
+    - listitem:
+      - link "show questions tagged 'mirroring'": mirroring
+    - listitem:
+      - link "show questions tagged 'disaster-recovery'": disaster-recovery
+  - link "tharika's user avatar":
+    - img "tharika's user avatar"
+  - link "tharika"
+  - list:
+    - listitem: "21"
+  - time: asked 1 min ago
+  - text: 0 votes 0 answers 4 views
+  - heading "Can we automate adding kafka acls using aws cli or terraform?" [level=3]:
+    - link "Can we automate adding kafka acls using aws cli or terraform?"
+  - text: I am using terraform to create AWS MSK cluster, is it possible to define kafka acls at terraform level or can we use aws cli to add them once cluster is up? I want to automate this and don't want ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'amazon-web-services'": amazon-web-services
+    - listitem:
+      - link "show questions tagged 'apache-kafka'": apache-kafka
+    - listitem:
+      - link "show questions tagged 'terraform'": terraform
+    - listitem:
+      - link "show questions tagged 'aws-msk'": aws-msk
+  - link "Roobal Jindal's user avatar":
+    - img "Roobal Jindal's user avatar"
+  - link "Roobal Jindal"
+  - list:
+    - listitem: "286"
+  - time: asked 1 min ago
+  - text: 0 votes 0 answers 5 views
+  - heading "How to Insert a blob type using Mybatis in Java?" [level=3]:
+    - link "How to Insert a blob type using Mybatis in Java?"
+  - text: My project is a springboot application and im using Mybatis for my sql queries. My intention is that ill be receiving a blob type and ill be storing it in my database. I am having trouble to Inserting ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'spring-boot'": spring-boot
+    - listitem:
+      - link "show questions tagged 'mybatis'": mybatis
+    - listitem:
+      - link "show questions tagged 'spring-mybatis'": spring-mybatis
+  - link "Generic Mail's user avatar":
+    - img "Generic Mail's user avatar"
+  - link "Generic Mail"
+  - list:
+    - listitem: "1"
+  - time: asked 3 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "Fetch records if all values matching" [level=3]:
+    - link "Fetch records if all values matching"
+  - text: Select distinct sa.cola,sa.colb from sat sa where sa.colb in(“a”,”b”,”c”) Group by sa.cola,sa.colb Fetch records if only a,b,c values are in column b.
+  - list:
+    - listitem:
+      - link "show questions tagged 'sql'": sql
+  - link "SATG123's user avatar":
+    - img "SATG123's user avatar"
+  - link "SATG123"
+  - list:
+    - listitem: "5"
+  - time: asked 9 mins ago
+  - text: 0 votes 0 answers 6 views
+  - 'heading "Apache Doris query fails with error: [E-230]missed_versions is empty - How to diagnose and fix?" [level=3]':
+    - 'link "Apache Doris query fails with error: [E-230]missed_versions is empty - How to diagnose and fix?"'
+  - text: "We are intermittently encountering a query failure on our Apache Doris cluster. The query fails completely with the following error message: Query error: [E-230]missed_versions is empty This error ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'database'": database
+    - listitem:
+      - link "show questions tagged 'bigdata'": bigdata
+    - listitem:
+      - link "show questions tagged 'olap'": olap
+    - listitem:
+      - link "show questions tagged 'apache-doris'": apache-doris
+  - link "Michael's user avatar":
+    - img "Michael's user avatar"
+  - link "Michael"
+  - list:
+    - listitem: "36"
+  - time: asked 10 mins ago
+  - text: "-1 votes 0 answers 8 views"
+  - heading "How to get Custom Adapter to respect the 'next' URL query parameter" [level=3]:
+    - link "How to get Custom Adapter to respect the 'next' URL query parameter"
+  - text: I am using allauth in my Django project and I have set up a custom account adapter which I have specified in settings.py - ACCOUNT_ADAPTER. My issue is once the user logs in in at a URL like /accounts/...
+  - list:
+    - listitem:
+      - link "show questions tagged 'django'": django
+    - listitem:
+      - link "show questions tagged 'django-allauth'": django-allauth
+  - link "arunkumar's user avatar":
+    - img "arunkumar's user avatar"
+  - link "arunkumar"
+  - list:
+    - listitem: 34.3k
+  - time: asked 11 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "vba the marco can't auto running if I open the excel after the selected time in excel, even the time is changed to later time afterward" [level=3]:
+    - link "vba the marco can't auto running if I open the excel after the selected time in excel, even the time is changed to later time afterward"
+  - text: the below marco is already added the auto running code once open the below marco Declare PtrSafe Function URLDownloadToFile Lib "urlmon" _ Alias "URLDownloadToFileA" (ByVal ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'vba'": vba
+  - link "master cocktail's user avatar":
+    - img "master cocktail's user avatar"
+  - link "master cocktail"
+  - list:
+    - listitem: "1"
+  - time: asked 12 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Issue with changing plan that should start at next renew in revenuecat" [level=3]:
+    - link "Issue with changing plan that should start at next renew in revenuecat"
+  - text: I got a problem using Revenuecat SDK via react-native, if user subscribes to a monthly plan, and wants to change to a bimonthly plan that should start at next renewal, does revenuecat support this? I ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+    - listitem:
+      - link "show questions tagged 'revenuecat'": revenuecat
+  - link "Capitaine's user avatar":
+    - img "Capitaine's user avatar"
+  - link "Capitaine"
+  - list:
+    - listitem: 2,005
+  - time: asked 13 mins ago
+  - text: "-3 votes 0 answers 12 views"
+  - heading "openstack vm instante could not access external network [closed]" [level=3]:
+    - link "openstack vm instante could not access external network [closed]"
+  - text: "I bought two ESC servers from Huawei Cloud. OS and hardware configuration are below. Controller node: os ubuntu ram, 100G ware: 8 ram, 100G ram, 100G disk. Compute01 node: os ubuntu 22.04 hard ware:..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'openstack'": openstack
+    - listitem:
+      - link "show questions tagged 'openstack-neutron'": openstack-neutron
+  - link "andy's user avatar":
+    - img "andy's user avatar"
+  - link "andy"
+  - list:
+    - listitem: "1"
+  - time: asked 13 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "What's wrong with my CMake Tools extension status bar in VSCode?" [level=3]:
+    - link "What's wrong with my CMake Tools extension status bar in VSCode?"
+  - text: "My status bar for CMake Tools extension used to look like this photo from this answer: Where I can select build target, specify build type (release or debug), specify which target to build, and ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'visual-studio-code'": visual-studio-code
+    - listitem:
+      - link "show questions tagged 'cmake'": cmake
+    - listitem:
+      - link "show questions tagged 'vscode-extensions'": vscode-extensions
+    - listitem:
+      - link "show questions tagged 'vcpkg'": vcpkg
+  - link "Algo's user avatar":
+    - img "Algo's user avatar"
+  - link "Algo"
+  - list:
+    - listitem: "880"
+  - time: asked 14 mins ago
+  - text: "-3 votes 0 answers 14 views"
+  - heading "Library Browser in robot framework, status = StatusCode.RESOURCE_EXHAUSTED" [level=3]:
+    - link "Library Browser in robot framework, status = StatusCode.RESOURCE_EXHAUSTED"
+  - text: "enter image description hereenter image description here{\"level\":30,\"time\":\"2025-06-09T06:08:39.556Z\",\"pid\":358,\"hostname\":\"0c1bb318db96\",&..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'browser'": browser
+    - listitem:
+      - link "show questions tagged 'robotframework'": robotframework
+  - link "alecz's user avatar":
+    - img "alecz's user avatar"
+  - link "alecz"
+  - list:
+    - listitem: "1"
+  - time: asked 24 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "activity diagram - number of tokens outgoing flows centralbuffer node" [level=3]:
+    - link "activity diagram - number of tokens outgoing flows centralbuffer node"
+  - text: I am wrestling with the following question for days. I just cannot find an answer in the UML specification. What happens if you have a centralbuffer objectnode with one value (token) and 2 outgoing ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'android-activity'": android-activity
+    - listitem:
+      - link "show questions tagged 'uml'": uml
+    - listitem:
+      - link "show questions tagged 'activity-diagram'": activity-diagram
+  - link "Sabine Meijran's user avatar":
+    - img "Sabine Meijran's user avatar"
+  - link "Sabine Meijran"
+  - list:
+    - listitem: "115"
+  - time: asked 25 mins ago
+  - text: 0 votes 0 answers 22 views
+  - heading "How to calculate video tag height dynamically?" [level=3]:
+    - link "How to calculate video tag height dynamically?"
+  - text: How to calculate a video tag height dynamically so that it occupies the empty space above and below it . Please explain with an example . I want to set height of background video dynamically so that ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'css'": css
+  - link "rajgopalbh4's user avatar":
+    - img "rajgopalbh4's user avatar"
+  - link "rajgopalbh4"
+  - list:
+    - listitem: "89"
+  - time: asked 27 mins ago
+  - text: "-3 votes 0 answers 24 views"
+  - heading "Form submission locally working but on the hosting environment it's not working [closed]" [level=3]:
+    - link "Form submission locally working but on the hosting environment it's not working [closed]"
+  - text: Locally working but on the hosting environment it's not working or doesn't even give error message no log on the console Expecting for the code in the local to be working fine when run on hosting ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'forms'": forms
+  - link "Bugsly's user avatar":
+    - img "Bugsly's user avatar"
+  - link "Bugsly"
+  - list:
+    - listitem: "1"
+  - time: asked 33 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614990"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "If an attacker can edit your mobile code, how do you defend your app?"
+    - listitem:
+      - link "Banking on a serverless world"
+    - listitem: Upcoming Events
+    - listitem:
+      - link "2025 Community Moderator Election"
+      - text: ends in 3 days
+    - listitem: Featured on Meta
+    - listitem:
+      - link "How Can We Bring More Fun to the Stack Ecosystem? Community Ideas Welcome!"
+    - listitem:
+      - link "Thoughts on the future of Stack Exchange site customisation"
+    - listitem:
+      - link "How can I revert the style/layout changes to comments?"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "Experimenting with the Commenting Reputation Requirement"
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 34k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 23k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 20k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2530292
+  - link "show questions tagged 'python'": python
+  - text: × 2211089
+  - link "show questions tagged 'java'": java
+  - text: × 1919806
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624687
+  - link "show questions tagged 'php'": php
+  - text: × 1467094
+  - link "show questions tagged 'android'": android
+  - text: × 1418801
+  - link "show questions tagged 'html'": html
+  - text: × 1188295
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1035888
+  - link "show questions tagged 'c++'": c++
+  - text: × 814476
+  - link "show questions tagged 'css'": css
+  - text: × 807719
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - 'link "Reverse Wordle: Five Clues, One Answer"'
+    - listitem:
+      - link "cars driving VS cars driven"
+    - listitem:
+      - link "Where does the Chida criticise Emek Hamelech (and what is his criticism)?"
+    - listitem:
+      - link "Short male fertility spans evolutionarily remain despite natural selection and extended female fecundity. Why?"
+    - listitem:
+      - link "Why can we treat differential operators as if they behave like algebraic quantities?"
+    - listitem:
+      - 'link "Can you solve this rebus puzzle? (Silly Little Codes, Puzzle #70)"'
+    - listitem:
+      - 'link "Creepy situation: I''m staying at a hotel, but my hosts disappeared a week ago and aren''t responding – what should I do?"'
+    - listitem:
+      - link "What is (or was) the Madden Prize examination?"
+    - listitem:
+      - link "Black and white gradient for defocus node in compositor (instead of static gradient image)"
+    - listitem:
+      - link "According to Jehovah's Witnesses, who or what is the Holy Spirit?"
+    - listitem:
+      - link "\"Verify you are human\""
+    - listitem:
+      - link "Where can I find armour that provides elemental resistance?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.6.7.28691
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
