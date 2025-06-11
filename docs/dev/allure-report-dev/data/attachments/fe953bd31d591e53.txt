@@ -1,0 +1,592 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale NZ in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- text: Stack Overflow's 2025 Annual Developer Survey is still open —
+- link "take the Survey before it closes"
+- link "dismiss"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,225,589 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 46"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 3 views
+  - heading "Making changes in Resize behaviour of table column" [level=3]:
+    - link "Making changes in Resize behaviour of table column"
+  - text: First time here. I need to change the behaviour of the title column in antd Table to be resizable. Code in TS + React + antd + react-resizable. The table column are resizable, there may be fixed/...
+  - list:
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'html-table'": html-table
+    - listitem:
+      - link "show questions tagged 'antd'": antd
+    - listitem:
+      - link "show questions tagged 'resizable'": resizable
+  - link "hemishere's user avatar":
+    - img "hemishere's user avatar"
+  - link "hemishere"
+  - list:
+    - listitem: "1"
+  - time: asked 2 mins ago
+  - text: "-1 votes 0 answers 5 views"
+  - heading "I tried creating recovery from s3 object store in CloudNative PG (PITR). But it is not working as expected" [level=3]:
+    - link "I tried creating recovery from s3 object store in CloudNative PG (PITR). But it is not working as expected"
+  - text: "kind: Cluster metadata: name: cluster-restore-pitr spec: instances: 3 storage: # If you are using a custom storage class, create it first and change the name below. storageClass: gp2 ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'kubernetes'": kubernetes
+    - listitem:
+      - link "show questions tagged 'psql'": psql
+    - listitem:
+      - link "show questions tagged 'k8s-serviceaccount'": k8s-serviceaccount
+    - listitem:
+      - link "show questions tagged 'cloudnative-pg'": cloudnative-pg
+  - link "Kiransurya Madiyan's user avatar":
+    - img "Kiransurya Madiyan's user avatar"
+  - link "Kiransurya Madiyan"
+  - list:
+    - listitem: "37"
+  - time: asked 4 mins ago
+  - text: "-1 votes 0 answers 15 views"
+  - 'heading "i am react and electron.js devloper i have issue in not open cas drawer TypeError: usb.on is not a function" [level=3]':
+    - 'link "i am react and electron.js devloper i have issue in not open cas drawer TypeError: usb.on is not a function"'
+  - text: "i have issue in this open-cash-drawer to open cash drawer i use this code escpos.USB = escposUSB; ipcMain.handle('open-cash-drawer', async () => { const device = new escposenter code here.USB(); ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'electron'": electron
+  - link "Karan Bhuva's user avatar":
+    - img "Karan Bhuva's user avatar"
+  - link "Karan Bhuva"
+  - list:
+    - listitem: "1"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Prevent password menu Python No driver" [level=3]:
+    - link "Prevent password menu Python No driver"
+  - text: How can I prevent the password menu from showing in No Driver Python? It doesnt show in incognito mode, but I dont want this. I also dont want to use a chrome profile. args = [ f"--window-...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'selenium-webdriver'": selenium-webdriver
+    - listitem:
+      - link "show questions tagged 'chromium'": chromium
+    - listitem:
+      - link "show questions tagged 'nodriver'": nodriver
+  - link "Lucis Yao's user avatar":
+    - img "Lucis Yao's user avatar"
+  - link "Lucis Yao"
+  - list:
+    - listitem: "55"
+  - time: asked 11 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "Use threading for UDF in databricks to use new api token" [level=3]:
+    - link "Use threading for UDF in databricks to use new api token"
+  - text: I have a dataframe that needs to be used row-wise for API calls. Therefore I implemented a UDF for it. It takes each row uses the data from that row to make an api call and stores an id from the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'pyspark'": pyspark
+    - listitem:
+      - link "show questions tagged 'databricks'": databricks
+    - listitem:
+      - link "show questions tagged 'user-defined-functions'": user-defined-functions
+  - link "Bondgirl's user avatar":
+    - img "Bondgirl's user avatar"
+  - link "Bondgirl"
+  - list:
+    - listitem: "115"
+  - time: asked 17 mins ago
+  - text: 1 vote 0 answers 16 views
+  - heading "Tonkeeper wallet doesn’t open automatically on IOS, sending OKx swap API transaction using @tonconnect/ui-react" [level=3]:
+    - link "Tonkeeper wallet doesn’t open automatically on IOS, sending OKx swap API transaction using @tonconnect/ui-react"
+  - text: We're using the /api/v5/dex/aggregator/swap endpoint to fetch the transaction message and send it using the TonConnect UI. On Android (Tonkeeper), everything works fine. But on iOS, after calling ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'blockchain'": blockchain
+    - listitem:
+      - link "show questions tagged 'wallet'": wallet
+    - listitem:
+      - link "show questions tagged 'ton'": ton
+  - link "mh_jsx's user avatar":
+    - img "mh_jsx's user avatar"
+  - link "mh_jsx"
+  - list:
+    - listitem: "11"
+  - time: asked 19 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "ONDC Form submission" [level=3]:
+    - link "ONDC Form submission"
+  - text: I need help in figuring out how to capture the submission_id once i open a new window with form url inside x_input field from on_search response. Given it's cors it's not allowing me to access ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'sdk'": sdk
+  - link "Madhu Avinash's user avatar":
+    - img "Madhu Avinash's user avatar"
+  - link "Madhu Avinash"
+  - list:
+    - listitem: "971"
+  - time: asked 21 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "how to add a window handle to wpf window" [level=3]:
+    - link "how to add a window handle to wpf window"
+  - text: I use OpenCvSharpe to read Mat from Camera and then , use Cv2.ImShow to show detial Cv2.ImShow will open a window and I can get the window handle how to add a window handle to wpf window public ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'wpf'": wpf
+    - listitem:
+      - link "show questions tagged 'opencv'": opencv
+  - link "研小艾's user avatar":
+    - img "研小艾's user avatar"
+  - link "研小艾"
+  - list:
+    - listitem: "9"
+  - time: asked 24 mins ago
+  - text: 0 votes 0 answers 2 views
+  - heading "Add to Intent.EXTRA_TEXT but only after choosing a target app in the intent chooser?" [level=3]:
+    - link "Add to Intent.EXTRA_TEXT but only after choosing a target app in the intent chooser?"
+  - text: I'm creating an implicit intent to send a referral link. In the intent chooser, I want only the referral link to be visible (along with the target apps such as gmail) and not msgBody which should only ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'kotlin'": kotlin
+    - listitem:
+      - link "show questions tagged 'android-intent'": android-intent
+    - listitem:
+      - link "show questions tagged 'android-intent-chooser'": android-intent-chooser
+  - link "Joseph Coleridge's user avatar":
+    - img "Joseph Coleridge's user avatar"
+  - link "Joseph Coleridge"
+  - list:
+    - listitem: "11"
+  - time: asked 25 mins ago
+  - text: 0 votes 1 answer 15 views
+  - heading "Conflicting OPENSSL versions under Linux" [level=3]:
+    - link "Conflicting OPENSSL versions under Linux"
+  - text: "I'm building a project linking both with QtNetwork (Qt6) and Python library (3.8). At runtime, I get the error: my_prg_bin: symbol lookup error: /lib64/libk5crypto.so.3: undefined symbol: EVP_KDF_ctrl,..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'qt'": qt
+    - listitem:
+      - link "show questions tagged 'openssl'": openssl
+    - listitem:
+      - link "show questions tagged 'linker'": linker
+  - link "jpo38's user avatar":
+    - img "jpo38's user avatar"
+  - link "jpo38"
+  - list:
+    - listitem: 21.8k
+  - time: asked 27 mins ago
+  - text: "-1 votes 0 answers 17 views"
+  - 'heading "CSRF Failed: CSRF token from the ''X-Csrftoken'' HTTP header has incorrect length.\", code=''permission_denied''" [level=3]':
+    - 'link "CSRF Failed: CSRF token from the ''X-Csrftoken'' HTTP header has incorrect length.\", code=''permission_denied''"'
+  - text: I am very close to deploying my app to users but I have run into an issue I thought I solved. When I go through my registration process, I am able to create a user but after going through the Stripe ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'django-rest-framework'": django-rest-framework
+    - listitem:
+      - link "show questions tagged 'stripe-payments'": stripe-payments
+    - listitem:
+      - link "show questions tagged 'csrf'": csrf
+  - link "justin107d's user avatar":
+    - img "justin107d's user avatar"
+  - link "justin107d"
+  - list:
+    - listitem: "31"
+  - time: asked 27 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "Script fails to run when called from a different folder" [level=3]:
+    - link "Script fails to run when called from a different folder"
+  - text: "The following code takes a PDF and renames it based on the content found in the PDF: From: x.pdf To: 2016-02-22 - 2025048014 - SUPPLIER INVOICE NUMBER - $1,000.00.pdf The following code runs as ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'powershell'": powershell
+  - link "wickyd's user avatar":
+    - img "wickyd's user avatar"
+  - link "wickyd"
+  - list:
+    - listitem: "287"
+  - time: asked 28 mins ago
+  - text: "-1 votes 0 answers 12 views"
+  - heading "Div layout with an offset and a picture inside repeating the background" [level=3]:
+    - link "Div layout with an offset and a picture inside repeating the background"
+  - text: Using Bootstrap 5 or custom styles, you need to implement an offset block that has a background repeating the main background as on the example. Example photo I've tried background filling white ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'twitter-bootstrap'": twitter-bootstrap
+  - link "HomerCoder's user avatar":
+    - img "HomerCoder's user avatar"
+  - link "HomerCoder"
+  - list:
+    - listitem: "1"
+  - time: asked 33 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "CSS - Need help placing the first item of a flex container half way on top of the container below it" [level=3]:
+    - link "CSS - Need help placing the first item of a flex container half way on top of the container below it"
+  - text: "I'm having trouble with the positioning of a container. Here is the wireframe I created in figma that I want to accomplish: figma wireframe reference photo \"Portfolio\" and the navigation ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'flexbox'": flexbox
+  - link "user30773724's user avatar":
+    - img "user30773724's user avatar"
+  - link "user30773724"
+  - list:
+    - listitem: "1"
+  - time: asked 36 mins ago
+  - text: "-2 votes 0 answers 12 views"
+  - heading "Restrict Node.js API to Accept Requests Only from My Domain (Same-Origin Policy)" [level=3]:
+    - link "Restrict Node.js API to Accept Requests Only from My Domain (Same-Origin Policy)"
+  - text: I have a question regarding API security in a Node.js application. We want to allow only API requests that originate from our own domain (e.g., https://example.com) and block requests coming from ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'node.js'": node.js
+    - listitem:
+      - link "show questions tagged 'rest'": rest
+    - listitem:
+      - link "show questions tagged 'apache'": apache
+    - listitem:
+      - link "show questions tagged 'security'": security
+    - listitem:
+      - link "show questions tagged 'server'": server
+  - link "Rojith.P's user avatar":
+    - img "Rojith.P's user avatar"
+  - link "Rojith.P"
+  - list:
+    - listitem: "29"
+  - time: asked 40 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615040"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Banking on a serverless world"
+    - listitem:
+      - link "Better vibes and vibe coding with Gemini 2.5"
+    - listitem: Upcoming Events
+    - listitem:
+      - link "2025 Community Moderator Election"
+      - text: ends in 13 hours
+    - listitem: Featured on Meta
+    - listitem:
+      - link "How Can We Bring More Fun to the Stack Ecosystem? Community Ideas Welcome!"
+    - listitem:
+      - link "Thoughts on the future of Stack Exchange site customisation"
+    - listitem:
+      - link "How can I revert the style/layout changes to comments?"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "Experimenting with the Commenting Reputation Requirement"
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 63k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 26k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 10k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2530319
+  - link "show questions tagged 'python'": python
+  - text: × 2211177
+  - link "show questions tagged 'java'": java
+  - text: × 1919835
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624723
+  - link "show questions tagged 'php'": php
+  - text: × 1467095
+  - link "show questions tagged 'android'": android
+  - text: × 1418842
+  - link "show questions tagged 'html'": html
+  - text: × 1188295
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1035889
+  - link "show questions tagged 'c++'": c++
+  - text: × 814502
+  - link "show questions tagged 'css'": css
+  - text: × 807725
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "How to translate direct product of groups tuple notation to Sagemath compatible form"
+    - listitem:
+      - link "Windows Defender keeps closing some apps after a few seconds"
+    - listitem:
+      - link "Is the answer in Bate, Mueller, and White's Fundamentals of astrodynamics' Appendix wrong?"
+    - listitem:
+      - link "Simplest Am-Gm inequality with non-trivial proof?"
+    - listitem:
+      - link "Why were U-Boat attacks on naval vessels (especially destroyers) such a rare occurrence?"
+    - listitem:
+      - link "Public Loos in London"
+    - listitem:
+      - link "Mathematical operators do not align perfectly with other elements"
+    - listitem:
+      - link "Are faculty expected to give 1 on 1 instructional time to a struggling student?"
+    - listitem:
+      - link "Clique number of Cayley graphs in finite fields"
+    - listitem:
+      - link "C method to determine whether a byte array is homogeneous"
+    - listitem:
+      - link "Why does this code (erasing duplicates while preserving order) keep one duplicate for older compilers?"
+    - listitem:
+      - link "Is there a non-period-accurate TV in the ending scene of American Psycho?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.6.10.28869
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
