@@ -1,0 +1,573 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale CA in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- text: Stack Overflow's 2025 Annual Developer Survey is still open —
+- link "take the Survey before it closes"
+- link "dismiss"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,226,194 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 44"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 9 views
+  - heading "Unity WebGL build not loading on mobile browsers – black screen, WASM memory crash, async fetch fail" [level=3]:
+    - link "Unity WebGL build not loading on mobile browsers – black screen, WASM memory crash, async fetch fail"
+  - text: I'm running into a critical issue with my Unity WebGL build on mobile browsers (tested on iOS Safari and Chrome). The same build works fine on desktop browsers, but fails on mobile with either a black ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'unity-game-engine'": unity-game-engine
+    - listitem:
+      - link "show questions tagged 'webassembly'": webassembly
+    - listitem:
+      - link "show questions tagged 'unity-webgl'": unity-webgl
+    - listitem:
+      - link "show questions tagged 'mobile-browser'": mobile-browser
+  - link "Deepak Suthar's user avatar":
+    - img "Deepak Suthar's user avatar"
+  - link "Deepak Suthar"
+  - list:
+    - listitem: "1"
+  - time: asked 1 min ago
+  - text: "-1 votes 0 answers 5 views"
+  - heading "Is Databricks a valid choice for production grade RAG apps?" [level=3]:
+    - link "Is Databricks a valid choice for production grade RAG apps?"
+  - text: There is currently a discussion going on in our department if we should build all AI (RAG) use cases on Databricks and exposing them as endpoints through AI gateway or if we should build everything on ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'databricks'": databricks
+    - listitem:
+      - link "show questions tagged 'rag'": rag
+  - link "Daniel's user avatar":
+    - img "Daniel's user avatar"
+  - link "Daniel"
+  - list:
+    - listitem: 1,003
+  - time: asked 2 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "PTZ Controls Plugin – SavePTZPreset not recognized over WebSocket v5 (code 204)" [level=3]:
+    - link "PTZ Controls Plugin – SavePTZPreset not recognized over WebSocket v5 (code 204)"
+  - text: "I'm integrating OBS with Python using the obsws-python SDK (WebSocket v5), and trying to call a PTZ plugin request like the following: from obsws_python import ReqClient ... client = ReqClient(host='..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'obs-studio'": obs-studio
+    - listitem:
+      - link "show questions tagged 'visca-over-ip'": visca-over-ip
+    - listitem:
+      - link "show questions tagged 'obs-ptz'": obs-ptz
+  - link "Ram Chander's user avatar":
+    - img "Ram Chander's user avatar"
+  - link "Ram Chander"
+  - list:
+    - listitem: 1,542
+  - time: asked 7 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "getUserMedia() Limited to 60 FPS Despite Camera Supporting 120 FPS" [level=3]:
+    - link "getUserMedia() Limited to 60 FPS Despite Camera Supporting 120 FPS"
+  - text: I am experiencing an issue where navigator.mediaDevices.getUserMedia() returns a video stream limited to approximately 60 FPS, despite my camera (ACER WVGA 120fps User Facing) and system supporting ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'browser'": browser
+    - listitem:
+      - link "show questions tagged 'camera'": camera
+  - link "Terry Lo's user avatar":
+    - img "Terry Lo's user avatar"
+  - link "Terry Lo"
+  - list:
+    - listitem: "1"
+  - time: asked 9 mins ago
+  - text: 0 votes 1 answer 4 views
+  - 'heading "Hierarchical Data Query in DolphinDB: Path Generation and Cycle Detection" [level=3]':
+    - 'link "Hierarchical Data Query in DolphinDB: Path Generation and Cycle Detection"'
+  - text: "I need to query hierarchical tree data stored in DolphinDB to: Generate full paths (concatenated IDs and names) for all nodes, including infinite-level leaf nodes. Detect cyclic references (e.g., A → ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'recursive-query'": recursive-query
+    - listitem:
+      - link "show questions tagged 'dolphindb'": dolphindb
+  - link "saki's user avatar":
+    - img "saki's user avatar"
+  - link "saki"
+  - list:
+    - listitem: "285"
+  - time: asked 12 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "SignalR configuration with NGINX CORS" [level=3]:
+    - link "SignalR configuration with NGINX CORS"
+  - text: In my .Net backend I have a ApiGateway project that has the following configuration in my Program.cs app.UseCors(x => x .AllowAnyMethod() .AllowAnyHeader() .SetIsOriginAllowed(origin =&...
+  - list:
+    - listitem:
+      - link "show questions tagged '.net'": .net
+    - listitem:
+      - link "show questions tagged 'nginx'": nginx
+    - listitem:
+      - link "show questions tagged 'signalr'": signalr
+    - listitem:
+      - link "show questions tagged 'nginx-reverse-proxy'": nginx-reverse-proxy
+  - link "Febertson's user avatar":
+    - img "Febertson's user avatar"
+  - link "Febertson"
+  - list:
+    - listitem: "484"
+  - time: asked 13 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "django-minify-html breaks Google Analytics injection" [level=3]:
+    - link "django-minify-html breaks Google Analytics injection"
+  - text: I'm running into an issue and would appreciate some pointers. I have a production Django app where I included Google Analytics using a context processor and conditionally render it in my base.html ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'django'": django
+    - listitem:
+      - link "show questions tagged 'google-analytics'": google-analytics
+  - link "k3r0's user avatar":
+    - img "k3r0's user avatar"
+  - link "k3r0"
+  - list:
+    - listitem: "377"
+  - time: asked 13 mins ago
+  - text: 1 vote 0 answers 7 views
+  - heading "Ignite.NET (2.17) process intermittently exits without crash dump or logs despite full diagnostics" [level=3]:
+    - link "Ignite.NET (2.17) process intermittently exits without crash dump or logs despite full diagnostics"
+  - text: "We’re running an Apache Ignite.NET (v2.17) node on Ubuntu 22.04 with: .NET 8 JDK 17 (for Ignite’s JVM layer) Custom CacheStore implementation using MongoDB as a write-behind persistent store. The ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'ignite'": ignite
+  - link "Motel Cook's user avatar":
+    - img "Motel Cook's user avatar"
+  - link "Motel Cook"
+  - list:
+    - listitem: "11"
+  - time: asked 16 mins ago
+  - text: "-4 votes 0 answers 14 views"
+  - heading "Hololens2 No Display [closed]" [level=3]:
+    - link "Hololens2 No Display [closed]"
+  - text: I need some help with one of our HoloLens devices. We’ve been sharing two HoloLens units across our whole class (about 59 students), so the devices have been used almost non-stop for the past few ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'windows-mixed-reality'": windows-mixed-reality
+  - link "Armany Rizqullah Saputra's user avatar":
+    - img "Armany Rizqullah Saputra's user avatar"
+  - link "Armany Rizqullah Saputra"
+  - list:
+    - listitem: "1"
+  - time: asked 16 mins ago
+  - text: 1 vote 0 answers 11 views
+  - heading "AKS-extension Deployment failed because used version was not found" [level=3]:
+    - link "AKS-extension Deployment failed because used version was not found"
+  - text: I have a problem and it's driving me crazy. The company i work for wants to offer a Kubernetes Cluster in the Azure Marketplace. I have build the necessary CNAB-Bundle and created the offering/plan in ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'azure'": azure
+    - listitem:
+      - link "show questions tagged 'kubernetes'": kubernetes
+    - listitem:
+      - link "show questions tagged 'azure-aks'": azure-aks
+    - listitem:
+      - link "show questions tagged 'azure-marketplace'": azure-marketplace
+  - link "user26660520's user avatar":
+    - img "user26660520's user avatar"
+  - link "user26660520"
+  - list:
+    - listitem: "11"
+  - time: asked 26 mins ago
+  - text: 1 vote 1 answer 21 views
+  - heading "How to show a toast message after redirect?" [level=3]:
+    - link "How to show a toast message after redirect?"
+  - text: "I'm using Next.js latest version (App Router) and I want to show a toast (flash) message after a server-side redirect. Here's my use case: I have a server component (e.g., /login/page.tsx) that checks ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'next.js'": next.js
+  - link "Galbert's user avatar":
+    - img "Galbert's user avatar"
+  - link "Galbert"
+  - list:
+    - listitem: "374"
+  - time: asked 29 mins ago
+  - text: "-5 votes 0 answers 30 views"
+  - heading "Write a function which returns the sum of following series upto nth term(parameter) [closed]" [level=3]:
+    - link "Write a function which returns the sum of following series upto nth term(parameter) [closed]"
+  - text: "I have a task to write a function that returns the sum of the following series up to the nth term (parameter). Series: 1 + 1/4 + 1/9 + 1/16 + 1/25 + 1/36 + ... For example, if n = 5, the result would ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'function'": function
+    - listitem:
+      - link "show questions tagged 'loops'": loops
+    - listitem:
+      - link "show questions tagged 'math'": math
+    - listitem:
+      - link "show questions tagged 'series'": series
+  - link "Follow Magnus's user avatar":
+    - img "Follow Magnus's user avatar"
+  - link "Follow Magnus"
+  - list:
+    - listitem: "13"
+  - time: asked 31 mins ago
+  - text: 2 votes 0 answers 10 views
+  - heading "Unable to Export Power Automate Flow as Zip File" [level=3]:
+    - link "Unable to Export Power Automate Flow as Zip File"
+  - text: I have created a Power Automate Flow to send an Email when an item has been created in the SharePoint list. The flow is working as expected. Now, I need to implement the same flow to another tenant. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'outlook'": outlook
+    - listitem:
+      - link "show questions tagged 'office365'": office365
+    - listitem:
+      - link "show questions tagged 'sharepoint-online'": sharepoint-online
+    - listitem:
+      - link "show questions tagged 'power-automate'": power-automate
+    - listitem:
+      - link "show questions tagged 'power-platform'": power-platform
+  - link "Bhoomesh Joshi's user avatar":
+    - img "Bhoomesh Joshi's user avatar"
+  - link "Bhoomesh Joshi"
+  - list:
+    - listitem: "49"
+  - time: asked 32 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Weights only load failed" [level=3]:
+    - link "Weights only load failed"
+  - text: /usr/local/lib/python3.11/dist-packages/torch/serialization.py in load(f, map_location, pickle_module, weights_only, mmap, **pickle_load_args) 1468 ) 1469 ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'torch'": torch
+  - link "sara jahangoshai's user avatar":
+    - img "sara jahangoshai's user avatar"
+  - link "sara jahangoshai"
+  - list:
+    - listitem: "1"
+  - time: asked 35 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Import variable products in Wocommers" [level=3]:
+    - link "Import variable products in Wocommers"
+  - text: I'm importing variable products into WooCommerce using a CSV file. Each product uses a global attribute called pa_size and variations have their values like S, M, L, L-XL, etc. The problem I'm facing ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'wordpress'": wordpress
+    - listitem:
+      - link "show questions tagged 'woocommerce'": woocommerce
+  - link "Oliver's user avatar":
+    - img "Oliver's user avatar"
+  - link "Oliver"
+  - list:
+    - listitem: "404"
+  - time: asked 36 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1615080"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Better vibes and vibe coding with Gemini 2.5"
+    - listitem:
+      - 'link "“We’re not worried about compute anymore”: The future of AI models"'
+    - listitem: Featured on Meta
+    - listitem:
+      - link "How Can We Bring More Fun to the Stack Ecosystem? Community Ideas Welcome!"
+    - listitem:
+      - link "Thoughts on the future of Stack Exchange site customisation"
+    - listitem:
+      - link "How can I revert the style/layout changes to comments?"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "Experimenting with the Commenting Reputation Requirement"
+    - listitem:
+      - link "2025 Community Moderator Election Results"
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 34k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 20k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 15k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2530323
+  - link "show questions tagged 'python'": python
+  - text: × 2211234
+  - link "show questions tagged 'java'": java
+  - text: × 1919863
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624761
+  - link "show questions tagged 'php'": php
+  - text: × 1467100
+  - link "show questions tagged 'android'": android
+  - text: × 1418860
+  - link "show questions tagged 'html'": html
+  - text: × 1188308
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1035888
+  - link "show questions tagged 'c++'": c++
+  - text: × 814522
+  - link "show questions tagged 'css'": css
+  - text: × 807743
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Tap in / Tap out of Paris Metro"
+    - listitem:
+      - link "Are there moral realist alternatives to divine command theory for theists?"
+    - listitem:
+      - link "Complexity of counting the number of cycles through a particular edge"
+    - listitem:
+      - link "In Ephesians 3:11, what specifically is God's \"eternal purpose\"?"
+    - listitem:
+      - link "Does a non-zero net force applied to a particle always result in a non-zero net work done on the particle?"
+    - listitem:
+      - link "Was there any music during the medals ceremony on Yavin IV?"
+    - listitem:
+      - link "Is it UB to skip the destructor of a derived class before doing a placement new on a base class?"
+    - listitem:
+      - link "Why did Renata slap Ernie when he said that the agency had erased Quaid's memory in “Total Recall” (1990)?"
+    - listitem:
+      - link "how to update my kernel to Linux 6.6.12 in LinuxMint to make MT7902 work?"
+    - listitem:
+      - link "Why is my mouse cursor randomly jumping to the top right corner and clicks?"
+    - listitem:
+      - link "Change font while preserving subscripts and superscripts"
+    - listitem:
+      - link "What “memory” does this error refer to?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.6.12.29105
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
