@@ -1,0 +1,572 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale DE in dev Einvironment and Realm europe
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- text: Stack Overflow's 2025 Annual Developer Survey is still open —
+- link "take the Survey before it closes"
+- link "dismiss"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,222,759 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 37"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 4 views
+  - heading "Multiple sessions created on my backend on the First Load from Next.js" [level=3]:
+    - link "Multiple sessions created on my backend on the First Load from Next.js"
+  - text: "I am using Moqui Framework for the backend. The Problem: On first load, multiple API calls are made in parallel from different components. Since there’s no session cookie yet on the first visit, the ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'next.js'": next.js
+    - listitem:
+      - link "show questions tagged 'backend'": backend
+    - listitem:
+      - link "show questions tagged 'moqui'": moqui
+  - link "Jerin's user avatar":
+    - img "Jerin's user avatar"
+  - link "Jerin"
+  - list:
+    - listitem: "736"
+  - time: asked 4 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Is there AI tool available to generate selenium TestNg java code?" [level=3]:
+    - link "Is there AI tool available to generate selenium TestNg java code?"
+  - text: Here I am using selenium with testNg, and I want AI tool or browser plugin to generate the code automatically. I want code which generate automatically. I have already used SideeX, TestRigor but it is ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'testng'": testng
+  - link "Poonam Khot's user avatar":
+    - img "Poonam Khot's user avatar"
+  - link "Poonam Khot"
+  - list:
+    - listitem: "1"
+  - time: asked 8 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "How do I implement CompositeView so it displays the components correctly?" [level=3]:
+    - link "How do I implement CompositeView so it displays the components correctly?"
+  - text: I am working on a Markdown EditorKit (from javax.swing.text). The parser seems to work fine, but now I need to make a ViewFactory. The test string is parsed in such way, that we get the following ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'swing'": swing
+  - link "Tech of the Absence's user avatar":
+    - img "Tech of the Absence's user avatar"
+  - link "Tech of the Absence"
+  - list:
+    - listitem: "47"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "Drizzle ORM + Postgres, how to specify Postgres database Schema? defaults to public" [level=3]:
+    - link "Drizzle ORM + Postgres, how to specify Postgres database Schema? defaults to public"
+  - text: I am trying to set connection to Postgres from Drizzle, but I cannot set the schema name in the connection string I tried postgres://localhost:5432/mydatabase?searchpath=myschema postgres://localhost:...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'postgresql'": postgresql
+    - listitem:
+      - link "show questions tagged 'drizzle-orm'": drizzle-orm
+  - link "eliezra236's user avatar":
+    - img "eliezra236's user avatar"
+  - link "eliezra236"
+  - list:
+    - listitem: "963"
+  - time: asked 21 mins ago
+  - text: 0 votes 0 answers 26 views
+  - heading "How to set different colors for different protection levels and staticness in Visual Studio?" [level=3]:
+    - link "How to set different colors for different protection levels and staticness in Visual Studio?"
+  - text: "[Tools -> Options -> Environment -> Fonts and Colors] shows me only User member - Fields item and unrelated items. Is there any extension that allows this?"
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'visual-studio'": visual-studio
+  - link "user2147483647's user avatar":
+    - img "user2147483647's user avatar"
+  - link "user2147483647"
+  - list:
+    - listitem: "1"
+  - time: asked 47 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Flutter TextField, need to reposition the TextField label and solve label being always shown to focused position due to prefix" [level=3]:
+    - link "Flutter TextField, need to reposition the TextField label and solve label being always shown to focused position due to prefix"
+  - text: "I'm trying to build a pixel-perfect design in Flutter that includes a TextField. The design requires the label to behave like this: When the TextField is not focused and empty, the label should ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'user-interface'": user-interface
+    - listitem:
+      - link "show questions tagged 'textfield'": textfield
+    - listitem:
+      - link "show questions tagged 'decoration'": decoration
+  - link "Muzahidul Islam's user avatar":
+    - img "Muzahidul Islam's user avatar"
+  - link "Muzahidul Islam"
+  - list:
+    - listitem: "1"
+  - time: asked 47 mins ago
+  - text: "-2 votes 0 answers 18 views"
+  - heading "API link is broken [closed]" [level=3]:
+    - link "API link is broken [closed]"
+  - text: I had created an API system on Hostinger for a Online tickets platform. I used to get in to do changes or what I want to do. But today, I get in my hPanel and tried to open my API website link, I get ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'routes'": routes
+    - listitem:
+      - link "show questions tagged 'hostinger'": hostinger
+  - link "Smile Africa Web Agency's user avatar":
+    - img "Smile Africa Web Agency's user avatar"
+  - link "Smile Africa Web Agency"
+  - list:
+    - listitem: "1"
+  - time: asked 49 mins ago
+  - text: 0 votes 1 answer 17 views
+  - heading "Why is Tomee 10.0.0 loading hibernate provider on Linux but not Mac" [level=3]:
+    - link "Why is Tomee 10.0.0 loading hibernate provider on Linux but not Mac"
+  - text: Background I have been struggling to move my development setup from my linux desktop to a macbook. The project uses TomEE 10.0.0 and has used hibernate persistence successfully on linux. I finally ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'hibernate'": hibernate
+    - listitem:
+      - link "show questions tagged 'jpa'": jpa
+    - listitem:
+      - link "show questions tagged 'apache-tomee'": apache-tomee
+  - link "Gus's user avatar":
+    - img "Gus's user avatar"
+  - link "Gus"
+  - list:
+    - listitem: 6,893
+  - time: asked 50 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Unity throws a Win32Exception error when I was importing" [level=3]:
+    - link "Unity throws a Win32Exception error when I was importing"
+  - text: "*Win32Exception: ApplicationName='D:\\Projects Unity\\Plinko\\Temp\\PlayServicesResolverGradle\\gradlew.bat', CommandLine='--no-daemon -b \"D:\\Projects Unity\\Plinko\\Temp\\PlayServicesResolverGradle\\..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'unity-game-engine'": unity-game-engine
+  - link "LiKE NAME's user avatar":
+    - img "LiKE NAME's user avatar"
+  - link "LiKE NAME"
+  - list:
+    - listitem: "1"
+  - time: asked 52 mins ago
+  - text: "-1 votes 1 answer 19 views"
+  - heading "Why does my link not find my CSS file, none of the other questions solved it" [level=3]:
+    - link "Why does my link not find my CSS file, none of the other questions solved it"
+  - text: "I know this question is noob like but it is very much a problem as even though it is in a sub folder it still doesn't work. I typed: <link rel=\"stylesheet\" href=\"/css/indexstyles&..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'hyperlink'": hyperlink
+  - link "Dumgamer234's user avatar":
+    - img "Dumgamer234's user avatar"
+  - link "Dumgamer234"
+  - list:
+    - listitem: "1"
+  - time: asked 57 mins ago
+  - text: 0 votes 1 answer 21 views
+  - 'heading "How to retrieve the visible content of multiple `select` elements at once?" [level=3]':
+    - 'link "How to retrieve the visible content of multiple `select` elements at once?"'
+  - text: "I want to retrieve the visible text content of an div element which contains several <select> elements: However, div.innerText will include text content in all <option> tags, including ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'html'": html
+  - link "FaniX's user avatar":
+    - img "FaniX's user avatar"
+  - link "FaniX"
+  - list:
+    - listitem: "385"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 9 views
+  - 'heading "XMonad: Running manageHook on demand?" [level=3]':
+    - 'link "XMonad: Running manageHook on demand?"'
+  - text: "In my custom XMonad setup (for Linux running Xorg), my manageHook has a bunch of rules to manage windows conditionally based on WM_NAME and WM_CLASS. For example: myManageHook :: XMonad.Query (Data...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'haskell'": haskell
+    - listitem:
+      - link "show questions tagged 'xmonad'": xmonad
+    - listitem:
+      - link "show questions tagged 'xmonad-contrib'": xmonad-contrib
+  - link "Oh Fiveight's user avatar":
+    - img "Oh Fiveight's user avatar"
+  - link "Oh Fiveight"
+  - list:
+    - listitem: "477"
+  - time: asked 1 hour ago
+  - text: "-4 votes 0 answers 28 views"
+  - heading "How to set developing environment for mobile application (Android, iOS)? [closed]" [level=3]:
+    - link "How to set developing environment for mobile application (Android, iOS)? [closed]"
+  - text: "I’d like to make a mobile application. However, I have no idea how to set making mobile app. I’m going to make the mobile app which is deployed in Android and iOS. My Situation : I have a mackbook to ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'kotlin'": kotlin
+  - link "Aiden's user avatar":
+    - img "Aiden's user avatar"
+  - link "Aiden"
+  - list:
+    - listitem: "23"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Site domain tranformed as additional URL parameter" [level=3]:
+    - link "Site domain tranformed as additional URL parameter"
+  - text: I have the same web infrastructure for different sites. In my reality different sites are representation of different content from different databases on the same web infrastructure but I want to keep ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'apache'": apache
+    - listitem:
+      - link "show questions tagged 'http-redirect'": http-redirect
+    - listitem:
+      - link "show questions tagged 'virtualhost'": virtualhost
+  - link "sbrbot's user avatar":
+    - img "sbrbot's user avatar"
+  - link "sbrbot"
+  - list:
+    - listitem: 6,497
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Vercel Next js project issue" [level=3]:
+    - link "Vercel Next js project issue"
+  - text: I did deploy my first project from GitHub repo on Vercel but I had saved all my images/assets in my repo itself (no links) ,I used next/images using help from gpt ,but still my Fast Data Transfer on ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'next.js'": next.js
+    - listitem:
+      - link "show questions tagged 'deployment'": deployment
+    - listitem:
+      - link "show questions tagged 'vercel'": vercel
+  - link "dhruvxbug's user avatar":
+    - img "dhruvxbug's user avatar"
+  - link "dhruvxbug"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614851"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Better vibes and vibe coding with Gemini 2.5"
+    - listitem:
+      - 'link "“We’re not worried about compute anymore”: The future of AI models"'
+    - listitem: Featured on Meta
+    - listitem:
+      - link "How Can We Bring More Fun to the Stack Ecosystem? Community Ideas Welcome!"
+    - listitem:
+      - link "Thoughts on the future of Stack Exchange site customisation"
+    - listitem:
+      - link "How can I revert the style/layout changes to comments?"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "2025 Community Moderator Election Results"
+  - text: Collectives
+  - link "see all"
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 27k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 15k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 10k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2530066
+  - link "show questions tagged 'python'": python
+  - text: × 2210917
+  - link "show questions tagged 'java'": java
+  - text: × 1919693
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624643
+  - link "show questions tagged 'php'": php
+  - text: × 1466963
+  - link "show questions tagged 'android'": android
+  - text: × 1418711
+  - link "show questions tagged 'html'": html
+  - text: × 1188219
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1035832
+  - link "show questions tagged 'c++'": c++
+  - text: × 814486
+  - link "show questions tagged 'css'": css
+  - text: × 807687
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Salvaging a 'failed' research project as a sophomore high school student"
+    - listitem:
+      - link "In Ephesians 3:11, what specifically is God's \"eternal purpose\"?"
+    - listitem:
+      - link "Is there an official and complete list of documents required for Greece Schengen tourist visa?"
+    - listitem:
+      - link "Integer to string via gcc converter"
+    - listitem:
+      - link "What are the details regarding the cause of brake fluid contamination, and why can't an air-tight brake reservoir lid largely solve this issue?"
+    - listitem:
+      - link "Why is there such a respect for ex-military in the US?"
+    - listitem:
+      - link "How to tag a tikzpicture with a bounding box?"
+    - listitem:
+      - link "I am receiving notifications on start-up as follows"
+    - listitem:
+      - link "General algorithm for conversion from Cartesian coordinates to internal coordinates?"
+    - listitem:
+      - link "In \\tt, why do \\char92 and \\char'134 output the backlash '\\', while \\char\"5c outputs 'Πc'?"
+    - listitem:
+      - link "Identify a DC cartoon in which Joker tricked Superman to kill Lois Lane"
+    - listitem:
+      - link "Coincidence about Root of Natural Numbers"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.6.13.29290
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
