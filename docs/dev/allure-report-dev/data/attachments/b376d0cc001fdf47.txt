@@ -1,0 +1,587 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale GB in dev Einvironment and Realm europe
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- text: Stack Overflow's 2025 Annual Developer Survey is still open —
+- link "take the Survey before it closes"
+- link "dismiss"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,223,238 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 36"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 18 views
+  - heading "Invoke .read() function in a regular class" [level=3]:
+    - link "Invoke .read() function in a regular class"
+  - text: "Firstly, I have a class with extends StateNotifier<bool> named ButtonStateNotifier: class ButtonStateNotifier extends StateNotifier<bool> { ButtonStateNotifier() : super(true); void ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'dart'": dart
+    - listitem:
+      - link "show questions tagged 'riverpod'": riverpod
+  - link "DevQt's user avatar":
+    - img "DevQt's user avatar"
+  - link "DevQt"
+  - list:
+    - listitem: 1,249
+  - time: asked 12 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Is it possible to save changes in the attributes form of a layer to a GeoPackage in QGIS?" [level=3]:
+    - link "Is it possible to save changes in the attributes form of a layer to a GeoPackage in QGIS?"
+  - text: I have several point-layers in QGIS where I changed the attributes form. The changes in the value mapping (for example) are not saved in the GeoPackage. If I open the layers in another project, the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'attributes'": attributes
+    - listitem:
+      - link "show questions tagged 'layer'": layer
+    - listitem:
+      - link "show questions tagged 'qgis'": qgis
+    - listitem:
+      - link "show questions tagged 'geopackage'": geopackage
+  - link "Jorgo's user avatar":
+    - img "Jorgo's user avatar"
+  - link "Jorgo"
+  - list:
+    - listitem: "92"
+  - time: asked 13 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "How to purchase an add-on from within the app using the TWindowsStore component in Delphi?" [level=3]:
+    - link "How to purchase an add-on from within the app using the TWindowsStore component in Delphi?"
+  - text: Can someone suggest a working method to purchase an add-on from within the app? In my application, which is published in the Microsoft Store, I have a single add-on (a subscription). Since the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'delphi'": delphi
+    - listitem:
+      - link "show questions tagged 'subscription'": subscription
+    - listitem:
+      - link "show questions tagged 'add-on'": add-on
+    - listitem:
+      - link "show questions tagged 'microsoft-store'": microsoft-store
+  - link "Taras's user avatar":
+    - img "Taras's user avatar"
+  - link "Taras"
+  - list:
+    - listitem: "85"
+  - time: asked 14 mins ago
+  - text: "-1 votes 0 answers 5 views"
+  - heading "Stuck at introspection server when developing remotely with pycharm2024.3.6 and configuring the interpreter" [level=3]:
+    - link "Stuck at introspection server when developing remotely with pycharm2024.3.6 and configuring the interpreter"
+  - text: as the title says, i forced to stop here the version of my pycharm backend is 2025.1.2, and multiplexing has been enabled on the SSH server, but it has no effect i tried to send an email to jebrain, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+  - link "郑尧元's user avatar":
+    - img "郑尧元's user avatar"
+  - link "郑尧元"
+  - list:
+    - listitem: "1"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Is there a way to skip peer name verification in C++ grpc client?" [level=3]:
+    - link "Is there a way to skip peer name verification in C++ grpc client?"
+  - text: Looks like older version of C++ grpc client supported skipping peer name verification by setting GRPC_TLS_SKIP_ALL_SERVER_VERIFICATION but don't see this with new version. With normal curl command we ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'ssl'": ssl
+    - listitem:
+      - link "show questions tagged 'grpc'": grpc
+  - link "Adam Dembek's user avatar":
+    - img "Adam Dembek's user avatar"
+  - link "Adam Dembek"
+  - list:
+    - listitem: "1"
+  - time: asked 15 mins ago
+  - text: 0 votes 1 answer 11 views
+  - heading "Flutter iOS app does not receive notifications" [level=3]:
+    - link "Flutter iOS app does not receive notifications"
+  - text: I'm trying to include into our project firebase push notifications. I'm developing android on windows machine and IOS on mac machine. I have configure project on windows machine with "flutterfire ...
+  - link
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'firebase'": firebase
+    - listitem:
+      - link "show questions tagged 'android-studio'": android-studio
+  - link "MiselMoj's user avatar":
+    - img "MiselMoj's user avatar"
+  - link "MiselMoj"
+  - list:
+    - listitem: "1"
+  - time: asked 15 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Generate a key for android KeyStore" [level=3]:
+    - link "Generate a key for android KeyStore"
+  - text: "In my kivy 2.3.1, buildozer 1.5.0, p4a 2024.01.21, python 3.11.16 on MacOS, there is a piece of code for secure save locally. The key generation keeps throws the following error: 06-16 23:04:22.981 ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'kivy'": kivy
+    - listitem:
+      - link "show questions tagged 'pyjnius'": pyjnius
+    - listitem:
+      - link "show questions tagged 'python-for-android'": python-for-android
+  - link "user938363's user avatar":
+    - img "user938363's user avatar"
+  - link "user938363"
+  - list:
+    - listitem: 10.3k
+  - time: asked 17 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "how to use media query for data-* attribute?" [level=3]:
+    - link "how to use media query for data-* attribute?"
+  - text: how to use media query for data-* attribute ? if i hope to change image via @media describe (story_slideshow_01.png change to story_slideshow_01_mobile.png) if not ? how to make it work (or via js) ?...
+  - list:
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'attributes'": attributes
+  - link "hukuto7750's user avatar":
+    - img "hukuto7750's user avatar"
+  - link "hukuto7750"
+  - list:
+    - listitem: "149"
+  - time: asked 17 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Spring Boot 3.4.6 validation not triggering for @Email and @NonNull on MongoDB @Document entity" [level=3]:
+    - link "Spring Boot 3.4.6 validation not triggering for @Email and @NonNull on MongoDB @Document entity"
+  - text: I'm building a Spring Boot 3.4.6 application using MongoDB and encountering an issue where @NonNull and @Email annotations are not triggering validation errors/exceptions even though I am using @Valid ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'spring-boot'": spring-boot
+    - listitem:
+      - link "show questions tagged 'annotations'": annotations
+    - listitem:
+      - link "show questions tagged 'lombok'": lombok
+    - listitem:
+      - link "show questions tagged 'jakarta-validation'": jakarta-validation
+  - link "sathwikhbhat's user avatar":
+    - img "sathwikhbhat's user avatar"
+  - link "sathwikhbhat"
+  - list:
+    - listitem: "21"
+  - time: asked 19 mins ago
+  - text: "-1 votes 0 answers 10 views"
+  - heading "How to make second column card image height equal with second row card?" [level=3]:
+    - link "How to make second column card image height equal with second row card?"
+  - text: I would like to make second column card image height equal with second row card. Each card has an image at the top. The second column image is taller than the others. I want to second column image ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'grid'": grid
+  - link "Dhaval Savaliya's user avatar":
+    - img "Dhaval Savaliya's user avatar"
+  - link "Dhaval Savaliya"
+  - list:
+    - listitem: "1"
+  - time: asked 20 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Match types defined in a header for switch statements with Clang AST" [level=3]:
+    - link "Match types defined in a header for switch statements with Clang AST"
+  - text: "I'm trying to match switch statements that operate on enum types defined in certain header files. I'm running clang-query on source that looks like the following: enum class E { ONE, TWO }; ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'abstract-syntax-tree'": abstract-syntax-tree
+    - listitem:
+      - link "show questions tagged 'clang-ast-matchers'": clang-ast-matchers
+  - link "Curious's user avatar":
+    - img "Curious's user avatar"
+  - link "Curious"
+  - list:
+    - listitem: 21.8k
+  - time: asked 21 mins ago
+  - text: 0 votes 0 answers 7 views
+  - 'heading "Propagate generic parameters through `react-redux` `connect`" [level=3]':
+    - 'link "Propagate generic parameters through `react-redux` `connect`"'
+  - text: "When I have a component that has a generic type parameter used as the parameter argument of a callback property, like so: const connected = connect((count: number) => ({ count })); ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'typescript'": typescript
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+    - listitem:
+      - link "show questions tagged 'redux'": redux
+    - listitem:
+      - link "show questions tagged 'typescript-generics'": typescript-generics
+  - link "msbit's user avatar":
+    - img "msbit's user avatar"
+  - link "msbit"
+  - list:
+    - listitem: 4,340
+  - time: asked 22 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "Backstage App configuration using environment variables" [level=3]:
+    - link "Backstage App configuration using environment variables"
+  - text: I am building a Backstage application. I want few of my config parameters from environment variables. I have created a .env file at the root (I am using a monorepo where my root folder has packages ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'yarnpkg'": yarnpkg
+    - listitem:
+      - link "show questions tagged 'backstage'": backstage
+  - link "jereesh thomas's user avatar":
+    - img "jereesh thomas's user avatar"
+  - link "jereesh thomas"
+  - list:
+    - listitem: "153"
+  - time: asked 22 mins ago
+  - text: "-1 votes 0 answers 12 views"
+  - heading "brackets automate disappear" [level=3]:
+    - link "brackets automate disappear"
+  - text: I am using laravel 12 and intervention to handle image size. When I type new Driver(), save it and new Driver() will automate change new Driver without brackets. The brackets disappear here is the ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'visual-studio-code'": visual-studio-code
+  - link "jackson lien's user avatar":
+    - img "jackson lien's user avatar"
+  - link "jackson lien"
+  - list:
+    - listitem: "1"
+  - time: asked 23 mins ago
+  - text: 0 votes 0 answers 17 views
+  - 'heading "Understanding sizeof for C Structures with Bit Fields: Alignment and Packing" [level=3]':
+    - 'link "Understanding sizeof for C Structures with Bit Fields: Alignment and Packing"'
+  - text: "I’m trying to understand how the sizeof operator works for C structures with bit fields, particularly regarding packing and alignment. Below is a C program I wrote: #include <stdio.h> typedef ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c'": c
+    - listitem:
+      - link "show questions tagged 'struct'": struct
+    - listitem:
+      - link "show questions tagged 'padding'": padding
+    - listitem:
+      - link "show questions tagged 'bit-fields'": bit-fields
+  - link "mauli02k's user avatar":
+    - img "mauli02k's user avatar"
+  - link "mauli02k"
+  - list:
+    - listitem: "51"
+  - time: asked 25 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614883"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - 'link "“We’re not worried about compute anymore”: The future of AI models"'
+    - listitem:
+      - link "After 30 years, Java is still brewing up new features"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Thoughts on the future of Stack Exchange site customisation"
+    - listitem:
+      - link "Community Asks Sprint Announcement - June 2025"
+    - listitem:
+      - link "How can I revert the style/layout changes to comments?"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "2025 Community Moderator Election Results"
+  - text: Collectives
+  - link "see all"
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 27k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 15k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - heading "R Language" [level=1]:
+    - link "R Language"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where data scientists and AI researchers gather to find, share, and learn about R and other subtags like knitr and dplyr.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2530098
+  - link "show questions tagged 'python'": python
+  - text: × 2210951
+  - link "show questions tagged 'java'": java
+  - text: × 1919702
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624663
+  - link "show questions tagged 'php'": php
+  - text: × 1466975
+  - link "show questions tagged 'android'": android
+  - text: × 1418736
+  - link "show questions tagged 'html'": html
+  - text: × 1188230
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1035832
+  - link "show questions tagged 'c++'": c++
+  - text: × 814520
+  - link "show questions tagged 'css'": css
+  - text: × 807696
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Why would giant snails remain a constant problem for Medieval Europe?"
+    - listitem:
+      - link "Did Frank Herbert explain why he used the word Harkonnen for his antagonists?"
+    - listitem:
+      - link "A problem of decision"
+    - listitem:
+      - 'link "Quote origin: \"Some one to love, some one to caress\""'
+    - listitem:
+      - link "Twenty Six Boxes"
+    - listitem:
+      - link "Did Nobel laureate Böll wish to go to war?"
+    - listitem:
+      - link "Why is there a jade in 现/現?"
+    - listitem:
+      - link "Vampire Movie Title (Possibly 90s-2000s)"
+    - listitem:
+      - link "Classic Chinese movie (Not sure of the exact era but probably 90s or earlier)"
+    - listitem:
+      - link "Derivation of formulas for first order kinetics"
+    - listitem:
+      - link "Is walking 10,000 steps a day enough for overall fitness at age 42?"
+    - listitem:
+      - link "What is the official name for the bʱ and v distinction?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.6.16.29416
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
