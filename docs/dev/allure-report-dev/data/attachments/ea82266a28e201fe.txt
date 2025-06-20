@@ -1,0 +1,578 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale US in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- text: Stack Overflow's 2025 Annual Developer Survey is still open —
+- link "take the Survey before it closes"
+- link "dismiss"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,224,307 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 35"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 2 views
+  - heading "Looking for a Girls Hostel in GTB Nagar" [level=3]:
+    - link "Looking for a Girls Hostel in GTB Nagar"
+  - text: "Q1: What are the expectations from a good girl’s hostel in GTB Nagar as a student? A1: In a good girl’s hostel, such as Unique PG, more or less you will get decent room, Wi-Fi, good food, 24/7 ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'unique'": unique
+    - listitem:
+      - link "show questions tagged 'pg'": pg
+  - link "Unique PG's user avatar":
+    - img "Unique PG's user avatar"
+  - link "Unique PG"
+  - list:
+    - listitem: "1"
+  - time: asked 48 secs ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Deploying Python AWS Synthetics Canary via S3" [level=3]:
+    - link "Deploying Python AWS Synthetics Canary via S3"
+  - text: I have a frustrating problem. I must be missing something obvious. This is my first canary, and I can't find any examples of using Python scripting for this via S3. I am uploading a Python script to ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'aws-lambda'": aws-lambda
+    - listitem:
+      - link "show questions tagged 'amazon-cloudwatch'": amazon-cloudwatch
+    - listitem:
+      - link "show questions tagged 'cloudwatch-alarms'": cloudwatch-alarms
+    - listitem:
+      - link "show questions tagged 'aws-canaries'": aws-canaries
+  - link "Dustin Oprea's user avatar":
+    - img "Dustin Oprea's user avatar"
+  - link "Dustin Oprea"
+  - list:
+    - listitem: 10.3k
+  - time: asked 4 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Why I got un-expected result about append functin?" [level=3]:
+    - link "Why I got un-expected result about append functin?"
+  - text: I'd like to share my question on Python code that show un-expected result. The code is, a = ["A", "B", "C"] ans = [] ans.append(a) a[2] = "D" ans.append(a) ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'list'": list
+    - listitem:
+      - link "show questions tagged 'append'": append
+  - link "FORREST.KIM's user avatar":
+    - img "FORREST.KIM's user avatar"
+  - link "FORREST.KIM"
+  - list:
+    - listitem: "11"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "How to navigate automatically between editable (colored) cells in a C# WinForms DataGridView?" [level=3]:
+    - link "How to navigate automatically between editable (colored) cells in a C# WinForms DataGridView?"
+  - text: I'm developing a C# WinForms application where I load Excel data into a DataGridView. Some cells are automatically marked as incorrect and colored (green or red). These cells are the only ones that ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'c'": c
+    - listitem:
+      - link "show questions tagged 'excel'": excel
+  - link "hamza abdelli's user avatar":
+    - img "hamza abdelli's user avatar"
+  - link "hamza abdelli"
+  - list:
+    - listitem: "1"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Visual studio 2022 auto builds on save" [level=3]:
+    - link "Visual studio 2022 auto builds on save"
+  - text: All of a sudden Visual Studio 2022 starts automatically building my Blazor solution whenever I add a file of save a file. Other type of projects don't have this behaviour I already checked but hot ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'blazor'": blazor
+    - listitem:
+      - link "show questions tagged 'visual-studio-2022'": visual-studio-2022
+  - link "Patrick's user avatar":
+    - img "Patrick's user avatar"
+  - link "Patrick"
+  - list:
+    - listitem: "1"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "Is there an option to get ISO-639 information using mediainfo for .net?" [level=3]:
+    - link "Is there an option to get ISO-639 information using mediainfo for .net?"
+  - text: I am using C# and I am trying to get ISO-639 information from a content using mediaInfo. Is there a way to do that? Or does it automatically provide it when I use mediaInfo.Get(StreamKind.Audio, 0, &...
+  - list:
+    - listitem:
+      - link "show questions tagged 'mediainfo'": mediainfo
+  - link "JR Dimaandal's user avatar":
+    - img "JR Dimaandal's user avatar"
+  - link "JR Dimaandal"
+  - list:
+    - listitem: "1"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 2 views
+  - heading "Regression models handling data" [level=3]:
+    - link "Regression models handling data"
+  - text: I have data with blank cells which signifies data was not received for that time period or placeholders like 98,9999 or 99 in most of the cells. How am I supposed to handle this data without letting ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'linear-regression'": linear-regression
+  - link "Ann's user avatar":
+    - img "Ann's user avatar"
+  - link "Ann"
+  - list:
+    - listitem: "1"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 4 views
+  - 'heading "Undefined method `data’ (NoMethodError)" [level=3]':
+    - 'link "Undefined method `data’ (NoMethodError)"'
+  - text: "I'm trying to retrieve data from these format of SQL but it shows the error code: Puma caught this error: undefined method `data’ (NoMethodError) enter image description here module Reports class ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'sql'": sql
+    - listitem:
+      - link "show questions tagged 'ruby-on-rails'": ruby-on-rails
+    - listitem:
+      - link "show questions tagged 'ruby'": ruby
+    - listitem:
+      - link "show questions tagged 'postgresql'": postgresql
+  - link "Jordz's user avatar":
+    - img "Jordz's user avatar"
+  - link "Jordz"
+  - list:
+    - listitem: "1"
+  - time: asked 7 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Exe is not working while executing from the Wix installer custom action" [level=3]:
+    - link "Exe is not working while executing from the Wix installer custom action"
+  - text: I have an exe which I am executing using a custom action in wix installer. During the installation when the installer executes this exe, I am getting an error logged in event viewer as follows. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged '.net'": .net
+    - listitem:
+      - link "show questions tagged 'windows'": windows
+    - listitem:
+      - link "show questions tagged 'wix'": wix
+    - listitem:
+      - link "show questions tagged 'windows-installer'": windows-installer
+  - link "Jyothish Bhaskaran's user avatar":
+    - img "Jyothish Bhaskaran's user avatar"
+  - link "Jyothish Bhaskaran"
+  - list:
+    - listitem: "569"
+  - time: asked 9 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Save SMPP session java object in oracle database to reuse across java spring boot pods" [level=3]:
+    - link "Save SMPP session java object in oracle database to reuse across java spring boot pods"
+  - text: "How save the SMSC session object in oracle database to reuse the same session object across java spring boot pods Note: We have 22 spring boot pods but SMPP server side agrees only to open 5 session ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'oracle11g'": oracle11g
+    - listitem:
+      - link "show questions tagged 'smpp'": smpp
+    - listitem:
+      - link "show questions tagged 'jsmpp'": jsmpp
+  - link "Pandian's user avatar":
+    - img "Pandian's user avatar"
+  - link "Pandian"
+  - list:
+    - listitem: "151"
+  - time: asked 10 mins ago
+  - text: "-2 votes 0 answers 18 views"
+  - heading "How can I build a real-time kitchen order tracking dashboard using Node.js and WebSockets?" [level=3]:
+    - link "How can I build a real-time kitchen order tracking dashboard using Node.js and WebSockets?"
+  - text: I'm Alexey Bashkirov, a professional chef and private investor. I'm working on a side project to modernize kitchen operations in restaurants. I want to build a real-time dashboard that displays ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'node.js'": node.js
+    - listitem:
+      - link "show questions tagged 'json'": json
+    - listitem:
+      - link "show questions tagged 'sockets'": sockets
+  - link "Alexey Bashkirov's user avatar":
+    - img "Alexey Bashkirov's user avatar"
+  - link "Alexey Bashkirov"
+  - list:
+    - listitem: "1"
+  - time: asked 12 mins ago
+  - text: 1 vote 0 answers 6 views
+  - heading "How to handle optional/null fields when inserting rows into GridDB TimeSeries container using Python client?" [level=3]:
+    - link "How to handle optional/null fields when inserting rows into GridDB TimeSeries container using Python client?"
+  - text: I'm using the griddb_python client to insert sensor data into a TimeSeries container in GridDB Cloud. The data comes from various IoT devices, and not all fields are always present in the payload. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'griddb'": griddb
+  - link "Coders01's user avatar":
+    - img "Coders01's user avatar"
+  - link "Coders01"
+  - list:
+    - listitem: "56"
+  - time: asked 13 mins ago
+  - text: "-1 votes 0 answers 8 views"
+  - heading "Unable to load jetty, not starting JettyAdminServer" [level=3]:
+    - link "Unable to load jetty, not starting JettyAdminServer"
+  - text: "Tests are failing and throwing below errors- java.lang.RuntimeException: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'Error': was expecting (JSON String, Number, Array, Object or ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'apache-kafka'": apache-kafka
+    - listitem:
+      - link "show questions tagged 'jetty'": jetty
+    - listitem:
+      - link "show questions tagged 'embedded-jetty'": embedded-jetty
+  - link "S Singh's user avatar":
+    - img "S Singh's user avatar"
+  - link "S Singh"
+  - list:
+    - listitem: 1,481
+  - time: asked 17 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "Error link 2001 on CLSID from my another DLL" [level=3]:
+    - link "Error link 2001 on CLSID from my another DLL"
+  - text: I have 2 DLLs. I want create instance of class in my second DLL that I declare at .idl file of first library. But I get Error Link 2001 on CLSID, when try to link second DLL. I'm linking with first ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'winapi'": winapi
+    - listitem:
+      - link "show questions tagged 'linker'": linker
+    - listitem:
+      - link "show questions tagged 'com'": com
+    - listitem:
+      - link "show questions tagged 'idl'": idl
+  - link "SabakaSamson's user avatar":
+    - img "SabakaSamson's user avatar"
+  - link "SabakaSamson"
+  - list:
+    - listitem: "1"
+  - time: asked 19 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "in pybind11, how do you test if py::object is a complex number or a callable?" [level=3]:
+    - link "in pybind11, how do you test if py::object is a complex number or a callable?"
+  - text: "Context: I've recently been using pybind11 to put a python frontend on an old c++ project of mine. This has mostly been a breeze (thanks pybind11 devs!), but there are some areas where I've had to ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'complex-numbers'": complex-numbers
+    - listitem:
+      - link "show questions tagged 'pybind11'": pybind11
+    - listitem:
+      - link "show questions tagged 'callable'": callable
+  - link "Mat's user avatar":
+    - img "Mat's user avatar"
+  - link "Mat"
+  - list:
+    - listitem: "1"
+  - time: asked 20 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614954"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - 'link "Learn like a lurker: Gen Z’s digital-first lifestyle and the future of knowledge"'
+    - listitem:
+      - 'link "Defending the realm: Trust and safety at Stack Overflow"'
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Thoughts on the future of Stack Exchange site customisation"
+    - listitem:
+      - link "Community Asks Sprint Announcement - June 2025"
+    - listitem:
+      - link "How can I revert the style/layout changes to comments?"
+    - listitem:
+      - link "2025 Community Moderator Election Results"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 34k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 27k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 23k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2530150
+  - link "show questions tagged 'python'": python
+  - text: × 2211090
+  - link "show questions tagged 'java'": java
+  - text: × 1919747
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624716
+  - link "show questions tagged 'php'": php
+  - text: × 1466993
+  - link "show questions tagged 'android'": android
+  - text: × 1418782
+  - link "show questions tagged 'html'": html
+  - text: × 1188261
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1035837
+  - link "show questions tagged 'c++'": c++
+  - text: × 814569
+  - link "show questions tagged 'css'": css
+  - text: × 807715
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Is it difficult for commercial software to comply with Qt's LGPL license terms in practice?"
+    - listitem:
+      - link "putting image to Head"
+    - listitem:
+      - link "Repurpose a car seat adjustment switch to power a 12 V motor (forward and reverse)"
+    - listitem:
+      - link "Constraints on distributing power to spaceship systems"
+    - listitem:
+      - link "How do you tell the difference between wav and mp3"
+    - listitem:
+      - link "Who are the 'they' referred to in Galatians 4:17?"
+    - listitem:
+      - link "A movie where a helicopter pilot is attacked by swans"
+    - listitem:
+      - link "Find the limit of solution of equation via asymptotics"
+    - listitem:
+      - link "Can information be transmitted without transmitting energy?"
+    - listitem:
+      - link "Extract unique email addresses from a text file"
+    - listitem:
+      - link "Is the word \"suitor\" as in wooer obsolete in British English?"
+    - listitem:
+      - link "Looking for an expression of gravitational time dilation as a function only of mass density, without any reference to distance"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.6.19.29698
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
