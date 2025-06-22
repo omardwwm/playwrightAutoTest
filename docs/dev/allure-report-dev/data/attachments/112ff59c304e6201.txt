@@ -1,0 +1,573 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale NZ in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- text: Stack Overflow's 2025 Annual Developer Survey is still open —
+- link "take the Survey before it closes"
+- link "dismiss"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,221,500 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 30"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 4 views
+  - heading "Browser PDF Signing with Smart Card Support (Alternative to Nexu)" [level=3]:
+    - link "Browser PDF Signing with Smart Card Support (Alternative to Nexu)"
+  - text: I need to sign PDFs in the browser and I'm looking for a solution to communicate with smart cards, as the former app Nexu did before (fork of deleted project, archived Nexu product page). In the end, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'browser'": browser
+    - listitem:
+      - link "show questions tagged 'digital-signature'": digital-signature
+    - listitem:
+      - link "show questions tagged 'smartcard'": smartcard
+    - listitem:
+      - link "show questions tagged 'electronic-signature'": electronic-signature
+    - listitem:
+      - link "show questions tagged 'pades'": pades
+  - link "DevJoe's user avatar":
+    - img "DevJoe's user avatar"
+  - link "DevJoe"
+  - list:
+    - listitem: "163"
+  - time: asked 1 min ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Avoiding redundant else" [level=3]:
+    - link "Avoiding redundant else"
+  - text: "class Person( id:String , age:Option[Double]) val rows: Seq[Option(Person)] = List(Person(\"a\",None),Person(\"c\",None),Person(\"e\",50)) val ages = rows.foreach( r => r...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'scala'": scala
+  - link "IUnknown's user avatar":
+    - img "IUnknown's user avatar"
+  - link "IUnknown"
+  - list:
+    - listitem: 9,913
+  - time: asked 7 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Submit50 python package not installing properly" [level=3]:
+    - link "Submit50 python package not installing properly"
+  - text: "I've installed the wsl as the website intructed but the package isn't installing and I don't quite understand why. I am running a windows 11, with python version 3.13.0. Here is the error message: ` ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'package'": package
+  - link "Arjith Kanjanghat's user avatar":
+    - img "Arjith Kanjanghat's user avatar"
+  - link "Arjith Kanjanghat"
+  - list:
+    - listitem: "1"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "conda version stuck at 4.8.1" [level=3]:
+    - link "conda version stuck at 4.8.1"
+  - text: "Today, I ran conda update --all and was informed: ==> WARNING: A newer version of conda exists. <== current version: 4.8.1 latest version: 25.5.1 Please update conda by running $ conda ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'anaconda'": anaconda
+    - listitem:
+      - link "show questions tagged 'conda'": conda
+  - link "user2153235's user avatar":
+    - img "user2153235's user avatar"
+  - link "user2153235"
+  - list:
+    - listitem: 1,223
+  - time: asked 11 mins ago
+  - text: "-2 votes 0 answers 10 views"
+  - heading "Using variables in inline assembly" [level=3]:
+    - link "Using variables in inline assembly"
+  - text: "I want to use a local variable in inline assembly. For example, in the function print, I want the curly braces to be replaced by the value that i holds fn print(text: &str) { unsafe { asm!(&..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'assembly'": assembly
+    - listitem:
+      - link "show questions tagged 'rust'": rust
+    - listitem:
+      - link "show questions tagged 'inline-assembly'": inline-assembly
+    - listitem:
+      - link "show questions tagged 'riscv'": riscv
+  - link "Singing Account's user avatar":
+    - img "Singing Account's user avatar"
+  - link "Singing Account"
+  - list:
+    - listitem: "25"
+  - time: asked 16 mins ago
+  - text: 0 votes 0 answers 22 views
+  - heading "How to solve Maximum call stack size exceeded Error with Axios in nest.js" [level=3]:
+    - link "How to solve Maximum call stack size exceeded Error with Axios in nest.js"
+  - text: I have a batch service developed in nest.js. This batch service is having a dynamic axios utility to hit other microservice developed in loopback 4. It hits the one API correctly and when it tries to ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'axios'": axios
+    - listitem:
+      - link "show questions tagged 'nestjs'": nestjs
+  - link "Mohit Aggarwal's user avatar":
+    - img "Mohit Aggarwal's user avatar"
+  - link "Mohit Aggarwal"
+  - list:
+    - listitem: "133"
+  - time: asked 39 mins ago
+  - text: 1 vote 1 answer 18 views
+  - 'heading "XAMPP Error: MySQL shutdown unexpectedly. This may be due to a blocked port" [level=3]':
+    - 'link "XAMPP Error: MySQL shutdown unexpectedly. This may be due to a blocked port"'
+  - text: "I'm getting this error when I try to start mysql in xampp. Anyone knows how to fix this? 1:56:09 PM [mysql] Error: MySQL shutdown unexpectedly. 1:56:09 PM [mysql] This may be due to a ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'mariadb'": mariadb
+    - listitem:
+      - link "show questions tagged 'xampp'": xampp
+  - link "Kosaki Onodera's user avatar":
+    - img "Kosaki Onodera's user avatar"
+  - link "Kosaki Onodera"
+  - list:
+    - listitem: "23"
+  - time: asked 44 mins ago
+  - text: 0 votes 0 answers 15 views
+  - heading "How to copy Azure Devops Python packages to Github repo packages" [level=3]:
+    - link "How to copy Azure Devops Python packages to Github repo packages"
+  - text: We are migrating from Azure DevOps to Github, in this process we have Python packages are in ADO, these packages are being used in downstream by using pip install <packageName> index url. To ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'github'": github
+    - listitem:
+      - link "show questions tagged 'azure-devops'": azure-devops
+    - listitem:
+      - link "show questions tagged 'github-package-registry'": github-package-registry
+    - listitem:
+      - link "show questions tagged 'github-packages'": github-packages
+    - listitem:
+      - link "show questions tagged 'azure-devops-artifacts'": azure-devops-artifacts
+  - link "Brahmaiah Takkellapati's user avatar":
+    - img "Brahmaiah Takkellapati's user avatar"
+  - link "Brahmaiah Takkellapati"
+  - list:
+    - listitem: "141"
+  - time: asked 54 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "VS code WSL connectivity error, error in WSL extension output" [level=3]:
+    - link "VS code WSL connectivity error, error in WSL extension output"
+  - text: please refer the image below for the error in vs code wsl extension output. Tried the following approaches uninstalling, reinstalling VS code along with deleting .vscode and extension folder. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'visual-studio-code'": visual-studio-code
+    - listitem:
+      - link "show questions tagged 'windows-subsystem-for-linux'": windows-subsystem-for-linux
+    - listitem:
+      - link "show questions tagged 'vscode-extensions'": vscode-extensions
+  - link "Pruthvi's user avatar":
+    - img "Pruthvi's user avatar"
+  - link "Pruthvi"
+  - list:
+    - listitem: "21"
+  - time: asked 56 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "apps script automation to create doc" [level=3]:
+    - link "apps script automation to create doc"
+  - text: having troubles that i'm hoping someone can help with. i wrote this code based on video's i've seen and for the most part it does everything i want it to do. i start with a form and the script takes ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'google-sheets'": google-sheets
+    - listitem:
+      - link "show questions tagged 'google-apps-script'": google-apps-script
+    - listitem:
+      - link "show questions tagged 'google-appsheet'": google-appsheet
+  - link "michael sahines's user avatar":
+    - img "michael sahines's user avatar"
+  - link "michael sahines"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: "-5 votes 0 answers 19 views"
+  - heading "What's the best thing to study right now for future IT industry? [closed]" [level=3]:
+    - link "What's the best thing to study right now for future IT industry? [closed]"
+  - text: Now I'm doing mca,,, I learn Java, python, web development and SQL... What's the better thing to now start with?
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'sql'": sql
+    - listitem:
+      - link "show questions tagged 'web'": web
+  - link "Pollabi Shaiba's user avatar":
+    - img "Pollabi Shaiba's user avatar"
+  - link "Pollabi Shaiba"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 9 views
+  - 'heading "GraphSharp: how to update vertex?" [level=3]':
+    - 'link "GraphSharp: how to update vertex?"'
+  - text: I have created WPF application which displays graph using database. I can create the new vertex, remove one from the graph, it works fine. But how to update and refresh update vertex in Graph? Vertex ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'wpf'": wpf
+    - listitem:
+      - link "show questions tagged 'graph-sharp'": graph-sharp
+  - link "ZedZip's user avatar":
+    - img "ZedZip's user avatar"
+  - link "ZedZip"
+  - list:
+    - listitem: 6,576
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 11 views
+  - heading "Pip exits when installing build dependencies for pygame-ce" [level=3]:
+    - link "Pip exits when installing build dependencies for pygame-ce"
+  - text: I had pygame (not ce) on my Debian system and then updated it to pygame-ce using pip install —-upgrade pygame-ce and it worked fine, installing pygame-ce==2.5.2 . There were some more recent updates ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'pip'": pip
+    - listitem:
+      - link "show questions tagged 'meson-build'": meson-build
+    - listitem:
+      - link "show questions tagged 'pygame-ce'": pygame-ce
+  - link "DeepThought42's user avatar":
+    - img "DeepThought42's user avatar"
+  - link "DeepThought42"
+  - list:
+    - listitem: "221"
+  - time: asked 1 hour ago
+  - text: "-4 votes 0 answers 28 views"
+  - heading "DML Action Logic [closed]" [level=3]:
+    - link "DML Action Logic [closed]"
+  - text: "I need urgent help. Want to write a piece of SQL based on below input and output. Scenario 1: New Sales Order Insert If a new sales order appears in the source with src_DML_Action = 'I', then all its ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'sql'": sql
+    - listitem:
+      - link "show questions tagged 'sql-server'": sql-server
+  - link "Vipin Mishra's user avatar":
+    - img "Vipin Mishra's user avatar"
+  - link "Vipin Mishra"
+  - list:
+    - listitem: "3"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 18 views
+  - heading "Bulk data filters in Pivot Table with OLAP data (using VBA)" [level=3]:
+    - link "Bulk data filters in Pivot Table with OLAP data (using VBA)"
+  - text: I have been trying to code a VBA bulk filtering that works on different PivotTables formats, which includes both the usual ones and those ones with OLAP. The point is that I am stuck in figuring out ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'excel'": excel
+    - listitem:
+      - link "show questions tagged 'vba'": vba
+    - listitem:
+      - link "show questions tagged 'pivot-table'": pivot-table
+  - link "Fernando's user avatar":
+    - img "Fernando's user avatar"
+  - link "Fernando"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614767"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - 'link "Learn like a lurker: Gen Z’s digital-first lifestyle and the future of knowledge"'
+    - listitem:
+      - 'link "Defending the realm: Trust and safety at Stack Overflow"'
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Thoughts on the future of Stack Exchange site customisation"
+    - listitem:
+      - link "Community Asks Sprint Announcement - June 2025"
+    - listitem:
+      - link "How can I revert the style/layout changes to comments?"
+    - listitem:
+      - link "2025 Community Moderator Election Results"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 27k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 20k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 10k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2529917
+  - link "show questions tagged 'python'": python
+  - text: × 2210858
+  - link "show questions tagged 'java'": java
+  - text: × 1919632
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624627
+  - link "show questions tagged 'php'": php
+  - text: × 1466899
+  - link "show questions tagged 'android'": android
+  - text: × 1418650
+  - link "show questions tagged 'html'": html
+  - text: × 1188179
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1035786
+  - link "show questions tagged 'c++'": c++
+  - text: × 814540
+  - link "show questions tagged 'css'": css
+  - text: × 807663
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "What mechanical effects govern smoke emitted from a torch accumulating in a dungeon?"
+    - listitem:
+      - link "Classic 100 Door problem with twist , Prime Janitors"
+    - listitem:
+      - link "How do scholars explain Jesus' action of plaiting of the whip to cleanse the Temple?"
+    - listitem:
+      - link "Why might a design use op-amps to buffer every input signal?"
+    - listitem:
+      - link "Why does a faculty hiring committee communicate the name and surname of a successful applicant?"
+    - listitem:
+      - link "ArXiv and Springer open access publishing"
+    - listitem:
+      - link "How do I deal with a supervisor who wants to replace bioinformatics expertise with ChatGPT, especially when it comes to publishing?"
+    - listitem:
+      - link "Why does electromagnetism attenuate so much faster than gravity?"
+    - listitem:
+      - link "Is there a trick to finding shrines in sky islands?"
+    - listitem:
+      - link "Ordinal recursion by and before von Neumann 1928"
+    - listitem:
+      - 'link "MIT License: Does the claim of copyright extend to derivatives?"'
+    - listitem:
+      - link "Is it possible to change the volume levels in Mario Kart World?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.6.20.29783
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
