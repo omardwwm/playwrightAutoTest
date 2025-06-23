@@ -1,0 +1,565 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale JP in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- text: Stack Overflow's 2025 Annual Developer Survey is still open —
+- link "take the Survey before it closes"
+- link "dismiss"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,221,618 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 31"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 4 views
+  - heading "Visual Studio autocomplete not working with mstoolkit" [level=3]:
+    - link "Visual Studio autocomplete not working with mstoolkit"
+  - text: Updated Visual Studio 2022 to version 17.14.6 and all NuGet packages for a MAUI application. I've CommunityToolkit.Maui v12.0 and CommunityToolkit.Mvvm 8.4.0. VS do not recogize in intellisense all ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'maui'": maui
+    - listitem:
+      - link "show questions tagged 'visual-studio-2022'": visual-studio-2022
+    - listitem:
+      - link "show questions tagged 'intellisense'": intellisense
+    - listitem:
+      - link "show questions tagged 'maui-community-toolkit'": maui-community-toolkit
+  - link "Denis De Pauli's user avatar":
+    - img "Denis De Pauli's user avatar"
+  - link "Denis De Pauli"
+  - list:
+    - listitem: "109"
+  - time: asked 1 min ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Read lock screen value from terminal in mac" [level=3]:
+    - link "Read lock screen value from terminal in mac"
+  - text: How to read lock screen value is set or not from mac terminal in 10.15 ? I am able to get it from defaults read /Library/Preferences/com.apple.screensaver.plist on macos 15 In macos 10.15 In System ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'macos'": macos
+  - link "bhavya accounts's user avatar":
+    - img "bhavya accounts's user avatar"
+  - link "bhavya accounts"
+  - list:
+    - listitem: "21"
+  - time: asked 7 mins ago
+  - text: "-3 votes 0 answers 21 views"
+  - heading "i am deploying my frontend and backend on render as a single service but the below mentioned error being coming on render log" [level=3]:
+    - link "i am deploying my frontend and backend on render as a single service but the below mentioned error being coming on render log"
+  - text: ==> Cloning from https://github.com/kashifali666/fullstack-chat-app Jun 22 07:24:36 PM ==> Checking out commit 2a41f2de5b4aaf72ec21343a6ad22c7ca98ef861 in branch main Jun 22 07:24:37 PM ==> ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'render.com'": render.com
+  - link "malik kashif's user avatar":
+    - img "malik kashif's user avatar"
+  - link "malik kashif"
+  - list:
+    - listitem: "1"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "How can RTK Query send an variable to header" [level=3]:
+    - link "How can RTK Query send an variable to header"
+  - text: "I currently want to add a meta data to the RKT Query header and it's an variable and want to pass it from the api request. export const api = createApi({ reducerPath: 'api', baseQuery: ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'rtk-query'": rtk-query
+  - link "Moon's user avatar":
+    - img "Moon's user avatar"
+  - link "Moon"
+  - list:
+    - listitem: "149"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "How to cancel an await asyncio.StreamReader.readline() call?" [level=3]:
+    - link "How to cancel an await asyncio.StreamReader.readline() call?"
+  - text: "I am using asyncio.StreamReader to continuously process line based communication like this: reader, writer = await asyncio.open_connection(host, port) while running: line = await reader.readline() ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python-3.x'": python-3.x
+    - listitem:
+      - link "show questions tagged 'python-asyncio'": python-asyncio
+    - listitem:
+      - link "show questions tagged 'python-multithreading'": python-multithreading
+  - link "Dragoner's user avatar":
+    - img "Dragoner's user avatar"
+  - link "Dragoner"
+  - list:
+    - listitem: "153"
+  - time: asked 12 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "How can I show a component based on a specific value in a CheckboxGroup when the flow engine doesn't support array conditions?" [level=3]:
+    - link "How can I show a component based on a specific value in a CheckboxGroup when the flow engine doesn't support array conditions?"
+  - text: I'm building a WhatsApp flow JSON where I use a CheckboxGroup to allow users to select multiple options. Based on the selected checkboxes, I want to conditionally display a group of radio buttons if a ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'facebook-graph-api'": facebook-graph-api
+    - listitem:
+      - link "show questions tagged 'whatsapp'": whatsapp
+    - listitem:
+      - link "show questions tagged 'whatsapp-cloud-api'": whatsapp-cloud-api
+    - listitem:
+      - link "show questions tagged 'whatsapp-flows'": whatsapp-flows
+    - listitem:
+      - link "show questions tagged 'whatsapp-flow-json'": whatsapp-flow-json
+  - link "Prasath S's user avatar":
+    - img "Prasath S's user avatar"
+  - link "Prasath S"
+  - list:
+    - listitem: 3,564
+  - time: asked 14 mins ago
+  - text: 1 vote 0 answers 16 views
+  - heading "How do I install OS in physical server and how to get started" [level=3]:
+    - link "How do I install OS in physical server and how to get started"
+  - text: Can Ansible be used to provision bare-metal servers, including automated operating system installation (PXE boot, kickstart, etc.)? I’m specifically looking to automate OS deployment on physical ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'linux'": linux
+  - link "dtdyhhilk's user avatar":
+    - img "dtdyhhilk's user avatar"
+  - link "dtdyhhilk"
+  - list:
+    - listitem: "13"
+  - time: asked 18 mins ago
+  - text: 0 votes 0 answers 3 views
+  - heading "Does apach camel 4.x not support opcua component any more?" [level=3]:
+    - link "Does apach camel 4.x not support opcua component any more?"
+  - text: I checked the doc about camel component 4.10.x. There is not component tag about opcua, which is shown in 3.22.x doc. Does apach camel 4.x not support opcua component any more? If so, how to integrate ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'apache-camel'": apache-camel
+    - listitem:
+      - link "show questions tagged 'opc-ua'": opc-ua
+    - listitem:
+      - link "show questions tagged 'caml'": caml
+  - link "wl.GIG's user avatar":
+    - img "wl.GIG's user avatar"
+  - link "wl.GIG"
+  - list:
+    - listitem: "326"
+  - time: asked 18 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Add a button to sharepoint that triggers a powershell script" [level=3]:
+    - link "Add a button to sharepoint that triggers a powershell script"
+  - text: I have a backend logic which get user's site details like sites the user is owner of, storage usage details, recycle bin usage details and members in that site. I am sending all this details to the ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'azure'": azure
+    - listitem:
+      - link "show questions tagged 'powershell'": powershell
+    - listitem:
+      - link "show questions tagged 'sharepoint'": sharepoint
+    - listitem:
+      - link "show questions tagged 'spfx'": spfx
+    - listitem:
+      - link "show questions tagged 'azure-runbook'": azure-runbook
+  - link "Abivanth's user avatar":
+    - img "Abivanth's user avatar"
+  - link "Abivanth"
+  - list:
+    - listitem: "3"
+  - time: asked 20 mins ago
+  - text: "-1 votes 0 answers 10 views"
+  - heading "Changing User Entity namespace broke my Symfony App" [level=3]:
+    - link "Changing User Entity namespace broke my Symfony App"
+  - text: "I just migrated to Symfony Flex using this official doc and it required for me to change Entity directory and namespace: From path: src/AppBundle/Entity, namespace: AppBundle/Entity To path: src/..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'symfony'": symfony
+    - listitem:
+      - link "show questions tagged 'doctrine-orm'": doctrine-orm
+    - listitem:
+      - link "show questions tagged 'doctrine'": doctrine
+    - listitem:
+      - link "show questions tagged 'symfony4'": symfony4
+  - link "Ignas Damunskis's user avatar":
+    - img "Ignas Damunskis's user avatar"
+  - link "Ignas Damunskis"
+  - list:
+    - listitem: 1,532
+  - time: asked 23 mins ago
+  - text: 0 votes 1 answer 8 views
+  - 'heading "iOS In-App Purchase Webhook: How to Get User ID or Custom Parameter in Server-Side Webhook?" [level=3]':
+    - 'link "iOS In-App Purchase Webhook: How to Get User ID or Custom Parameter in Server-Side Webhook?"'
+  - text: "I'm integrating iOS in-app subscriptions with a NestJS backend. I've set up Apple’s server-to-server (S2S) subscription webhooks, and they're being received successfully. Current flow: User purchases ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'in-app-purchase'": in-app-purchase
+    - listitem:
+      - link "show questions tagged 'webhooks'": webhooks
+  - link "Ritesh's user avatar":
+    - img "Ritesh's user avatar"
+  - link "Ritesh"
+  - list:
+    - listitem: "1"
+  - time: asked 27 mins ago
+  - text: "-1 votes 1 answer 12 views"
+  - heading "How to parse url parameters and use it when build with jenkins UI interface" [level=3]:
+    - link "How to parse url parameters and use it when build with jenkins UI interface"
+  - text: Is it possible to parse url parameters and then use it for build? Take the snapshot as example, I would like to parse HelloWorld into my parameters user_name when I hit the url \ https://\<jenkins-...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'jenkins'": jenkins
+    - listitem:
+      - link "show questions tagged 'build'": build
+    - listitem:
+      - link "show questions tagged 'parameters'": parameters
+  - link "swchen's user avatar":
+    - img "swchen's user avatar"
+  - link "swchen"
+  - list:
+    - listitem: "791"
+  - time: asked 27 mins ago
+  - text: 0 votes 0 answers 6 views
+  - 'heading "SHGO optimisation ending upon None. Tried all three sampling methods: sobol, halton, simplicial. Evaluation variability reason for None output?" [level=3]':
+    - 'link "SHGO optimisation ending upon None. Tried all three sampling methods: sobol, halton, simplicial. Evaluation variability reason for None output?"'
+  - text: "I am minimising the objective function which is -100 * fill rate(floors) together with L2 penalty on epsilon and gamma: -100 * fill_rate(floors) + l1 * ||epsilon|| + l2 * ||gamma|| I have constraints ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'scipy-optimize'": scipy-optimize
+    - listitem:
+      - link "show questions tagged 'minimization'": minimization
+    - listitem:
+      - link "show questions tagged 'scipy-optimize-minimize'": scipy-optimize-minimize
+    - listitem:
+      - link "show questions tagged 'scipy.stats'": scipy.stats
+    - listitem:
+      - link "show questions tagged 'shgo'": shgo
+  - link "Rakesh Balhara's user avatar":
+    - img "Rakesh Balhara's user avatar"
+  - link "Rakesh Balhara"
+  - list:
+    - listitem: "101"
+  - time: asked 28 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "How to localize Data Annotation validation error messages in a WinUI3 MVVM application?" [level=3]:
+    - link "How to localize Data Annotation validation error messages in a WinUI3 MVVM application?"
+  - text: I'm building a WinUI3 application using the MVVM Toolkit with [ObservableProperty] and ObservableValidator. I'm using Data Annotations like [Required], [MinLength], [MaxLength] to validate my ...
+  - list:
+    - listitem:
+      - link "show questions tagged '.net'": .net
+    - listitem:
+      - link "show questions tagged 'mvvm'": mvvm
+    - listitem:
+      - link "show questions tagged 'localization'": localization
+    - listitem:
+      - link "show questions tagged 'winui-3'": winui-3
+  - link "Abdul Saboor Habibi's user avatar":
+    - img "Abdul Saboor Habibi's user avatar"
+  - link "Abdul Saboor Habibi"
+  - list:
+    - listitem: "27"
+  - time: asked 33 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614775"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - 'link "Learn like a lurker: Gen Z’s digital-first lifestyle and the future of knowledge"'
+    - listitem:
+      - 'link "Defending the realm: Trust and safety at Stack Overflow"'
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Thoughts on the future of Stack Exchange site customisation"
+    - listitem:
+      - link "Community Asks Sprint Announcement - June 2025"
+    - listitem:
+      - link "How can I revert the style/layout changes to comments?"
+    - listitem:
+      - link "2025 Community Moderator Election Results"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 27k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 23k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 15k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2529922
+  - link "show questions tagged 'python'": python
+  - text: × 2210868
+  - link "show questions tagged 'java'": java
+  - text: × 1919638
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624632
+  - link "show questions tagged 'php'": php
+  - text: × 1466897
+  - link "show questions tagged 'android'": android
+  - text: × 1418653
+  - link "show questions tagged 'html'": html
+  - text: × 1188184
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1035785
+  - link "show questions tagged 'c++'": c++
+  - text: × 814548
+  - link "show questions tagged 'css'": css
+  - text: × 807665
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Does the \"bunker buster\" GBU-28 bomb penetrate 20 feet of concrete, while the GBU-57 penetrates 200 feet?"
+    - listitem:
+      - link "Worn rim near spoke hole"
+    - listitem:
+      - 'link "High-frequency routing with GND–Signal–GND stackup: Can two signals share the same physical path in adjacent layers?"'
+    - listitem:
+      - link "Does a Hamiltonian need a \"reason\" to be gapless?"
+    - listitem:
+      - link "Area of the coloured regions in a unit square"
+    - listitem:
+      - link "How to find the area between two curves ? Integration questions"
+    - listitem:
+      - link "What exactly is Trotskyism?"
+    - listitem:
+      - link "Is the \"Software Foundations\" MStar'' exercise correct?"
+    - listitem:
+      - link "How could three habitable planets regularly get \"near\" each other in a stable orbit?"
+    - listitem:
+      - link "Plot the Vitruvian Man (or Woman)"
+    - listitem:
+      - link "What was the first x86 processor to run a virtual machine?"
+    - listitem:
+      - link "What distinguishes \"good works\" in Christian theology from morally good actions done without faith, such as a doctor curing tuberculosis?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.6.20.29783
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
