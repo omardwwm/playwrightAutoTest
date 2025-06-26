@@ -1,0 +1,574 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale NZ in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,222,619 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 31"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 2 views
+  - heading "How to connect my tfs server(azure devops on premise ) using visual studio code?" [level=3]:
+    - link "How to connect my tfs server(azure devops on premise ) using visual studio code?"
+  - text: I am trying to integrate my tfs server and vs code but i am not successful , i tried the follwing solutions from the below link but i was unsuccessful. How to connect TFS in Visual Studio code I am ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'visual-studio-code'": visual-studio-code
+    - listitem:
+      - link "show questions tagged 'tfs'": tfs
+  - link "kamal's user avatar":
+    - img "kamal's user avatar"
+  - link "kamal"
+  - list:
+    - listitem: "1"
+  - time: asked 1 min ago
+  - text: 0 votes 0 answers 2 views
+  - heading "gather data from mutiple workbooks to one sheet (excel)" [level=3]:
+    - link "gather data from mutiple workbooks to one sheet (excel)"
+  - text: I have several workbooks that each contains different company's financial balance sheets. In each company's balance table, rows and columns are the same, only data is differantiating. I need to gather ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'excel'": excel
+    - listitem:
+      - link "show questions tagged 'vba'": vba
+    - listitem:
+      - link "show questions tagged 'copy'": copy
+  - link "Cemil 's user avatar":
+    - img "Cemil 's user avatar"
+  - link "Cemil"
+  - list:
+    - listitem: "47"
+  - time: asked 1 min ago
+  - text: 0 votes 0 answers 6 views
+  - heading "How does log4j clean up actually works in hive metastore?" [level=3]:
+    - link "How does log4j clean up actually works in hive metastore?"
+  - text: "I am trying to configure logs for hive metastore. I use this config: status = INFO name = HiveLog4j2 packages = org.apache.hadoop.hive.ql.log property.hive.log.level = INFO property.hive.root.logger =..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'hive'": hive
+    - listitem:
+      - link "show questions tagged 'log4j'": log4j
+    - listitem:
+      - link "show questions tagged 'log4j2'": log4j2
+    - listitem:
+      - link "show questions tagged 'hive-metastore'": hive-metastore
+  - link "Cherry's user avatar":
+    - img "Cherry's user avatar"
+  - link "Cherry"
+  - list:
+    - listitem: 33.8k
+  - time: asked 2 mins ago
+  - text: "-1 votes 0 answers 8 views"
+  - heading "Meta Developer Account Suspension" [level=3]:
+    - link "Meta Developer Account Suspension"
+  - text: My Meta Developer account was suspended for over 3 weeks now. I got an email with the title Platform Term 7.e.i.3 - Disallowed use of apps stating that I created or maintain apps intended to ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'facebook'": facebook
+    - listitem:
+      - link "show questions tagged 'whatsapp'": whatsapp
+    - listitem:
+      - link "show questions tagged 'meta'": meta
+    - listitem:
+      - link "show questions tagged 'whatsapp-business-app'": whatsapp-business-app
+  - link "Torch's user avatar":
+    - img "Torch's user avatar"
+  - link "Torch"
+  - list:
+    - listitem: "67"
+  - time: asked 4 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "How to tell screen readers to read the contents of a <span> differently?" [level=3]:
+    - link "How to tell screen readers to read the contents of a <span> differently?"
+  - text: "I have this sign-off/footer on my Web page: <p>Coded with ♥ by Haley Halcyon</p> I want screen readers to read this as “Coded with love by Haley Halcyon”, instead of “Coded with heart by ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'accessibility'": accessibility
+    - listitem:
+      - link "show questions tagged 'screen-readers'": screen-readers
+  - link "Haley Halcyon's user avatar":
+    - img "Haley Halcyon's user avatar"
+  - link "Haley Halcyon"
+  - list:
+    - listitem: "1"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Abp Design Confirmation and Optimization Inquiry Regarding ABP Permission Cache Generating Separate Redis Keys per User+Permission" [level=3]:
+    - link "Abp Design Confirmation and Optimization Inquiry Regarding ABP Permission Cache Generating Separate Redis Keys per User+Permission"
+  - text: "Title: Design Confirmation and Optimization Inquiry Regarding ABP Permission Cache Generating Separate Redis Keys per User+Permission Problem Description We have observed that permission cache keys ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'abp-framework'": abp-framework
+  - link "张志炜's user avatar":
+    - img "张志炜's user avatar"
+  - link "张志炜"
+  - list:
+    - listitem: "3"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 17 views
+  - heading "Efficient mass find-replace in Word via VBA" [level=3]:
+    - link "Efficient mass find-replace in Word via VBA"
+  - text: I have a VBA-based tool that basically for each row in the Excel takes a defined word document and performs number of find-replace operations. This has been working well so far, but I am starting to ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'vba'": vba
+    - listitem:
+      - link "show questions tagged 'ms-word'": ms-word
+    - listitem:
+      - link "show questions tagged 'ms-office'": ms-office
+    - listitem:
+      - link "show questions tagged 'find-replace'": find-replace
+  - link "Eleshar's user avatar":
+    - img "Eleshar's user avatar"
+  - link "Eleshar"
+  - list:
+    - listitem: "523"
+  - time: asked 11 mins ago
+  - text: "-3 votes 0 answers 24 views"
+  - heading "Is there a way to build a custom licensing system for a custom Autocad plugin? [closed]" [level=3]:
+    - link "Is there a way to build a custom licensing system for a custom Autocad plugin? [closed]"
+  - text: I have a custom Autocad plugin for which I need to build a custom licensing system. The issue arises when I get to know that the commands methods created in the plugin gets read by Autocad ...
+  - list:
+    - listitem:
+      - link "show questions tagged '.net'": .net
+    - listitem:
+      - link "show questions tagged 'dll'": dll
+    - listitem:
+      - link "show questions tagged 'plugins'": plugins
+    - listitem:
+      - link "show questions tagged 'autocad'": autocad
+  - link "Vaibhav's user avatar":
+    - img "Vaibhav's user avatar"
+  - link "Vaibhav"
+  - list:
+    - listitem: "1"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 12 views
+  - 'heading "dropbox, python api : error when on uploading a file" [level=3]':
+    - 'link "dropbox, python api : error when on uploading a file"'
+  - text: "I am using the following python code in order to upload a file to dropbox : import dropbox, os from dotenv import load_dotenv load_dotenv() DROPBOX_ACCESS_TOKEN = os.getenv(\"DROPBOX_ACCESS_TOKEN&..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python-3.x'": python-3.x
+    - listitem:
+      - link "show questions tagged 'dropbox'": dropbox
+    - listitem:
+      - link "show questions tagged 'dropbox-api'": dropbox-api
+  - link "Mohamed's user avatar":
+    - img "Mohamed's user avatar"
+  - link "Mohamed"
+  - list:
+    - listitem: "277"
+  - time: asked 16 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "Is this a bug in NumPy histogram function?" [level=3]:
+    - link "Is this a bug in NumPy histogram function?"
+  - text: "This Python 3.12.7 script with numpy 2.2.4: import numpy as np a = np.random.randint(0, 256, (500, 500)).astype(np.uint8) counts, bins = np.histogram(a, range(0, 255, 25)) print(np.column_stack((..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'numpy'": numpy
+    - listitem:
+      - link "show questions tagged 'histogram'": histogram
+  - link "Paul Jurczak's user avatar":
+    - img "Paul Jurczak's user avatar"
+  - link "Paul Jurczak"
+  - list:
+    - listitem: 8,401
+  - time: asked 19 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "Speech to text not working in ios devices" [level=3]:
+    - link "Speech to text not working in ios devices"
+  - text: I don't have that much experience working with javascript. I have to do a task in which I have to perform both STT and TTS. I'm using javascript library speech syenthesis uterence, this library works ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'speech-recognition'": speech-recognition
+    - listitem:
+      - link "show questions tagged 'speech-to-text'": speech-to-text
+  - link "Ammar Ahmed Ansari's user avatar":
+    - img "Ammar Ahmed Ansari's user avatar"
+  - link "Ammar Ahmed Ansari"
+  - list:
+    - listitem: "1"
+  - time: asked 21 mins ago
+  - text: "-1 votes 0 answers 9 views"
+  - heading "Why perf stat -e cpu/mem-loads/ outputs nothing?" [level=3]:
+    - link "Why perf stat -e cpu/mem-loads/ outputs nothing?"
+  - text: It shows that the event cpu/mem-loads/ is supported. $ perf list | grep mem mem-loads OR cpu/mem-loads/ [Kernel PMU event] However, when I actually do that, it shows no input ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'linux'": linux
+    - listitem:
+      - link "show questions tagged 'perf'": perf
+  - link "calvin's user avatar":
+    - img "calvin's user avatar"
+  - link "calvin"
+  - list:
+    - listitem: 3,039
+  - time: asked 22 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Unknown Playwright fixtures" [level=3]:
+    - link "Unknown Playwright fixtures"
+  - text: I was wondering if this is even possible. I want to reuse a test for multiple projects. The test has all the custom fixtures i need. The problem is that for some projects I need to setup an ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'typescript'": typescript
+    - listitem:
+      - link "show questions tagged 'playwright'": playwright
+    - listitem:
+      - link "show questions tagged 'fixtures'": fixtures
+  - link "Tim Heid's user avatar":
+    - img "Tim Heid's user avatar"
+  - link "Tim Heid"
+  - list:
+    - listitem: "11"
+  - time: asked 22 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "How does Linux DMA implement scatter-gather functionality for MEM_TO_MEM mode?" [level=3]:
+    - link "How does Linux DMA implement scatter-gather functionality for MEM_TO_MEM mode?"
+  - text: In the DMA engine API, I only see the dmaengine_prep_slave_sg() function supporting DMA scatter-gather functionality. However, when examining DMA drivers from different manufacturers, this function ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'linux'": linux
+    - listitem:
+      - link "show questions tagged 'linux-kernel'": linux-kernel
+    - listitem:
+      - link "show questions tagged 'dma'": dma
+  - link "fantasy_linux's user avatar":
+    - img "fantasy_linux's user avatar"
+  - link "fantasy_linux"
+  - list:
+    - listitem: "1"
+  - time: asked 23 mins ago
+  - text: 0 votes 1 answer 9 views
+  - heading "How to perform grouped pivot operation by date" [level=3]:
+    - link "How to perform grouped pivot operation by date"
+  - text: "I’m working with a table containing 4 columns: Sym, Factor, Value, and Date. The table is created using: count=100; t = table(rand(\"SZ\"+string(1..4), count) as Sym, rand(\"..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'sql'": sql
+    - listitem:
+      - link "show questions tagged 'time-series'": time-series
+    - listitem:
+      - link "show questions tagged 'dolphindb'": dolphindb
+  - link "Boye's user avatar":
+    - img "Boye's user avatar"
+  - link "Boye"
+  - list:
+    - listitem: "77"
+  - time: asked 28 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614842"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "How to build your prototypes without a 35% tariff"
+    - listitem:
+      - link "You've vibe coded an app. Now what?"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Community Asks Sprint Announcement - June 2025"
+    - listitem:
+      - 'link "Labs experiment launch: stackoverflow.ai"'
+    - listitem:
+      - link "How can I revert the style/layout changes to comments?"
+    - listitem:
+      - link "2025 Community Moderator Election Results"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 35k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 20k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 10k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2529955
+  - link "show questions tagged 'python'": python
+  - text: × 2210982
+  - link "show questions tagged 'java'": java
+  - text: × 1919669
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624666
+  - link "show questions tagged 'php'": php
+  - text: × 1466923
+  - link "show questions tagged 'android'": android
+  - text: × 1418696
+  - link "show questions tagged 'html'": html
+  - text: × 1188197
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1035786
+  - link "show questions tagged 'c++'": c++
+  - text: × 814590
+  - link "show questions tagged 'css'": css
+  - text: × 807688
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Why isn’t ranked choice voting giving those who vote for unpopular candidates disproportionate voter power?"
+    - listitem:
+      - link "What do airlines typically do with an aircraft after a route is cancelled unexpectedly?"
+    - listitem:
+      - link "How believable is this disease model in my settings level of tech understanding?"
+    - listitem:
+      - link "Give each little snowflake a unique home"
+    - listitem:
+      - link "Triangular Transposition Cipher"
+    - listitem:
+      - link "Differences between \\int_compare:nNnTF and \\int_compare:nTF"
+    - listitem:
+      - link "Unix sort doesn't sort string correctly"
+    - listitem:
+      - link "Linux root account without password - what are the issues, and how to address them?"
+    - listitem:
+      - link "Trying to increase job application rate. How much time should I spend reading posting?"
+    - listitem:
+      - link "Do apartment buildings with 3 phase power deliver 3 phases to each apartment or only single phase or something else?"
+    - listitem:
+      - link "Rot13 encryption with extra functionality using unix flags"
+    - listitem:
+      - link "What elements of philosophy were influencing the Christians in Colossae, and why did Paul consider them a threat to the faith in Christ?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.6.25.30113
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
