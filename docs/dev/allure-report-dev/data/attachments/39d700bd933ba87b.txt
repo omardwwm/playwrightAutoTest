@@ -1,0 +1,550 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale DE in dev Einvironment and Realm europe
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,220,028 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 28"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 2 views
+  - heading "How to safely handle failed BullMQ jobs and Redis memory limits without data loss?" [level=3]:
+    - link "How to safely handle failed BullMQ jobs and Redis memory limits without data loss?"
+  - text: I've started to work on caching and queuing in my back-end using Redis and BullMQ. It's my first time ever; so I don't know much about the strategies or how to ensure that I won't lose any data. Since ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'node.js'": node.js
+    - listitem:
+      - link "show questions tagged 'express'": express
+    - listitem:
+      - link "show questions tagged 'redis'": redis
+    - listitem:
+      - link "show questions tagged 'eventual-consistency'": eventual-consistency
+    - listitem:
+      - link "show questions tagged 'bullmq'": bullmq
+  - link "Marya's user avatar":
+    - img "Marya's user avatar"
+  - link "Marya"
+  - list:
+    - listitem: "181"
+  - time: asked 1 min ago
+  - text: "-1 votes 0 answers 11 views"
+  - heading "What is the number of processes created in this C program depending on the value of n?" [level=3]:
+    - link "What is the number of processes created in this C program depending on the value of n?"
+  - text: "I am trying to understand how fork() works in C and how many processes are created depending on the value of n. I wrote this code to test: int main(int argc, char *argv[]) { int i = 0; int n = ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c'": c
+    - listitem:
+      - link "show questions tagged 'unix'": unix
+    - listitem:
+      - link "show questions tagged 'process'": process
+    - listitem:
+      - link "show questions tagged 'fork'": fork
+  - link "gbmgu fhmvynvh's user avatar":
+    - img "gbmgu fhmvynvh's user avatar"
+  - link "gbmgu fhmvynvh"
+  - list:
+    - listitem: "1"
+  - time: asked 13 mins ago
+  - text: "-5 votes 0 answers 11 views"
+  - heading "Imagine Columbia still flew. How much $$ to abduct it? [closed]" [level=3]:
+    - link "Imagine Columbia still flew. How much $$ to abduct it? [closed]"
+  - text: "Imagine: I have almost limitless computational resources, e.g. NASA the Columbia shuttle still flies I have antena dishes that engage it properly. How difficult would it be for me to crack the ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'security'": security
+    - listitem:
+      - link "show questions tagged 'shuttle'": shuttle
+  - link "Vorac's user avatar":
+    - img "Vorac's user avatar"
+  - link "Vorac"
+  - list:
+    - listitem: 9,176
+  - time: asked 17 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Add a \"Sheva Na\" diacritic to an exising Hebrew font" [level=3]:
+    - link "Add a \"Sheva Na\" diacritic to an exising Hebrew font"
+  - text: I'm tring to add a "Sheva Na" diacritic to an exising Hebrew font. The Sheva Na is like the normal Sheva but with a change. The normal Sheva is included in the charmap while the Sheva Na not....
+  - list:
+    - listitem:
+      - link "show questions tagged 'fonts'": fonts
+    - listitem:
+      - link "show questions tagged 'fontforge'": fontforge
+  - link "TheNCoder's user avatar":
+    - img "TheNCoder's user avatar"
+  - link "TheNCoder"
+  - list:
+    - listitem: "1"
+  - time: asked 29 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Replit - system error - error proxying request error=context canceled" [level=3]:
+    - link "Replit - system error - error proxying request error=context canceled"
+  - text: "I am utilising Replit and since about one month the system has been yielding on the initial deployment of the app and from time to time the system error message: 2025-06-29 06:49:32.13 7ecccb42 System ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'proxy'": proxy
+    - listitem:
+      - link "show questions tagged 'runtime-error'": runtime-error
+    - listitem:
+      - link "show questions tagged 'replit'": replit
+  - link "Houghtonator's user avatar":
+    - img "Houghtonator's user avatar"
+  - link "Houghtonator"
+  - list:
+    - listitem: "103"
+  - time: asked 31 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Migrating a domain model that exposes interfaces with Gorm" [level=3]:
+    - link "Migrating a domain model that exposes interfaces with Gorm"
+  - text: I am currently working on an application whose core responsibility is recording user feedback and input through surveys. The surveys are fairly simplistic - one or more question/answer pairs, often ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'go'": go
+    - listitem:
+      - link "show questions tagged 'go-gorm'": go-gorm
+  - link "aevitas's user avatar":
+    - img "aevitas's user avatar"
+  - link "aevitas"
+  - list:
+    - listitem: 3,853
+  - time: asked 40 mins ago
+  - text: "-2 votes 1 answer 23 views"
+  - heading "OpenAI API - How to validate and refuse AI request" [level=3]:
+    - link "OpenAI API - How to validate and refuse AI request"
+  - text: I'm building an app that connects between user requests to openAI Api (like everyone I guess ;) ) while I'm using structured outputs, i want to make sure that users are not using this AI tunnel to ask ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'node.js'": node.js
+    - listitem:
+      - link "show questions tagged 'artificial-intelligence'": artificial-intelligence
+    - listitem:
+      - link "show questions tagged 'openai-api'": openai-api
+  - link "Sahar Toledano's user avatar":
+    - img "Sahar Toledano's user avatar"
+  - link "Sahar Toledano"
+  - list:
+    - listitem: "57"
+  - time: asked 50 mins ago
+  - text: "-3 votes 0 answers 17 views"
+  - heading "Kuroda Normal Form [closed]" [level=3]:
+    - link "Kuroda Normal Form [closed]"
+  - text: "Consider the following production rule: A -> S where A and S are both non-terminal symbols. My understanding of Kuroda Normal Form includes rules of the type A \\rightarrow B, where A and B are ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'computer-science'": computer-science
+  - link "Geldimurad Orazov's user avatar":
+    - img "Geldimurad Orazov's user avatar"
+  - link "Geldimurad Orazov"
+  - list:
+    - listitem: "1"
+  - time: asked 50 mins ago
+  - text: 0 votes 0 answers 16 views
+  - heading "why is Perl File::Map so slow compared to File::Slurp?" [level=3]:
+    - link "why is Perl File::Map so slow compared to File::Slurp?"
+  - text: I thought I'd try using mmap to search a multi-gigabyte file without running out of memory. I tested on a file that did actually fit and the File::Slurp version took less than a minute but the File::...
+  - list:
+    - listitem:
+      - link "show questions tagged 'perl'": perl
+    - listitem:
+      - link "show questions tagged 'mmap'": mmap
+    - listitem:
+      - link "show questions tagged 'slurp'": slurp
+  - link "jhnc's user avatar":
+    - img "jhnc's user avatar"
+  - link "jhnc"
+  - list:
+    - listitem: 17.9k
+  - time: asked 1 hour ago
+  - text: "-1 votes 0 answers 17 views"
+  - heading "Android Studio wont recognize a file" [level=3]:
+    - link "Android Studio wont recognize a file"
+  - text: Android Studio does not recognize my main activity file. I've been trying all kinds of code lines, but I can not resolve this issue. What could it be?
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'android'": android
+  - link "dana yuval's user avatar":
+    - img "dana yuval's user avatar"
+  - link "dana yuval"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 1 vote 1 answer 19 views
+  - heading "How to enable \"css\" or\"scss\" intelligence in angular typescript file?" [level=3]:
+    - link "How to enable \"css\" or\"scss\" intelligence in angular typescript file?"
+  - text: "How to enable css auto intelligence with typescript inline styles in angular with Visual studio code? here is my code: import { Component } from \"@angular/core\"; import { RouterLink } from &..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'angular'": angular
+    - listitem:
+      - link "show questions tagged 'typescript'": typescript
+    - listitem:
+      - link "show questions tagged 'visual-studio'": visual-studio
+    - listitem:
+      - link "show questions tagged 'angular20'": angular20
+  - link "3gwebtrain's user avatar":
+    - img "3gwebtrain's user avatar"
+  - link "3gwebtrain"
+  - list:
+    - listitem: 15.3k
+  - time: asked 1 hour ago
+  - text: 0 votes 2 answers 17 views
+  - heading "How can I immediately update the code in a remote repository on gitlab.com without a \"merge request\"?" [level=3]:
+    - link "How can I immediately update the code in a remote repository on gitlab.com without a \"merge request\"?"
+  - text: I have setup a pet project in a remote repository on gitlab.com and I have the local repo in a folder on MacOS. My SSH key on gitlab.com is setup OK and communications work alright. I edit/test/debug ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'git'": git
+    - listitem:
+      - link "show questions tagged 'gitlab'": gitlab
+    - listitem:
+      - link "show questions tagged 'git-push'": git-push
+  - link "troppapolvere's user avatar":
+    - img "troppapolvere's user avatar"
+  - link "troppapolvere"
+  - list:
+    - listitem: "15"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 12 views
+  - heading "Fitting an element to its container in CSS" [level=3]:
+    - link "Fitting an element to its container in CSS"
+  - text: "I’m trying to set up a container which has another element inside. The structure is something like this: div#container div#content div.line-numbers text-area The container (div#..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'css'": css
+  - link "Manngo's user avatar":
+    - img "Manngo's user avatar"
+  - link "Manngo"
+  - list:
+    - listitem: 16.7k
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 18 views
+  - heading "Why does it show missing synchronization for logger in polaris? Even though it is thread safe" [level=3]:
+    - link "Why does it show missing synchronization for logger in polaris? Even though it is thread safe"
+  - text: "Logger.info(\"This user is not eligible : \"+userId); thread shared logger is modified in a concurrent context without any synchronization. To avoid data races, make the data thread-local, or ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'logging'": logging
+    - listitem:
+      - link "show questions tagged 'synchronization'": synchronization
+    - listitem:
+      - link "show questions tagged 'thread-safety'": thread-safety
+    - listitem:
+      - link "show questions tagged 'ilogger'": ilogger
+  - link "Nishanth SR's user avatar":
+    - img "Nishanth SR's user avatar"
+  - link "Nishanth SR"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614669"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "You've vibe coded an app. Now what?"
+    - listitem:
+      - link "You’ve got 99 problems but data shouldn’t be one"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Community Asks Sprint Announcement - June 2025"
+    - listitem:
+      - 'link "Labs experiment launch: stackoverflow.ai"'
+    - listitem:
+      - link "2025 Community Moderator Election Results"
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 63k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 35k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 27k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2529733
+  - link "show questions tagged 'python'": python
+  - text: × 2210788
+  - link "show questions tagged 'java'": java
+  - text: × 1919579
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624592
+  - link "show questions tagged 'php'": php
+  - text: × 1466845
+  - link "show questions tagged 'android'": android
+  - text: × 1418547
+  - link "show questions tagged 'html'": html
+  - text: × 1188128
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1035733
+  - link "show questions tagged 'c++'": c++
+  - text: × 814577
+  - link "show questions tagged 'css'": css
+  - text: × 807649
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Does the Greek of Matthew 13:49 suggest that the wicked are fewer than the righteous, since they are removed from among them?"
+    - listitem:
+      - link "How do you implement tests for timing attacks on cryptographic primitives?"
+    - listitem:
+      - link "How broad is the SCOTUS ruling on parents opting children out of classroom instruction that conflicts with their religious beliefs?"
+    - listitem:
+      - link "Do variables belong to metalanguage"
+    - listitem:
+      - link "How does product placement of firearms work in movie/TV series?"
+    - listitem:
+      - link "How close is philosophy to mysticism?"
+    - listitem:
+      - link "What was the first movie on robots taking over the world?"
+    - listitem:
+      - link "\"He was chased by a multiple of dogs.\""
+    - listitem:
+      - 'link "Technical German translation: \"Vakuum Uew\""'
+    - listitem:
+      - link "Off with his head! (Ligature + optional subscript + math mode)"
+    - listitem:
+      - link "Ubuntu 25.04 not using DHCP DNS server"
+    - listitem:
+      - link "Return a Copy of a Card to a Hand"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.6.27.30339
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
