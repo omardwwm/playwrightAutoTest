@@ -1,0 +1,580 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale US in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,221,117 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 34"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: "-2 votes 0 answers 7 views"
+  - heading "Best practices for prebuilt, pluggable microservices in new project bootstrapping [closed]" [level=3]:
+    - link "Best practices for prebuilt, pluggable microservices in new project bootstrapping [closed]"
+  - text: "I'm working on a base microservices architecture intended to speed up the development of new projects. The idea is that services like: Authentication Authorization Config service API Gateway Service ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'authentication'": authentication
+    - listitem:
+      - link "show questions tagged 'architecture'": architecture
+    - listitem:
+      - link "show questions tagged 'microservices'": microservices
+    - listitem:
+      - link "show questions tagged 'software-design'": software-design
+    - listitem:
+      - link "show questions tagged 'system-design'": system-design
+  - link "hardkraja20's user avatar":
+    - img "hardkraja20's user avatar"
+  - link "hardkraja20"
+  - list:
+    - listitem: "17"
+  - time: asked 4 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "i.g.h.client.impl.DefaultHttpClient - Failed to connect to remoteAddress=/XXXX from localAddress=null" [level=3]:
+    - link "i.g.h.client.impl.DefaultHttpClient - Failed to connect to remoteAddress=/XXXX from localAddress=null"
+  - text: "I execute mvn gatling:test with jenkinsfile, but gatling connection alway timeout. The debug info as follow: i.g.h.client.impl.DefaultHttpClient - Failed to connect to remoteAddress=/82.71.82.20:32100 ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'maven'": maven
+    - listitem:
+      - link "show questions tagged 'jenkins'": jenkins
+    - listitem:
+      - link "show questions tagged 'testing'": testing
+    - listitem:
+      - link "show questions tagged 'gatling'": gatling
+  - link "Suukyi Shan 's user avatar":
+    - img "Suukyi Shan 's user avatar"
+  - link "Suukyi Shan"
+  - list:
+    - listitem: "1"
+  - time: asked 11 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "How to conditionally validate nested object fields in Zod + React Hook Form only after form submission?" [level=3]:
+    - link "How to conditionally validate nested object fields in Zod + React Hook Form only after form submission?"
+  - text: "I'm using React Hook Form with Zod in a Next.js project, and I'm trying to validate a nested repetition field based on the selected repetition_type. My problem is: Validation runs immediately when ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'next.js'": next.js
+    - listitem:
+      - link "show questions tagged 'react-hook-form'": react-hook-form
+    - listitem:
+      - link "show questions tagged 'zod'": zod
+    - listitem:
+      - link "show questions tagged 'shadcnui'": shadcnui
+  - link "Nardin SY's user avatar":
+    - img "Nardin SY's user avatar"
+  - link "Nardin SY"
+  - list:
+    - listitem: "1"
+  - time: asked 13 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Object detection , with v8" [level=3]:
+    - link "Object detection , with v8"
+  - text: "I need quick solutions for this : I am working on muzzle detection project , I have annotated and using yolo v8 -seg model I have trained . With inference I have got output image with muzzle of ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'artificial-intelligence'": artificial-intelligence
+    - listitem:
+      - link "show questions tagged 'object-detection'": object-detection
+    - listitem:
+      - link "show questions tagged 'yolo'": yolo
+    - listitem:
+      - link "show questions tagged 'ml'": ml
+  - link "Manish S shetty's user avatar":
+    - img "Manish S shetty's user avatar"
+  - link "Manish S shetty"
+  - list:
+    - listitem: "1"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Deferred deep linking in Mac catalyst application" [level=3]:
+    - link "Deferred deep linking in Mac catalyst application"
+  - text: I am implementing deferred deep linking in both my iOS and Mac Catalyst applications using third-party services such as Branch, AppsFlyer, and Adjust. While everything works perfectly on iOS, deferred ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'macos'": macos
+    - listitem:
+      - link "show questions tagged 'mac-catalyst'": mac-catalyst
+  - link "Rohit Badhai's user avatar":
+    - img "Rohit Badhai's user avatar"
+  - link "Rohit Badhai"
+  - list:
+    - listitem: "1"
+  - time: asked 15 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "I have 2d islands procedural generation on Godot. How can I check if a point is on surface?" [level=3]:
+    - link "I have 2d islands procedural generation on Godot. How can I check if a point is on surface?"
+  - text: "By 'point', I mean a RefCounted, with these properties: var pos: Vector2i var is_surface: bool var is_bottom: bool And by 'surface', I meand a point, that doesn't have another point above it. The ..."
+  - list:
+    - listitem:
+      - link "show questions tagged '2d'": 2d
+    - listitem:
+      - link "show questions tagged 'godot'": godot
+    - listitem:
+      - link "show questions tagged 'procedural-generation'": procedural-generation
+    - listitem:
+      - link "show questions tagged 'perlin-noise'": perlin-noise
+  - link "KirilAf's user avatar":
+    - img "KirilAf's user avatar"
+  - link "KirilAf"
+  - list:
+    - listitem: "33"
+  - time: asked 18 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "vba check 3 pattern matching" [level=3]:
+    - link "vba check 3 pattern matching"
+  - text: "i need to process SearchUser value differently. 1).Pattern = \"^\\d+$\" 2).Pattern = \"([\\w.-]+)@([\\w.-]+).([A-Za-z]{2,6})\" .Pattern all other values how to do this? like this: Set ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'regex'": regex
+    - listitem:
+      - link "show questions tagged 'vba'": vba
+  - link "alyam's user avatar":
+    - img "alyam's user avatar"
+  - link "alyam"
+  - list:
+    - listitem: "1"
+  - time: asked 19 mins ago
+  - text: "-3 votes 0 answers 12 views"
+  - heading "I am designing UI for grading functionality allowing sorta exam paper manager to customize the grading rules, Is there some avaiable solution or lib [closed]" [level=3]:
+    - link "I am designing UI for grading functionality allowing sorta exam paper manager to customize the grading rules, Is there some avaiable solution or lib [closed]"
+  - text: I am currently trying to design a grading functionality for some web app, which allows the teachers to create their own papers and specify/set the grading logic(based on several dimensions) The tech ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'vue.js'": vue.js
+  - link "Zephyr_8's user avatar":
+    - img "Zephyr_8's user avatar"
+  - link "Zephyr_8"
+  - list:
+    - listitem: "27"
+  - time: asked 19 mins ago
+  - text: "-1 votes 0 answers 20 views"
+  - heading "How can I get a merge from branch B to branch A to ignore certain files in the commits?" [level=3]:
+    - link "How can I get a merge from branch B to branch A to ignore certain files in the commits?"
+  - text: "The Problem: I have commits in branch B that I want to merge into branch A. The commits contain files that should only exist on branch B and never make their way to branch A. Naturally, when merging ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'git'": git
+    - listitem:
+      - link "show questions tagged 'git-merge'": git-merge
+  - link "Emmet Winter's user avatar":
+    - img "Emmet Winter's user avatar"
+  - link "Emmet Winter"
+  - list:
+    - listitem: "1"
+  - time: asked 23 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "limiting loop to run at 60fps with std::chrono gives unstable and small fps" [level=3]:
+    - link "limiting loop to run at 60fps with std::chrono gives unstable and small fps"
+  - text: I made a programm with loop, that should execute 60 times per second, and draw graphics at 60 fps, but instead runs at 30 - 33 fps, sometimes 20 - 45 fps. (Disabling limit gives ~1000 FPS). std::...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'c++-chrono'": c++-chrono
+  - link "BlastFurnace's user avatar":
+    - img "BlastFurnace's user avatar"
+  - link "BlastFurnace"
+  - list:
+    - listitem: "37"
+  - time: asked 24 mins ago
+  - text: 0 votes 0 answers 16 views
+  - heading "Alternatives for sql-spark-connector" [level=3]:
+    - link "Alternatives for sql-spark-connector"
+  - text: I needed a different version of sql-spark-connector and saw that the repo has been archived. It was pretty important for our use case and it doesn't seem like Microsoft will be picking it up either. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'sql-server'": sql-server
+    - listitem:
+      - link "show questions tagged 'apache-spark'": apache-spark
+    - listitem:
+      - link "show questions tagged 'pyspark'": pyspark
+  - link "notmegg's user avatar":
+    - img "notmegg's user avatar"
+  - link "notmegg"
+  - list:
+    - listitem: "1"
+  - time: asked 37 mins ago
+  - text: "-4 votes 1 answer 18 views"
+  - heading "Scala Compile server Intellj terminated unexpectedly [closed]" [level=3]:
+    - link "Scala Compile server Intellj terminated unexpectedly [closed]"
+  - text: "Scala Compile server Intellj terminated unexpectedly (port: 3200, pid: 7021)"
+  - list:
+    - listitem:
+      - link "show questions tagged 'scala'": scala
+    - listitem:
+      - link "show questions tagged 'intellij-idea'": intellij-idea
+  - link "Smalltalkguy's user avatar":
+    - img "Smalltalkguy's user avatar"
+  - link "Smalltalkguy"
+  - list:
+    - listitem: "389"
+  - time: asked 42 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "Zsh recursive globbing pattern with exclusion does not work properly with current directory" [level=3]:
+    - link "Zsh recursive globbing pattern with exclusion does not work properly with current directory"
+  - text: "I meant to list all files recursively excluding AV1 encoded files. But the exclusion pattern does not work as I expected: /Volumes/X/C/New/studio/成长的烦恼 copy ❯ tree ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'zsh'": zsh
+    - listitem:
+      - link "show questions tagged 'glob'": glob
+  - link "PineapplePie's user avatar":
+    - img "PineapplePie's user avatar"
+  - link "PineapplePie"
+  - list:
+    - listitem: "23"
+  - time: asked 42 mins ago
+  - text: "-1 votes 1 answer 12 views"
+  - heading "Why does Expo Doctor reactNativeDirectoryCheck exclude list cause errors in running /bundling development builds" [level=3]:
+    - link "Why does Expo Doctor reactNativeDirectoryCheck exclude list cause errors in running /bundling development builds"
+  - text: "I have an React Native app built with Expo. I was getting some errors out of Expo Doctor: npx -y expo-doctor I found in the Advice of the error message that these checks can be skipped: Advice: Use ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+    - listitem:
+      - link "show questions tagged 'expo'": expo
+    - listitem:
+      - link "show questions tagged 'package.json'": package.json
+    - listitem:
+      - link "show questions tagged 'expo-dev-client'": expo-dev-client
+  - link "rjapenga's user avatar":
+    - img "rjapenga's user avatar"
+  - link "rjapenga"
+  - list:
+    - listitem: "193"
+  - time: asked 46 mins ago
+  - text: 0 votes 0 answers 12 views
+  - 'heading "Firebase Phone Auth: CODE_SENT resolves before AUTO_VERIFIED, how to ensure only verified resolves when auto verification happens?[ANDROID]" [level=3]':
+    - 'link "Firebase Phone Auth: CODE_SENT resolves before AUTO_VERIFIED, how to ensure only verified resolves when auto verification happens?[ANDROID]"'
+  - text: I'm using Firebase Phone Authentication in a React Native app. The issue I'm facing is that when auto-verification happens, the CODE_SENT case still executes first, and AUTO_VERIFIED is triggered ...
+  - link
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'firebase'": firebase
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+    - listitem:
+      - link "show questions tagged 'firebase-authentication'": firebase-authentication
+  - link "Tushar Bhatia's user avatar":
+    - img "Tushar Bhatia's user avatar"
+  - link "Tushar Bhatia"
+  - list:
+    - listitem: "31"
+  - time: asked 46 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614742"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Programming problems that seem easy, but aren't, featuring Jon Skeet"
+    - listitem:
+      - link "Why call one API when you can use GraphQL to call them all?"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Community Asks Sprint Announcement - June 2025"
+    - listitem:
+      - 'link "Labs experiment launch: stackoverflow.ai"'
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 63k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 23k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 15k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2529809
+  - link "show questions tagged 'python'": python
+  - text: × 2210971
+  - link "show questions tagged 'java'": java
+  - text: × 1919636
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624652
+  - link "show questions tagged 'php'": php
+  - text: × 1466880
+  - link "show questions tagged 'android'": android
+  - text: × 1418606
+  - link "show questions tagged 'html'": html
+  - text: × 1188186
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1035731
+  - link "show questions tagged 'c++'": c++
+  - text: × 814653
+  - link "show questions tagged 'css'": css
+  - text: × 807681
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Different nearest object after reprojection from EPSG 4326 to UTM 32N"
+    - listitem:
+      - link "Slender sub-lists"
+    - listitem:
+      - link "Why do bit operators have such low precedence in C and C++?"
+    - listitem:
+      - link "Is there a filter containing every computable set or its complement that is not an ultrafilter?"
+    - listitem:
+      - link "How much faster are binaries produced by Modern compilers vs 1980s compilers vs for Retro CPUs/Computers? Binary benchmarks"
+    - listitem:
+      - link "When suspending to disk, does memory cache got dumped to disk?"
+    - listitem:
+      - link "How to check if numbers are close to be zeros of a polynomial?"
+    - listitem:
+      - link "MOSFET heating problem"
+    - listitem:
+      - 'link "siunitx: Remove trailing zeroes"'
+    - listitem:
+      - link "Are lightweight aluminum rims made for cross-country mountainbiking fit for touring purposes?"
+    - listitem:
+      - link "Off-Fret Harmonics in Tablature Notation (lilypond TabStaff/FretBoard)"
+    - listitem:
+      - link "A simple I2C one-to-many voltage question"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.7.3.30735
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
