@@ -1,0 +1,568 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale US in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "OverflowAI"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,218,163 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 38"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: "-1 votes 0 answers 5 views"
+  - heading "What are the latest fashion trends in Indian clothing?" [level=3]:
+    - link "What are the latest fashion trends in Indian clothing?"
+  - text: What are the latest fashion trends in Indian clothing Trends in Indian fashion are shifting toward sustainable fashion and fusion styles. Brands like Hamper Clothing are embracing this by offering ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'menu'": menu
+    - listitem:
+      - link "show questions tagged 'sencha-fashion'": sencha-fashion
+  - link "Hamper's user avatar":
+    - img "Hamper's user avatar"
+  - link "Hamper"
+  - list:
+    - listitem: "1"
+  - time: asked 2 mins ago
+  - text: 0 votes 0 answers 22 views
+  - heading "vertically centering submit and reset buttons within a fieldset" [level=3]:
+    - link "vertically centering submit and reset buttons within a fieldset"
+  - text: "I'm trying to center the the submit and the reset at the end of the form within their fieldset vertically, i tried to do it using vertical-align: top; on the div but it doesn't seem to work. Here's ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'css'": css
+  - link "Puna's user avatar":
+    - img "Puna's user avatar"
+  - link "Puna"
+  - list:
+    - listitem: "93"
+  - time: asked 18 mins ago
+  - text: 0 votes 0 answers 16 views
+  - heading "Using uniqueness typing to implement functional reactive programming" [level=3]:
+    - link "Using uniqueness typing to implement functional reactive programming"
+  - text: Linear types have been used to solve the space leak problems of implementing FRP [1], but there does not seem to be any research on using uniqueness typing in FRP implementations. In documentation for ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'functional-programming'": functional-programming
+    - listitem:
+      - link "show questions tagged 'frp'": frp
+    - listitem:
+      - link "show questions tagged 'mercury'": mercury
+    - listitem:
+      - link "show questions tagged 'uniqueness-typing'": uniqueness-typing
+  - link "Jake D'Cruz's user avatar":
+    - img "Jake D'Cruz's user avatar"
+  - link "Jake D'Cruz"
+  - list:
+    - listitem: "1"
+  - time: asked 20 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "tvOS TextField becomes misaligned when input is provided" [level=3]:
+    - link "tvOS TextField becomes misaligned when input is provided"
+  - text: I have a tvOS text field in SwiftUI. The placeholder "enter text here..." text is perfectly aligned, but as soon as a user adds some text, the field gains a bit of height and the text itself ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'swiftui'": swiftui
+    - listitem:
+      - link "show questions tagged 'tvos'": tvos
+  - link "David's user avatar":
+    - img "David's user avatar"
+  - link "David"
+  - list:
+    - listitem: "151"
+  - time: asked 34 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Automating PerimeterX \"Press & Hold\" Captcha in an iFrame with Dynamic IDs (Python Playwright/Selenium)" [level=3]:
+    - link "Automating PerimeterX \"Press & Hold\" Captcha in an iFrame with Dynamic IDs (Python Playwright/Selenium)"
+  - text: I'm trying to automate a web scraping task using Python, and I've hit a roadblock with a PerimeterX "Press & Hold" human verification challenge. The challenge appears within an on the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'selenium-webdriver'": selenium-webdriver
+    - listitem:
+      - link "show questions tagged 'iframe'": iframe
+    - listitem:
+      - link "show questions tagged 'screen-scraping'": screen-scraping
+    - listitem:
+      - link "show questions tagged 'headless'": headless
+  - link "Manoj Bhatt's user avatar":
+    - img "Manoj Bhatt's user avatar"
+  - link "Manoj Bhatt"
+  - list:
+    - listitem: "7"
+  - time: asked 37 mins ago
+  - text: 0 votes 1 answer 19 views
+  - heading "JAVA How to create a file only once when it's needed? (AutoCloseable)" [level=3]:
+    - link "JAVA How to create a file only once when it's needed? (AutoCloseable)"
+  - text: "Problem description I'm currently working on an Java-utility. This utility shoud read some input files (one or several). Each input file contains 3 types of strings: representing an integer, a float, ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'file'": file
+    - listitem:
+      - link "show questions tagged 'try-catch'": try-catch
+    - listitem:
+      - link "show questions tagged 'try-with-resources'": try-with-resources
+    - listitem:
+      - link "show questions tagged 'autocloseable'": autocloseable
+  - link "Максим Кулыгин's user avatar":
+    - img "Максим Кулыгин's user avatar"
+  - link "Максим Кулыгин"
+  - list:
+    - listitem: "1"
+  - time: asked 41 mins ago
+  - text: 0 votes 1 answer 23 views
+  - heading "How is value initialized in this line of Python ocde?" [level=3]:
+    - link "How is value initialized in this line of Python ocde?"
+  - text: "I am trying to refactor some code(for deploying on a new infrastructure). Quite a big class class GithubOrganization(dict): def __init(self,organization_dict,rest_session): self...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+  - link "MikiBelavista's user avatar":
+    - img "MikiBelavista's user avatar"
+  - link "MikiBelavista"
+  - list:
+    - listitem: 2,772
+  - time: asked 47 mins ago
+  - text: "-1 votes 1 answer 31 views"
+  - heading "glBegin(GL_QUADS) is not drawing a kite" [level=3]:
+    - link "glBegin(GL_QUADS) is not drawing a kite"
+  - text: I am trying to draw a kite using glBegin(GL_QUADS) glEnd(), however it keeps drawing a triangle. Here is a 'minimum reproducible example' that shows how i have an initialized an OpenGL rendering ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'opengl'": opengl
+    - listitem:
+      - link "show questions tagged 'graphics'": graphics
+  - link "timmy george's user avatar":
+    - img "timmy george's user avatar"
+  - link "timmy george"
+  - list:
+    - listitem: "639"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 17 views
+  - heading "ffmpeg try to open output file but fail" [level=3]:
+    - link "ffmpeg try to open output file but fail"
+  - text: In my Windows 11, I use this code to use ffmpeg to convert video from one type to another type. The code is simple, it just loops and finds the target file extension and runs ffmpeg to convert the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'ffmpeg'": ffmpeg
+    - listitem:
+      - link "show questions tagged 'windows-11'": windows-11
+  - link "Lyhourt Te's user avatar":
+    - img "Lyhourt Te's user avatar"
+  - link "Lyhourt Te"
+  - list:
+    - listitem: "11"
+  - time: asked 1 hour ago
+  - text: "-2 votes 0 answers 28 views"
+  - heading "USB keyboard not working on linux(Archlinux) but works on bios [closed]" [level=3]:
+    - link "USB keyboard not working on linux(Archlinux) but works on bios [closed]"
+  - text: I'm trying to connect a usb keyboard to my labtop but it's not working after boot into linux(working fine on bios and windows 10 on other pc). It's not detected in lsusb, Here's what I found after ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'linux'": linux
+    - listitem:
+      - link "show questions tagged 'linux-kernel'": linux-kernel
+    - listitem:
+      - link "show questions tagged 'keyboard'": keyboard
+    - listitem:
+      - link "show questions tagged 'arch'": arch
+  - link "Nilesh Nath's user avatar":
+    - img "Nilesh Nath's user avatar"
+  - link "Nilesh Nath"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 2 answers 28 views
+  - heading "When should I make an API call while navigating from one screen to another in Jetpack Compose (ViewModel per screen)?" [level=3]:
+    - link "When should I make an API call while navigating from one screen to another in Jetpack Compose (ViewModel per screen)?"
+  - text: I'm working on a Jetpack Compose Android app that displays a list of trains. I have Screen A that shows a list of trains and Screen B that displays the details of a selected train. Each screen has its ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'kotlin'": kotlin
+    - listitem:
+      - link "show questions tagged 'android-jetpack-compose'": android-jetpack-compose
+  - link "Pawandeep Singh's user avatar":
+    - img "Pawandeep Singh's user avatar"
+  - link "Pawandeep Singh"
+  - list:
+    - listitem: "369"
+  - time: asked 1 hour ago
+  - text: 0 votes 1 answer 14 views
+  - heading "chrome.history.search returns unwanted items (not in time range)" [level=3]:
+    - link "chrome.history.search returns unwanted items (not in time range)"
+  - text: "Call chrome.history.search let p = { startTime, endTime, maxResults: 1e6, text: '' }; let urls = await chrome.history.search(p); In the returned array, some lastVisitTime do not match endTime."
+  - list:
+    - listitem:
+      - link "show questions tagged 'google-chrome-extension'": google-chrome-extension
+  - link "SE12938683's user avatar":
+    - img "SE12938683's user avatar"
+  - link "SE12938683"
+  - list:
+    - listitem: "393"
+  - time: asked 1 hour ago
+  - text: 0 votes 1 answer 26 views
+  - heading "targetsdk 35 occurred while executing com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction" [level=3]:
+    - link "targetsdk 35 occurred while executing com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction"
+  - text: "What went wrong: Execution failed for task ':app:processReleaseResources'. A failure occurred while executing com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'targetsdkversion'": targetsdkversion
+    - listitem:
+      - link "show questions tagged 'android-35'": android-35
+  - link "Smit Borad's user avatar":
+    - img "Smit Borad's user avatar"
+  - link "Smit Borad"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 1 answer 16 views
+  - heading "Loading image from Resources causes native crash in Release" [level=3]:
+    - link "Loading image from Resources causes native crash in Release"
+  - text: According to Microsoft, this is the correct way to load an image Assembly assembly = GetType().GetTypeInfo().Assembly; using Stream stream = assembly.GetManifestResourceStream("Ringotan....
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'maui'": maui
+  - link "BlueRaja - Danny Pflughoeft's user avatar":
+    - img "BlueRaja - Danny Pflughoeft's user avatar"
+  - link "BlueRaja - Danny Pflughoeft"
+  - list:
+    - listitem: 85.9k
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 18 views
+  - heading "How to handle a cart system in Next.js 15 App Router with Redux and TanStack Query?" [level=3]:
+    - link "How to handle a cart system in Next.js 15 App Router with Redux and TanStack Query?"
+  - text: "I'm building a ecom app using Next.js 15 App Router, Redux, and TanStack Query. The cart is persisted in the database. Current setup: Redux: used to show cart count in the navbar TanStack Query: used ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'e-commerce'": e-commerce
+    - listitem:
+      - link "show questions tagged 'redux-toolkit'": redux-toolkit
+    - listitem:
+      - link "show questions tagged 'shopping-cart'": shopping-cart
+    - listitem:
+      - link "show questions tagged 'tanstackreact-query'": tanstackreact-query
+    - listitem:
+      - link "show questions tagged 'nextjs-15'": nextjs-15
+  - link "Neil Nicky's user avatar":
+    - img "Neil Nicky's user avatar"
+  - link "Neil Nicky"
+  - list:
+    - listitem: "1"
+  - time: asked 2 hours ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614545"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Programming problems that seem easy, but aren't, featuring Jon Skeet"
+    - listitem:
+      - link "Why call one API when you can use GraphQL to call them all?"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Community Asks Sprint Announcement - June 2025"
+    - listitem:
+      - 'link "Labs experiment launch: stackoverflow.ai"'
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 63k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 35k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 10k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2529547
+  - link "show questions tagged 'python'": python
+  - text: × 2210720
+  - link "show questions tagged 'java'": java
+  - text: × 1919504
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624535
+  - link "show questions tagged 'php'": php
+  - text: × 1466788
+  - link "show questions tagged 'android'": android
+  - text: × 1418467
+  - link "show questions tagged 'html'": html
+  - text: × 1188092
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1035679
+  - link "show questions tagged 'c++'": c++
+  - text: × 814623
+  - link "show questions tagged 'css'": css
+  - text: × 807623
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Why is astrology considered an occult practice from a Christian theological perspective, even though the Magi followed a star?"
+    - listitem:
+      - link "Moving water by repeated equilibration"
+    - listitem:
+      - link "Why is fast travel only available intermittently in Disco Elysium"
+    - listitem:
+      - link "Fblthp, the Lost and Naktamun Shines Again interaction"
+    - listitem:
+      - link "Are statements by AI customer service representatives legally binding?"
+    - listitem:
+      - link "GDAL 3.11 binary terrain"
+    - listitem:
+      - link "How can I SSH into a server securely without knowing its key?"
+    - listitem:
+      - link "Naming factory methods"
+    - listitem:
+      - link "Gate drive for a low side N-MOS switch with wide input voltage range"
+    - listitem:
+      - link "How do I diagnose the problems with this amplifier?"
+    - listitem:
+      - link "Why does IK rig panel animation dip and snap upward instead of folding smoothly?"
+    - listitem:
+      - link "Giving a Voice to a Silent Image, how would you rule?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.7.3.30735
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
