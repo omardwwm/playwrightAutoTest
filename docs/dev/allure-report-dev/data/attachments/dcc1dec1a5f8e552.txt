@@ -1,0 +1,590 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale US in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,216,705 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 24"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 6 views
+  - heading "How to know the character set use in mysql column row event" [level=3]:
+    - link "How to know the character set use in mysql column row event"
+  - text: I have written a python program to parse mysql binlog. In the Query Event, there is a Q_CHARSET_CODE which indicate what character set is used for the logged query. This indicated that the logged ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'mysql'": mysql
+    - listitem:
+      - link "show questions tagged 'replication'": replication
+  - link "Gerald Me's user avatar":
+    - img "Gerald Me's user avatar"
+  - link "Gerald Me"
+  - list:
+    - listitem: "127"
+  - time: asked 4 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "need help loading a wasm file into a node script (using web-tree-sitter)" [level=3]:
+    - link "need help loading a wasm file into a node script (using web-tree-sitter)"
+  - text: "i'm having trouble loading the wasm into my node script. This is my script ... const path = require('path'); const Parser = require('web-tree-sitter'); (async () => { await Parser.ready; const ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'node.js'": node.js
+    - listitem:
+      - link "show questions tagged 'webassembly'": webassembly
+  - link "mark-hahn's user avatar":
+    - img "mark-hahn's user avatar"
+  - link "mark-hahn"
+  - list:
+    - listitem: "499"
+  - time: asked 9 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Bootstrap selectpicker multiple selected up to another element change is not working properly" [level=3]:
+    - link "Bootstrap selectpicker multiple selected up to another element change is not working properly"
+  - text: "**please help for solution ** I have a dropdown role and another dropdown users(multiple select - bootstrap selectpicker) . So while I change role then users will be selected automatically depends on ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'jquery'": jquery
+    - listitem:
+      - link "show questions tagged 'ajax'": ajax
+    - listitem:
+      - link "show questions tagged 'bootstrap-5'": bootstrap-5
+    - listitem:
+      - link "show questions tagged 'html-select'": html-select
+    - listitem:
+      - link "show questions tagged 'bootstrap-select'": bootstrap-select
+  - link "Al Imran's user avatar":
+    - img "Al Imran's user avatar"
+  - link "Al Imran"
+  - list:
+    - listitem: "1"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Docker on EC2 and Docker Desktop" [level=3]:
+    - link "Docker on EC2 and Docker Desktop"
+  - text: Hi my docker images that I am pulling at ec2 instance is not visible on docker desktop and I have login in docker at ec2 using passkey Kindly help anyone Kindly see after pulling the image in docker ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'docker'": docker
+  - link "Ayush Raj Singh's user avatar":
+    - img "Ayush Raj Singh's user avatar"
+  - link "Ayush Raj Singh"
+  - list:
+    - listitem: "1"
+  - time: asked 15 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "ID or raw value for a column" [level=3]:
+    - link "ID or raw value for a column"
+  - text: "I'm currently designing the database for my game app which includes prediction-type gameplay let's say I have the following tables: prediction_methods: id name prediction_type (enum) game_predictions:..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'database'": database
+    - listitem:
+      - link "show questions tagged 'postgresql'": postgresql
+    - listitem:
+      - link "show questions tagged 'database-design'": database-design
+  - link "ssrsvn's user avatar":
+    - img "ssrsvn's user avatar"
+  - link "ssrsvn"
+  - list:
+    - listitem: "1"
+  - time: asked 15 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "how do I get the threading model right with sanic and pywebview" [level=3]:
+    - link "how do I get the threading model right with sanic and pywebview"
+  - text: I build lots of little python apps - I like web app uis, I like sanic as a backend because I'm mostly async these days... but I also want it to feel like a native app - ie its own dedicated window, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'multithreading'": multithreading
+    - listitem:
+      - link "show questions tagged 'sanic'": sanic
+    - listitem:
+      - link "show questions tagged 'pywebview'": pywebview
+  - link "Darren Oakey's user avatar":
+    - img "Darren Oakey's user avatar"
+  - link "Darren Oakey"
+  - list:
+    - listitem: 3,714
+  - time: asked 15 mins ago
+  - text: 0 votes 0 answers 17 views
+  - heading "Date Comparison in UNIX Shell Script failing" [level=3]:
+    - link "Date Comparison in UNIX Shell Script failing"
+  - text: I am trying to extract the file date from the output of a gsutil ls -l command and compare it to other dates. However, the comparison appears to be not working. lstr=$(gsutil ls -l gs://input-bucket/...
+  - list:
+    - listitem:
+      - link "show questions tagged 'linux'": linux
+    - listitem:
+      - link "show questions tagged 'bash'": bash
+    - listitem:
+      - link "show questions tagged 'shell'": shell
+    - listitem:
+      - link "show questions tagged 'unix'": unix
+    - listitem:
+      - link "show questions tagged 'gsutil'": gsutil
+  - link "marie20's user avatar":
+    - img "marie20's user avatar"
+  - link "marie20"
+  - list:
+    - listitem: "857"
+  - time: asked 22 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Approval stage in azure devops" [level=3]:
+    - link "Approval stage in azure devops"
+  - text: I am working on azure devops pipeline wherein I have multiple stages. The customer want me to put an approval stage before the final deployment stage and this approval should be asked everytime the ...
+  - link
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'azure'": azure
+    - listitem:
+      - link "show questions tagged 'azure-devops'": azure-devops
+    - listitem:
+      - link "show questions tagged 'azure-pipelines'": azure-pipelines
+    - listitem:
+      - link "show questions tagged 'cicd'": cicd
+  - link "Deepak D's user avatar":
+    - img "Deepak D's user avatar"
+  - link "Deepak D"
+  - list:
+    - listitem: "1"
+  - time: asked 22 mins ago
+  - text: 1 vote 0 answers 24 views
+  - heading "all the accordion with same styles opens up on click" [level=3]:
+    - link "all the accordion with same styles opens up on click"
+  - text: I am trying to add some more accrodions to this sample web page design. https://demo.themefisher.com/constra-bootstrap/index.html But when I copy the accordion multiple times and try to open one of ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'accordion'": accordion
+  - link "nischalinn's user avatar":
+    - img "nischalinn's user avatar"
+  - link "nischalinn"
+  - list:
+    - listitem: 1,235
+  - time: asked 29 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "How do lookback columns in Azure Data Explorer deduplication Materialized Views work?" [level=3]:
+    - link "How do lookback columns in Azure Data Explorer deduplication Materialized Views work?"
+  - text: I was wondering if anybody has experience using lookback columns within deduplication Materialized Views in Adx https://learn.microsoft.com/en-us/kusto/management/materialized-views/materialized-view-...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'duplicates'": duplicates
+    - listitem:
+      - link "show questions tagged 'azure-data-explorer'": azure-data-explorer
+    - listitem:
+      - link "show questions tagged 'materialized-views'": materialized-views
+    - listitem:
+      - link "show questions tagged 'adx'": adx
+  - link "NativeNass's user avatar":
+    - img "NativeNass's user avatar"
+  - link "NativeNass"
+  - list:
+    - listitem: "33"
+  - time: asked 32 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "How to edit the metadata on phantom wallet when it prompts to connect from my SwiftUI app" [level=3]:
+    - link "How to edit the metadata on phantom wallet when it prompts to connect from my SwiftUI app"
+  - text: My code currently works to connect to phantom wallet, but I'm not sure how to edit how phantom wallet displayes my app information (photo and name). I tried hosting a netlify index.html site with ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'swiftui'": swiftui
+    - listitem:
+      - link "show questions tagged 'decentralized-applications'": decentralized-applications
+    - listitem:
+      - link "show questions tagged 'phantom-wallet'": phantom-wallet
+  - link "Gavin Alfaro's user avatar":
+    - img "Gavin Alfaro's user avatar"
+  - link "Gavin Alfaro"
+  - list:
+    - listitem: "23"
+  - time: asked 39 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "LinkedIn Posts API returns INVALID_VERSION error with documented valid versions while Images API works fine" [level=3]:
+    - link "LinkedIn Posts API returns INVALID_VERSION error with documented valid versions while Images API works fine"
+  - text: I'm experiencing a critical inconsistency in LinkedIn's REST API version validation system. The /rest/images endpoint accepts version 202505 successfully, but the /rest/posts endpoint rejects the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'laravel'": laravel
+    - listitem:
+      - link "show questions tagged 'rest'": rest
+    - listitem:
+      - link "show questions tagged 'linkedin-api'": linkedin-api
+    - listitem:
+      - link "show questions tagged 'api-versioning'": api-versioning
+  - link "Roni Sommerfeld's user avatar":
+    - img "Roni Sommerfeld's user avatar"
+  - link "Roni Sommerfeld"
+  - list:
+    - listitem: "1"
+  - time: asked 44 mins ago
+  - text: 1 vote 0 answers 27 views
+  - heading "Reproducing a libc++ optimisation that uses tail padding to store field members with no additional space" [level=3]:
+    - link "Reproducing a libc++ optimisation that uses tail padding to store field members with no additional space"
+  - text: I've been reading the implementation of std::expected in libc++, and it describes an interesting optimisation where it stores a bool discriminator in the tail padding of the value/error types, when ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'templates'": templates
+    - listitem:
+      - link "show questions tagged 'optimization'": optimization
+    - listitem:
+      - link "show questions tagged 'padding'": padding
+    - listitem:
+      - link "show questions tagged 'libc++'": libc++
+  - link "haz's user avatar":
+    - img "haz's user avatar"
+  - link "haz"
+  - list:
+    - listitem: 2,338
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 14 views
+  - heading "alternative for this code not using eval or for newer PHP versions [duplicate]" [level=3]:
+    - link "alternative for this code not using eval or for newer PHP versions [duplicate]"
+  - text: "<?php $d=10; $i=10; $s=10; $fc = `$d==$i && $i==$s`; $f = '$d + 100'; $code = 'if ((' . $fc . ') == TRUE) { return \"' . $f . '\";}'; $ntotal = eval($code); ?> Any alternative ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'eval'": eval
+  - link "Phawn's user avatar":
+    - img "Phawn's user avatar"
+  - link "Phawn"
+  - list:
+    - listitem: "11"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 14 views
+  - heading "Web application creating [closed]" [level=3]:
+    - link "Web application creating [closed]"
+  - text: I am making my own web application which includes many functionalities similar to instagram. Can I build it by just Django framework can someone suggest me what tools or what else I must learn or ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'django'": django
+    - listitem:
+      - link "show questions tagged 'startup'": startup
+  - link "Irodabonu Komilova's user avatar":
+    - img "Irodabonu Komilova's user avatar"
+  - link "Irodabonu Komilova"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614447"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "A new era of Stack Overflow"
+    - listitem:
+      - link "How your favorite movie is changing language learning technology"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Results of the June 2025 Community Asks Sprint"
+    - listitem:
+      - link "Will you help build our new visual identity?"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 64k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 23k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 21k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2529391
+  - link "show questions tagged 'python'": python
+  - text: × 2210635
+  - link "show questions tagged 'java'": java
+  - text: × 1919449
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624490
+  - link "show questions tagged 'php'": php
+  - text: × 1466537
+  - link "show questions tagged 'android'": android
+  - text: × 1418404
+  - link "show questions tagged 'html'": html
+  - text: × 1188061
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1035622
+  - link "show questions tagged 'c++'": c++
+  - text: × 814666
+  - link "show questions tagged 'css'": css
+  - text: × 807613
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Draw a straight unbroken line through all faces of a hyper plus sign"
+    - listitem:
+      - link "A Simon Tatham's Loopy (aka Slitherlink) puzzle"
+    - listitem:
+      - link "A whole new meaning from a hidden meaning"
+    - listitem:
+      - link "\"Points along Geometry\" with interval distance 1km only creates one point at beginnning of track that is 18.2km"
+    - listitem:
+      - link "Answering Questions about Disability on UK job app"
+    - listitem:
+      - link "Does ‘διπλῆς τιμῆς’ in 1 Timothy 5:17 refer to symbolic honor or to double remuneration?"
+    - listitem:
+      - link "Hfill not working as expected when placing two figures side-by-side"
+    - listitem:
+      - 'link "What is the root cause for \"PacletToolsGeneral::error: \"PacletInfo.m\" is not a properly formatted PacletInfo.wl or PacletInfo.m file.\" in PacletBuild"'
+    - listitem:
+      - link "How to avoid harmful tropes when writing a white protagonist among a cast of dark-skinned characters?"
+    - listitem:
+      - link "Does plugging a speaker polarity backwards potentially make no audible difference?"
+    - listitem:
+      - link "FT232RNQ causing \"USB device not recognized\" Error on Windows"
+    - listitem:
+      - link "Moving overseas with climbing equipment - safe to send via sea freight?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.7.10.31226
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
