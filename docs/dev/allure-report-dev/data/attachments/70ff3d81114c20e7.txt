@@ -1,0 +1,587 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale US in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,216,738 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 23"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 10 views
+  - heading "Planing database web app to store sensitive documents" [level=3]:
+    - link "Planing database web app to store sensitive documents"
+  - text: I was asked for with replacing temporary google sheets solution for Subcontractor connecting internet fiber from the main line to individual houses. (I am not ideal for this task, but I am a friend ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'database'": database
+    - listitem:
+      - link "show questions tagged 'accessibility'": accessibility
+    - listitem:
+      - link "show questions tagged 'progressive-web-apps'": progressive-web-apps
+  - link "Creatos's user avatar":
+    - img "Creatos's user avatar"
+  - link "Creatos"
+  - list:
+    - listitem: "1"
+  - time: asked 4 mins ago
+  - text: 0 votes 1 answer 4 views
+  - heading "Why is my Cordova Android Plugin not visible in JavaScript?" [level=3]:
+    - link "Why is my Cordova Android Plugin not visible in JavaScript?"
+  - text: "I want to write a lightweight Capacitor Plugin for Android, that is it is not an Android project itself just the java classes. I have done everything that is explained out there: 1- Create the plugin ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'capacitor'": capacitor
+    - listitem:
+      - link "show questions tagged 'capacitor-plugin'": capacitor-plugin
+  - link "peter_the_oak's user avatar":
+    - img "peter_the_oak's user avatar"
+  - link "peter_the_oak"
+  - list:
+    - listitem: 3,730
+  - time: asked 6 mins ago
+  - text: "-1 votes 0 answers 16 views"
+  - heading "better and faster (and secure) way to manage a LOG text file" [level=3]:
+    - link "better and faster (and secure) way to manage a LOG text file"
+  - text: I wrote an application (a management program) that performs numerous processes, numerous cycles in which other procedures are called, ..., and to keep track of what the program does (in order to have ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'file'": file
+    - listitem:
+      - link "show questions tagged 'delphi'": delphi
+    - listitem:
+      - link "show questions tagged 'logging'": logging
+    - listitem:
+      - link "show questions tagged 'text'": text
+  - link "Giovanni Pederzani's user avatar":
+    - img "Giovanni Pederzani's user avatar"
+  - link "Giovanni Pederzani"
+  - list:
+    - listitem: "1"
+  - time: asked 11 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "How to do discord OAuth2 in a request session?" [level=3]:
+    - link "How to do discord OAuth2 in a request session?"
+  - text: "(From the user side not the bot) I don't know how to go about this and I would like some help. I tried it myself but got this error [01:19:41] Rover login failed: 400 | { \"errorCode\": &..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'authentication'": authentication
+    - listitem:
+      - link "show questions tagged 'oauth-2.0'": oauth-2.0
+    - listitem:
+      - link "show questions tagged 'discord'": discord
+  - link "MrSean Yt's user avatar":
+    - img "MrSean Yt's user avatar"
+  - link "MrSean Yt"
+  - list:
+    - listitem: "1"
+  - time: asked 21 mins ago
+  - text: 0 votes 0 answers 14 views
+  - 'heading "GitLab login Problem: Login failed. Check API token or GitLab version. Log in via Git if the version is older than 14.0" [level=3]':
+    - 'link "GitLab login Problem: Login failed. Check API token or GitLab version. Log in via Git if the version is older than 14.0"'
+  - text: "I Get this error when I want to add new token to my gitLab account in android studio: Login failed. Check API token or GitLab version. Log in via Git if the version is older than 14.0 Also when I ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'android-studio'": android-studio
+    - listitem:
+      - link "show questions tagged 'gitlab'": gitlab
+  - link "Zahra's user avatar":
+    - img "Zahra's user avatar"
+  - link "Zahra"
+  - list:
+    - listitem: 2,808
+  - time: asked 29 mins ago
+  - text: 1 vote 0 answers 8 views
+  - heading "Next Js Updating Search Params Slow" [level=3]:
+    - link "Next Js Updating Search Params Slow"
+  - text: "I want to have a Dialog open and close based on the search param ?create=true. I have implemented the the feature below however, it is very slow. TECH \"next\": \"15.3.4\" (Next.Js) ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'next.js'": next.js
+    - listitem:
+      - link "show questions tagged 'nextjs-15'": nextjs-15
+    - listitem:
+      - link "show questions tagged 'urlsearchparams'": urlsearchparams
+  - link "David Henry's user avatar":
+    - img "David Henry's user avatar"
+  - link "David Henry"
+  - list:
+    - listitem: 3,092
+  - time: asked 33 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "Why can't private attributes of Pydantic be mutable objects?" [level=3]:
+    - link "Why can't private attributes of Pydantic be mutable objects?"
+  - text: "I used the following line of code _missing_attributes: list[str] = PrivateAttr(default_factory=list,) The following error occurred and I don't understand why File \"/home/**/.venv/lib/python3.12/..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'pydantic-v2'": pydantic-v2
+  - link "tsieyy's user avatar":
+    - img "tsieyy's user avatar"
+  - link "tsieyy"
+  - list:
+    - listitem: "31"
+  - time: asked 39 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "Scaling problem with html5 experimental strategy game" [level=3]:
+    - link "Scaling problem with html5 experimental strategy game"
+  - text: "My HTML5 game is now uploaded and while I was coding it offline, I had the idea of 800x600 resolution. All the images and clicks are from X: 0-800 and Y: 0-600 It's working ok on my laptop and also ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'mobile'": mobile
+    - listitem:
+      - link "show questions tagged 'scaling'": scaling
+  - link "Iavor Nikiforoff's user avatar":
+    - img "Iavor Nikiforoff's user avatar"
+  - link "Iavor Nikiforoff"
+  - list:
+    - listitem: "1"
+  - time: asked 43 mins ago
+  - text: 0 votes 1 answer 14 views
+  - heading "iOS SceneKit particle system - force particles to face specific direction / orientation?" [level=3]:
+    - link "iOS SceneKit particle system - force particles to face specific direction / orientation?"
+  - text: I made a particle effect with concentric circles that radiate outward with a SCNParticleSystem. I'm trying to make the particles always face a certain orientation, in my case I want them always ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'scenekit'": scenekit
+  - link "Andy Ray's user avatar":
+    - img "Andy Ray's user avatar"
+  - link "Andy Ray"
+  - list:
+    - listitem: 32.2k
+  - time: asked 44 mins ago
+  - text: "-1 votes 0 answers 13 views"
+  - 'heading "Cannot open ''C:\\xampp\\mysql\\data\\ib_buffer_pool'' for reading: No such file or directory [closed]" [level=3]':
+    - 'link "Cannot open ''C:\\xampp\\mysql\\data\\ib_buffer_pool'' for reading: No such file or directory [closed]"'
+  - text: "MySQL said: Documentation Cannot connect: invalid settings. mysqli::real_connect(): (HY000/1130): Host 'localhost' is not allowed to connect to this MariaDB server Connection for controluser as ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'mysql'": mysql
+    - listitem:
+      - link "show questions tagged 'phpmyadmin'": phpmyadmin
+    - listitem:
+      - link "show questions tagged 'xampp'": xampp
+  - link "raheen aiman's user avatar":
+    - img "raheen aiman's user avatar"
+  - link "raheen aiman"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 13 views
+  - heading "ESP32 gpio interrupt task not running correctly" [level=3]:
+    - link "ESP32 gpio interrupt task not running correctly"
+  - text: I am new to ESP programming and am trying to figure out how use gpio pins for input, specificly with the use of an IR Sensor. However I keep running into a problem. I currently just have the interrupt ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'embedded'": embedded
+    - listitem:
+      - link "show questions tagged 'esp32'": esp32
+    - listitem:
+      - link "show questions tagged 'sensors'": sensors
+    - listitem:
+      - link "show questions tagged 'gpio'": gpio
+    - listitem:
+      - link "show questions tagged 'esp-idf'": esp-idf
+  - link "vmmgame's user avatar":
+    - img "vmmgame's user avatar"
+  - link "vmmgame"
+  - list:
+    - listitem: "51"
+  - time: asked 1 hour ago
+  - text: "-3 votes 0 answers 22 views"
+  - 'heading "punycode` module is deprecated [duplicate]" [level=3]':
+    - 'link "punycode` module is deprecated [duplicate]"'
+  - text: "Error (node:10512) [DEP0040] DeprecationWarning: The punycode module is deprecated. Please use a userland alternative instead. (Use node --trace-deprecation ... to show where the warning was created) ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'node.js'": node.js
+    - listitem:
+      - link "show questions tagged 'punycode'": punycode
+  - link "KrishnaVinod's user avatar":
+    - img "KrishnaVinod's user avatar"
+  - link "KrishnaVinod"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 1 answer 29 views
+  - heading "White(i.e uncoloured) patches formed when zooming in on my webpage" [level=3]:
+    - link "White(i.e uncoloured) patches formed when zooming in on my webpage"
+  - text: "I am making a social media home page which has a leftsidebar, main timeline and right section. the tailwind part of the code is as below: <div className=\"relative flex h-full w-full items-..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'tailwind-css'": tailwind-css
+    - listitem:
+      - link "show questions tagged 'tailwind-ui'": tailwind-ui
+    - listitem:
+      - link "show questions tagged 'tailwind-css-4'": tailwind-css-4
+  - link "m112120's user avatar":
+    - img "m112120's user avatar"
+  - link "m112120"
+  - list:
+    - listitem: "29"
+  - time: asked 1 hour ago
+  - text: 2 votes 1 answer 27 views
+  - 'heading "Git: How to merge only some commits from master to version branch without making a mess?" [level=3]':
+    - 'link "Git: How to merge only some commits from master to version branch without making a mess?"'
+  - text: "We have a challenge with how things have been merged into two different branches in our (public) Git repository. We have two branches: master (commits: a, b, c, d, e) maintenance-8.x.x (commits: a, x, ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'git'": git
+    - listitem:
+      - link "show questions tagged 'github'": github
+    - listitem:
+      - link "show questions tagged 'merge'": merge
+    - listitem:
+      - link "show questions tagged 'branch'": branch
+  - link "Ray Morris's user avatar":
+    - img "Ray Morris's user avatar"
+  - link "Ray Morris"
+  - list:
+    - listitem: "467"
+  - time: asked 1 hour ago
+  - text: "-2 votes 0 answers 21 views"
+  - heading "can someone explain me how exactly ejs-mate works, like I'm quite confused [closed]" [level=3]:
+    - link "can someone explain me how exactly ejs-mate works, like I'm quite confused [closed]"
+  - text: I'm facing some issue regarding with the ejs-mate, A npm package which extends the capabilities of ejs, but I'm kinda confused with the syntax and the basic working of how things are working ... ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'node.js'": node.js
+    - listitem:
+      - link "show questions tagged 'deployment'": deployment
+    - listitem:
+      - link "show questions tagged 'ejs'": ejs
+    - listitem:
+      - link "show questions tagged 'npm-package'": npm-package
+  - link "Piyush's user avatar":
+    - img "Piyush's user avatar"
+  - link "Piyush"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614450"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "A new era of Stack Overflow"
+    - listitem:
+      - link "How your favorite movie is changing language learning technology"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Results of the June 2025 Community Asks Sprint"
+    - listitem:
+      - link "Will you help build our new visual identity?"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 64k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 35k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 15k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2529410
+  - link "show questions tagged 'python'": python
+  - text: × 2210649
+  - link "show questions tagged 'java'": java
+  - text: × 1919449
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624494
+  - link "show questions tagged 'php'": php
+  - text: × 1466484
+  - link "show questions tagged 'android'": android
+  - text: × 1418414
+  - link "show questions tagged 'html'": html
+  - text: × 1188068
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1035619
+  - link "show questions tagged 'c++'": c++
+  - text: × 814672
+  - link "show questions tagged 'css'": css
+  - text: × 807619
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Using a dead person's credit card?"
+    - listitem:
+      - link "Are round blade knife and cutlery allowed in checked in bag?"
+    - listitem:
+      - link "Multi group membership. Yes or no?"
+    - listitem:
+      - link "Taylors inequality open vs closed interval"
+    - listitem:
+      - link "Answering Questions about Disability on UK job app"
+    - listitem:
+      - link "What is the difference between Newton's First Law and Galileo's Law of Inertia?"
+    - listitem:
+      - link "How to swap two columns in a specific row of a matrix?"
+    - listitem:
+      - link "Book about a man whose mission it is to warn isolated planets of an impending war"
+    - listitem:
+      - link "Which commandments is Paul referring to in 1 Corinthians 7:19 if he says circumcision means nothing?"
+    - listitem:
+      - link "Why does Linux (Debian 12) file system creation fail at installation from a live USB?"
+    - listitem:
+      - link "Why can't concat filter be used for these two MP4 videos? How to concatenate them?"
+    - listitem:
+      - link "How should I interpret this change in the average number of steps required to lose 1 kcal?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.7.10.31226
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
