@@ -1,0 +1,595 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale CA in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,217,298 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 36"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 1 vote 0 answers 11 views
+  - heading "Potential clickjacking on legacy browsers issue while running checkmarx on angular 16 project" [level=3]:
+    - link "Potential clickjacking on legacy browsers issue while running checkmarx on angular 16 project"
+  - text: Potential clickjacking issue is reported while running checkmarx report on angular 16 project. The issue is reported for all component.html in my project even if I try fixing this issue using frame ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'angular'": angular
+    - listitem:
+      - link "show questions tagged 'security'": security
+    - listitem:
+      - link "show questions tagged 'checkmarx'": checkmarx
+  - link "h.z.'s user avatar":
+    - img "h.z.'s user avatar"
+  - link "h.z."
+  - list:
+    - listitem: "59"
+  - time: asked 5 mins ago
+  - text: 1 vote 0 answers 4 views
+  - heading "Android App with Go Library Causes OpenGL Errors" [level=3]:
+    - link "Android App with Go Library Causes OpenGL Errors"
+  - text: I am working on an Android application developed in Kotlin that integrates a third-party library written in Go. This library has been compiled as an AAR file and integrated through Gradle's build....
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'go'": go
+    - listitem:
+      - link "show questions tagged 'opengl'": opengl
+    - listitem:
+      - link "show questions tagged 'gomobile'": gomobile
+  - link "he1ex-tG's user avatar":
+    - img "he1ex-tG's user avatar"
+  - link "he1ex-tG"
+  - list:
+    - listitem: "31"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Issue while trying to retrive github access token from github via keycloak" [level=3]:
+    - link "Issue while trying to retrive github access token from github via keycloak"
+  - text: I'm using Keycloak with the "Continue with GitHub" identity provider setup. The authentication flow works, and users can log in via GitHub. However, I need to retrieve the GitHub access ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'spring-boot'": spring-boot
+    - listitem:
+      - link "show questions tagged 'spring-security'": spring-security
+    - listitem:
+      - link "show questions tagged 'keycloak'": keycloak
+  - link "Umar Ali's user avatar":
+    - img "Umar Ali's user avatar"
+  - link "Umar Ali"
+  - list:
+    - listitem: "1"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "How to restrict the access to the user based on role" [level=3]:
+    - link "How to restrict the access to the user based on role"
+  - text: "Here is the scenario: John is a developer who will be creating cloud and desktop flow in power automate Dev environment. Peter will be performing QA for the automations in QA environment. Peter & ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'power-platform'": power-platform
+    - listitem:
+      - link "show questions tagged 'security-roles'": security-roles
+  - link "Kiruthika's user avatar":
+    - img "Kiruthika's user avatar"
+  - link "Kiruthika"
+  - list:
+    - listitem: "1"
+  - time: asked 6 mins ago
+  - text: "-1 votes 0 answers 9 views"
+  - heading "Create .docx template with repeatable parts in Java" [level=3]:
+    - link "Create .docx template with repeatable parts in Java"
+  - text: I am now implementing feature for document generation that should contain functionality af repeating some of content and then replace placeholders. Now Im using docx4j and mailmerger for this ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'docx'": docx
+    - listitem:
+      - link "show questions tagged 'document'": document
+    - listitem:
+      - link "show questions tagged 'docx4j'": docx4j
+    - listitem:
+      - link "show questions tagged 'docx-mailmerge'": docx-mailmerge
+  - link "Kajstrl's user avatar":
+    - img "Kajstrl's user avatar"
+  - link "Kajstrl"
+  - list:
+    - listitem: "33"
+  - time: asked 8 mins ago
+  - text: "-1 votes 0 answers 16 views"
+  - heading "When I post two variables 'arama' and 'sehir' , the filtering works, but when I post two variables , the filtering fails. What's Problem?" [level=3]:
+    - link "When I post two variables 'arama' and 'sehir' , the filtering works, but when I post two variables , the filtering fails. What's Problem?"
+  - text: I post two variables, 'search' and 'city', to the 'is-arama' URL. On the 'is-arama' URL, I perform another POST operation using JQuery Ajax and display the results on the screen. When I post just the '...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'post'": post
+    - listitem:
+      - link "show questions tagged 'filter'": filter
+  - link "KafGame Productions's user avatar":
+    - img "KafGame Productions's user avatar"
+  - link "KafGame Productions"
+  - list:
+    - listitem: "9"
+  - time: asked 11 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Using podman-compose inside a rootless container" [level=3]:
+    - link "Using podman-compose inside a rootless container"
+  - text: "I'm facing a problem that raises a question: I tried to use Podman inside a container for one of my projects (Podman in Podman). The base image is Fedora or UBI9 (I tested both). The aim is to make ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'docker'": docker
+    - listitem:
+      - link "show questions tagged 'permissions'": permissions
+    - listitem:
+      - link "show questions tagged 'containers'": containers
+    - listitem:
+      - link "show questions tagged 'podman'": podman
+    - listitem:
+      - link "show questions tagged 'rootless'": rootless
+  - link "De_Jr's user avatar":
+    - img "De_Jr's user avatar"
+  - link "De_Jr"
+  - list:
+    - listitem: "291"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "How does the model differentiate the position of embeddings in RoPE(rotary position embedding) when rotating at equal angles?" [level=3]:
+    - link "How does the model differentiate the position of embeddings in RoPE(rotary position embedding) when rotating at equal angles?"
+  - text: "While studying RoPE, I had a question: with a large number of tokens, when a certain angle is set for each of them in rotational positional encoding, some of the tokens must necessarily intersect (..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'deep-learning'": deep-learning
+    - listitem:
+      - link "show questions tagged 'neural-network'": neural-network
+  - link "Nikita Puzakov's user avatar":
+    - img "Nikita Puzakov's user avatar"
+  - link "Nikita Puzakov"
+  - list:
+    - listitem: "1"
+  - time: asked 18 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "How to simulate P2P nodes and a double-spending attack in a Flask-based blockchain?" [level=3]:
+    - link "How to simulate P2P nodes and a double-spending attack in a Flask-based blockchain?"
+  - text: I'm working on a simple blockchain simulation using Python and Flask, mainly to understand how double-spending attacks and fork resolution work. Each node is a separate Flask app instance running on a ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'flask'": flask
+    - listitem:
+      - link "show questions tagged 'blockchain'": blockchain
+    - listitem:
+      - link "show questions tagged 'simulation'": simulation
+    - listitem:
+      - link "show questions tagged 'p2p'": p2p
+  - link "NASIR ABBAS's user avatar":
+    - img "NASIR ABBAS's user avatar"
+  - link "NASIR ABBAS"
+  - list:
+    - listitem: "1"
+  - time: asked 19 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading ".NET 9 Application Fails Silently When Run from UNC Path on Windows 10/11" [level=3]:
+    - link ".NET 9 Application Fails Silently When Run from UNC Path on Windows 10/11"
+  - text: "I'm encountering a strange issue when running a .NET 9 console application from a UNC path (e.g., \\\\computername\\c$\\folder\\app.exe) on Windows 10 and Windows 11. Symptoms: The application crashes ..."
+  - list:
+    - listitem:
+      - link "show questions tagged '.net'": .net
+    - listitem:
+      - link "show questions tagged 'unc'": unc
+    - listitem:
+      - link "show questions tagged '.net-9.0'": .net-9.0
+  - link "Vincent's user avatar":
+    - img "Vincent's user avatar"
+  - link "Vincent"
+  - list:
+    - listitem: "1"
+  - time: asked 19 mins ago
+  - text: 0 votes 0 answers 16 views
+  - heading "Unsupervised Time Series Segmentation Without Predefined Number of Segments" [level=3]:
+    - link "Unsupervised Time Series Segmentation Without Predefined Number of Segments"
+  - text: "I'm working with time series data where I need to identify distinct segments without prior knowledge of how many segments exist. The data looks like: I've tried the clasp and ruptures packages, but ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'time-series'": time-series
+    - listitem:
+      - link "show questions tagged 'cluster-analysis'": cluster-analysis
+  - link "youtube's user avatar":
+    - img "youtube's user avatar"
+  - link "youtube"
+  - list:
+    - listitem: "504"
+  - time: asked 23 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "How to run an application through WSL in Rider?" [level=3]:
+    - link "How to run an application through WSL in Rider?"
+  - text: "I need help figuring out the following: I have a requirement to run an application through WSL (both in debug and non-debug modes) in Rider 2025.1. I don’t understand how to set this up—I’ve already ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'visual-studio'": visual-studio
+    - listitem:
+      - link "show questions tagged 'windows-subsystem-for-linux'": windows-subsystem-for-linux
+    - listitem:
+      - link "show questions tagged 'ride'": ride
+  - link "JustProgrammer's user avatar":
+    - img "JustProgrammer's user avatar"
+  - link "JustProgrammer"
+  - list:
+    - listitem: "137"
+  - time: asked 24 mins ago
+  - text: 0 votes 0 answers 10 views
+  - 'heading "How to fix the error: ERROR Warning: [runtime not ready]: Error: [@RNC/AsyncStorage]: NativeModule: AsyncStorage is null" [level=3]':
+    - 'link "How to fix the error: ERROR Warning: [runtime not ready]: Error: [@RNC/AsyncStorage]: NativeModule: AsyncStorage is null"'
+  - text: "When I import firebase version 8.10.0 like this: import firebase from 'firebase'; import 'firebase/firestore'; I always get an error saying this: ERROR [runtime not ready]: Invariant Violation: ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'firebase'": firebase
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+    - listitem:
+      - link "show questions tagged 'asyncstorage'": asyncstorage
+  - link "Washington Fig's user avatar":
+    - img "Washington Fig's user avatar"
+  - link "Washington Fig"
+  - list:
+    - listitem: "11"
+  - time: asked 27 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "How to remove Navigation title image from UqudoSDK in iOS" [level=3]:
+    - link "How to remove Navigation title image from UqudoSDK in iOS"
+  - text: Currently in one of the project we are using UqudoSDK to handle ID verification. But the issue is I am not able to remove the title image in Navigation provided by Uqudo. As per Uqudo docs, we have to ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'xcode'": xcode
+    - listitem:
+      - link "show questions tagged 'sdk'": sdk
+    - listitem:
+      - link "show questions tagged 'uinavigationbar'": uinavigationbar
+  - link "Rajat Dhasmana's user avatar":
+    - img "Rajat Dhasmana's user avatar"
+  - link "Rajat Dhasmana"
+  - list:
+    - listitem: "129"
+  - time: asked 28 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "How do I adjust my phpunit 12.1 config for a legacy directory structure?" [level=3]:
+    - link "How do I adjust my phpunit 12.1 config for a legacy directory structure?"
+  - text: I have a legacy PHP application (goes back to PHP 5.2, apparently!) and I'm slowly bringing it up to current coding standards. I'm trying to write a test and an autoload of a class that works in the ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'composer-php'": composer-php
+    - listitem:
+      - link "show questions tagged 'phpunit'": phpunit
+  - link "Azhrei's user avatar":
+    - img "Azhrei's user avatar"
+  - link "Azhrei"
+  - list:
+    - listitem: "3"
+  - time: asked 28 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614487"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "How your favorite movie is changing language learning technology"
+    - listitem:
+      - link "Where we’re going, we don’t need fossil fuels"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Results of the June 2025 Community Asks Sprint"
+    - listitem:
+      - link "Will you help build our new visual identity?"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 27k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "R Language" [level=1]:
+    - link "R Language"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where data scientists and AI researchers gather to find, share, and learn about R and other subtags like knitr and dplyr.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 11k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2529428
+  - link "show questions tagged 'python'": python
+  - text: × 2210720
+  - link "show questions tagged 'java'": java
+  - text: × 1919497
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624526
+  - link "show questions tagged 'php'": php
+  - text: × 1466404
+  - link "show questions tagged 'android'": android
+  - text: × 1418452
+  - link "show questions tagged 'html'": html
+  - text: × 1188084
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1035615
+  - link "show questions tagged 'c++'": c++
+  - text: × 814711
+  - link "show questions tagged 'css'": css
+  - text: × 807631
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Where was the synagogue from which the healed man was expelled in John 9:34?"
+    - listitem:
+      - link "Gödel's reception and reaction to Cohen's forcing and his proof of the independence of CH?"
+    - listitem:
+      - link "Looking for an Eastern movie where the hero loses one arm in a fight, but then learns how to sword fight with his other arm"
+    - listitem:
+      - link "Black hole the mass of Everest is safe to produce?"
+    - listitem:
+      - link "Sumset covering problem"
+    - listitem:
+      - link "How to price vol for options on forwards when forward settlement does not match option expiry"
+    - listitem:
+      - link "Class G laterally abuts Class E"
+    - listitem:
+      - 'link "Notated C-7 under C7 chord symbol: how does one determine which is correct?"'
+    - listitem:
+      - link "How do Jehovah Witness account for John giving equal respect to the Father, Holy Spirit, and Jesus in the Rev.1:4&5 introduction to the seven churches"
+    - listitem:
+      - link "Toprule, bottomrule and midrule for tables"
+    - listitem:
+      - link "Did very early Unix ever use the \"chd\" shell command to change directories?"
+    - listitem:
+      - link "Assembly line in C code"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.7.15.31385
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
