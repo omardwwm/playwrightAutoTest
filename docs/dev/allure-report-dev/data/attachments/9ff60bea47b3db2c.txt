@@ -1,0 +1,576 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale US in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,217,568 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 36"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 7 views
+  - heading "How to autogenerate and apply migrations with alembic when building a docker image?" [level=3]:
+    - link "How to autogenerate and apply migrations with alembic when building a docker image?"
+  - text: I have an already existing docker image of my fastapi application. I have applied alembic migrations to it as well. However, every time I do a model change I have to run alembic revision -m "...
+  - list:
+    - listitem:
+      - link "show questions tagged 'docker'": docker
+    - listitem:
+      - link "show questions tagged 'fastapi'": fastapi
+    - listitem:
+      - link "show questions tagged 'database-migration'": database-migration
+    - listitem:
+      - link "show questions tagged 'alembic'": alembic
+  - link "Sonny Mad's user avatar":
+    - img "Sonny Mad's user avatar"
+  - link "Sonny Mad"
+  - list:
+    - listitem: "31"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "Why does AVAudioFormat fail to create a 4-channel PCM format for 44100/48000 Hz on Apple Silicon (M2) with AVFoundation?" [level=3]:
+    - link "Why does AVAudioFormat fail to create a 4-channel PCM format for 44100/48000 Hz on Apple Silicon (M2) with AVFoundation?"
+  - text: I'm building a macOS audio batch processor in Swift using AVFoundation. I want to combine two stereo WAV files into a single 4-channel WAV file (either at 44100 Hz or 48000 Hz sample rate). I've Tried:...
+  - list:
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'macos'": macos
+    - listitem:
+      - link "show questions tagged 'audio'": audio
+    - listitem:
+      - link "show questions tagged 'avfoundation'": avfoundation
+    - listitem:
+      - link "show questions tagged 'core-audio'": core-audio
+  - link "Arjun's user avatar":
+    - img "Arjun's user avatar"
+  - link "Arjun"
+  - list:
+    - listitem: "124"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "How to perform audio subtraction in Python?" [level=3]:
+    - link "How to perform audio subtraction in Python?"
+  - text: "I'm back after a long time with a problem that is causing me quite a few headaches. I have two audio tracks: The “optimal” track is a recording of a hydraulic press, repetitive and constant. The “..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'audio'": audio
+    - listitem:
+      - link "show questions tagged 'artificial-intelligence'": artificial-intelligence
+    - listitem:
+      - link "show questions tagged 'librosa'": librosa
+  - link "Michele Lacorte's user avatar":
+    - img "Michele Lacorte's user avatar"
+  - link "Michele Lacorte"
+  - list:
+    - listitem: 5,363
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 3 views
+  - heading "Please tell me how to solve the output error when implementing voice calls through python aiortc communication" [level=3]:
+    - link "Please tell me how to solve the output error when implementing voice calls through python aiortc communication"
+  - text: I'm implementing a video call with python aiortc The audio output is coming out weird My goal is to communicate with an imaged flow, but I have a problem with my voice output, so I need to fix it ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'aiohttp'": aiohttp
+    - listitem:
+      - link "show questions tagged 'aiortc'": aiortc
+  - link "ark's user avatar":
+    - img "ark's user avatar"
+  - link "ark"
+  - list:
+    - listitem: "1"
+  - time: asked 6 mins ago
+  - text: "-1 votes 0 answers 4 views"
+  - heading "How to get SICK TBS temperature sensor to output analog signal?" [level=3]:
+    - link "How to get SICK TBS temperature sensor to output analog signal?"
+  - text: I'm doing a PLC program using Schneider's M340 (24V) and trying to get a temperature sensor to output continuously the current room temperature. The connection diagram of M12 cable says that the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'automation'": automation
+    - listitem:
+      - link "show questions tagged 'sensors'": sensors
+    - listitem:
+      - link "show questions tagged 'plc'": plc
+  - link "Ziran Xu's user avatar":
+    - img "Ziran Xu's user avatar"
+  - link "Ziran Xu"
+  - list:
+    - listitem: "9"
+  - time: asked 7 mins ago
+  - text: 0 votes 0 answers 6 views
+  - 'heading "Shopify Theme Dev: How to add strikethrough to text and textarea inputs?" [level=3]':
+    - 'link "Shopify Theme Dev: How to add strikethrough to text and textarea inputs?"'
+  - text: Relevant Shopify theme docs https://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#text https://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#...
+  - list:
+    - listitem:
+      - link "show questions tagged 'text'": text
+    - listitem:
+      - link "show questions tagged 'shopify'": shopify
+    - listitem:
+      - link "show questions tagged 'textarea'": textarea
+    - listitem:
+      - link "show questions tagged 'strikethrough'": strikethrough
+  - link "CMSCSS's user avatar":
+    - img "CMSCSS's user avatar"
+  - link "CMSCSS"
+  - list:
+    - listitem: 2,186
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "Powershell / Regex query / Match consecutive characters" [level=3]:
+    - link "Powershell / Regex query / Match consecutive characters"
+  - text: How can I find using regex (or other approach) several consecutive characters (hyphens "-") in variable? I will have array of variables and some of them are GUID like, e.g. "w34c1111-...
+  - list:
+    - listitem:
+      - link "show questions tagged 'regex'": regex
+    - listitem:
+      - link "show questions tagged 'powershell'": powershell
+  - link "Vurdalag's user avatar":
+    - img "Vurdalag's user avatar"
+  - link "Vurdalag"
+  - list:
+    - listitem: "35"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "How to fix this error in Zegocloud Flutter development" [level=3]:
+    - link "How to fix this error in Zegocloud Flutter development"
+  - text: I was following this documentation to create a ZegoCloud Video Call UIKit on Flutter using Dart (https://www.zegocloud.com/docs/uikit/callkit-flutter/quick-start-(with-call-invitation)). However, I ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'dart'": dart
+    - listitem:
+      - link "show questions tagged 'compiler-errors'": compiler-errors
+    - listitem:
+      - link "show questions tagged 'zegocloud'": zegocloud
+  - link "Minh Long's user avatar":
+    - img "Minh Long's user avatar"
+  - link "Minh Long"
+  - list:
+    - listitem: "1"
+  - time: asked 11 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "How i can make tcp client for simple chat system in .net" [level=3]:
+    - link "How i can make tcp client for simple chat system in .net"
+  - text: i am trying to do chat system using tcp. I have 3 app, 1 tcplistener and 2 tcpclient. I want to do simple chatting system but i cant figure it out. I maked server that accept clients, getting messages ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged '.net'": .net
+    - listitem:
+      - link "show questions tagged 'tcp'": tcp
+  - link "Saul4Goodman's user avatar":
+    - img "Saul4Goodman's user avatar"
+  - link "Saul4Goodman"
+  - list:
+    - listitem: "11"
+  - time: asked 13 mins ago
+  - text: 0 votes 1 answer 6 views
+  - heading "Collapse all methods in Cursor AI Editor" [level=3]:
+    - link "Collapse all methods in Cursor AI Editor"
+  - text: in other editor we can collapse method with keyboard shortcuts like we used to in VS Code. I want to know how to do that in Cursor AI Editor. I get some reference from some podcast and other websites. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'editor'": editor
+    - listitem:
+      - link "show questions tagged 'keyboard-shortcuts'": keyboard-shortcuts
+    - listitem:
+      - link "show questions tagged 'shortcut'": shortcut
+    - listitem:
+      - link "show questions tagged 'cursor-ai'": cursor-ai
+  - link "Piyush Sapariya's user avatar":
+    - img "Piyush Sapariya's user avatar"
+  - link "Piyush Sapariya"
+  - list:
+    - listitem: "546"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "How do I interpolate a type as string using quote! within a docstring in an attribute proc macro?" [level=3]:
+    - link "How do I interpolate a type as string using quote! within a docstring in an attribute proc macro?"
+  - text: "I have this macro definition: //! Attribute macro to implement a discriminant method for enums with a specific representation type. use proc_macro::TokenStream; use proc_macro2::Span; use quote::..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'rust'": rust
+    - listitem:
+      - link "show questions tagged 'rust-proc-macros'": rust-proc-macros
+  - link "Richard Neumann's user avatar":
+    - img "Richard Neumann's user avatar"
+  - link "Richard Neumann"
+  - list:
+    - listitem: "556"
+  - time: asked 16 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Proper way in JavaScript to compare two DOM elements and remove duplicates created by appendChild in loop?" [level=3]:
+    - link "Proper way in JavaScript to compare two DOM elements and remove duplicates created by appendChild in loop?"
+  - text: I am new in JavaScript programming and trying to improve my skills. Right now I am attempting to create dynamically updated task list in which user can input the name of their task, date of ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'html'": html
+  - link "ErrorBoot's user avatar":
+    - img "ErrorBoot's user avatar"
+  - link "ErrorBoot"
+  - list:
+    - listitem: "1"
+  - time: asked 16 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "Work with Flash library on ST32F429 occurs hardfault interrupt" [level=3]:
+    - link "Work with Flash library on ST32F429 occurs hardfault interrupt"
+  - text: "When I try to use flash library function HAL_FLASHEx_Erase i get hardfault interrupt. Why? Code: EraseInit.TypeErase = FLASH_TYPEERASE_SECTORS; EraseInit.Sector = FLASH_SECTOR_12; EraseInit.NbSectors =..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'flash'": flash
+    - listitem:
+      - link "show questions tagged 'st'": st
+  - link "mml's user avatar":
+    - img "mml's user avatar"
+  - link "mml"
+  - list:
+    - listitem: "21"
+  - time: asked 20 mins ago
+  - text: "-1 votes 0 answers 15 views"
+  - heading "How do I update an address with a constant minus an address in a circular buffer" [level=3]:
+    - link "How do I update an address with a constant minus an address in a circular buffer"
+  - text: I have pointer into a delay line that I wish to update. If the pointer (p) goes past the end of the buffer, I wish to wrap around to the start plus some value. _Complex float buffer[BUF_LEN]; static ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c'": c
+    - listitem:
+      - link "show questions tagged 'pointers'": pointers
+    - listitem:
+      - link "show questions tagged 'delay'": delay
+    - listitem:
+      - link "show questions tagged 'circular-buffer'": circular-buffer
+  - link "james's user avatar":
+    - img "james's user avatar"
+  - link "james"
+  - list:
+    - listitem: "1"
+  - time: asked 20 mins ago
+  - text: 0 votes 0 answers 17 views
+  - heading "How to convert a vector to tuple" [level=3]:
+    - link "How to convert a vector to tuple"
+  - text: "In DolphinDB, I have a vector like this: a=[1,5,10] I want to convert it into a tuple (1, 5, 10). I have tried the following method: t = tuple(a) A error ocured: Syntax Error: [line #1] Cannot ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'tuples'": tuples
+    - listitem:
+      - link "show questions tagged 'data-transform'": data-transform
+    - listitem:
+      - link "show questions tagged 'dolphindb'": dolphindb
+  - link "douya huang's user avatar":
+    - img "douya huang's user avatar"
+  - link "douya huang"
+  - list:
+    - listitem: "1"
+  - time: asked 25 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614505"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Where we’re going, we don’t need fossil fuels"
+    - listitem:
+      - 'link "The Great Unracking: Saying goodbye to the servers at our physical datacenter"'
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Results of the June 2025 Community Asks Sprint"
+    - listitem:
+      - link "Will you help build our new visual identity?"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 35k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 27k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 23k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2529444
+  - link "show questions tagged 'python'": python
+  - text: × 2210755
+  - link "show questions tagged 'java'": java
+  - text: × 1919508
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624544
+  - link "show questions tagged 'php'": php
+  - text: × 1466423
+  - link "show questions tagged 'android'": android
+  - text: × 1418459
+  - link "show questions tagged 'html'": html
+  - text: × 1188097
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1035616
+  - link "show questions tagged 'c++'": c++
+  - text: × 814719
+  - link "show questions tagged 'css'": css
+  - text: × 807640
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "How to import an image from a file, using OPENROWSET, to a table record?"
+    - listitem:
+      - link "Do I need to go through immigration to transit through the USA to another USA state and then out again?"
+    - listitem:
+      - link "Universal delta-functors and ZFC"
+    - listitem:
+      - link "Why don't Research Universities offer Tenure(-track) Teaching Positions"
+    - listitem:
+      - link "How to prove in general terms using trigonometry that the median perpendicular will divide the diagonal in such a ratio"
+    - listitem:
+      - link "Table multirow vertical center alignment not working"
+    - listitem:
+      - 'link "CA-1822: Mark members as static Roslyn recommendation will not unnecessarily increase memory consumption?"'
+    - listitem:
+      - link "Does QFT predict that the lattice constant of the universe is zero?"
+    - listitem:
+      - link "Discussion with teacher about complex analysis"
+    - listitem:
+      - link "Why did Paul call vessels of wood and clay dishonorable?"
+    - listitem:
+      - link "A word or phrase for denying that a group exists as a political tool?"
+    - listitem:
+      - link "Story about repeating decimal digits of pi"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.7.16.31460
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
