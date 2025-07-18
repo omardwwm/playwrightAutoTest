@@ -1,0 +1,574 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale DE in dev Einvironment and Realm europe
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,217,670 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 34"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 13 views
+  - heading "Difference in pipeline output behavior of zsh vs bash" [level=3]:
+    - link "Difference in pipeline output behavior of zsh vs bash"
+  - text: I am confused by a difference in the behavior of bash and zsh when running the same simple piped command in both of them. When I run sleep 4 | wc < text.txt in bash, I get 0 0 0 as output instantly ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'linux'": linux
+    - listitem:
+      - link "show questions tagged 'bash'": bash
+    - listitem:
+      - link "show questions tagged 'macos'": macos
+    - listitem:
+      - link "show questions tagged 'shell'": shell
+    - listitem:
+      - link "show questions tagged 'zsh'": zsh
+  - link "Anili's user avatar":
+    - img "Anili's user avatar"
+  - link "Anili"
+  - list:
+    - listitem: "138"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Getting NextAuth \"CLIENT_FETCH_ERROR\" when I try to add a basePath in NextConfig" [level=3]:
+    - link "Getting NextAuth \"CLIENT_FETCH_ERROR\" when I try to add a basePath in NextConfig"
+  - text: I implemented NextAuth in my application for basic authentication and authorization. The system works perfectly when I didnt add any basePath in NextConfig located in next.config.ts but when I added ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'next.js'": next.js
+    - listitem:
+      - link "show questions tagged 'next-auth'": next-auth
+  - link "Abdul Rahuman's user avatar":
+    - img "Abdul Rahuman's user avatar"
+  - link "Abdul Rahuman"
+  - list:
+    - listitem: "1"
+  - time: asked 11 mins ago
+  - text: 0 votes 1 answer 7 views
+  - heading "whenever i hit post request on my page then I cannot display the updated value from database even though I fetched the data from updated db" [level=3]:
+    - link "whenever i hit post request on my page then I cannot display the updated value from database even though I fetched the data from updated db"
+  - text: This is my code and inorder to fetch the correct result i have to either refresh or render the user.html again to reflect the changes. is there any way to do it more efficiently I tried rendering the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'flask'": flask
+    - listitem:
+      - link "show questions tagged 'flask-sqlalchemy'": flask-sqlalchemy
+  - link "Sam's user avatar":
+    - img "Sam's user avatar"
+  - link "Sam"
+  - list:
+    - listitem: "1"
+  - time: asked 11 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "How to modify or remove default context menu items in Autodesk Viewer 7.x, and how to create submenus in custom context menu?" [level=3]:
+    - link "How to modify or remove default context menu items in Autodesk Viewer 7.x, and how to create submenus in custom context menu?"
+  - text: I'm using Autodesk Forge Viewer version 7.x and I have two questions regarding the context menu behavior. Is it possible to modify or remove the default context menu items? By default, when right-...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'autodesk-forge'": autodesk-forge
+    - listitem:
+      - link "show questions tagged 'autodesk-viewer'": autodesk-viewer
+  - link "astromelon's user avatar":
+    - img "astromelon's user avatar"
+  - link "astromelon"
+  - list:
+    - listitem: "1"
+  - time: asked 15 mins ago
+  - text: 0 votes 0 answers 15 views
+  - heading "The library registration references a different set of library BLOBs than previous registrations for this job" [level=3]:
+    - link "The library registration references a different set of library BLOBs than previous registrations for this job"
+  - text: "Context : Flink Deployment Application cluster Mode Usecase : Flink Job to read data from kafka , transform and produce to kafka Deployment : On k8s cluster using k8s Flink operator To start with ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'apache-flink'": apache-flink
+  - link "Jaiprasad's user avatar":
+    - img "Jaiprasad's user avatar"
+  - link "Jaiprasad"
+  - list:
+    - listitem: "329"
+  - time: asked 20 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "React Native Twilio Voice iOS – Incoming Call Not Working (VoIP Token Registered, 52145 APNs Auth Error)" [level=3]:
+    - link "React Native Twilio Voice iOS – Incoming Call Not Working (VoIP Token Registered, 52145 APNs Auth Error)"
+  - text: "I’m working on a React Native app using Twilio Voice SDK for iOS with support for: Outgoing Calls (App ➝ Real Phone) – Already implemented and working successfully. Incoming Calls (Real Phone ➝ App) – ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+    - listitem:
+      - link "show questions tagged 'twilio'": twilio
+    - listitem:
+      - link "show questions tagged 'twilio-api'": twilio-api
+  - link "Jasleen Kaur's user avatar":
+    - img "Jasleen Kaur's user avatar"
+  - link "Jasleen Kaur"
+  - list:
+    - listitem: "1"
+  - time: asked 22 mins ago
+  - text: 0 votes 0 answers 18 views
+  - heading "How to block rendering of child component until a condition is met?" [level=3]:
+    - link "How to block rendering of child component until a condition is met?"
+  - text: I have a component which is using several hooks to get data and then give it to a child component. I want the child component to re-render only when the hooks all had answered. const [data1, loading1] ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+  - link "Fla's user avatar":
+    - img "Fla's user avatar"
+  - link "Fla"
+  - list:
+    - listitem: "644"
+  - time: asked 25 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "What is the idiomatic way to retry Connect-DbaInstance?" [level=3]:
+    - link "What is the idiomatic way to retry Connect-DbaInstance?"
+  - text: My DNS is pretty unreliable. Therefore, I often need to retry Connect-DbaInstance if it throws a network error. What is the idiomatic way of doing this in either PowerShell or dbatools in particular? ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'sql-server'": sql-server
+    - listitem:
+      - link "show questions tagged 'powershell'": powershell
+    - listitem:
+      - link "show questions tagged 'connection'": connection
+    - listitem:
+      - link "show questions tagged 'dbatools'": dbatools
+  - link "J. Mini's user avatar":
+    - img "J. Mini's user avatar"
+  - link "J. Mini"
+  - list:
+    - listitem: 1,696
+  - time: asked 25 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "Html or Markdown in debug console [closed]" [level=3]:
+    - link "Html or Markdown in debug console [closed]"
+  - text: I have managed to set up my VS Code for scripting in much the same way as LinqPad. The one thing I am missing is a way to show my output in a prettier way. I have been experimenting with nugets like ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'visual-studio-code'": visual-studio-code
+    - listitem:
+      - link "show questions tagged 'c#-devkit'": c#-devkit
+  - link "Thomas Due's user avatar":
+    - img "Thomas Due's user avatar"
+  - link "Thomas Due"
+  - list:
+    - listitem: "43"
+  - time: asked 33 mins ago
+  - text: 0 votes 0 answers 17 views
+  - heading "can't find element using By.LinkText in Selenium Webdriver" [level=3]:
+    - link "can't find element using By.LinkText in Selenium Webdriver"
+  - text: "I'm new to Automation and I'm trying to test this site: https://magento.softwaretestingboard.com/ and on this page driver.get(\"https://magento.softwaretestingboard.com/men/tops-men/jackets-men...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'selenium-webdriver'": selenium-webdriver
+    - listitem:
+      - link "show questions tagged 'nosuchelementexception'": nosuchelementexception
+    - listitem:
+      - link "show questions tagged 'linktext'": linktext
+  - link "Nicole Nicolas's user avatar":
+    - img "Nicole Nicolas's user avatar"
+  - link "Nicole Nicolas"
+  - list:
+    - listitem: "1"
+  - time: asked 37 mins ago
+  - text: 0 votes 1 answer 21 views
+  - heading "Initialize the parameter values of an FMU from a PAR file within the FMU" [level=3]:
+    - link "Initialize the parameter values of an FMU from a PAR file within the FMU"
+  - text: Recently I came across a problem statement where we have to initialize the parameters of the FMU from a PAR file. There are straightforward solutions using the FMPy, where I can run a python routine ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'fmi'": fmi
+  - link "Akhil Nandan's user avatar":
+    - img "Akhil Nandan's user avatar"
+  - link "Akhil Nandan"
+  - list:
+    - listitem: "348"
+  - time: asked 44 mins ago
+  - text: 0 votes 1 answer 28 views
+  - heading "Comparing Swift's and Rust's function signatures" [level=3]:
+    - link "Comparing Swift's and Rust's function signatures"
+  - text: "I want to check my understanding of how Swift and Rust handle function parameters. From what I’ve seen, Swift has two main parameter modes: Pass by value, immutable: f(x: T) and Pass by reference, ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'rust'": rust
+    - listitem:
+      - link "show questions tagged 'pass-by-reference'": pass-by-reference
+    - listitem:
+      - link "show questions tagged 'borrow-checker'": borrow-checker
+    - listitem:
+      - link "show questions tagged 'pass-by-value'": pass-by-value
+  - link "Xander's user avatar":
+    - img "Xander's user avatar"
+  - link "Xander"
+  - list:
+    - listitem: "1"
+  - time: asked 45 mins ago
+  - text: "-1 votes 2 answers 31 views"
+  - heading "How to package a module in Python 3?" [level=3]:
+    - link "How to package a module in Python 3?"
+  - text: "I am struggling to find a way to package a module in Python 3. My package is not being recognised as such, meaning the module cannot be imported. As an example, I do the following in the same order: ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'module'": module
+    - listitem:
+      - link "show questions tagged 'package'": package
+    - listitem:
+      - link "show questions tagged 'python-module'": python-module
+  - link "Ana's user avatar":
+    - img "Ana's user avatar"
+  - link "Ana"
+  - list:
+    - listitem: "1"
+  - time: asked 47 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Apple Pay for Authorize.net is not showing" [level=3]:
+    - link "Apple Pay for Authorize.net is not showing"
+  - text: I've completed all the necessary steps for setting up Apple Pay, including uploading the PEM certificate and verifying my domain. I'm using the WooCommerce Authorize.Net plugin (skyverge), and their ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'wordpress'": wordpress
+    - listitem:
+      - link "show questions tagged 'woocommerce'": woocommerce
+    - listitem:
+      - link "show questions tagged 'authorize.net'": authorize.net
+    - listitem:
+      - link "show questions tagged 'applepay'": applepay
+  - link "Zohaib Amir's user avatar":
+    - img "Zohaib Amir's user avatar"
+  - link "Zohaib Amir"
+  - list:
+    - listitem: "119"
+  - time: asked 48 mins ago
+  - text: "-1 votes 0 answers 17 views"
+  - heading "I can't open a specific branch on GitHub because there are too many files in the root folder" [level=3]:
+    - link "I can't open a specific branch on GitHub because there are too many files in the root folder"
+  - text: I have a GitHub project that I use to test certain integrations and pages in the product my company develops for speed and usability. One of the branches of this project has over 600,000 files in the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'github'": github
+  - link "Nzall's user avatar":
+    - img "Nzall's user avatar"
+  - link "Nzall"
+  - list:
+    - listitem: 3,551
+  - time: asked 51 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614512"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - 'link "The Great Unracking: Saying goodbye to the servers at our physical datacenter"'
+    - listitem:
+      - link "How to do your job happier"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Results of the June 2025 Community Asks Sprint"
+    - listitem:
+      - link "Will you help build our new visual identity?"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 64k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 23k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 11k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2529455
+  - link "show questions tagged 'python'": python
+  - text: × 2210774
+  - link "show questions tagged 'java'": java
+  - text: × 1919507
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624555
+  - link "show questions tagged 'php'": php
+  - text: × 1466387
+  - link "show questions tagged 'android'": android
+  - text: × 1418456
+  - link "show questions tagged 'html'": html
+  - text: × 1188092
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1035609
+  - link "show questions tagged 'c++'": c++
+  - text: × 814727
+  - link "show questions tagged 'css'": css
+  - text: × 807639
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "腰砕け for \"chicken out\"?"
+    - listitem:
+      - link "List installed software each together with its repository component"
+    - listitem:
+      - link "Clear explanation of the ramifications of a smaller portion in the World-To-Come"
+    - listitem:
+      - link "even if trump admits to messing up and taking off tariffs, and trump goes back to a rational global approach to economics, why still deep recession?"
+    - listitem:
+      - link "Does the fuel switch directly control the fuel valve?"
+    - listitem:
+      - link "Computing Pi with iF*ck"
+    - listitem:
+      - link "Is it feasible that cars would be made with a central driving position?"
+    - listitem:
+      - link "MATCH formula not working for some records, even though Excel says they are equal"
+    - listitem:
+      - link "Table split into two parts but not vertically aligned"
+    - listitem:
+      - link "What fair use provisions are covered by the constitution in the US?"
+    - listitem:
+      - link "Are you supposed to eat the sprig of rosemary served with grilled meat, to cleanse breath?"
+    - listitem:
+      - link "Why use a 1000:1 transformer instead cascading three 10:1 transformers?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.7.17.31531
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
