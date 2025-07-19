@@ -1,0 +1,578 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale GB in dev Einvironment and Realm europe
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,214,562 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 38"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 8 views
+  - 'heading "ModuleNotFoundError: No module named ''llama_cpp_binaries''" [level=3]':
+    - 'link "ModuleNotFoundError: No module named ''llama_cpp_binaries''"'
+  - text: I am trying to use CodeBooga-34B-v0.1-GGUF model in Text generation web UI with model loader llama.cpp so when i try to load model this Error shows up in CMD import llama_cpp_binaries ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python-3.x'": python-3.x
+    - listitem:
+      - link "show questions tagged 'llama-cpp-python'": llama-cpp-python
+  - link "mehdi ahmadi's user avatar":
+    - img "mehdi ahmadi's user avatar"
+  - link "mehdi ahmadi"
+  - list:
+    - listitem: "564"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "Not able to run a spark code due to some issue on my local" [level=3]:
+    - link "Not able to run a spark code due to some issue on my local"
+  - text: I am facing the below error while running the given piece of spark code on my local Pycharm Community Edition and the spark session is not getting created. I have set up all my local environment ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'apache-spark'": apache-spark
+    - listitem:
+      - link "show questions tagged 'pyspark'": pyspark
+    - listitem:
+      - link "show questions tagged 'pyspark-pandas'": pyspark-pandas
+  - link "Node98's user avatar":
+    - img "Node98's user avatar"
+  - link "Node98"
+  - list:
+    - listitem: "27"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Gradle MultipleCompilationErrorsException" [level=3]:
+    - link "Gradle MultipleCompilationErrorsException"
+  - text: "I need to use a class from my gradle plugin elytra-conventions in an special script dependencies.gradle loaded by GTNHGradle. My project is this. The problem is that the script will throw: * Where: ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'gradle'": gradle
+  - link "Taskeren's user avatar":
+    - img "Taskeren's user avatar"
+  - link "Taskeren"
+  - list:
+    - listitem: "35"
+  - time: asked 20 mins ago
+  - text: "-1 votes 0 answers 13 views"
+  - heading "How to create a custom “Ctrl” button in Flutter that makes the next key behave like Ctrl + key on Android?" [level=3]:
+    - link "How to create a custom “Ctrl” button in Flutter that makes the next key behave like Ctrl + key on Android?"
+  - text: "I'm trying to implement a custom \"Ctrl\" button inside a Flutter app. The idea is simple: I have a virtual button labeled Ctrl inside my app UI. When the user taps this button, it should act ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+  - link "Nana Nana's user avatar":
+    - img "Nana Nana's user avatar"
+  - link "Nana Nana"
+  - list:
+    - listitem: "1"
+  - time: asked 24 mins ago
+  - text: "-1 votes 0 answers 18 views"
+  - heading "Is there a way to extract comments from Python functions?" [level=3]:
+    - link "Is there a way to extract comments from Python functions?"
+  - text: Right now I am trying to extract comments from my Python code, it have become very cumbersome to manage comments. Can somebody suggest some tools because I want to try this for other languages ? How ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'sphinx'": sphinx
+  - link "user42826's user avatar":
+    - img "user42826's user avatar"
+  - link "user42826"
+  - list:
+    - listitem: "99"
+  - time: asked 25 mins ago
+  - text: 0 votes 1 answer 11 views
+  - heading "keytool Unable to locate a Java Runtime" [level=3]:
+    - link "keytool Unable to locate a Java Runtime"
+  - text: I'm trying to set a Google Auth platform client ID for Android for my Flutter application in order to use google_sign_in. For that, I need to get the SHA-1 certificate fingerprint. The command ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'keytool'": keytool
+    - listitem:
+      - link "show questions tagged 'android-keystore'": android-keystore
+  - link "Valentin Vignal's user avatar":
+    - img "Valentin Vignal's user avatar"
+  - link "Valentin Vignal"
+  - list:
+    - listitem: 8,490
+  - time: asked 42 mins ago
+  - text: 0 votes 1 answer 12 views
+  - heading "After scrolling to the top/bottom , content is partially hidden" [level=3]:
+    - link "After scrolling to the top/bottom , content is partially hidden"
+  - text: "{/* Requests List with Scroll */} <div className=\"overflow-y-auto\" style={{ height: 'calc(100% - 150px)', paddingBottom: '20px' }}> {/* Adjusted height and added padding-bottom ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'tailwind-css'": tailwind-css
+    - listitem:
+      - link "show questions tagged 'jsx'": jsx
+  - link "Ikram Wani's user avatar":
+    - img "Ikram Wani's user avatar"
+  - link "Ikram Wani"
+  - list:
+    - listitem: "1"
+  - time: asked 46 mins ago
+  - text: 0 votes 0 answers 22 views
+  - heading "Users not Displaying even though the Firebase is initialized in Laravel" [level=3]:
+    - link "Users not Displaying even though the Firebase is initialized in Laravel"
+  - text: <!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'laravel'": laravel
+    - listitem:
+      - link "show questions tagged 'google-cloud-firestore'": google-cloud-firestore
+  - link "Mark Lenard Paragas's user avatar":
+    - img "Mark Lenard Paragas's user avatar"
+  - link "Mark Lenard Paragas"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 20 views
+  - 'heading "Laravel SQLSTATE[25P02]: In failed sql transaction: 7 ERROR: current transaction is aborted, commands ignored until end of transaction block" [level=3]':
+    - 'link "Laravel SQLSTATE[25P02]: In failed sql transaction: 7 ERROR: current transaction is aborted, commands ignored until end of transaction block"'
+  - text: "When trying to deploy my Laravel app to production I'm getting this error: Running migrations. 0001_01_01_000000_create_users_table ........................................................................"
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'laravel'": laravel
+    - listitem:
+      - link "show questions tagged 'database'": database
+    - listitem:
+      - link "show questions tagged 'postgresql'": postgresql
+  - link "Leopold Jurić's user avatar":
+    - img "Leopold Jurić's user avatar"
+  - link "Leopold Jurić"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Is moving inline JavaScript to an external file a valid way to avoid using nonces in CSP for a static site?" [level=3]:
+    - link "Is moving inline JavaScript to an external file a valid way to avoid using nonces in CSP for a static site?"
+  - text: I’m building a static site (using Vite + React, hosted on Netlify) and I want to set a strict Content Security Policy (CSP) without using unsafe-inline or nonces. Since my site is static, managing ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'vite'": vite
+    - listitem:
+      - link "show questions tagged 'content-security-policy'": content-security-policy
+    - listitem:
+      - link "show questions tagged 'nonce'": nonce
+  - link "Alessandro Zoncada's user avatar":
+    - img "Alessandro Zoncada's user avatar"
+  - link "Alessandro Zoncada"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 1 vote 0 answers 7 views
+  - heading "Pyppeteer returns None or empty content when scraping Digikala product page" [level=3]:
+    - link "Pyppeteer returns None or empty content when scraping Digikala product page"
+  - text: "I'm trying to scrape a product page from Digikala using Pyppeteer because the site is heavily JavaScript-rendered. Here is my render class: import asyncio from pyppeteer import launch from pyppeteer...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'web-scraping'": web-scraping
+    - listitem:
+      - link "show questions tagged 'async-await'": async-await
+    - listitem:
+      - link "show questions tagged 'pyppeteer'": pyppeteer
+  - link "Ali Motamed's user avatar":
+    - img "Ali Motamed's user avatar"
+  - link "Ali Motamed"
+  - list:
+    - listitem: "11"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 8 views
+  - heading "I'm trying to filter an array of objects based on a specific condition, but I'm not getting the expected output [duplicate]" [level=3]:
+    - link "I'm trying to filter an array of objects based on a specific condition, but I'm not getting the expected output [duplicate]"
+  - text: "I'm trying to filter an array of objects in JavaScript based on the age field. I expected the result to return objects with age === 25, but the output is an empty array. Here's my code: const data = [ ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'arrays'": arrays
+    - listitem:
+      - link "show questions tagged 'filter'": filter
+  - link "Alok Singh's user avatar":
+    - img "Alok Singh's user avatar"
+  - link "Alok Singh"
+  - list:
+    - listitem: "11"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 18 views
+  - heading "Laravel Livewire error overlay <iframe> stays blank when throwing exception" [level=3]:
+    - link "Laravel Livewire error overlay <iframe> stays blank when throwing exception"
+  - text: Background I have a Livewire 3.x component that displays a confirmation modal for deleting a page. When I deliberately throw an exception in my action, Livewire shows the dark “error” overlay, but the ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'laravel'": laravel
+    - listitem:
+      - link "show questions tagged 'laravel-livewire'": laravel-livewire
+    - listitem:
+      - link "show questions tagged 'livewires'": livewires
+  - link "Timofey A Bogdanov's user avatar":
+    - img "Timofey A Bogdanov's user avatar"
+  - link "Timofey A Bogdanov"
+  - list:
+    - listitem: "25"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 14 views
+  - heading "6,806,121 items in MachineKeys Folder" [level=3]:
+    - link "6,806,121 items in MachineKeys Folder"
+  - text: I've got a sharepoint 2013 on premises farm running windows server 2012 r2. Is there a way to safely remove duplicate RSA machine keys from a directory of this size? WHen I click properties on the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'encryption'": encryption
+    - listitem:
+      - link "show questions tagged 'rsa'": rsa
+  - link "VACoder's user avatar":
+    - img "VACoder's user avatar"
+  - link "VACoder"
+  - list:
+    - listitem: "169"
+  - time: asked 1 hour ago
+  - text: 0 votes 1 answer 17 views
+  - heading "Typescript, Node, Two Worker Threads and one Main Thread with static Map" [level=3]:
+    - link "Typescript, Node, Two Worker Threads and one Main Thread with static Map"
+  - text: "I have the following files, which result in an infinite loop through the workers if I even reference the static Map on the main thread - it doesn't even need to run the code referencing it. Note: It ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'node.js'": node.js
+    - listitem:
+      - link "show questions tagged 'typescript'": typescript
+    - listitem:
+      - link "show questions tagged 'node-worker-threads'": node-worker-threads
+  - link "digable1's user avatar":
+    - img "digable1's user avatar"
+  - link "digable1"
+  - list:
+    - listitem: "59"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614305"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - 'link "The Great Unracking: Saying goodbye to the servers at our physical datacenter"'
+    - listitem:
+      - link "How to do your job happier"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Results of the June 2025 Community Asks Sprint"
+    - listitem:
+      - link "Will you help build our new visual identity?"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 64k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 35k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 23k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2529220
+  - link "show questions tagged 'python'": python
+  - text: × 2210519
+  - link "show questions tagged 'java'": java
+  - text: × 1919399
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624454
+  - link "show questions tagged 'php'": php
+  - text: × 1466243
+  - link "show questions tagged 'android'": android
+  - text: × 1418291
+  - link "show questions tagged 'html'": html
+  - text: × 1188000
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1035562
+  - link "show questions tagged 'c++'": c++
+  - text: × 814694
+  - link "show questions tagged 'css'": css
+  - text: × 807597
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Is it heresy for a Christian to believe a false idea (like a flat or round earth) before the truth is revealed or verified?"
+    - listitem:
+      - link "What is the topology on the set of all plays of a game?"
+    - listitem:
+      - link "YA book about girl with gold-flecked eyes who's trying to save her brother"
+    - listitem:
+      - link "What is the TYPE of software called that allows you to compose and synthesize music?"
+    - listitem:
+      - link "How can one interpret the word “schlau” in these paragraphs?"
+    - listitem:
+      - link "Parsing HTTP headers in C"
+    - listitem:
+      - link "Who are the armed militants in conflict with the Druze in Syria's Sweida?"
+    - listitem:
+      - link "Is this formula for computing the number of digits of an integer correct?"
+    - listitem:
+      - link "As the only backend developer, how should I handle repeated challenges from my manager about core technical decisions?"
+    - listitem:
+      - link "How does Empowered Spell work with multiple damage rolls?"
+    - listitem:
+      - link "What is the logical meaning of the word 'let' when used in mathematical texts?"
+    - listitem:
+      - link "Computing Pi with iF*ck"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.7.17.31531
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
