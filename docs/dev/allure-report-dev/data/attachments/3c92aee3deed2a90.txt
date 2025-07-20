@@ -1,0 +1,567 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale DE in dev Einvironment and Realm europe
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,214,530 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 36"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 5 views
+  - heading "Postgres indexing fails in Django" [level=3]:
+    - link "Postgres indexing fails in Django"
+  - text: "Tried to set db_index=True, HashIndex and BrinIndex, nothing works, indexes by Seq Scan, there are 1000 records in the database, all migrations are completed. Model code: from django.db import models ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'django'": django
+    - listitem:
+      - link "show questions tagged 'postgresql'": postgresql
+  - link "wholovescherrychester's user avatar":
+    - img "wholovescherrychester's user avatar"
+  - link "wholovescherrychester"
+  - list:
+    - listitem: "3"
+  - time: asked 3 mins ago
+  - text: "-1 votes 0 answers 6 views"
+  - heading "How can I solve the problem of docker conflict error while installing Open VPN panel?" [level=3]:
+    - link "How can I solve the problem of docker conflict error while installing Open VPN panel?"
+  - text: "Tried to install open VPN free penel through the instruction mentioned in this github addres https://github.com/d3vilh/openvpn-aws All commands proceeded without any issues until the last one: sudo ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'docker'": docker
+    - listitem:
+      - link "show questions tagged 'vpn'": vpn
+    - listitem:
+      - link "show questions tagged 'openvpn'": openvpn
+  - link "lachin's user avatar":
+    - img "lachin's user avatar"
+  - link "lachin"
+  - list:
+    - listitem: "27"
+  - time: asked 8 mins ago
+  - text: 0 votes 1 answer 15 views
+  - heading "Deploying Flink SQL Gateway to interact with the Flink K8S operator" [level=3]:
+    - link "Deploying Flink SQL Gateway to interact with the Flink K8S operator"
+  - text: I want to create a k8s cluster where I can submit SQL directly as jobs, use the Flink K8s operator as the job manager, and take advantage of things like forst backend and materialized tables in the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'kubernetes'": kubernetes
+    - listitem:
+      - link "show questions tagged 'apache-flink'": apache-flink
+    - listitem:
+      - link "show questions tagged 'flink-streaming'": flink-streaming
+    - listitem:
+      - link "show questions tagged 'flink-sql'": flink-sql
+  - link "Baiqing's user avatar":
+    - img "Baiqing's user avatar"
+  - link "Baiqing"
+  - list:
+    - listitem: 1,343
+  - time: asked 19 mins ago
+  - text: 0 votes 1 answer 10 views
+  - heading "How to dynamically compile a directory of mdx files before each vite build?" [level=3]:
+    - link "How to dynamically compile a directory of mdx files before each vite build?"
+  - text: I'm using React and Vite for a project I'm working on. What I currently need to do is compile and render all of the MDX files in a directory but I don't want to do the actual compilation on the client ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'jsx'": jsx
+    - listitem:
+      - link "show questions tagged 'vite'": vite
+  - link "Luke Eades's user avatar":
+    - img "Luke Eades's user avatar"
+  - link "Luke Eades"
+  - list:
+    - listitem: "1"
+  - time: asked 27 mins ago
+  - text: 0 votes 1 answer 24 views
+  - heading "How to share a TokenService from Angular Host app to Remote apps using Native Federation in Angular?" [level=3]:
+    - link "How to share a TokenService from Angular Host app to Remote apps using Native Federation in Angular?"
+  - text: I'm working on a micro-frontend project using Angular 20 and @angular-architects/native-federation (v20.1.2). I have a host app running on localhost:4200 and a remote app on localhost:3000. I'm trying ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'angular'": angular
+    - listitem:
+      - link "show questions tagged 'micro-frontend'": micro-frontend
+    - listitem:
+      - link "show questions tagged 'angular-module-federation'": angular-module-federation
+    - listitem:
+      - link "show questions tagged 'angular-native-federation'": angular-native-federation
+    - listitem:
+      - link "show questions tagged 'native-federation'": native-federation
+  - link "AshwaniKumar Singh's user avatar":
+    - img "AshwaniKumar Singh's user avatar"
+  - link "AshwaniKumar Singh"
+  - list:
+    - listitem: "261"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 20 views
+  - heading "Correct way to use Angular localize subpath" [level=3]:
+    - link "Correct way to use Angular localize subpath"
+  - text: I am developing a multilingual application using the localize subpath feature in Angular 19.2. However, after building the project, the file structure appears as follows. dist |-- en-us |-- index.html ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'angular'": angular
+    - listitem:
+      - link "show questions tagged 'localization'": localization
+  - link "guokai's user avatar":
+    - img "guokai's user avatar"
+  - link "guokai"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 14 views
+  - heading "14443A REQA command waveform show 0x25,it must be 0x26" [level=3]:
+    - link "14443A REQA command waveform show 0x25,it must be 0x26"
+  - text: The ISO/IEC 14443 standard defines a "Request" command (REQA or REQB) as part of the initialization process for proximity cards (PICC) within the field of a proximity coupling device (PCD). ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'rfid'": rfid
+  - link "Inder Suthar's user avatar":
+    - img "Inder Suthar's user avatar"
+  - link "Inder Suthar"
+  - list:
+    - listitem: "11"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 11 views
+  - heading "How do I download large pip libraries to AWS EC2 instances?" [level=3]:
+    - link "How do I download large pip libraries to AWS EC2 instances?"
+  - text: I'm learning AWS ElasticBeanstalk. I've got a Flask app that's dependent on Tensorflow and some other large libraries. The packages total 2.83Gb, which is too much for my freebie little t3.micro. I've ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'linux'": linux
+    - listitem:
+      - link "show questions tagged 'amazon-web-services'": amazon-web-services
+    - listitem:
+      - link "show questions tagged 'amazon-ec2'": amazon-ec2
+    - listitem:
+      - link "show questions tagged 'pip'": pip
+    - listitem:
+      - link "show questions tagged 'amazon-elastic-beanstalk'": amazon-elastic-beanstalk
+  - link "Sgoodman's user avatar":
+    - img "Sgoodman's user avatar"
+  - link "Sgoodman"
+  - list:
+    - listitem: "9"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 14 views
+  - heading "Style taking applying control's DataContext property as converter input" [level=3]:
+    - link "Style taking applying control's DataContext property as converter input"
+  - text: In my Avalonia app using the MVVM Community Toolkit, I want to have a number of buttons in multiple user controls in my application to have as their content a PathIcon with a TextBlock underneath. I ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'mvvm'": mvvm
+    - listitem:
+      - link "show questions tagged 'parameters'": parameters
+    - listitem:
+      - link "show questions tagged 'styles'": styles
+    - listitem:
+      - link "show questions tagged 'avaloniaui'": avaloniaui
+  - link "Eric Eggers's user avatar":
+    - img "Eric Eggers's user avatar"
+  - link "Eric Eggers"
+  - list:
+    - listitem: "84"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 19 views
+  - heading "tailwind css version customization not working" [level=3]:
+    - link "tailwind css version customization not working"
+  - text: I am working on a project using HTML, CSS, vanilla JS, and Tailwind version 4. The installation of Tailwind is successful, but while customizing Tailwind, it fails to update. It would be a great help ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'tailwind-css'": tailwind-css
+    - listitem:
+      - link "show questions tagged 'tailwind-css-4'": tailwind-css-4
+  - link "ANANTHU C's user avatar":
+    - img "ANANTHU C's user avatar"
+  - link "ANANTHU C"
+  - list:
+    - listitem: "105"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 14 views
+  - heading "Passing jwt token from MFE to host with multi-zones" [level=3]:
+    - link "Passing jwt token from MFE to host with multi-zones"
+  - text: I am encountering a lot of trouble working with multi-zones. After fetching on the MFE, I save the token using cookies and do a redirect to /dashboard which is located on the host app. This is at /...
+  - list:
+    - listitem:
+      - link "show questions tagged 'next.js'": next.js
+    - listitem:
+      - link "show questions tagged 'micro-frontend'": micro-frontend
+  - link "Lisandra Ferraz's user avatar":
+    - img "Lisandra Ferraz's user avatar"
+  - link "Lisandra Ferraz"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 2 answers 44 views
+  - heading "Problems with printing double constants in c [duplicate]" [level=3]:
+    - link "Problems with printing double constants in c [duplicate]"
+  - text: "I have codes that look like this #include <float.h> #include <stdio.h> int main(void) { long double x = LDBL_MAX; printf(\"%Lf \", x); printf(\"%Lf\\n\", 1...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c'": c
+    - listitem:
+      - link "show questions tagged 'floating-point'": floating-point
+    - listitem:
+      - link "show questions tagged 'printf'": printf
+    - listitem:
+      - link "show questions tagged 'long-double'": long-double
+  - link "leaner18932's user avatar":
+    - img "leaner18932's user avatar"
+  - link "leaner18932"
+  - list:
+    - listitem: "13"
+  - time: asked 1 hour ago
+  - text: 0 votes 2 answers 36 views
+  - 'heading "spring-bot: Log format on the console is different from the log format in the output file" [level=3]':
+    - 'link "spring-bot: Log format on the console is different from the log format in the output file"'
+  - text: "I'm using spring-boot 3.5.3 and I'm having a different format between the log from console and the output log file generated. Here is my log dependencie: <dependency> <groupId>org...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'spring-boot'": spring-boot
+    - listitem:
+      - link "show questions tagged 'logging'": logging
+  - link "LeandroPL's user avatar":
+    - img "LeandroPL's user avatar"
+  - link "LeandroPL"
+  - list:
+    - listitem: "553"
+  - time: asked 2 hours ago
+  - text: 0 votes 0 answers 26 views
+  - heading "Strange behavior when using ctypes to cast/mutate the memory of a number in Python" [level=3]:
+    - link "Strange behavior when using ctypes to cast/mutate the memory of a number in Python"
+  - text: "I was just reading about using the ctypes module in Python to cast interned integers to behave like different values. So I had the following code: ctypes.cast(id(1), ctypes.POINTER(ctypes.c_int))[6] = ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'ctypes'": ctypes
+  - link "Boom's user avatar":
+    - img "Boom's user avatar"
+  - link "Boom"
+  - list:
+    - listitem: "319"
+  - time: asked 2 hours ago
+  - text: 0 votes 0 answers 14 views
+  - heading "How to write SqlAlchemy Query that joins two tables, but has this complex wrinkle?" [level=3]:
+    - link "How to write SqlAlchemy Query that joins two tables, but has this complex wrinkle?"
+  - text: "Suppose I have sqlachemy model that looks like this: from sqlalchemy import Column, Integer, Text from sqlalchemy.orm import declarative_base from sqlalchemy.dialects import postgresql Base = ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'sqlalchemy'": sqlalchemy
+  - link "Saqib Ali's user avatar":
+    - img "Saqib Ali's user avatar"
+  - link "Saqib Ali"
+  - list:
+    - listitem: 12.8k
+  - time: asked 2 hours ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614302"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - 'link "The Great Unracking: Saying goodbye to the servers at our physical datacenter"'
+    - listitem:
+      - link "How to do your job happier"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Results of the June 2025 Community Asks Sprint"
+    - listitem:
+      - link "Will you help build our new visual identity?"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 27k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 23k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "R Language" [level=1]:
+    - link "R Language"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where data scientists and AI researchers gather to find, share, and learn about R and other subtags like knitr and dplyr.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2529214
+  - link "show questions tagged 'python'": python
+  - text: × 2210525
+  - link "show questions tagged 'java'": java
+  - text: × 1919402
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624455
+  - link "show questions tagged 'php'": php
+  - text: × 1466234
+  - link "show questions tagged 'android'": android
+  - text: × 1418292
+  - link "show questions tagged 'html'": html
+  - text: × 1187999
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1035560
+  - link "show questions tagged 'c++'": c++
+  - text: × 814697
+  - link "show questions tagged 'css'": css
+  - text: × 807600
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "\"snap together\" complex objects"
+    - listitem:
+      - link "What is the logical meaning of the word 'let' when used in mathematical texts?"
+    - listitem:
+      - link "Plant orange seedlings or keep them indoor another year?"
+    - listitem:
+      - link "How can native speakers distinguish between lenis and fortis finals such as /tʃ/ and /dʒ/ as in /ɛtʃ/ and /ɛdʒ/?"
+    - listitem:
+      - link "Norm subgroups in local fields"
+    - listitem:
+      - link "As the only backend developer, how should I handle repeated challenges from my manager about core technical decisions?"
+    - listitem:
+      - link "How can one interpret the word “schlau” in these paragraphs?"
+    - listitem:
+      - link "How do I adjust the Peril in Pinebrook adventure to be for 5 players?"
+    - listitem:
+      - link "How to draw an array like this?"
+    - listitem:
+      - link "Output shortest string containing all input strings"
+    - listitem:
+      - link "Why can't I read this EEPROM"
+    - listitem:
+      - link "Does USB-PD support \"dumb\" charging?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.7.17.31531
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
