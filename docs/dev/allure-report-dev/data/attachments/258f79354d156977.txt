@@ -1,0 +1,602 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale NZ in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,214,596 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 33"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 8 views
+  - heading "How to implement a universal log system for entity changes using TypeORM & NestJS (handling nested relations cleanly)?" [level=3]:
+    - link "How to implement a universal log system for entity changes using TypeORM & NestJS (handling nested relations cleanly)?"
+  - text: "I’m building a universal logging system in NestJS using TypeORM. My goal is to track and log all changes made to entities, including nested properties and relations. What I'm currently doing: I use a ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'postgresql'": postgresql
+    - listitem:
+      - link "show questions tagged 'typeorm'": typeorm
+    - listitem:
+      - link "show questions tagged 'nestjs-typeorm'": nestjs-typeorm
+  - link "Abu Bakr's user avatar":
+    - img "Abu Bakr's user avatar"
+  - link "Abu Bakr"
+  - list:
+    - listitem: "1"
+  - time: asked 3 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "How can I create a navbar that is fixed at the bottom on the first page but becomes sticky at the top after scrolling?" [level=3]:
+    - link "How can I create a navbar that is fixed at the bottom on the first page but becomes sticky at the top after scrolling?"
+  - text: "I'm building a multi-section landing page using Next.js (App Router) and TailwindCSS, and I'm trying to implement a specific UI behavior for the navbar: On the first viewport/page (Page 1), the ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'typescript'": typescript
+    - listitem:
+      - link "show questions tagged 'next.js'": next.js
+    - listitem:
+      - link "show questions tagged 'tailwind-css'": tailwind-css
+    - listitem:
+      - link "show questions tagged 'gsap'": gsap
+  - link "Grenish Rai's user avatar":
+    - img "Grenish Rai's user avatar"
+  - link "Grenish Rai"
+  - list:
+    - listitem: "13"
+  - time: asked 9 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Trouble transferring large Docker images (>40GB) to air-gapped systems — CRC errors and layer mismatches" [level=3]:
+    - link "Trouble transferring large Docker images (>40GB) to air-gapped systems — CRC errors and layer mismatches"
+  - text: I'm transferring a large Docker image (about 50 GB) to an air-gapped, on-premise server. Due to the lack of network access, I'm manually copying the image via USB using docker save and file splitting. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'docker'": docker
+    - listitem:
+      - link "show questions tagged 'file'": file
+    - listitem:
+      - link "show questions tagged 'zip'": zip
+    - listitem:
+      - link "show questions tagged 'unzip'": unzip
+    - listitem:
+      - link "show questions tagged 'on-premise'": on-premise
+  - link "No Yeah's user avatar":
+    - img "No Yeah's user avatar"
+  - link "No Yeah"
+  - list:
+    - listitem: "23"
+  - time: asked 10 mins ago
+  - text: "-1 votes 0 answers 12 views"
+  - 'heading "MQTT TLS over ESP32 WiFi Mesh esp-tls-mbedtls: read error :-0x7180 [closed]" [level=3]':
+    - 'link "MQTT TLS over ESP32 WiFi Mesh esp-tls-mbedtls: read error :-0x7180 [closed]"'
+  - text: I have an ESP32 project using MQTTS (TLS) through a Mesh network. Everything use to work and I tested it with Eclipse Mosquito both TCP and TLS and HIVEHQ over TLS. I was working on other aspects of ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'mqtt'": mqtt
+    - listitem:
+      - link "show questions tagged 'esp32'": esp32
+  - link "ADL's user avatar":
+    - img "ADL's user avatar"
+  - link "ADL"
+  - list:
+    - listitem: "119"
+  - time: asked 17 mins ago
+  - text: 1 vote 1 answer 14 views
+  - heading "Can you test video calling on the same computer but different browsers" [level=3]:
+    - link "Can you test video calling on the same computer but different browsers"
+  - text: So i was building a Video calling app with nodejs and react and WebRTC, and wanted to test it at some point but whenever on user accepts the call the other user gets this error message ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'node.js'": node.js
+    - listitem:
+      - link "show questions tagged 'linux'": linux
+    - listitem:
+      - link "show questions tagged 'google-chrome'": google-chrome
+    - listitem:
+      - link "show questions tagged 'webrtc'": webrtc
+  - link "Günther's user avatar":
+    - img "Günther's user avatar"
+  - link "Günther"
+  - list:
+    - listitem: "11"
+  - time: asked 18 mins ago
+  - text: "-1 votes 0 answers 8 views"
+  - heading "How to enable the 'Sign with Notary' option in DocuSign? Also, how to enable the 'In-Person (Hosted)' signing role under Sending Settings" [level=3]:
+    - link "How to enable the 'Sign with Notary' option in DocuSign? Also, how to enable the 'In-Person (Hosted)' signing role under Sending Settings"
+  - text: "I’m using a DocuSign admin-privileged account, but I'm facing the following issues: While adding recipients, the “Sign with Notary” option is not visible. In Sending Settings, the “In-Person (Hosted) ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'docusignapi'": docusignapi
+    - listitem:
+      - link "show questions tagged 'docusigncompositetmplts'": docusigncompositetmplts
+    - listitem:
+      - link "show questions tagged 'docusignconnect'": docusignconnect
+    - listitem:
+      - link "show questions tagged 'docusign-sdk'": docusign-sdk
+    - listitem:
+      - link "show questions tagged 'docusignapextoolkit'": docusignapextoolkit
+  - link "Rukzana K A's user avatar":
+    - img "Rukzana K A's user avatar"
+  - link "Rukzana K A"
+  - list:
+    - listitem: "45"
+  - time: asked 18 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "remote debugging Samsung Internet gives HTTP/1.1 404 Not Found" [level=3]:
+    - link "remote debugging Samsung Internet gives HTTP/1.1 404 Not Found"
+  - text: I am trying to debug a web app running on Samsung Internet (S22) using chrome://inspect/#devices. I can see all open tabs from my phone, but trying to inspect gives me HTTP/1.1 404 Not Found I tried ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'remote-debugging'": remote-debugging
+    - listitem:
+      - link "show questions tagged 'samsung-internet'": samsung-internet
+  - link "chibis's user avatar":
+    - img "chibis's user avatar"
+  - link "chibis"
+  - list:
+    - listitem: "878"
+  - time: asked 23 mins ago
+  - text: 0 votes 1 answer 11 views
+  - heading "ReactTS + antd. Child component must to rerender the parent (collapse component) one many times" [level=3]:
+    - link "ReactTS + antd. Child component must to rerender the parent (collapse component) one many times"
+  - text: It is need that when the button is pressed, it immediately turns red, and in the second tab the value changes to true. To do this, you need to rerender the parent component. The option that is used ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'typescript'": typescript
+    - listitem:
+      - link "show questions tagged 'antd'": antd
+  - link "Garp's user avatar":
+    - img "Garp's user avatar"
+  - link "Garp"
+  - list:
+    - listitem: "197"
+  - time: asked 30 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Nx Monorepo NestJS GraphQL application generating the latest schema" [level=3]:
+    - link "Nx Monorepo NestJS GraphQL application generating the latest schema"
+  - text: I have an nx monorepo with a NestJS GraphQL application and it doesn't seem to be generating the latest schema from my Resolver class. I have a @Query and a @Mutation but only the @Query is being ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'typescript'": typescript
+    - listitem:
+      - link "show questions tagged 'graphql'": graphql
+    - listitem:
+      - link "show questions tagged 'nestjs'": nestjs
+    - listitem:
+      - link "show questions tagged 'apollo'": apollo
+    - listitem:
+      - link "show questions tagged 'nx-monorepo'": nx-monorepo
+  - link "mh377's user avatar":
+    - img "mh377's user avatar"
+  - link "mh377"
+  - list:
+    - listitem: 1,876
+  - time: asked 32 mins ago
+  - text: 0 votes 0 answers 11 views
+  - 'heading "Credential Manager throwing error : \"failed to retrieve an id token\" - Android" [level=3]':
+    - 'link "Credential Manager throwing error : \"failed to retrieve an id token\" - Android"'
+  - text: val signInWithGoogleOption = GetSignInWithGoogleOption.Builder( serverClientId = "xxxxxx-xxxxxxx....." // DEV ).build() val request = GetCredentialRequest.Builder() ....
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'kotlin'": kotlin
+    - listitem:
+      - link "show questions tagged 'credential-manager'": credential-manager
+  - link "Siddarth Jain's user avatar":
+    - img "Siddarth Jain's user avatar"
+  - link "Siddarth Jain"
+  - list:
+    - listitem: "339"
+  - time: asked 36 mins ago
+  - text: 1 vote 2 answers 28 views
+  - heading "How to create a unique_ptr while guarding against implicit conversion in ctor?" [level=3]:
+    - link "How to create a unique_ptr while guarding against implicit conversion in ctor?"
+  - text: "Here's an example: class Example { public: Example(int m, int n, double pad) {} Example(double size, double pad) {} }; int main() { Example example { 1.0, 1.0 }; auto ptr = std::..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'implicit-conversion'": implicit-conversion
+    - listitem:
+      - link "show questions tagged 'unique-ptr'": unique-ptr
+  - link "Wesley Yu's user avatar":
+    - img "Wesley Yu's user avatar"
+  - link "Wesley Yu"
+  - list:
+    - listitem: "11"
+  - time: asked 39 mins ago
+  - text: "-1 votes 0 answers 17 views"
+  - heading "is there a way to print the CP437 control characters (specifically 1 - 31) visually onto the console using visual studio?" [level=3]:
+    - link "is there a way to print the CP437 control characters (specifically 1 - 31) visually onto the console using visual studio?"
+  - text: I'm working on a text-based card game, and I wanted to use the card suit symbols along with a few others to make art for the cards. after some investigation, I found that the default code page for the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c'": c
+    - listitem:
+      - link "show questions tagged 'visual-studio'": visual-studio
+    - listitem:
+      - link "show questions tagged 'character-encoding'": character-encoding
+    - listitem:
+      - link "show questions tagged 'codepage-437'": codepage-437
+  - link "dracos's user avatar":
+    - img "dracos's user avatar"
+  - link "dracos"
+  - list:
+    - listitem: "1"
+  - time: asked 47 mins ago
+  - text: 0 votes 1 answer 14 views
+  - heading "Is it possible to make a flextable html output hoverable?" [level=3]:
+    - link "Is it possible to make a flextable html output hoverable?"
+  - text: Specifically, this works for tables produced with kableExtra which creates a very appealing effect. I was wondering if anyone has an idea how this may be doable with flextable. Here's an example Rmd ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'r'": r
+    - listitem:
+      - link "show questions tagged 'r-markdown'": r-markdown
+    - listitem:
+      - link "show questions tagged 'r-flextable'": r-flextable
+  - link "Patrick's user avatar":
+    - img "Patrick's user avatar"
+  - link "Patrick"
+  - list:
+    - listitem: 1,519
+  - time: asked 48 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Why DatabaseException is thrown rather than EntityExistsException on .perist()" [level=3]:
+    - link "Why DatabaseException is thrown rather than EntityExistsException on .perist()"
+  - text: I have set up a very simple Java web project (using NetBeans' Web Application template). It is deployed on Payara 6.2025.7 with a H2 database as a JTA data source. I can't get EntityExistsException ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'exception'": exception
+    - listitem:
+      - link "show questions tagged 'jpa'": jpa
+    - listitem:
+      - link "show questions tagged 'eclipselink'": eclipselink
+  - link "zajer's user avatar":
+    - img "zajer's user avatar"
+  - link "zajer"
+  - list:
+    - listitem: "811"
+  - time: asked 52 mins ago
+  - text: 0 votes 1 answer 24 views
+  - heading "Is it possible to fix the head for a long html flextable?" [level=3]:
+    - link "Is it possible to fix the head for a long html flextable?"
+  - text: This works for tables produced with kableExtra which is useful when inspecting long tables. I was wondering if anyone has an idea how this may be doable with flextable. Here's an example Rmd to get an ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'r'": r
+    - listitem:
+      - link "show questions tagged 'r-markdown'": r-markdown
+    - listitem:
+      - link "show questions tagged 'r-flextable'": r-flextable
+  - link "Patrick's user avatar":
+    - img "Patrick's user avatar"
+  - link "Patrick"
+  - list:
+    - listitem: 1,519
+  - time: asked 54 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614307"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - 'link "The Great Unracking: Saying goodbye to the servers at our physical datacenter"'
+    - listitem:
+      - link "How to do your job happier"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Results of the June 2025 Community Asks Sprint"
+    - listitem:
+      - link "Will you help build our new visual identity?"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 35k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "R Language" [level=1]:
+    - link "R Language"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where data scientists and AI researchers gather to find, share, and learn about R and other subtags like knitr and dplyr.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 11k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2529221
+  - link "show questions tagged 'python'": python
+  - text: × 2210536
+  - link "show questions tagged 'java'": java
+  - text: × 1919401
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624453
+  - link "show questions tagged 'php'": php
+  - text: × 1466231
+  - link "show questions tagged 'android'": android
+  - text: × 1418296
+  - link "show questions tagged 'html'": html
+  - text: × 1188007
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1035558
+  - link "show questions tagged 'c++'": c++
+  - text: × 814708
+  - link "show questions tagged 'css'": css
+  - text: × 807603
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Is this an integrated crown race on my bike fork?"
+    - listitem:
+      - link "What is the logical meaning of the word 'let' when used in mathematical texts?"
+    - listitem:
+      - link "book about a girl traveling through other dimensions"
+    - listitem:
+      - link "In the days of Ezra, why did the returned exiles put away Egyptian wives?"
+    - listitem:
+      - link "Cannot find custom class in bpy.types after registration"
+    - listitem:
+      - 'link "Inheritance of copyright interest: is it held jointly, or jointly and severally?"'
+    - listitem:
+      - link "Descale a coffee machine and kettle using a generic product"
+    - listitem:
+      - link "Is \"gametonym\" the usual linguistic term for a spousal name?"
+    - listitem:
+      - link "Finite irreducible representations of real semisimple lie algebra versus compact ones"
+    - listitem:
+      - link "Are some of (most of?) what we describe as \"mistakes of our senses/perception\", mistakes of our reasoning process?"
+    - listitem:
+      - link "What does it mean to remain firm in Jesus’ word?"
+    - listitem:
+      - link "How can I find out which encoder was used for an MP3 file?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.7.17.31531
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
