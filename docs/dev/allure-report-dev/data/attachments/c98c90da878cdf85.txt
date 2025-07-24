@@ -1,0 +1,575 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale JP in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - menubar:
+      - menuitem "Log in"
+      - menuitem "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,215,153 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 24"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 7 views
+  - 'heading "Can''t #import old DLLs into Visual Studio 2022" [level=3]':
+    - 'link "Can''t #import old DLLs into Visual Studio 2022"'
+  - text: "We have a VS 2013 C++ project that imports old DLLs from OSISoft PI (pisdk.dll, pitimeserver.dll, pisdkcommmon.dll). #import \"pisdkcommon.dll\" no_namespace #import \"PITimeServer.dll&..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'visual-studio'": visual-studio
+    - listitem:
+      - link "show questions tagged 'dll'": dll
+    - listitem:
+      - link "show questions tagged 'dllimport'": dllimport
+  - link "framewater's user avatar":
+    - img "framewater's user avatar"
+  - link "framewater"
+  - list:
+    - listitem: "1"
+  - time: asked 2 mins ago
+  - text: "-1 votes 0 answers 7 views"
+  - heading "Sharing objects across package" [level=3]:
+    - link "Sharing objects across package"
+  - text: "I have this module that over time has become too large, with classes that do not need to be in the same file. So I decided to split into a package. The end result would be something like this: \\---..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'package'": package
+  - link "ludovico's user avatar":
+    - img "ludovico's user avatar"
+  - link "ludovico"
+  - list:
+    - listitem: "19"
+  - time: asked 3 mins ago
+  - text: "-1 votes 0 answers 14 views"
+  - heading "How to add a self-signed certificate to bazels runtime JDK" [level=3]:
+    - link "How to add a self-signed certificate to bazels runtime JDK"
+  - text: my company uses zscaler, which does a ssl man in the middle "attack" and uses a self signed certificate to reencrypt the data trafic. We are using Windows and the certificate is part of the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'ssl-certificate'": ssl-certificate
+    - listitem:
+      - link "show questions tagged 'bazel'": bazel
+    - listitem:
+      - link "show questions tagged 'self-signed'": self-signed
+    - listitem:
+      - link "show questions tagged 'java-deployment-toolkit'": java-deployment-toolkit
+  - link "Knuth Lohse's user avatar":
+    - img "Knuth Lohse's user avatar"
+  - link "Knuth Lohse"
+  - list:
+    - listitem: "61"
+  - time: asked 11 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "How to display a View for selected item in LazyVGrid under a row where that grid is presented?" [level=3]:
+    - link "How to display a View for selected item in LazyVGrid under a row where that grid is presented?"
+  - text: "This is how I define my grid: LazyVGrid(columns: [GridItem(.adaptive(minimum: width), spacing: 10)], spacing: 10) { ForEach(story.sorted, id: \\.self) { book in BookElementView(book: book, ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'swiftui'": swiftui
+    - listitem:
+      - link "show questions tagged 'lazyvgrid'": lazyvgrid
+  - link "Bartłomiej Semańczyk's user avatar":
+    - img "Bartłomiej Semańczyk's user avatar"
+  - link "Bartłomiej Semańczyk"
+  - list:
+    - listitem: 62.2k
+  - time: asked 11 mins ago
+  - text: "-1 votes 0 answers 15 views"
+  - heading "Java Doc generation code flow for java v21" [level=3]:
+    - link "Java Doc generation code flow for java v21"
+  - text: I am new to java doc generation .I am using java version 21.To understand the Flow of docket I printed System.out.println in each method but none of these are printed in the console.Does it mean these ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'javadoc'": javadoc
+  - link "Rajeesha R's user avatar":
+    - img "Rajeesha R's user avatar"
+  - link "Rajeesha R"
+  - list:
+    - listitem: "51"
+  - time: asked 17 mins ago
+  - text: 0 votes 0 answers 15 views
+  - heading "Text not wrapping in HStack when there's a fixed-width view beside it" [level=3]:
+    - link "Text not wrapping in HStack when there's a fixed-width view beside it"
+  - text: I have a SwiftUI layout where a Text view is placed in an HStack alongside a fixed-width colored rectangle. The text doesn't wrap to multiple lines even when it's clearly too long to fit in a single ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'swiftui'": swiftui
+  - link "ximmyxiao's user avatar":
+    - img "ximmyxiao's user avatar"
+  - link "ximmyxiao"
+  - list:
+    - listitem: 2,901
+  - time: asked 21 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "How to turn a Mono Page response into a flux for a vaadim grid" [level=3]:
+    - link "How to turn a Mono Page response into a flux for a vaadim grid"
+  - text: "Good day: I have a simple issue that don't know how to resolve it. I have a REST API built with Spring Boot that returns a Mono page in a reactive manner. Implementation: public Mono<Page<..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'vaadin'": vaadin
+    - listitem:
+      - link "show questions tagged 'spring-webflux'": spring-webflux
+    - listitem:
+      - link "show questions tagged 'vaadin-flow'": vaadin-flow
+  - link "Jose Daniel Navarro Brito's user avatar":
+    - img "Jose Daniel Navarro Brito's user avatar"
+  - link "Jose Daniel Navarro Brito"
+  - list:
+    - listitem: "11"
+  - time: asked 25 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "Unable to start the daemon process with Android Studio Narwhal" [level=3]:
+    - link "Unable to start the daemon process with Android Studio Narwhal"
+  - text: I updated my android studio to Narwhal | 2025.1.1 Patch 1 after creating a test app and try to build it I get the following error I can't even get Gradle Sync completed it always fail My current ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+  - link "TheEagle's user avatar":
+    - img "TheEagle's user avatar"
+  - link "TheEagle"
+  - list:
+    - listitem: "21"
+  - time: asked 27 mins ago
+  - text: 1 vote 0 answers 10 views
+  - heading "How can I clone an AWS S3 Bucket with the permissions intact?" [level=3]:
+    - link "How can I clone an AWS S3 Bucket with the permissions intact?"
+  - text: I need to clone bucket x as bucket y with the same permissions and I do not need to copy any of the content from bucket x. I'd like to do this in Terraform. I've looked into aws s3 cp and aws s3 sync ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'amazon-s3'": amazon-s3
+    - listitem:
+      - link "show questions tagged 'terraform'": terraform
+    - listitem:
+      - link "show questions tagged 'permissions'": permissions
+  - link "geep's user avatar":
+    - img "geep's user avatar"
+  - link "geep"
+  - list:
+    - listitem: "11"
+  - time: asked 27 mins ago
+  - text: 0 votes 0 answers 14 views
+  - 'heading "UITableView crash: NSInternalInconsistencyException - <_UIDragSnappingFeedbackGenerator> is already being interacted with" [level=3]':
+    - 'link "UITableView crash: NSInternalInconsistencyException - <_UIDragSnappingFeedbackGenerator> is already being interacted with"'
+  - text: "I'm encountering a crash when trying to reorder cells in a UITableView with .isEditing = true. The app crashes with the following exception related to _UIDragSnappingFeedbackGenerator. Crash Log : *** ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'xcode'": xcode
+    - listitem:
+      - link "show questions tagged 'uitableview'": uitableview
+    - listitem:
+      - link "show questions tagged 'custom-cell'": custom-cell
+  - link "Rahul D's user avatar":
+    - img "Rahul D's user avatar"
+  - link "Rahul D"
+  - list:
+    - listitem: "133"
+  - time: asked 30 mins ago
+  - text: 0 votes 0 answers 17 views
+  - heading "display table data between the selected date range" [level=3]:
+    - link "display table data between the selected date range"
+  - text: I have a table where daily sales of products is recorded. The products which are not sold for a particular date is not recorded in the table. But in the blade page, I have to list out all the dates ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'mysql'": mysql
+    - listitem:
+      - link "show questions tagged 'laravel'": laravel
+    - listitem:
+      - link "show questions tagged 'laravel-10'": laravel-10
+    - listitem:
+      - link "show questions tagged 'laravel-12'": laravel-12
+  - link "nischalinn's user avatar":
+    - img "nischalinn's user avatar"
+  - link "nischalinn"
+  - list:
+    - listitem: 1,232
+  - time: asked 32 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "Does pdfbox support Complex Text Layout?" [level=3]:
+    - link "Does pdfbox support Complex Text Layout?"
+  - text: Does pdfbox support Complex Text Layout? When text includes Indic script characters with dependent vowel signs, for example, the pre-base vowel sign U+093F (ि) in Devanagari, these signs are ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'pdfbox'": pdfbox
+  - link "bai yuan's user avatar":
+    - img "bai yuan's user avatar"
+  - link "bai yuan"
+  - list:
+    - listitem: "9"
+  - time: asked 34 mins ago
+  - text: 0 votes 0 answers 25 views
+  - heading "How to Disable Elastic/Bounce/Stretch Effect When Scrolling to Top or Bottom?" [level=3]:
+    - link "How to Disable Elastic/Bounce/Stretch Effect When Scrolling to Top or Bottom?"
+  - text: I'm building a desktop application using WinUI 3 and I’m using the ListView control to display data. By default, when I scroll to the very top or bottom of the ListView, I notice an elastic/bounce/...
+  - list:
+    - listitem:
+      - link "show questions tagged 'winui-3'": winui-3
+    - listitem:
+      - link "show questions tagged 'winui'": winui
+    - listitem:
+      - link "show questions tagged 'winui-xaml'": winui-xaml
+  - link "Bevara Satyasairam's user avatar":
+    - img "Bevara Satyasairam's user avatar"
+  - link "Bevara Satyasairam"
+  - list:
+    - listitem: "85"
+  - time: asked 42 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Service Bus Concurrency Setup in Function app isolated model" [level=3]:
+    - link "Service Bus Concurrency Setup in Function app isolated model"
+  - text: "I'm migrating my in process functions to isolated. While migrating I'm having this difficulty: It seems like ServiceBus's maxConcurrentCalls can only be set using host.json file. { \"version\":..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'azure-functions'": azure-functions
+    - listitem:
+      - link "show questions tagged 'azure-servicebus-queues'": azure-servicebus-queues
+    - listitem:
+      - link "show questions tagged 'azure-functions-isolated'": azure-functions-isolated
+  - link "Asfaqur FAQ's user avatar":
+    - img "Asfaqur FAQ's user avatar"
+  - link "Asfaqur FAQ"
+  - list:
+    - listitem: "1"
+  - time: asked 42 mins ago
+  - text: "-1 votes 0 answers 22 views"
+  - heading "iOS App Rejected for Guideline 2.1 - \"App Completeness\" (Login Fails in App Store but Works in TestFlight)" [level=3]:
+    - link "iOS App Rejected for Guideline 2.1 - \"App Completeness\" (Login Fails in App Store but Works in TestFlight)"
+  - text: "My iOS app was rejected by Apple with the following reason: Guideline 2.1 - Performance - App Completeness \"We were unable to sign in to your app. Ensure the login functionality is working ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+  - link "user21355486's user avatar":
+    - img "user21355486's user avatar"
+  - link "user21355486"
+  - list:
+    - listitem: "1"
+  - time: asked 58 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614344"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - 'link "“AI has been the wild west”: Creating standards for agents with Sean Falconer"'
+    - listitem:
+      - link "Building better platforms with continuous discovery"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Will you help build our new visual identity?"
+    - listitem:
+      - link "Upcoming initiatives on Stack Overflow and across the Stack Exchange network..."
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 64k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 24k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 15k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Related Tags" [level=2]
+  - link "show questions tagged 'javascript'": javascript
+  - text: × 2529236
+  - link "show questions tagged 'python'": python
+  - text: × 2210616
+  - link "show questions tagged 'java'": java
+  - text: × 1919423
+  - link "show questions tagged 'c#'": c#
+  - text: × 1624503
+  - link "show questions tagged 'php'": php
+  - text: × 1466159
+  - link "show questions tagged 'android'": android
+  - text: × 1418318
+  - link "show questions tagged 'html'": html
+  - text: × 1188009
+  - link "show questions tagged 'jquery'": jquery
+  - text: × 1035554
+  - link "show questions tagged 'c++'": c++
+  - text: × 814728
+  - link "show questions tagged 'css'": css
+  - text: × 807616
+  - link "more related tags"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Why is this endgame winning for Black?"
+    - listitem:
+      - link "How much time should I take for \"self transfer\" without checked-in baggage?"
+    - listitem:
+      - link "Error on numerical integation"
+    - listitem:
+      - link "Are birth control pills classified as a carcinogenic at the same level as asbestos and tobacco?"
+    - listitem:
+      - link "Is a diet of one third Tuna ok for an eldery cat?"
+    - listitem:
+      - link "What fiction genres do literary agents recognize?"
+    - listitem:
+      - link "A word that describes some people"
+    - listitem:
+      - link "Is there a way to retrieve my inventory from the void in Minecraft Java Edition?"
+    - listitem:
+      - link "Distance Between Subspaces"
+    - listitem:
+      - link "Why does contact with the ground make my touch-activated LED brighter?"
+    - listitem:
+      - link "Ubuntu Server installation -- options for boot disks are grayed out"
+    - listitem:
+      - link "What does this \"lightbulb-ish\" symbol mean in figure 1 of the Diffie Hellmann paper?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.7.23.31833
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
