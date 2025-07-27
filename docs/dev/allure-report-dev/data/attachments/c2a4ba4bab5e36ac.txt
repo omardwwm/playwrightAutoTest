@@ -1,0 +1,588 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale CA in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,212,192 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 27"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 2 views
+  - 'heading "String to data-conversion: Why is it necessary to specify the character encoding?" [level=3]':
+    - 'link "String to data-conversion: Why is it necessary to specify the character encoding?"'
+  - text: "Let's say I've got this code: let data = \"Lorem Ipsum ...\".data(using: .utf8) Why is necessary to specify the character-encoding used? I can understand the other way around, that it ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'utf-8'": utf-8
+    - listitem:
+      - link "show questions tagged 'character-encoding'": character-encoding
+    - listitem:
+      - link "show questions tagged 'character'": character
+  - link "st88's user avatar":
+    - img "st88's user avatar"
+  - link "st88"
+  - list:
+    - listitem: "325"
+  - time: asked 1 min ago
+  - text: 0 votes 0 answers 10 views
+  - heading "Using object type in function definitions as the top most unknown type" [level=3]:
+    - link "Using object type in function definitions as the top most unknown type"
+  - text: In TypeScript we have the “unknown” type that sits at the top of the type hierarchy and requires narrowing before doing anything with a variable. But in Python there's no such concept. It appears that ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+  - link "Max Koretskyi's user avatar":
+    - img "Max Koretskyi's user avatar"
+  - link "Max Koretskyi"
+  - list:
+    - listitem: 106k
+  - time: asked 7 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "Codeigniter 4.6 Connect model in controller" [level=3]:
+    - link "Codeigniter 4.6 Connect model in controller"
+  - text: I have started programming again for a long time. Now I have downloaded CI4 and wanted to get started. But I just can't get it to load the data from the database in the model into the controller and ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'database'": database
+    - listitem:
+      - link "show questions tagged 'model'": model
+    - listitem:
+      - link "show questions tagged 'controller'": controller
+    - listitem:
+      - link "show questions tagged 'codeigniter-4'": codeigniter-4
+  - link "Gerhard Schreck's user avatar":
+    - img "Gerhard Schreck's user avatar"
+  - link "Gerhard Schreck"
+  - list:
+    - listitem: "1"
+  - time: asked 19 mins ago
+  - text: 0 votes 1 answer 14 views
+  - heading "In R, is there a way to reorganize data based on UNIQUE cases of a variable?" [level=3]:
+    - link "In R, is there a way to reorganize data based on UNIQUE cases of a variable?"
+  - text: I'm doing a graduate studies research project in Education. Currently, I have a dataset that has course completions from a variety of subject areas for a very large number of students. Each row of ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'r'": r
+    - listitem:
+      - link "show questions tagged 'dplyr'": dplyr
+    - listitem:
+      - link "show questions tagged 'filter'": filter
+  - link "Quinn McCashin's user avatar":
+    - img "Quinn McCashin's user avatar"
+  - link "Quinn McCashin"
+  - list:
+    - listitem: "1"
+  - time: asked 22 mins ago
+  - text: 1 vote 0 answers 13 views
+  - heading "SDCC can't syntax sbit of LCD1602" [level=3]:
+    - link "SDCC can't syntax sbit of LCD1602"
+  - text: I started learning the 51 single-chip microcomputer, but encountered a problem when trying to use the Lcd1602. I referred to a code for an LCD1602 debugging tool written in Keil5 on the Windows ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c'": c
+    - listitem:
+      - link "show questions tagged 'platformio'": platformio
+    - listitem:
+      - link "show questions tagged 'sdcc'": sdcc
+  - link "Spike Aaron's user avatar":
+    - img "Spike Aaron's user avatar"
+  - link "Spike Aaron"
+  - list:
+    - listitem: "64"
+  - time: asked 27 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "Why compose Multiplatform realese for currnt os fail?" [level=3]:
+    - link "Why compose Multiplatform realese for currnt os fail?"
+  - text: I am making Compose Multiplatform App (for windows only) and I am using PDFBox to generate some pdf. When run app on debug mode every thing is fine & worknig. But when I try to build release there ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'windows'": windows
+    - listitem:
+      - link "show questions tagged 'gradle'": gradle
+    - listitem:
+      - link "show questions tagged 'android-jetpack-compose'": android-jetpack-compose
+    - listitem:
+      - link "show questions tagged 'release'": release
+    - listitem:
+      - link "show questions tagged 'kotlin-multiplatform'": kotlin-multiplatform
+  - link "Surendra's user avatar":
+    - img "Surendra's user avatar"
+  - link "Surendra"
+  - list:
+    - listitem: "23"
+  - time: asked 38 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "tauri clipboard-manager.write_text not allowed" [level=3]:
+    - link "tauri clipboard-manager.write_text not allowed"
+  - text: "this React code import { message } from \"@tauri-apps/plugin-dialog\"; import { writeText } from \"@tauri-apps/plugin-clipboard-manager\"; async function copy() { try { ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'rust'": rust
+    - listitem:
+      - link "show questions tagged 'clipboard'": clipboard
+    - listitem:
+      - link "show questions tagged 'tauri'": tauri
+    - listitem:
+      - link "show questions tagged 'tauri-2'": tauri-2
+  - link "Eblo's user avatar":
+    - img "Eblo's user avatar"
+  - link "Eblo"
+  - list:
+    - listitem: "11"
+  - time: asked 51 mins ago
+  - text: 0 votes 0 answers 21 views
+  - heading "Managing a long chain of tail-recursive calls" [level=3]:
+    - link "Managing a long chain of tail-recursive calls"
+  - text: I have a large number of Java functions that sequentially call each other. Each call is tail-recursive. For example, given a suitable condition, function A calls B, and this is the last thing that it ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'tail-recursion'": tail-recursion
+    - listitem:
+      - link "show questions tagged 'function-call'": function-call
+  - link "Luka Fürst's user avatar":
+    - img "Luka Fürst's user avatar"
+  - link "Luka Fürst"
+  - list:
+    - listitem: "73"
+  - time: asked 54 mins ago
+  - text: 0 votes 0 answers 20 views
+  - heading "Apache RewriteRule causes unexpected 301 redirect and EUC-KR encoding — project files are UTF-8" [level=3]:
+    - link "Apache RewriteRule causes unexpected 301 redirect and EUC-KR encoding — project files are UTF-8"
+  - text: I'm experiencing an issue with URL encoding and unexpected redirects on an Apache server. My .htaccess uses RewriteRule to implement human-readable URLs in Korean. All project files are saved in UTF-...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'apache'": apache
+    - listitem:
+      - link "show questions tagged '.htaccess'": .htaccess
+    - listitem:
+      - link "show questions tagged 'http-redirect'": http-redirect
+    - listitem:
+      - link "show questions tagged 'urlencode'": urlencode
+  - link "JustinPark's user avatar":
+    - img "JustinPark's user avatar"
+  - link "JustinPark"
+  - list:
+    - listitem: "1"
+  - time: asked 58 mins ago
+  - text: 0 votes 2 answers 46 views
+  - heading "Is there a way to make the names of variables a string and put them in a list?" [level=3]:
+    - link "Is there a way to make the names of variables a string and put them in a list?"
+  - text: "I have the following: a = type(int) b = type(int) c = type(int) now, how can I get a list like the following without manually typing it in: list = [\"a\",\"b\",\"c\"] where 'a'..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+  - link "Samiun Saad's user avatar":
+    - img "Samiun Saad's user avatar"
+  - link "Samiun Saad"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 1 answer 27 views
+  - heading "Treesitter-based Python code folding not applied when initially loading file in Neovim" [level=3]:
+    - link "Treesitter-based Python code folding not applied when initially loading file in Neovim"
+  - text: Every time a Python file is loaded, no folds are automatically applied based on the fold options that have been set (see below). Instead, I have to manually press zx to force the folds to be applied. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'lua'": lua
+    - listitem:
+      - link "show questions tagged 'editor'": editor
+    - listitem:
+      - link "show questions tagged 'neovim'": neovim
+    - listitem:
+      - link "show questions tagged 'code-folding'": code-folding
+  - link "Kyle F. Hartzenberg's user avatar":
+    - img "Kyle F. Hartzenberg's user avatar"
+  - link "Kyle F. Hartzenberg"
+  - list:
+    - listitem: 3,928
+  - time: asked 1 hour ago
+  - text: 1 vote 2 answers 30 views
+  - heading "How do I create a \"frequency table\" from scratch in R" [level=3]:
+    - link "How do I create a \"frequency table\" from scratch in R"
+  - text: I want to create a "frequency table" from scratch in R and plot the table as a bar chart. From scratch means I don't want to construct a huge amount of data and run the table() function on ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'r'": r
+    - listitem:
+      - link "show questions tagged 'ggplot2'": ggplot2
+    - listitem:
+      - link "show questions tagged 'frequency-table'": frequency-table
+  - link "Alan Mick's user avatar":
+    - img "Alan Mick's user avatar"
+  - link "Alan Mick"
+  - list:
+    - listitem: "51"
+  - time: asked 2 hours ago
+  - text: 1 vote 1 answer 36 views
+  - heading "Why does the C compiler saves registers on the noreturn function" [level=3]:
+    - link "Why does the C compiler saves registers on the noreturn function"
+  - text: "I mainly use clang, but I have also explored other compilers during my experiments, such as MinGW GCC, and MSVC, but they all have this problem. E:\\code\\test>clang -v clang version 20.1.7 Target: ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c'": c
+    - listitem:
+      - link "show questions tagged 'assembly'": assembly
+    - listitem:
+      - link "show questions tagged 'x86-64'": x86-64
+    - listitem:
+      - link "show questions tagged 'compiler-optimization'": compiler-optimization
+    - listitem:
+      - link "show questions tagged 'cpu-registers'": cpu-registers
+  - link "Moi5t's user avatar":
+    - img "Moi5t's user avatar"
+  - link "Moi5t"
+  - list:
+    - listitem: "61"
+  - time: asked 2 hours ago
+  - text: 0 votes 0 answers 24 views
+  - 'heading "iOS Crash on UICommand performWithSender:target: When Using Context Menu in InAppWebView (Flutter)" [level=3]':
+    - 'link "iOS Crash on UICommand performWithSender:target: When Using Context Menu in InAppWebView (Flutter)"'
+  - text: "I'm encountering a crash on iOS when tapping on a native context menu item inside a flutter_inappwebview. The crash log points to UICommand performWithSender:target: in UIKitCore. Crash Log (Excerpt): ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'contextmenu'": contextmenu
+    - listitem:
+      - link "show questions tagged 'flutter-inappwebview'": flutter-inappwebview
+  - link "Chetan Lodhi's user avatar":
+    - img "Chetan Lodhi's user avatar"
+  - link "Chetan Lodhi"
+  - list:
+    - listitem: "353"
+  - time: asked 2 hours ago
+  - text: 2 votes 1 answer 72 views
+  - heading "What's wrong with this thread-safe circular buffer?" [level=3]:
+    - link "What's wrong with this thread-safe circular buffer?"
+  - text: "I am playing with a toy circular buffer where MT involves: #include <stdio.h> #include <stdlib.h> #include <pthread.h> #include <semaphore.h> #define N 8 int *arr; int ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c'": c
+    - listitem:
+      - link "show questions tagged 'multithreading'": multithreading
+    - listitem:
+      - link "show questions tagged 'semaphore'": semaphore
+    - listitem:
+      - link "show questions tagged 'producer-consumer'": producer-consumer
+    - listitem:
+      - link "show questions tagged 'circular-buffer'": circular-buffer
+  - link "PkDrew's user avatar":
+    - img "PkDrew's user avatar"
+  - link "PkDrew"
+  - list:
+    - listitem: 2,273
+  - time: asked 2 hours ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614147"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Building better platforms with continuous discovery"
+    - listitem:
+      - link "Saving the world with speed and at scale"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Will you help build our new visual identity?"
+    - listitem:
+      - link "Upcoming initiatives on Stack Overflow and across the Stack Exchange network..."
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "Should we remove font-specific styling tags like [bold], [italic] and..."
+    - listitem:
+      - 'link "Stack Overflow Experiment: Safely expanding voting access"'
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 64k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 27k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 24k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "A national poll of 1000 French returns 25% of \"Yes\". Is it enough to say that it's quite impossible locally to be 0%, if we don't know the variance?"
+    - listitem:
+      - link "How much of a really big a spaceship could a nuke take out?"
+    - listitem:
+      - link "Easy ways to draw vector diagrams in TikZ?"
+    - listitem:
+      - link "Why is time reversal not a natural part of the Galilean group?"
+    - listitem:
+      - link "Story that taught cryptography in the form of a manga"
+    - listitem:
+      - link "Pairwise comparisons with emmeans in a linear mixed-effects model"
+    - listitem:
+      - link "Lay explaination of 'lower evolutionary constraint genes'?"
+    - listitem:
+      - link "A question about as ..... as comparison"
+    - listitem:
+      - link "Not being introduced to the team – should I ask for it?"
+    - listitem:
+      - link "sum of squared distances between Farey neigbors"
+    - listitem:
+      - link "Tracking stored procedure performance metrics"
+    - listitem:
+      - link "Meaning of 芭蕉 in Tang age"
+    - listitem:
+      - link "Regenerative cooling of rocket engine turbine's blades"
+    - listitem:
+      - link "Alternative to tedious assert-rewrite for trivial operations?"
+    - listitem:
+      - link "When and why is fwait necessary when using the 8087 coprocessor?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.7.24.31955
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
