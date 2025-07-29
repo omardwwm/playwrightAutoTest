@@ -1,0 +1,566 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale NZ in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,212,497 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 30"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 11 views
+  - heading "Paimon Schema Creation Fails When Writing Directly to Paimon - \"Cannot get latest schema for table\" Error" [level=3]:
+    - link "Paimon Schema Creation Fails When Writing Directly to Paimon - \"Cannot get latest schema for table\" Error"
+  - text: My task is to set up Paimon as a storage for Fluss (set up data synchronization from Fluss to Paimon) When trying to set up data synchronization in Paimon and when trying to write directly to Paimon, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'docker-compose'": docker-compose
+    - listitem:
+      - link "show questions tagged 'apache-flink'": apache-flink
+    - listitem:
+      - link "show questions tagged 'snapshot'": snapshot
+  - link "Anastasiia Kulishova's user avatar":
+    - img "Anastasiia Kulishova's user avatar"
+  - link "Anastasiia Kulishova"
+  - list:
+    - listitem: "1"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Being able to access and sync the data from 1 workbook to another with VBA" [level=3]:
+    - link "Being able to access and sync the data from 1 workbook to another with VBA"
+  - text: I hope everyone is doing well. I have been stuck in this one for maybe 2 days, so I decided to ask here just just in case there's someone that can share their coding knowledge. I have been looking for ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'excel'": excel
+    - listitem:
+      - link "show questions tagged 'vba'": vba
+    - listitem:
+      - link "show questions tagged 'worksheet'": worksheet
+  - link "Anpo Desu's user avatar":
+    - img "Anpo Desu's user avatar"
+  - link "Anpo Desu"
+  - list:
+    - listitem: "101"
+  - time: asked 7 mins ago
+  - text: "-1 votes 0 answers 27 views"
+  - heading "How to view SSH logs and auth attempts on Windows?" [level=3]:
+    - link "How to view SSH logs and auth attempts on Windows?"
+  - text: On Linux, I can check /var/log/auth.log for example to trace login attempts. On windows, we can setup the OpenSSH server according to the microsoft learn openssh blog. Where are the logs stored or how ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'windows'": windows
+    - listitem:
+      - link "show questions tagged 'ssh'": ssh
+  - link "Lan's user avatar":
+    - img "Lan's user avatar"
+  - link "Lan"
+  - list:
+    - listitem: "1"
+  - time: asked 20 mins ago
+  - text: 0 votes 0 answers 15 views
+  - heading "How to correctly create middleware extensions?" [level=3]:
+    - link "How to correctly create middleware extensions?"
+  - text: "I am refactoring my code and moving some classes to an external assembly. In my projects I use Refit and currently I set it up like this in Startup: services.AddHttpClient(); services.AddRefitClient&..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'asp.net-core'": asp.net-core
+    - listitem:
+      - link "show questions tagged 'blazor'": blazor
+    - listitem:
+      - link "show questions tagged 'httpclient'": httpclient
+    - listitem:
+      - link "show questions tagged 'refit'": refit
+  - link "Ivan Debono's user avatar":
+    - img "Ivan Debono's user avatar"
+  - link "Ivan Debono"
+  - list:
+    - listitem: "962"
+  - time: asked 21 mins ago
+  - text: "-1 votes 0 answers 11 views"
+  - heading "CCZ magic state teleportation" [level=3]:
+    - link "CCZ magic state teleportation"
+  - text: Is this circuit right? |CCZ> = CCZ|+++> I'm wondering this is the equivalent circuit of CCZ gate and why the correcting process goes like this. Measure basis is Z-basis. Is there any other ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'quantum-computing'": quantum-computing
+  - link "user20451489's user avatar":
+    - img "user20451489's user avatar"
+  - link "user20451489"
+  - list:
+    - listitem: "1"
+  - time: asked 23 mins ago
+  - text: 0 votes 1 answer 50 views
+  - heading "Is it possible that two protobuf messages with same content generate different serialized bytes?" [level=3]:
+    - link "Is it possible that two protobuf messages with same content generate different serialized bytes?"
+  - text: In C++ Protobuf, is it possible for two messages with the same contents to produce different serialized byte strings when using the SerializeToString method? If so, under what circumstances can the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'protocol-buffers'": protocol-buffers
+  - link "Anthony Lee's user avatar":
+    - img "Anthony Lee's user avatar"
+  - link "Anthony Lee"
+  - list:
+    - listitem: "141"
+  - time: asked 50 mins ago
+  - text: 0 votes 0 answers 31 views
+  - heading "How to show trigger refreshable spinner from ViewModel?" [level=3]:
+    - link "How to show trigger refreshable spinner from ViewModel?"
+  - text: I want to be consistent with showing the spinner when user loads a list view, and show the same List view spinner when user pulls to refresh or if the refresh is triggered from ViewModel. I understand ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'swiftui'": swiftui
+    - listitem:
+      - link "show questions tagged 'swiftui-list'": swiftui-list
+  - link "Wy th's user avatar":
+    - img "Wy th's user avatar"
+  - link "Wy th"
+  - list:
+    - listitem: "85"
+  - time: asked 51 mins ago
+  - text: 1 vote 1 answer 33 views
+  - heading "Filter grouped data with filter function and if else condition in R" [level=3]:
+    - link "Filter grouped data with filter function and if else condition in R"
+  - text: Consider the data frame id <-c(1,1,1,2,2,3,3,3,3) x1 <-c("no","yes","yes","no","no","no","no","no","yes")...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'dataframe'": dataframe
+    - listitem:
+      - link "show questions tagged 'if-statement'": if-statement
+    - listitem:
+      - link "show questions tagged 'dplyr'": dplyr
+    - listitem:
+      - link "show questions tagged 'filter'": filter
+    - listitem:
+      - link "show questions tagged 'data.table'": data.table
+  - link "T Richard's user avatar":
+    - img "T Richard's user avatar"
+  - link "T Richard"
+  - list:
+    - listitem: "653"
+  - time: asked 56 mins ago
+  - text: 0 votes 0 answers 31 views
+  - heading "Why does std::make_unique() not support bounded arrays? [duplicate]" [level=3]:
+    - link "Why does std::make_unique() not support bounded arrays? [duplicate]"
+  - text: "This table shows smart pointer support for array and non-array pointees: C++11 C++14 C++17 C++20 std::unique_ptr <T > ✓ ✓ ✓ ✓ std::unique_ptr <T[ ]> ✓ ✓ ✓ ✓ std::unique_ptr <T[N]> ✓..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'arrays'": arrays
+    - listitem:
+      - link "show questions tagged 'c++14'": c++14
+    - listitem:
+      - link "show questions tagged 'shared-ptr'": shared-ptr
+    - listitem:
+      - link "show questions tagged 'unique-ptr'": unique-ptr
+  - link "leekillough's user avatar":
+    - img "leekillough's user avatar"
+  - link "leekillough"
+  - list:
+    - listitem: 1,117
+  - time: asked 59 mins ago
+  - text: 2 votes 1 answer 29 views
+  - heading "Having a macro wait 2 seconds then Alt-Tab and SendKey" [level=3]:
+    - link "Having a macro wait 2 seconds then Alt-Tab and SendKey"
+  - text: "I have tried various methods with no luck Sub Pad() Sleep 3.5 * 1000 SendKeys \"=anything\", True ' Get grand total. SendKeys \"%{F4}\", True ' Send ALT+F4 to close ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'vba'": vba
+    - listitem:
+      - link "show questions tagged 'ms-word'": ms-word
+  - link "Mike 456's user avatar":
+    - img "Mike 456's user avatar"
+  - link "Mike 456"
+  - list:
+    - listitem: "21"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 28 views
+  - heading "Grouping columns as a single row in pivot mode" [level=3]:
+    - link "Grouping columns as a single row in pivot mode"
+  - text: "I'm Row Grouping some columns in Ag grid with pivot mode. But I can see the grouping happens in a hierarchical way. Is there any way, we can make it as a single row grouping. My result: Expected ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'ag-grid'": ag-grid
+  - link "Amal Thomas's user avatar":
+    - img "Amal Thomas's user avatar"
+  - link "Amal Thomas"
+  - list:
+    - listitem: "43"
+  - time: asked 1 hour ago
+  - text: 0 votes 1 answer 22 views
+  - heading "Avalonia OpenGLControlBase Rendering Issue" [level=3]:
+    - link "Avalonia OpenGLControlBase Rendering Issue"
+  - text: I'm coding a OpenGL canvas using OpenGLControlBase in Avalonia, it works well when I add objects inside the viewport. When I move some parts of one quad outside the viewport, the part of the quad ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'macos'": macos
+    - listitem:
+      - link "show questions tagged 'opengl'": opengl
+    - listitem:
+      - link "show questions tagged 'glsl'": glsl
+    - listitem:
+      - link "show questions tagged 'rendering'": rendering
+    - listitem:
+      - link "show questions tagged 'avalonia'": avalonia
+  - link "Maple Wan's user avatar":
+    - img "Maple Wan's user avatar"
+  - link "Maple Wan"
+  - list:
+    - listitem: "61"
+  - time: asked 1 hour ago
+  - text: 1 vote 0 answers 24 views
+  - 'heading "JAX lax.scan: How to iterate over layers and memory slices simultaneously without dynamic indexing in a multi-layer RNN structure?" [level=3]':
+    - 'link "JAX lax.scan: How to iterate over layers and memory slices simultaneously without dynamic indexing in a multi-layer RNN structure?"'
+  - text: I'm trying to implement a framework that manages RNN networks with an arbitrary number of layers (it's all part of a library I'm building based on jax/equinox), the problem is that I can't find an ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'deep-learning'": deep-learning
+    - listitem:
+      - link "show questions tagged 'recurrent-neural-network'": recurrent-neural-network
+    - listitem:
+      - link "show questions tagged 'jax'": jax
+    - listitem:
+      - link "show questions tagged 'equinox'": equinox
+  - link "lifera's user avatar":
+    - img "lifera's user avatar"
+  - link "lifera"
+  - list:
+    - listitem: "11"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 42 views
+  - heading "How to identify issue with my PIP installation" [level=3]:
+    - link "How to identify issue with my PIP installation"
+  - text: "Is there a reason I see a \"zsh: permission denied: pip\" when I try using pip from command line? I am still able to use pip3 fine. I am sort of doing a patch by creating an alias for pip in ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'pip'": pip
+  - link "Ayusman's user avatar":
+    - img "Ayusman's user avatar"
+  - link "Ayusman"
+  - list:
+    - listitem: 8,749
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 30 views
+  - heading "How to create a full splash screen image instead of splash icon?" [level=3]:
+    - link "How to create a full splash screen image instead of splash icon?"
+  - text: I want to use a full-screen image for the splash screen configuration in my app.json file, instead of an icon. However, when I try to use a full-screen image, it still appears as an icon-sized image ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+    - listitem:
+      - link "show questions tagged 'expo'": expo
+    - listitem:
+      - link "show questions tagged 'splash-screen'": splash-screen
+  - link "Newbi's user avatar":
+    - img "Newbi's user avatar"
+  - link "Newbi"
+  - list:
+    - listitem: "43"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614167"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Saving the world with speed and at scale"
+    - listitem:
+      - link "That custom gift for your mom takes more work than you think"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Will you help build our new visual identity?"
+    - listitem:
+      - link "Upcoming initiatives on Stack Overflow and across the Stack Exchange network..."
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - 'link "Stack Overflow Experiment: Safely expanding voting access"'
+    - listitem:
+      - link "Developments in our experiment to add a live activity panel to the site"
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 64k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 21k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 11k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Faster 3D Voronoi Diagram from Point Cloud"
+    - listitem:
+      - link "What did Chava say to Adam?"
+    - listitem:
+      - link "How to speed up this NIntegrate which is calculated many times?"
+    - listitem:
+      - link "Can ffmpeg record screen on wayland?"
+    - listitem:
+      - link "Looking for a piece of writing that describes the head of Michelangelo's David floating in space"
+    - listitem:
+      - link "Rate of Difference of Gaussian Error"
+    - listitem:
+      - link "Do magic items that require attunement regain expended charges even when you're not attuned to them?"
+    - listitem:
+      - link "Self explanatory"
+    - listitem:
+      - link "Why did many arcade games have separate sound CPUs?"
+    - listitem:
+      - link "PoE center tap vs dedicated V+/V-"
+    - listitem:
+      - link "QGIS is plot rotated"
+    - listitem:
+      - 'link "Dative with an unclear governing verb (Plautus : capiti)"'
+    - listitem:
+      - link "Seven-dimensional cross product"
+    - listitem:
+      - link "Civilian airplanes with inside fuselage jet engines"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.7.28.32060
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
