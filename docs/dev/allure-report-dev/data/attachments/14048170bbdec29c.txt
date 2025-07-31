@@ -1,0 +1,559 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale GB in dev Einvironment and Realm europe
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- text: The 2025 Developer Survey results are in. Explore insights into technology and tools, careers, community and more.
+- link "View results"
+- text: .
+- link "dismiss"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges New"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,212,998 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 28"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 5 views
+  - 'heading "pgAdmin 4 v9.6: \"Save the application state\" is turned off but tabs remain open when Windows app is closed" [level=3]':
+    - 'link "pgAdmin 4 v9.6: \"Save the application state\" is turned off but tabs remain open when Windows app is closed"'
+  - text: Since I installed the newest version of pgAdmin (pgAdmin 4 v9.6), my tabs of the Query Tool remain open after closing the Windows app and starting it again. Under Preferences > Miscellaneous > ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'pgadmin'": pgadmin
+    - listitem:
+      - link "show questions tagged 'pgadmin-4'": pgadmin-4
+  - link "Leni's user avatar":
+    - img "Leni's user avatar"
+  - link "Leni"
+  - list:
+    - listitem: "27"
+  - time: asked 5 mins ago
+  - text: "-1 votes 0 answers 13 views"
+  - heading "Facing an Error of Access violation reading location 0xffffffffffffffff' in Delphi (Embacardo)" [level=3]:
+    - link "Facing an Error of Access violation reading location 0xffffffffffffffff' in Delphi (Embacardo)"
+  - text: I have this Code of RDP Wrapper being built in Delphi using the Embacardo RAD Studio, Building the application runs successfully but while exexuting the EXE gets me to an error as follow Project ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'delphi'": delphi
+    - listitem:
+      - link "show questions tagged 'access-violation'": access-violation
+  - link "CrazyFirewall's user avatar":
+    - img "CrazyFirewall's user avatar"
+  - link "CrazyFirewall"
+  - list:
+    - listitem: "31"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "Free shipping cost for entire order if certain product in cart" [level=3]:
+    - link "Free shipping cost for entire order if certain product in cart"
+  - text: I using Woocommerce 10.0.2. I'm trying to set shipping cost to zero if a certain product is in the cart. So I assigned a shipping class to this specific product which is defined to have 0 EUR shipping ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'woocommerce'": woocommerce
+  - link "perlfan's user avatar":
+    - img "perlfan's user avatar"
+  - link "perlfan"
+  - list:
+    - listitem: "11"
+  - time: asked 9 mins ago
+  - text: 0 votes 1 answer 9 views
+  - 'heading "FTPError: 550 No such file or directory" [level=3]':
+    - 'link "FTPError: 550 No such file or directory"'
+  - text: "I'm using FTP-Deploy-Action to push my code on my server. But I sometime gets the following error in my CI FTPError: 550 /my-folder/my-file: No such file or directory at FTPContext...."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'continuous-integration'": continuous-integration
+    - listitem:
+      - link "show questions tagged 'ftp'": ftp
+  - link "Raphaël Balet's user avatar":
+    - img "Raphaël Balet's user avatar"
+  - link "Raphaël Balet"
+  - list:
+    - listitem: 8,883
+  - time: asked 12 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Cloud Spanner doesn't enforce referential integrity between parent and child, What does this mean?" [level=3]:
+    - link "Cloud Spanner doesn't enforce referential integrity between parent and child, What does this mean?"
+  - text: INTERLEAVE IN child tables share the same physical row interleaving characteristics, but Spanner doesn't enforce referential integrity between parent and child. What is meant by this? Because I'm ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'google-cloud-platform'": google-cloud-platform
+    - listitem:
+      - link "show questions tagged 'google-cloud-spanner'": google-cloud-spanner
+  - link "sahithi sof's user avatar":
+    - img "sahithi sof's user avatar"
+  - link "sahithi sof"
+  - list:
+    - listitem: "1"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 6 views
+  - 'heading "org.xml.sax.SAXParseException; systemId: http://schemas.xmlsoap.org/soap/envelope/; lineNumber: 1; columnNumber: 1; Premature end of file" [level=3]':
+    - 'link "org.xml.sax.SAXParseException; systemId: http://schemas.xmlsoap.org/soap/envelope/; lineNumber: 1; columnNumber: 1; Premature end of file"'
+  - text: I am facing issues when validating the response to xsd. Help me solve the problem. I done to downloaded the xsd file from the respective link and saved it into my project, but still I am facing the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'rest'": rest
+    - listitem:
+      - link "show questions tagged 'automation'": automation
+    - listitem:
+      - link "show questions tagged 'rest-assured'": rest-assured
+    - listitem:
+      - link "show questions tagged 'rest-assured-jsonpath'": rest-assured-jsonpath
+  - link "ben ben's user avatar":
+    - img "ben ben's user avatar"
+  - link "ben ben"
+  - list:
+    - listitem: "19"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Video camera freezes when switching from rear to front with Twilio Video in Chrome for Android" [level=3]:
+    - link "Video camera freezes when switching from rear to front with Twilio Video in Chrome for Android"
+  - text: Problem Details I'm developing a video chat app using JavaScript and the Twilio Video SDK. I've implemented a feature to allow mobile users to switch between the front and rear cameras. The problem is ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'twilio'": twilio
+  - link "Iván León Capote's user avatar":
+    - img "Iván León Capote's user avatar"
+  - link "Iván León Capote"
+  - list:
+    - listitem: "1"
+  - time: asked 16 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "How to query the sum aggregated value for certain time slices using table model of Apache IoTDB?" [level=3]:
+    - link "How to query the sum aggregated value for certain time slices using table model of Apache IoTDB?"
+  - text: I need to query the value sum aggregation stored in Apache IoTDB of a certain time period (16:00-18:00) every Monday in a year. Is there any good way to query this requirement? I know that for the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'apache-iotdb'": apache-iotdb
+  - link "Wu Shanhe's user avatar":
+    - img "Wu Shanhe's user avatar"
+  - link "Wu Shanhe"
+  - list:
+    - listitem: "95"
+  - time: asked 19 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "Setting Up an On-Premise Infrastructure with OpenTofu, Kubernetes, and ArgoCD" [level=3]:
+    - link "Setting Up an On-Premise Infrastructure with OpenTofu, Kubernetes, and ArgoCD"
+  - text: I am in the process of building a startup and planning to set up an on-premise infrastructure consisting of three servers. My goal is to have one primary server and two worker nodes. I want to manage ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'kubernetes'": kubernetes
+    - listitem:
+      - link "show questions tagged 'infrastructure-as-code'": infrastructure-as-code
+    - listitem:
+      - link "show questions tagged 'opentofu'": opentofu
+    - listitem:
+      - link "show questions tagged 'on-premise'": on-premise
+  - link "Revanth Shalon's user avatar":
+    - img "Revanth Shalon's user avatar"
+  - link "Revanth Shalon"
+  - list:
+    - listitem: "141"
+  - time: asked 20 mins ago
+  - text: 0 votes 0 answers 16 views
+  - heading "Interaction between C++ coroutines and ordinary object methods" [level=3]:
+    - link "Interaction between C++ coroutines and ordinary object methods"
+  - text: I have a situation where I have a class where each method is a coroutine, but is at a business logic level constrained so only one coroutine can be "in flight" so to speak at a time. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'c++-coroutine'": c++-coroutine
+  - link "John Carter's user avatar":
+    - img "John Carter's user avatar"
+  - link "John Carter"
+  - list:
+    - listitem: "1"
+  - time: asked 20 mins ago
+  - text: 0 votes 0 answers 15 views
+  - heading "Why does CloudFlare R2 calculate a different SignatureV4 when using awssdk's S3AsyncClient" [level=3]:
+    - link "Why does CloudFlare R2 calculate a different SignatureV4 when using awssdk's S3AsyncClient"
+  - text: "Using software.amazon.awssdk:s3:2.32.11 I started with the following code: var objectKey = \"test.txt\"; var path = Path.of(\"/tmp/test/log.txt\"); var credentials = ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'amazon-s3'": amazon-s3
+    - listitem:
+      - link "show questions tagged 'aws-sdk'": aws-sdk
+    - listitem:
+      - link "show questions tagged 'aws-sdk-java-2.0'": aws-sdk-java-2.0
+    - listitem:
+      - link "show questions tagged 'cloudflare-r2'": cloudflare-r2
+  - link "justis's user avatar":
+    - img "justis's user avatar"
+  - link "justis"
+  - list:
+    - listitem: "611"
+  - time: asked 34 mins ago
+  - text: 0 votes 1 answer 20 views
+  - heading "Error '13 on VBA macro when executed on an empty sheet" [level=3]:
+    - link "Error '13 on VBA macro when executed on an empty sheet"
+  - text: I've been trying to look for a way to escape the code's error. I tried 'IsEmpty', 'IsNull', '= ""' and I'm about to start pulling my hair out. lastrow = Cells(3, "G").End(xlDown)....
+  - list:
+    - listitem:
+      - link "show questions tagged 'excel'": excel
+    - listitem:
+      - link "show questions tagged 'vba'": vba
+  - link "Anpo Desu's user avatar":
+    - img "Anpo Desu's user avatar"
+  - link "Anpo Desu"
+  - list:
+    - listitem: "211"
+  - time: asked 38 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "Use launch.vs.json instead of launchSettings.json in Visual Studio" [level=3]:
+    - link "Use launch.vs.json instead of launchSettings.json in Visual Studio"
+  - text: We are having a "main" application that starts one child "compute" worker processes one after the other. The "main" application creates a complex job that is handed over ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'visual-studio'": visual-studio
+    - listitem:
+      - link "show questions tagged 'visual-studio-debugging'": visual-studio-debugging
+  - link "msedi's user avatar":
+    - img "msedi's user avatar"
+  - link "msedi"
+  - list:
+    - listitem: 1,763
+  - time: asked 48 mins ago
+  - text: 0 votes 0 answers 20 views
+  - heading "What is the difference between a \"simple\" and \"complex\" job in Autodesk Model Derivative pricing?" [level=3]:
+    - link "What is the difference between a \"simple\" and \"complex\" job in Autodesk Model Derivative pricing?"
+  - text: I was reviewing the Autodesk Pricing for Model Derivative API, and I have a question regarding job classification. What exactly distinguishes a simple job from a complex job? I’m using the following ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'autodesk-forge'": autodesk-forge
+    - listitem:
+      - link "show questions tagged 'autodesk-model-derivative'": autodesk-model-derivative
+  - link "astromelon's user avatar":
+    - img "astromelon's user avatar"
+  - link "astromelon"
+  - list:
+    - listitem: "3"
+  - time: asked 51 mins ago
+  - text: 0 votes 0 answers 19 views
+  - heading "Conditional sidecars in devcontainer?" [level=3]:
+    - link "Conditional sidecars in devcontainer?"
+  - text: I configured a devcontainer using a docker-compose.yaml. The „sidecars“ are a database and a Keycloak instance. It works well. The Keycloak is only needed in some scenarios, so I’m looking for a way ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'docker'": docker
+    - listitem:
+      - link "show questions tagged 'docker-compose'": docker-compose
+    - listitem:
+      - link "show questions tagged 'vscode-devcontainer'": vscode-devcontainer
+    - listitem:
+      - link "show questions tagged 'devcontainer'": devcontainer
+  - link "stwissel's user avatar":
+    - img "stwissel's user avatar"
+  - link "stwissel"
+  - list:
+    - listitem: 20.5k
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614200"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "That custom gift for your mom takes more work than you think"
+    - listitem:
+      - 'link "Developers remain willing but reluctant to use AI: The 2025 Developer Survey..."'
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Will you help build our new visual identity?"
+    - listitem:
+      - link "Upcoming initiatives on Stack Overflow and across the Stack Exchange network..."
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - 'link "Stack Overflow Experiment: Safely expanding voting access"'
+    - listitem:
+      - link "Updated design for the new live activity panel experiment"
+    - listitem:
+      - link "Further Experimentation with Comment Reputation Requirements"
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 64k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "R Language" [level=1]:
+    - link "R Language"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where data scientists and AI researchers gather to find, share, and learn about R and other subtags like knitr and dplyr.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 11k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Is there a reason \"replace conditional with table\" isn't a standard refactoring?"
+    - listitem:
+      - link "Is Spock performing a mind meld in Dagger of the Mind?"
+    - listitem:
+      - link "Aligning rotation of instances on dodecahedron corners"
+    - listitem:
+      - link "Why do C compilers still prefer push over mov for saving registers, even when mov appears faster in llvm-mca?"
+    - listitem:
+      - link "Novel with fog on an alien world and a labyrinth"
+    - listitem:
+      - link "Does group action on a ring induce an action on a Morita equivalent ring"
+    - listitem:
+      - link "How does judicial suspension of a prime minister in Thailand work?"
+    - listitem:
+      - link "Ten minutes walk Vs ten minute walk"
+    - listitem:
+      - link "Efficient generation of pseudorandom permutation over a small domain"
+    - listitem:
+      - link "When using Da Capo, does that normally include a pick up?"
+    - listitem:
+      - link "Advantage of launching a rocket from the Equator"
+    - listitem:
+      - link "Is a normality test always performed on errors and not on raw data?"
+    - listitem:
+      - link "Puzzlin’ Nonogram"
+    - listitem:
+      - link "How loud were the top-of-the-range propeller aircrafts like the Lockheed Constellation when commercial jet travel appeared?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.7.30.32258
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
