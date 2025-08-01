@@ -1,0 +1,565 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale GB in dev Einvironment and Realm europe
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- text: The 2025 Developer Survey results are in. Explore insights into technology and tools, careers, community and more.
+- link "View results"
+- text: .
+- link "dismiss"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,213,174 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 26"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 14 views
+  - heading "Problem regarding DNS not routing to IP for some networks [closed]" [level=3]:
+    - link "Problem regarding DNS not routing to IP for some networks [closed]"
+  - text: We have a subdomain abc.example.com managed via AWS Route 53, and it's configured with an A record pointing to a specific public IP address. The domain resolves correctly on some networks, but fails ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'dns'": dns
+    - listitem:
+      - link "show questions tagged 'ip'": ip
+    - listitem:
+      - link "show questions tagged 'cloudflare'": cloudflare
+    - listitem:
+      - link "show questions tagged 'amazon-route53'": amazon-route53
+  - link "Ayush singh's user avatar":
+    - img "Ayush singh's user avatar"
+  - link "Ayush singh"
+  - list:
+    - listitem: "21"
+  - time: asked 8 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "Uploaded images are not stored to google drive folder" [level=3]:
+    - link "Uploaded images are not stored to google drive folder"
+  - text: I am using this package yaza/laravel-google-drive-storage because I want to use google drive as storage for the uploaded images. The uploading is successful but the problem is the images are not ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'laravel'": laravel
+  - link "Christian Tejano's user avatar":
+    - img "Christian Tejano's user avatar"
+  - link "Christian Tejano"
+  - list:
+    - listitem: "5"
+  - time: asked 21 mins ago
+  - text: 0 votes 0 answers 17 views
+  - heading "Duplicate JTabbedPane tab" [level=3]:
+    - link "Duplicate JTabbedPane tab"
+  - text: "Swing doesn't allow duplicate tab components. // javax.swing.JTabbedPane#insertTab public void insertTab(String title, Icon icon, Component component, String tip, int index) { int newIndex ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'swing'": swing
+  - link "Sergey Zolotarev's user avatar":
+    - img "Sergey Zolotarev's user avatar"
+  - link "Sergey Zolotarev"
+  - list:
+    - listitem: 2,475
+  - time: asked 29 mins ago
+  - text: 1 vote 0 answers 20 views
+  - heading "Why this print same output while using DateTime in php" [level=3]:
+    - link "Why this print same output while using DateTime in php"
+  - text: "Here is the code: $date = '2025-07-31'; $month_1 = (new DateTime($date))->modify('-2 month')->format('Y-m'); $month_2 = (new DateTime($date))->modify('-3 month')->format('Y-m'); print_r($..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'datetime'": datetime
+  - link "Joy Kumar's user avatar":
+    - img "Joy Kumar's user avatar"
+  - link "Joy Kumar"
+  - list:
+    - listitem: "11"
+  - time: asked 29 mins ago
+  - text: 0 votes 1 answer 16 views
+  - heading "How to maintain separate state per browser tab in a Flask web app when using sessions?" [level=3]:
+    - link "How to maintain separate state per browser tab in a Flask web app when using sessions?"
+  - text: I’m working on a Flask-based web application that supports multiple internal applications/modules. When a user logs in, a session is created and shared across all tabs (as expected, since Flask ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'flask'": flask
+    - listitem:
+      - link "show questions tagged 'session-state'": session-state
+    - listitem:
+      - link "show questions tagged 'state-management'": state-management
+    - listitem:
+      - link "show questions tagged 'htmx'": htmx
+  - link "Learner's user avatar":
+    - img "Learner's user avatar"
+  - link "Learner"
+  - list:
+    - listitem: "5"
+  - time: asked 30 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Cloudflare Turnstile Challenge Looping on AWS Lambda (Puppeteer + 2Captcha Integration)" [level=3]:
+    - link "Cloudflare Turnstile Challenge Looping on AWS Lambda (Puppeteer + 2Captcha Integration)"
+  - text: I’m working with AWS Lambda and Puppeteer, and I’ve run into issues solving Cloudflare Turnstile challenges using 2Captcha, specifically on AWS Lambda. Locally, my Puppeteer setup works as expected (...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'aws-lambda'": aws-lambda
+    - listitem:
+      - link "show questions tagged 'puppeteer'": puppeteer
+    - listitem:
+      - link "show questions tagged 'cloudflare'": cloudflare
+    - listitem:
+      - link "show questions tagged 'captcha'": captcha
+  - link "Jacobi97's user avatar":
+    - img "Jacobi97's user avatar"
+  - link "Jacobi97"
+  - list:
+    - listitem: "1"
+  - time: asked 33 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "List won't update when item is deleted" [level=3]:
+    - link "List won't update when item is deleted"
+  - text: I have two selectable lists, the first is populated with Category model objects and the second with Subcategory model objects (which are taken from selected Category value of the first list). When I ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'swiftui'": swiftui
+    - listitem:
+      - link "show questions tagged 'cloudkit'": cloudkit
+    - listitem:
+      - link "show questions tagged 'swiftdata'": swiftdata
+  - link "Ser Pounce's user avatar":
+    - img "Ser Pounce's user avatar"
+  - link "Ser Pounce"
+  - list:
+    - listitem: 14.3k
+  - time: asked 34 mins ago
+  - text: 0 votes 0 answers 34 views
+  - heading "How to copy a resultset into an existing column" [level=3]:
+    - link "How to copy a resultset into an existing column"
+  - text: I have a working query SELECT count(rider) as ridecount from rides inner join Participants on Participants.rideID = rides.rideID group by rider I have also created a new column 'ridecount' with a ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'mysql'": mysql
+  - link "quilkin's user avatar":
+    - img "quilkin's user avatar"
+  - link "quilkin"
+  - list:
+    - listitem: 1,457
+  - time: asked 47 mins ago
+  - text: 0 votes 1 answer 15 views
+  - heading "How do I generate a server certificate, that'll work with okhttp 5.1.0 secure websockets?" [level=3]:
+    - link "How do I generate a server certificate, that'll work with okhttp 5.1.0 secure websockets?"
+  - text: Trying to wss connect to localhost:6005 (rippled) I've seen workarounds that overrides and disables hostname verification
+  - list:
+    - listitem:
+      - link "show questions tagged 'kotlin'": kotlin
+    - listitem:
+      - link "show questions tagged 'openssl'": openssl
+    - listitem:
+      - link "show questions tagged 'okhttp'": okhttp
+    - listitem:
+      - link "show questions tagged 'ripple'": ripple
+  - link "Torben Vesterager's user avatar":
+    - img "Torben Vesterager's user avatar"
+  - link "Torben Vesterager"
+  - list:
+    - listitem: "518"
+  - time: asked 47 mins ago
+  - text: "-3 votes 0 answers 16 views"
+  - heading "what is the best way to use the stacktrace in golang [closed]" [level=3]:
+    - link "what is the best way to use the stacktrace in golang [closed]"
+  - text: i am new in golang, i want to use stacktrace for debugging the error, to check that i just manually generating the error, can anyone please check my code and help me to debug the process what is the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'go'": go
+    - listitem:
+      - link "show questions tagged 'go-fiber'": go-fiber
+  - link "Nikul Panchal's user avatar":
+    - img "Nikul Panchal's user avatar"
+  - link "Nikul Panchal"
+  - list:
+    - listitem: 1,661
+  - time: asked 47 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Accessibility issue with input and autocomplete attribute" [level=3]:
+    - link "Accessibility issue with input and autocomplete attribute"
+  - text: "Got the following Input markup in my ASPNet page: <asp:TextBox aria-describedby=\"errorCardNumber\" OnTextChanged=\"cardNumber_TextChanged\" onkeypress=\"return ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'accessibility'": accessibility
+    - listitem:
+      - link "show questions tagged 'wai-aria'": wai-aria
+    - listitem:
+      - link "show questions tagged 'wcag2.0'": wcag2.0
+  - link "MB34's user avatar":
+    - img "MB34's user avatar"
+  - link "MB34"
+  - list:
+    - listitem: 4,486
+  - time: asked 49 mins ago
+  - text: 0 votes 1 answer 26 views
+  - heading "Reset form to its original state using alpine.js" [level=3]:
+    - link "Reset form to its original state using alpine.js"
+  - text: In a regular form, I can use a button with type="reset" to reset it to its original state. I'm using alpinejs to render a form. How can I reset its data?
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'alpine.js'": alpine.js
+  - link "lonix's user avatar":
+    - img "lonix's user avatar"
+  - link "lonix"
+  - list:
+    - listitem: 22.1k
+  - time: asked 54 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "CHANGE_TRACKING_CURRENT_VERSION is stuck in standby read only DBs" [level=3]:
+    - link "CHANGE_TRACKING_CURRENT_VERSION is stuck in standby read only DBs"
+  - text: We have a database in Azure SQL that is part of a Business Critical elastic pool, we have also configured an extra geo-replica on a separate Azure SQL in a different region. In this database we have ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'sql-server'": sql-server
+    - listitem:
+      - link "show questions tagged 'azure'": azure
+    - listitem:
+      - link "show questions tagged 'azure-sql-database'": azure-sql-database
+    - listitem:
+      - link "show questions tagged 'database-replication'": database-replication
+    - listitem:
+      - link "show questions tagged 'change-tracking'": change-tracking
+  - link "Roi Sanchez's user avatar":
+    - img "Roi Sanchez's user avatar"
+  - link "Roi Sanchez"
+  - list:
+    - listitem: "1"
+  - time: asked 54 mins ago
+  - text: 0 votes 1 answer 17 views
+  - heading "How to properly escape UNC paths for string literals in Python while avoiding double prefixes?" [level=3]:
+    - link "How to properly escape UNC paths for string literals in Python while avoiding double prefixes?"
+  - text: I'm working on a Python function that converts Windows file paths to UNC extended-length format and properly escapes them for string literal representation in configuration files. However, I'm running ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+  - link "tandem's user avatar":
+    - img "tandem's user avatar"
+  - link "tandem"
+  - list:
+    - listitem: 2,258
+  - time: asked 54 mins ago
+  - text: 1 vote 1 answer 10 views
+  - heading "Using QDBusServer under Windows" [level=3]:
+    - link "Using QDBusServer under Windows"
+  - text: "I have been playing around with QDBusServer lately, but can't quite get it to work and the lack of proper documentation/examples is staggering. This is my test code. #include <QCoreApplication> #..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'qt'": qt
+    - listitem:
+      - link "show questions tagged 'dbus'": dbus
+    - listitem:
+      - link "show questions tagged 'qdbus'": qdbus
+  - link "Refugnic Eternium's user avatar":
+    - img "Refugnic Eternium's user avatar"
+  - link "Refugnic Eternium"
+  - list:
+    - listitem: 4,331
+  - time: asked 55 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614212"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Do AI coding tools help with imposter syndrome or make it worse?"
+    - listitem:
+      - link "Diving into the results of the 2025 Developer Survey"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Will you help build our new visual identity?"
+    - listitem:
+      - link "Upcoming initiatives on Stack Overflow and across the Stack Exchange network..."
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - 'link "Stack Overflow Experiment: Safely expanding voting access"'
+    - listitem:
+      - link "Further Experimentation with Comment Reputation Requirements"
+    - listitem:
+      - link "Updated design for the new live activity panel experiment"
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 35k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 21k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 15k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Why are collision manifold points created inside objects instead of on their surfaces?"
+    - listitem:
+      - link "Index Rebuild with WAIT_AT_LOW_PRIORITY still blocks"
+    - listitem:
+      - link "How do capacitors withstand internal electrostatic pressure?"
+    - listitem:
+      - link "Excel Conditional Formatting Error"
+    - listitem:
+      - link "What's the name of removable screw terminal connector on ICP DAS?"
+    - listitem:
+      - link "How should I talk about definitional uncertainty in seemingly well-defined measurands, arising at high resolutions?"
+    - listitem:
+      - link "Made-for-TV horror movie about the ghost of a teenage girl killed in a house fire who blames her family for her death and seeks revenge"
+    - listitem:
+      - link "Which movie first customized a production logo?"
+    - listitem:
+      - link "Why do C compilers still prefer push over mov for saving registers, even when mov appears faster in llvm-mca?"
+    - listitem:
+      - link "Is it ethical to hire a graphic designer for a job talk?"
+    - listitem:
+      - link "YA Novel from the 40s-50s About a Generation Ship and teen relationships"
+    - listitem:
+      - link "GraphQL Search Not Working for Multilist Field (Category) in Sitecore JSS"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.7.31.32357
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
