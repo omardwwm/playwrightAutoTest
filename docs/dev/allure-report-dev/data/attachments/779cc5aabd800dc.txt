@@ -1,0 +1,577 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale US in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- text: The 2025 Developer Survey results are in. Explore insights into technology and tools, careers, community and more.
+- link "View results"
+- text: .
+- link "dismiss"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,210,334 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 30"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 6 views
+  - heading "Why does the spring boot maven’s build-image goal implements significant portions of the pack cli" [level=3]:
+    - link "Why does the spring boot maven’s build-image goal implements significant portions of the pack cli"
+  - text: I’m curious about the reasoning behind re-implementing much of the functionality that the pack CLI already provides in the Spring Boot Maven plugin. For example, it seems to take the repackaged JAR, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'spring-boot'": spring-boot
+    - listitem:
+      - link "show questions tagged 'buildpack'": buildpack
+  - link "buskila's user avatar":
+    - img "buskila's user avatar"
+  - link "buskila"
+  - list:
+    - listitem: "260"
+  - time: asked 7 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "Public swagger endpoints giving UNAUTHORIZED error in Spring Security" [level=3]:
+    - link "Public swagger endpoints giving UNAUTHORIZED error in Spring Security"
+  - text: I have a Spring Boot project and am using Firebase Auth with Spring Security. I am also configuring Swagger for API documentation. My code is - package com.ayushsingh.doc_helper.commons.config....
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'spring'": spring
+    - listitem:
+      - link "show questions tagged 'spring-boot'": spring-boot
+    - listitem:
+      - link "show questions tagged 'spring-security'": spring-security
+    - listitem:
+      - link "show questions tagged 'swagger-ui'": swagger-ui
+  - link "ayush's user avatar":
+    - img "ayush's user avatar"
+  - link "ayush"
+  - list:
+    - listitem: "686"
+  - time: asked 35 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "MongoDB MCP server throwing error while running the server on an EC2 instance on sHTTP mode" [level=3]:
+    - link "MongoDB MCP server throwing error while running the server on an EC2 instance on sHTTP mode"
+  - text: "I referred this github repo published by MongoDB: https://github.com/mongodb-js/mongodb-mcp-server?tab=readme-ov-file#option-6-running-as-an-http-server I tried to run the MongoDB MCP server on an EC2 ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'mongodb'": mongodb
+    - listitem:
+      - link "show questions tagged 'http'": http
+    - listitem:
+      - link "show questions tagged 'error-handling'": error-handling
+    - listitem:
+      - link "show questions tagged 'server'": server
+    - listitem:
+      - link "show questions tagged 'model-context-protocol'": model-context-protocol
+  - link "Anuj Panchal's user avatar":
+    - img "Anuj Panchal's user avatar"
+  - link "Anuj Panchal"
+  - list:
+    - listitem: "415"
+  - time: asked 44 mins ago
+  - text: 0 votes 1 answer 18 views
+  - heading "Why the maze i build the left and bottom outer walls are doubled instead single wall? and how to make it a single outer wall like in the right and top" [level=3]:
+    - link "Why the maze i build the left and bottom outer walls are doubled instead single wall? and how to make it a single outer wall like in the right and top"
+  - text: "this screenshot show the maze and in this example the maze size is 30,30 and the left and bottom outer wall is two walls instead one. for example wallprefab at position 28,1,13: and the next to him ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'unity-game-engine'": unity-game-engine
+  - link "Daniel Lip's user avatar":
+    - img "Daniel Lip's user avatar"
+  - link "Daniel Lip"
+  - list:
+    - listitem: 11.4k
+  - time: asked 48 mins ago
+  - text: 0 votes 1 answer 15 views
+  - heading "How Do I Apply My AppsScript to Only One Tab of My Spreadsheet?" [level=3]:
+    - link "How Do I Apply My AppsScript to Only One Tab of My Spreadsheet?"
+  - text: I have an AppsScript that allows me to create custom invoices for my business, but I am unable to figure out how to apply my entire script to just one tab of my spreadsheet. As it is, it applies to ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'google-sheets'": google-sheets
+    - listitem:
+      - link "show questions tagged 'google-apps-script'": google-apps-script
+  - link "Magic Dragon Customs's user avatar":
+    - img "Magic Dragon Customs's user avatar"
+  - link "Magic Dragon Customs"
+  - list:
+    - listitem: "1"
+  - time: asked 54 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Sonicwall to setup untrusted device to access another device on trusted zone" [level=3]:
+    - link "Sonicwall to setup untrusted device to access another device on trusted zone"
+  - text: I'm trying to setup two zones (trusted and untrusted) on my Sonicwall firewall. Lan X0, X3, X4 are assigned to trusted zone with IP 172.16.1.x. X2 is assigned to untrusted zone with IP 172.16.2.x My ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'firewall'": firewall
+    - listitem:
+      - link "show questions tagged 'sonicwall'": sonicwall
+  - link "Ph0ngvu's user avatar":
+    - img "Ph0ngvu's user avatar"
+  - link "Ph0ngvu"
+  - list:
+    - listitem: "47"
+  - time: asked 56 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "AllUsers have Storage Viewer Permission but removing it creates error" [level=3]:
+    - link "AllUsers have Storage Viewer Permission but removing it creates error"
+  - text: I have a bucket that has AllUsers permission set to Storage Object Viewer. There's an exclamation mark on GCP about how this is not safe. I have Firebase rules that govern how images/videos are ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'firebase'": firebase
+    - listitem:
+      - link "show questions tagged 'google-cloud-platform'": google-cloud-platform
+    - listitem:
+      - link "show questions tagged 'google-cloud-storage'": google-cloud-storage
+    - listitem:
+      - link "show questions tagged 'firebase-security'": firebase-security
+  - link "Coolkid's user avatar":
+    - img "Coolkid's user avatar"
+  - link "Coolkid"
+  - list:
+    - listitem: "587"
+  - time: asked 58 mins ago
+  - text: 0 votes 0 answers 16 views
+  - heading "Is LR(0) GOTO different from LR(1) GOTO?" [level=3]:
+    - link "Is LR(0) GOTO different from LR(1) GOTO?"
+  - text: I'm writing an LALR(1) parser generator, and am getting a bit confused about the use of the GOTO function in creating the parsing table. I've been following the dragon book. The grammar I have been ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'parsing'": parsing
+    - listitem:
+      - link "show questions tagged 'lalr'": lalr
+  - link "sudgy's user avatar":
+    - img "sudgy's user avatar"
+  - link "sudgy"
+  - list:
+    - listitem: "561"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 11 views
+  - 'heading "CMake Qt project suddenly failing: “Cannot find source file” with duplicated file path after Git reset / vcpkg changes" [level=3]':
+    - 'link "CMake Qt project suddenly failing: “Cannot find source file” with duplicated file path after Git reset / vcpkg changes"'
+  - text: "Context: I have a CMake project that was working for building a Qt6 app using MSVC 2022, CMake, and vcpkg (manifest mode). I made some changes to try and get the project running fully via vcpkg, didn’..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'windows'": windows
+    - listitem:
+      - link "show questions tagged 'qt'": qt
+    - listitem:
+      - link "show questions tagged 'visual-c++'": visual-c++
+    - listitem:
+      - link "show questions tagged 'cmake'": cmake
+    - listitem:
+      - link "show questions tagged 'vcpkg'": vcpkg
+  - link "FatherFabian's user avatar":
+    - img "FatherFabian's user avatar"
+  - link "FatherFabian"
+  - list:
+    - listitem: "11"
+  - time: asked 1 hour ago
+  - text: 0 votes 2 answers 22 views
+  - 'heading "Error Example: TypeError from Mixing Types" [level=3]':
+    - 'link "Error Example: TypeError from Mixing Types"'
+  - text: name = "Alice" age = 25 message = "My name is " + name + " and I am " + age + " years old." print(message) this is demo snippet And getting this error ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+  - link "Prajyot Karkade's user avatar":
+    - img "Prajyot Karkade's user avatar"
+  - link "Prajyot Karkade"
+  - list:
+    - listitem: "3"
+  - time: asked 1 hour ago
+  - text: 1 vote 1 answer 19 views
+  - heading "React Native image not updating properly" [level=3]:
+    - link "React Native image not updating properly"
+  - text: "I'm building a React Native app (using Expo) where I display user-selected images using the default Image component. Problem: The image component still seems to use a cached version and does not ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+    - listitem:
+      - link "show questions tagged 'expo'": expo
+  - link "Romjan Ali's user avatar":
+    - img "Romjan Ali's user avatar"
+  - link "Romjan Ali"
+  - list:
+    - listitem: "11"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 10 views
+  - heading "OneDrive folders freeze File Explorer on Windows 10 [closed]" [level=3]:
+    - link "OneDrive folders freeze File Explorer on Windows 10 [closed]"
+  - text: "I'm experiencing a serious issue with OneDrive on my Windows 10 PC. Problem Description: Whenever I try to access, select, or even just highlight a OneDrive folder in File Explorer, the system starts &..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'onedrive'": onedrive
+  - link "xl0911's user avatar":
+    - img "xl0911's user avatar"
+  - link "xl0911"
+  - list:
+    - listitem: "108"
+  - time: asked 1 hour ago
+  - text: "-1 votes 1 answer 34 views"
+  - 'heading "Left join in `data.table` [duplicate]" [level=3]':
+    - 'link "Left join in `data.table` [duplicate]"'
+  - text: I need to left-join two data.table objects whose id columns have different names. The behavior seems to be different between dplyr and data.table in terms of which column name is kept in the joined ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'r'": r
+    - listitem:
+      - link "show questions tagged 'data.table'": data.table
+    - listitem:
+      - link "show questions tagged 'left-join'": left-join
+  - link "Luther Blissett's user avatar":
+    - img "Luther Blissett's user avatar"
+  - link "Luther Blissett"
+  - list:
+    - listitem: "604"
+  - time: asked 2 hours ago
+  - text: 0 votes 1 answer 33 views
+  - heading "How to make a free app and OAuth2 work at no cost?" [level=3]:
+    - link "How to make a free app and OAuth2 work at no cost?"
+  - text: I have a free Java app on GitHub that I would like to be able to send notification emails from. Am using Jakarta Mail, previously JavaMail. Have it working with GMail and an "app paaword". ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'email'": email
+    - listitem:
+      - link "show questions tagged 'oauth-2.0'": oauth-2.0
+    - listitem:
+      - link "show questions tagged 'jakarta-mail'": jakarta-mail
+  - link "Todd Hill's user avatar":
+    - img "Todd Hill's user avatar"
+  - link "Todd Hill"
+  - list:
+    - listitem: "81"
+  - time: asked 2 hours ago
+  - text: 0 votes 1 answer 26 views
+  - heading "When using logging into Instagram using Instagram API, redirect does not work" [level=3]:
+    - link "When using logging into Instagram using Instagram API, redirect does not work"
+  - text: "I am trying to authenticate Instagram with Instagram API. This is my code: class InstagramAPI { private accessToken: string | null = null; private baseUrl = \"https://graph.instagram.com\";..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'rest'": rest
+    - listitem:
+      - link "show questions tagged 'facebook'": facebook
+    - listitem:
+      - link "show questions tagged 'next.js'": next.js
+    - listitem:
+      - link "show questions tagged 'oauth-2.0'": oauth-2.0
+    - listitem:
+      - link "show questions tagged 'instagram-api'": instagram-api
+  - link "Nelson Ng's user avatar":
+    - img "Nelson Ng's user avatar"
+  - link "Nelson Ng"
+  - list:
+    - listitem: "1"
+  - time: asked 2 hours ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614023"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Do AI coding tools help with imposter syndrome or make it worse?"
+    - listitem:
+      - link "Diving into the results of the 2025 Developer Survey"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Will you help build our new visual identity?"
+    - listitem:
+      - link "Upcoming initiatives on Stack Overflow and across the Stack Exchange network..."
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - 'link "Stack Overflow Experiment: Safely expanding voting access"'
+    - listitem:
+      - link "Updated design for the new live activity panel experiment"
+    - listitem:
+      - link "Further Experimentation with Comment Reputation Requirements"
+  - text: Collectives
+  - link "see all"
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 27k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 24k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "R Language" [level=1]:
+    - link "R Language"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where data scientists and AI researchers gather to find, share, and learn about R and other subtags like knitr and dplyr.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Pre-heating bicycle chain with fire"
+    - listitem:
+      - link "Draw rectangles with semi-circular ends in TikZ"
+    - listitem:
+      - 'link "ConTeXt: how to let ^^J have an effect?"'
+    - listitem:
+      - link "Does intersubjectivity legitimize falsehoods?"
+    - listitem:
+      - link "YA Novel from the 40s-50s About a Generation Ship and teen relationships"
+    - listitem:
+      - link "Markov ordinal longitudinal model or discrete time multistate model for analysing recurrent event"
+    - listitem:
+      - link "How to upgrade Ubuntu's minor version?"
+    - listitem:
+      - link "Why is aid being airdropped into Gaza?"
+    - listitem:
+      - link "What does the world look like to astronauts in a neutral buoyancy pool?"
+    - listitem:
+      - link "How could the BLS jobs created in May and June 2025 been so far off?"
+    - listitem:
+      - link "Usage of replacement"
+    - listitem:
+      - link "Movie featuring a robbery, a massive shootout and an uninvolved person escaping with the loot"
+    - listitem:
+      - link "\"dimension\" vs \"extent\", \"axis\" vs \"dimension\" - when should I use which term?"
+    - listitem:
+      - 'link "Short story: Empty house has psychic effect on couple who find it in the woods"'
+    - listitem:
+      - link "How to cite two part paper with different order of authors?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.8.1.32392
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
