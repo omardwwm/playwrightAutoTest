@@ -1,0 +1,571 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale US in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- text: The 2025 Developer Survey results are in. Explore insights into technology and tools, careers, community and more.
+- link "View results"
+- text: .
+- link "dismiss"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,210,333 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 32"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 6 views
+  - heading "Google Apps Script no ContentService.createTexdtOutput" [level=3]:
+    - link "Google Apps Script no ContentService.createTexdtOutput"
+  - text: I am trying to add data from react to a Google Sheet. It works aside from the issue that the script appears to be needing a return ContentService.createTextOutput statement. Without the statement, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'google-apps-script'": google-apps-script
+  - link "Henr1k's user avatar":
+    - img "Henr1k's user avatar"
+  - link "Henr1k"
+  - list:
+    - listitem: "11"
+  - time: asked 8 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "OLA Map Web SDK With HTML, Javascript Not Showing Map" [level=3]:
+    - link "OLA Map Web SDK With HTML, Javascript Not Showing Map"
+  - text: "I'm trying to integrate OLA Map Web SDK In my project. I've gone through the documentation and tried everything I can but found nothing to be useful. Every time I got the following error: Error: ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'jquery'": jquery
+    - listitem:
+      - link "show questions tagged 'sdk'": sdk
+    - listitem:
+      - link "show questions tagged 'webapi'": webapi
+  - link "full_stack_developer's user avatar":
+    - img "full_stack_developer's user avatar"
+  - link "full_stack_developer"
+  - list:
+    - listitem: "83"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "Using LinearGradient in Expo App causing white screen on iOS device" [level=3]:
+    - link "Using LinearGradient in Expo App causing white screen on iOS device"
+  - text: I'm building a React Native app using Expo, and I’m using the LinearGradient component from expo-linear-gradient. It works perfectly on Android simulators, but when I run the app on a real iOS device, ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+    - listitem:
+      - link "show questions tagged 'expo'": expo
+    - listitem:
+      - link "show questions tagged 'nativewind'": nativewind
+  - link "Bhavsagar's user avatar":
+    - img "Bhavsagar's user avatar"
+  - link "Bhavsagar"
+  - list:
+    - listitem: "1"
+  - time: asked 11 mins ago
+  - text: 0 votes 1 answer 6 views
+  - heading "Python language features do not work with libraries installed in Poetry local virtual environment (.venv)" [level=3]:
+    - link "Python language features do not work with libraries installed in Poetry local virtual environment (.venv)"
+  - text: I have a Python Poetry project. Visual Studio Code features like auto-import and auto-complete do not work for the project dependency libraries. Pylance (the Python language server for Visual Studio ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'visual-studio-code'": visual-studio-code
+    - listitem:
+      - link "show questions tagged 'pylance'": pylance
+  - link "Mikko Ohtamaa's user avatar":
+    - img "Mikko Ohtamaa's user avatar"
+  - link "Mikko Ohtamaa"
+  - list:
+    - listitem: 84.4k
+  - time: asked 11 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "How to use python to extract files from folder base on the first 7 digits file name" [level=3]:
+    - link "How to use python to extract files from folder base on the first 7 digits file name"
+  - text: "I am still a new learner in writing python script. I have a question here: I have a \"folder\" which contain multiple sub folders where I wish to extract PDF files base on the same first 7 ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'jupyter-notebook'": jupyter-notebook
+  - link "userXM's user avatar":
+    - img "userXM's user avatar"
+  - link "userXM"
+  - list:
+    - listitem: "1"
+  - time: asked 13 mins ago
+  - text: "-1 votes 0 answers 19 views"
+  - heading "Reusing context with Python Playwright" [level=3]:
+    - link "Reusing context with Python Playwright"
+  - text: Has anybody been into this use case in using python Playwright . I wanted to use playwright to a website with login features. So, as normal process, it will login to the website with its loging ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python-3.x'": python-3.x
+    - listitem:
+      - link "show questions tagged 'playwright'": playwright
+  - link "shamyjun22's user avatar":
+    - img "shamyjun22's user avatar"
+  - link "shamyjun22"
+  - list:
+    - listitem: "21"
+  - time: asked 31 mins ago
+  - text: 0 votes 0 answers 28 views
+  - 'heading "Programme works but says \"warning: integer constant is so large that it is unsigned\", solution?" [level=3]':
+    - 'link "Programme works but says \"warning: integer constant is so large that it is unsigned\", solution?"'
+  - text: I am trying solve the problem posed in this question that asks << 1 operation be performed on a 64 bit number using NAND operation only and without using any arithmetic operation. My attempted ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c'": c
+    - listitem:
+      - link "show questions tagged 'bit-manipulation'": bit-manipulation
+    - listitem:
+      - link "show questions tagged 'bitwise-operators'": bitwise-operators
+    - listitem:
+      - link "show questions tagged 'bit-shift'": bit-shift
+    - listitem:
+      - link "show questions tagged 'bitmask'": bitmask
+  - link "uran42's user avatar":
+    - img "uran42's user avatar"
+  - link "uran42"
+  - list:
+    - listitem: "53"
+  - time: asked 55 mins ago
+  - text: 0 votes 0 answers 19 views
+  - heading "How to use C++ coroutine with Qt?" [level=3]:
+    - link "How to use C++ coroutine with Qt?"
+  - text: "I am trying to use coroutines with Qt. Here's minimal(I guess) example to reproduce my problem Basically, bellow code is adopted from the example of cppreference here: https://en.cppreference.com/w/..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'qt'": qt
+    - listitem:
+      - link "show questions tagged 'coroutine'": coroutine
+    - listitem:
+      - link "show questions tagged 'c++-coroutine'": c++-coroutine
+  - link "slyx's user avatar":
+    - img "slyx's user avatar"
+  - link "slyx"
+  - list:
+    - listitem: 2,274
+  - time: asked 58 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Can't access WhatsApp Status folder using SAF or MediaStore without MANAGE_EXTERNAL_STORAGE (Flutter)" [level=3]:
+    - link "Can't access WhatsApp Status folder using SAF or MediaStore without MANAGE_EXTERNAL_STORAGE (Flutter)"
+  - text: "I'm developing an Android app that downloads WhatsApp and WhatsApp Business status files (images and videos). These status files are stored in a hidden folder under: /Android/media/com.whatsapp/..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'file-permissions'": file-permissions
+    - listitem:
+      - link "show questions tagged 'status'": status
+  - link "Murtaza's user avatar":
+    - img "Murtaza's user avatar"
+  - link "Murtaza"
+  - list:
+    - listitem: "559"
+  - time: asked 59 mins ago
+  - text: "-1 votes 0 answers 14 views"
+  - heading "Why are message authentication algorithms like HMAC needed when you could just encrypt the hash together with the message?" [level=3]:
+    - link "Why are message authentication algorithms like HMAC needed when you could just encrypt the hash together with the message?"
+  - text: The way I understand it, MAC algorithms are primarily needed because an attacker that modifies an encrypted message could also recalculate and update the verification hash at the end. But why not add ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'encryption'": encryption
+    - listitem:
+      - link "show questions tagged 'hmac'": hmac
+    - listitem:
+      - link "show questions tagged 'message-authentication-code'": message-authentication-code
+  - link "jeha's user avatar":
+    - img "jeha's user avatar"
+  - link "jeha"
+  - list:
+    - listitem: "49"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 12 views
+  - heading "Rapier does not move RigidBody in expected direction" [level=3]:
+    - link "Rapier does not move RigidBody in expected direction"
+  - text: I have a RigidBody with the components (Velocity, Transform). When changing the rotation with transform.rotation = …, the “forward” direction of the body remains the same when adding velocity. How ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'rust'": rust
+    - listitem:
+      - link "show questions tagged 'bevy'": bevy
+    - listitem:
+      - link "show questions tagged 'rapier'": rapier
+    - listitem:
+      - link "show questions tagged 'rapier-3d'": rapier-3d
+  - link "Clover Johnson's user avatar":
+    - img "Clover Johnson's user avatar"
+  - link "Clover Johnson"
+  - list:
+    - listitem: "57"
+  - time: asked 1 hour ago
+  - text: 0 votes 1 answer 19 views
+  - heading "How to add profile picture (not sending an image or file) to emails in PHPMailer" [level=3]:
+    - link "How to add profile picture (not sending an image or file) to emails in PHPMailer"
+  - text: "I am trying to send an email with a profile picture using PHPMailer !Please pay more attention to the question : I mean adding a profile picture to the email (not sending an image or file)profile ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'email'": email
+    - listitem:
+      - link "show questions tagged 'phpmailer'": phpmailer
+  - link "masoudiofficial's user avatar":
+    - img "masoudiofficial's user avatar"
+  - link "masoudiofficial"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 18 views
+  - heading "QNetworkRequest is converting header names to lowercase for case sensitive service" [level=3]:
+    - link "QNetworkRequest is converting header names to lowercase for case sensitive service"
+  - text: I'm connecting Tank IP Camera (IPC) API to my windows application with Qt C++. IPC uses basic authorization. I'm using QtNetwork library for HTTP client connection, Qt 6.8.3 with C++17. I tested the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'qt'": qt
+    - listitem:
+      - link "show questions tagged 'http-headers'": http-headers
+    - listitem:
+      - link "show questions tagged 'qt6'": qt6
+    - listitem:
+      - link "show questions tagged 'qtnetwork'": qtnetwork
+  - link "Davronito's user avatar":
+    - img "Davronito's user avatar"
+  - link "Davronito"
+  - list:
+    - listitem: "41"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 10 views
+  - heading "I can't see why Steel-Bank Common Lisp thinks a string is a function in my code" [level=3]:
+    - link "I can't see why Steel-Bank Common Lisp thinks a string is a function in my code"
+  - text: I am using a Windows 11 computer, running Steel Bank Common Lisp (version 2.0.0) in PowerShell by inputting functions directly into the SBCL.exe REPL to see if they work. In the process, I have hit ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'string'": string
+    - listitem:
+      - link "show questions tagged 'lisp'": lisp
+    - listitem:
+      - link "show questions tagged 'sbcl'": sbcl
+  - link "Ashley Ben Story's user avatar":
+    - img "Ashley Ben Story's user avatar"
+  - link "Ashley Ben Story"
+  - list:
+    - listitem: "79"
+  - time: asked 1 hour ago
+  - text: 0 votes 1 answer 21 views
+  - heading "Dependency 'androidx.core:core:1.16.0' requires Android Gradle plugin 8.6.0 or higher" [level=3]:
+    - link "Dependency 'androidx.core:core:1.16.0' requires Android Gradle plugin 8.6.0 or higher"
+  - text: "Building Android in android studio, build fail message: Dependency 'androidx.core:core:1.16.0' requires Android Gradle plugin 8.6.0 or higher. Dependency 'androidx.core:core-ktx:1.16.0' requires ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+  - link "yu yang Jian's user avatar":
+    - img "yu yang Jian's user avatar"
+  - link "yu yang Jian"
+  - list:
+    - listitem: 7,253
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614023"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Do AI coding tools help with imposter syndrome or make it worse?"
+    - listitem:
+      - link "Diving into the results of the 2025 Developer Survey"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Will you help build our new visual identity?"
+    - listitem:
+      - link "Upcoming initiatives on Stack Overflow and across the Stack Exchange network..."
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - 'link "Stack Overflow Experiment: Safely expanding voting access"'
+    - listitem:
+      - link "Updated design for the new live activity panel experiment"
+    - listitem:
+      - link "Further Experimentation with Comment Reputation Requirements"
+  - text: Collectives
+  - link "see all"
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 27k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 24k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 11k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Is there any way to see the string that was matched in grep?"
+    - listitem:
+      - link "Is there any way to concat video files with FFmpeg where some of the videos are -180° rotated and some are not?"
+    - listitem:
+      - link "Usage of replacement"
+    - listitem:
+      - link "Is there a contradiction between Matthew 9:14-15 and Mark 9:28-29 regarding when and why fasting should be practiced?"
+    - listitem:
+      - link "Can the UK take action if Iran continues covert influence activities through its embassy?"
+    - listitem:
+      - link "A spaceship full of refugees tries to settle on a planet with friendly aliens. It does not work out"
+    - listitem:
+      - link "How to Make Lifelong Rulers Responsive to Popular Demand?"
+    - listitem:
+      - link "unknotting number for k11a266"
+    - listitem:
+      - link "Is there any SPD for a lost neutral in your house?"
+    - listitem:
+      - link "About Grothendieck UB axiom"
+    - listitem:
+      - link "Was It's Always Sunny in Philadelphia, \"The Gang Goes to a Dog Track,\" filmed at a real dog track?"
+    - listitem:
+      - link "Is there a contradiction between Isaiah 58:1-12 and Jesus's example and teaching on fasting?"
+    - listitem:
+      - link "Password storage with gatherer plugin in Python"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.8.1.32392
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
