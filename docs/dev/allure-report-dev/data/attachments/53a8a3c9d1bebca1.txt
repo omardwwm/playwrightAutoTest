@@ -1,0 +1,572 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale CA in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- text: The 2025 Developer Survey results are in. Explore insights into technology and tools, careers, community and more.
+- link "View results"
+- text: .
+- link "dismiss"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,210,550 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 26"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 6 views
+  - heading "Line chart> (swimlane/ngx-charts) In zoom-in mode, the chart marker is displaying the value of the next data point instead of the selected one" [level=3]:
+    - link "Line chart> (swimlane/ngx-charts) In zoom-in mode, the chart marker is displaying the value of the next data point instead of the selected one"
+  - text: 1. Marker Display Issue in Zoom-In Mode When zooming into the line chart, the marker/tooltip is showing the value of the next data point instead of the currently selected one. 2. Tooltip Position ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'angular'": angular
+    - listitem:
+      - link "show questions tagged 'charts'": charts
+    - listitem:
+      - link "show questions tagged 'transform'": transform
+    - listitem:
+      - link "show questions tagged 'zooming'": zooming
+    - listitem:
+      - link "show questions tagged 'scale'": scale
+  - link "Sathya's user avatar":
+    - img "Sathya's user avatar"
+  - link "Sathya"
+  - list:
+    - listitem: "49"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "Which jQuery migration plugin version for jQuery 1.9.1?" [level=3]:
+    - link "Which jQuery migration plugin version for jQuery 1.9.1?"
+  - text: I have to upgrade an old ASP.NET MVC web application that uses jQuery 1.9.1. The jQuery homepage suggests using the migration plugin for a seamless upgrade. Unfortunately, the site is somewhat unclear ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'jquery'": jquery
+    - listitem:
+      - link "show questions tagged 'jquery-plugins'": jquery-plugins
+    - listitem:
+      - link "show questions tagged 'upgrade'": upgrade
+  - link "Rob's user avatar":
+    - img "Rob's user avatar"
+  - link "Rob"
+  - list:
+    - listitem: 11.9k
+  - time: asked 7 mins ago
+  - text: 0 votes 0 answers 6 views
+  - 'heading "espressif ide error : FileNotFoundError: [Errno 2] right after installation" [level=3]':
+    - 'link "espressif ide error : FileNotFoundError: [Errno 2] right after installation"'
+  - text: "I am installing -I have installed- the Espressif-IDE to have as many posible features as I can instead of the Visual Studio Code. I installed it all with the online installer without any problem: Ok, ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'esp32'": esp32
+    - listitem:
+      - link "show questions tagged 'esp-idf'": esp-idf
+    - listitem:
+      - link "show questions tagged 'espressif-idf'": espressif-idf
+  - link "Carles Lloret Salvo's user avatar":
+    - img "Carles Lloret Salvo's user avatar"
+  - link "Carles Lloret Salvo"
+  - list:
+    - listitem: "57"
+  - time: asked 11 mins ago
+  - text: 1 vote 0 answers 18 views
+  - heading "CTRL + C not working in android studio flutter project" [level=3]:
+    - link "CTRL + C not working in android studio flutter project"
+  - text: When i am opening any flutter project CTRL + C not working in my windows android studio or anywhere. its taking empty space. CTRL+V is pasting and empty space after copying any thing. But when i am ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'android-studio'": android-studio
+    - listitem:
+      - link "show questions tagged 'plugins'": plugins
+  - link "Mir Injamamul's user avatar":
+    - img "Mir Injamamul's user avatar"
+  - link "Mir Injamamul"
+  - list:
+    - listitem: "167"
+  - time: asked 26 mins ago
+  - text: 0 votes 0 answers 15 views
+  - heading "Convert an LDIF file to a tabular DataFrame with Python Polars" [level=3]:
+    - link "Convert an LDIF file to a tabular DataFrame with Python Polars"
+  - text: "I have several LDIF files that look like this: changetype: add objectClass: inetOrgPerson uid: jdoe cn: John Doe sn: Doe mail: jdoe@example.com dn: uid=asmith,ou=People,dc=example,dc=com changetype: ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'python-polars'": python-polars
+  - link "CT_369's user avatar":
+    - img "CT_369's user avatar"
+  - link "CT_369"
+  - list:
+    - listitem: "131"
+  - time: asked 31 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "Refresh token being passed in response body in registration but not login in Django" [level=3]:
+    - link "Refresh token being passed in response body in registration but not login in Django"
+  - text: I am using the Django REST Framework with dj-rest-auth and django-allauth for authentication and authorisation with JWTs. From what I have heard, using HTTP-only cookies to store the tokens is a ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'django'": django
+    - listitem:
+      - link "show questions tagged 'django-rest-framework'": django-rest-framework
+    - listitem:
+      - link "show questions tagged 'jwt'": jwt
+    - listitem:
+      - link "show questions tagged 'django-allauth'": django-allauth
+    - listitem:
+      - link "show questions tagged 'dj-rest-auth'": dj-rest-auth
+  - link "Sebastian Power's user avatar":
+    - img "Sebastian Power's user avatar"
+  - link "Sebastian Power"
+  - list:
+    - listitem: "85"
+  - time: asked 36 mins ago
+  - text: 1 vote 0 answers 13 views
+  - heading "Move entire rows when PowerQuery data change" [level=3]:
+    - link "Move entire rows when PowerQuery data change"
+  - text: "I'm working on a file with two different tables on two different Queries, with this structure: Table 1 GROUP MEMBER ID GROUP SCORE 1 SCORE 2 SCORE 3 Member 1 01 A1 1 1 4 Member 2 02 A1 3 3 5 Member 3 ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'excel'": excel
+    - listitem:
+      - link "show questions tagged 'powerquery'": powerquery
+    - listitem:
+      - link "show questions tagged 'excel-tables'": excel-tables
+  - link "MrBoop's user avatar":
+    - img "MrBoop's user avatar"
+  - link "MrBoop"
+  - list:
+    - listitem: "37"
+  - time: asked 37 mins ago
+  - text: 0 votes 0 answers 14 views
+  - 'heading "Odoo17 Module loading logistics failed: file logistics/security/ir.model.access.csv could not be processed:" [level=3]':
+    - 'link "Odoo17 Module loading logistics failed: file logistics/security/ir.model.access.csv could not be processed:"'
+  - text: "Exception: Module loading logistics failed: file logistics/security/ir.model.access.csv could not be processed: No matching record found for external id 'model_logistics_order' in field 'Model' No ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'exception'": exception
+    - listitem:
+      - link "show questions tagged 'odoo'": odoo
+    - listitem:
+      - link "show questions tagged 'odoo-17'": odoo-17
+  - link "Anton's user avatar":
+    - img "Anton's user avatar"
+  - link "Anton"
+  - list:
+    - listitem: "95"
+  - time: asked 47 mins ago
+  - text: 0 votes 0 answers 21 views
+  - heading "how do I get multiple functions to work with onEdit trigger in a single sheet (Google Sheets)" [level=3]:
+    - link "how do I get multiple functions to work with onEdit trigger in a single sheet (Google Sheets)"
+  - text: I have multiple cells that I want to check for an onEdit trigger and then execute functions used on which cell was edited. I have used a mix of code from different sources unsucessfully I want to look ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'google-sheets'": google-sheets
+    - listitem:
+      - link "show questions tagged 'google-apps-script'": google-apps-script
+  - link "scjwolin57's user avatar":
+    - img "scjwolin57's user avatar"
+  - link "scjwolin57"
+  - list:
+    - listitem: "3"
+  - time: asked 48 mins ago
+  - text: 1 vote 2 answers 21 views
+  - heading "Bootstrap DataTables Arabic Search Not Working (English Search Works Fine)" [level=3]:
+    - link "Bootstrap DataTables Arabic Search Not Working (English Search Works Fine)"
+  - text: I'm currently using Bootstrap DataTables on the front end with JavaScript and AJAX to fetch data from a Spring Boot backend. The table loads correctly and searching in English works as expected. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'ajax'": ajax
+    - listitem:
+      - link "show questions tagged 'utf-8'": utf-8
+    - listitem:
+      - link "show questions tagged 'datatables'": datatables
+    - listitem:
+      - link "show questions tagged 'bootstrap-5'": bootstrap-5
+    - listitem:
+      - link "show questions tagged 'arabic'": arabic
+  - link "Toufic Sleiman's user avatar":
+    - img "Toufic Sleiman's user avatar"
+  - link "Toufic Sleiman"
+  - list:
+    - listitem: "67"
+  - time: asked 54 mins ago
+  - text: 0 votes 0 answers 24 views
+  - heading "How to safely (re)start a pthread during runtime in a long-running main loop on embedded Linux?" [level=3]:
+    - link "How to safely (re)start a pthread during runtime in a long-running main loop on embedded Linux?"
+  - text: I'm developing an embedded Linux application in C for a touchscreen heating controller. The main() function is only called once at boot and then runs an infinite loop (forever). During runtime, based ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c'": c
+    - listitem:
+      - link "show questions tagged 'pthreads'": pthreads
+    - listitem:
+      - link "show questions tagged 'modbus'": modbus
+  - link "Lukas.lmst's user avatar":
+    - img "Lukas.lmst's user avatar"
+  - link "Lukas.lmst"
+  - list:
+    - listitem: "5"
+  - time: asked 55 mins ago
+  - text: 0 votes 0 answers 15 views
+  - heading "Why does DCMTK fail to decode DICOM Icon Image Sequence with PALETTE COLOR LUT (even with correct palette)?" [level=3]:
+    - link "Why does DCMTK fail to decode DICOM Icon Image Sequence with PALETTE COLOR LUT (even with correct palette)?"
+  - text: I'm generating a DICOM Icon Image Sequence (0088,0200) with a PALETTE COLOR LUT using DCMTK 3.6.3 in C++. All required tags and lengths appear correct, but DCMTK's DicomImage always fails to decode ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'dicom'": dicom
+    - listitem:
+      - link "show questions tagged 'dcmtk'": dcmtk
+  - link "Loop's user avatar":
+    - img "Loop's user avatar"
+  - link "Loop"
+  - list:
+    - listitem: "78"
+  - time: asked 58 mins ago
+  - text: 0 votes 0 answers 18 views
+  - heading "FVM how to point to latest stable version" [level=3]:
+    - link "FVM how to point to latest stable version"
+  - text: I use fvm to control flutter version in my project fvm use 3.32.8 Now my project using 3.32.8 How can I change my project to stable version? I tried fvm use stable, but it will point to 3.32.5 ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'dart'": dart
+    - listitem:
+      - link "show questions tagged 'fvm'": fvm
+  - link "John Joe's user avatar":
+    - img "John Joe's user avatar"
+  - link "John Joe"
+  - list:
+    - listitem: 12.8k
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 13 views
+  - heading "How to use a folder generated by an Xcode Aggregate Target as a resource in another target?" [level=3]:
+    - link "How to use a folder generated by an Xcode Aggregate Target as a resource in another target?"
+  - text: I have a multi target project where every target relies on a built "web bundle" which is basically a collection of html, optimized images, and optimized javascript. Right now that web bundle ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'xcode'": xcode
+    - listitem:
+      - link "show questions tagged 'build'": build
+  - link "CalebK's user avatar":
+    - img "CalebK's user avatar"
+  - link "CalebK"
+  - list:
+    - listitem: "661"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 12 views
+  - heading "Custom Smart Home skill with my own https backend" [level=3]:
+    - link "Custom Smart Home skill with my own https backend"
+  - text: Is it possible to create Custom "Smart Home" skill my own https backend without needing to use a lambda? What I am trying to achieve is, I created a custom skill with Invocation name as &...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'alexa-smart-home-skill'": alexa-smart-home-skill
+  - link "Simon's user avatar":
+    - img "Simon's user avatar"
+  - link "Simon"
+  - list:
+    - listitem: "129"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614037"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Diving into the results of the 2025 Developer Survey"
+    - listitem:
+      - 'link "Being unambiguous in what you want: the software engineer in a vibe coding world"'
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Will you help build our new visual identity?"
+    - listitem:
+      - link "Upcoming initiatives on Stack Overflow and across the Stack Exchange network..."
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "Updated design for the new live activity panel experiment"
+    - listitem:
+      - link "Further Experimentation with Comment Reputation Requirements"
+    - listitem:
+      - 'link "Stack Overflow Experiment: Safely expanding voting access"'
+  - text: Collectives
+  - link "see all"
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 27k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 15k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 11k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Is it feasible to switch between multiple USB devices on a single port without a mux?"
+    - listitem:
+      - link "How can I ascertain which kernel (not version; kernel) is in use?"
+    - listitem:
+      - link "Will this “power or-ing” circuit allow my linear voltage regulator to be powered without a connected battery?"
+    - listitem:
+      - link "Is it possible to recover a private key from an aggregate public key under strong assumptions?"
+    - listitem:
+      - link "I am learning Pre-Calculus, and why do different methods of solving trigonometric equations result in different answers?"
+    - listitem:
+      - link "How do we know we're finding all of the zeros to Riemann zeta function?"
+    - listitem:
+      - link "How do you get familiar with a location in order to cast Find the Path?"
+    - listitem:
+      - link "Adding an indicator LED to see MOSFET ON/OFF state"
+    - listitem:
+      - link "Will a research-based Ph.D. admission committee consider my application if my supervisor has only vaguely expressed his interest in supervising me?"
+    - listitem:
+      - link "Additional vertical spacing due to underlining"
+    - listitem:
+      - link "2.25^3.375 vs 3.375^2.25"
+    - listitem:
+      - link "Did John the Baptist fulfill Malachi 4:5-6? If so, in what way did he turn the hearts of the fathers to the children, etc?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.8.4.32459
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
