@@ -1,0 +1,573 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale DE in dev Einvironment and Realm europe
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- text: The 2025 Developer Survey results are in. Explore insights into technology and tools, careers, community and more.
+- link "View results"
+- text: .
+- link "dismiss"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,210,928 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 25"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 6 views
+  - heading "eslint rule FOR CLASSES ONLY that disallows methods and allows only properties" [level=3]:
+    - link "eslint rule FOR CLASSES ONLY that disallows methods and allows only properties"
+  - text: "class C { mymethod() { this.myprop // bad, when I use mobx I often get error \"cannot read property 'myprop' on undefined } } class C { mymethod = () => { this.myprop // good, `..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'eslint'": eslint
+    - listitem:
+      - link "show questions tagged 'typescript-eslint'": typescript-eslint
+  - link "srghma's user avatar":
+    - img "srghma's user avatar"
+  - link "srghma"
+  - list:
+    - listitem: 5,403
+  - time: asked 3 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "MySQL subquery Sends null value" [level=3]:
+    - link "MySQL subquery Sends null value"
+  - text: Co I have a subquery that should show the color, however, when I mix it with the frontend, it does not pull the data because it shows it as null, and if I delete the subquery and use Join It ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'mysql'": mysql
+    - listitem:
+      - link "show questions tagged 'laravel'": laravel
+    - listitem:
+      - link "show questions tagged 'frontend'": frontend
+    - listitem:
+      - link "show questions tagged 'subquery'": subquery
+    - listitem:
+      - link "show questions tagged 'backend'": backend
+  - link "Seok Jin's user avatar":
+    - img "Seok Jin's user avatar"
+  - link "Seok Jin"
+  - list:
+    - listitem: "1"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "What is the length of a python bytecode instruction in CPython?" [level=3]:
+    - link "What is the length of a python bytecode instruction in CPython?"
+  - text: Python docs on the dis module state that the length of a python bytecode instruction in CPython is 2 bytes (https://docs.python.org/3/library/dis.html) However, when I disassemble a function and look ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'bytecode'": bytecode
+  - link "Petras Purlys's user avatar":
+    - img "Petras Purlys's user avatar"
+  - link "Petras Purlys"
+  - list:
+    - listitem: 1,153
+  - time: asked 10 mins ago
+  - text: "-1 votes 1 answer 12 views"
+  - heading "One Test is not Rebuilding" [level=3]:
+    - link "One Test is not Rebuilding"
+  - text: I had a Project with multiple Test-Projects when ruining the tests one Test Project were always market as "Not Run". After some Try and Error I fond out that the Test Project where also not ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'visual-studio'": visual-studio
+    - listitem:
+      - link "show questions tagged 'testing'": testing
+  - link "Robert's user avatar":
+    - img "Robert's user avatar"
+  - link "Robert"
+  - list:
+    - listitem: "29"
+  - time: asked 17 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "EF core global query filter based on tenantid from http header is not working" [level=3]:
+    - link "EF core global query filter based on tenantid from http header is not working"
+  - text: I'm implementing multi-tenancy in my .NET Core application. The TenantId comes from the client application via an HTTP header. I have a service called ITenantProvider where I store the tenant ID, and ...
+  - list:
+    - listitem:
+      - link "show questions tagged '.net'": .net
+    - listitem:
+      - link "show questions tagged 'entity-framework'": entity-framework
+    - listitem:
+      - link "show questions tagged 'multi-tenant'": multi-tenant
+    - listitem:
+      - link "show questions tagged 'global-query-filter'": global-query-filter
+  - link "Varun Kumar Tomar's user avatar":
+    - img "Varun Kumar Tomar's user avatar"
+  - link "Varun Kumar Tomar"
+  - list:
+    - listitem: "1"
+  - time: asked 18 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "More control over bar height of shapviz::sv_force()" [level=3]:
+    - link "More control over bar height of shapviz::sv_force()"
+  - text: "I have tried to control bar height of shapviz force plot of my XGB model using custom wrapper shapviz function. But it resulted in no success. This is my code: force_plots <- mapply( FUN = ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'r'": r
+    - listitem:
+      - link "show questions tagged 'ggplot2'": ggplot2
+    - listitem:
+      - link "show questions tagged 'shap'": shap
+  - link "Moh Zulfajrin's user avatar":
+    - img "Moh Zulfajrin's user avatar"
+  - link "Moh Zulfajrin"
+  - list:
+    - listitem: "97"
+  - time: asked 20 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "How to recover from a deleted unix/local socket?" [level=3]:
+    - link "How to recover from a deleted unix/local socket?"
+  - text: The path where the unix/local socket was binded is deleted. How can you recover from this kind of error? I know that you'll have to open a new socket and bind it again, but how can you detect that the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'macos'": macos
+    - listitem:
+      - link "show questions tagged 'sockets'": sockets
+    - listitem:
+      - link "show questions tagged 'ipc'": ipc
+    - listitem:
+      - link "show questions tagged 'bsd'": bsd
+  - link "eduard's user avatar":
+    - img "eduard's user avatar"
+  - link "eduard"
+  - list:
+    - listitem: "27"
+  - time: asked 21 mins ago
+  - text: 0 votes 0 answers 16 views
+  - heading "How to solve the daylight saving time problem when the system does not use UTC [closed]" [level=3]:
+    - link "How to solve the daylight saving time problem when the system does not use UTC [closed]"
+  - text: How to solve the Daylight Saving Time problem without changing the JVM time zone and database session time zone to UTC. This is a system design issue used to solve the problems of time duplication and ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'datetime'": datetime
+    - listitem:
+      - link "show questions tagged 'utc'": utc
+    - listitem:
+      - link "show questions tagged 'dst'": dst
+  - link "GaryByd's user avatar":
+    - img "GaryByd's user avatar"
+  - link "GaryByd"
+  - list:
+    - listitem: "19"
+  - time: asked 22 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "XML document XAdES with Apache Santuario XML Security - ReferenceNotInitializedException" [level=3]:
+    - link "XML document XAdES with Apache Santuario XML Security - ReferenceNotInitializedException"
+  - text: "I want to build an XAdES signer in Java by using Apache Santuario XML security but when trying to sing the document I get the following excpetion: Exception in thread \"main\" org.apache.xml...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'xml'": xml
+    - listitem:
+      - link "show questions tagged 'xmlsec'": xmlsec
+    - listitem:
+      - link "show questions tagged 'xades'": xades
+  - link "davidm's user avatar":
+    - img "davidm's user avatar"
+  - link "davidm"
+  - list:
+    - listitem: 1,780
+  - time: asked 23 mins ago
+  - text: 1 vote 1 answer 15 views
+  - heading "Angular signals not updating select value" [level=3]:
+    - link "Angular signals not updating select value"
+  - text: I have a reusable angular component that handles cursor based pagination. However, the select value never changes on the HTML side, yet the change detection works. Example, select options are 10, 25, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'angular'": angular
+    - listitem:
+      - link "show questions tagged 'angular-changedetection'": angular-changedetection
+    - listitem:
+      - link "show questions tagged 'angular-signals'": angular-signals
+  - link "kibet's user avatar":
+    - img "kibet's user avatar"
+  - link "kibet"
+  - list:
+    - listitem: "421"
+  - time: asked 30 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "Issue with running training on multigpu using DDP" [level=3]:
+    - link "Issue with running training on multigpu using DDP"
+  - text: I am training a classifier model but since it is taking far too long I want to use multigpu for the training. The current code is rank = int(os.environ["RANK"]) world_size = int(os.environ[&...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'multi-gpu'": multi-gpu
+    - listitem:
+      - link "show questions tagged 'ddp'": ddp
+  - link "Shlok Sharma's user avatar":
+    - img "Shlok Sharma's user avatar"
+  - link "Shlok Sharma"
+  - list:
+    - listitem: "332"
+  - time: asked 32 mins ago
+  - text: 0 votes 0 answers 22 views
+  - heading "EF Core migrations are not executing in production" [level=3]:
+    - link "EF Core migrations are not executing in production"
+  - text: I have an ASP.NET Core 8 Web API project deployed on an Azure App Service. It's connected to an Azure SQL database. I'm using Entity Framework Core 8.0.7 (Design, Tools, SqlServer). In the Program.cs, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'sql-server'": sql-server
+    - listitem:
+      - link "show questions tagged 'entity-framework-core'": entity-framework-core
+    - listitem:
+      - link "show questions tagged 'asp.net-core-webapi'": asp.net-core-webapi
+    - listitem:
+      - link "show questions tagged 'database-migration'": database-migration
+    - listitem:
+      - link "show questions tagged 'entity-framework-migrations'": entity-framework-migrations
+  - link "bentobox11's user avatar":
+    - img "bentobox11's user avatar"
+  - link "bentobox11"
+  - list:
+    - listitem: "31"
+  - time: asked 45 mins ago
+  - text: 0 votes 0 answers 15 views
+  - heading "Is there a makefile vscode extension can do code jumping?" [level=3]:
+    - link "Is there a makefile vscode extension can do code jumping?"
+  - text: Is there a makefile vscode extension can do code jumping? When I use ctrl+left mouse on an makefile var,I can find the definition of this variable? I have installed the official microsoft makefile ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'makefile'": makefile
+    - listitem:
+      - link "show questions tagged 'vscode-extensions'": vscode-extensions
+  - link "wang kai's user avatar":
+    - img "wang kai's user avatar"
+  - link "wang kai"
+  - list:
+    - listitem: 1,757
+  - time: asked 51 mins ago
+  - text: "-1 votes 0 answers 21 views"
+  - heading "How to resolve HikariPool connection timeout without increasing pool size in Ballerina persist?" [level=3]:
+    - link "How to resolve HikariPool connection timeout without increasing pool size in Ballerina persist?"
+  - text: I'm encountering HikariPool-2 - Connection is not available, request timed out after 30006ms errors in my Ballerina service using the persist module. Due to infrastructure constraints, I cannot ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'hikaricp'": hikaricp
+    - listitem:
+      - link "show questions tagged 'ballerina'": ballerina
+    - listitem:
+      - link "show questions tagged 'ballerina-swan-lake'": ballerina-swan-lake
+  - link "Virul Nirmala Wickremesinghe's user avatar":
+    - img "Virul Nirmala Wickremesinghe's user avatar"
+  - link "Virul Nirmala Wickremesinghe"
+  - list:
+    - listitem: "27"
+  - time: asked 1 hour ago
+  - text: "-3 votes 0 answers 22 views"
+  - heading "Issue with Django product quantity [closed]" [level=3]:
+    - link "Issue with Django product quantity [closed]"
+  - text: I want to make sure that the selected quantity by the buyers is passed to the cart and the placed order, how will I do that
+  - list:
+    - listitem:
+      - link "show questions tagged 'django'": django
+  - link "Larry Drey's user avatar":
+    - img "Larry Drey's user avatar"
+  - link "Larry Drey"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614062"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - 'link "Being unambiguous in what you want: the software engineer in a vibe coding world"'
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Will you help build our new visual identity?"
+    - listitem:
+      - link "Upcoming initiatives on Stack Overflow and across the Stack Exchange network..."
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "Updated design for the new live activity panel experiment"
+    - listitem:
+      - link "Further Experimentation with Comment Reputation Requirements"
+    - listitem:
+      - 'link "Stack Overflow Experiment: Safely expanding voting access"'
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 35k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 27k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 11k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Propositional logic is not complete with respect to logical truth"
+    - listitem:
+      - link "Why did the scribes say that Jesus was possessed by an unclean spirit, according to Mark 3:30?"
+    - listitem:
+      - link "On the Catholic view of the atonement?"
+    - listitem:
+      - link "Which is better, configurable TLS version, or hardcoded TLS version?"
+    - listitem:
+      - link "Un-firing a low performer that turned into a high performer"
+    - listitem:
+      - link "LTSpice Diodes Inc. Schottky Diode Spice Model Question"
+    - listitem:
+      - link "Origin of Lagrangian field mechanics"
+    - listitem:
+      - link "Linear system of matrices"
+    - listitem:
+      - link "How to stop kate exec'ing itself"
+    - listitem:
+      - link "Detection of overgrown black holes"
+    - listitem:
+      - link "Does an 'estimate' have any legal meaning?"
+    - listitem:
+      - link "How do I connect to Active Directory to see Users and Computers?"
+    - listitem:
+      - link "Did US NEA teacher's union remove connection of Jews to Holocaust in its 2025 plans?"
+    - listitem:
+      - link "Why do inequivalent representations cause a problem when defining QFT?"
+    - listitem:
+      - link "How do I watch a CS2 demo from a previous game version?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.8.6.32596
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
