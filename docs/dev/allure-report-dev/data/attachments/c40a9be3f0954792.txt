@@ -1,0 +1,557 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale JP in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- text: The 2025 Developer Survey results are in. Explore insights into technology and tools, careers, community and more.
+- link "View results"
+- text: .
+- link "dismiss"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,211,129 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 23"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 5 views
+  - heading "\"404 page not found\" on docker push to local K3s Registry on ARM64 VM (UTM/QEMU) - I/O Bottleneck?" [level=3]:
+    - link "\"404 page not found\" on docker push to local K3s Registry on ARM64 VM (UTM/QEMU) - I/O Bottleneck?"
+  - text: I'm reaching out for help with a persistent issue I've been troubleshooting for days. I'm running a local K3s cluster and trying to deploy a private Docker Registry (registry:2 image) for my home ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'traefik'": traefik
+    - listitem:
+      - link "show questions tagged 'docker-registry'": docker-registry
+    - listitem:
+      - link "show questions tagged 'k3s'": k3s
+  - link "Andrej's user avatar":
+    - img "Andrej's user avatar"
+  - link "Andrej"
+  - list:
+    - listitem: "27"
+  - time: asked 3 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "How to filter values from struct by field in pyspark?" [level=3]:
+    - link "How to filter values from struct by field in pyspark?"
+  - text: I wonder how I can filter out objects from struct by condition that their id is in list presented in other column. Suppose I have dataframe df with columns event which has the type of list of Struct ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'pyspark'": pyspark
+  - link "Nourless's user avatar":
+    - img "Nourless's user avatar"
+  - link "Nourless"
+  - list:
+    - listitem: "904"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "Unable to fetch private endpoint's customer visible fqdn using the powershell script" [level=3]:
+    - link "Unable to fetch private endpoint's customer visible fqdn using the powershell script"
+  - text: I have the resoruces in the resource group with the virtual network integrated, public network access disabled and having private endpoints connectivity. I'm trying to fetch the customer visible DNS (...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'azure'": azure
+    - listitem:
+      - link "show questions tagged 'azure-powershell'": azure-powershell
+    - listitem:
+      - link "show questions tagged 'azure-private-link'": azure-private-link
+    - listitem:
+      - link "show questions tagged 'private-endpoint'": private-endpoint
+  - link "VivekAnandChakravarthy's user avatar":
+    - img "VivekAnandChakravarthy's user avatar"
+  - link "VivekAnandChakravarthy"
+  - list:
+    - listitem: "817"
+  - time: asked 11 mins ago
+  - text: 0 votes 0 answers 15 views
+  - 'heading "Flutter: Linear Gradient Not Connecting at Center in Container with Row of Widgets" [level=3]':
+    - 'link "Flutter: Linear Gradient Not Connecting at Center in Container with Row of Widgets"'
+  - text: I’m trying to create a top bar using a Container with a horizontal LinearGradient background and a Row of widgets inside it. However, even though I’m using Alignment.centerLeft to Alignment....
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'mobile'": mobile
+    - listitem:
+      - link "show questions tagged 'flutter-dependencies'": flutter-dependencies
+  - link "Karthick Raja's user avatar":
+    - img "Karthick Raja's user avatar"
+  - link "Karthick Raja"
+  - list:
+    - listitem: "31"
+  - time: asked 15 mins ago
+  - text: 0 votes 0 answers 18 views
+  - heading "Android studio freezes in ubuntu" [level=3]:
+    - link "Android studio freezes in ubuntu"
+  - text: Tried to search other questions, but they they are all about some part of android studio not working, my problem is different. As soon as I open android studio in my Ubuntu 24.04.2 LTS, it freezes ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'android-studio'": android-studio
+  - link "Husen Patel's user avatar":
+    - img "Husen Patel's user avatar"
+  - link "Husen Patel"
+  - list:
+    - listitem: "38"
+  - time: asked 28 mins ago
+  - text: 0 votes 1 answer 36 views
+  - heading "Decorator isn't valid inside of <script> in blade.php" [level=3]:
+    - link "Decorator isn't valid inside of <script> in blade.php"
+  - text: I don't get it why it keep returning decorators are not valid here inside of a blade.php file the @json($roles), @json($units), and @json($vendors) keep being red underlined as decorators are not ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'laravel-blade'": laravel-blade
+  - link "Ruby Calderon's user avatar":
+    - img "Ruby Calderon's user avatar"
+  - link "Ruby Calderon"
+  - list:
+    - listitem: "21"
+  - time: asked 42 mins ago
+  - text: 0 votes 0 answers 19 views
+  - heading "Can you give me advice on memory issue from my flutter project?" [level=3]:
+    - link "Can you give me advice on memory issue from my flutter project?"
+  - text: The app I developed shows the highest memory usage on my device—even more than YouTube, Instagram, or other SNS apps—despite not handling videos or large image data. I’ve searched extensively for ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'memory'": memory
+  - link "Hyejung's user avatar":
+    - img "Hyejung's user avatar"
+  - link "Hyejung"
+  - list:
+    - listitem: 1,302
+  - time: asked 43 mins ago
+  - text: 0 votes 0 answers 15 views
+  - heading "Improve time difference calculation between Event Logs with powershell" [level=3]:
+    - link "Improve time difference calculation between Event Logs with powershell"
+  - text: I use PowerShell to retrieve the last two application logs with event ID 654 and calculate the time difference between them. If the time difference between the two logs is more than 30 minutes, I will ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'powershell'": powershell
+  - link "Arbelac's user avatar":
+    - img "Arbelac's user avatar"
+  - link "Arbelac"
+  - list:
+    - listitem: 1,944
+  - time: asked 49 mins ago
+  - text: 0 votes 0 answers 18 views
+  - heading "Getting specific keywords inside event log via powershell" [level=3]:
+    - link "Getting specific keywords inside event log via powershell"
+  - text: I want to filter the event log with a specific keyword using PowerShell. I wrote the following script. It actually works, but what is the best practice? In other words, is it correct to use ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'powershell'": powershell
+  - link "Arbelac's user avatar":
+    - img "Arbelac's user avatar"
+  - link "Arbelac"
+  - list:
+    - listitem: 1,944
+  - time: asked 1 hour ago
+  - text: "-1 votes 0 answers 16 views"
+  - heading "Connect to repo.maven.apache.org:443" [level=3]:
+    - link "Connect to repo.maven.apache.org:443"
+  - text: "today I run the old project, but get this problem: FAILURE: Build failed with an exception. * What went wrong: A problem occurred configuring project ':gradle-plugin'. Could not resolve org...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'android-studio'": android-studio
+    - listitem:
+      - link "show questions tagged 'maven'": maven
+    - listitem:
+      - link "show questions tagged 'gradle'": gradle
+  - link "famfamfam's user avatar":
+    - img "famfamfam's user avatar"
+  - link "famfamfam"
+  - list:
+    - listitem: "551"
+  - time: asked 1 hour ago
+  - text: 0 votes 1 answer 19 views
+  - heading "Getting started with ESP32" [level=3]:
+    - link "Getting started with ESP32"
+  - text: "I have been a Java developer all of my careers and now I find myself wanting to experiment with embedded programming. I ran into this project: https://docs.arduino.cc/software/ide/ I have followed the ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'arduino'": arduino
+    - listitem:
+      - link "show questions tagged 'embedded'": embedded
+  - link "user3495734's user avatar":
+    - img "user3495734's user avatar"
+  - link "user3495734"
+  - list:
+    - listitem: "63"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 11 views
+  - heading "Can't install m2doc on Eclipse, running on Ubuntu" [level=3]:
+    - link "Can't install m2doc on Eclipse, running on Ubuntu"
+  - text: "Running the following version of Eclipse Modeling Tools Version: 2025-06 (4.36.0) Build id: 20250605-1316 Installed Sirius and some other custom software and then tried m2doc installation of the ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'installation'": installation
+    - listitem:
+      - link "show questions tagged 'm2doc'": m2doc
+  - link "Anton Hristozov's user avatar":
+    - img "Anton Hristozov's user avatar"
+  - link "Anton Hristozov"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 1 answer 27 views
+  - heading "Initialize Firebase App using RNFirebase Expo" [level=3]:
+    - link "Initialize Firebase App using RNFirebase Expo"
+  - text: "I am trying to initialize my firebase app using the new modular framework from rnfirebase.io but I am receiving the error below; Here is my attempt: import { getApps, initializeApp } from \"@react-..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'firebase'": firebase
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+    - listitem:
+      - link "show questions tagged 'expo'": expo
+  - link "David Henry's user avatar":
+    - img "David Henry's user avatar"
+  - link "David Henry"
+  - list:
+    - listitem: 3,090
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Nextjs Amplify images gives 404" [level=3]:
+    - link "Nextjs Amplify images gives 404"
+  - text: "Using the Nextjs 15 app router-based project and deploying on AWS Amplify. The project is a turborepo setup, and the configuration files are next.config.ts import { withSentryConfig } from \"@..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'next.js'": next.js
+    - listitem:
+      - link "show questions tagged 'aws-amplify'": aws-amplify
+    - listitem:
+      - link "show questions tagged 'turborepo'": turborepo
+  - link "Anuj TBE's user avatar":
+    - img "Anuj TBE's user avatar"
+  - link "Anuj TBE"
+  - list:
+    - listitem: 9,920
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 20 views
+  - heading "Sudden Faulted Errors in Azure WebApps" [level=3]:
+    - link "Sudden Faulted Errors in Azure WebApps"
+  - text: I have a .NET web API hosted on azure webapp (4 instances), this API is integrated with at least 10 different external APIs, randomly at times (low, high, really any traffic), one of my APIs ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged '.net'": .net
+    - listitem:
+      - link "show questions tagged 'azure'": azure
+    - listitem:
+      - link "show questions tagged 'http'": http
+    - listitem:
+      - link "show questions tagged 'asp.net-web-api'": asp.net-web-api
+    - listitem:
+      - link "show questions tagged 'azure-web-app-service'": azure-web-app-service
+  - link "mahmoudmh's user avatar":
+    - img "mahmoudmh's user avatar"
+  - link "mahmoudmh"
+  - list:
+    - listitem: "71"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1614076"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - 'link "A new worst coder has entered the chat: vibe coding without code knowledge"'
+    - listitem:
+      - 'link "Python: Come for the language, stay for the community"'
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Will you help build our new visual identity?"
+    - listitem:
+      - link "Upcoming initiatives on Stack Overflow and across the Stack Exchange network..."
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "Further Experimentation with Comment Reputation Requirements"
+    - listitem:
+      - link "Updated design for the new live activity panel experiment"
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 64k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 27k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 21k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "The Unreasonable Effectiveness of Digital Representation"
+    - listitem:
+      - link "Harvesting Helium-3 from the atmosphere of Uranus"
+    - listitem:
+      - 'link "Identify: Revenge thriller with deep-sea diving element"'
+    - listitem:
+      - link "What was the first JRPG (or RPG) game that featured custom automatic action(s)?"
+    - listitem:
+      - link "Why did the scribes say that Jesus was possessed by an unclean spirit, according to Mark 3:30?"
+    - listitem:
+      - link "How to interpret Stieltjes transform"
+    - listitem:
+      - link "How does one parallelize WindingPolygon?"
+    - listitem:
+      - link "Have periodic solutions to the 3 Body Problem been used in space exploration?"
+    - listitem:
+      - link "Excel change string to boolean operation"
+    - listitem:
+      - link "2D absolute optical position sensor"
+    - listitem:
+      - link "Why did 65%-92.5% throttle cause excessive erosion of the LEM descent engine?"
+    - listitem:
+      - link "Does an 'estimate' have any legal meaning?"
+    - listitem:
+      - link "Does regularizing all parameters have any effect?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.8.6.32596
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
