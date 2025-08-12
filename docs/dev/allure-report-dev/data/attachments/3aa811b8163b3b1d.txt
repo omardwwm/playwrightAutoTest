@@ -1,0 +1,571 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale JP in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,208,438 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 24"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 3 views
+  - heading "Application is crashed on startup after migration to Android 16" [level=3]:
+    - link "Application is crashed on startup after migration to Android 16"
+  - text: "My application is crashed with below logs after migrating to Android 16. What could be the issue for this? java.lang.RuntimeException: Unable to instantiate application .care.App package .care: java...."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'kotlin'": kotlin
+    - listitem:
+      - link "show questions tagged 'android-16'": android-16
+  - link "Vishal's user avatar":
+    - img "Vishal's user avatar"
+  - link "Vishal"
+  - list:
+    - listitem: "31"
+  - time: asked 3 mins ago
+  - text: 0 votes 0 answers 23 views
+  - heading "Blocking Windows key from Unity doesn’t work when game is in foreground" [level=3]:
+    - link "Blocking Windows key from Unity doesn’t work when game is in foreground"
+  - text: Before we start, yes, this solution works but only outside Unity. Intent I'm trying to prevent the Windows key from interrupting my game. I wrote a DLL that registers a WH_KEYBOARD_LL windows hook (...
+  - list:
+    - listitem:
+      - link "show questions tagged 'unity-game-engine'": unity-game-engine
+    - listitem:
+      - link "show questions tagged 'winapi'": winapi
+    - listitem:
+      - link "show questions tagged 'dll'": dll
+    - listitem:
+      - link "show questions tagged 'wh-keyboard-ll'": wh-keyboard-ll
+  - link "Emmanuel's user avatar":
+    - img "Emmanuel's user avatar"
+  - link "Emmanuel"
+  - list:
+    - listitem: 17.1k
+  - time: asked 18 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "SwiftLintBuildToolPlugin doesn't have a bundle identifier" [level=3]:
+    - link "SwiftLintBuildToolPlugin doesn't have a bundle identifier"
+  - text: I integrated SwiftLint into my HelloWorld app to explore how I can incorporate it into my development and CI flow. While it works during development, I face a problem in my pipeline during archiving. ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'xcode'": xcode
+    - listitem:
+      - link "show questions tagged 'continuous-integration'": continuous-integration
+    - listitem:
+      - link "show questions tagged 'swiftlint'": swiftlint
+  - link "netshark1000's user avatar":
+    - img "netshark1000's user avatar"
+  - link "netshark1000"
+  - list:
+    - listitem: 7,423
+  - time: asked 22 mins ago
+  - text: "-1 votes 0 answers 21 views"
+  - heading "Is there any way to convert html (laravel blade) to pdf?" [level=3]:
+    - link "Is there any way to convert html (laravel blade) to pdf?"
+  - text: I want to convert a blade php view into a pdf. I have tried several libraries such as DomPDF but when I convert it into a pdf document the layout becomes messy, besides DomPDF I also use spatie / ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'laravel'": laravel
+    - listitem:
+      - link "show questions tagged 'pdf'": pdf
+    - listitem:
+      - link "show questions tagged 'pdf-generation'": pdf-generation
+    - listitem:
+      - link "show questions tagged 'laravel-12'": laravel-12
+  - link "NAUFAL_ ARZ's user avatar":
+    - img "NAUFAL_ ARZ's user avatar"
+  - link "NAUFAL_ ARZ"
+  - list:
+    - listitem: "13"
+  - time: asked 26 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "Yocto with RPM - Some packages from local repository have incorrect checksum at do_rootfs step" [level=3]:
+    - link "Yocto with RPM - Some packages from local repository have incorrect checksum at do_rootfs step"
+  - text: We have a Yocto build which is using RPM package system. One of the last steps is to populate the rootfs by "installing" all the RPMs it has built. At that step it fails because every rpm ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'yocto'": yocto
+    - listitem:
+      - link "show questions tagged 'rpm'": rpm
+    - listitem:
+      - link "show questions tagged 'bitbake'": bitbake
+    - listitem:
+      - link "show questions tagged 'dnf'": dnf
+  - link "Megakoresh's user avatar":
+    - img "Megakoresh's user avatar"
+  - link "Megakoresh"
+  - list:
+    - listitem: "826"
+  - time: asked 27 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "React Bootstrap Navbar Collapse Not Showing the Links On Default" [level=3]:
+    - link "React Bootstrap Navbar Collapse Not Showing the Links On Default"
+  - text: So I'm trying to use react bootstrap by copy pasting the exact code from the website, however even on default where the screen width is more than 992px (I'm using expand lg) the links just doesn't ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'navbar'": navbar
+    - listitem:
+      - link "show questions tagged 'react-bootstrap'": react-bootstrap
+  - link "evriel's user avatar":
+    - img "evriel's user avatar"
+  - link "evriel"
+  - list:
+    - listitem: "31"
+  - time: asked 31 mins ago
+  - text: 0 votes 0 answers 17 views
+  - 'heading "Log4j2: Send email only for a specific exception (ConfigException)" [level=3]':
+    - 'link "Log4j2: Send email only for a specific exception (ConfigException)"'
+  - text: "I want Log4j2 to send an email only when a ConfigException is logged. All other exceptions should be ignored by the email appender. Here’s a minimal example: log4j2.xml <Configuration> <..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'logging'": logging
+    - listitem:
+      - link "show questions tagged 'log4j2'": log4j2
+    - listitem:
+      - link "show questions tagged 'splunk'": splunk
+  - link "tamaramaria's user avatar":
+    - img "tamaramaria's user avatar"
+  - link "tamaramaria"
+  - list:
+    - listitem: "193"
+  - time: asked 36 mins ago
+  - text: 0 votes 0 answers 7 views
+  - 'heading "Airflow ModuleNotFoundError: No module named ''pyarrow''" [level=3]':
+    - 'link "Airflow ModuleNotFoundError: No module named ''pyarrow''"'
+  - text: I'm trying Apache Airflow for the first time and built a simple ETL. But after loading the data and proceeding to the transform phase, it throws an error because it says pyarrow was not found. Im ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'airflow'": airflow
+    - listitem:
+      - link "show questions tagged 'etl'": etl
+    - listitem:
+      - link "show questions tagged 'data-engineering'": data-engineering
+  - link "Enzo Martins's user avatar":
+    - img "Enzo Martins's user avatar"
+  - link "Enzo Martins"
+  - list:
+    - listitem: "1"
+  - time: asked 37 mins ago
+  - text: 0 votes 0 answers 26 views
+  - heading "Margin for div item not working on mobile view" [level=3]:
+    - link "Margin for div item not working on mobile view"
+  - text: I'm working on updating a (pretty old) website to display a slideshow in place of an image. It is working well and displaying everything correctly on desktop so I've gone ahead to upload it onto the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'css'": css
+  - link "winter's user avatar":
+    - img "winter's user avatar"
+  - link "winter"
+  - list:
+    - listitem: "57"
+  - time: asked 57 mins ago
+  - text: 2 votes 1 answer 37 views
+  - heading "How do I stub out an impl Trait-returning function?" [level=3]:
+    - link "How do I stub out an impl Trait-returning function?"
+  - text: "If I have a function that I haven't yet had time to implement while I'm working on its higher-leve callers, I can stub it out with a panic: fn foo() -> u64 { panic!(\"TODO\"); } However, ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'rust'": rust
+    - listitem:
+      - link "show questions tagged 'traits'": traits
+  - link "jacobsa's user avatar":
+    - img "jacobsa's user avatar"
+  - link "jacobsa"
+  - list:
+    - listitem: 6,749
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 11 views
+  - heading "Selenium cannot log in to ZTE ZXHN H298A modem admin panel despite correct credentials" [level=3]:
+    - link "Selenium cannot log in to ZTE ZXHN H298A modem admin panel despite correct credentials"
+  - text: "I am trying to automate the login and PPP credential update process for a ZTE ZXHN H298A modem (firmware TTN.26_240416) using Selenium and Python. The exact manual steps are: Open the modem’s web ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python-3.x'": python-3.x
+    - listitem:
+      - link "show questions tagged 'selenium-webdriver'": selenium-webdriver
+    - listitem:
+      - link "show questions tagged 'selenium-chromedriver'": selenium-chromedriver
+    - listitem:
+      - link "show questions tagged 'ui-automation'": ui-automation
+  - link "raysefo's user avatar":
+    - img "raysefo's user avatar"
+  - link "raysefo"
+  - list:
+    - listitem: "472"
+  - time: asked 1 hour ago
+  - text: "-1 votes 0 answers 15 views"
+  - heading "What are the breaking changes in Rails 7 to Rails 8? [closed]" [level=3]:
+    - link "What are the breaking changes in Rails 7 to Rails 8? [closed]"
+  - text: When upgrading from Rails 7 to Rails 8 is there any lists or complete release note in one place to verify the breaking changes?
+  - list:
+    - listitem:
+      - link "show questions tagged 'ruby-on-rails'": ruby-on-rails
+    - listitem:
+      - link "show questions tagged 'ruby-on-rails-7'": ruby-on-rails-7
+    - listitem:
+      - link "show questions tagged 'ruby-on-rails-8'": ruby-on-rails-8
+  - link "Mooventhan's user avatar":
+    - img "Mooventhan's user avatar"
+  - link "Mooventhan"
+  - list:
+    - listitem: "117"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 24 views
+  - 'heading "Error inflating class androidx.camera.view.PreviewView, Caused by: java.lang.reflect.InvocationTargetException" [level=3]':
+    - 'link "Error inflating class androidx.camera.view.PreviewView, Caused by: java.lang.reflect.InvocationTargetException"'
+  - text: "use androidx.camera.view.PreviewView in my android project Caused by: android.view.InflateException: Binary XML file line #8 in com.zijin.izijin.test:layout/activity_my_scan: Error inflating class ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'kotlin'": kotlin
+  - link "user25031347's user avatar":
+    - img "user25031347's user avatar"
+  - link "user25031347"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 11 views
+  - heading "Text replacement pop-up blocks the focus on the text field underneath the selected text field in iOS [closed]" [level=3]:
+    - link "Text replacement pop-up blocks the focus on the text field underneath the selected text field in iOS [closed]"
+  - text: Please see the demo I have two text fields, an email field, and a password field. Here, I am unable to select the password field immediately after filling in the email field through text replacement. ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'uikit'": uikit
+  - link "Aravind Bhuvanendran's user avatar":
+    - img "Aravind Bhuvanendran's user avatar"
+  - link "Aravind Bhuvanendran"
+  - list:
+    - listitem: "666"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 24 views
+  - heading "About test set of XGBoost for Time Series Forecasting" [level=3]:
+    - link "About test set of XGBoost for Time Series Forecasting"
+  - text: "I have questions about using XGBoost for the Time Series Forecasting problem. According to these articles: Multi-step time series forecasting with XGBoost | Towards Data Science XGBoost for Multi-..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'time-series'": time-series
+    - listitem:
+      - link "show questions tagged 'xgboost'": xgboost
+    - listitem:
+      - link "show questions tagged 'forecasting'": forecasting
+  - link "Coleman YU's user avatar":
+    - img "Coleman YU's user avatar"
+  - link "Coleman YU"
+  - list:
+    - listitem: "73"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1613896"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Renewing Chat on Stack Overflow"
+    - listitem:
+      - link "AI isn’t stealing your job, it’s helping you find it"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Will you help build our new visual identity?"
+    - listitem:
+      - link "Upcoming initiatives on Stack Overflow and across the Stack Exchange network..."
+    - listitem:
+      - link "Updated design for the new live activity panel experiment"
+    - listitem:
+      - link "Further Experimentation with Comment Reputation Requirements"
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 35k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 15k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - heading "R Language" [level=1]:
+    - link "R Language"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where data scientists and AI researchers gather to find, share, and learn about R and other subtags like knitr and dplyr.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Grid Result Scroll Bars in SSMS 21"
+    - listitem:
+      - link "In Matthew 17:4, what was Peter’s intention in proposing to make three tents for Jesus, Moses, and Elijah?"
+    - listitem:
+      - link "\"To count the trees in Siberia\", a legitimate Russian proverb?"
+    - listitem:
+      - link "Did recently killed Al Jazeera journalist Anas al-Sharif call the Oct 7 attackers \"heroes\"?"
+    - listitem:
+      - link "What is the name of the following moral theory?"
+    - listitem:
+      - link "Where should I host software for individual papers in 2025 now that GitHub is part of Microsoft AI?"
+    - listitem:
+      - link "My dad achieved a USCF Master title in the late 1950s or early 1960s. Are there records of his title, games, or tournaments?"
+    - listitem:
+      - link "Uncertain on wiring in ceiling box"
+    - listitem:
+      - link "What's causing this weird \"pinching\"?"
+    - listitem:
+      - link "Can macOS report the capabilities of an attached USB C cable?"
+    - listitem:
+      - link "Does \"no one\" in John 10:27-29 include the sheep itself (the individual himself)?"
+    - listitem:
+      - 'link "Probability of no triangle trios among n random lengths in [0,1]: Alternative Proofs"'
+    - listitem:
+      - link "I failed to make Claus benzene. (With sticks.)"
+    - listitem:
+      - link "What exactly classifies as a \"miss\"?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.8.11.32701
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
