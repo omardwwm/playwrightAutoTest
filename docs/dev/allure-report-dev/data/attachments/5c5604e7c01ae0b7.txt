@@ -1,0 +1,558 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale JP in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,208,597 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 26"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 10 views
+  - heading "Getting permission denied to rls policy in Redshift" [level=3]:
+    - link "Getting permission denied to rls policy in Redshift"
+  - text: I have an employee table which has data for all region and countries. As an admin, I want to enable RLS on this table so that the end user can only view the data he is allowed to. The access ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'postgresql'": postgresql
+    - listitem:
+      - link "show questions tagged 'amazon-web-services'": amazon-web-services
+    - listitem:
+      - link "show questions tagged 'amazon-redshift'": amazon-redshift
+    - listitem:
+      - link "show questions tagged 'permission-denied'": permission-denied
+    - listitem:
+      - link "show questions tagged 'rls'": rls
+  - link "Alex's user avatar":
+    - img "Alex's user avatar"
+  - link "Alex"
+  - list:
+    - listitem: "81"
+  - time: asked 8 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Marker Interface" [level=3]:
+    - link "Marker Interface"
+  - text: Can anyone help me understand how or why I should Marker interface. For example given code Person class implements Serializable interface but I am serializing object on my own by using ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'serialization'": serialization
+  - link "vaibhav1291's user avatar":
+    - img "vaibhav1291's user avatar"
+  - link "vaibhav1291"
+  - list:
+    - listitem: "1"
+  - time: asked 8 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Merge multiple IPsec VPN connections" [level=3]:
+    - link "Merge multiple IPsec VPN connections"
+  - text: "I have three local networks at different locations: Network A with IP range 192.168.20.0 Network B with IP range 192.168.10.0 Network C with IP range 192.168.178.0 Eventually, I want to be able to ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'vpn'": vpn
+    - listitem:
+      - link "show questions tagged 'ipsec'": ipsec
+  - link "Niclas's user avatar":
+    - img "Niclas's user avatar"
+  - link "Niclas"
+  - list:
+    - listitem: "133"
+  - time: asked 11 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "How can I make fixed spacing after series in WinForms chart" [level=3]:
+    - link "How can I make fixed spacing after series in WinForms chart"
+  - text: I'm using .NET Framework 4.8.1 C#. How can I make fixed spacing(e.g., 32px) after series in WinForms chart? The chart should show the fixed spacing after series regardless of zoom or position. Adding ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'winforms'": winforms
+  - link "FALTO's user avatar":
+    - img "FALTO's user avatar"
+  - link "FALTO"
+  - list:
+    - listitem: "15"
+  - time: asked 13 mins ago
+  - text: 0 votes 1 answer 25 views
+  - heading "Select top 3 users based on their recipes' popularity" [level=3]:
+    - link "Select top 3 users based on their recipes' popularity"
+  - text: "I am trying to get the top of users and order them by popularity of their recipes User.php public function recipes(): HasMany { return $this->hasMany(Recipe::class); } Recipe...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'laravel'": laravel
+    - listitem:
+      - link "show questions tagged 'eloquent'": eloquent
+  - link "Dmytro Shved's user avatar":
+    - img "Dmytro Shved's user avatar"
+  - link "Dmytro Shved"
+  - list:
+    - listitem: "93"
+  - time: asked 24 mins ago
+  - text: 0 votes 0 answers 20 views
+  - 'heading "ValueError when fitting model: Expected 2D array, got 1D array instead" [level=3]':
+    - 'link "ValueError when fitting model: Expected 2D array, got 1D array instead"'
+  - text: "import numpy as np from sklearn.linear_model import LinearRegression X = np.array([1, 2, 3, 4, 5]) # Features y = np.array([2, 4, 6, 8, 10]) # Target model = LinearRegression() model.fit(X, y) # &..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'machine-learning'": machine-learning
+  - link "Bahi Rahman's user avatar":
+    - img "Bahi Rahman's user avatar"
+  - link "Bahi Rahman"
+  - list:
+    - listitem: "1"
+  - time: asked 35 mins ago
+  - text: "-2 votes 0 answers 18 views"
+  - heading "push changes & new additions to my private repo from a cloned public repo" [level=3]:
+    - link "push changes & new additions to my private repo from a cloned public repo"
+  - text: I have created a project app which has 2 sub folders mod_auth - cloned from public repo and mod_rest - creating my own code in a private repo as app. app has 2 branches main and develop. I work in ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'git'": git
+    - listitem:
+      - link "show questions tagged 'github'": github
+  - link "pbs_mhl's user avatar":
+    - img "pbs_mhl's user avatar"
+  - link "pbs_mhl"
+  - list:
+    - listitem: "73"
+  - time: asked 38 mins ago
+  - text: 1 vote 0 answers 29 views
+  - heading "How do I use Excel interop library in Visual Studio Code?" [level=3]:
+    - link "How do I use Excel interop library in Visual Studio Code?"
+  - text: "I am trying to write a program to edit excel files. I have the NuGet package installed and have added it to my file: using Excel = Microsoft.Office.Interop.Excel; I get this error: Could not load ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'excel'": excel
+    - listitem:
+      - link "show questions tagged 'visual-studio-code'": visual-studio-code
+    - listitem:
+      - link "show questions tagged 'excel-interop'": excel-interop
+  - link "James's user avatar":
+    - img "James's user avatar"
+  - link "James"
+  - list:
+    - listitem: "11"
+  - time: asked 1 hour ago
+  - text: 1 vote 1 answer 40 views
+  - heading "How to return an empty **peekable** iterator in Rust?" [level=3]:
+    - link "How to return an empty **peekable** iterator in Rust?"
+  - text: "I have the following Rust fuction fn query_list_or_empty<'a, P, R>( conn: &'a mut SimpleConnection, sql: &'a str, params: P, ) -> Peekable<Box<dyn Iterator<Item = ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'rust'": rust
+    - listitem:
+      - link "show questions tagged 'iterator'": iterator
+  - link "Roeya's user avatar":
+    - img "Roeya's user avatar"
+  - link "Roeya"
+  - list:
+    - listitem: "81"
+  - time: asked 1 hour ago
+  - text: 2 votes 0 answers 16 views
+  - heading "SDK 0.76.9 (Expo 52) Modal upward too much when the keyboard appears on Android" [level=3]:
+    - link "SDK 0.76.9 (Expo 52) Modal upward too much when the keyboard appears on Android"
+  - text: "Minimal reproducible example import { SafeAreaView, Dimensions, View, Modal, TouchableOpacity, TextInput, Text, } from \"react-native\"; import { useState } from \"react\"..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+    - listitem:
+      - link "show questions tagged 'keyboard'": keyboard
+    - listitem:
+      - link "show questions tagged 'modal-dialog'": modal-dialog
+  - link "holly's user avatar":
+    - img "holly's user avatar"
+  - link "holly"
+  - list:
+    - listitem: "21"
+  - time: asked 1 hour ago
+  - text: 2 votes 0 answers 14 views
+  - heading "Using Kotlin value class with @ModelAttribute in Spring (multipart/form-data binding issue)" [level=3]:
+    - link "Using Kotlin value class with @ModelAttribute in Spring (multipart/form-data binding issue)"
+  - text: "@JvmInline value class Email( @field:Size(max = 100) @field:Email val value: String, ) data class RequestVerifyEmail( val email: Email . . . ) @PostMapping fun verifyEmail(@..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'spring'": spring
+    - listitem:
+      - link "show questions tagged 'kotlin'": kotlin
+    - listitem:
+      - link "show questions tagged 'modelattribute'": modelattribute
+    - listitem:
+      - link "show questions tagged 'value-class'": value-class
+  - link "hyungchan kim's user avatar":
+    - img "hyungchan kim's user avatar"
+  - link "hyungchan kim"
+  - list:
+    - listitem: "21"
+  - time: asked 1 hour ago
+  - text: 2 votes 0 answers 11 views
+  - heading "CognitoIdentityProviderClient fails to construct URL from provided region" [level=3]:
+    - link "CognitoIdentityProviderClient fails to construct URL from provided region"
+  - text: "I'm trying to authenticate to AWS cognito using the @aws-sdk/client-cognito-identity-provider library // Truncated code import { AuthFlowType, CognitoIdentityProviderClient, InitiateAuthCommand,..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'authentication'": authentication
+    - listitem:
+      - link "show questions tagged 'amazon-cognito'": amazon-cognito
+    - listitem:
+      - link "show questions tagged 'aws-sdk-js'": aws-sdk-js
+    - listitem:
+      - link "show questions tagged 'k6'": k6
+  - link "Gummi A's user avatar":
+    - img "Gummi A's user avatar"
+  - link "Gummi A"
+  - list:
+    - listitem: "21"
+  - time: asked 1 hour ago
+  - text: 2 votes 0 answers 8 views
+  - heading "Why is the Azure AI agent (Semantic Kernel) not using the configured MCP tools despite explicit instructions?" [level=3]:
+    - link "Why is the Azure AI agent (Semantic Kernel) not using the configured MCP tools despite explicit instructions?"
+  - text: "Context: Using AzureAIAgent from Semantic Kernel (semantic-kernel==1.30.0,azure.identity==1.21.0,azure.ai.projects==1.0.0b8) Load tools from an MCP server Add those tools as a plugin to the agent ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python-3.x'": python-3.x
+    - listitem:
+      - link "show questions tagged 'model-context-protocol'": model-context-protocol
+    - listitem:
+      - link "show questions tagged 'semantic-kernel'": semantic-kernel
+    - listitem:
+      - link "show questions tagged 'azure-ai-foundry'": azure-ai-foundry
+  - link "Prajwal's user avatar":
+    - img "Prajwal's user avatar"
+  - link "Prajwal"
+  - list:
+    - listitem: "21"
+  - time: asked 1 hour ago
+  - text: 3 votes 0 answers 12 views
+  - heading "Getting exception while exporting Certificate Key PEM file using Power Shell" [level=3]:
+    - link "Getting exception while exporting Certificate Key PEM file using Power Shell"
+  - text: "Trying to export the Certificate Key PEM file using Power Shell but getting the exception - Exception calling \"GetRSAPrivateKey\" with \"1\" argument(s): \"Key not valid for use ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'powershell'": powershell
+    - listitem:
+      - link "show questions tagged 'powershell-4.0'": powershell-4.0
+  - link "The G.A.'s user avatar":
+    - img "The G.A.'s user avatar"
+  - link "The G.A."
+  - list:
+    - listitem: "31"
+  - time: asked 1 hour ago
+  - text: 2 votes 0 answers 11 views
+  - heading "How to separate built-in object from user objects?" [level=3]:
+    - link "How to separate built-in object from user objects?"
+  - text: I'm trying to write a function TypeNameEx which will return a string which, using a call to VarType(), effectively identifies the type of a a (variant) variable, eg VarType 2 returns integer and ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'class'": class
+    - listitem:
+      - link "show questions tagged 'object'": object
+    - listitem:
+      - link "show questions tagged 'libreoffice-basic'": libreoffice-basic
+  - link "SVCooper's user avatar":
+    - img "SVCooper's user avatar"
+  - link "SVCooper"
+  - list:
+    - listitem: "21"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1613907"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Renewing Chat on Stack Overflow"
+    - listitem:
+      - link "AI isn’t stealing your job, it’s helping you find it"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Will you help build our new visual identity?"
+    - listitem:
+      - link "Upcoming initiatives on Stack Overflow and across the Stack Exchange network..."
+    - listitem:
+      - link "Updated design for the new live activity panel experiment"
+    - listitem:
+      - link "Further Experimentation with Comment Reputation Requirements"
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 64k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 24k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "R Language" [level=1]:
+    - link "R Language"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where data scientists and AI researchers gather to find, share, and learn about R and other subtags like knitr and dplyr.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "The singularity is..... nie?"
+    - listitem:
+      - link "Is Adj N Adj possible?"
+    - listitem:
+      - link "Can metal atoms act as ligands?"
+    - listitem:
+      - link "How do I combine bold and regular text in a PlotLabel?"
+    - listitem:
+      - link "What violent acts or injuries are attributable to Palestine Action?"
+    - listitem:
+      - link "How many supplements are merged into the core rules when D&D 3e becomes 3.5e?"
+    - listitem:
+      - link "Need to use Helvetica as sffamily by default (NimbusSans) in Xelatex"
+    - listitem:
+      - link "Why am I experiencing these problems updating LibreOffice?"
+    - listitem:
+      - link "What's the difference between democracy and totalitarianism if, even in democracy, we must respect laws set by parties we didn't vote for?"
+    - listitem:
+      - link "When was this builder's paper produced?"
+    - listitem:
+      - link "Why did Spinoza call his magnum opus \"Ethics\"?"
+    - listitem:
+      - link "Writing an intimate assault scene via cannibalism"
+    - listitem:
+      - link "Dropdown width with very long options"
+    - listitem:
+      - link "Is the logic of the original smoking study valid?"
+    - listitem:
+      - link "JavaScript Text Summarizer"
+    - listitem:
+      - link "Multithreaded array summation in Java - best practice, structure, acceptable use of Constant classes. There is no concurrency?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.8.12.32759
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
