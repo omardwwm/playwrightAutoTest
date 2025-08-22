@@ -1,0 +1,561 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale JP in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,206,904 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 20"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 9 views
+  - heading "Exception caused when calling log4cxx::PropertyConfigurator::configure when using in project" [level=3]:
+    - link "Exception caused when calling log4cxx::PropertyConfigurator::configure when using in project"
+  - text: I am using QT6 to develop a Library which uses Log4cxx for logging purpose.But I am getting an exception and sometime crash when calling function to set properties by using log4cxx::...
+  - list:
+    - listitem:
+      - link "show questions tagged 'qt'": qt
+    - listitem:
+      - link "show questions tagged 'log4cxx'": log4cxx
+  - link "Deepak Dinesh's user avatar":
+    - img "Deepak Dinesh's user avatar"
+  - link "Deepak Dinesh"
+  - list:
+    - listitem: "11"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Sending logs from Airflow to S3/Minio" [level=3]:
+    - link "Sending logs from Airflow to S3/Minio"
+  - text: I am in the process of setting up Airflow on my Kubernetes cluster using the official Helm chart. I want to push my task instance logs to S3 (well, Minio actually) to a bucket called airflow-logs. To ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'amazon-s3'": amazon-s3
+    - listitem:
+      - link "show questions tagged 'logging'": logging
+    - listitem:
+      - link "show questions tagged 'airflow'": airflow
+    - listitem:
+      - link "show questions tagged 'minio'": minio
+  - link "FayadC's user avatar":
+    - img "FayadC's user avatar"
+  - link "FayadC"
+  - list:
+    - listitem: "21"
+  - time: asked 9 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "How to design a table that references multiple document types (e.g., Invoices, Purchases) in PostgreSQL?" [level=3]:
+    - link "How to design a table that references multiple document types (e.g., Invoices, Purchases) in PostgreSQL?"
+  - text: I am designing a database schema for an accounting system using PostgreSQL and I've run into a common design problem regarding a central ledger table. My system has several different types of ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'sql'": sql
+    - listitem:
+      - link "show questions tagged 'postgresql'": postgresql
+    - listitem:
+      - link "show questions tagged 'foreign-keys'": foreign-keys
+  - link "Aslam's user avatar":
+    - img "Aslam's user avatar"
+  - link "Aslam"
+  - list:
+    - listitem: "761"
+  - time: asked 9 mins ago
+  - text: 1 vote 0 answers 7 views
+  - heading "How to use async/await with autoUpdater.checkForUpdates() from electron-updater?" [level=3]:
+    - link "How to use async/await with autoUpdater.checkForUpdates() from electron-updater?"
+  - text: I want to use async await mechanism for the checkForUpdates function of the autoUpdater in Electron. Currently, I am using autoUpdater.checkForUpdates() without await in one of my asynchronous ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'typescript'": typescript
+    - listitem:
+      - link "show questions tagged 'windows'": windows
+    - listitem:
+      - link "show questions tagged 'electron'": electron
+    - listitem:
+      - link "show questions tagged 'electron-updater'": electron-updater
+  - link "sam's user avatar":
+    - img "sam's user avatar"
+  - link "sam"
+  - list:
+    - listitem: "11"
+  - time: asked 12 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "How to route in a nextjs outside a component?" [level=3]:
+    - link "How to route in a nextjs outside a component?"
+  - text: I have written a axios wrapper for my client only nextjs app to talk with the backend. When it receives 401 I want it to automatically goto /login or when it received 403 I want it to goto last page. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'next.js'": next.js
+    - listitem:
+      - link "show questions tagged 'axios'": axios
+  - link "sadbytes's user avatar":
+    - img "sadbytes's user avatar"
+  - link "sadbytes"
+  - list:
+    - listitem: "13"
+  - time: asked 15 mins ago
+  - text: 0 votes 1 answer 21 views
+  - heading "HighCharts candlestick chart with linear x-axis" [level=3]:
+    - link "HighCharts candlestick chart with linear x-axis"
+  - text: Is there a way to create a HighCharts candlestick chart where the x-axis contains regular numeric values instead of DateTime values? I've tried setting the xAxis type to 'linear', but this doesn't ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'highcharts'": highcharts
+  - link "mpeac's user avatar":
+    - img "mpeac's user avatar"
+  - link "mpeac"
+  - list:
+    - listitem: "750"
+  - time: asked 31 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "Is there a way to create a forward reference using Apps Script in a Google Doc" [level=3]:
+    - link "Is there a way to create a forward reference using Apps Script in a Google Doc"
+  - text: "I have some AppsScript code that creates a document from scratch: const document = DocumentApp.create(name); const body = document.getBody(); body.appendTable(.....); body...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'google-apps-script'": google-apps-script
+    - listitem:
+      - link "show questions tagged 'google-docs'": google-docs
+  - link "Frank Yellin's user avatar":
+    - img "Frank Yellin's user avatar"
+  - link "Frank Yellin"
+  - list:
+    - listitem: 11.6k
+  - time: asked 34 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "CSS grid height determined by the size of another grid on the page" [level=3]:
+    - link "CSS grid height determined by the size of another grid on the page"
+  - text: The layout of my website is reliant on grids. I have a main grid which divides my entire site into three columns. The columns correspond to the left sidebar, the main content, and the right sidebar. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'css-grid'": css-grid
+  - link "Bruno's user avatar":
+    - img "Bruno's user avatar"
+  - link "Bruno"
+  - list:
+    - listitem: "1"
+  - time: asked 40 mins ago
+  - text: 0 votes 0 answers 30 views
+  - heading "ASP.NET executable without wwwroot" [level=3]:
+    - link "ASP.NET executable without wwwroot"
+  - text: I am using the ASP.NET template in Visual Studio and I would like to package the web server as a single executable file. ASP.NET has functionality for this, but when I publish the project it is in a ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'asp.net'": asp.net
+    - listitem:
+      - link "show questions tagged 'asp.net-mvc'": asp.net-mvc
+    - listitem:
+      - link "show questions tagged 'web'": web
+    - listitem:
+      - link "show questions tagged 'single-file'": single-file
+  - link "RoweBoat's user avatar":
+    - img "RoweBoat's user avatar"
+  - link "RoweBoat"
+  - list:
+    - listitem: "1"
+  - time: asked 44 mins ago
+  - text: 0 votes 1 answer 21 views
+  - heading "Transporter collision and deadlock" [level=3]:
+    - link "Transporter collision and deadlock"
+  - text: Running my model and there always seems to be a form of deadlock or agents getting stuck in a node in the transportation network. I attempted to utilize a Transporter control to have Agents avoid ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'anylogic'": anylogic
+  - link "Scar's user avatar":
+    - img "Scar's user avatar"
+  - link "Scar"
+  - list:
+    - listitem: "57"
+  - time: asked 49 mins ago
+  - text: "-1 votes 1 answer 18 views"
+  - heading "how to upscale video max dimensions which fit within target size using ffmpeg?" [level=3]:
+    - link "how to upscale video max dimensions which fit within target size using ffmpeg?"
+  - text: "I'm using the following ffmpeg command to crop off the top N pixels from the input video, and replace it with a black padding: INVID=\"\" OUTVID=\"\" ffmpeg \\ -y \\ -i \"${..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'video'": video
+    - listitem:
+      - link "show questions tagged 'ffmpeg'": ffmpeg
+  - link "bguiz's user avatar":
+    - img "bguiz's user avatar"
+  - link "bguiz"
+  - list:
+    - listitem: 28.4k
+  - time: asked 51 mins ago
+  - text: "-1 votes 0 answers 26 views"
+  - 'heading "I get this error \"Distribution Name: ''Ubuntu'' Error Code: 0x80072ee7\" when i run wsl --install -d Ubuntu on my powershell" [level=3]':
+    - 'link "I get this error \"Distribution Name: ''Ubuntu'' Error Code: 0x80072ee7\" when i run wsl --install -d Ubuntu on my powershell"'
+  - text: "Ive been trying to install Ubuntu on my system but anytime i try, I get this error: Downloading: Ubuntu An error occurred during installation. Distribution Name: 'Ubuntu' Error Code: 0x80072ee7 I've ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'ubuntu'": ubuntu
+    - listitem:
+      - link "show questions tagged 'windows-subsystem-for-linux'": windows-subsystem-for-linux
+  - link "Okure's user avatar":
+    - img "Okure's user avatar"
+  - link "Okure"
+  - list:
+    - listitem: "1"
+  - time: asked 56 mins ago
+  - text: 0 votes 0 answers 35 views
+  - heading "How can I flatten a circular dependancy using C++20 modules?" [level=3]:
+    - link "How can I flatten a circular dependancy using C++20 modules?"
+  - text: "I am making a game engine in C++ using modules from C++20. Using a basic example, the engine is structured like so: class A contains unique_ptr of class B, class B contains regular pointer to class A ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'c++20'": c++20
+    - listitem:
+      - link "show questions tagged 'circular-dependency'": circular-dependency
+    - listitem:
+      - link "show questions tagged 'c++-modules'": c++-modules
+  - link "Work Steve's user avatar":
+    - img "Work Steve's user avatar"
+  - link "Work Steve"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 11 views
+  - heading "create symfony flex recipe for my package" [level=3]:
+    - link "create symfony flex recipe for my package"
+  - text: "Im creating a symfony package for my own work to make it easier. this is the package's composer file: https://github.com/heyho1337/blog/blob/master/composer.json this is the package: https://packagist...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'symfony'": symfony
+    - listitem:
+      - link "show questions tagged 'package'": package
+    - listitem:
+      - link "show questions tagged 'composer-php'": composer-php
+  - link "elemeNt's user avatar":
+    - img "elemeNt's user avatar"
+  - link "elemeNt"
+  - list:
+    - listitem: "76"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 34 views
+  - heading "Why does floating point division take less than 50% of the time of integer division and also 10x more cycles than usual when underflow occurs?" [level=3]:
+    - link "Why does floating point division take less than 50% of the time of integer division and also 10x more cycles than usual when underflow occurs?"
+  - text: For 64 bit primitives, integer division takes about 25 cycles each usually on my 2.3GHz digital ocean vCPU, while floating point division takes about 10 cycles usually. Why is double less than half ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c'": c
+    - listitem:
+      - link "show questions tagged 'floating-point'": floating-point
+    - listitem:
+      - link "show questions tagged 'cpu-architecture'": cpu-architecture
+    - listitem:
+      - link "show questions tagged 'microbenchmark'": microbenchmark
+    - listitem:
+      - link "show questions tagged 'underflow'": underflow
+  - link "Zack Light's user avatar":
+    - img "Zack Light's user avatar"
+  - link "Zack Light"
+  - list:
+    - listitem: "342"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1613794"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - 'link "Documents: The architect’s programming language"'
+    - listitem:
+      - link "Research roadmap update, August 2025"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Upcoming initiatives on Stack Overflow and across the Stack Exchange network..."
+    - listitem:
+      - link "Further Experimentation with Comment Reputation Requirements"
+    - listitem:
+      - link "Updated design for the new live activity panel experiment"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 27k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 16k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 11k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Does CFOUR v2.1 feature first order properties (dipole moment) for CC3 or CCSDT?"
+    - listitem:
+      - link "A combinatorial problem about piles that sounds easy but might not be"
+    - listitem:
+      - 'link "complex 3-clause conditional: ''I realized that if I do..., I will...'' vs. ''I realized that if I did..., I would...''"'
+    - listitem:
+      - link "Restaurants with a view of the Alps in Munich"
+    - listitem:
+      - link "Snap error on clean Ubuntu install"
+    - listitem:
+      - link "What reasons do Mormons give for the usage of the name \"Alma\" for males?"
+    - listitem:
+      - link "What is the principle of non-liability in the European Union wrt the US Section 230 and social media?"
+    - listitem:
+      - link "KiCad v9 – NMOS symbol pin mapping confusion"
+    - listitem:
+      - 'link "Michael Huemer''s paper argues reincarnation is real: Is there any flaw in his reasoning?"'
+    - listitem:
+      - link "Is there a way to find someone to be a co-signer if you have no other option?"
+    - listitem:
+      - link "How to prove an example of uncorrelated but not independent?"
+    - listitem:
+      - link "How can i get high viability of cells on cell culture?"
+    - listitem:
+      - link "Excel lookup from one matrix or array to another"
+    - listitem:
+      - link "In \"Computer Networks:A Top Down Approach\" - can multiple applications using the same protocol use its designated port?"
+    - listitem:
+      - link "Unknown Close Window key combination that is NOT Alt+F4"
+    - listitem:
+      - link "Can this civilization land their biplanes in the air?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.8.21.33163
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
