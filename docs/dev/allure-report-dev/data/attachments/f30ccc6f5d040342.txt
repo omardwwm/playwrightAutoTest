@@ -1,0 +1,586 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale GB in dev Einvironment and Realm europe
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,204,447 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 17"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 14 views
+  - heading "An internal compiler error is encountered with GCC, and a similar issue occurs when using Clang" [level=3]:
+    - link "An internal compiler error is encountered with GCC, and a similar issue occurs when using Clang"
+  - text: "This C++ static reflection code can automatically obtain the number and names of member variables in an aggregate class, with its core process divided into three steps: 1.At compile time, calculate ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'gcc'": gcc
+    - listitem:
+      - link "show questions tagged 'clang'": clang
+  - link "algae's user avatar":
+    - img "algae's user avatar"
+  - link "algae"
+  - list:
+    - listitem: "1"
+  - time: asked 17 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Vite manifest not found at:....../public/build/manifest.json but the manifest.json builded in ....../public/build/.vite/manifest.json" [level=3]:
+    - link "Vite manifest not found at:....../public/build/manifest.json but the manifest.json builded in ....../public/build/.vite/manifest.json"
+  - text: When I running npm run dev that it is work but when I shop the npm run dev and run the npm run build after the running complete that go to the web site, I get the error message "Illuminate\...
+  - list:
+    - listitem:
+      - link "show questions tagged 'laravel'": laravel
+    - listitem:
+      - link "show questions tagged 'vite'": vite
+    - listitem:
+      - link "show questions tagged 'svelte'": svelte
+    - listitem:
+      - link "show questions tagged 'inertiajs'": inertiajs
+    - listitem:
+      - link "show questions tagged 'svelte-5'": svelte-5
+  - link "黃梓榆's user avatar":
+    - img "黃梓榆's user avatar"
+  - link "黃梓榆"
+  - list:
+    - listitem: "59"
+  - time: asked 21 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "Fixing overlapping IP and IP resolution" [level=3]:
+    - link "Fixing overlapping IP and IP resolution"
+  - text: I am trung to fix overlapping IP and IP resolution within clients network. Currently we have VPC A (172.16.10.1/16) which has VM. This VPC is connected through TGW to the VPC_B. VPC B has 2 subnets, ...
+  - link
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'amazon-web-services'": amazon-web-services
+    - listitem:
+      - link "show questions tagged 'azure'": azure
+    - listitem:
+      - link "show questions tagged 'vpn'": vpn
+    - listitem:
+      - link "show questions tagged 'nat'": nat
+    - listitem:
+      - link "show questions tagged 'aws-nat-gateway'": aws-nat-gateway
+  - link "rholdberh's user avatar":
+    - img "rholdberh's user avatar"
+  - link "rholdberh"
+  - list:
+    - listitem: "597"
+  - time: asked 32 mins ago
+  - text: "-1 votes 0 answers 19 views"
+  - heading "Upskilling in AI dominating world" [level=3]:
+    - link "Upskilling in AI dominating world"
+  - text: "\"I have 9 years of experience working in PHP and am looking to upskill or transition into a field with abundant project opportunities across companies—MNCs, large, or small—regardless of region ..."
+  - link
+  - link
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'amazon-web-services'": amazon-web-services
+    - listitem:
+      - link "show questions tagged 'azure'": azure
+    - listitem:
+      - link "show questions tagged 'google-cloud-platform'": google-cloud-platform
+    - listitem:
+      - link "show questions tagged 'salesforce'": salesforce
+  - link "user9463033's user avatar":
+    - img "user9463033's user avatar"
+  - link "user9463033"
+  - list:
+    - listitem: "1"
+  - time: asked 34 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "Is glib part of the implementation said in the C standard?" [level=3]:
+    - link "Is glib part of the implementation said in the C standard?"
+  - text: "Is glib part of the implementation said in the C standard? Why? I find glib has this: static inline GList *_g_list_remove_link (GList *list,GList *link){...} If glib is not part of the implamentation,..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c'": c
+    - listitem:
+      - link "show questions tagged 'glib'": glib
+  - link "gsm's user avatar":
+    - img "gsm's user avatar"
+  - link "gsm"
+  - list:
+    - listitem: "97"
+  - time: asked 42 mins ago
+  - text: 0 votes 0 answers 19 views
+  - heading "What's the difference between \"binding.break\" and \"debugger\"?" [level=3]:
+    - link "What's the difference between \"binding.break\" and \"debugger\"?"
+  - text: What's the difference between ... binding.break @vendors = Vendor.all ... and ... debugger @vendors = Vendor.all ? I can't notice any difference. They both seem to do the same. Is there any ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'ruby-on-rails'": ruby-on-rails
+    - listitem:
+      - link "show questions tagged 'ruby'": ruby
+  - link "st88's user avatar":
+    - img "st88's user avatar"
+  - link "st88"
+  - list:
+    - listitem: "331"
+  - time: asked 56 mins ago
+  - text: 0 votes 0 answers 23 views
+  - 'heading "Error running K8S batch in argoCD workflow with \"invalid spec: templates.main.steps[0].batch quantities must match the regular expression\" ERROR" [level=3]':
+    - 'link "Error running K8S batch in argoCD workflow with \"invalid spec: templates.main.steps[0].batch quantities must match the regular expression\" ERROR"'
+  - text: I'm trying to run a PHP source batch in argoCD workflow. I created a Java(Spring Batch) + argoCD environment and it works well. The main concept of my batch is that there is a base-batch-job.yaml ...
+  - link
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'kubernetes'": kubernetes
+    - listitem:
+      - link "show questions tagged 'argocd'": argocd
+  - link "Paul Kim's user avatar":
+    - img "Paul Kim's user avatar"
+  - link "Paul Kim"
+  - list:
+    - listitem: "37"
+  - time: asked 1 hour ago
+  - text: "-2 votes 0 answers 22 views"
+  - 'heading "Why is my program returning: Process finished with exit code -1073741515 (0xC0000135) [duplicate]" [level=3]':
+    - 'link "Why is my program returning: Process finished with exit code -1073741515 (0xC0000135) [duplicate]"'
+  - text: "I am programming a game, but I ran into an issue. When I try to load an .mp3 file, the program starts acting wierd. It says: Process finished with exit code -1073741515 (0xC0000135) I'm not really ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'cmake'": cmake
+    - listitem:
+      - link "show questions tagged 'sfml'": sfml
+  - link "user29931871's user avatar":
+    - img "user29931871's user avatar"
+  - link "user29931871"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 1 answer 27 views
+  - heading "How to init git directory without templates" [level=3]:
+    - link "How to init git directory without templates"
+  - text: I would like to prevent git init from copying template files from any source. Is this possible? I haven't found any clue in the docs.
+  - list:
+    - listitem:
+      - link "show questions tagged 'git'": git
+    - listitem:
+      - link "show questions tagged 'git-init'": git-init
+  - link "pixel's user avatar":
+    - img "pixel's user avatar"
+  - link "pixel"
+  - list:
+    - listitem: 26.7k
+  - time: asked 1 hour ago
+  - text: 1 vote 0 answers 15 views
+  - heading "How to fetch only specific fields from Redis JSON in Spring Boot (e.g., number + location)?" [level=3]:
+    - link "How to fetch only specific fields from Redis JSON in Spring Boot (e.g., number + location)?"
+  - text: "I’m using Redis OM Spring with Kotlin to store documents in Redis as JSON. Here’s a simplified version of my document: @Document(value = \"Marker\", indexName = \"MarkerIdx\") data ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'spring-boot'": spring-boot
+    - listitem:
+      - link "show questions tagged 'redis'": redis
+    - listitem:
+      - link "show questions tagged 'redisjson'": redisjson
+    - listitem:
+      - link "show questions tagged 'redis-om-spring'": redis-om-spring
+  - link "Pawandeep Singh's user avatar":
+    - img "Pawandeep Singh's user avatar"
+  - link "Pawandeep Singh"
+  - list:
+    - listitem: "53"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 24 views
+  - heading "Why don't marginal effects for stratified models add up to the DID estimate for weighted logistic regressions? [migrated]" [level=3]:
+    - link "Why don't marginal effects for stratified models add up to the DID estimate for weighted logistic regressions? [migrated]"
+  - text: I'm not sure if this is a coding question, versus a statistics question for CrossValidated. I'm using the survey and margins packages to estimate weighted regression models. I usually run stratified ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'r'": r
+    - listitem:
+      - link "show questions tagged 'statistics'": statistics
+    - listitem:
+      - link "show questions tagged 'regression'": regression
+    - listitem:
+      - link "show questions tagged 'margins'": margins
+    - listitem:
+      - link "show questions tagged 'weighted'": weighted
+  - link "kng229's user avatar":
+    - img "kng229's user avatar"
+  - link "kng229"
+  - list:
+    - listitem: "473"
+  - time: asked 3 hours ago
+  - text: 1 vote 0 answers 39 views
+  - 'heading "Pandas: find max value of a column, then find another value in the same row, and copy that value to a new column" [level=3]':
+    - 'link "Pandas: find max value of a column, then find another value in the same row, and copy that value to a new column"'
+  - text: "I have the following frame: lst = [['SPXW 250715C06310000', '7/14/2025', 2.74, 2.87, 2.60, 2.65, 14, '8:30:00'], ['SPXW 250715C06310000', '7/14/2025', 2.80, 2.80, 2.50, 2.53, 61, '8:31:00'], ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'pandas'": pandas
+  - link "Dan's user avatar":
+    - img "Dan's user avatar"
+  - link "Dan"
+  - list:
+    - listitem: "53"
+  - time: asked 3 hours ago
+  - text: 0 votes 0 answers 35 views
+  - heading "Bindgen's build failing in docsrs" [level=3]:
+    - link "Bindgen's build failing in docsrs"
+  - text: I have been trying to publish my crate's version on docs.rs but bindgen's build script fails in there but not locally, I am getting the following error Compiling nu-ansi-term v0.46.0 Compiling ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'rust'": rust
+    - listitem:
+      - link "show questions tagged 'deployment'": deployment
+    - listitem:
+      - link "show questions tagged 'rust-cargo'": rust-cargo
+    - listitem:
+      - link "show questions tagged 'rust-bindgen'": rust-bindgen
+  - link "Bhaumik Tripathi's user avatar":
+    - img "Bhaumik Tripathi's user avatar"
+  - link "Bhaumik Tripathi"
+  - list:
+    - listitem: "9"
+  - time: asked 3 hours ago
+  - text: 0 votes 0 answers 27 views
+  - heading "To achieve Module federation from Vite singlespa to Vue cli single spa" [level=3]:
+    - link "To achieve Module federation from Vite singlespa to Vue cli single spa"
+  - text: "I have 3 spas and an ASP.NET MVC application. This is my page loading flow process: ASP.NET MVC (on the view page, we have section script where we have mentioned about importmap.json file, div id of ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'vue.js'": vue.js
+    - listitem:
+      - link "show questions tagged 'vuejs3'": vuejs3
+    - listitem:
+      - link "show questions tagged 'vite'": vite
+    - listitem:
+      - link "show questions tagged 'single-page-application'": single-page-application
+  - link "Abhishek Sharma's user avatar":
+    - img "Abhishek Sharma's user avatar"
+  - link "Abhishek Sharma"
+  - list:
+    - listitem: "11"
+  - time: asked 3 hours ago
+  - text: "-1 votes 0 answers 24 views"
+  - 'heading "Title: How do I refactor this Firestore mock from Jest to Vitest (mocking writeBatch, setDoc, updateDoc)?" [level=3]':
+    - 'link "Title: How do I refactor this Firestore mock from Jest to Vitest (mocking writeBatch, setDoc, updateDoc)?"'
+  - text: I’m migrating a Create React App project. Previously, I used Jest, but now I’m moving to a Vitest pipeline. I need to make my Firestore mock compatible. With Jest, I had this working. How can I create ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'ts-jest'": ts-jest
+    - listitem:
+      - link "show questions tagged 'vitest'": vitest
+  - link "Richardson's user avatar":
+    - img "Richardson's user avatar"
+  - link "Richardson"
+  - list:
+    - listitem: 2,320
+  - time: asked 3 hours ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1613630"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Robots in the skies (and they use Transformer models)"
+    - listitem:
+      - link "Research roadmap update, August 2025"
+    - listitem: Featured on Meta
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "Updated design for the new live activity panel experiment"
+    - listitem:
+      - link "Further Experimentation with Comment Reputation Requirements"
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 35k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 21k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 16k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Can you ask the editor to send a partial review?"
+    - listitem:
+      - link "Why is muscle cramp called a “charley horse”?"
+    - listitem:
+      - link "Spectral sequences every mathematician should know"
+    - listitem:
+      - link "Disable spelling suggestions popup while still showing misspelled words"
+    - listitem:
+      - link "Why does the Apollo LM's Cross-Pointer display have a bulge?"
+    - listitem:
+      - link "Missing derailleur hanger bolt"
+    - listitem:
+      - link "Why can the point of application of a force be moved along its line of action in a rigid body?"
+    - listitem:
+      - link "Why do we introduce the continuous functional calculus for self-adjoint operators?"
+    - listitem:
+      - link "Why does bible claim Asa was perfect all his days when he didn't rely on God in the latter years"
+    - listitem:
+      - link "NMinimize behaves strangely for this simple problem"
+    - listitem:
+      - link "Which passport to use at immigration counter"
+    - listitem:
+      - link "Film about alien spaceships ominously hovering over Earth, only to form a shield to protect it"
+    - listitem:
+      - link "Can you remove a variable in the 8-bit Microsoft BASICs?"
+    - listitem:
+      - link "Could you charge a battery using with a long radio aerial?"
+    - listitem:
+      - link "Dovecot login rejected with password having illegal chars"
+    - listitem:
+      - link "Can we solve Parity Games in polynomial time given this subroutine?"
+    - listitem:
+      - link "What did John the Baptist mean by \"make straight the way of the Lord,\"?"
+    - listitem:
+      - link "Solve the crossed ladders problem"
+    - listitem:
+      - link "Can I use super glue or hot glue as an insulator/solder mask for a small circuit?"
+    - listitem:
+      - link "How are the crosswords made for mass-produced puzzle books?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.8.21.33163
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
