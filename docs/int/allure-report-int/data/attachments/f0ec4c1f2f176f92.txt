@@ -1,0 +1,1287 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale DE in int Einvironment and Realm europe
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: page.waitForLoadState: Test timeout of 30000ms exceeded.
+=========================== logs ===========================
+  "commit" event fired
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================
+    at HomePage.goto (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:23:21)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:10:3
+```
+
+# Page snapshot
+
+```yaml
+- navigation "Shortcuts menu":
+  - heading "Skip to" [level=2]
+  - list "Skip to":
+    - listitem:
+      - link "main content": Main content
+  - heading "Keyboard shortcuts" [level=2]
+  - list "Keyboard shortcuts":
+    - listitem:
+      - link "Search, alt, forward slash"
+    - listitem:
+      - link "Cart, shift, alt, c"
+    - listitem:
+      - link "Home, shift, alt, h"
+    - listitem:
+      - link "Your orders, shift, alt, o"
+    - listitem:
+      - button "Show/hide shortcuts, shift, alt, z"
+  - text: To move between items, use your keyboard's up or down arrows.
+- banner:
+  - navigation "Primary":
+    - link "Amazon"
+    - button "Delivering to Chicago 60602 Update location"
+    - search:
+      - text: All
+      - combobox "Select the department you want to search in":
+        - option "All Departments" [selected]
+        - option "Alexa Skills"
+        - option "Amazon Autos"
+        - option "Amazon Devices"
+        - option "Amazon Fresh"
+        - option "Amazon Global Store"
+        - option "Amazon Haul"
+        - option "Amazon One Medical"
+        - option "Amazon Pharmacy"
+        - option "Amazon Resale"
+        - option "Appliances"
+        - option "Apps & Games"
+        - option "Arts, Crafts & Sewing"
+        - option "Audible Books & Originals"
+        - option "Automotive Parts & Accessories"
+        - option "Baby"
+        - option "Beauty & Personal Care"
+        - option "Books"
+        - option "CDs & Vinyl"
+        - option "Cell Phones & Accessories"
+        - option "Clothing, Shoes & Jewelry"
+        - option "Women's Clothing, Shoes & Jewelry"
+        - option "Men's Clothing, Shoes & Jewelry"
+        - option "Girl's Clothing, Shoes & Jewelry"
+        - option "Boy's Clothing, Shoes & Jewelry"
+        - option "Baby Clothing, Shoes & Jewelry"
+        - option "Collectibles & Fine Art"
+        - option "Computers"
+        - option "Credit and Payment Cards"
+        - option "Digital Music"
+        - option "Electronics"
+        - option "Garden & Outdoor"
+        - option "Gift Cards"
+        - option "Grocery & Gourmet Food"
+        - option "Handmade"
+        - option "Health, Household & Baby Care"
+        - option "Home & Business Services"
+        - option "Home & Kitchen"
+        - option "Industrial & Scientific"
+        - option "Just for Prime"
+        - option "Kindle Store"
+        - option "Luggage & Travel Gear"
+        - option "Luxury Stores"
+        - option "Magazine Subscriptions"
+        - option "Movies & TV"
+        - option "Musical Instruments"
+        - option "Office Products"
+        - option "Pet Supplies"
+        - option "Premium Beauty"
+        - option "Prime Video"
+        - option "Same-Day Store"
+        - option "Smart Home"
+        - option "Software"
+        - option "Sports & Outdoors"
+        - option "Subscribe & Save"
+        - option "Subscription Boxes"
+        - option "Tools & Home Improvement"
+        - option "Toys & Games"
+        - option "Under $10"
+        - option "Video Games"
+        - option "Whole Foods Market"
+      - searchbox "Search Amazon"
+      - button "Go"
+    - link "Choose a language for shopping in Amazon United States. The current selection is English (EN).":
+      - img "United States"
+      - text: EN
+    - button "Expand to Change Language or Country"
+    - link "Hello, sign in Account & Lists"
+    - button "Expand Account and Lists"
+    - link "Returns & Orders"
+    - link "0 items in cart"
+    - button "Open All Categories Menu": All
+    - list:
+      - listitem:
+        - link "Amazon Haul"
+      - listitem:
+        - link "Medical Care"
+        - button "Medical Care Details"
+      - listitem:
+        - link "Luxury Stores"
+      - listitem:
+        - link "Best Sellers"
+      - listitem:
+        - link "Amazon Basics"
+      - listitem:
+        - link "Groceries"
+        - button "Groceries Details"
+      - listitem:
+        - link "New Releases"
+      - listitem:
+        - link "Today's Deals"
+      - listitem:
+        - link "Prime"
+        - button "Prime Details"
+      - listitem:
+        - link "Registry"
+      - listitem:
+        - link "Customer Service"
+      - listitem:
+        - link "Gift Cards"
+        - button "Gift Cards Details"
+      - listitem:
+        - link "Smart Home"
+      - listitem:
+        - link "Music"
+      - listitem:
+        - link "Sports & Outdoors"
+      - listitem:
+        - link "Pharmacy"
+      - listitem:
+        - link "Amazon Home"
+      - listitem:
+        - link "Shop By Interest"
+      - listitem:
+        - link "Sell"
+      - listitem:
+        - link "Fashion"
+      - listitem:
+        - link "Beauty & Personal Care"
+      - listitem:
+        - link "Toys & Games"
+      - listitem:
+        - link "Automotive"
+      - listitem:
+        - link "Home Improvement"
+      - listitem:
+        - link "Computers"
+- main:
+  - banner:
+    - group "Featured content":
+      - link "Previous slide"
+      - group:
+        - list:
+          - listitem:
+            - 'link "Amazon Pharmacy: Prime members save up to 80% on meds* *Resctrictions apply"':
+              - 'img "Amazon Pharmacy: Prime members save up to 80% on meds* *Resctrictions apply"'
+      - link "Next slide"
+  - heading "Discover pre-loved designer jewelry" [level=2]
+  - link "Cartier":
+    - img "Cartier"
+    - text: Cartier
+  - link "Van Cleef":
+    - img "Van Cleef"
+    - text: Van Cleef
+  - link "Hermès":
+    - img "Hermès"
+    - text: Hermès
+  - link "Chanel":
+    - img "Chanel"
+    - text: Chanel
+  - link "Discover pre-loved designer jewelry - Shop Luxury Stores": Shop Luxury Stores
+  - heading "Save 15% on designer handbags" [level=2]
+  - link "Louis Vuitton":
+    - img "Louis Vuitton"
+    - text: Louis Vuitton
+  - link "Hermès":
+    - img "Hermès"
+    - text: Hermès
+  - link "Dior":
+    - img "Dior"
+    - text: Dior
+  - link "Yves Saint Laurent":
+    - img "Yves Saint Laurent"
+    - text: Yves Saint Laurent
+  - link "Save 15% on designer handbags - Shop the pre-loved sale": Shop the pre-loved sale
+  - heading "Discover Everyday Essentials" [level=2]
+  - link "Wellness":
+    - img "Wellness"
+    - text: Wellness
+  - link "Cleaning supplies":
+    - img "Cleaning supplies"
+    - text: Cleaning supplies
+  - link "Fall flavors":
+    - img "Fall flavors"
+    - text: Fall flavors
+  - link "All deals":
+    - img "All deals"
+    - text: All deals
+  - link "Discover Everyday Essentials - Shop more everyday essentials": Shop more everyday essentials
+  - 'heading "Trending: Fall Beauty" [level=2]'
+  - link "Velvet skin":
+    - img "Velvet skin"
+    - text: Velvet skin
+  - link "Healthy hair":
+    - img "Healthy hair"
+    - text: Healthy hair
+  - link "Luxe body care":
+    - img "Luxe body care"
+    - text: Luxe body care
+  - link "Metallic hues":
+    - img "Metallic hues"
+    - text: Metallic hues
+  - 'link "Trending: Fall Beauty - Shop more beauty"': Shop more beauty
+  - heading "Best Sellers in Clothing, Shoes & Jewelry" [level=2]
+  - list:
+    - listitem:
+      - link "Crocs Unisex Adult Classic Clog":
+        - img "Crocs Unisex Adult Classic Clog"
+    - listitem:
+      - link "Hanes Men's Beefy-t T-Shirt, Heavyweight Cotton Tee, 1 Or 2 Pack, Big & Tall":
+        - img "Hanes Men's Beefy-t T-Shirt, Heavyweight Cotton Tee, 1 Or 2 Pack, Big & Tall"
+    - listitem:
+      - link "Gildan Men's Crew T-Shirts, Multipack, Style G1100":
+        - img "Gildan Men's Crew T-Shirts, Multipack, Style G1100"
+    - listitem:
+      - link "Hanes T-Shirt Pack, Stay-Tucked Cool & Breathable Cotton Tees, Best Undershirts for Men":
+        - img "Hanes T-Shirt Pack, Stay-Tucked Cool & Breathable Cotton Tees, Best Undershirts for Men"
+    - listitem:
+      - link "Nike Unisex Adult Everyday Cushioned Training Crew Socks (6 Pairs)":
+        - img "Nike Unisex Adult Everyday Cushioned Training Crew Socks (6 Pairs)"
+    - listitem:
+      - link "Amazon Essentials Women's Slim-Fit Tank Top, Pack of 2":
+        - img "Amazon Essentials Women's Slim-Fit Tank Top, Pack of 2"
+    - listitem:
+      - link "Crep Protect Shoe Protector Spray - Rain & Stain Waterproof Nano Protection for Sneaker, Leather, Nubuck, Suede & Canvas":
+        - img "Crep Protect Shoe Protector Spray - Rain & Stain Waterproof Nano Protection for Sneaker, Leather, Nubuck, Suede & Canvas"
+    - listitem:
+      - link "Water Shoes for Women Men Quick-Dry Aqua Socks Swim Beach Barefoot Yoga Exercise Wear Sport Accessories Pool Camping...":
+        - img "Water Shoes for Women Men Quick-Dry Aqua Socks Swim Beach Barefoot Yoga Exercise Wear Sport Accessories Pool Camping..."
+    - listitem:
+      - link "CHARMKING Compression Socks for Women & Men Circulation (3 Pairs) 15-20 mmHg is Best Support for Athletic Running Cycling":
+        - img "CHARMKING Compression Socks for Women & Men Circulation (3 Pairs) 15-20 mmHg is Best Support for Athletic Running Cycling"
+    - listitem:
+      - link "G4Free Yoga Pants Women Wide Leg Pants with Pockets High Waist Stretch Dress Casual Sweatpants Petite/Regular/Tall":
+        - img "G4Free Yoga Pants Women Wide Leg Pants with Pockets High Waist Stretch Dress Casual Sweatpants Petite/Regular/Tall"
+    - listitem:
+      - link "Fruit of the Loom Men's Undershirts, Moisture Wicking & Tag Free, Short Sleeve Crew T-Shirts":
+        - img "Fruit of the Loom Men's Undershirts, Moisture Wicking & Tag Free, Short Sleeve Crew T-Shirts"
+    - listitem:
+      - link "travel inspira Luggage Scale, Portable Digital Hanging Baggage Scale for Travel, Suitcase Weight Scale with Rubber...":
+        - img "travel inspira Luggage Scale, Portable Digital Hanging Baggage Scale for Travel, Suitcase Weight Scale with Rubber..."
+    - listitem:
+      - link "Stelle Ballet Shoes for Girls Toddler Ballet Slippers Soft Leather Boys Dance Shoes for Toddler/Little Kid/Big Kid":
+        - img "Stelle Ballet Shoes for Girls Toddler Ballet Slippers Soft Leather Boys Dance Shoes for Toddler/Little Kid/Big Kid"
+    - listitem:
+      - link "Hanes EcoSmart Hoodie, Midweight Fleece, Pullover Hooded Sweatshirt for Men":
+        - img "Hanes EcoSmart Hoodie, Midweight Fleece, Pullover Hooded Sweatshirt for Men"
+    - listitem:
+      - link "The Children's Place Boys' Uniform Short Sleeve Pique Polo":
+        - img "The Children's Place Boys' Uniform Short Sleeve Pique Polo"
+    - listitem:
+      - link "wernies No Show Socks Women Low Socks Non Slip Flat Boat Line 4/8 Pairs":
+        - img "wernies No Show Socks Women Low Socks Non Slip Flat Boat Line 4/8 Pairs"
+    - listitem:
+      - link "Gildan Unisex Adult Ultra Cotton T-Shirt, Style G2000, Multipack":
+        - img "Gildan Unisex Adult Ultra Cotton T-Shirt, Style G2000, Multipack"
+    - listitem:
+      - link "Trendy Queen Womens Oversized Summer T Shirts Fashion Workout Plus Size Tops Short Sleeve Beach Vacation Gym Clothes 2025":
+        - img "Trendy Queen Womens Oversized Summer T Shirts Fashion Workout Plus Size Tops Short Sleeve Beach Vacation Gym Clothes 2025"
+    - listitem:
+      - link "Carhartt Men's Loose Fit Heavyweight Short-Sleeve Pocket T-Shirt (Also Available in Big & Tall)":
+        - img "Carhartt Men's Loose Fit Heavyweight Short-Sleeve Pocket T-Shirt (Also Available in Big & Tall)"
+    - listitem:
+      - link "CRZ YOGA Butterluxe High Waisted Lounge Legging 25\" - Buttery Soft Workout Yoga Pants for Women":
+        - img "CRZ YOGA Butterluxe High Waisted Lounge Legging 25\" - Buttery Soft Workout Yoga Pants for Women"
+    - listitem:
+      - link "COOFANDY Men's Linen Shirts Short Sleeve Casual Shirts Button Down Shirt for Men Beach Summer Wedding Shirt":
+        - img "COOFANDY Men's Linen Shirts Short Sleeve Casual Shirts Button Down Shirt for Men Beach Summer Wedding Shirt"
+    - listitem:
+      - link "adidas Unisex Adult Adilette Shower Slip On Slides":
+        - img "adidas Unisex Adult Adilette Shower Slip On Slides"
+    - listitem:
+      - link "THE GYM PEOPLE Thick High Waist Yoga Pants with Pockets, Tummy Control Workout Running Yoga Leggings for Women":
+        - img "THE GYM PEOPLE Thick High Waist Yoga Pants with Pockets, Tummy Control Workout Running Yoga Leggings for Women"
+    - listitem:
+      - link "Crocs Baby-Girl's Classic Littles Clogs (Infant)":
+        - img "Crocs Baby-Girl's Classic Littles Clogs (Infant)"
+    - listitem:
+      - link "Apple Watch Series 10 [GPS 42mm case] Smartwatch with Rose Gold Aluminium Case with Light Blush Sport Band - S/M....":
+        - img "Apple Watch Series 10 [GPS 42mm case] Smartwatch with Rose Gold Aluminium Case with Light Blush Sport Band - S/M...."
+    - listitem:
+      - link "Fruit of the Loom Eversoft Fleece Elastic Bottom Sweatpants with Pockets, Relaxed Fit, Moisture Wicking, Breathable":
+        - img "Fruit of the Loom Eversoft Fleece Elastic Bottom Sweatpants with Pockets, Relaxed Fit, Moisture Wicking, Breathable"
+  - separator
+  - heading "Best Sellers in Kitchen & Dining" [level=2]
+  - list:
+    - listitem:
+      - link "Owala FreeSip Insulated Stainless Steel Water Bottle with Straw, BPA-Free Sports Water Bottle, Great for Travel, 24 Oz,...":
+        - img "Owala FreeSip Insulated Stainless Steel Water Bottle with Straw, BPA-Free Sports Water Bottle, Great for Travel, 24 Oz,..."
+    - listitem:
+      - link "Nespresso Capsules Vertuo, Variety Pack, Medium and Dark Roast Coffee, 30 Count Coffee Pods, Brews 7.8 oz.":
+        - img "Nespresso Capsules Vertuo, Variety Pack, Medium and Dark Roast Coffee, 30 Count Coffee Pods, Brews 7.8 oz."
+    - listitem:
+      - link "Sparkle Pick-A-Size Paper Towels, 6 Double Rolls = 12 Regular Rolls, Everyday Value Paper Towel With Full And Half Sheets":
+        - img "Sparkle Pick-A-Size Paper Towels, 6 Double Rolls = 12 Regular Rolls, Everyday Value Paper Towel With Full And Half Sheets"
+    - listitem:
+      - link "Amazon Basics Everyday Paper Plates, 8.62 Inch, Disposable, 100 Count":
+        - img "Amazon Basics Everyday Paper Plates, 8.62 Inch, Disposable, 100 Count"
+    - listitem:
+      - link "Stanley Quencher H2.0 Tumbler with Handle and Straw 30 oz | Flowstate 3-Position Lid | Cup Holder Compatible for Travel...":
+        - img "Stanley Quencher H2.0 Tumbler with Handle and Straw 30 oz | Flowstate 3-Position Lid | Cup Holder Compatible for Travel..."
+    - listitem:
+      - link "Nespresso Capsules Vertuo, Double Espresso Chiaro, Medium Roast Espresso Coffee, 30-Count Coffee Pods, Brews 2.7oz.":
+        - img "Nespresso Capsules Vertuo, Double Espresso Chiaro, Medium Roast Espresso Coffee, 30-Count Coffee Pods, Brews 2.7oz."
+    - listitem:
+      - link "Amazon Brand - Happy Belly Medium Roast Coffee Pods, Colombian, Compatible with Keurig 2.0 K-Cup Brewers, 100 Count":
+        - img "Amazon Brand - Happy Belly Medium Roast Coffee Pods, Colombian, Compatible with Keurig 2.0 K-Cup Brewers, 100 Count"
+    - listitem:
+      - link "Dixie Large Paper Plates, 10 Inch, 204 Count, 2X Stronger*, Microwave-Safe, Soak-Proof, Cut Resistant, Disposable Plates...":
+        - img "Dixie Large Paper Plates, 10 Inch, 204 Count, 2X Stronger*, Microwave-Safe, Soak-Proof, Cut Resistant, Disposable Plates..."
+    - listitem:
+      - link "Nespresso Capsules Vertuo, Barista Flavored Pack, Medium Roast Coffee, 30 Count Coffee Pods, Brews 7.8oz.":
+        - img "Nespresso Capsules Vertuo, Barista Flavored Pack, Medium Roast Coffee, 30 Count Coffee Pods, Brews 7.8oz."
+    - listitem:
+      - link "MedPride Powder-Free Nitrile Exam Gloves, Iris Blue, Medium, Box/100":
+        - img "MedPride Powder-Free Nitrile Exam Gloves, Iris Blue, Medium, Box/100"
+    - listitem:
+      - link "Dixie Medium Paper Plates, 8.5 Inch, 90 Count, 2X Stronger*, Microwave-Safe, Soak-Proof, Cut Resistant, Disposable...":
+        - img "Dixie Medium Paper Plates, 8.5 Inch, 90 Count, 2X Stronger*, Microwave-Safe, Soak-Proof, Cut Resistant, Disposable..."
+    - listitem:
+      - link "Stanley IceFlow Stainless Steel Tumbler with Straw - Vacuum Insulated Water Bottle for Home, Office or Car Reusable Cup...":
+        - img "Stanley IceFlow Stainless Steel Tumbler with Straw - Vacuum Insulated Water Bottle for Home, Office or Car Reusable Cup..."
+    - listitem:
+      - link "Bounty Essentials Select-A-Size Paper Towels, White, 2 Triple Rolls = 6 Regular Rolls":
+        - img "Bounty Essentials Select-A-Size Paper Towels, White, 2 Triple Rolls = 6 Regular Rolls"
+    - listitem:
+      - link "The Original Donut Shop Regular Keurig Single-Serve K-Cup Pods, Medium Roast Coffee, 72 Count":
+        - img "The Original Donut Shop Regular Keurig Single-Serve K-Cup Pods, Medium Roast Coffee, 72 Count"
+    - listitem:
+      - link "Dixie Ultra, Large Paper Plates, 10 Inch, 172 Count, 3X Stronger*, Heavy Duty, Microwave-Safe, Soak-Proof, Cut...":
+        - img "Dixie Ultra, Large Paper Plates, 10 Inch, 172 Count, 3X Stronger*, Heavy Duty, Microwave-Safe, Soak-Proof, Cut..."
+    - listitem:
+      - link "STANLEY Quencher ProTour Flip Straw Tumbler with Leakproof Lid | Built-In Straw & Handle | Cupholder Compatible for...":
+        - img "STANLEY Quencher ProTour Flip Straw Tumbler with Leakproof Lid | Built-In Straw & Handle | Cupholder Compatible for..."
+    - listitem:
+      - link "Amazon Basics Everyday Paper Plates, 10 Inch, Disposable, 150 Count":
+        - img "Amazon Basics Everyday Paper Plates, 10 Inch, Disposable, 150 Count"
+    - listitem:
+      - link "Amazon Brand - Solimo Coffee Pods, Assorted pack (French, Dark, Colombian), Compatible with Keurig 2.0 K-Cup Brewers,...":
+        - img "Amazon Brand - Solimo Coffee Pods, Assorted pack (French, Dark, Colombian), Compatible with Keurig 2.0 K-Cup Brewers,..."
+    - listitem:
+      - link "Lavazza Super Crema Whole Bean Coffee, Medium Espresso Roast, Arabica and Robusta Blend, 2.2 lb Bag, Package May Vary...":
+        - img "Lavazza Super Crema Whole Bean Coffee, Medium Espresso Roast, Arabica and Robusta Blend, 2.2 lb Bag, Package May Vary..."
+    - listitem:
+      - link "Caring Nitrile Exam Gloves, Blue, Powder-Free, Disposable Gloves for Medical Care, First Aid, Cleaning, Food Prep":
+        - img "Caring Nitrile Exam Gloves, Blue, Powder-Free, Disposable Gloves for Medical Care, First Aid, Cleaning, Food Prep"
+    - listitem:
+      - link "Amazon Basics Digital Kitchen Scale with LCD Display, Batteries Included, Weighs up to 11 pounds, Black and Stainless Steel":
+        - img "Amazon Basics Digital Kitchen Scale with LCD Display, Batteries Included, Weighs up to 11 pounds, Black and Stainless Steel"
+    - listitem:
+      - link "NESCAFÉ Gold Espresso Blonde, Instant Coffee, 3.5 oz":
+        - img "NESCAFÉ Gold Espresso Blonde, Instant Coffee, 3.5 oz"
+    - listitem:
+      - link "Nespresso Capsules Original Line, Ispirazione Variety Pack, Medium & Dark Roast Espresso Coffee, 50 Count Coffee Pods":
+        - img "Nespresso Capsules Original Line, Ispirazione Variety Pack, Medium & Dark Roast Espresso Coffee, 50 Count Coffee Pods"
+    - listitem:
+      - link "Brita Standard Pitcher and Dispenser Replacement Water Filters, White, 3 Count":
+        - img "Brita Standard Pitcher and Dispenser Replacement Water Filters, White, 3 Count"
+    - listitem:
+      - link "HydroJug Traveler - 40 oz Water Bottle with Handle & Flip Straw - Fits in Cup Holder, Leak Resistant Tumbler-Reusable...":
+        - img "HydroJug Traveler - 40 oz Water Bottle with Handle & Flip Straw - Fits in Cup Holder, Leak Resistant Tumbler-Reusable..."
+    - listitem:
+      - link "Starbucks K-Cup Coffee Pods, Dark Roast Coffee, French Roast for Keurig Brewers, 100% Arabica, 4 boxes (96 pods total)":
+        - img "Starbucks K-Cup Coffee Pods, Dark Roast Coffee, French Roast for Keurig Brewers, 100% Arabica, 4 boxes (96 pods total)"
+    - listitem:
+      - link "Dunkin' Original Blend Medium Roast Coffee, 60 Keurig K-Cup Pods":
+        - img "Dunkin' Original Blend Medium Roast Coffee, 60 Keurig K-Cup Pods"
+  - separator
+  - heading "Costumes for the family" [level=2]
+  - link "Men":
+    - img "Men"
+    - text: Men
+  - link "Women":
+    - img "Women"
+    - text: Women
+  - link "Kids":
+    - img "Kids"
+    - text: Kids
+  - link "Pets":
+    - img "Pets"
+    - text: Pets
+  - link "Costumes for the family - Shop more Halloween": Shop more Halloween
+  - heading "Our current obsessions" [level=2]
+  - link "Beauty":
+    - img "Beauty"
+    - text: Beauty
+  - link "Fashion":
+    - img "Fashion"
+    - text: Fashion
+  - link "Home":
+    - img "Home"
+    - text: Home
+  - link "Electronics":
+    - img "Electronics"
+    - text: Electronics
+  - link "Our current obsessions - Shop now": Shop now
+  - heading "Smart organization for college" [level=2]
+  - link "Storage":
+    - img "Storage"
+    - text: Storage
+  - link "Kitchen":
+    - img "Kitchen"
+    - text: Kitchen
+  - link "Bathroom":
+    - img "Bathroom"
+    - text: Bathroom
+  - link "Closet":
+    - img "Closet"
+    - text: Closet
+  - link "Smart organization for college - Shop Off to College": Shop Off to College
+  - heading "Shop college tech by price" [level=2]
+  - link "Under $50":
+    - img "Under $50"
+    - text: Under $50
+  - link "Under $100":
+    - img "Under $100"
+    - text: Under $100
+  - link "Under $250":
+    - img "Under $250"
+    - text: Under $250
+  - link "Under $300":
+    - img "Under $300"
+    - text: Under $300
+  - link "Shop college tech by price - Shop Off to College": Shop Off to College
+  - separator
+  - heading "Best Sellers in Grocery & Gourmet Food" [level=2]
+  - list:
+    - listitem:
+      - link "CELSIUS Assorted Flavors Official Variety Pack, Functional Essential Energy Drinks, 12 Fl Oz (Pack of 12)":
+        - img "CELSIUS Assorted Flavors Official Variety Pack, Functional Essential Energy Drinks, 12 Fl Oz (Pack of 12)"
+    - listitem:
+      - link "Premier Protein Shake, Chocolate, 30g Protein 1g Sugar 24 Vitamins Minerals Nutrients to Support Immune Health, 11.5 fl...":
+        - img "Premier Protein Shake, Chocolate, 30g Protein 1g Sugar 24 Vitamins Minerals Nutrients to Support Immune Health, 11.5 fl..."
+    - listitem:
+      - link "Sparkling Ice, Black Raspberry Sparkling Water, Zero Sugar Flavored Water, with Vitamins and Antioxidants, Low Calorie...":
+        - img "Sparkling Ice, Black Raspberry Sparkling Water, Zero Sugar Flavored Water, with Vitamins and Antioxidants, Low Calorie..."
+    - listitem:
+      - link "Monster Energy Zero Ultra, Sugar Free Energy Drink, 16 Ounce (Pack of 15)":
+        - img "Monster Energy Zero Ultra, Sugar Free Energy Drink, 16 Ounce (Pack of 15)"
+    - listitem:
+      - link "Propel, Kiwi Strawberry, Zero Calorie Sports Drinking Water with Electrolytes and Vitamins C&E, 16.9 Fl Oz (12 Count)":
+        - img "Propel, Kiwi Strawberry, Zero Calorie Sports Drinking Water with Electrolytes and Vitamins C&E, 16.9 Fl Oz (12 Count)"
+    - listitem:
+      - link "Core Power Protein Shake, Chocolate, 26g Bottle, 14oz, 12 Pack":
+        - img "Core Power Protein Shake, Chocolate, 26g Bottle, 14oz, 12 Pack"
+    - listitem:
+      - link "PUR Gum | Aspartame Free Chewing Gum | 100% Xylitol | Natural Spearmint Flavored Gum, 55 Pieces (Pack of 1)":
+        - img "PUR Gum | Aspartame Free Chewing Gum | 100% Xylitol | Natural Spearmint Flavored Gum, 55 Pieces (Pack of 1)"
+    - listitem:
+      - link "Goldfish Crackers Big Smiles Variety Pack with Cheddar, Colors, and Pretzels, Snack Packs, 30 Ct":
+        - img "Goldfish Crackers Big Smiles Variety Pack with Cheddar, Colors, and Pretzels, Snack Packs, 30 Ct"
+    - listitem:
+      - link "Hint Fruit-Infused Bottled Water, Best Sellers Variety Pack - Sugar Free Flavored Water with Zero Calories, Natural...":
+        - img "Hint Fruit-Infused Bottled Water, Best Sellers Variety Pack - Sugar Free Flavored Water with Zero Calories, Natural..."
+    - listitem:
+      - link "Alani Nu PINK SLUSH, Sugar Free, Low Calorie Energy Drinks, 200mg Caffeine, Biotin, B Vitamins, Zero Sugar, 10 Calories,...":
+        - img "Alani Nu PINK SLUSH, Sugar Free, Low Calorie Energy Drinks, 200mg Caffeine, Biotin, B Vitamins, Zero Sugar, 10 Calories,..."
+    - listitem:
+      - link "ALOHA Organic Plant Based Protein Bars - Peanut Butter Cup Bar - 12 Bars, Vegan, Low Sugar, Gluten-Free, Low Carb,...":
+        - img "ALOHA Organic Plant Based Protein Bars - Peanut Butter Cup Bar - 12 Bars, Vegan, Low Sugar, Gluten-Free, Low Carb,..."
+    - listitem:
+      - link "Core Power Elite High Protein Shake, Chocolate, 42g Bottle, 14oz, 12 Pack":
+        - img "Core Power Elite High Protein Shake, Chocolate, 42g Bottle, 14oz, 12 Pack"
+    - listitem:
+      - link "Frito Lay Fun Times Mix Variety Pack, (Pack of 40)":
+        - img "Frito Lay Fun Times Mix Variety Pack, (Pack of 40)"
+    - listitem:
+      - link "Nespresso Capsules Vertuo, Barista Flavored Pack, Medium Roast Coffee, 30 Count Coffee Pods, Brews 7.8oz.":
+        - img "Nespresso Capsules Vertuo, Barista Flavored Pack, Medium Roast Coffee, 30 Count Coffee Pods, Brews 7.8oz."
+    - listitem:
+      - link "CELSIUS® On-the-Go Powder Sticks Dragonfruit Lime, Essential Energy 2.8 Oz (14 Sticks per Pack)":
+        - img "CELSIUS® On-the-Go Powder Sticks Dragonfruit Lime, Essential Energy 2.8 Oz (14 Sticks per Pack)"
+    - listitem:
+      - link "Cellucor C4 Performance Energy Drink | Strawberry Blast | Zero Sugar Carbonated Preworkout Energy | 200mg Caffeine with...":
+        - img "Cellucor C4 Performance Energy Drink | Strawberry Blast | Zero Sugar Carbonated Preworkout Energy | 200mg Caffeine with..."
+    - listitem:
+      - link "DaVinci Gourmet Lavender Syrup, 25.4 fl oz (Pack of 1)":
+        - img "DaVinci Gourmet Lavender Syrup, 25.4 fl oz (Pack of 1)"
+    - listitem:
+      - link "Extra Gum Spearmint Sugarfree Gum Bulk, Individually Wrapped, Perfect for Fresh Breath at School, Work, and Travel 15...":
+        - img "Extra Gum Spearmint Sugarfree Gum Bulk, Individually Wrapped, Perfect for Fresh Breath at School, Work, and Travel 15..."
+    - listitem:
+      - link "Welch's Fruit Snacks, Mixed Fruit Snack Box, Gluten Free, 0.8oz Snack Packs (Pack of 40)":
+        - img "Welch's Fruit Snacks, Mixed Fruit Snack Box, Gluten Free, 0.8oz Snack Packs (Pack of 40)"
+    - listitem:
+      - link "Pure Life Purified Water Bottles, 24 Pack - Still Bottled Water with Added Minerals for a Crisp Taste, Plastic Bottles -...":
+        - img "Pure Life Purified Water Bottles, 24 Pack - Still Bottled Water with Added Minerals for a Crisp Taste, Plastic Bottles -..."
+    - listitem:
+      - link "The Original Donut Shop Regular Keurig Single-Serve K-Cup Pods, Medium Roast Coffee, 72 Count":
+        - img "The Original Donut Shop Regular Keurig Single-Serve K-Cup Pods, Medium Roast Coffee, 72 Count"
+    - listitem:
+      - link "IQBAR Brain and Body Plant Protein Bars - 7 Bar Sampler Pack - Gluten Free, High Fiber, Vegan Snacks - Low Sugar Meal...":
+        - img "IQBAR Brain and Body Plant Protein Bars - 7 Bar Sampler Pack - Gluten Free, High Fiber, Vegan Snacks - Low Sugar Meal..."
+    - listitem:
+      - link "NERDS Gummy Clusters, Candy, Rainbow, Crunchy and Gummy, 8 oz":
+        - img "NERDS Gummy Clusters, Candy, Rainbow, Crunchy and Gummy, 8 oz"
+    - listitem:
+      - link "GHOST Energy Drink - 12-Pack, Welch's Grape, 16oz Cans - Energy & Focus & No Artificial Colors - 200mg of Natural...":
+        - img "GHOST Energy Drink - 12-Pack, Welch's Grape, 16oz Cans - Energy & Focus & No Artificial Colors - 200mg of Natural..."
+    - listitem:
+      - link "Liquid Death, Cereal Criminal, Fruity Pebbles-Flavored Sparkling Water, 12-Pack (12oz Cans), Low Calorie & No Artificial...":
+        - img "Liquid Death, Cereal Criminal, Fruity Pebbles-Flavored Sparkling Water, 12-Pack (12oz Cans), Low Calorie & No Artificial..."
+    - listitem:
+      - link "Diet Coke, 12 fl oz, 12 Pack (Package May Vary)":
+        - img "Diet Coke, 12 fl oz, 12 Pack (Package May Vary)"
+  - separator
+  - heading "Best Sellers in Home & Kitchen" [level=2]
+  - list:
+    - listitem:
+      - link "Queen Size 4 Piece Sheet Set - Comfy Breathable & Cooling Bed Sheets Set - Hotel Luxury Bedding for Women, Men, Kids &...":
+        - img "Queen Size 4 Piece Sheet Set - Comfy Breathable & Cooling Bed Sheets Set - Hotel Luxury Bedding for Women, Men, Kids &..."
+    - listitem:
+      - link "upsimples 8x10 Picture Frame, Display Pictures 5x7 with Mat or 8x10 Without Mat, Wall Hanging Photo Frame, Black, 1 Pack":
+        - img "upsimples 8x10 Picture Frame, Display Pictures 5x7 with Mat or 8x10 Without Mat, Wall Hanging Photo Frame, Black, 1 Pack"
+    - listitem:
+      - link "Amazon Basics Slim, Velvet, Non-Slip Suit Clothes Hangers, Pack of 50, Black":
+        - img "Amazon Basics Slim, Velvet, Non-Slip Suit Clothes Hangers, Pack of 50, Black"
+    - listitem:
+      - link "Barossa Design Plastic Shower Liner Clear - Premium PEVA Shower Curtain Liner with Rustproof Grommets and 3 Magnets,...":
+        - img "Barossa Design Plastic Shower Liner Clear - Premium PEVA Shower Curtain Liner with Rustproof Grommets and 3 Magnets,..."
+    - listitem:
+      - link "Utopia Bedding Queen Sheet Set – 4 Piece Bed Sheets for Queen Size Bed, Soft and Breathable Microfiber, Includes 1...":
+        - img "Utopia Bedding Queen Sheet Set – 4 Piece Bed Sheets for Queen Size Bed, Soft and Breathable Microfiber, Includes 1..."
+    - listitem:
+      - link "Utopia Bedding Waterproof Mattress Protector Queen Size, Premium Terry Mattress Cover 200 GSM, Breathable, Fitted Style...":
+        - img "Utopia Bedding Waterproof Mattress Protector Queen Size, Premium Terry Mattress Cover 200 GSM, Breathable, Fitted Style..."
+    - listitem:
+      - link "OLANLY Bathroom Rugs 30x20, Extra Soft Absorbent Chenille Bath Rugs, Rubber Backing Quick Dry, Machine Washable Bath...":
+        - img "OLANLY Bathroom Rugs 30x20, Extra Soft Absorbent Chenille Bath Rugs, Rubber Backing Quick Dry, Machine Washable Bath..."
+    - listitem:
+      - link "Utopia Bedding Throw Pillows Insert (Pack of 2, White) - 18 x 18 Inches Bed and Couch Pillows - Indoor Decorative Pillow":
+        - img "Utopia Bedding Throw Pillows Insert (Pack of 2, White) - 18 x 18 Inches Bed and Couch Pillows - Indoor Decorative Pillow"
+    - listitem:
+      - link "Linenspa Memory Foam Mattress Topper - 2 Inch Gel Infused Memory Foam - Plush Feel - Cooling and Pressure Relieving -...":
+        - img "Linenspa Memory Foam Mattress Topper - 2 Inch Gel Infused Memory Foam - Plush Feel - Cooling and Pressure Relieving -..."
+    - listitem:
+      - link "NEW JETO Metal Bed Frame,Queen Size Bed Frame with Storage Space,Heavy Duty Sturdy Mattress Foundation,Easy Assembly,No...":
+        - img "NEW JETO Metal Bed Frame,Queen Size Bed Frame with Storage Space,Heavy Duty Sturdy Mattress Foundation,Easy Assembly,No..."
+    - listitem:
+      - link "STANLEY Quencher ProTour Flip Straw Tumbler with Leakproof Lid | Built-In Straw & Handle | Cupholder Compatible for...":
+        - img "STANLEY Quencher ProTour Flip Straw Tumbler with Leakproof Lid | Built-In Straw & Handle | Cupholder Compatible for..."
+    - listitem:
+      - link "20 Pack Vacuum Storage Bags, Space Saver Bags (4 Jumbo/4 Large/4 Medium/4 Small/4 Roll) Compression for Comforters and...":
+        - img "20 Pack Vacuum Storage Bags, Space Saver Bags (4 Jumbo/4 Large/4 Medium/4 Small/4 Roll) Compression for Comforters and..."
+    - listitem:
+      - link "Utopia Bedding Throw Pillows (Set of 4, White), 18 x 18 Inches Pillows for Sofa, Bed and Couch Decorative Stuffer Pillow":
+        - img "Utopia Bedding Throw Pillows (Set of 4, White), 18 x 18 Inches Pillows for Sofa, Bed and Couch Decorative Stuffer Pillow"
+    - listitem:
+      - link "ALYVIA SPRING Waterproof Fabric Shower Curtain Liner with 3 Magnets - Soft Hotel Quality Cloth Shower Liner,...":
+        - img "ALYVIA SPRING Waterproof Fabric Shower Curtain Liner with 3 Magnets - Soft Hotel Quality Cloth Shower Liner,..."
+    - listitem:
+      - link "Utopia Bedding Queen Fitted Sheet - Bottom Sheet - Deep Pocket - Soft Microfiber - Shrinkage and Fade Resistant - Easy...":
+        - img "Utopia Bedding Queen Fitted Sheet - Bottom Sheet - Deep Pocket - Soft Microfiber - Shrinkage and Fade Resistant - Easy..."
+    - listitem:
+      - link "Bedsure Satin Pillowcase, Similar to Silk Pillow Cases Queen Size Set of 2, Cooling Pillow Case for Hot Sleepers with...":
+        - img "Bedsure Satin Pillowcase, Similar to Silk Pillow Cases Queen Size Set of 2, Cooling Pillow Case for Hot Sleepers with..."
+    - listitem:
+      - link "Utopia Bedding Quilted Fitted Mattress Pad, Queen Size, Elastic Fitted Mattress Topper Protector and Cover Stretches up...":
+        - img "Utopia Bedding Quilted Fitted Mattress Pad, Queen Size, Elastic Fitted Mattress Topper Protector and Cover Stretches up..."
+    - listitem:
+      - link "Utopia Bedding Bed Pillows for Sleeping Queen Size (White), Set of 2, Cooling Hotel Quality, Gusseted Pillow for Back,...":
+        - img "Utopia Bedding Bed Pillows for Sleeping Queen Size (White), Set of 2, Cooling Hotel Quality, Gusseted Pillow for Back,..."
+    - listitem:
+      - link "Amazon Basics Digital Kitchen Scale with LCD Display, Batteries Included, Weighs up to 11 pounds, Black and Stainless Steel":
+        - img "Amazon Basics Digital Kitchen Scale with LCD Display, Batteries Included, Weighs up to 11 pounds, Black and Stainless Steel"
+    - listitem:
+      - link "Ultra Soft Queen Size Mattress Topper - Viscose Made from Bamboo Pillow Top Mattress Pad for Back Pain Relief -...":
+        - img "Ultra Soft Queen Size Mattress Topper - Viscose Made from Bamboo Pillow Top Mattress Pad for Back Pain Relief -..."
+    - listitem:
+      - link "LiBa Bathroom Shower Curtain Waterproof Plastic Shower Curtain Premium PEVA Non-Toxic with Rust Proof Grommets Clear 8G...":
+        - img "LiBa Bathroom Shower Curtain Waterproof Plastic Shower Curtain Premium PEVA Non-Toxic with Rust Proof Grommets Clear 8G..."
+    - listitem:
+      - link "Utopia Home - Plastic Hangers 50 Pack - Space Saving Clothes Hanger - Durable and Strong Closet Organizers and Storage...":
+        - img "Utopia Home - Plastic Hangers 50 Pack - Space Saving Clothes Hanger - Durable and Strong Closet Organizers and Storage..."
+  - separator
+  - heading "Deals up to 40% off" [level=2]
+  - link "Our Top 100+":
+    - img "Our Top 100+"
+    - text: Our Top 100+
+  - link "Customer Loved":
+    - img "Customer Loved"
+    - text: Customer Loved
+  - link "Amazon Outlet":
+    - img "Amazon Outlet"
+    - text: Amazon Outlet
+  - link "Current Obsessions":
+    - img "Current Obsessions"
+    - text: Current Obsessions
+  - link "Deals up to 40% off - Shop Labor Day Sale": Shop Labor Day Sale
+  - heading "The vacation shop" [level=2]
+  - link "silver sandals with star":
+    - img "silver sandals with star"
+    - text: Must-have sandals
+  - link "girl in orange swimsuit":
+    - img "girl in orange swimsuit"
+    - text: Splashy swim
+  - link "Girl in rainbow dress":
+    - img "Girl in rainbow dress"
+    - text: Resort-ready dresses
+  - link "white purse with red trim":
+    - img "white purse with red trim"
+    - text: Beachy bags
+  - link "The vacation shop - See more on Shopbop": See more on Shopbop
+  - heading "Decorations for your dorm" [level=2]
+  - link "Wall art":
+    - img "Wall art"
+    - text: Wall art
+  - link "Mirrors & clocks":
+    - img "Mirrors & clocks"
+    - text: Mirrors & clocks
+  - link "Rugs":
+    - img "Rugs"
+    - text: Rugs
+  - link "Lights":
+    - img "Lights"
+    - text: Lights
+  - link "Decorations for your dorm - Shop Off to College": Shop Off to College
+  - heading "Shop vacation essentials" [level=2]
+  - link "silver sandals with star":
+    - img "silver sandals with star"
+    - text: Must-have sandals
+  - link "girl in orange swimsuit":
+    - img "girl in orange swimsuit"
+    - text: Splashy swim
+  - link "Girl in rainbow dress":
+    - img "Girl in rainbow dress"
+    - text: Resort-ready dresses
+  - link "white purse with red trim":
+    - img "white purse with red trim"
+    - text: Beachy bags
+  - link "Shop vacation essentials - See more on Shopbop": See more on Shopbop
+  - separator
+  - heading "Best Sellers in Computers & Accessories" [level=2]
+  - list:
+    - listitem:
+      - link "Anker iPhone 16 Charger, 2-Pack 20W Fast USB C Charger Block, for iPhone 16/16 Pro Max/15 Series/iPad Pro and More...":
+        - img "Anker iPhone 16 Charger, 2-Pack 20W Fast USB C Charger Block, for iPhone 16/16 Pro Max/15 Series/iPad Pro and More..."
+    - listitem:
+      - link "Stylus Pen for iPad 6th-11th Generation-2X Fast Charge Active Pencil Compatible with 2018-2025 Apple iPad Pro...":
+        - img "Stylus Pen for iPad 6th-11th Generation-2X Fast Charge Active Pencil Compatible with 2018-2025 Apple iPad Pro..."
+    - listitem:
+      - link "Ailun Screen Protector for iPad 11th A16 2025 [11 Inch] / 10th Generation 2022 [10.9 Inch], Tempered Glass [Face ID &...":
+        - img "Ailun Screen Protector for iPad 11th A16 2025 [11 Inch] / 10th Generation 2022 [10.9 Inch], Tempered Glass [Face ID &..."
+    - listitem:
+      - 'link "Apple iPad 11-inch: A16 chip, 11-inch Model, Liquid Retina Display, 128GB, Wi-Fi 6, 12MP Front/12MP Back Camera, Touch..."':
+        - 'img "Apple iPad 11-inch: A16 chip, 11-inch Model, Liquid Retina Display, 128GB, Wi-Fi 6, 12MP Front/12MP Back Camera, Touch..."'
+    - listitem:
+      - link "Anker USB C Charger(Nano II 65W), PPS 3-Port Fast Compact Foldable Wall Charger for MacBook Pro/Air, iPad Pro, Galaxy...":
+        - img "Anker USB C Charger(Nano II 65W), PPS 3-Port Fast Compact Foldable Wall Charger for MacBook Pro/Air, iPad Pro, Galaxy..."
+    - listitem:
+      - link "MoKo Case for iPad (A16) 11th Generation 11 Inch 2025, iPad 10th Generation 10.9 inch 2022, Slim Stand Protective Cover...":
+        - img "MoKo Case for iPad (A16) 11th Generation 11 Inch 2025, iPad 10th Generation 10.9 inch 2022, Slim Stand Protective Cover..."
+    - listitem:
+      - link "Nelko Label Maker Machine with Tape, P21 Bluetooth Label Printer, Wireless Mini Label Makers with Multiple Templates for...":
+        - img "Nelko Label Maker Machine with Tape, P21 Bluetooth Label Printer, Wireless Mini Label Makers with Multiple Templates for..."
+    - listitem:
+      - link "Hastraith Stylus Pen for iPad(2018-2025)-13 Mins Fast Charge with Tilt Sensitivity & Palm Rejection for iPad...":
+        - img "Hastraith Stylus Pen for iPad(2018-2025)-13 Mins Fast Charge with Tilt Sensitivity & Palm Rejection for iPad..."
+    - listitem:
+      - link "ProCase 2 Pack Screen Protector for iPad A16 2025 11th/10th 2022 Generation (11-inch/10.9), Tempered Glass Film Guard -Clear":
+        - img "ProCase 2 Pack Screen Protector for iPad A16 2025 11th/10th 2022 Generation (11-inch/10.9), Tempered Glass Film Guard -Clear"
+    - listitem:
+      - link "Amazon Fire HD 10 tablet (newest model) built for relaxation, 10.1\" vibrant Full HD screen, octa-core processor, 3 GB...":
+        - img "Amazon Fire HD 10 tablet (newest model) built for relaxation, 10.1\" vibrant Full HD screen, octa-core processor, 3 GB..."
+    - listitem:
+      - link "Metapen Pencil A8 for Apple iPad 2018-2025, (2X Faster Charge), Tilt Sensitivity, Pixel Precision, Stylus Pen for iPad...":
+        - img "Metapen Pencil A8 for Apple iPad 2018-2025, (2X Faster Charge), Tilt Sensitivity, Pixel Precision, Stylus Pen for iPad..."
+    - listitem:
+      - 'link "Apple Pencil (USB-C): Device Compatibility Check Required - Pixel-Perfect Precision, Tilt Sensitivity, Perfect for..."':
+        - 'img "Apple Pencil (USB-C): Device Compatibility Check Required - Pixel-Perfect Precision, Tilt Sensitivity, Perfect for..."'
+    - listitem:
+      - link "Anker Nano USB C Charger Block, 30W PIQ 3.0 Foldable iPhone Charger Fast Charging for iPhone 16/15 Series, Galaxy, iPad,...":
+        - img "Anker Nano USB C Charger Block, 30W PIQ 3.0 Foldable iPhone Charger Fast Charging for iPhone 16/15 Series, Galaxy, iPad,..."
+    - listitem:
+      - 'link "Apple Pencil Pro: Latest Model - Device Compatibility Check Required - Pixel-Perfect Precision, Tilt and Pressure..."':
+        - 'img "Apple Pencil Pro: Latest Model - Device Compatibility Check Required - Pixel-Perfect Precision, Tilt and Pressure..."'
+    - listitem:
+      - link "HP OfficeJet Pro 8125e Wireless All-in-One Color Inkjet Printer, Print, scan, Copy, ADF, Duplex Printing, Home & Office,...":
+        - img "HP OfficeJet Pro 8125e Wireless All-in-One Color Inkjet Printer, Print, scan, Copy, ADF, Duplex Printing, Home & Office,..."
+    - listitem:
+      - 'link "Apple iPad 11-inch: A16 chip, 11-inch Model, Liquid Retina Display, 128GB, Wi-Fi 6, 12MP Front/12MP Back Camera, Touch..."':
+        - 'img "Apple iPad 11-inch: A16 chip, 11-inch Model, Liquid Retina Display, 128GB, Wi-Fi 6, 12MP Front/12MP Back Camera, Touch..."'
+    - listitem:
+      - link "MATEIN Travel Laptop Backpack, Business Anti Theft Slim Sturdy Laptops Backpack with USB Charging Port, Water Resistant...":
+        - img "MATEIN Travel Laptop Backpack, Business Anti Theft Slim Sturdy Laptops Backpack with USB Charging Port, Water Resistant..."
+    - listitem:
+      - link "Mac Book Pro Charger - 118W USB C Charger Fast Charger Compatible with MacBook pro/Air, M1 M2 M3 M4, ipad Pro, Samsung...":
+        - img "Mac Book Pro Charger - 118W USB C Charger Fast Charger Compatible with MacBook pro/Air, M1 M2 M3 M4, ipad Pro, Samsung..."
+    - listitem:
+      - link "JanSport Laptop Backpack - Computer Bag with 2 Compartments, Ergonomic Shoulder Straps, 15” Laptop Sleeve, Haul Handle -...":
+        - img "JanSport Laptop Backpack - Computer Bag with 2 Compartments, Ergonomic Shoulder Straps, 15” Laptop Sleeve, Haul Handle -..."
+    - listitem:
+      - link "MOSISO Compatible with MacBook Air 13 inch Case 2025 2024 2023 2022 M4 A3240 M3 A3113 M2 A2681, Plastic Hard...":
+        - img "MOSISO Compatible with MacBook Air 13 inch Case 2025 2024 2023 2022 M4 A3240 M3 A3113 M2 A2681, Plastic Hard..."
+    - listitem:
+      - link "Stylus (5 Pcs), 2-in-1 Stylus Pen for Touch Screen, High Precision and Sensitivity, Suitable for iPhone/ipad/Android...":
+        - img "Stylus (5 Pcs), 2-in-1 Stylus Pen for Touch Screen, High Precision and Sensitivity, Suitable for iPhone/ipad/Android..."
+    - listitem:
+      - 'link "Apple 2025 MacBook Air 13-inch Laptop with M4 chip: Built for Apple Intelligence, 13.6-inch Liquid Retina Display, 16GB..."':
+        - 'img "Apple 2025 MacBook Air 13-inch Laptop with M4 chip: Built for Apple Intelligence, 13.6-inch Liquid Retina Display, 16GB..."'
+    - listitem:
+      - link "Samsung 990 EVO Plus SSD 2TB, PCIe Gen 4x4, Gen 5x2 M.2 2280, Speeds Up-to 7,250 MB/s, Upgrade Storage for PC/Laptops,...":
+        - img "Samsung 990 EVO Plus SSD 2TB, PCIe Gen 4x4, Gen 5x2 M.2 2280, Speeds Up-to 7,250 MB/s, Upgrade Storage for PC/Laptops,..."
+    - listitem:
+      - link "Epson EcoTank ET-2800 Wireless Color All-in-One Cartridge-Free Supertank Printer with Scan and Copy â€“ The Ideal Basic...":
+        - img "Epson EcoTank ET-2800 Wireless Color All-in-One Cartridge-Free Supertank Printer with Scan and Copy â€“ The Ideal Basic..."
+    - listitem:
+      - link "Anker USB C Hub, 5-in-1 USBC to HDMI Splitter with 4K Display, 1 x Powered USB-C 5Gbps & 2×Powered USB-A 3.0 5Gbps Data...":
+        - img "Anker USB C Hub, 5-in-1 USBC to HDMI Splitter with 4K Display, 1 x Powered USB-C 5Gbps & 2×Powered USB-A 3.0 5Gbps Data..."
+    - listitem:
+      - link "MOBDIK 2 Pack Paperfeel Screen Protector Compatible with iPad A16 11th / 10th Generation (2025/2022) & iPad Air 11 M3...":
+        - img "MOBDIK 2 Pack Paperfeel Screen Protector Compatible with iPad A16 11th / 10th Generation (2025/2022) & iPad Air 11 M3..."
+    - listitem:
+      - link "Samsung 990 EVO Plus SSD 1TB, PCIe Gen 4x4, Gen 5x2 M.2 2280, Speeds Up-to 7,250 MB/s, Upgrade Storage for PC/Laptops,...":
+        - img "Samsung 990 EVO Plus SSD 1TB, PCIe Gen 4x4, Gen 5x2 M.2 2280, Speeds Up-to 7,250 MB/s, Upgrade Storage for PC/Laptops,..."
+    - listitem:
+      - link "TP-Link AX1800 WiFi 6 Router V4 (Archer AX21) – Dual Band Wireless Internet, Gigabit, Easy Mesh, Works with Alexa - A...":
+        - img "TP-Link AX1800 WiFi 6 Router V4 (Archer AX21) – Dual Band Wireless Internet, Gigabit, Easy Mesh, Works with Alexa - A..."
+    - listitem:
+      - link "TP-Link USB Bluetooth Adapter for PC - Bluetooth 5.3 Dongle Receiver, Plug and Play, Nano Design, EDR & BLE, Supports...":
+        - img "TP-Link USB Bluetooth Adapter for PC - Bluetooth 5.3 Dongle Receiver, Plug and Play, Nano Design, EDR & BLE, Supports..."
+    - listitem:
+      - link "BESIGN LS03 Aluminum Laptop Stand, Ergonomic Detachable Computer Stand, Notebook Riser Compatible with Air, Pro, Dell,...":
+        - img "BESIGN LS03 Aluminum Laptop Stand, Ergonomic Detachable Computer Stand, Notebook Riser Compatible with Air, Pro, Dell,..."
+  - separator
+  - heading "Best Sellers in Beauty & Personal Care" [level=2]
+  - list:
+    - listitem:
+      - link "eos Shea Better Body Lotion Vanilla Cashmere, 24-Hour Moisture Skin Care, Lightweight & Non-Greasy, Natural Shea, Vegan,...":
+        - img "eos Shea Better Body Lotion Vanilla Cashmere, 24-Hour Moisture Skin Care, Lightweight & Non-Greasy, Natural Shea, Vegan,..."
+    - listitem:
+      - 'link "Mighty Patch™ Original patch from Hero Cosmetics – The #1 Hydrocolloid Acne Pimple Patch for Shrinking Zits and..."':
+        - 'img "Mighty Patch™ Original patch from Hero Cosmetics – The #1 Hydrocolloid Acne Pimple Patch for Shrinking Zits and..."'
+    - listitem:
+      - link "Clean Skin Club Clean Towels XL™, 100% USDA Biobased Face Towel, Disposable Face Towelette, Eczema Association Accepted,...":
+        - img "Clean Skin Club Clean Towels XL™, 100% USDA Biobased Face Towel, Disposable Face Towelette, Eczema Association Accepted,..."
+    - listitem:
+      - link "Medicube Zero Pore Pads 2.0, Dual-Textured Facial Toner Pads for Exfoliation and Pore Care with 4.5% AHA Lactic Acid &...":
+        - img "Medicube Zero Pore Pads 2.0, Dual-Textured Facial Toner Pads for Exfoliation and Pore Care with 4.5% AHA Lactic Acid &..."
+    - listitem:
+      - link "Neutrogena Makeup Remover Wipes, Ultra-Soft Cleansing Facial Towelettes for Waterproof Makeup, Alcohol-Free,...":
+        - img "Neutrogena Makeup Remover Wipes, Ultra-Soft Cleansing Facial Towelettes for Waterproof Makeup, Alcohol-Free,..."
+    - listitem:
+      - link "Amazon Basics Cotton Swabs for Personal Hygiene and Baby Care, 500 Count, 1 Pack":
+        - img "Amazon Basics Cotton Swabs for Personal Hygiene and Baby Care, 500 Count, 1 Pack"
+    - listitem:
+      - link "medicube Collagen Overnight Wrapping Peel Off Facial Mask Pack - Elasticity & Hydration Care, Reduces Sagging & Dullness...":
+        - img "medicube Collagen Overnight Wrapping Peel Off Facial Mask Pack - Elasticity & Hydration Care, Reduces Sagging & Dullness..."
+    - listitem:
+      - link "Amazon Basics Hypoallergenic 100% Cotton Rounds for Makeup Removal and Skincare, 100 Count, 1 Pack":
+        - img "Amazon Basics Hypoallergenic 100% Cotton Rounds for Makeup Removal and Skincare, 100 Count, 1 Pack"
+    - listitem:
+      - link "essence | Lash Princess False Lash Effect Mascara | Volumizing & Lengthening | Cruelty Free & Paraben Free":
+        - img "essence | Lash Princess False Lash Effect Mascara | Volumizing & Lengthening | Cruelty Free & Paraben Free"
+    - listitem:
+      - link "Q-tips Cotton Swabs For Hygiene and Beauty Care Original Cotton Swab Made With 100% Cotton 625 Count, WHITE":
+        - img "Q-tips Cotton Swabs For Hygiene and Beauty Care Original Cotton Swab Made With 100% Cotton 625 Count, WHITE"
+    - listitem:
+      - link "MRS. MEYER'S CLEAN DAY Liquid Hand Soap Refill, Cruelty Free and Biodegradable Formula, Lavender Scent, 33 Fl Oz (Pack of 1)":
+        - img "MRS. MEYER'S CLEAN DAY Liquid Hand Soap Refill, Cruelty Free and Biodegradable Formula, Lavender Scent, 33 Fl Oz (Pack of 1)"
+    - listitem:
+      - link "medicube Collagen Jelly Cream- Niacinamide & Freeze-Dried Hydrolyzed Collagen-Boosts skin barrier hydration & gives 24h...":
+        - img "medicube Collagen Jelly Cream- Niacinamide & Freeze-Dried Hydrolyzed Collagen-Boosts skin barrier hydration & gives 24h..."
+    - listitem:
+      - link "The Ordinary Glycolic Acid 7% Exfoliating Toner, Brightening and Smoothing Daily Toner for More Even-Looking Skin Tone":
+        - img "The Ordinary Glycolic Acid 7% Exfoliating Toner, Brightening and Smoothing Daily Toner for More Even-Looking Skin Tone"
+    - listitem:
+      - link "BIODANCE Bio-Collagen Real Deep Mask, Hydrating Overnight Hydrogel Mask, Pore Minimizing, Elasticity Improvement, 34g x4ea":
+        - img "BIODANCE Bio-Collagen Real Deep Mask, Hydrating Overnight Hydrogel Mask, Pore Minimizing, Elasticity Improvement, 34g x4ea"
+    - listitem:
+      - link "Nizoral Anti-Dandruff Shampoo with 1% Ketoconazole, Fresh Scent, 7 Fl Oz":
+        - img "Nizoral Anti-Dandruff Shampoo with 1% Ketoconazole, Fresh Scent, 7 Fl Oz"
+    - listitem:
+      - link "medicube Salmon DNA PDRN pink collagen jelly gel mask | overnight face mask for glass glow skin- elasticity, hydrating,...":
+        - img "medicube Salmon DNA PDRN pink collagen jelly gel mask | overnight face mask for glass glow skin- elasticity, hydrating,..."
+    - listitem:
+      - link "Maybelline Lash Sensational Sky High Washable Mascara Makeup, Volumizing, Lengthening, Defining, Curling, Multiplying,...":
+        - img "Maybelline Lash Sensational Sky High Washable Mascara Makeup, Volumizing, Lengthening, Defining, Curling, Multiplying,..."
+    - listitem:
+      - link "Method Body Wash, Sea + Surf, Paraben and Phthalate Free, Biodegradable Formula, 28 oz, (Pack of 1)":
+        - img "Method Body Wash, Sea + Surf, Paraben and Phthalate Free, Biodegradable Formula, 28 oz, (Pack of 1)"
+    - listitem:
+      - link "Julep Eyeshadow 101 Cream-to-Powder Waterproof Shadow Stick – Champagne Shimmer – Long-Lasting, Crease-Proof, Medium...":
+        - img "Julep Eyeshadow 101 Cream-to-Powder Waterproof Shadow Stick – Champagne Shimmer – Long-Lasting, Crease-Proof, Medium..."
+    - listitem:
+      - link "SALT & STONE Aluminum Free Deodorant | Extra Strength 48 Hour Protection for Women & Men | Made with Seaweed Extracts,...":
+        - img "SALT & STONE Aluminum Free Deodorant | Extra Strength 48 Hour Protection for Women & Men | Made with Seaweed Extracts,..."
+    - listitem:
+      - link "Sol de Janeiro Hair & Body Perfume Mist":
+        - img "Sol de Janeiro Hair & Body Perfume Mist"
+    - listitem:
+      - link "VALITIC Kojic Acid Dark Spot Remover Soap Bars with Vitamin C, Retinol, Collagen, Turmeric - Original Japanese Complex...":
+        - img "VALITIC Kojic Acid Dark Spot Remover Soap Bars with Vitamin C, Retinol, Collagen, Turmeric - Original Japanese Complex..."
+    - listitem:
+      - link "CeraVe Daily Moisturizing Lotion for Dry Skin, Body Lotion & Face Moisturizer with Hyaluronic Acid and Ceramides, Daily...":
+        - img "CeraVe Daily Moisturizing Lotion for Dry Skin, Body Lotion & Face Moisturizer with Hyaluronic Acid and Ceramides, Daily..."
+    - listitem:
+      - link "MRS. MEYER'S CLEAN DAY Hand Soap, Made with Essential Oils, Biodegradable Formula, Rain Water, 12.5 fl. oz - Pack of 3":
+        - img "MRS. MEYER'S CLEAN DAY Hand Soap, Made with Essential Oils, Biodegradable Formula, Rain Water, 12.5 fl. oz - Pack of 3"
+    - listitem:
+      - link "The Ordinary Niacinamide 10% + Zinc 1%, Smoothing Serum for Blemish-Prone Skin":
+        - img "The Ordinary Niacinamide 10% + Zinc 1%, Smoothing Serum for Blemish-Prone Skin"
+    - listitem:
+      - link "CeraVe Foaming Facial Cleanser, Daily Face Wash for Oily Skin, Hyaluronic Acid + Ceramides + Niacinamide, Fragrance Free...":
+        - img "CeraVe Foaming Facial Cleanser, Daily Face Wash for Oily Skin, Hyaluronic Acid + Ceramides + Niacinamide, Fragrance Free..."
+    - listitem:
+      - link "eos Shea Better Cashmere Body Wash, Vanilla Cashmere, Moisturizing, pH Balanced Body Wash, Creamy Gel Formula, Paraben &...":
+        - img "eos Shea Better Cashmere Body Wash, Vanilla Cashmere, Moisturizing, pH Balanced Body Wash, Creamy Gel Formula, Paraben &..."
+    - listitem:
+      - link "L3 Level 3 Styling Powder - Natural Look Mens Powder - Easy to Apply with No Oil or Greasy Residue":
+        - img "L3 Level 3 Styling Powder - Natural Look Mens Powder - Easy to Apply with No Oil or Greasy Residue"
+  - separator
+  - heading "Shop 4+ star finds for college" [level=2]
+  - link "Dorm room essentials":
+    - img "Dorm room essentials"
+    - text: Dorm room essentials
+  - link "Beauty":
+    - img "Beauty"
+    - text: Beauty
+  - link "Fashion":
+    - img "Fashion"
+    - text: Fashion
+  - link "Electronics":
+    - img "Electronics"
+    - text: Electronics
+  - link "Shop 4+ star finds for college - Shop Off to College": Shop Off to College
+  - heading "Shop summer event essentials" [level=2]
+  - link "girl in white dress":
+    - img "girl in white dress"
+    - text: Cocktail & party dresses
+  - link "cheetah heels":
+    - img "cheetah heels"
+    - text: Special-occasion shoes
+  - link "blue bag":
+    - img "blue bag"
+    - text: Statement bags
+  - link "gold jewelry laid down":
+    - img "gold jewelry laid down"
+    - text: Elevated jewelry
+  - link "Shop summer event essentials - See more on Shopbop": See more on Shopbop
+  - heading "Shop by grade" [level=2]
+  - link "Preschool":
+    - img "Preschool"
+    - text: Preschool
+  - link "Kindergarten":
+    - img "Kindergarten"
+    - text: Kindergarten
+  - link "Grades 1-2":
+    - img "Grades 1-2"
+    - text: Grades 1-2
+  - link "Grades 3-5":
+    - img "Grades 3-5"
+    - text: Grades 3-5
+  - link "Shop by grade - Shop Back to School": Shop Back to School
+  - heading "Up to 40% off by category" [level=2]
+  - link "Beauty":
+    - img "Beauty"
+    - text: Beauty
+  - link "Fashion":
+    - img "Fashion"
+    - text: Fashion
+  - link "Electronics":
+    - img "Electronics"
+    - text: Electronics
+  - link "Sports & Outdoors":
+    - img "Sports & Outdoors"
+    - text: Sports & Outdoors
+  - link "Up to 40% off by category - Shop Labor Day sale": Shop Labor Day sale
+  - separator
+  - heading "Best Sellers in Books" [level=2]
+  - list:
+    - listitem:
+      - 'link "The Let Them Theory: A Life-Changing Tool That Millions of People Can''t Stop Talking About"':
+        - 'img "The Let Them Theory: A Life-Changing Tool That Millions of People Can''t Stop Talking About"'
+    - listitem:
+      - 'link "Forgotten Home Apothecary : 250 Powerful Remedies at Your Fingertips"':
+        - 'img "Forgotten Home Apothecary : 250 Powerful Remedies at Your Fingertips"'
+    - listitem:
+      - 'link "My First Learn-to-Write Workbook: Practice for Kids with Pen Control, Line Tracing, Letters, and More!"':
+        - 'img "My First Learn-to-Write Workbook: Practice for Kids with Pen Control, Line Tracing, Letters, and More!"'
+    - listitem:
+      - link "Fahrenheit 451":
+        - img "Fahrenheit 451"
+    - listitem:
+      - 'link "Project Hail Mary: A Novel"':
+        - 'img "Project Hail Mary: A Novel"'
+    - listitem:
+      - link "The Very Hungry Caterpillar":
+        - img "The Very Hungry Caterpillar"
+    - listitem:
+      - 'link "The Body Keeps the Score: Brain, Mind, and Body in the Healing of Trauma"':
+        - 'img "The Body Keeps the Score: Brain, Mind, and Body in the Healing of Trauma"'
+    - listitem:
+      - 'link "The Anxious Generation: How the Great Rewiring of Childhood Is Causing an Epidemic of Mental Illness"':
+        - 'img "The Anxious Generation: How the Great Rewiring of Childhood Is Causing an Epidemic of Mental Illness"'
+    - listitem:
+      - link "World of Eric Carle, Around the Farm 30-Button Animal Sound Book - Great for First Words - PI Kids":
+        - img "World of Eric Carle, Around the Farm 30-Button Animal Sound Book - Great for First Words - PI Kids"
+    - listitem:
+      - link "The Outsiders":
+        - img "The Outsiders"
+    - listitem:
+      - link "Regretting You":
+        - img "Regretting You"
+    - listitem:
+      - 'link "Spooky Cutie: Coloring Book for Adults and Teens Featuring Adorable Creepy Creatures in Cozy Hygge Moments for..."':
+        - 'img "Spooky Cutie: Coloring Book for Adults and Teens Featuring Adorable Creepy Creatures in Cozy Hygge Moments for..."'
+    - listitem:
+      - link "I Love You to the Moon and Back":
+        - img "I Love You to the Moon and Back"
+    - listitem:
+      - 'link "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones"':
+        - 'img "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones"'
+    - listitem:
+      - link "The Night Before Kindergarten":
+        - img "The Night Before Kindergarten"
+    - listitem:
+      - 'link "The Nightingale: A Novel"':
+        - 'img "The Nightingale: A Novel"'
+    - listitem:
+      - link "Publication Manual (OFFICIAL) 7th Edition of the American Psychological Association":
+        - img "Publication Manual (OFFICIAL) 7th Edition of the American Psychological Association"
+    - listitem:
+      - 'link "The Color of Death: A Novel"':
+        - 'img "The Color of Death: A Novel"'
+    - listitem:
+      - link "Brown Bear, Brown Bear, What Do You See?":
+        - img "Brown Bear, Brown Bear, What Do You See?"
+    - listitem:
+      - 'link "Animal Farm: 75th Anniversary Edition"':
+        - 'img "Animal Farm: 75th Anniversary Edition"'
+    - listitem:
+      - 'link "The Complete Summer I Turned Pretty Trilogy (Boxed Set): The Summer I Turned Pretty; It''s Not Summer Without You; We''ll..."':
+        - 'img "The Complete Summer I Turned Pretty Trilogy (Boxed Set): The Summer I Turned Pretty; It''s Not Summer Without You; We''ll..."'
+    - listitem:
+      - 'link "The Frozen River: A GMA Book Club Pick: A Novel"':
+        - 'img "The Frozen River: A GMA Book Club Pick: A Novel"'
+    - listitem:
+      - 'link "My First Library: Boxset of 10 Board Books for Kids"':
+        - 'img "My First Library: Boxset of 10 Board Books for Kids"'
+    - listitem:
+      - 'link "I Love You Like No Otter: A Funny and Sweet Board Book for Babies and Toddlers (Punderland)"':
+        - 'img "I Love You Like No Otter: A Funny and Sweet Board Book for Babies and Toddlers (Punderland)"'
+    - listitem:
+      - link "Lord of the Flies":
+        - img "Lord of the Flies"
+    - listitem:
+      - link "The Summer I Turned Pretty (Summer I Turned Pretty, The)":
+        - img "The Summer I Turned Pretty (Summer I Turned Pretty, The)"
+    - listitem:
+      - link "The Rainbow Fish":
+        - img "The Rainbow Fish"
+    - listitem:
+      - link "The Surrogate Mother":
+        - img "The Surrogate Mother"
+    - listitem:
+      - link "Happy Birthday to You!":
+        - img "Happy Birthday to You!"
+    - listitem:
+      - 'link "The Psychology of Money: Timeless lessons on wealth, greed, and happiness"':
+        - 'img "The Psychology of Money: Timeless lessons on wealth, greed, and happiness"'
+- complementary "Your recently viewed items and featured recommendations"
+- button "Back to top"
+- heading "Get to Know Us" [level=6]
+- list:
+  - listitem:
+    - link "Careers"
+  - listitem:
+    - link "Amazon Newsletter"
+  - listitem:
+    - link "About Amazon"
+  - listitem:
+    - link "Accessibility"
+  - listitem:
+    - link "Sustainability"
+  - listitem:
+    - link "Press Center"
+  - listitem:
+    - link "Investor Relations"
+  - listitem:
+    - link "Amazon Devices"
+  - listitem:
+    - link "Amazon Science"
+- heading "Make Money with Us" [level=6]
+- list:
+  - listitem:
+    - link "Sell on Amazon"
+  - listitem:
+    - link "Sell apps on Amazon"
+  - listitem:
+    - link "Supply to Amazon"
+  - listitem:
+    - link "Protect & Build Your Brand"
+  - listitem:
+    - link "Become an Affiliate"
+  - listitem:
+    - link "Become a Delivery Driver"
+  - listitem:
+    - link "Start a Package Delivery Business"
+  - listitem:
+    - link "Advertise Your Products"
+  - listitem:
+    - link "Self-Publish with Us"
+  - listitem:
+    - link "Become an Amazon Hub Partner"
+  - listitem:
+    - link "See More Ways to Make Money"
+- heading "Amazon Payment Products" [level=6]
+- list:
+  - listitem:
+    - link "Amazon Visa"
+  - listitem:
+    - link "Amazon Store Card"
+  - listitem:
+    - link "Amazon Secured Card"
+  - listitem:
+    - link "Amazon Business Card"
+  - listitem:
+    - link "Shop with Points"
+  - listitem:
+    - link "Credit Card Marketplace"
+  - listitem:
+    - link "Reload Your Balance"
+  - listitem:
+    - link "Gift Cards"
+  - listitem:
+    - link "Amazon Currency Converter"
+- heading "Let Us Help You" [level=6]
+- list:
+  - listitem:
+    - link "Your Account"
+  - listitem:
+    - link "Your Orders"
+  - listitem:
+    - link "Shipping Rates & Policies"
+  - listitem:
+    - link "Amazon Prime"
+  - listitem:
+    - link "Returns & Replacements"
+  - listitem:
+    - link "Manage Your Content and Devices"
+  - listitem:
+    - link "Recalls and Product Safety Alerts"
+  - listitem:
+    - link "Registry & Gift List"
+  - listitem:
+    - link "Help"
+- link "Amazon US Home"
+- link "Choose a language for shopping. Current selection is English.": English
+- button "Expand to Change Language or Country"
+- button "Choose a country/region for shopping. The current selection is United States.": United States
+- navigation "More on Amazon":
+  - list:
+    - listitem:
+      - link "Amazon Music Stream millions of songs":
+        - heading "Amazon Music" [level=5]
+        - text: Stream millions of songs
+    - listitem:
+      - link "Amazon Ads Reach customers wherever they spend their time":
+        - heading "Amazon Ads" [level=5]
+        - text: Reach customers wherever they spend their time
+    - listitem:
+      - link "6pm Score deals on fashion brands":
+        - heading "6pm" [level=5]
+        - text: Score deals on fashion brands
+    - listitem:
+      - link "AbeBooks Books, art & collectibles":
+        - heading "AbeBooks" [level=5]
+        - text: Books, art & collectibles
+    - listitem:
+      - link "ACX Audiobook Publishing Made Easy":
+        - heading "ACX" [level=5]
+        - text: Audiobook Publishing Made Easy
+    - listitem:
+      - link "Sell on Amazon Start a Selling Account":
+        - heading "Sell on Amazon" [level=5]
+        - text: Start a Selling Account
+    - listitem:
+      - link "Veeqo Shipping Software Inventory Management":
+        - heading "Veeqo" [level=5]
+        - text: Shipping Software Inventory Management
+  - list:
+    - listitem:
+      - link "Amazon Business Everything For Your Business":
+        - heading "Amazon Business" [level=5]
+        - text: Everything For Your Business
+    - listitem:
+      - link "Amazon Fresh Groceries & More Right To Your Door":
+        - heading "Amazon Fresh" [level=5]
+        - text: Groceries & More Right To Your Door
+    - listitem:
+      - link "AmazonGlobal Ship Orders Internationally":
+        - heading "AmazonGlobal" [level=5]
+        - text: Ship Orders Internationally
+    - listitem:
+      - link "Home Services Experienced Pros Happiness Guarantee":
+        - heading "Home Services" [level=5]
+        - text: Experienced Pros Happiness Guarantee
+    - listitem:
+      - link "Amazon Web Services Scalable Cloud Computing Services":
+        - heading "Amazon Web Services" [level=5]
+        - text: Scalable Cloud Computing Services
+    - listitem:
+      - link "Audible Listen to Books & Original Audio Performances":
+        - heading "Audible" [level=5]
+        - text: Listen to Books & Original Audio Performances
+    - listitem:
+      - link "Box Office Mojo Find Movie Box Office Data":
+        - heading "Box Office Mojo" [level=5]
+        - text: Find Movie Box Office Data
+  - list:
+    - listitem:
+      - link "Goodreads Book reviews & recommendations":
+        - heading "Goodreads" [level=5]
+        - text: Book reviews & recommendations
+    - listitem:
+      - link "IMDb Movies, TV & Celebrities":
+        - heading "IMDb" [level=5]
+        - text: Movies, TV & Celebrities
+    - listitem:
+      - link "IMDbPro Get Info Entertainment Professionals Need":
+        - heading "IMDbPro" [level=5]
+        - text: Get Info Entertainment Professionals Need
+    - listitem:
+      - link "Kindle Direct Publishing Indie Digital & Print Publishing Made Easy":
+        - heading "Kindle Direct Publishing" [level=5]
+        - text: Indie Digital & Print Publishing Made Easy
+    - listitem:
+      - link "Amazon Photos Unlimited Photo Storage Free With Prime":
+        - heading "Amazon Photos" [level=5]
+        - text: Unlimited Photo Storage Free With Prime
+    - listitem:
+      - link "Prime Video Direct Video Distribution Made Easy":
+        - heading "Prime Video Direct" [level=5]
+        - text: Video Distribution Made Easy
+    - listitem:
+      - link "Shopbop Designer Fashion Brands":
+        - heading "Shopbop" [level=5]
+        - text: Designer Fashion Brands
+  - list:
+    - listitem:
+      - link "Amazon Resale Great Deals on Quality Used Products":
+        - heading "Amazon Resale" [level=5]
+        - text: Great Deals on Quality Used Products
+    - listitem:
+      - link "Whole Foods Market America’s Healthiest Grocery Store":
+        - heading "Whole Foods Market" [level=5]
+        - text: America’s Healthiest Grocery Store
+    - listitem:
+      - link "Woot! Deals and Shenanigans":
+        - heading "Woot!" [level=5]
+        - text: Deals and Shenanigans
+    - listitem:
+      - link "Zappos Shoes & Clothing":
+        - heading "Zappos" [level=5]
+        - text: Shoes & Clothing
+    - listitem:
+      - link "Ring Smart Home Security Systems":
+        - heading "Ring" [level=5]
+        - text: Smart Home Security Systems
+    - listitem:
+      - link "eero WiFi Stream 4K Video in Every Room":
+        - heading "eero WiFi" [level=5]
+        - text: Stream 4K Video in Every Room
+    - listitem:
+      - link "Blink Smart Security for Every Home":
+        - heading "Blink" [level=5]
+        - text: Smart Security for Every Home
+  - list:
+    - listitem:
+      - link "Neighbors App Real-Time Crime & Safety Alerts":
+        - heading "Neighbors App" [level=5]
+        - text: Real-Time Crime & Safety Alerts
+    - listitem:
+      - link "Amazon Subscription Boxes Top subscription boxes – right to your door":
+        - heading "Amazon Subscription Boxes" [level=5]
+        - text: Top subscription boxes – right to your door
+    - listitem:
+      - link "PillPack Pharmacy Simplified":
+        - heading "PillPack" [level=5]
+        - text: Pharmacy Simplified
+    - listitem:
+      - link "Amazon Renewed Like-new products you can trust":
+        - heading "Amazon Renewed" [level=5]
+        - text: Like-new products you can trust
+- list:
+  - listitem:
+    - link "Conditions of Use"
+  - listitem:
+    - link "Privacy Notice"
+  - listitem:
+    - link "Consumer Health Data Privacy Disclosure"
+  - listitem:
+    - link "Your Ads Privacy Choices"
+  - listitem
+- text: © 1996-2025, Amazon.com, Inc. or its affiliates
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+> 23 |     await this.page.waitForLoadState("networkidle");
+     |                     ^ Error: page.waitForLoadState: Test timeout of 30000ms exceeded.
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
