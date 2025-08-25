@@ -1,0 +1,547 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale NZ in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,204,480 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 18"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: "-1 votes 0 answers 4 views"
+  - heading "Activation error while activating virtual environment created using uv" [level=3]:
+    - link "Activation error while activating virtual environment created using uv"
+  - text: "The UV is installed successfully. However, I'm getting below error: B\\Python\\LangGraph\\demouv> .venv\\Scripts\\activate . venv\\Scripts\\activate : File D:\\B\\Python\\LangGraph\\demouv\\.venv\\Scripts\\..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'anaconda'": anaconda
+    - listitem:
+      - link "show questions tagged 'uv'": uv
+  - link "AskMe's user avatar":
+    - img "AskMe's user avatar"
+  - link "AskMe"
+  - list:
+    - listitem: 2,615
+  - time: asked 3 mins ago
+  - text: 0 votes 0 answers 5 views
+  - 'heading "AS testing: no New --> Test option when right clicking a module testing" [level=3]':
+    - 'link "AS testing: no New --> Test option when right clicking a module testing"'
+  - text: I am trying to play with Google's new Journeys testing. but I do not have the guided "Select New > Test > Journey File.". I do not see the "Test" option. I tried playing with ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'visual-studio'": visual-studio
+    - listitem:
+      - link "show questions tagged 'gemini'": gemini
+  - link "Alon's user avatar":
+    - img "Alon's user avatar"
+  - link "Alon"
+  - list:
+    - listitem: "701"
+  - time: asked 7 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "windows 11 - Kiosk mode run the application with adminstrator privilege [closed]" [level=3]:
+    - link "windows 11 - Kiosk mode run the application with adminstrator privilege [closed]"
+  - text: How to run the application with administrator privilege? I modified the registry to launch my application instead of explorer.exe at startup - as shown below. reg add "HKLM\SOFTWARE\Microsoft\...
+  - list:
+    - listitem:
+      - link "show questions tagged 'windows-11'": windows-11
+    - listitem:
+      - link "show questions tagged 'kiosk-mode'": kiosk-mode
+  - link "Ann's user avatar":
+    - img "Ann's user avatar"
+  - link "Ann"
+  - list:
+    - listitem: "175"
+  - time: asked 16 mins ago
+  - text: 0 votes 0 answers 14 views
+  - 'heading "An error occurred while attempting to decode the Jwt: Timeout while waiting for cache refresh" [level=3]':
+    - 'link "An error occurred while attempting to decode the Jwt: Timeout while waiting for cache refresh"'
+  - text: "I have a Spring Boot application that uses JWT Token based authentication. The issuer and IDP of the token is Auth0. Sometime back I got an error An error occurred while attempting to decode the Jwt: ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'spring'": spring
+    - listitem:
+      - link "show questions tagged 'spring-boot'": spring-boot
+    - listitem:
+      - link "show questions tagged 'spring-security'": spring-security
+    - listitem:
+      - link "show questions tagged 'jwt'": jwt
+    - listitem:
+      - link "show questions tagged 'auth0'": auth0
+  - link "Chintan Pandya's user avatar":
+    - img "Chintan Pandya's user avatar"
+  - link "Chintan Pandya"
+  - list:
+    - listitem: "408"
+  - time: asked 24 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "How to export second-stage optimization results to Excel in a two-stage optimization problem using CPLEX OPL main function" [level=3]:
+    - link "How to export second-stage optimization results to Excel in a two-stage optimization problem using CPLEX OPL main function"
+  - text: I am implementing a two-stage optimization problem in CPLEX OPL using the main function. In the first stage, I solve an optimization model and use its results as input data for the second stage. In ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'cplex'": cplex
+    - listitem:
+      - link "show questions tagged 'opl'": opl
+  - link "SUBHADARSHINI PANDA's user avatar":
+    - img "SUBHADARSHINI PANDA's user avatar"
+  - link "SUBHADARSHINI PANDA"
+  - list:
+    - listitem: "43"
+  - time: asked 24 mins ago
+  - text: "-1 votes 0 answers 22 views"
+  - heading "Longest common prefix code using counter returns inccorect prefix for edge cases" [level=3]:
+    - link "Longest common prefix code using counter returns inccorect prefix for edge cases"
+  - text: I wrote a brute force code to extract the longest common prefix from several input strings. It works for most of the test cases, however fails for an edge case such as strs = ["reflower",&...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'string'": string
+  - link "Viknesh Raj's user avatar":
+    - img "Viknesh Raj's user avatar"
+  - link "Viknesh Raj"
+  - list:
+    - listitem: "1"
+  - time: asked 33 mins ago
+  - text: 0 votes 0 answers 19 views
+  - heading "NiFi Custom Python Processors' old Versions" [level=3]:
+    - link "NiFi Custom Python Processors' old Versions"
+  - text: I am working on deploying NiFi 2.4.0 for my company. One of my goals is to create a simple environment where our developers can deploy their custom python processors to the NiFi. In my testings, I ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'python-3.x'": python-3.x
+    - listitem:
+      - link "show questions tagged 'apache-nifi'": apache-nifi
+  - link "Okan's user avatar":
+    - img "Okan's user avatar"
+  - link "Okan"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 22 views
+  - heading "How to apply CSRF defense to axios requests globally? [closed]" [level=3]:
+    - link "How to apply CSRF defense to axios requests globally? [closed]"
+  - text: I am working on applying CSRF defense on my application, I have applied the defense on Ajax requests but when it comes to Axios it doesn't seem to be working as expected. previously i was working on ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'axios'": axios
+    - listitem:
+      - link "show questions tagged 'csrf'": csrf
+    - listitem:
+      - link "show questions tagged 'csrf-token'": csrf-token
+  - link "sruthi's user avatar":
+    - img "sruthi's user avatar"
+  - link "sruthi"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 1 vote 1 answer 33 views
+  - heading "self-join on table to find missing entries with conditions" [level=3]:
+    - link "self-join on table to find missing entries with conditions"
+  - text: I have a table in which I want to find missing rows in a specific column but with conditions. I want to see if rows that have an id starting with "A" have a corresponding row (= same value ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'sql'": sql
+    - listitem:
+      - link "show questions tagged 'postgresql'": postgresql
+  - link "beginner_'s user avatar":
+    - img "beginner_'s user avatar"
+  - link "beginner_"
+  - list:
+    - listitem: 7,652
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 17 views
+  - heading "clear value range of merged cell with 4 columns and uncheck checkbox next to it" [level=3]:
+    - link "clear value range of merged cell with 4 columns and uncheck checkbox next to it"
+  - text: what i would like to do is select a range for example AZ20 to AZ24 but it is actually a merged cell for each row so from column AZ to BC and right next to it is a checkbox BD and that is for each row, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'google-sheets'": google-sheets
+    - listitem:
+      - link "show questions tagged 'google-apps-script'": google-apps-script
+  - link "k1dr0ck's user avatar":
+    - img "k1dr0ck's user avatar"
+  - link "k1dr0ck"
+  - list:
+    - listitem: 1,245
+  - time: asked 1 hour ago
+  - text: "-2 votes 1 answer 30 views"
+  - 'heading "How to fix a VBA Run-time error 13: Type mismatch" [level=3]':
+    - 'link "How to fix a VBA Run-time error 13: Type mismatch"'
+  - text: I've been tasked with create an automated Purchase Order form in Excel for my company. I've used an automated invoice tutorial as a place to start, substituting out the "invoice number" for &...
+  - list:
+    - listitem:
+      - link "show questions tagged 'excel'": excel
+    - listitem:
+      - link "show questions tagged 'vba'": vba
+  - link "Sab's user avatar":
+    - img "Sab's user avatar"
+  - link "Sab"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 1 vote 1 answer 19 views
+  - heading "using mikefarah/yq find the Nested keys with parent" [level=3]:
+    - link "using mikefarah/yq find the Nested keys with parent"
+  - text: need to get all the nested keys from a yaml file using mikefarah/yq(installed v4.25.1) tried the below 2 this gives only the parent level keys not the child keys under it yq eval 'keys' "...
+  - list:
+    - listitem:
+      - link "show questions tagged 'yaml'": yaml
+    - listitem:
+      - link "show questions tagged 'yq'": yq
+  - link "Sumanth's user avatar":
+    - img "Sumanth's user avatar"
+  - link "Sumanth"
+  - list:
+    - listitem: "189"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 17 views
+  - heading "LoadCredential does not seem to work when running systemd in a container" [level=3]:
+    - link "LoadCredential does not seem to work when running systemd in a container"
+  - text: I have been trying to run systemd in a container to test out an existing project before it gets deployed to hardware. systemd seems to work, but LoadCredential doesn't, even though it works on the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'docker'": docker
+    - listitem:
+      - link "show questions tagged 'debian'": debian
+    - listitem:
+      - link "show questions tagged 'systemd'": systemd
+    - listitem:
+      - link "show questions tagged 'podman'": podman
+  - link "Alex028502's user avatar":
+    - img "Alex028502's user avatar"
+  - link "Alex028502"
+  - list:
+    - listitem: 3,844
+  - time: asked 1 hour ago
+  - text: 2 votes 0 answers 22 views
+  - heading "Breaking change in bucket4j-spring-boot-starter" [level=3]:
+    - link "Breaking change in bucket4j-spring-boot-starter"
+  - text: I was recently uplifting dependencies in my application and while upgrading bucket4j-spring-boot-starter dependency from 0.12.2 to 0.12.3, my application started failing with error APPLICATION FAILED ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'spring-boot'": spring-boot
+    - listitem:
+      - link "show questions tagged 'bucket4j'": bucket4j
+  - link "Subrhamanya Suresh Hebbar's user avatar":
+    - img "Subrhamanya Suresh Hebbar's user avatar"
+  - link "Subrhamanya Suresh Hebbar"
+  - list:
+    - listitem: "23"
+  - time: asked 1 hour ago
+  - text: "-1 votes 0 answers 30 views"
+  - heading "Syntax error when using \"here string\" operator <<<" [level=3]:
+    - link "Syntax error when using \"here string\" operator <<<"
+  - text: "In the below shell script, I'm using the here string operator <<< to read a single line, but getting a syntax error saying: syntax error: '< ' unexpected The output of echo $SHELL is /bin/..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'linux'": linux
+    - listitem:
+      - link "show questions tagged 'shell'": shell
+    - listitem:
+      - link "show questions tagged 'sh'": sh
+  - link "Harry's user avatar":
+    - img "Harry's user avatar"
+  - link "Harry"
+  - list:
+    - listitem: 3,996
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1613632"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Robots in the skies (and they use Transformer models)"
+    - listitem:
+      - link "Research roadmap update, August 2025"
+    - listitem: Featured on Meta
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "Updated design for the new live activity panel experiment"
+    - listitem:
+      - link "Further Experimentation with Comment Reputation Requirements"
+  - text: Collectives
+  - link "see all"
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 27k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "R Language" [level=1]:
+    - link "R Language"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where data scientists and AI researchers gather to find, share, and learn about R and other subtags like knitr and dplyr.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 11k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Book starts with storm in a magic monastery"
+    - listitem:
+      - link "Why is there more than one model of electric guitar or bass"
+    - listitem:
+      - link "Having trouble identifying a font"
+    - listitem:
+      - link "Is ContainsAny implemented incorrectly? (Version 14.2.0)"
+    - listitem:
+      - link "Are trills only for high-pitched notes?"
+    - listitem:
+      - link "Justifying a 'analog horror' aesthetic in a 'future' setting"
+    - listitem:
+      - link "Unknown MAC address data frame flooding by switch"
+    - listitem:
+      - link "How to prove that the given function takes both positive and negative values?"
+    - listitem:
+      - 'link "Pandas: find max value of a column, then find another value in the same row, and copy that value to a new column"'
+    - listitem:
+      - link "bead vs choke characteristics"
+    - listitem:
+      - link "Unexpected operator account creation?"
+    - listitem:
+      - link "In Matthew 3:16, does the pronoun ‘he’ who saw the Spirit of God descending like a dove refer to Jesus or to John the Baptist?"
+    - listitem:
+      - link "When did the Green Lantern Corps start to refer to themselves as such?"
+    - listitem:
+      - link "Can you remove a variable in the 8-bit Microsoft BASICs?"
+    - listitem:
+      - link "What is the publication date(day/month) of Philosophiæ Naturalis Principia Mathematica from 1687?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.8.24.33217
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
