@@ -1,0 +1,569 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale US in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,204,645 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 19"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 10 views
+  - heading "How to upload commits to remote, but all the comments staying local?" [level=3]:
+    - link "How to upload commits to remote, but all the comments staying local?"
+  - text: With the use of LLM every day, I generated a lot of comments that explain the code for me to better understand others' work in the codebase. They are helpful for me to understand better the technology ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'git'": git
+    - listitem:
+      - link "show questions tagged 'version-control'": version-control
+    - listitem:
+      - link "show questions tagged 'large-language-model'": large-language-model
+    - listitem:
+      - link "show questions tagged 'agent'": agent
+    - listitem:
+      - link "show questions tagged 'claude'": claude
+  - link "Adam Or's user avatar":
+    - img "Adam Or's user avatar"
+  - link "Adam Or"
+  - list:
+    - listitem: "1"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Can custom data members be pickled in nanobind?" [level=3]:
+    - link "Can custom data members be pickled in nanobind?"
+  - text: I have a class A with class B data member in C++ that I am exposing via nanobind::class_. I am implementing __getstate__ and __setstate__ for both, and I would like A's state to look something like ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'python-3.x'": python-3.x
+    - listitem:
+      - link "show questions tagged 'pickle'": pickle
+    - listitem:
+      - link "show questions tagged 'nanobind'": nanobind
+  - link "got here's user avatar":
+    - img "got here's user avatar"
+  - link "got here"
+  - list:
+    - listitem: "449"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "Does exists a pattern for Spring MVC Framework to handle progressive job?" [level=3]:
+    - link "Does exists a pattern for Spring MVC Framework to handle progressive job?"
+  - text: I have to improve an import job in my web app made with Spring MVC Framework. This job can take a bit then would be great to give the user the progression and the possibility to interrupt it. I'm ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'spring'": spring
+    - listitem:
+      - link "show questions tagged 'spring-mvc'": spring-mvc
+    - listitem:
+      - link "show questions tagged 'progress-bar'": progress-bar
+    - listitem:
+      - link "show questions tagged 'stomp'": stomp
+  - link "Tobia's user avatar":
+    - img "Tobia's user avatar"
+  - link "Tobia"
+  - list:
+    - listitem: 9,545
+  - time: asked 17 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "rspack builtin:swc-loader jsx compilation error" [level=3]:
+    - link "rspack builtin:swc-loader jsx compilation error"
+  - text: "I'm using rspack to bundle my app. Im getting error in the build process while compiling my js/jsx components. Here my rspack rule config { test: /\\.(js|jsx)$/, loader: 'builtin:swc-loader', ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'node.js'": node.js
+    - listitem:
+      - link "show questions tagged 'jsx'": jsx
+    - listitem:
+      - link "show questions tagged 'swc-compiler'": swc-compiler
+    - listitem:
+      - link "show questions tagged 'rspack'": rspack
+  - link "R.M.ARUN KUMAR's user avatar":
+    - img "R.M.ARUN KUMAR's user avatar"
+  - link "R.M.ARUN KUMAR"
+  - list:
+    - listitem: "107"
+  - time: asked 24 mins ago
+  - text: 0 votes 0 answers 18 views
+  - heading "How can I safely update a property on the same object that the $effect is tracking, without causing infinite loop" [level=3]:
+    - link "How can I safely update a property on the same object that the $effect is tracking, without causing infinite loop"
+  - text: "$effect(() => { if (project.value) { project.value.updated = new Date().getTime() project.update() } }) Here project is a $state and when calling update it just writes to ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'svelte'": svelte
+  - link "Nikolay Dyankov's user avatar":
+    - img "Nikolay Dyankov's user avatar"
+  - link "Nikolay Dyankov"
+  - list:
+    - listitem: 7,337
+  - time: asked 26 mins ago
+  - text: "-1 votes 0 answers 8 views"
+  - heading "Apache Pinot 1.3.0, Hybrid Table structure not working. Fetched only realtime data in query" [level=3]:
+    - link "Apache Pinot 1.3.0, Hybrid Table structure not working. Fetched only realtime data in query"
+  - text: I have a hybrid table,where I stored offline data first ,Then using kafka ,I stored realtime data and they are also stored in data directory.Now when We restart the server again without the kafka ,...
+  - list:
+    - listitem:
+      - link "show questions tagged 'apache-kafka'": apache-kafka
+    - listitem:
+      - link "show questions tagged 'apache-pinot'": apache-pinot
+  - link "Subham's user avatar":
+    - img "Subham's user avatar"
+  - link "Subham"
+  - list:
+    - listitem: 1,463
+  - time: asked 33 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "In Delphi 12, using FireDAC, is there a way I can set the field length of a string automatically" [level=3]:
+    - link "In Delphi 12, using FireDAC, is there a way I can set the field length of a string automatically"
+  - text: We are porting an application to a SQLite database (that we can't change - it's PowerSync if that helps) that has a number of views, and when we do a select from one of these views, all the text ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'sqlite'": sqlite
+    - listitem:
+      - link "show questions tagged 'delphi'": delphi
+    - listitem:
+      - link "show questions tagged 'firedac'": firedac
+  - link "Alister's user avatar":
+    - img "Alister's user avatar"
+  - link "Alister"
+  - list:
+    - listitem: 6,911
+  - time: asked 39 mins ago
+  - text: 0 votes 0 answers 12 views
+  - 'heading "How to access a Token form the Third party application {Oracle cloud} and needs to pass the same token in Jmeter" [level=3]':
+    - 'link "How to access a Token form the Third party application {Oracle cloud} and needs to pass the same token in Jmeter"'
+  - text: I needs to login to the Application, for that it needs Token_ID and Sate token, but they are getting generated from the third party applications where as even in the Dev tools it is not reflecting, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'jmeter'": jmeter
+    - listitem:
+      - link "show questions tagged 'query-optimization'": query-optimization
+    - listitem:
+      - link "show questions tagged 'performance-testing'": performance-testing
+    - listitem:
+      - link "show questions tagged 'jmeter-plugins'": jmeter-plugins
+  - link "Siva Sai's user avatar":
+    - img "Siva Sai's user avatar"
+  - link "Siva Sai"
+  - list:
+    - listitem: "1"
+  - time: asked 41 mins ago
+  - text: "-1 votes 1 answer 33 views"
+  - heading "how to upgrade to api level 35 in flutter version 3.7.0" [level=3]:
+    - link "how to upgrade to api level 35 in flutter version 3.7.0"
+  - text: I have a flutter project which is running on flutter version 3.7.0. How can I update the app to API level 35. I can not upgrade the flutter version as it is old project and client purchased the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'dart'": dart
+    - listitem:
+      - link "show questions tagged 'flutter-dependencies'": flutter-dependencies
+    - listitem:
+      - link "show questions tagged 'android-api-levels'": android-api-levels
+    - listitem:
+      - link "show questions tagged 'android-15'": android-15
+  - link "Jay Tarpara's user avatar":
+    - img "Jay Tarpara's user avatar"
+  - link "Jay Tarpara"
+  - list:
+    - listitem: "26"
+  - time: asked 46 mins ago
+  - text: 0 votes 0 answers 18 views
+  - heading "CFAST + zero out complete media" [level=3]:
+    - link "CFAST + zero out complete media"
+  - text: I have a SATA CFAST media of 32GB. And a bootloader (which creates 4 partitions) and copies some files to 3 partitions, like copying in 1,2, and 4 partitions, and the 3rd partition is empty. After ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'storage'": storage
+  - link "atulya's user avatar":
+    - img "atulya's user avatar"
+  - link "atulya"
+  - list:
+    - listitem: "569"
+  - time: asked 48 mins ago
+  - text: 0 votes 0 answers 28 views
+  - heading "Why am I getting “This attempt to set a cookie via a Set-Cookie header was blocked due to user preference” in my Next.js + Express app?" [level=3]:
+    - link "Why am I getting “This attempt to set a cookie via a Set-Cookie header was blocked due to user preference” in my Next.js + Express app?"
+  - text: I’m building a blogging app with Next.js (frontend) and Express.js (backend). The backend is deployed on Render, and the frontend runs locally on http://localhost:3000. I’m trying to set cookies from ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'node.js'": node.js
+    - listitem:
+      - link "show questions tagged 'cookies'": cookies
+  - link "Himanshu Raj's user avatar":
+    - img "Himanshu Raj's user avatar"
+  - link "Himanshu Raj"
+  - list:
+    - listitem: "11"
+  - time: asked 54 mins ago
+  - text: 1 vote 0 answers 21 views
+  - heading "Is there a way to set the text line height equal to its font size?" [level=3]:
+    - link "Is there a way to set the text line height equal to its font size?"
+  - text: The problem with the Text component in Compose Multiplatform is its final height. Even if your font size is 12.sp, the actual height will be 16 pixels at 100% density. If you calculate the difference, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'kotlin'": kotlin
+    - listitem:
+      - link "show questions tagged 'compose-multiplatform'": compose-multiplatform
+  - link "Snufls Fli's user avatar":
+    - img "Snufls Fli's user avatar"
+  - link "Snufls Fli"
+  - list:
+    - listitem: "11"
+  - time: asked 59 mins ago
+  - text: 0 votes 0 answers 23 views
+  - heading "How can I save my results to a json file in speech studio?" [level=3]:
+    - link "How can I save my results to a json file in speech studio?"
+  - text: "I'm using Azure Pronunciation Assessment with speech to text. I'm using the code provided in the website to assess several single word audios. def pronunciation_assessment_continuous_from_file(): &..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'python-3.x'": python-3.x
+    - listitem:
+      - link "show questions tagged 'azure-speech'": azure-speech
+  - link "fairly_oddparents's user avatar":
+    - img "fairly_oddparents's user avatar"
+  - link "fairly_oddparents"
+  - list:
+    - listitem: "131"
+  - time: asked 59 mins ago
+  - text: 1 vote 0 answers 13 views
+  - heading "Excel Office.js displayDialogAsync fails with \"Internal Error\" on Desktop version 2507" [level=3]:
+    - link "Excel Office.js displayDialogAsync fails with \"Internal Error\" on Desktop version 2507"
+  - text: I am developing an Excel add-in that needs to authenticate the user using OAuth. To do this I am calling Office.context.ui.displayDialogAsync to open the authorization page in a dialog. The code works ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'excel'": excel
+    - listitem:
+      - link "show questions tagged 'add-in'": add-in
+  - link "Nirogini Janstin's user avatar":
+    - img "Nirogini Janstin's user avatar"
+  - link "Nirogini Janstin"
+  - list:
+    - listitem: "11"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 17 views
+  - 'heading "StyleDictionary.create in Style dictionary v5.0.2 returns \"TypeError: StyleDictionary.create is not a function\"" [level=3]':
+    - 'link "StyleDictionary.create in Style dictionary v5.0.2 returns \"TypeError: StyleDictionary.create is not a function\""'
+  - text: I am trying to run style-dictionary in my code, I installed v.5.0.2 and it's returning StyleDictionary.create is not a function. I have tried looking at the documentation, but I can't even find ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'style-dictionary'": style-dictionary
+  - link "Developer Maleek's user avatar":
+    - img "Developer Maleek's user avatar"
+  - link "Developer Maleek"
+  - list:
+    - listitem: "91"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1613643"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Svelte was built on “slinging code for the sheer love of it”"
+    - listitem:
+      - link "Robots in the skies (and they use Transformer models)"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Further Experimentation with Comment Reputation Requirements"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "Updated design for the new live activity panel experiment"
+  - text: Collectives
+  - link "see all"
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 21k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - heading "R Language" [level=1]:
+    - link "R Language"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where data scientists and AI researchers gather to find, share, and learn about R and other subtags like knitr and dplyr.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 11k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "How to make Rsync newly write all file perms, ownership etc. only?"
+    - listitem:
+      - link "Shebang apparently calls wrong shell"
+    - listitem:
+      - link "How do electrons microscopically drift in the conductor?"
+    - listitem:
+      - link "On the relativization barrier"
+    - listitem:
+      - link "Reverse engineering images from old Japanese videogame"
+    - listitem:
+      - 'link "How to make TeXForm convert exponential function to \"\\exp(...)\" instead of \"e^{...}\""'
+    - listitem:
+      - link "Expressing functions in terms of other"
+    - listitem:
+      - link "Holomorphic analogue of Fundamental Lemma of Calculus of Variations"
+    - listitem:
+      - link "If indeed Caleb was from the lineage of Esau how was he the head of Judah?"
+    - listitem:
+      - link "Can a minor armed attack justify a large-scale military response under international law?"
+    - listitem:
+      - link "When did the Green Lantern Corps start to refer to themselves as such?"
+    - listitem:
+      - link "Can I seal a crack in acryl shower-pan by glueing a strip of EPDM rubber over? Any better suggestions?"
+    - listitem:
+      - link "Wearing a Tallis by Mincha"
+    - listitem:
+      - link "Help with Drawing a 2D Spiral Following a Circular Path"
+    - listitem:
+      - link "What is the equivalent of SREU (simultaneous rigid E-unification) if subtyping is allowed?"
+    - listitem:
+      - link "Symmetrical weight paint doesn't work on symmetrized bones?"
+    - listitem:
+      - link "How Do I Talk of Someone Whose Name Appeared in the Paper"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.8.24.33217
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
