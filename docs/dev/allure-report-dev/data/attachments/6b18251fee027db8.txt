@@ -1,0 +1,581 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale NZ in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,204,831 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 19"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 4 views
+  - heading "How to conform to UIActivityItemsConfigurationReading when sharing with cloudkit an object using UIActivityViewController with SwiftUI?" [level=3]:
+    - link "How to conform to UIActivityItemsConfigurationReading when sharing with cloudkit an object using UIActivityViewController with SwiftUI?"
+  - text: "This is a warning I receive when trying to use UICloudSharingController with preparationHandler: Use -[UIActivityViewController initWithActivityItemsConfiguration:] and pass it a ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'swiftui'": swiftui
+    - listitem:
+      - link "show questions tagged 'cloudkit'": cloudkit
+  - link "Bartłomiej Semańczyk's user avatar":
+    - img "Bartłomiej Semańczyk's user avatar"
+  - link "Bartłomiej Semańczyk"
+  - list:
+    - listitem: 62.3k
+  - time: asked 3 mins ago
+  - text: 0 votes 0 answers 15 views
+  - heading "why a kafka client with EnableAutoCommit being disabled still commit offset?" [level=3]:
+    - link "why a kafka client with EnableAutoCommit being disabled still commit offset?"
+  - text: "below is a kakfa .net consumer program: class Program { static void Main(string[] args) { var config = new ConsumerConfig { BootstrapServers = \"localhost:9092&..."
+  - list:
+    - listitem:
+      - link "show questions tagged '.net'": .net
+    - listitem:
+      - link "show questions tagged 'apache-kafka'": apache-kafka
+  - link "user25521292's user avatar":
+    - img "user25521292's user avatar"
+  - link "user25521292"
+  - list:
+    - listitem: "117"
+  - time: asked 19 mins ago
+  - text: "-1 votes 1 answer 20 views"
+  - heading "Activate virtualenv in .envrc in poetry managed project" [level=3]:
+    - link "Activate virtualenv in .envrc in poetry managed project"
+  - text: "I want to activate a Python virtual env by changing into a directory. This should activate the virtual env: cd ~/projects/myproject The project gets managed with poetry. Background: I am too lazy to ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'virtualenv'": virtualenv
+    - listitem:
+      - link "show questions tagged 'python-poetry'": python-poetry
+    - listitem:
+      - link "show questions tagged 'direnv'": direnv
+  - link "guettli's user avatar":
+    - img "guettli's user avatar"
+  - link "guettli"
+  - list:
+    - listitem: 27.3k
+  - time: asked 23 mins ago
+  - text: 0 votes 0 answers 8 views
+  - 'heading "Oracle 19c Text Option: Behaviour of CONTAINS with NEAR and MAX_SPAN" [level=3]':
+    - 'link "Oracle 19c Text Option: Behaviour of CONTAINS with NEAR and MAX_SPAN"'
+  - text: "We found a strange behaviour of Oracle full text search when using contains(text, 'NEAR((A,B,C,D), 2, true)') where 2 is the max_span parameter. The documentation says: max_span Optionally specify ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'oracle-database'": oracle-database
+    - listitem:
+      - link "show questions tagged 'full-text-search'": full-text-search
+    - listitem:
+      - link "show questions tagged 'oracle19c'": oracle19c
+  - link "Claude's user avatar":
+    - img "Claude's user avatar"
+  - link "Claude"
+  - list:
+    - listitem: 1,804
+  - time: asked 30 mins ago
+  - text: 1 vote 0 answers 20 views
+  - heading "How do I generate a stable document ID for SQL executions when polling Oracle gv$session into Elasticsearch via Logstash?" [level=3]:
+    - link "How do I generate a stable document ID for SQL executions when polling Oracle gv$session into Elasticsearch via Logstash?"
+  - text: I’m building a pipeline that polls Oracle’s gv$session joined with gv$sql every 5 seconds to track query executions. Each poll returns multiple rows (one per active session), and I need to aggregate ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'oracle-database'": oracle-database
+    - listitem:
+      - link "show questions tagged 'elasticsearch'": elasticsearch
+    - listitem:
+      - link "show questions tagged 'session'": session
+    - listitem:
+      - link "show questions tagged 'logstash'": logstash
+    - listitem:
+      - link "show questions tagged 'monitoring'": monitoring
+  - link "jack wills 499's user avatar":
+    - img "jack wills 499's user avatar"
+  - link "jack wills 499"
+  - list:
+    - listitem: "11"
+  - time: asked 50 mins ago
+  - text: 1 vote 0 answers 17 views
+  - heading "KEDA ScaledJob with MongoDB _id fails to pass JOB_ID to Python script" [level=3]:
+    - link "KEDA ScaledJob with MongoDB _id fails to pass JOB_ID to Python script"
+  - text: "I'm trying to use KEDA ScaledJob to process jobs from a MongoDB collection. Each document has a _id (ObjectId) and a jobStatus field. My Python script requires the job ID as an argument: python ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'mongodb'": mongodb
+    - listitem:
+      - link "show questions tagged 'kubernetes'": kubernetes
+    - listitem:
+      - link "show questions tagged 'keda'": keda
+  - link "Nahin Sajjad's user avatar":
+    - img "Nahin Sajjad's user avatar"
+  - link "Nahin Sajjad"
+  - list:
+    - listitem: "11"
+  - time: asked 50 mins ago
+  - text: 1 vote 0 answers 8 views
+  - heading "telethon always gives 0 unread messages count from all private chats" [level=3]:
+    - link "telethon always gives 0 unread messages count from all private chats"
+  - text: The code from "X" keeps showing wrong amount of unread messages. I've added a "result" that actually shows a real count of unread messages from Dena account. with TelegramClient(...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'telethon'": telethon
+  - link "user576372's user avatar":
+    - img "user576372's user avatar"
+  - link "user576372"
+  - list:
+    - listitem: "11"
+  - time: asked 51 mins ago
+  - text: 1 vote 0 answers 16 views
+  - heading "MapStruct generated classes compile with errors in multi-module Maven project" [level=3]:
+    - link "MapStruct generated classes compile with errors in multi-module Maven project"
+  - text: "I have a Maven multi-module project (repo), following hexagonal arquitecture, with the following structure: parent ├─ domain (Lombok) ├─ app (Lombok) └─ infra ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'spring'": spring
+    - listitem:
+      - link "show questions tagged 'maven'": maven
+    - listitem:
+      - link "show questions tagged 'lombok'": lombok
+    - listitem:
+      - link "show questions tagged 'mapstruct'": mapstruct
+  - link "Sergio Bernal's user avatar":
+    - img "Sergio Bernal's user avatar"
+  - link "Sergio Bernal"
+  - list:
+    - listitem: "11"
+  - time: asked 51 mins ago
+  - text: 1 vote 1 answer 23 views
+  - heading "Ethers.js can call fetchMarketItems() fine, but PHP (web3p/web3.php) fails to decode the tuple[] return — how do I read struct[] results?" [level=3]:
+    - link "Ethers.js can call fetchMarketItems() fine, but PHP (web3p/web3.php) fails to decode the tuple[] return — how do I read struct[] results?"
+  - text: "I have an NFT marketplace contract running on a local Hardhat node. The function below returns an array of structs: struct MarketItem { uint256 tokenId; address payable seller; address ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'ethereum'": ethereum
+    - listitem:
+      - link "show questions tagged 'ethers.js'": ethers.js
+    - listitem:
+      - link "show questions tagged 'hardhat'": hardhat
+    - listitem:
+      - link "show questions tagged 'web3php'": web3php
+  - link "Karen Shahmuardayn's user avatar":
+    - img "Karen Shahmuardayn's user avatar"
+  - link "Karen Shahmuardayn"
+  - list:
+    - listitem: "11"
+  - time: asked 51 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "Problem with 'add_grid' with terra plot and maptiles maps" [level=3]:
+    - link "Problem with 'add_grid' with terra plot and maptiles maps"
+  - text: "I have this code, which creates a map with a SpatRaster and a \"background map\" with the help of the maptiles library: library(terra) library(maptiles) # Example raster: global elevation r &..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'r'": r
+    - listitem:
+      - link "show questions tagged 'terra'": terra
+  - link "Madrats's user avatar":
+    - img "Madrats's user avatar"
+  - link "Madrats"
+  - list:
+    - listitem: "43"
+  - time: asked 52 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "rootNavigatorKey.currentContext sometimes null in didChangeAppLifecycleState on resume" [level=3]:
+    - link "rootNavigatorKey.currentContext sometimes null in didChangeAppLifecycleState on resume"
+  - text: I’m using GoRouter and a global NavigatorKey. Sometimes, I see crashes in production logs where rootNavigatorKey.currentContext is null inside didChangeAppLifecycleState on both Android and iOS. I can’...
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'flutter-go-router'": flutter-go-router
+  - link "Linh's user avatar":
+    - img "Linh's user avatar"
+  - link "Linh"
+  - list:
+    - listitem: 61.2k
+  - time: asked 58 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "Hilt/Dagger generates MissingBinding errors for obfuscated third-party SDK classes in release build (R8 / AGP 8 / targetSdk 35)" [level=3]:
+    - link "Hilt/Dagger generates MissingBinding errors for obfuscated third-party SDK classes in release build (R8 / AGP 8 / targetSdk 35)"
+  - text: I’m migrating my Android project to the latest AGP (8.x) with targetSdkVersion 35. The project uses Hilt for DI and works fine in debug builds, but in the release build (...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'kotlin'": kotlin
+    - listitem:
+      - link "show questions tagged 'gradle'": gradle
+  - link "Mahmoud Afarideh's user avatar":
+    - img "Mahmoud Afarideh's user avatar"
+  - link "Mahmoud Afarideh"
+  - list:
+    - listitem: "386"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 21 views
+  - heading "ASP.NET cookies with requireSSL=false stopped working in Edge 139 — are SameSite=None cookies now blocked unless Secure" [level=3]:
+    - link "ASP.NET cookies with requireSSL=false stopped working in Edge 139 — are SameSite=None cookies now blocked unless Secure"
+  - text: "We are experiencing a sudden failure in SAML authentication (500 Internal Server Error) in our ASP.NET web application that uses Microsoft Entra ID (SSO). Environment details: • ASP.NET app running ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'asp.net'": asp.net
+    - listitem:
+      - link "show questions tagged 'cookies'": cookies
+    - listitem:
+      - link "show questions tagged 'microsoft-edge'": microsoft-edge
+    - listitem:
+      - link "show questions tagged 'saml'": saml
+    - listitem:
+      - link "show questions tagged 'samesite'": samesite
+  - link "Mayur's user avatar":
+    - img "Mayur's user avatar"
+  - link "Mayur"
+  - list:
+    - listitem: "107"
+  - time: asked 1 hour ago
+  - text: 1 vote 1 answer 36 views
+  - heading "How to exclude some class or pages using .offset().top" [level=3]:
+    - link "How to exclude some class or pages using .offset().top"
+  - text: "I'm using this part of code on my website and it works very well: $(document).ready(function() { setTimeout(function() { var scroll = $('.restaurant, .mention, .politique, .condition').offset()...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'jquery'": jquery
+  - link "michel spb2000's user avatar":
+    - img "michel spb2000's user avatar"
+  - link "michel spb2000"
+  - list:
+    - listitem: "23"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 25 views
+  - heading "conda env remove -n ENV_NAME consistently leaving behind folder" [level=3]:
+    - link "conda env remove -n ENV_NAME consistently leaving behind folder"
+  - text: Both conda env remove -n ENV_NAME and conda remove -n ENV_NAME --all consistently leave a folder behind when executing the commands. This becomes an issue if I'm trying to recreate the environment--I'...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'anaconda'": anaconda
+    - listitem:
+      - link "show questions tagged 'conda'": conda
+    - listitem:
+      - link "show questions tagged 'anaconda3'": anaconda3
+  - link "Adrian V's user avatar":
+    - img "Adrian V's user avatar"
+  - link "Adrian V"
+  - list:
+    - listitem: "43"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1613656"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - 'link "From punch cards to prompts: a history of how software got better"'
+    - listitem:
+      - link "Svelte was built on “slinging code for the sheer love of it”"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Further Experimentation with Comment Reputation Requirements"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "Updated design for the new live activity panel experiment"
+  - text: Collectives
+  - link "see all"
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 28k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 16k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - heading "R Language" [level=1]:
+    - link "R Language"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where data scientists and AI researchers gather to find, share, and learn about R and other subtags like knitr and dplyr.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Add grid with different layout than geometry"
+    - listitem:
+      - link "Is there not a leap between moral facts and the normativity of facts?"
+    - listitem:
+      - link "How did Henry know that Jimmy was going to have him killed in Florida?"
+    - listitem:
+      - link "Why Apache Alias directive doesn't have precedence to Rewrite?"
+    - listitem:
+      - link "Elton John and Logan Roy might understand"
+    - listitem:
+      - link "Is neutrally skewed the correct interpretation of a box plot with equal length arms?"
+    - listitem:
+      - link "Extra large seat belt extenders"
+    - listitem:
+      - link "Remove new lines and everything after comment symbol with awk or sed"
+    - listitem:
+      - link "Is \"equal to\" a good substitute for \"meaning of\"?"
+    - listitem:
+      - link "What is name of movie about exorcism released around 2020?"
+    - listitem:
+      - link "Need to graph probability distribution for 2d20 +/- 1d6. Adding the d6 if over 10.5, subtracting d6 if under 10.5"
+    - listitem:
+      - link "What is the nature of the Oath we made before coming into the world vs The one we made on mount Sinai"
+    - listitem:
+      - link "Understanding the practical application of Intel's _mm256_shuffle_epi8 definition"
+    - listitem:
+      - link "What does the symbol '-pp-' mean in Cambridge Dictionary?"
+    - listitem:
+      - link "Is it beneficial to focus on 4 requirements in material lay life"
+    - listitem:
+      - link "How can I parse a string to a float in C in a way that isn't affected by the current locale?"
+    - listitem:
+      - 'link "Project Euler #909: L-Expressions I"'
+    - listitem:
+      - link "How do you formally indicate to repeat the second ending of a volta (or ending)?"
+    - listitem:
+      - link "Versatile way to show points array"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.8.26.33276
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
