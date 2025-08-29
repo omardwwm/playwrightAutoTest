@@ -1,0 +1,554 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale JP in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,205,265 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 23"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 2 views
+  - 'heading "error [Error: Creating blobs from ''ArrayBuffer'' and ''ArrayBufferView'' are not supported]" [level=3]':
+    - 'link "error [Error: Creating blobs from ''ArrayBuffer'' and ''ArrayBufferView'' are not supported]"'
+  - text: "I'm tryng to upload images from my device galery to my react native expo app using firebase but i'm recieving onSubmitCreateService error [Error: Creating blobs from 'ArrayBuffer' and 'ArrayBufferView'..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'firebase'": firebase
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+    - listitem:
+      - link "show questions tagged 'expo'": expo
+  - link "C.J's user avatar":
+    - img "C.J's user avatar"
+  - link "C.J"
+  - list:
+    - listitem: "13"
+  - time: asked 1 min ago
+  - text: "-1 votes 0 answers 11 views"
+  - heading "University Capstone Unit - Survey AI methods used in Geomapping or Price Prediction" [level=3]:
+    - link "University Capstone Unit - Survey AI methods used in Geomapping or Price Prediction"
+  - text: I am currently in my final year of university and have been tasked in creating a survey to analyse AI methods used in Geomapping or Trading (Price Prediction/ Sentiment Analysis). We are supposed to ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'artificial-intelligence'": artificial-intelligence
+    - listitem:
+      - link "show questions tagged 'geospatial'": geospatial
+    - listitem:
+      - link "show questions tagged 'trading'": trading
+    - listitem:
+      - link "show questions tagged 'algorithmic-trading'": algorithmic-trading
+    - listitem:
+      - link "show questions tagged 'geomap'": geomap
+  - link "Wesley Dutton's user avatar":
+    - img "Wesley Dutton's user avatar"
+  - link "Wesley Dutton"
+  - list:
+    - listitem: "1"
+  - time: asked 4 mins ago
+  - text: "-1 votes 0 answers 23 views"
+  - heading "What kind of algorithm does betting website use to determined winners probability?" [level=3]:
+    - link "What kind of algorithm does betting website use to determined winners probability?"
+  - text: Well, I'm from the Philippines, where there are a lot of online betting games. I play these games, and I’m curious about what algorithms programmers use to determine the probability of winning. Or is ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'probability'": probability
+  - link "JustinFever's user avatar":
+    - img "JustinFever's user avatar"
+  - link "JustinFever"
+  - list:
+    - listitem: "1"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "protected member is not accessed by derived class of an abstract class" [level=3]:
+    - link "protected member is not accessed by derived class of an abstract class"
+  - text: "class abstract_class { public: virtual void set(abstract_class &) = 0; protected: void printmethod() { std::cout << \"Abstratc_class print\\n\"; } }; class my_a: public abstract_class ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'abstract-class'": abstract-class
+    - listitem:
+      - link "show questions tagged 'protected'": protected
+  - link "Sunil Kumar's user avatar":
+    - img "Sunil Kumar's user avatar"
+  - link "Sunil Kumar"
+  - list:
+    - listitem: "1"
+  - time: asked 15 mins ago
+  - text: 0 votes 0 answers 16 views
+  - 'heading "WhatsApp Cloud API status: sent but message not delivered to user" [level=3]':
+    - 'link "WhatsApp Cloud API status: sent but message not delivered to user"'
+  - text: "I am working with the WhatsApp Cloud API and sending an authentication message to a user’s phone number. The webhook payload I receive is: { \"object\": \"whatsapp_business_account\",..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'whatsapp'": whatsapp
+    - listitem:
+      - link "show questions tagged 'whatsapp-cloud-api'": whatsapp-cloud-api
+    - listitem:
+      - link "show questions tagged 'whatsapp-business-app'": whatsapp-business-app
+  - link "Dalchand Yogi's user avatar":
+    - img "Dalchand Yogi's user avatar"
+  - link "Dalchand Yogi"
+  - list:
+    - listitem: "1"
+  - time: asked 17 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Trino with Hive- Infer parquet schema" [level=3]:
+    - link "Trino with Hive- Infer parquet schema"
+  - text: "Background: I am running trino with Hive catalog that reads data from S3. Setup and querying through trino over these tables is working fine with table's metadata stored in hive metastore. Question: I ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'hive'": hive
+    - listitem:
+      - link "show questions tagged 'parquet'": parquet
+    - listitem:
+      - link "show questions tagged 'trino'": trino
+  - link "IshitaV's user avatar":
+    - img "IshitaV's user avatar"
+  - link "IshitaV"
+  - list:
+    - listitem: "73"
+  - time: asked 19 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Radix-4 NTT Python Code Implementation Debugging" [level=3]:
+    - link "Radix-4 NTT Python Code Implementation Debugging"
+  - text: I am currently implementing a radix-4 NTT algorithm based on the pseudocode I have written Python code for it.For n = 4, with modulus q = 3329, the 2n-th root of unity is ψ = 40, and the 4th root of ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'debugging'": debugging
+  - link "Randomizer13_4's user avatar":
+    - img "Randomizer13_4's user avatar"
+  - link "Randomizer13_4"
+  - list:
+    - listitem: "1"
+  - time: asked 20 mins ago
+  - text: 0 votes 0 answers 9 views
+  - 'heading "Redis ACL: Restricting access by db0, db1, db2" [level=3]':
+    - 'link "Redis ACL: Restricting access by db0, db1, db2"'
+  - text: "I have set up Redis using Sentinel in a Master-Replica configuration (1 Master, 2 Replicas). There are three services using Redis: A, B, and C. Service A will use DB1, Service B will use DB2, Service ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'redis'": redis
+  - link "Jinhee Jeong's user avatar":
+    - img "Jinhee Jeong's user avatar"
+  - link "Jinhee Jeong"
+  - list:
+    - listitem: "21"
+  - time: asked 29 mins ago
+  - text: 1 vote 1 answer 19 views
+  - heading "How to specify the values of an union in a type hint?" [level=3]:
+    - link "How to specify the values of an union in a type hint?"
+  - text: I would like to know how to point out the possible values of an union argument. Let's use the parameter axis from pandas (pandas.DataFrame.dropna) for this example. The type hint should be something ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'python-typing'": python-typing
+  - link "ludovico's user avatar":
+    - img "ludovico's user avatar"
+  - link "ludovico"
+  - list:
+    - listitem: "41"
+  - time: asked 30 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Why does my GridDB C API query return no rows even though I inserted data?" [level=3]:
+    - link "Why does my GridDB C API query return no rows even though I inserted data?"
+  - text: I’m experimenting with GridDB Cloud using the C client. I inserted two rows into a container and then tried to query them back. The insert seems fine, but the query always returns 0 rows. Here’s the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'griddb'": griddb
+  - link "Hassan Saeed's user avatar":
+    - img "Hassan Saeed's user avatar"
+  - link "Hassan Saeed"
+  - list:
+    - listitem: "9"
+  - time: asked 32 mins ago
+  - text: 0 votes 0 answers 16 views
+  - heading "The conflict issue between the VS Code syntax highlighting extension and the bracketPairColorization feature" [level=3]:
+    - link "The conflict issue between the VS Code syntax highlighting extension and the bracketPairColorization feature"
+  - text: enter image description hereThere is some compatibility issue between the Verilog syntax extension in VS Code and the built-in bracketPairColorization feature. As shown in the screenshot, the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'visual-studio-code'": visual-studio-code
+  - link "Xu Tao's user avatar":
+    - img "Xu Tao's user avatar"
+  - link "Xu Tao"
+  - list:
+    - listitem: "1"
+  - time: asked 38 mins ago
+  - text: 1 vote 0 answers 9 views
+  - heading "Inertia routes return 404 (Not Found) for app deployed in subfolder" [level=3]:
+    - link "Inertia routes return 404 (Not Found) for app deployed in subfolder"
+  - text: "I have deployed a Laravel 12 + Inertia.js (React) app on a shared hosting (cPanel). The app is located in a subfolder: https://mydomaine/app/. Authentication routes like: https://mydomaine/app/login ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'deployment'": deployment
+    - listitem:
+      - link "show questions tagged 'cpanel'": cpanel
+    - listitem:
+      - link "show questions tagged 'inertiajs'": inertiajs
+    - listitem:
+      - link "show questions tagged 'laravel-12'": laravel-12
+  - link "kamal ennaji's user avatar":
+    - img "kamal ennaji's user avatar"
+  - link "kamal ennaji"
+  - list:
+    - listitem: "11"
+  - time: asked 40 mins ago
+  - text: "-1 votes 0 answers 6 views"
+  - heading "Do prebuilt Receipt results include Payments.* fields in Azure Document Intelligence v4.0" [level=3]:
+    - link "Do prebuilt Receipt results include Payments.* fields in Azure Document Intelligence v4.0"
+  - text: I’m using Azure AI Document Intelligence v4.0 (GA, 2024-11-30) with the prebuilt receipt model (modelId=prebuilt-receipt) to extract receipt data. Both the docs and the repo schema seem to imply there ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'azure-document-intelligence'": azure-document-intelligence
+  - link "Vitalii's user avatar":
+    - img "Vitalii's user avatar"
+  - link "Vitalii"
+  - list:
+    - listitem: "1"
+  - time: asked 40 mins ago
+  - text: "-2 votes 0 answers 13 views"
+  - heading "How to implement a cut-out div with borders?" [level=3]:
+    - link "How to implement a cut-out div with borders?"
+  - text: I want to implement a form (let's say a simple div) with a cut-out in the top-right. I need borders to exist within the cut-out and also a gradient background in this div. How to implement this in ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'web-frontend'": web-frontend
+  - link "John D. J.'s user avatar":
+    - img "John D. J.'s user avatar"
+  - link "John D. J."
+  - list:
+    - listitem: "1"
+  - time: asked 45 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "Spring Boot with Vault Integration Issue - Connect localhost instead of IP Address" [level=3]:
+    - link "Spring Boot with Vault Integration Issue - Connect localhost instead of IP Address"
+  - text: I have an spring boot microservices example. I defined vault running on docker in vm of Google cloud. Here is the vault dependency of pom.xml in config server <dependency> <groupId>org....
+  - list:
+    - listitem:
+      - link "show questions tagged 'spring-boot'": spring-boot
+    - listitem:
+      - link "show questions tagged 'vault'": vault
+    - listitem:
+      - link "show questions tagged 'spring-cloud-config-server'": spring-cloud-config-server
+  - link "Sercan Noyan Germiyanoğlu's user avatar":
+    - img "Sercan Noyan Germiyanoğlu's user avatar"
+  - link "Sercan Noyan Germiyanoğlu"
+  - list:
+    - listitem: 2,908
+  - time: asked 46 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1613685"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Open-source is for the people, by the people"
+    - listitem:
+      - 'link "Moving the public Stack Overflow sites to the cloud: Part 1"'
+    - listitem: Featured on Meta
+    - listitem:
+      - link "New comment UI experiment graduation"
+    - listitem:
+      - link "Further Experimentation with Comment Reputation Requirements"
+    - listitem:
+      - link "Updated design for the new live activity panel experiment"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 24k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 21k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 11k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Sample size for multilevel exploratory factor analysis"
+    - listitem:
+      - link "Is it possbile to replace the disks in LVM raid with larger disks?"
+    - listitem:
+      - link "On the availability of the \"Near Eastern Antiquities / Iran, Arabia and the Levant\" in the Louvre museum"
+    - listitem:
+      - 'link "Project Euler #909: L-Expressions I"'
+    - listitem:
+      - link "What's the opposite saying to \"A broken clock is right twice a day\"?"
+    - listitem:
+      - link "Adjusting my degree title slightly for clarity, would this be flagged by hiring managers?"
+    - listitem:
+      - link "\"This telegram must be closely paraphrased before being communicated to anyone.\" Why?"
+    - listitem:
+      - link "David Hilbert and the Boltzmann equation"
+    - listitem:
+      - link "Does Isaiah 63:17 contradict Isaiah 45:9 as interpreted by Paul in Romans 9:19–23?"
+    - listitem:
+      - link "Source of a quote on boxed formulas"
+    - listitem:
+      - link "Why are antisemitism accusations not rebutted?"
+    - listitem:
+      - link "Under what corporate mechanism can the CEO of Intel transfer 10% of the company to the US government?"
+    - listitem:
+      - link "Any source for clean scans of NACA tech notes?"
+    - listitem:
+      - link "Does this voice leading of V7 to I work?"
+    - listitem:
+      - link "What happens when the acoustic pressure equals the ambient pressure during rarefaction?"
+    - listitem:
+      - link "My friends can turn (this) into (that) and vice versa"
+    - listitem:
+      - link "A fun exercise for his students"
+    - listitem:
+      - link "Another binomial identity"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.8.27.33321
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
