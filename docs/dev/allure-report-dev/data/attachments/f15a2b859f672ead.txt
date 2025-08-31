@@ -1,0 +1,575 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale CA in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,203,005 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 22"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 6 views
+  - heading "JSON.parse() throws \"Unexpected token\" error when parsing API response in JavaScript" [level=3]:
+    - link "JSON.parse() throws \"Unexpected token\" error when parsing API response in JavaScript"
+  - text: In JavaScript I receive API responses as strings, but when I run JSON.parse() on the response body I sometimes get an "Unexpected token" error. Why does JSON.parse fail on some API responses,...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'node.js'": node.js
+    - listitem:
+      - link "show questions tagged 'json'": json
+    - listitem:
+      - link "show questions tagged 'rest'": rest
+    - listitem:
+      - link "show questions tagged 'parsing'": parsing
+  - link "user31376407's user avatar":
+    - img "user31376407's user avatar"
+  - link "user31376407"
+  - list:
+    - listitem: "1"
+  - time: asked 4 mins ago
+  - text: 1 vote 0 answers 5 views
+  - heading "Flutter UI error when retracting Keyboard" [level=3]:
+    - link "Flutter UI error when retracting Keyboard"
+  - text: Am facing an issue with Flutter UI, am using resizeToAvoidBottomInset to resize my UI when the keyboard show, the only problem is that when the keyboard retract the UI lagged. this is the image ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'user-interface'": user-interface
+    - listitem:
+      - link "show questions tagged 'resize'": resize
+  - link "Mohammed Al-Dhahri's user avatar":
+    - img "Mohammed Al-Dhahri's user avatar"
+  - link "Mohammed Al-Dhahri"
+  - list:
+    - listitem: "141"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "Why postman not opening? I tried again and again and even I re-install it face same problem. Is it update issue or else?" [level=3]:
+    - link "Why postman not opening? I tried again and again and even I re-install it face same problem. Is it update issue or else?"
+  - text: "I'm having trouble launching the Postman desktop application on my Windows 11. When I try to open it, nothing happens — no error message or splash screen. I’ve tried the following steps: Restarted my ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'postman'": postman
+  - link "Nikhil Kute's user avatar":
+    - img "Nikhil Kute's user avatar"
+  - link "Nikhil Kute"
+  - list:
+    - listitem: "1"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Is there an R package for the heap data structure?" [level=3]:
+    - link "Is there an R package for the heap data structure?"
+  - text: I would like to use a heap data structure, much like I could with Python's heapq module. I search online and find the datastructures R package, which unfortunately requires Rtools. I would prefer a ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'r'": r
+  - link "Anton's user avatar":
+    - img "Anton's user avatar"
+  - link "Anton"
+  - list:
+    - listitem: 1,578
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "Why does my C# async/await code block the UI thread, and how do I fix it? [duplicate]" [level=3]:
+    - link "Why does my C# async/await code block the UI thread, and how do I fix it? [duplicate]"
+  - text: "private async void Button_Click(object sender, EventArgs e) { var result = DoWork(); // supposed to be async MessageBox.Show(\"Done!\"); } private async Task<string> DoWork() { ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'multithreading'": multithreading
+    - listitem:
+      - link "show questions tagged 'winforms'": winforms
+    - listitem:
+      - link "show questions tagged 'async-await'": async-await
+    - listitem:
+      - link "show questions tagged 'ui-thread'": ui-thread
+  - link "Ramakanth's user avatar":
+    - img "Ramakanth's user avatar"
+  - link "Ramakanth"
+  - list:
+    - listitem: "1"
+  - time: asked 12 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "shadcn dark mode toggle example is not rendering properly" [level=3]:
+    - link "shadcn dark mode toggle example is not rendering properly"
+  - text: I'm using NextJs and want to use the shadcn theme toggle button. I followed these guides first https://tailwindcss.com/docs/installation/framework-guides/nextjs https://ui.shadcn.com/docs/...
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'next.js'": next.js
+    - listitem:
+      - link "show questions tagged 'tailwind-css'": tailwind-css
+    - listitem:
+      - link "show questions tagged 'shadcnui'": shadcnui
+  - link "m477h145h3rm53n's user avatar":
+    - img "m477h145h3rm53n's user avatar"
+  - link "m477h145h3rm53n"
+  - list:
+    - listitem: "1"
+  - time: asked 17 mins ago
+  - text: 0 votes 1 answer 14 views
+  - heading "Installing Python Libraries to Google Drive in Colab is extremely slow or re-installing" [level=3]:
+    - link "Installing Python Libraries to Google Drive in Colab is extremely slow or re-installing"
+  - text: enter image description here colab link - https://colab.research.google.com/drive/1c6BiIoabW6tMSsTI_9jDrdNlnAAgf1Wf?usp=sharing its been 25 minutes it is installing the lib I'm trying to optimize my ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'pip'": pip
+    - listitem:
+      - link "show questions tagged 'google-drive-api'": google-drive-api
+    - listitem:
+      - link "show questions tagged 'google-colaboratory'": google-colaboratory
+    - listitem:
+      - link "show questions tagged 'package-management'": package-management
+  - link "Akash Chaudhari's user avatar":
+    - img "Akash Chaudhari's user avatar"
+  - link "Akash Chaudhari"
+  - list:
+    - listitem: "1"
+  - time: asked 24 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "Arrow keys for month selection and clicking on month to select month in date picker, both not working" [level=3]:
+    - link "Arrow keys for month selection and clicking on month to select month in date picker, both not working"
+  - text: "Moodboard.jsx Generated.jsx calendar.jsx (this is included in both moodboard.jsx and generated.jsx) Issue: In the date picker in Generated.jsx, when I click on the month to select what month's ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+  - link "Hardik Kalra's user avatar":
+    - img "Hardik Kalra's user avatar"
+  - link "Hardik Kalra"
+  - list:
+    - listitem: "1"
+  - time: asked 30 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "My fn + f10 key for camera not work with linux \"Ubuntu 24.04.3 LTS\" in my \"asus UX3404VA laptop\" and F10 key light always on" [level=3]:
+    - link "My fn + f10 key for camera not work with linux \"Ubuntu 24.04.3 LTS\" in my \"asus UX3404VA laptop\" and F10 key light always on"
+  - text: "MY fn + f10 key works correctly : ➜ ~ sudo acpi_listen wmi PNP0C14:02 000000ff 00000000 ➜ ~ v4l2-ctl --list-devices USB2.0 FHD UVC WebCam: USB2.0 F (usb-0000:00:14.0-8): /dev/video0 /dev/..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'ubuntu'": ubuntu
+    - listitem:
+      - link "show questions tagged 'camera'": camera
+    - listitem:
+      - link "show questions tagged 'asus'": asus
+  - link "Milad Allah Yari's user avatar":
+    - img "Milad Allah Yari's user avatar"
+  - link "Milad Allah Yari"
+  - list:
+    - listitem: "1"
+  - time: asked 35 mins ago
+  - text: "-2 votes 0 answers 22 views"
+  - heading "Solve CSES Mountain Range efficiently" [level=3]:
+    - link "Solve CSES Mountain Range efficiently"
+  - text: "This is CSES Mountain Range problem: https://cses.fi/problemset/task/3314/ There are n mountains in a row, each with a specific height. You begin your hang gliding route from some mountain. You can ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'algorithm'": algorithm
+  - link "Isabella's user avatar":
+    - img "Isabella's user avatar"
+  - link "Isabella"
+  - list:
+    - listitem: "31"
+  - time: asked 41 mins ago
+  - text: 0 votes 0 answers 17 views
+  - heading "How to Hide the Preview View when displaying an overlay Effect for Selfie Segmentation?" [level=3]:
+    - link "How to Hide the Preview View when displaying an overlay Effect for Selfie Segmentation?"
+  - text: I am using Selfie Segmentation to remove the background and using overlay effect to display it but the probelm is i need to somehow hide the preview and just display the OverlayEffect Clone this repo ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'kotlin'": kotlin
+    - listitem:
+      - link "show questions tagged 'android-camerax'": android-camerax
+    - listitem:
+      - link "show questions tagged 'android-media3'": android-media3
+  - link "BraveEvidence's user avatar":
+    - img "BraveEvidence's user avatar"
+  - link "BraveEvidence"
+  - list:
+    - listitem: "75"
+  - time: asked 59 mins ago
+  - text: 0 votes 0 answers 36 views
+  - 'heading "Facebook Login OAuth Invalid Scopes: email" [level=3]':
+    - 'link "Facebook Login OAuth Invalid Scopes: email"'
+  - text: I am trying to integrate facebook login on my next js project using next auth. Everything is set up but i got this error. I know it is because of the permission unde use cases. But the problem is I ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'oauth'": oauth
+    - listitem:
+      - link "show questions tagged 'facebook-login'": facebook-login
+    - listitem:
+      - link "show questions tagged 'next-auth'": next-auth
+  - link "Geofrey's user avatar":
+    - img "Geofrey's user avatar"
+  - link "Geofrey"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 23 views
+  - heading "How to test python threads?" [level=3]:
+    - link "How to test python threads?"
+  - text: "Setup: a chat app that can (obviously) send and receive strings. My test code: 157 # System test. 158 try: ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'multithreading'": multithreading
+  - link "Vorac's user avatar":
+    - img "Vorac's user avatar"
+  - link "Vorac"
+  - list:
+    - listitem: 9,214
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 23 views
+  - heading "Im making ios journal app in flutter and i want to make the chart shown in insights" [level=3]:
+    - link "Im making ios journal app in flutter and i want to make the chart shown in insights"
+  - text: enter image description herethe chart in journal app of ios is what im now onto make but im a bit lost how exactly to do it i have made a chart based on food ctaegories but here it must be on months ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'widget'": widget
+  - link "Mian Faseeh's user avatar":
+    - img "Mian Faseeh's user avatar"
+  - link "Mian Faseeh"
+  - list:
+    - listitem: "9"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 16 views
+  - heading "Get Tweet Thread Context with twitterapi" [level=3]:
+    - link "Get Tweet Thread Context with twitterapi"
+  - text: "I'd like to get the entire tweet thread story. Like this one, for example: https://x.com/sterlingco_3/status/1808511113124048946 There are 10 tweets. I'm using https://api.twitterapi.io/twitter/tweet/..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'twitter'": twitter
+    - listitem:
+      - link "show questions tagged 'tweets'": tweets
+    - listitem:
+      - link "show questions tagged 'twitterapi-python'": twitterapi-python
+  - link "lubi_nascimento's user avatar":
+    - img "lubi_nascimento's user avatar"
+  - link "lubi_nascimento"
+  - list:
+    - listitem: "37"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1613534"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Open-source is for the people, by the people"
+    - listitem:
+      - 'link "Moving the public Stack Overflow sites to the cloud: Part 1"'
+    - listitem: Featured on Meta
+    - listitem:
+      - link "New comment UI experiment graduation"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 35k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 28k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 24k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "A detail on how MSE loss works in PyTorch"
+    - listitem:
+      - link "What is \"The Self-Proclaimed Wisdom of Elihu\"?"
+    - listitem:
+      - link "DateInterval used with TimeObjects without date"
+    - listitem:
+      - link "What is the difference between a compiler \"frontend\" and \"backend\"?"
+    - listitem:
+      - link "Float vs Decimal"
+    - listitem:
+      - 'link "Aircraft identification: propeller aircraft that has larger wings in the back"'
+    - listitem:
+      - link "Nuances of この手の～/その手の～"
+    - listitem:
+      - link "Does this video portray a river being drained into the ocean after a beachgoer digs a trench with a shovel?"
+    - listitem:
+      - link "Did LEGO really introduce a new bracket mold that might be out of system?"
+    - listitem:
+      - link "Under what corporate mechanism can the CEO of Intel transfer 10% of the company to the US government?"
+    - listitem:
+      - link "Why are aneroid barometer capsules kept under vacuum?"
+    - listitem:
+      - link "Do subjunctives exclude the actual world?"
+    - listitem:
+      - link "Is the gravitational field around a black hole identical to space being \"denser?\""
+    - listitem:
+      - link "Did Napoleon III serve his guests with aluminium plates?"
+    - listitem:
+      - link "Drywall Repair with Odd Angles or Outlet Cutout"
+    - listitem:
+      - link "Why are antisemitism accusations not rebutted?"
+    - listitem:
+      - link "What actually carries across runs and decks in Balatro?"
+    - listitem:
+      - link "Pac-Man ghosts - Dekadoku"
+    - listitem:
+      - link "Why do Austrian political parties have so many members?"
+    - listitem:
+      - link "What will happen when a pull request includes changes to ignored .gitignore?"
+    - listitem:
+      - link "Where to put a handrail on this segment of a U-shaped winding stair?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.8.29.33370
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
