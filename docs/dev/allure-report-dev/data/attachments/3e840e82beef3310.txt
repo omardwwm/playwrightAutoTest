@@ -1,0 +1,548 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale NZ in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,203,842 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 25"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 6 views
+  - heading "fipy viewer - missing values in the legend" [level=3]:
+    - link "fipy viewer - missing values in the legend"
+  - text: It's my first real usage of fipy so learning. I'm trying to use fipy viewer to plot some of my pde equations solutions, I've a system of equations and using the same code trying to plot few results. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'fipy'": fipy
+  - link "Huanita's user avatar":
+    - img "Huanita's user avatar"
+  - link "Huanita"
+  - list:
+    - listitem: "1"
+  - time: asked 6 mins ago
+  - text: 1 vote 0 answers 7 views
+  - heading "How to get Ethernet Signals and their values from Vector CANoe 15 using python" [level=3]:
+    - link "How to get Ethernet Signals and their values from Vector CANoe 15 using python"
+  - text: "I want to read Ethernet Signal via Vector CANoe using Python, For eg: I have 'ECU_Status' signals with PDU over Ethernet and I want to read it's value using python script. import win32com.client CANoe ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'win32com'": win32com
+    - listitem:
+      - link "show questions tagged 'ethernet'": ethernet
+    - listitem:
+      - link "show questions tagged 'can-bus'": can-bus
+    - listitem:
+      - link "show questions tagged 'canoe'": canoe
+    - listitem:
+      - link "show questions tagged 'python-can'": python-can
+  - link "Aditya Patil's user avatar":
+    - img "Aditya Patil's user avatar"
+  - link "Aditya Patil"
+  - list:
+    - listitem: "11"
+  - time: asked 7 mins ago
+  - text: 1 vote 1 answer 6 views
+  - heading "Istio Ambient mode for JWT authentication with Auth0" [level=3]:
+    - link "Istio Ambient mode for JWT authentication with Auth0"
+  - text: "What I'm trying to achieve: RequestAuthentication with Auth0 Whitelist /allowed-path (no JWT token required) Require a valid JWT token for all other paths Here is my configuration: apiVersion: ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'auth0'": auth0
+    - listitem:
+      - link "show questions tagged 'istio'": istio
+    - listitem:
+      - link "show questions tagged 'istio-gateway'": istio-gateway
+    - listitem:
+      - link "show questions tagged 'waypoint'": waypoint
+  - link "Sean's user avatar":
+    - img "Sean's user avatar"
+  - link "Sean"
+  - list:
+    - listitem: 1,384
+  - time: asked 10 mins ago
+  - text: 1 vote 0 answers 10 views
+  - heading "How to deploy a Databricks App with tesseract-ocr" [level=3]:
+    - link "How to deploy a Databricks App with tesseract-ocr"
+  - text: I am trying to deploy a Databricks app that uses PyMUPDF library to extract text from PDF files. Under the hood, it tries to use an OS dependency called 'tesseract-ocr'. Please note that this is not ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'databricks'": databricks
+    - listitem:
+      - link "show questions tagged 'ocr'": ocr
+  - link "flow_me_over's user avatar":
+    - img "flow_me_over's user avatar"
+  - link "flow_me_over"
+  - list:
+    - listitem: "395"
+  - time: asked 13 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Overlap the grid" [level=3]:
+    - link "Overlap the grid"
+  - text: I added on scroll on my grid, So I added scrolling left to right and top to bottom with sticky top header and left side character list header. but when I scroll from left to right and top to bottom ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'angular'": angular
+  - link "Mukesh Majoka's user avatar":
+    - img "Mukesh Majoka's user avatar"
+  - link "Mukesh Majoka"
+  - list:
+    - listitem: "9"
+  - time: asked 14 mins ago
+  - text: 1 vote 0 answers 8 views
+  - heading "ARC HS 46 compiler flag to load aligned address in case of unaligned address" [level=3]:
+    - link "ARC HS 46 compiler flag to load aligned address in case of unaligned address"
+  - text: I'm using ARC metaware HS 46. I have unaligned loads and I'm trying to find a compilation flag that will make any unaligned load as aligned and after will extract the relevant data from it. For ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'compilation'": compilation
+    - listitem:
+      - link "show questions tagged 'automatic-ref-counting'": automatic-ref-counting
+  - link "adi's user avatar":
+    - img "adi's user avatar"
+  - link "adi"
+  - list:
+    - listitem: "11"
+  - time: asked 18 mins ago
+  - text: 1 vote 0 answers 12 views
+  - heading "How to have a parent terminal view and pilot a child pseudo-terminal" [level=3]:
+    - link "How to have a parent terminal view and pilot a child pseudo-terminal"
+  - text: "Goal: In Python have a parent terminal start a program in a child pseudo-terminal (PTY), see its outputs and provide its inputs. At any given time, the parent terminal should be able to query what's ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'subprocess'": subprocess
+    - listitem:
+      - link "show questions tagged 'curses'": curses
+    - listitem:
+      - link "show questions tagged 'tty'": tty
+    - listitem:
+      - link "show questions tagged 'pty'": pty
+  - link "GenTel's user avatar":
+    - img "GenTel's user avatar"
+  - link "GenTel"
+  - list:
+    - listitem: 1,568
+  - time: asked 19 mins ago
+  - text: 1 vote 0 answers 11 views
+  - heading "<video> does not show up with Safari without autoplay" [level=3]:
+    - link "<video> does not show up with Safari without autoplay"
+  - text: <video controls muted loop playsinline> <source src="https://samplelib.com/lib/preview/mp4/sample-15s.mp4" type="video/mp4"> </video> https://...
+  - list:
+    - listitem:
+      - link "show questions tagged 'safari'": safari
+    - listitem:
+      - link "show questions tagged 'autoplay'": autoplay
+  - link "T. Bot's user avatar":
+    - img "T. Bot's user avatar"
+  - link "T. Bot"
+  - list:
+    - listitem: "115"
+  - time: asked 19 mins ago
+  - text: "-4 votes 0 answers 20 views"
+  - heading "I need help finding where some files came from [closed]" [level=3]:
+    - link "I need help finding where some files came from [closed]"
+  - text: I found some text documents that where a bit disturbing and I need help determining their origin. One I got was called "they just don't get it and they never will" and it said "I recall ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+  - link "Oliver's user avatar":
+    - img "Oliver's user avatar"
+  - link "Oliver"
+  - list:
+    - listitem: "1"
+  - time: asked 19 mins ago
+  - text: 1 vote 0 answers 10 views
+  - heading "Can I 'SWIG' the entire OpenSSL 3.5.2 to C#?" [level=3]:
+    - link "Can I 'SWIG' the entire OpenSSL 3.5.2 to C#?"
+  - text: I started working on a mini side project to learn some new things. I wanted to see if I can use the native OpenSSL 3.5.2 libs (libcrypto and maybe libssl) in C#. The first aproach was to write ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'automation'": automation
+    - listitem:
+      - link "show questions tagged 'openssl'": openssl
+    - listitem:
+      - link "show questions tagged 'native'": native
+    - listitem:
+      - link "show questions tagged 'swig'": swig
+  - link "Valentin Popescu's user avatar":
+    - img "Valentin Popescu's user avatar"
+  - link "Valentin Popescu"
+  - list:
+    - listitem: "11"
+  - time: asked 20 mins ago
+  - text: 0 votes 1 answer 15 views
+  - heading "Why do I have extra unwanted space to the left of my page?" [level=3]:
+    - link "Why do I have extra unwanted space to the left of my page?"
+  - text: So, I have this code. <!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content=&...
+  - list:
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'css'": css
+  - link "Rohit Rai's user avatar":
+    - img "Rohit Rai's user avatar"
+  - link "Rohit Rai"
+  - list:
+    - listitem: "1"
+  - time: asked 23 mins ago
+  - text: 0 votes 0 answers 13 views
+  - 'heading "Docker Desktop Hyper-V setup error ''unhandled exception : job failed with message Docker DesktopVM failed to start" [level=3]':
+    - 'link "Docker Desktop Hyper-V setup error ''unhandled exception : job failed with message Docker DesktopVM failed to start"'
+  - text: "I m trying to run docker desktop on windows 11 pro using the hyper-v backend. every time I start Docker Dekstop , it fails with the following error: \"Unhandled exception : job failed with message ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'docker'": docker
+    - listitem:
+      - link "show questions tagged 'hyper-v'": hyper-v
+    - listitem:
+      - link "show questions tagged 'docker-desktop'": docker-desktop
+    - listitem:
+      - link "show questions tagged 'windows-11'": windows-11
+  - link "Gaurav Rathore's user avatar":
+    - img "Gaurav Rathore's user avatar"
+  - link "Gaurav Rathore"
+  - list:
+    - listitem: "21"
+  - time: asked 24 mins ago
+  - text: "-1 votes 0 answers 12 views"
+  - heading "How does RDLC perform pagination display" [level=3]:
+    - link "How does RDLC perform pagination display"
+  - text: I provided 2,000 pieces of data for the report. When I click "Next Page" in the report, the page refreshes once, but the data is still displayed on the first page. Why is the data displayed ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'rdlc'": rdlc
+  - link "leyan's user avatar":
+    - img "leyan's user avatar"
+  - link "leyan"
+  - list:
+    - listitem: "11"
+  - time: asked 25 mins ago
+  - text: 1 vote 0 answers 10 views
+  - heading "Is there a way to resolve network related error in SQL server" [level=3]:
+    - link "Is there a way to resolve network related error in SQL server"
+  - text: "I have challenges with SQL server. Any time I install the SQL server it works perfectly fine but after some time I get the error below. [![SQL Server network error][1]][1] [1]: [!SQL Server network ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'sql-server'": sql-server
+  - link "Moses's user avatar":
+    - img "Moses's user avatar"
+  - link "Moses"
+  - list:
+    - listitem: 1,526
+  - time: asked 25 mins ago
+  - text: 1 vote 0 answers 10 views
+  - heading "How to retrieve the current conversation ID inside a tool function in LangGraph?" [level=3]:
+    - link "How to retrieve the current conversation ID inside a tool function in LangGraph?"
+  - text: Is there any built-in way for a LangGraph tool function to access the current conversation (session/thread) ID at runtime? I need this ID for logging and external service correlation, but I can’t find ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'langchain'": langchain
+    - listitem:
+      - link "show questions tagged 'langgraph'": langgraph
+  - link "JIeJaitt's user avatar":
+    - img "JIeJaitt's user avatar"
+  - link "JIeJaitt"
+  - list:
+    - listitem: "11"
+  - time: asked 29 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1613590"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Building AI for consumer applications isn’t all fun and games"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Community Asks Sprint Announcement - September 2025"
+    - listitem:
+      - link "stackoverflow.ai - rebuilt for attribution"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "New comment UI experiment graduation"
+  - text: Collectives
+  - link "see all"
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 28k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 24k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 11k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Generate Mandelbrot Fractal Image in C++"
+    - listitem:
+      - link "What does the message about a character missing in a font mean?"
+    - listitem:
+      - link "In search of 86-DOS ttsr.h and corresponding library"
+    - listitem:
+      - link "Understanding Bayesian model outputs"
+    - listitem:
+      - link "When would a court impose a harsher sentence than the prosecutor requests?"
+    - listitem:
+      - link "Why does load placement matter for transistors?"
+    - listitem:
+      - link "Has anyone proposed any ideas for what rovers or other vehicles would look like on bodies with icy surfaces?"
+    - listitem:
+      - link "Can \"respectively\" be used when one enumeration is only implicit?"
+    - listitem:
+      - link "What natural predators would prove the most dangerous for a village of tiny 5 inch people?"
+    - listitem:
+      - link "Starting a vintage vehicle after ~10 months of standing - tips?"
+    - listitem:
+      - link "Limit of 2 variable function with exponential function"
+    - listitem:
+      - link "Has “drop” recently acquired the meaning of \"releasing digital content beyond music\"?"
+    - listitem:
+      - link "What should an airline pilot do in a decompression with a MEA of FL200?"
+    - listitem:
+      - link "I don't want the city to inspect my new air conditioner. Am I being paranoid?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.9.3.33484
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
