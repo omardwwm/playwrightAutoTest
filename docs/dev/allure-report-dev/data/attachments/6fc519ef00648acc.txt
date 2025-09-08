@@ -1,0 +1,541 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale CA in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,201,779 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 24"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 2 views
+  - heading "How to open multiple files in batch file but all in SAME WINDOW" [level=3]:
+    - link "How to open multiple files in batch file but all in SAME WINDOW"
+  - text: I can open them. Multiple but each in their own instance. For e.g. files will be opened in a separate window each when normally if opened manually by clicking, they will be opened in separate tabs of ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'windows'": windows
+    - listitem:
+      - link "show questions tagged 'batch-file'": batch-file
+    - listitem:
+      - link "show questions tagged 'cmd'": cmd
+  - link "shoryuu's user avatar":
+    - img "shoryuu's user avatar"
+  - link "shoryuu"
+  - list:
+    - listitem: "141"
+  - time: asked 1 min ago
+  - text: 0 votes 0 answers 7 views
+  - heading "OpenCV edge detection on PNG image with Canny" [level=3]:
+    - link "OpenCV edge detection on PNG image with Canny"
+  - text: I am new to OpenCV with linux. I am currently working on tube rack's bounding detection. But as you can see, one of rack's bounding is blurred by shadow.enter image description here Despite having ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'opencv'": opencv
+    - listitem:
+      - link "show questions tagged 'image-processing'": image-processing
+    - listitem:
+      - link "show questions tagged 'edge-detection'": edge-detection
+    - listitem:
+      - link "show questions tagged 'canny-operator'": canny-operator
+  - link "Ethan Tang's user avatar":
+    - img "Ethan Tang's user avatar"
+  - link "Ethan Tang"
+  - list:
+    - listitem: "1"
+  - time: asked 4 mins ago
+  - text: 0 votes 0 answers 3 views
+  - heading "Selenium webdriver issue that means not supporting version 140" [level=3]:
+    - link "Selenium webdriver issue that means not supporting version 140"
+  - text: I have a problem about webdrive issue my current webdrive is 138 and i update browser edge versin to 140 so i need help my program to execute and i see message onscreen this version only support 138 I ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'selenium-webdriver'": selenium-webdriver
+  - link "Ridwaan mohamed's user avatar":
+    - img "Ridwaan mohamed's user avatar"
+  - link "Ridwaan mohamed"
+  - list:
+    - listitem: "1"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "How to configure container (docker compose) to start with \"bash\" in \"Exec\" of Docker Desktop?" [level=3]:
+    - link "How to configure container (docker compose) to start with \"bash\" in \"Exec\" of Docker Desktop?"
+  - text: "Situation: I have a docker compose setup with multiple containers from different images. I have Docker Desktop to access the terminals via \"Exec\" tab. I run terminal scripts in some ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'bash'": bash
+    - listitem:
+      - link "show questions tagged 'docker'": docker
+    - listitem:
+      - link "show questions tagged 'docker-compose'": docker-compose
+  - link "fabpico's user avatar":
+    - img "fabpico's user avatar"
+  - link "fabpico"
+  - list:
+    - listitem: 2,958
+  - time: asked 8 mins ago
+  - text: 0 votes 0 answers 9 views
+  - 'heading "UIKit: How to switch main content to a “search state” view when the search bar becomes active (no blur/dim)?" [level=3]':
+    - 'link "UIKit: How to switch main content to a “search state” view when the search bar becomes active (no blur/dim)?"'
+  - text: I’m implementing a search UX where, when the user taps into the search bar, the entire main content changes to a different view (e.g., recent searches, categories, or suggested queries). There’s no ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'uiviewcontroller'": uiviewcontroller
+    - listitem:
+      - link "show questions tagged 'uikit'": uikit
+    - listitem:
+      - link "show questions tagged 'uisearchcontroller'": uisearchcontroller
+  - link "Maxim Lungu's user avatar":
+    - img "Maxim Lungu's user avatar"
+  - link "Maxim Lungu"
+  - list:
+    - listitem: "11"
+  - time: asked 9 mins ago
+  - text: "-1 votes 0 answers 13 views"
+  - heading "Is there a way to create a lighting estimation system similar to Foundationde Unity's on my own" [level=3]:
+    - link "Is there a way to create a lighting estimation system similar to Foundationde Unity's on my own"
+  - text: As I am in China, my Android phone cannot use Google Framework, so I chose EasyAR SDK to create UnityAR, but it does not provide lighting estimation function. My project is to identify a target image ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'unity-game-engine'": unity-game-engine
+  - link "chen liang's user avatar":
+    - img "chen liang's user avatar"
+  - link "chen liang"
+  - list:
+    - listitem: "31"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "Clicking on thumbnail slide does not change main Swiper slider" [level=3]:
+    - link "Clicking on thumbnail slide does not change main Swiper slider"
+  - text: Angular v20 Swiper v11.2.10 I am using Swiper Web Components in an Angular project to build a product gallery with a main slider (sw-primary) and a vertical thumbnail slider (sw-secondary). The ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'angular'": angular
+    - listitem:
+      - link "show questions tagged 'swiper.js'": swiper.js
+  - link "Ahmer Ali Ahsan's user avatar":
+    - img "Ahmer Ali Ahsan's user avatar"
+  - link "Ahmer Ali Ahsan"
+  - list:
+    - listitem: 6,166
+  - time: asked 17 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "How to avoid dicom.log file creation while using 'dicom-dimse-native' NPM" [level=3]:
+    - link "How to avoid dicom.log file creation while using 'dicom-dimse-native' NPM"
+  - text: I'm using 'dicom-dimse-native' to ECHO. While importing this NPM log file is created automatically. But I don't see any logs printing in that file even though using the event in that NPM. I don't ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'node.js'": node.js
+    - listitem:
+      - link "show questions tagged 'logging'": logging
+    - listitem:
+      - link "show questions tagged 'echo'": echo
+    - listitem:
+      - link "show questions tagged 'dcmtk'": dcmtk
+    - listitem:
+      - link "show questions tagged 'log4cplus'": log4cplus
+  - link "nithya chandran's user avatar":
+    - img "nithya chandran's user avatar"
+  - link "nithya chandran"
+  - list:
+    - listitem: "1"
+  - time: asked 22 mins ago
+  - text: 0 votes 0 answers 7 views
+  - 'heading "Expo EAS build: Authentication with Apple Developer Portal failed" [level=3]':
+    - 'link "Expo EAS build: Authentication with Apple Developer Portal failed"'
+  - text: "I’m trying to build my iOS app with Expo (EAS build), but I get this error: Authentication with Apple Developer Portal failed! You have no team associated with your Apple account, cannot proceed. (Do ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'build'": build
+    - listitem:
+      - link "show questions tagged 'eas'": eas
+  - link "Smith Will's user avatar":
+    - img "Smith Will's user avatar"
+  - link "Smith Will"
+  - list:
+    - listitem: "1"
+  - time: asked 23 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "App Action only opening app's android.intent.action.MAIN intent so unable to fetch parameters" [level=3]:
+    - link "App Action only opening app's android.intent.action.MAIN intent so unable to fetch parameters"
+  - text: There is an issue with the query I'm using to open my app feature (BII OPEN_APP_FEATURE). Whenever I try to write or speak "open MySentry panic" then it again just opens the app, and that ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'app-actions'": app-actions
+  - link "Bilal Khurshid's user avatar":
+    - img "Bilal Khurshid's user avatar"
+  - link "Bilal Khurshid"
+  - list:
+    - listitem: "29"
+  - time: asked 26 mins ago
+  - text: 0 votes 0 answers 15 views
+  - heading "How to hide only the progress bar in YouTube IFrame (controls:1) and still allow quality selection?" [level=3]:
+    - link "How to hide only the progress bar in YouTube IFrame (controls:1) and still allow quality selection?"
+  - text: "I'm embedding a YouTube video using the IFrame Player API. I want to hide only the progress bar (seek bar) but still allow users to change video quality via the gear icon. I tried using controls: 0, ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'youtube'": youtube
+    - listitem:
+      - link "show questions tagged 'youtube-iframe-api'": youtube-iframe-api
+    - listitem:
+      - link "show questions tagged 'video-embedding'": video-embedding
+  - link "이주희's user avatar":
+    - img "이주희's user avatar"
+  - link "이주희"
+  - list:
+    - listitem: "1"
+  - time: asked 26 mins ago
+  - text: "-1 votes 0 answers 14 views"
+  - heading "DOM vs Canvas performance for bullet comments (danmaku). Do I really need WebGL?" [level=3]:
+    - link "DOM vs Canvas performance for bullet comments (danmaku). Do I really need WebGL?"
+  - text: "I’m building a danmaku (bullet comments) system in a project that consists of HTML + CSS + TypeScript. So far, I’ve tried two approaches: Direct DOM manipulation I create <div> or <img> ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'canvas'": canvas
+    - listitem:
+      - link "show questions tagged 'webgl'": webgl
+  - link "Benny Hu's user avatar":
+    - img "Benny Hu's user avatar"
+  - link "Benny Hu"
+  - list:
+    - listitem: "7"
+  - time: asked 28 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Using Django jwt tokens with Nextjs with cookies" [level=3]:
+    - link "Using Django jwt tokens with Nextjs with cookies"
+  - text: "My backend has an endpoint: /auth/jwt/create that returns a JSON response containing the access and refresh tokens. With my current backend setup I send the tokens in both the response body and in ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'next.js'": next.js
+    - listitem:
+      - link "show questions tagged 'django-rest-framework'": django-rest-framework
+  - link "sodiumfish's user avatar":
+    - img "sodiumfish's user avatar"
+  - link "sodiumfish"
+  - list:
+    - listitem: "89"
+  - time: asked 28 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "Bandpass filter to accelerometer signal in realtime" [level=3]:
+    - link "Bandpass filter to accelerometer signal in realtime"
+  - text: I need to apply bandpass filter to accelerometer signal in realtime. The band is from 0.5 Hz to 10 Hz. The data is coming every 1 second with 1000 samples ( Sampling frequency 1000 hz). When I apply ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'accelerometer'": accelerometer
+    - listitem:
+      - link "show questions tagged 'bandpass-filter'": bandpass-filter
+  - link "N N's user avatar":
+    - img "N N's user avatar"
+  - link "N N"
+  - list:
+    - listitem: "23"
+  - time: asked 28 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1613452"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Kotlin is more than just the Android house language"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Community Asks Sprint Announcement - September 2025"
+    - listitem:
+      - link "stackoverflow.ai - rebuilt for attribution"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "New comment UI experiment graduation"
+  - text: Collectives
+  - link "see all"
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 21k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 16k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - heading "R Language" [level=1]:
+    - link "R Language"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where data scientists and AI researchers gather to find, share, and learn about R and other subtags like knitr and dplyr.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Exit a pinball board"
+    - listitem:
+      - link "Is this a variant of 井"
+    - listitem:
+      - link "Is there an issue when connecting a trace with pads 'from the side?"
+    - listitem:
+      - link "How does a multirate SFP work?"
+    - listitem:
+      - link "Next logical step in Towers puzzle (\"Extreme\")"
+    - listitem:
+      - link "Single author paper from undergrad"
+    - listitem:
+      - link "Looking for look-up tables for nutrition compounds"
+    - listitem:
+      - 'link "To drive (a car): What is the difference between 車を転がす and 運転する?"'
+    - listitem:
+      - link "Can I publish a novel theorem which was proven with AI assistance?"
+    - listitem:
+      - 'link "Analyzing a logical reasoning problem: Proving a contradiction to weaken a claim"'
+    - listitem:
+      - link "How to understand Daniel's different forms of identifying God in the two visions?"
+    - listitem:
+      - link "Why would you need a declaratory judgment?"
+    - listitem:
+      - link "In \"The Last Question,\" how much did Isaac Asimov likely intend the 5-dollar bet to be?"
+    - listitem:
+      - link "A sequence of Diophantine problems"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.9.4.33555
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
