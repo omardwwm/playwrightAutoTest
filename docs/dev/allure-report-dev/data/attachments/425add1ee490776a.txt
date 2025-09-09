@@ -1,0 +1,575 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale DE in dev Einvironment and Realm europe
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,201,997 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 20"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 7 views
+  - heading "Does Spring Authorization supports FAPI 2.0" [level=3]:
+    - link "Does Spring Authorization supports FAPI 2.0"
+  - text: I'm trying to do a PoC on FAPI 2.0 for which I want to have an authorization server that supports FAPI2.0 along with the control over IDP integration, user database, OIDC provider and onboarding third ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'oauth-2.0'": oauth-2.0
+    - listitem:
+      - link "show questions tagged 'openid-connect'": openid-connect
+    - listitem:
+      - link "show questions tagged 'spring-authorization-server'": spring-authorization-server
+  - link "HyperioN's user avatar":
+    - img "HyperioN's user avatar"
+  - link "HyperioN"
+  - list:
+    - listitem: 4,008
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "I am trying to upload my ios game made with unity to app store, and i am getting some rejections" [level=3]:
+    - link "I am trying to upload my ios game made with unity to app store, and i am getting some rejections"
+  - text: my game is for kids(under age 5) and apple policy says i can't use ads at all, but i have seen many game that are kids game but still have ads. how can i solve this issue. I am not using any analytics ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'unity-game-engine'": unity-game-engine
+    - listitem:
+      - link "show questions tagged 'admob'": admob
+  - link "Axay Gadhiya's user avatar":
+    - img "Axay Gadhiya's user avatar"
+  - link "Axay Gadhiya"
+  - list:
+    - listitem: "11"
+  - time: asked 12 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "PMM-server refuse connection to pmm-client" [level=3]:
+    - link "PMM-server refuse connection to pmm-client"
+  - text: Hi folks I tried to setup pmm for my local postgresql 14, due to server constraint i installed both pmm-server and pmm-client in the same server which is a VM, intially it was working i shutdown my VM ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'linux'": linux
+    - listitem:
+      - link "show questions tagged 'postgresql'": postgresql
+    - listitem:
+      - link "show questions tagged 'database-administration'": database-administration
+    - listitem:
+      - link "show questions tagged 'percona'": percona
+    - listitem:
+      - link "show questions tagged 'pmm-server'": pmm-server
+  - link "sri_db_ram's user avatar":
+    - img "sri_db_ram's user avatar"
+  - link "sri_db_ram"
+  - list:
+    - listitem: "1"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "i2c conflict on M5Core?" [level=3]:
+    - link "i2c conflict on M5Core?"
+  - text: "I want to use a NAU702 load cell ADC with a M5Core and FreeRTOS I try first this code with a ESP32 Huzzah32 and NAU702 using the adafruit library #include <Wire.h> #include <..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'i2c'": i2c
+  - link "zarg404's user avatar":
+    - img "zarg404's user avatar"
+  - link "zarg404"
+  - list:
+    - listitem: "328"
+  - time: asked 15 mins ago
+  - text: "-3 votes 0 answers 32 views"
+  - heading "How to stop touchpad three finger gesture in windows application? [closed]" [level=3]:
+    - link "How to stop touchpad three finger gesture in windows application? [closed]"
+  - text: "I try to prevent user from using three finger gestures to switch to another application or window in my application. (Update: User will need to click the \"Kiosk mode\" button to prevent the ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'windows'": windows
+    - listitem:
+      - link "show questions tagged 'powershell'": powershell
+  - link "Jian Cui's user avatar":
+    - img "Jian Cui's user avatar"
+  - link "Jian Cui"
+  - list:
+    - listitem: "819"
+  - time: asked 24 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading ".NET Equals ovverride not being called inside FirstOrDefaultAsync" [level=3]:
+    - link ".NET Equals ovverride not being called inside FirstOrDefaultAsync"
+  - text: I'm in a .NET 6 web application with EFCore, and I have these boilerplate abstract classes and interfaces for defining entities. I know it's quite a number of complexity layers, but it really helps me ...
+  - list:
+    - listitem:
+      - link "show questions tagged '.net'": .net
+    - listitem:
+      - link "show questions tagged 'entity-framework-core'": entity-framework-core
+    - listitem:
+      - link "show questions tagged 'equality'": equality
+  - link "Davide Vitali's user avatar":
+    - img "Davide Vitali's user avatar"
+  - link "Davide Vitali"
+  - list:
+    - listitem: 1,035
+  - time: asked 25 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Usrp E320 Source to Sink Block Loop" [level=3]:
+    - link "Usrp E320 Source to Sink Block Loop"
+  - text: We are using GNU radio with USRP E320 on radioconda (Windows) and we are working on a basic project. But we have an issue. We want to receive RF signals and then transmit them, so we connect USRP ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'loopback'": loopback
+    - listitem:
+      - link "show questions tagged 'gnuradio'": gnuradio
+    - listitem:
+      - link "show questions tagged 'usrp'": usrp
+  - link "Ahmet Said Akan's user avatar":
+    - img "Ahmet Said Akan's user avatar"
+  - link "Ahmet Said Akan"
+  - list:
+    - listitem: "1"
+  - time: asked 35 mins ago
+  - text: 0 votes 0 answers 20 views
+  - heading "Taken image not showing in Gallery" [level=3]:
+    - link "Taken image not showing in Gallery"
+  - text: My images are not shown in gallery and are not editable (draw something onto it) if I open them from Android file explorer. The wired thing (at least for me) is when I change the name of the file in ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'android-permissions'": android-permissions
+    - listitem:
+      - link "show questions tagged 'android-image'": android-image
+    - listitem:
+      - link "show questions tagged 'android-fileprovider'": android-fileprovider
+  - link "stefan's user avatar":
+    - img "stefan's user avatar"
+  - link "stefan"
+  - list:
+    - listitem: 1,376
+  - time: asked 39 mins ago
+  - text: "-1 votes 1 answer 17 views"
+  - heading "Claude Code's internal search tool always shows 0 results, even when it should obviously return results" [level=3]:
+    - link "Claude Code's internal search tool always shows 0 results, even when it should obviously return results"
+  - text: I've started using Claude Code for programming tasks. Claude Code's search tool returns 0 results for me, no matter the query. When it uses the bash tool and runs a normal ripgrep search there are ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'claude-code'": claude-code
+  - link "Cornelius Roemer's user avatar":
+    - img "Cornelius Roemer's user avatar"
+  - link "Cornelius Roemer"
+  - list:
+    - listitem: 9,922
+  - time: asked 42 mins ago
+  - text: 0 votes 0 answers 21 views
+  - heading "How to draw the border boxes in flutter using pdf json?" [level=3]:
+    - link "How to draw the border boxes in flutter using pdf json?"
+  - text: "I have a scanned pdf and want to edit this into Flutter with JSON. So what I am doing: I have used Adobe apis to first convert the Scanned pdf to searchable pdf using OCR and after that extracted the ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'pdf-generation'": pdf-generation
+    - listitem:
+      - link "show questions tagged 'adobe-pdfservices'": adobe-pdfservices
+    - listitem:
+      - link "show questions tagged 'adobe-pdf-library'": adobe-pdf-library
+  - link "Rakesh Saini's user avatar":
+    - img "Rakesh Saini's user avatar"
+  - link "Rakesh Saini"
+  - list:
+    - listitem: "1"
+  - time: asked 47 mins ago
+  - text: 1 vote 0 answers 22 views
+  - heading "Electron app loading local React bundle - DOM never hydrates despite JS execution" [level=3]:
+    - link "Electron app loading local React bundle - DOM never hydrates despite JS execution"
+  - text: I'm building a cross-platform application (web + desktop) where the React + Vite frontend is hosted on Vercel. While using mainWindow.loadURL('https://example-app.vercel.app') works, it has ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'electron'": electron
+    - listitem:
+      - link "show questions tagged 'vite'": vite
+  - link "Brijrajsinh parmar's user avatar":
+    - img "Brijrajsinh parmar's user avatar"
+  - link "Brijrajsinh parmar"
+  - list:
+    - listitem: "29"
+  - time: asked 51 mins ago
+  - text: "-3 votes 0 answers 19 views"
+  - heading "Extract Data From Pdf and Convert them To Class [closed]" [level=3]:
+    - link "Extract Data From Pdf and Convert them To Class [closed]"
+  - text: I Extract data from Pdf and I want to convert them to into an class so how to do I have big Messy Data and how to work with this messy Data and then Convert them into python class I use Pydantic class ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+  - link "Vaibhav Kashyap's user avatar":
+    - img "Vaibhav Kashyap's user avatar"
+  - link "Vaibhav Kashyap"
+  - list:
+    - listitem: "1"
+  - time: asked 52 mins ago
+  - text: 0 votes 0 answers 17 views
+  - heading "How can screen reader users resume reading after closing a modal window?" [level=3]:
+    - link "How can screen reader users resume reading after closing a modal window?"
+  - text: "I'm building a fully accessible webpage for blind users who rely on screen readers for our study. They can read a document and ask AI assistant questions. Current design: The main content is a ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'accessibility'": accessibility
+    - listitem:
+      - link "show questions tagged 'focus'": focus
+    - listitem:
+      - link "show questions tagged 'wai-aria'": wai-aria
+    - listitem:
+      - link "show questions tagged 'voiceover'": voiceover
+    - listitem:
+      - link "show questions tagged 'screen-readers'": screen-readers
+  - link "Hesper's user avatar":
+    - img "Hesper's user avatar"
+  - link "Hesper"
+  - list:
+    - listitem: "139"
+  - time: asked 57 mins ago
+  - text: 0 votes 0 answers 21 views
+  - heading "Dynamic Directive not applying, in reusable controller" [level=3]:
+    - link "Dynamic Directive not applying, in reusable controller"
+  - text: "I'm trying to create a reusable controller for textbox, textarea, dropdown. etc, there are plenty of directives in my project. so I tried to render it dynamically validation-mask.directive.ts: @..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'angular'": angular
+    - listitem:
+      - link "show questions tagged 'angular-material'": angular-material
+    - listitem:
+      - link "show questions tagged 'angular-directive'": angular-directive
+    - listitem:
+      - link "show questions tagged 'angular19'": angular19
+  - link "Kathiravan S's user avatar":
+    - img "Kathiravan S's user avatar"
+  - link "Kathiravan S"
+  - list:
+    - listitem: "77"
+  - time: asked 58 mins ago
+  - text: 1 vote 0 answers 14 views
+  - 'heading "Jetpack Compose: Prevent parent recomposition when toggling visibility of a sibling composable" [level=3]':
+    - 'link "Jetpack Compose: Prevent parent recomposition when toggling visibility of a sibling composable"'
+  - text: "I’m seeing unnecessary recompositions in a common UI pattern and want to structure state so that only the minimal part of the tree recomposes. Minimal reproducible example: @Composable fun MainScreen()..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'kotlin'": kotlin
+    - listitem:
+      - link "show questions tagged 'android-jetpack-compose'": android-jetpack-compose
+  - link "Darshan Mistry's user avatar":
+    - img "Darshan Mistry's user avatar"
+  - link "Darshan Mistry"
+  - list:
+    - listitem: 3,390
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1613467"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Kotlin is more than just the Android house language"
+    - listitem:
+      - link "We built stackoverflow.ai with the community and for the community"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Community Asks Sprint Announcement - September 2025"
+    - listitem:
+      - link "stackoverflow.ai - rebuilt for attribution"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "New comment UI experiment graduation"
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 36k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 28k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 21k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Next generation flashbang"
+    - listitem:
+      - link "Does couatl's poison end when the victim is shaken awake?"
+    - listitem:
+      - link "Looking for SF book I read in the 80's"
+    - listitem:
+      - link "What truly is the lightest radioactive element?"
+    - listitem:
+      - link "Trying to create a simple but decent RTL buffer circuit"
+    - listitem:
+      - link "Can I publish a novel theorem which was proven with AI assistance?"
+    - listitem:
+      - link "What is the etymology of the word 'belt' in the sense 'to move very fast'?"
+    - listitem:
+      - link "When did Mary die?"
+    - listitem:
+      - link "Story featuring self-lighting cigarette"
+    - listitem:
+      - link "Single author paper from undergrad"
+    - listitem:
+      - link "The Troublesome Mouse in the Network of Pipes"
+    - listitem:
+      - link "How is the singularity in the spacetime metric coordinate dependent?"
+    - listitem:
+      - link "What Is the Maximum Negative Curvature a Hyperbolic Space Can Have While Remaining Physiologically Safe for Humans?"
+    - listitem:
+      - link "Vision on foreign bodies"
+    - listitem:
+      - link "What is editorial fatigue in relation to the Synoptic Gospels?"
+    - listitem:
+      - link "Efficiency of interrupts sharing the same Interrupt Service Routine"
+    - listitem:
+      - link "Did Buddhist monk, Ajahn Tate, have terminal cancer?"
+    - listitem:
+      - link "What does thermodynamics have to do with separate biochemical pathways?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.9.4.33555
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
