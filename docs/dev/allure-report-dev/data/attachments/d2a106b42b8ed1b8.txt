@@ -1,0 +1,575 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale NZ in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,202,198 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 20"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 2 views
+  - 'heading "Docker Push Issue : Request Acces to the resource is denied" [level=3]':
+    - 'link "Docker Push Issue : Request Acces to the resource is denied"'
+  - text: "Good Morning Fellas , I been trying to push the code the docker repo but I've been facing this issue. Error: trying to reuse blob sha256:..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'docker'": docker
+    - listitem:
+      - link "show questions tagged 'devops'": devops
+  - link "Sayyed Viquar Ahmed's user avatar":
+    - img "Sayyed Viquar Ahmed's user avatar"
+  - link "Sayyed Viquar Ahmed"
+  - list:
+    - listitem: "13"
+  - time: asked 1 min ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Alternative to ICEfaces that supports Jakarta namespace for migration to Spring 6" [level=3]:
+    - link "Alternative to ICEfaces that supports Jakarta namespace for migration to Spring 6"
+  - text: We are working on migrating an application from Java EE (javax.) to Jakarta EE (jakarta.) in order to upgrade to Spring 6. The application currently uses ICEfaces for the UI layer but ICEfaces does ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'jsf'": jsf
+    - listitem:
+      - link "show questions tagged 'jakarta-ee'": jakarta-ee
+    - listitem:
+      - link "show questions tagged 'migration'": migration
+    - listitem:
+      - link "show questions tagged 'icefaces'": icefaces
+    - listitem:
+      - link "show questions tagged 'spring6'": spring6
+  - link "Shalini's user avatar":
+    - img "Shalini's user avatar"
+  - link "Shalini"
+  - list:
+    - listitem: "1"
+  - time: asked 7 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "After update nodejs, errors in async functions always crash the whole program" [level=3]:
+    - link "After update nodejs, errors in async functions always crash the whole program"
+  - text: "These days, I changed a web server computer, with the same os: Ubuntu 22.04. But nodejs version update from v12.22.9 to v20.19.5 After I start nodejs web server as usual by:NODE_ENV=production node ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'node.js'": node.js
+  - link "yuexia_wrp's user avatar":
+    - img "yuexia_wrp's user avatar"
+  - link "yuexia_wrp"
+  - list:
+    - listitem: "354"
+  - time: asked 7 mins ago
+  - text: 0 votes 0 answers 21 views
+  - heading "find and display data from table in google sheets" [level=3]:
+    - link "find and display data from table in google sheets"
+  - text: I have a google sheet which displays bun claims for my store. In the photo attached I have cells on the right where I would like to be able to display data based on the month I type into the yellow ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'excel'": excel
+    - listitem:
+      - link "show questions tagged 'google-sheets'": google-sheets
+    - listitem:
+      - link "show questions tagged 'google-sheets-formula'": google-sheets-formula
+    - listitem:
+      - link "show questions tagged 'spreadsheet'": spreadsheet
+  - link "greg's user avatar":
+    - img "greg's user avatar"
+  - link "greg"
+  - list:
+    - listitem: "3"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Apple's app-site-association CDN returning 403 for S3 in EU (eu-west-1) region, but works in other regions" [level=3]:
+    - link "Apple's app-site-association CDN returning 403 for S3 in EU (eu-west-1) region, but works in other regions"
+  - text: "We are hosting apple-app-site-association files across multiple domains, in the US AWS regions it works fine, but for our EU-based domains (eu-west-1) it does not work. Setup: The apple-app-site-..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'amazon-s3'": amazon-s3
+    - listitem:
+      - link "show questions tagged 'apple-app-site-associate'": apple-app-site-associate
+  - link "Kalaschni's user avatar":
+    - img "Kalaschni's user avatar"
+  - link "Kalaschni"
+  - list:
+    - listitem: 2,448
+  - time: asked 16 mins ago
+  - text: 1 vote 1 answer 28 views
+  - heading "Nodejs backend endpoint not hitting consistently. Using nginx, ec2" [level=3]:
+    - link "Nodejs backend endpoint not hitting consistently. Using nginx, ec2"
+  - text: I have a game where people can draw and guess, similar to scribble.io. I'm using Nginx for load balancing, hosted on AWS, with a backend written in Node.js. The problem I'm encountering is that my ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'node.js'": node.js
+    - listitem:
+      - link "show questions tagged 'express'": express
+    - listitem:
+      - link "show questions tagged 'nginx'": nginx
+    - listitem:
+      - link "show questions tagged 'amazon-ec2'": amazon-ec2
+  - link "Ankit's user avatar":
+    - img "Ankit's user avatar"
+  - link "Ankit"
+  - list:
+    - listitem: 1,343
+  - time: asked 20 mins ago
+  - text: 0 votes 0 answers 26 views
+  - heading "How do I avoid the automatic session reset?" [level=3]:
+    - link "How do I avoid the automatic session reset?"
+  - text: I used below in configuration file, but still On Wednesday 00:00, session is broken ad re-started (FIX sequence number resets to 1). I use QucikFix in FIX Server mode. StartDay=wednesday EndDay=...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'quickfix'": quickfix
+  - link "aKumara's user avatar":
+    - img "aKumara's user avatar"
+  - link "aKumara"
+  - list:
+    - listitem: "401"
+  - time: asked 27 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "getting error while activating SAP HANA calculation view" [level=3]:
+    - link "getting error while activating SAP HANA calculation view"
+  - text: I am using 1 SAP HANA calculation view called A and that view i am using in B cal view.So in A ,i am putting filter in the bottom most graphical projection as DEL-IND!='Y',so after saving and ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'math'": math
+    - listitem:
+      - link "show questions tagged 'modeling'": modeling
+    - listitem:
+      - link "show questions tagged 'hana'": hana
+    - listitem:
+      - link "show questions tagged 'sap'": sap
+  - link "Chetan Pujar's user avatar":
+    - img "Chetan Pujar's user avatar"
+  - link "Chetan Pujar"
+  - list:
+    - listitem: "1"
+  - time: asked 29 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "How to remove non uniform background from image" [level=3]:
+    - link "How to remove non uniform background from image"
+  - text: "Receipt clip contains structured background: Tried to remove it using textcleaner ImageMagic wrapper script from Remove receipt image border using ImageMagick answer. Used code from answer How to use ..."
+  - list:
+    - listitem:
+      - link "show questions tagged '.net-core'": .net-core
+    - listitem:
+      - link "show questions tagged 'imagemagick'": imagemagick
+    - listitem:
+      - link "show questions tagged 'tesseract'": tesseract
+    - listitem:
+      - link "show questions tagged 'imagemagick-convert'": imagemagick-convert
+    - listitem:
+      - link "show questions tagged 'tesseract-5.x'": tesseract-5.x
+  - link "Andrus's user avatar":
+    - img "Andrus's user avatar"
+  - link "Andrus"
+  - list:
+    - listitem: 28.1k
+  - time: asked 31 mins ago
+  - text: 0 votes 0 answers 22 views
+  - heading "Unity Raycast not appearing/not functioning" [level=3]:
+    - link "Unity Raycast not appearing/not functioning"
+  - text: I'm super new to Unity, so this might be a dumb question, but my Raycast isn't appearing at all. using System.Collections; using System.Collections.Generic; using UnityEngine; public class ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'unity-game-engine'": unity-game-engine
+  - link "Temm Tem's user avatar":
+    - img "Temm Tem's user avatar"
+  - link "Temm Tem"
+  - list:
+    - listitem: "1"
+  - time: asked 45 mins ago
+  - text: "-2 votes 0 answers 25 views"
+  - heading "What is the best alternative to IceFaces for JSF projects with Spring 6 and Jakarta EE support? [closed]" [level=3]:
+    - link "What is the best alternative to IceFaces for JSF projects with Spring 6 and Jakarta EE support? [closed]"
+  - text: "We are currently using IceFaces in our JSF project. However, IceFaces does not support Spring 6 and the Jakarta namespace migration, so we are evaluating alternatives. Our requirements: Must be ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'spring'": spring
+    - listitem:
+      - link "show questions tagged 'jsf'": jsf
+    - listitem:
+      - link "show questions tagged 'icefaces'": icefaces
+  - link "KAml GautAm's user avatar":
+    - img "KAml GautAm's user avatar"
+  - link "KAml GautAm"
+  - list:
+    - listitem: "1"
+  - time: asked 50 mins ago
+  - text: "-1 votes 1 answer 34 views"
+  - heading "how to open links in a custom browser rather than default when we click on links from different apps [duplicate]" [level=3]:
+    - link "how to open links in a custom browser rather than default when we click on links from different apps [duplicate]"
+  - text: "how to open links in a custom browser rather than default when we click on links from different apps. eg: when i click on link from discord i need it to open in edge when i click on link from vscode i ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'windows'": windows
+  - link "Jishnu's user avatar":
+    - img "Jishnu's user avatar"
+  - link "Jishnu"
+  - list:
+    - listitem: "136"
+  - time: asked 58 mins ago
+  - text: "-1 votes 0 answers 29 views"
+  - heading "Azure Function App (Premium v3 P2V3),idle for 3 days, crashes when processing a new Event Hub message, causing the message to be lost and unprocessed [closed]" [level=3]:
+    - link "Azure Function App (Premium v3 P2V3),idle for 3 days, crashes when processing a new Event Hub message, causing the message to be lost and unprocessed [closed]"
+  - text: "I have an architecture where: Files are uploaded to Azure Storage. An Event Grid subscription captures the upload event and forwards it to an Event Hub. An Azure Function(Premium v3 P2V3), triggered ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'azure-functions'": azure-functions
+    - listitem:
+      - link "show questions tagged 'azure-storage'": azure-storage
+    - listitem:
+      - link "show questions tagged 'azure-eventhub'": azure-eventhub
+    - listitem:
+      - link "show questions tagged 'azure-eventgrid'": azure-eventgrid
+  - link "user3497702's user avatar":
+    - img "user3497702's user avatar"
+  - link "user3497702"
+  - list:
+    - listitem: "889"
+  - time: asked 1 hour ago
+  - text: "-2 votes 0 answers 19 views"
+  - heading "How to learn stacking lstm layers?" [level=3]:
+    - link "How to learn stacking lstm layers?"
+  - text: I would like to know how to particularly stack lstm layers, what to add afterwards, for eg. dropout, dense layer, setting return_sequences=True, etc. Most of the resources I have gone through just ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'machine-learning'": machine-learning
+    - listitem:
+      - link "show questions tagged 'deep-learning'": deep-learning
+    - listitem:
+      - link "show questions tagged 'lstm'": lstm
+    - listitem:
+      - link "show questions tagged 'recurrent-neural-network'": recurrent-neural-network
+    - listitem:
+      - link "show questions tagged 'bilstm'": bilstm
+  - link "user31457959's user avatar":
+    - img "user31457959's user avatar"
+  - link "user31457959"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: "-3 votes 0 answers 30 views"
+  - heading "Is there any way to solve 400 bad request error?" [level=3]:
+    - link "Is there any way to solve 400 bad request error?"
+  - text: "Receiving Invoke-RestMethod : 400 Bad Request Bad Request Your browser sent a request that this server could not understand. while trying to get sessionID for FortiManager using rest api calls(using ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'powershell'": powershell
+    - listitem:
+      - link "show questions tagged 'rest'": rest
+  - link "Geethika Aravapalli's user avatar":
+    - img "Geethika Aravapalli's user avatar"
+  - link "Geethika Aravapalli"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1613480"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Kotlin is more than just the Android house language"
+    - listitem:
+      - link "We built stackoverflow.ai with the community and for the community"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Community Asks Sprint Announcement - September 2025"
+    - listitem:
+      - link "stackoverflow.ai - rebuilt for attribution"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "New comment UI experiment graduation"
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 36k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 24k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "R Language" [level=1]:
+    - link "R Language"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where data scientists and AI researchers gather to find, share, and learn about R and other subtags like knitr and dplyr.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "How should I support an aluminum door threshold on a sloped surface?"
+    - listitem:
+      - link "A characterisation of absolute continuity"
+    - listitem:
+      - 'link "Why does `\\*` not show the multiplication sign \"×\" when using unicode-math with a math font?"'
+    - listitem:
+      - link "Is there any symbolic meaning of the elephant head of Lord Ganesa?"
+    - listitem:
+      - link "What type of data is data on the number of shark attacks in different regions as registered in ISAF from 2004-2013"
+    - listitem:
+      - link "Was the C64's \"Bytes Free\" message hard coded to show 38911 bytes?"
+    - listitem:
+      - link "Simulating exponential on a natural calculator"
+    - listitem:
+      - link "Is it God (Isaiah 40:28-29) or Christ (2 Corinthians 12:8-10) who gives strength and power to the believer?"
+    - listitem:
+      - link "What's the word for the common knowledge of a culture?"
+    - listitem:
+      - link "Mystery book in the world of The Stand"
+    - listitem:
+      - link "Pilot or TV movie about an \"Invisible Woman\""
+    - listitem:
+      - link "How to create a verticalline in Microsoft Word 2016?"
+    - listitem:
+      - link "Pointwise convergence of a sequence of iterations of a continuous function"
+    - listitem:
+      - link "Short Story. Scientist tries to protect the world. Sucessfully alters the laws of physics to prevent nuclear weapons from working"
+    - listitem:
+      - link "Context[\"x\"] returns different result in documentation and notebook"
+    - listitem:
+      - link "How does printing a union itself and not its member work in C?"
+    - listitem:
+      - link "Reversing vector order"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.9.9.33772
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
