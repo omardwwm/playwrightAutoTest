@@ -1,0 +1,553 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale US in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,202,421 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 23"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 6 views
+  - heading "How to apply Tailwind CSS class from a utils function?" [level=3]:
+    - link "How to apply Tailwind CSS class from a utils function?"
+  - text: I have a utils file where all my paths are defined inside it i want to define a folder called menu and want to give it a css what should be my approach how should i do it im just expecting the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'css'": css
+  - link "Anshika yadav's user avatar":
+    - img "Anshika yadav's user avatar"
+  - link "Anshika yadav"
+  - list:
+    - listitem: "1"
+  - time: asked 3 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "Unable to see MCP server and tool on Visual studio code" [level=3]:
+    - link "Unable to see MCP server and tool on Visual studio code"
+  - text: I added my own HTTP-based MCP server in Visual Studio Code. When I start this server, it's able to retrieve a bunch of tools. However, my server and tools are not listed on the Visual Studio Code ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'visual-studio-code'": visual-studio-code
+    - listitem:
+      - link "show questions tagged 'model-context-protocol'": model-context-protocol
+  - link "Sameer Kanikdale's user avatar":
+    - img "Sameer Kanikdale's user avatar"
+  - link "Sameer Kanikdale"
+  - list:
+    - listitem: "21"
+  - time: asked 9 mins ago
+  - text: 0 votes 0 answers 12 views
+  - 'heading "WinUI 3: Handling Barcode Scans When TextBox Focus Is Lost Without Breaking MS Certificate Signing" [level=3]':
+    - 'link "WinUI 3: Handling Barcode Scans When TextBox Focus Is Lost Without Breaking MS Certificate Signing"'
+  - text: "I'm developing a WinUI 3 application where I need to handle barcode scanner input. Currently, I'm facing two main issues: Lost scans – If the search box or product field does not have focus, the ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'input'": input
+    - listitem:
+      - link "show questions tagged 'barcode-scanner'": barcode-scanner
+    - listitem:
+      - link "show questions tagged 'winui-3'": winui-3
+    - listitem:
+      - link "show questions tagged 'keyboard-hook'": keyboard-hook
+  - link "Keerthika. B's user avatar":
+    - img "Keerthika. B's user avatar"
+  - link "Keerthika. B"
+  - list:
+    - listitem: "36"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "How to using same google account to validate TOTP Google Authenticator" [level=3]:
+    - link "How to using same google account to validate TOTP Google Authenticator"
+  - text: I tried to use QRCoder to generate QRCode for Google Authenticator to generate TOTP validation code. However, the code only work for first time scanning. When I login next time, I have to rescan the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'vb.net'": vb.net
+  - link "Matthew's user avatar":
+    - img "Matthew's user avatar"
+  - link "Matthew"
+  - list:
+    - listitem: "15"
+  - time: asked 18 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Remove push notification on kill app flutter" [level=3]:
+    - link "Remove push notification on kill app flutter"
+  - text: I want when i killed my app my push notification is not removing from notification tray in flutter app I want when i killed my app my push notification should be removed from notification tray in ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'push-notification'": push-notification
+  - link "Vinay Pratap's user avatar":
+    - img "Vinay Pratap's user avatar"
+  - link "Vinay Pratap"
+  - list:
+    - listitem: "1"
+  - time: asked 24 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "Wordpress get_posts() issue via ajax" [level=3]:
+    - link "Wordpress get_posts() issue via ajax"
+  - text: "I have the following issue: I run the following query: $interventii = get_posts( array( 'post_status' => 'publish', 'post_type' => '..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'ajax'": ajax
+    - listitem:
+      - link "show questions tagged 'wordpress'": wordpress
+  - link "MikeROAVI's user avatar":
+    - img "MikeROAVI's user avatar"
+  - link "MikeROAVI"
+  - list:
+    - listitem: "1"
+  - time: asked 27 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "User not found at one drive doc creation time" [level=3]:
+    - link "User not found at one drive doc creation time"
+  - text: "While executing this one drive doc creation call: https://graph.microsoft.com/v1.0/users/a@company.com/drive/root:/title.docx:/content?@microsoft.graph.conflictBehavior=rename we are getting {\"..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'azure-active-directory'": azure-active-directory
+    - listitem:
+      - link "show questions tagged 'microsoft-graph-api'": microsoft-graph-api
+    - listitem:
+      - link "show questions tagged 'office365'": office365
+    - listitem:
+      - link "show questions tagged 'onedrive'": onedrive
+  - link "codex's user avatar":
+    - img "codex's user avatar"
+  - link "codex"
+  - list:
+    - listitem: "19"
+  - time: asked 28 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "How to handle expired session during incoming VoIP call (iOS, Chime SDK)?" [level=3]:
+    - link "How to handle expired session during incoming VoIP call (iOS, Chime SDK)?"
+  - text: "I’m implementing VoIP calls on iOS using the Amazon Chime SDK with PushKit + CallKit. The flow works fine when the user is logged in and the session is valid. Scenario: User is logged in. App is in a ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'token'": token
+    - listitem:
+      - link "show questions tagged 'voip'": voip
+    - listitem:
+      - link "show questions tagged 'callkit'": callkit
+    - listitem:
+      - link "show questions tagged 'pushkit'": pushkit
+  - link "Vignesh's user avatar":
+    - img "Vignesh's user avatar"
+  - link "Vignesh"
+  - list:
+    - listitem: "644"
+  - time: asked 30 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "I got advance access but still saying verification is required" [level=3]:
+    - link "I got advance access but still saying verification is required"
+  - text: Recently I got advance access to a permission but still saying verification is required My business is verifed, Permission request is approved, What I'm missing? when I click on Verification Required ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'facebook'": facebook
+    - listitem:
+      - link "show questions tagged 'facebook-graph-api'": facebook-graph-api
+    - listitem:
+      - link "show questions tagged 'facebook-php-sdk'": facebook-php-sdk
+  - link "Sameer .'s user avatar":
+    - img "Sameer .'s user avatar"
+  - link "Sameer ."
+  - list:
+    - listitem: "1"
+  - time: asked 32 mins ago
+  - text: 0 votes 0 answers 17 views
+  - heading "How to initialise observed object that requires a parameter?" [level=3]:
+    - link "How to initialise observed object that requires a parameter?"
+  - text: I have an app which works as an example of the GUI I want for a screen of another app in the way it provides multiple options to select records which have a lot of fields. The problem I am having is ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'swiftui'": swiftui
+  - link "boristheslug's user avatar":
+    - img "boristheslug's user avatar"
+  - link "boristheslug"
+  - list:
+    - listitem: "47"
+  - time: asked 50 mins ago
+  - text: "-3 votes 0 answers 29 views"
+  - heading "How to test and automate java thick client application integrated with Web based application [closed]" [level=3]:
+    - link "How to test and automate java thick client application integrated with Web based application [closed]"
+  - text: Our web based application after providing login credentials and then region selection it launches a Java thick client application to perform some flow and its validations, so using which tool we can ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'swing'": swing
+    - listitem:
+      - link "show questions tagged 'testing'": testing
+    - listitem:
+      - link "show questions tagged 'automated-tests'": automated-tests
+    - listitem:
+      - link "show questions tagged 'cypress'": cypress
+  - link "Priyanka Rani's user avatar":
+    - img "Priyanka Rani's user avatar"
+  - link "Priyanka Rani"
+  - list:
+    - listitem: "1"
+  - time: asked 54 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "How do I rotate THREE.Group object(s) on click and drag?" [level=3]:
+    - link "How do I rotate THREE.Group object(s) on click and drag?"
+  - text: at the moment, I was trying to implement functionality for a project I’m working on, where clicking and dragging in a direction causes multiple THREE.Group objects to rotate in that same direction ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'three.js'": three.js
+  - link "Gift G.'s user avatar":
+    - img "Gift G.'s user avatar"
+  - link "Gift G."
+  - list:
+    - listitem: "57"
+  - time: asked 54 mins ago
+  - text: 0 votes 0 answers 10 views
+  - 'heading "Google Play Subscriptions: Does auto-renewal update the existing transaction or create a new one?" [level=3]':
+    - 'link "Google Play Subscriptions: Does auto-renewal update the existing transaction or create a new one?"'
+  - text: I'm working on a backend system to manage Google Play subscriptions and I have a question regarding the behavior of auto-renewing subscriptions upon renewal. When a user makes their initial purchase, ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'in-app-purchase'": in-app-purchase
+    - listitem:
+      - link "show questions tagged 'subscription'": subscription
+    - listitem:
+      - link "show questions tagged 'google-play-developer-api'": google-play-developer-api
+    - listitem:
+      - link "show questions tagged 'google-play-billing'": google-play-billing
+  - link "Toxic Prince's user avatar":
+    - img "Toxic Prince's user avatar"
+  - link "Toxic Prince"
+  - list:
+    - listitem: "25"
+  - time: asked 58 mins ago
+  - text: 0 votes 2 answers 28 views
+  - heading "JavaScript Regex to capture multiple occurances of a pattern" [level=3]:
+    - link "JavaScript Regex to capture multiple occurances of a pattern"
+  - text: "I am trying to parse a string like this: something[one][two] into ['something', 'one', 'two]`. There may be zero or more expressions in square brackets. The closest I have got to is: ^(.*?)(?:(?:\\[(.*..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'regex'": regex
+  - link "Manngo's user avatar":
+    - img "Manngo's user avatar"
+  - link "Manngo"
+  - list:
+    - listitem: 16.9k
+  - time: asked 1 hour ago
+  - text: 0 votes 1 answer 16 views
+  - heading "Custom jackson in reactive project is not useful" [level=3]:
+    - link "Custom jackson in reactive project is not useful"
+  - text: "Jackson config public class JacksonConfig { @Singleton @Produces ObjectMapper objectMapper(@All List<ObjectMapperCustomizer> customizers) { ObjectMapper mapper = JsonUtil...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'quarkus-native'": quarkus-native
+  - link "baozi's user avatar":
+    - img "baozi's user avatar"
+  - link "baozi"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1613495"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "We built stackoverflow.ai with the community and for the community"
+    - listitem:
+      - 'link "AI vs Gen Z: How AI has changed the career pathway for junior developers"'
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Community Asks Sprint Announcement - September 2025"
+    - listitem:
+      - link "stackoverflow.ai - rebuilt for attribution"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "New comment UI experiment graduation"
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 36k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 28k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 11k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Are all monotone Boolean functions weighted threshold functions?"
+    - listitem:
+      - link "(Recent?) Novel about million-year mission in a starship, crew rebels against AI?"
+    - listitem:
+      - link "On the semistable reduction theorem for elliptic curves"
+    - listitem:
+      - 'link "A Reflection on Plato’s Allegory of the Cave: Is the Sun Just a Larger Fire?"'
+    - listitem:
+      - link "Preventing meta communication in a massive multiplayer game"
+    - listitem:
+      - link "Is it possible to kill the vomiting ceiling bug in The Wormways?"
+    - listitem:
+      - link "What is the sci-fi story where an alien ship lands in a park and when opened (empty) takes over a man’s cat causing havoc in the world?"
+    - listitem:
+      - link "Higher extensions in triangulated categories with t-structure"
+    - listitem:
+      - link "Sampling from two distributions to determine which is which"
+    - listitem:
+      - link "Genesis 3:15, Does it refer to Jesus Christ?"
+    - listitem:
+      - 'link "Beamer: What else is possible besides blocks?"'
+    - listitem:
+      - link "Prove that there’s some citizen of the town who knows all the others."
+    - listitem:
+      - link "How much am I likely to get when my preferred stock reaches maturity?"
+    - listitem:
+      - link "Sci-fi story about sick telepathic alien hiding in a house basement"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.9.10.33833
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
