@@ -1,0 +1,561 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale GB in dev Einvironment and Realm europe
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,200,398 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 25"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 3 views
+  - heading "Accessing a struct member from what is not the same struct type" [level=3]:
+    - link "Accessing a struct member from what is not the same struct type"
+  - text: The code below looks crazy, because I am interested in finding out the limits of what’s possible, and it isn’t exactly what I’m doing in my real code. It compiles without warnings and works as ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c'": c
+    - listitem:
+      - link "show questions tagged 'pointers'": pointers
+    - listitem:
+      - link "show questions tagged 'struct'": struct
+    - listitem:
+      - link "show questions tagged 'undefined-behavior'": undefined-behavior
+  - link "njlarsson's user avatar":
+    - img "njlarsson's user avatar"
+  - link "njlarsson"
+  - list:
+    - listitem: 2,478
+  - time: asked 2 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Why did I fail to set up the QtCreator plugin copilot in macos" [level=3]:
+    - link "Why did I fail to set up the QtCreator plugin copilot in macos"
+  - text: First, I installed nvm and neovim on my mac using brew, and then I installed node using nvm. In first picture, I edited Node.js path and copilot.vim path in qtcreator, but sign In button is disable. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'qt-creator'": qt-creator
+    - listitem:
+      - link "show questions tagged 'neovim'": neovim
+    - listitem:
+      - link "show questions tagged 'github-copilot'": github-copilot
+  - link "g_geepp's user avatar":
+    - img "g_geepp's user avatar"
+  - link "g_geepp"
+  - list:
+    - listitem: "1"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 7 views
+  - 'heading "ESP32 SD card write error: errno 22 (Invalid argument) when using fopen" [level=3]':
+    - 'link "ESP32 SD card write error: errno 22 (Invalid argument) when using fopen"'
+  - text: "I am trying to write data to an SD card on an ESP32-WROOM. My function for file creation is: bool create_file(const char *file_path, const char *data) { if (!file_path || !data) { printf(&..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'filesystems'": filesystems
+    - listitem:
+      - link "show questions tagged 'esp32'": esp32
+    - listitem:
+      - link "show questions tagged 'spi'": spi
+    - listitem:
+      - link "show questions tagged 'sd-card'": sd-card
+  - link "mauli02k's user avatar":
+    - img "mauli02k's user avatar"
+  - link "mauli02k"
+  - list:
+    - listitem: "81"
+  - time: asked 16 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "by mistake disappled and freezed critical system packages like com.android.storagemanager now it bootlooping and adb says (device unauthorized)" [level=3]:
+    - link "by mistake disappled and freezed critical system packages like com.android.storagemanager now it bootlooping and adb says (device unauthorized)"
+  - text: i have Realme C3 and by mistake disappled and freeze system packages i use this loop to try to enable it when am on the boot-loop while true; do adb shell pm enable com.android.storagemanager; adb ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'bash'": bash
+    - listitem:
+      - link "show questions tagged 'adb'": adb
+    - listitem:
+      - link "show questions tagged 'bootloader'": bootloader
+  - link "Mr Dream's user avatar":
+    - img "Mr Dream's user avatar"
+  - link "Mr Dream"
+  - list:
+    - listitem: "136"
+  - time: asked 19 mins ago
+  - text: 1 vote 0 answers 15 views
+  - heading "How can I create a Control Page for my Esp32 devices?" [level=3]:
+    - link "How can I create a Control Page for my Esp32 devices?"
+  - text: I am working on a small IoT personal project with some esp32 powered devices. The devices are controlled with a web interface, and all have the same program inside, basically a multifunction timer ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'iot'": iot
+    - listitem:
+      - link "show questions tagged 'esp32'": esp32
+  - link "Stefano Bastianello's user avatar":
+    - img "Stefano Bastianello's user avatar"
+  - link "Stefano Bastianello"
+  - list:
+    - listitem: "11"
+  - time: asked 23 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "How to make a pseudo-element span full width of grid container but align with specific grid item in Tailwind CSS?" [level=3]:
+    - link "How to make a pseudo-element span full width of grid container but align with specific grid item in Tailwind CSS?"
+  - text: "I’m working on a grid layout using Tailwind CSS (v4.1). Visit this play snippet https://play.tailwindcss.com/cAvvS656Ts Here’s a minimal example: @utility border-line-1 { content: \"\"; width: 100vw;..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'tailwind-css'": tailwind-css
+    - listitem:
+      - link "show questions tagged 'tailwind-css-4'": tailwind-css-4
+  - link "DevWebTk's user avatar":
+    - img "DevWebTk's user avatar"
+  - link "DevWebTk"
+  - list:
+    - listitem: "375"
+  - time: asked 27 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "Ho to use Claude Antropic model in Google Vertex using Spring AI" [level=3]:
+    - link "Ho to use Claude Antropic model in Google Vertex using Spring AI"
+  - text: In my Spring AI project I want to use the Claude Anthropic model available in Google Vertex. The Spring AI documentation describes the configuration for Gemini spring.ai.vertex.ai.gemini.chat.options....
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'google-cloud-vertex-ai'": google-cloud-vertex-ai
+    - listitem:
+      - link "show questions tagged 'spring-ai'": spring-ai
+  - link "Gary Omg's user avatar":
+    - img "Gary Omg's user avatar"
+  - link "Gary Omg"
+  - list:
+    - listitem: "1"
+  - time: asked 33 mins ago
+  - text: "-5 votes 0 answers 19 views"
+  - heading "Tuple in python language [closed]" [level=3]:
+    - link "Tuple in python language [closed]"
+  - text: Write a python program that takes five strings from the user, stores them in a tuple and print the value at even places at the even indexes of the tuple I have already taken five input and I don't ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'tuples'": tuples
+  - link "Ritesh Kumar Singh's user avatar":
+    - img "Ritesh Kumar Singh's user avatar"
+  - link "Ritesh Kumar Singh"
+  - list:
+    - listitem: "1"
+  - time: asked 36 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "Apache local server javascript works but not linking a js-file" [level=3]:
+    - link "Apache local server javascript works but not linking a js-file"
+  - text: Running a apache2 server on ubuntu 25. The index file reads and executes js code in between script tags. However, if I replace the code with a link to a separate file (in server root folder, beside ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+  - link "Vidar Web's user avatar":
+    - img "Vidar Web's user avatar"
+  - link "Vidar Web"
+  - list:
+    - listitem: "1"
+  - time: asked 37 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "Flutter Custom Tabs - Firebase Auth with Microsoft Provider doesn't redirect back to the app" [level=3]:
+    - link "Flutter Custom Tabs - Firebase Auth with Microsoft Provider doesn't redirect back to the app"
+  - text: I have a problem where if the app (in debug mode) is either freshly opened or freshly installed. If I try to sign in with my provider, it opens the external browser (chrome for example) and it doesn't ...
+  - link
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'firebase'": firebase
+    - listitem:
+      - link "show questions tagged 'dart'": dart
+  - link "Astral's user avatar":
+    - img "Astral's user avatar"
+  - link "Astral"
+  - list:
+    - listitem: "1"
+  - time: asked 46 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "How to debug when Rigidbody2D has velocity but stays stuck in Unity 2D?" [level=3]:
+    - link "How to debug when Rigidbody2D has velocity but stays stuck in Unity 2D?"
+  - text: I am making a 2D RPG game in Unity 6.2 and I’m currently adding a wall jump feature. When I set the velocity, I can see from Debug.Log that the Rigidbody2D.linearVelocity is being updated correctly, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'unity-game-engine'": unity-game-engine
+    - listitem:
+      - link "show questions tagged 'physics'": physics
+    - listitem:
+      - link "show questions tagged 'rigid-bodies'": rigid-bodies
+    - listitem:
+      - link "show questions tagged 'unity2.0'": unity2.0
+  - link "Animesh Singh's user avatar":
+    - img "Animesh Singh's user avatar"
+  - link "Animesh Singh"
+  - list:
+    - listitem: "1"
+  - time: asked 47 mins ago
+  - text: "-1 votes 0 answers 8 views"
+  - heading "“How ERPNext Handles Accounting, Finance & Reporting — A Sigzen Perspective" [level=3]:
+    - link "“How ERPNext Handles Accounting, Finance & Reporting — A Sigzen Perspective"
+  - text: how ERPNext’s Accounting & Finance module manages core financial processes—such as real-time reporting, bank reconciliation, multi-currency handling, and automated journal entries. From Sigzen’s ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'integration'": integration
+    - listitem:
+      - link "show questions tagged 'reporting'": reporting
+    - listitem:
+      - link "show questions tagged 'finance'": finance
+    - listitem:
+      - link "show questions tagged 'accounting'": accounting
+    - listitem:
+      - link "show questions tagged 'erpnext'": erpnext
+  - link "ErpnextSolution's user avatar":
+    - img "ErpnextSolution's user avatar"
+  - link "ErpnextSolution"
+  - list:
+    - listitem: "1"
+  - time: asked 53 mins ago
+  - text: "-4 votes 0 answers 44 views"
+  - heading "Can someone explain me please , why am I getting different results [closed]" [level=3]:
+    - link "Can someone explain me please , why am I getting different results [closed]"
+  - text: I was trying to search the index of a substring "id" in the string = "Widget with id"which is at 12th position. But I am getting wrong result as '1'. Why ? enter image description ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+  - link "Sigma forever's user avatar":
+    - img "Sigma forever's user avatar"
+  - link "Sigma forever"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 24 views
+  - heading "Type invariance in generic class when callable is involved" [level=3]:
+    - link "Type invariance in generic class when callable is involved"
+  - text: "Why, in the following example, the type variable T in class E is invariant? class C: pass class D(C): pass class E[T: C = C]: def g(self, f: Callable[[], T]) -> T: return f() ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'python-typing'": python-typing
+  - link "alecov's user avatar":
+    - img "alecov's user avatar"
+  - link "alecov"
+  - list:
+    - listitem: 5,248
+  - time: asked 1 hour ago
+  - text: 0 votes 2 answers 24 views
+  - heading "How to create a SQL View in SQLModel?" [level=3]:
+    - link "How to create a SQL View in SQLModel?"
+  - text: "How can I create a view in SQLModel? For instance, starting from this example taken from the user guide, which creates a table for Hero and a table for Team, where a Team can contain multiple Heros: ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'sqlmodel'": sqlmodel
+  - link "robertspierre's user avatar":
+    - img "robertspierre's user avatar"
+  - link "robertspierre"
+  - list:
+    - listitem: 4,951
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1613360"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - 'link "AI vs Gen Z: How AI has changed the career pathway for junior developers"'
+    - listitem:
+      - link "Planning to Arm mobile devices with chips that handle AI"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Community Asks Sprint Announcement - September 2025"
+    - listitem:
+      - link "stackoverflow.ai - rebuilt for attribution"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "New and improved coding challenges"
+    - listitem:
+      - link "New comment UI experiment graduation"
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 36k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 21k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 11k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Eternal solutions to a parabolic equation vanishing at infinity"
+    - listitem:
+      - link "A joystick seen in the film “Ghosthouse” (1988)"
+    - listitem:
+      - link "Why don't people add confidence intervals on the p-values they report?"
+    - listitem:
+      - link "Are copies made by God-Eternal Kefnet cast from my hand for the purpose of Gale, Waterdeep Prodigy?"
+    - listitem:
+      - link "Apache httpd keeps rewriting VirtualHost on separate port to use HTTPS instead of HTTP"
+    - listitem:
+      - link "Genesis 2:19, How נֶפֶשׁ חַיָּה is translated?"
+    - listitem:
+      - link "What was the origin of ++ and --?"
+    - listitem:
+      - link "According to Chalcedonian Trinitarians, if Jesus retained omniscience then why does scripture state he increased in wisdom and learning?"
+    - listitem:
+      - link "How should one handle a flawed question in a textbook?"
+    - listitem:
+      - link "Infinitive in indirect speech instead of que"
+    - listitem:
+      - link "Constant anagram in PI"
+    - listitem:
+      - link "Fatal error when compiling xymatrix"
+    - listitem:
+      - link "How can I find all simple cycles in a multigraph with edge tags?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.9.12.33943
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
