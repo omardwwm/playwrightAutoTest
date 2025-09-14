@@ -1,0 +1,555 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale NZ in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,200,423 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 23"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 2 views
+  - heading "Is it possible to assign AutomationID to elements of an already assembled application?" [level=3]:
+    - link "Is it possible to assign AutomationID to elements of an already assembled application?"
+  - text: I have a compiled application that does not contain any AutomationIDs for its elements, and I do not have access to the source code for this application. Is it possible to assign AutomationIDs to ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'windows'": windows
+    - listitem:
+      - link "show questions tagged 'user-interface'": user-interface
+    - listitem:
+      - link "show questions tagged 'automation'": automation
+  - link "0Z0SK0's user avatar":
+    - img "0Z0SK0's user avatar"
+  - link "0Z0SK0"
+  - list:
+    - listitem: "25"
+  - time: asked 1 min ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Delete DBMS_CLRDBLINK in oracle 19c" [level=3]:
+    - link "Delete DBMS_CLRDBLINK in oracle 19c"
+  - text: How to delete this public db link DBMS_CLRDBLINK drop command is unable to find the db link while select query is showing db link exists
+  - list:
+    - listitem:
+      - link "show questions tagged 'database'": database
+    - listitem:
+      - link "show questions tagged 'hyperlink'": hyperlink
+  - link "Rohit Kumar's user avatar":
+    - img "Rohit Kumar's user avatar"
+  - link "Rohit Kumar"
+  - list:
+    - listitem: "45"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Wordpress (Woocommerce) Not Taking Mobile Payments" [level=3]:
+    - link "Wordpress (Woocommerce) Not Taking Mobile Payments"
+  - text: My wordpress site is taking payments on desktop but not mobile. I use the theme "Hello Elementor," WooCommerce, and take payments with Square. Might I ad I used Elementor as the theme ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'wordpress'": wordpress
+    - listitem:
+      - link "show questions tagged 'woocommerce'": woocommerce
+    - listitem:
+      - link "show questions tagged 'plugins'": plugins
+    - listitem:
+      - link "show questions tagged 'e-commerce'": e-commerce
+    - listitem:
+      - link "show questions tagged 'square'": square
+  - link "Samuel Okunato's user avatar":
+    - img "Samuel Okunato's user avatar"
+  - link "Samuel Okunato"
+  - list:
+    - listitem: "25"
+  - time: asked 8 mins ago
+  - text: "-1 votes 0 answers 12 views"
+  - heading "migrate the backup datas of Veeam ot other brands" [level=3]:
+    - link "migrate the backup datas of Veeam ot other brands"
+  - text: If switching to a new backup brand, how should Veeam's old backup data be handled? Can the backup data packages be directly used for restoration? thank you for your attentions, your answers will be ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'migration'": migration
+    - listitem:
+      - link "show questions tagged 'backup'": backup
+    - listitem:
+      - link "show questions tagged 'veeam'": veeam
+  - link "Anfook's user avatar":
+    - img "Anfook's user avatar"
+  - link "Anfook"
+  - list:
+    - listitem: "1"
+  - time: asked 16 mins ago
+  - text: "-1 votes 0 answers 8 views"
+  - heading "Apple's Official Linux virtualization app breaks" [level=3]:
+    - link "Apple's Official Linux virtualization app breaks"
+  - text: "So i installed an Xcode project from this: https://developer.apple.com/documentation/virtualization/running-gui-linux-in-a-virtual-machine-on-a-mac Basically, i wanted to run Linux VMs using Apple's ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'macos'": macos
+    - listitem:
+      - link "show questions tagged 'virtualization'": virtualization
+  - link "Kurok Chelik's user avatar":
+    - img "Kurok Chelik's user avatar"
+  - link "Kurok Chelik"
+  - list:
+    - listitem: "1"
+  - time: asked 20 mins ago
+  - text: "-1 votes 0 answers 13 views"
+  - heading "MailerSend failing to send email" [level=3]:
+    - link "MailerSend failing to send email"
+  - text: "I am trying to send an email using MailerSend. I am basing this off a README file in their GitHub repository. I have installed the library using. pip install mailersend Here's my script: from ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'email'": email
+    - listitem:
+      - link "show questions tagged 'mailersend'": mailersend
+  - link "siv.ncapayi's user avatar":
+    - img "siv.ncapayi's user avatar"
+  - link "siv.ncapayi"
+  - list:
+    - listitem: "1"
+  - time: asked 30 mins ago
+  - text: 0 votes 0 answers 20 views
+  - heading "Alternative approach to avoid Memory out of bounds exception" [level=3]:
+    - link "Alternative approach to avoid Memory out of bounds exception"
+  - text: I was wondering if there are any other approaches to avoid Memory out of bounds exception. Currently the code is written as await blob.DownloadToAsync(memoryStream) memorystream.position=0 Using ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'asp.net'": asp.net
+    - listitem:
+      - link "show questions tagged '.net'": .net
+  - link "reel Media's user avatar":
+    - img "reel Media's user avatar"
+  - link "reel Media"
+  - list:
+    - listitem: "21"
+  - time: asked 33 mins ago
+  - text: 0 votes 0 answers 21 views
+  - 'heading "Swift: text/string vs. raw bytes?" [level=3]':
+    - 'link "Swift: text/string vs. raw bytes?"'
+  - text: "I gave the following Swift-code to ChatGPT: let data = text.data(using: .utf8) It answered me: \"This line takes your string and turns it into raw bytes (data) that can be stored, sent over the ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'encoding'": encoding
+    - listitem:
+      - link "show questions tagged 'character-encoding'": character-encoding
+  - link "mewi's user avatar":
+    - img "mewi's user avatar"
+  - link "mewi"
+  - list:
+    - listitem: "731"
+  - time: asked 40 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "Svelte Store caching in development server?" [level=3]:
+    - link "Svelte Store caching in development server?"
+  - text: I'm using Vite and plain Svelte for an SPA App I'm currently developing. One thing I noticed and is bothering me so far is that svelte store is being cached sometimes even after reload. This isn't ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'vite'": vite
+    - listitem:
+      - link "show questions tagged 'svelte'": svelte
+    - listitem:
+      - link "show questions tagged 'svelte-store'": svelte-store
+  - link "Michael's user avatar":
+    - img "Michael's user avatar"
+  - link "Michael"
+  - list:
+    - listitem: "757"
+  - time: asked 47 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "EntityHistory not work for entities of my plugin in ASP.NET Zero" [level=3]:
+    - link "EntityHistory not work for entities of my plugin in ASP.NET Zero"
+  - text: "I am developing some APIs using Web.Host project of ASP.NET Zero as my startup project. I have created plugin projects same as projects of ASP.NET Zero, like this: My.Plugin.Core, My.Plugin.Core...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'aspnetzero'": aspnetzero
+  - link "Reza's user avatar":
+    - img "Reza's user avatar"
+  - link "Reza"
+  - list:
+    - listitem: "1"
+  - time: asked 48 mins ago
+  - text: "-7 votes 0 answers 27 views"
+  - heading "Crypto Expert for assets Recovery [closed]" [level=3]:
+    - link "Crypto Expert for assets Recovery [closed]"
+  - text: unfortunately I've been scammed by a platform called Coin GCT, my assets are $34,700 USD. This platform is requesting me to deposit %20 of my balance to withdraw which is absolutely scam. I have ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'security'": security
+    - listitem:
+      - link "show questions tagged 'blockchain'": blockchain
+    - listitem:
+      - link "show questions tagged 'bitcoin'": bitcoin
+    - listitem:
+      - link "show questions tagged 'cryptocurrency'": cryptocurrency
+  - link "David Sánchez's user avatar":
+    - img "David Sánchez's user avatar"
+  - link "David Sánchez"
+  - list:
+    - listitem: "1"
+  - time: asked 49 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "TextInput refs not working in React Native with Expo SDK 54 and React 19.1.0" [level=3]:
+    - link "TextInput refs not working in React Native with Expo SDK 54 and React 19.1.0"
+  - text: I'm experiencing an issue where TextInput refs are not being assigned in my React Native app using Expo SDK 54. The same ref pattern works perfectly in regular React web apps but returns null in React ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+    - listitem:
+      - link "show questions tagged 'react-hooks'": react-hooks
+  - link "Christian Lopez's user avatar":
+    - img "Christian Lopez's user avatar"
+  - link "Christian Lopez"
+  - list:
+    - listitem: "1"
+  - time: asked 50 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "How to bulk load CSV file in mySQL workbench without import wizard?" [level=3]:
+    - link "How to bulk load CSV file in mySQL workbench without import wizard?"
+  - text: I am trying to write a stored procedure to import CSV data from local system to mySQL tables. I do not want to use import wizard as I want SP to create, import and display time taken to import. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'mysql'": mysql
+    - listitem:
+      - link "show questions tagged 'csv'": csv
+    - listitem:
+      - link "show questions tagged 'import'": import
+    - listitem:
+      - link "show questions tagged 'mysql-workbench'": mysql-workbench
+    - listitem:
+      - link "show questions tagged 'restriction'": restriction
+  - link "Aparna's user avatar":
+    - img "Aparna's user avatar"
+  - link "Aparna"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 1 answer 26 views
+  - heading "Error rendering SizedBox, I tried Expanded, Flex, ad Flexible. Having problem with Parent Tree Structure" [level=3]:
+    - link "Error rendering SizedBox, I tried Expanded, Flex, ad Flexible. Having problem with Parent Tree Structure"
+  - text: I want this sizebox widget flexible. Error rendering SizedBox, I tried Expanded, Flex, ad Flexible. Having problem with Parent Tree Structure. Currently SizedBox has fixed size. But this is a mobile ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+  - link "GOKU's user avatar":
+    - img "GOKU's user avatar"
+  - link "GOKU"
+  - list:
+    - listitem: "656"
+  - time: asked 1 hour ago
+  - text: "-3 votes 0 answers 19 views"
+  - heading "Designing a simple multiple-choice exam system in Laravel – which package or script to use? [closed]" [level=3]:
+    - link "Designing a simple multiple-choice exam system in Laravel – which package or script to use? [closed]"
+  - text: "I want to build a simple online exam system with Laravel. My requirements are not very complex, basically: Create exams Add multiple-choice questions Store user answers and calculate the score I don’t ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'laravel'": laravel
+    - listitem:
+      - link "show questions tagged 'laravel-12'": laravel-12
+  - link "پارسا صابر's user avatar":
+    - img "پارسا صابر's user avatar"
+  - link "پارسا صابر"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1613362"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - 'link "AI vs Gen Z: How AI has changed the career pathway for junior developers"'
+    - listitem:
+      - link "Planning to Arm mobile devices with chips that handle AI"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Community Asks Sprint Announcement - September 2025"
+    - listitem:
+      - link "stackoverflow.ai - rebuilt for attribution"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "New and improved coding challenges"
+    - listitem:
+      - link "New comment UI experiment graduation"
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 65k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 28k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 21k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "In the novel Dune, why were atomics banned but shield + lasgun explosions weren't?"
+    - listitem:
+      - link "Genesis 2:19, How נֶפֶשׁ חַיָּה is translated?"
+    - listitem:
+      - link "pgfpolar-plot is shifted right"
+    - listitem:
+      - link "Why don't people add confidence intervals on the p-values they report? (E.g. from bootstrapping the sampling distribution of p-values)"
+    - listitem:
+      - link "How can referees verify computationally intensive results when HPC resources are required?"
+    - listitem:
+      - link "Is it normal for postdoc to write grant proposals for PI, but then is denied the opportunity to work on the projects later on?"
+    - listitem:
+      - link "A million and one constants"
+    - listitem:
+      - link "Liaison after verbs in the third person plural"
+    - listitem:
+      - link "Why don't military fighter jets have static wicks?"
+    - listitem:
+      - link "Which video game had the first \"summon supporter\" mechanic? (Summoning a \"sub character\" to fight)"
+    - listitem:
+      - link "For an electric pump rocket engine like the rutherford engine, is it possible to place the main valve upstream of the pump?"
+    - listitem:
+      - link "Mirror clipping doesn't join the pieces together"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.9.12.33943
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
