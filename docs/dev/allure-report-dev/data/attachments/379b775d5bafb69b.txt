@@ -1,0 +1,567 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale CA in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,201,515 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 25"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 4 views
+  - 'heading "Nightly Rust #[unsafe(naked)] function leads to undefined symbol linker error in --release mode on RISC-V" [level=3]':
+    - 'link "Nightly Rust #[unsafe(naked)] function leads to undefined symbol linker error in --release mode on RISC-V"'
+  - text: "I am writing a hobby OS kernel in Rust for the riscv64gc-unknown-none-elf target. I have defined my trap_entry, as a #[unsafe(naked)] function within a Rust module. When I compile in release mode (..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'rust'": rust
+    - listitem:
+      - link "show questions tagged 'operating-system'": operating-system
+    - listitem:
+      - link "show questions tagged 'linker-errors'": linker-errors
+    - listitem:
+      - link "show questions tagged 'riscv'": riscv
+    - listitem:
+      - link "show questions tagged 'osdev'": osdev
+  - link "陈嘉澪's user avatar":
+    - img "陈嘉澪's user avatar"
+  - link "陈嘉澪"
+  - list:
+    - listitem: "1"
+  - time: asked 2 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "How to migrate a Vue.js + Nuxt.js + Firebase application to use MySQL without losing data?" [level=3]:
+    - link "How to migrate a Vue.js + Nuxt.js + Firebase application to use MySQL without losing data?"
+  - text: I have a project built with Vue.js, Nuxt.js, TailwindCSS, and Firebase. Currently, the app works fine, but the client wants to move away from Firebase because of the payment. Instead, they want the ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'mysql'": mysql
+    - listitem:
+      - link "show questions tagged 'firebase'": firebase
+    - listitem:
+      - link "show questions tagged 'firebase-realtime-database'": firebase-realtime-database
+    - listitem:
+      - link "show questions tagged 'firebase-authentication'": firebase-authentication
+  - link "Dhanashika Bchain's user avatar":
+    - img "Dhanashika Bchain's user avatar"
+  - link "Dhanashika Bchain"
+  - list:
+    - listitem: "1"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "How to move dump() from the screen to the dev toolbar?" [level=3]:
+    - link "How to move dump() from the screen to the dev toolbar?"
+  - text: Standard basic dockware 6.7 installation, no strange plugins. The debug (or dev or smyfony...) toolbar is displayed, and I guess I have tried all the tipps that can be found on the internet, but I can'...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'dump'": dump
+    - listitem:
+      - link "show questions tagged 'shopware6'": shopware6
+  - link "user2511599's user avatar":
+    - img "user2511599's user avatar"
+  - link "user2511599"
+  - list:
+    - listitem: "852"
+  - time: asked 12 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "Content managment used in a web application" [level=3]:
+    - link "Content managment used in a web application"
+  - text: I have a requirement to keep all the files in one place (not a file system) and refer the links in the application. Application has DXF, PDF, DOCX, JPG and many more formats of the files about the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'file'": file
+    - listitem:
+      - link "show questions tagged 'content-management-system'": content-management-system
+  - link "mani vannan's user avatar":
+    - img "mani vannan's user avatar"
+  - link "mani vannan"
+  - list:
+    - listitem: "1"
+  - time: asked 12 mins ago
+  - text: "-5 votes 1 answer 23 views"
+  - heading "Where is JavaScript placed? [duplicate]" [level=3]:
+    - link "Where is JavaScript placed? [duplicate]"
+  - text: Where is JavaScript code usually placed in an HTML document? Should it go inside the <head>, at the end of the <body>, or in a separate .js file? I want to understand the proper place and ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'html'": html
+  - link "Faizan Ahmed's user avatar":
+    - img "Faizan Ahmed's user avatar"
+  - link "Faizan Ahmed"
+  - list:
+    - listitem: "1"
+  - time: asked 15 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "How can I configure vscode-copilot-chat so that its suggestion text automatically wraps?" [level=3]:
+    - link "How can I configure vscode-copilot-chat so that its suggestion text automatically wraps?"
+  - text: As shown in the picture, I have a long line, and copilot detects an error on this line. It gives a line of suggesstion text, but to long to display on a screen line. However, this line does not wrap ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'visual-studio-code'": visual-studio-code
+    - listitem:
+      - link "show questions tagged 'vscode-copilot'": vscode-copilot
+  - link "gaoqiang's user avatar":
+    - img "gaoqiang's user avatar"
+  - link "gaoqiang"
+  - list:
+    - listitem: "141"
+  - time: asked 16 mins ago
+  - text: 8 votes 0 answers 22 views
+  - 'heading "AssertionError: Number of scalers must be divisible by scaler block size, got 10000 scaler_block_size 256" [level=3]':
+    - 'link "AssertionError: Number of scalers must be divisible by scaler block size, got 10000 scaler_block_size 256"'
+  - text: "I'm trying to quantize my trained PyTorch model using TorchAO's NF4Tensor for memory-efficient inference. Here's the code I used: import torch import torch.nn as nn from torchao.dtypes.nf4tensor ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'pytorch'": pytorch
+    - listitem:
+      - link "show questions tagged 'large-language-model'": large-language-model
+    - listitem:
+      - link "show questions tagged 'quantization'": quantization
+  - link "Sefineh Tesfa's user avatar":
+    - img "Sefineh Tesfa's user avatar"
+  - link "Sefineh Tesfa"
+  - list:
+    - listitem: "13"
+  - time: asked 19 mins ago
+  - text: "-2 votes 0 answers 25 views"
+  - heading "How to correctly set up an Apple Developer Organization account for React Native app distribution [closed]" [level=3]:
+    - link "How to correctly set up an Apple Developer Organization account for React Native app distribution [closed]"
+  - text: I’m developing a React Native app and want to publish it on the App Store. Since my personal Apple Developer Program account is no longer active, I need to set up an organization account. What is the ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'xcode'": xcode
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+    - listitem:
+      - link "show questions tagged 'app-store'": app-store
+  - link "Jai Kasuri's user avatar":
+    - img "Jai Kasuri's user avatar"
+  - link "Jai Kasuri"
+  - list:
+    - listitem: "1"
+  - time: asked 22 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "ASP.NET Core MVC This localhost page can't be found when in edit" [level=3]:
+    - link "ASP.NET Core MVC This localhost page can't be found when in edit"
+  - text: This was working and now it's not, and I cannot work out what has happened. I have numerous models and all work except this one. They all have identical code. For the model in question, when ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'asp.net-mvc'": asp.net-mvc
+    - listitem:
+      - link "show questions tagged 'asp.net-core'": asp.net-core
+  - link "Sally Parkes's user avatar":
+    - img "Sally Parkes's user avatar"
+  - link "Sally Parkes"
+  - list:
+    - listitem: "155"
+  - time: asked 25 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "Dynamically generated export_name for extern C function?" [level=3]:
+    - link "Dynamically generated export_name for extern C function?"
+  - text: "I understand that I can give a function a static linker symbol name like this: // The linker symbol produced for this function will be named // \"foo_bar\", not \"asdf\" or some ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'rust'": rust
+    - listitem:
+      - link "show questions tagged 'rust-cargo'": rust-cargo
+    - listitem:
+      - link "show questions tagged 'linker-scripts'": linker-scripts
+    - listitem:
+      - link "show questions tagged 'symbol-table'": symbol-table
+  - link "Richard Hansen's user avatar":
+    - img "Richard Hansen's user avatar"
+  - link "Richard Hansen"
+  - list:
+    - listitem: 54.7k
+  - time: asked 26 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "Unable to mount netrc file during Docker build" [level=3]:
+    - link "Unable to mount netrc file during Docker build"
+  - text: I want to mount the .netrc file during docker build for credentials. However, I get a permissions error when I try to do this. Below are the minimal Dockerfile and command which reproduce the error. $ ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'docker'": docker
+    - listitem:
+      - link "show questions tagged 'docker-build'": docker-build
+    - listitem:
+      - link "show questions tagged 'docker-secrets'": docker-secrets
+  - link "Abhilash's user avatar":
+    - img "Abhilash's user avatar"
+  - link "Abhilash"
+  - list:
+    - listitem: "201"
+  - time: asked 28 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "Text Object Face Anomaly" [level=3]:
+    - link "Text Object Face Anomaly"
+  - text: "When I change the text object content, the front and back faces disappear. This is a standard text geometry: var geometry = new TextGeometry(project[n].object3D[no].name.toUpperCase(),{ ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'object'": object
+    - listitem:
+      - link "show questions tagged 'text'": text
+    - listitem:
+      - link "show questions tagged 'three.js'": three.js
+  - link "VILLMER's user avatar":
+    - img "VILLMER's user avatar"
+  - link "VILLMER"
+  - list:
+    - listitem: "1"
+  - time: asked 29 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "How to take a picture of user with the \"selfie webcam\" of device" [level=3]:
+    - link "How to take a picture of user with the \"selfie webcam\" of device"
+  - text: How to take a few pictures with the webcam from Delphi? Is there internal code for that or Win32 API? I need to take a photo with the selfie webcam that points to the user, not the another camera if ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'delphi'": delphi
+    - listitem:
+      - link "show questions tagged 'delphi-13-florence'": delphi-13-florence
+  - link "Tom's user avatar":
+    - img "Tom's user avatar"
+  - link "Tom"
+  - list:
+    - listitem: 6,747
+  - time: asked 29 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "Why is Fiddler Classic not capturing anything including from the hosts defined in Host section when I turn on Filter?" [level=3]:
+    - link "Why is Fiddler Classic not capturing anything including from the hosts defined in Host section when I turn on Filter?"
+  - text: I turned on Filter to capture traffic from a certain host e.g. reddit.com but I don't see anything. Instead, it seems to be removing traffic from there too. Below is the traffic when I turn on ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'fiddler'": fiddler
+  - link "John Evans Solachuk's user avatar":
+    - img "John Evans Solachuk's user avatar"
+  - link "John Evans Solachuk"
+  - list:
+    - listitem: 2,105
+  - time: asked 31 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "Setup NSubstitute return value complaints that I do not dispose the result of the mocked method" [level=3]:
+    - link "Setup NSubstitute return value complaints that I do not dispose the result of the mocked method"
+  - text: "I'm using NSubstitute to mock the creation of a HttpClient when calling IHttpClientFactory.CreateClient() in a .Net 8 Web Api. The code is as follows: httpClientFactory = Substitute.For<..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'unit-testing'": unit-testing
+    - listitem:
+      - link "show questions tagged '.net-8.0'": .net-8.0
+    - listitem:
+      - link "show questions tagged 'idisposable'": idisposable
+    - listitem:
+      - link "show questions tagged 'nsubstitute'": nsubstitute
+    - listitem:
+      - link "show questions tagged 'ca2000'": ca2000
+  - link "Rokke's user avatar":
+    - img "Rokke's user avatar"
+  - link "Rokke"
+  - list:
+    - listitem: "63"
+  - time: asked 34 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1613435"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Stack Overflow is helping you learn to code with new resources"
+    - listitem:
+      - link "Off with your CMS’s head! Composability and security in headless CMS"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Spevacus has joined us as a Community Manager"
+    - listitem:
+      - link "Introducing a new proactive anti-spam measure"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "New comment UI experiment graduation"
+    - listitem:
+      - link "New and improved coding challenges"
+  - text: Collectives
+  - link "see all"
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 28k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "R Language" [level=1]:
+    - link "R Language"
+  - text: 14k Members
+  - button "Join"
+  - text: A collective where data scientists and AI researchers gather to find, share, and learn about R and other subtags like knitr and dplyr.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 11k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "What are possible options to disembark for health issues if your airline keeps you on board at the tarmac for several hours?"
+    - listitem:
+      - link "Is it possible to follow the Buddha’s core teachings while rejecting supernatural beliefs like gods, ghosts, reincarnation, heaven and hell realms?"
+    - listitem:
+      - link "sqlservr.exe writing to System Volume Information folder"
+    - listitem:
+      - 'link "Sefer Recommendation: Hilchos Brachos"'
+    - listitem:
+      - link "Stirring an Alphabet Soup"
+    - listitem:
+      - link "Peg solitaire starting position"
+    - listitem:
+      - link "Feedback of -1 opamp"
+    - listitem:
+      - link "How to compare two directories and their subfolders for files that have partially matching names?"
+    - listitem:
+      - link "To what extent do we define an irreproducible result?"
+    - listitem:
+      - link "How does energy abundance affect materials science?"
+    - listitem:
+      - link "Why is ASCII punctuation in that order?"
+    - listitem:
+      - link "Ordinary insertion sort vs. straight insertion sort in Java (benchmark)"
+    - listitem:
+      - link "How to model a twisted vase geometry with vertical ridges using Geometry Nodes?"
+    - listitem:
+      - link "NTRU-HRSS definition of Lift"
+    - listitem:
+      - link "Prevent Overlapping Transparency On A Material"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.9.17.34093
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
