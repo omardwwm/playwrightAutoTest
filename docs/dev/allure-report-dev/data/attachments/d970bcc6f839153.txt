@@ -1,0 +1,597 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale DE in dev Einvironment and Realm europe
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,199,356 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 25"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 2 views
+  - heading "How do I perform file I/O on Linux and Windows without using libc in ASM?" [level=3]:
+    - link "How do I perform file I/O on Linux and Windows without using libc in ASM?"
+  - text: I need to use GAS ASM to do file I/O for both Linux and Windows for a game. I don't want to use .intel_syntax. I definitely don't like reading the docs for trunucating, opening, closing, writing, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'linux'": linux
+    - listitem:
+      - link "show questions tagged 'windows'": windows
+    - listitem:
+      - link "show questions tagged 'assembly'": assembly
+    - listitem:
+      - link "show questions tagged 'cross-platform'": cross-platform
+    - listitem:
+      - link "show questions tagged 'system-calls'": system-calls
+  - link "Jyle's user avatar":
+    - img "Jyle's user avatar"
+  - link "Jyle"
+  - list:
+    - listitem: "1"
+  - time: asked 43 secs ago
+  - text: 0 votes 0 answers 4 views
+  - heading "Firing a button when its container is about to be hidden" [level=3]:
+    - link "Firing a button when its container is about to be hidden"
+  - text: I’m building a simple menu with a collection of buttons. The first button toggles a class which is use show or hide the following div full of more buttons. That part works. The tricky part is closing ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'menu'": menu
+    - listitem:
+      - link "show questions tagged 'event-handling'": event-handling
+  - link "Manngo's user avatar":
+    - img "Manngo's user avatar"
+  - link "Manngo"
+  - list:
+    - listitem: 16.9k
+  - time: asked 3 mins ago
+  - text: 0 votes 1 answer 4 views
+  - heading "Why is AnyEvent slowing down or leaking memory?" [level=3]:
+    - link "Why is AnyEvent slowing down or leaking memory?"
+  - text: While writing a new Perl module which was capable of using AnyEvent, my benchmarking tests showed that it was slowing down dramatically over time. Turning off AnyEvent cured the problem, which ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'perl'": perl
+    - listitem:
+      - link "show questions tagged 'memory-leaks'": memory-leaks
+    - listitem:
+      - link "show questions tagged 'circular-reference'": circular-reference
+    - listitem:
+      - link "show questions tagged 'anyevent'": anyevent
+  - link "TFBW's user avatar":
+    - img "TFBW's user avatar"
+  - link "TFBW"
+  - list:
+    - listitem: 1,129
+  - time: asked 4 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "DynamoDB async query calling subscribed consumer after timeout" [level=3]:
+    - link "DynamoDB async query calling subscribed consumer after timeout"
+  - text: "TLDR: DynamoDB async query on GSI is returning duplicates when forcibly timing out the query request. I'm running performance tests on a solution built with CompletionStage and the non-blocking ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'amazon-dynamodb'": amazon-dynamodb
+    - listitem:
+      - link "show questions tagged 'dynamodb-queries'": dynamodb-queries
+    - listitem:
+      - link "show questions tagged 'amazon-dynamodb-index'": amazon-dynamodb-index
+  - link "Cristian's user avatar":
+    - img "Cristian's user avatar"
+  - link "Cristian"
+  - list:
+    - listitem: "501"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "I'm able to get the Quill delta content, but I cannot pass it to string through IJSRuntime.InvokeVoidAsync" [level=3]:
+    - link "I'm able to get the Quill delta content, but I cannot pass it to string through IJSRuntime.InvokeVoidAsync"
+  - text: "I can see the exact delta object through console.log(), but I am unable to convert its object data into a string. According to QuillJS documentation, which I'll quote: getContents Retrieves contents ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged 'blazor'": blazor
+    - listitem:
+      - link "show questions tagged 'quill'": quill
+    - listitem:
+      - link "show questions tagged '.net-9.0'": .net-9.0
+    - listitem:
+      - link "show questions tagged 'blazor-webapp'": blazor-webapp
+  - link "DevQt's user avatar":
+    - img "DevQt's user avatar"
+  - link "DevQt"
+  - list:
+    - listitem: 1,803
+  - time: asked 7 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "facial emotion classification model does nt work in real world but fits nicely on dataset" [level=3]:
+    - link "facial emotion classification model does nt work in real world but fits nicely on dataset"
+  - text: i want a good model which can detect emotion include ['happy', 'fear', 'surprise', 'Anger', 'Contempt', 'sad', 'disgust', 'neutral'] and also 'anxiety' but the problem is that even achieving 70-80% ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'performance'": performance
+    - listitem:
+      - link "show questions tagged 'machine-learning'": machine-learning
+    - listitem:
+      - link "show questions tagged 'deep-learning'": deep-learning
+    - listitem:
+      - link "show questions tagged 'computer-vision'": computer-vision
+    - listitem:
+      - link "show questions tagged 'image-classification'": image-classification
+  - link "rounak's user avatar":
+    - img "rounak's user avatar"
+  - link "rounak"
+  - list:
+    - listitem: "79"
+  - time: asked 8 mins ago
+  - text: 0 votes 1 answer 14 views
+  - heading "c++ mutex and memory barrier" [level=3]:
+    - link "c++ mutex and memory barrier"
+  - text: "class MyTest { void getter() { std::unique_lock lock(mutex); if (!set_) { cout << \"set already\" << endl; ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'mutex'": mutex
+    - listitem:
+      - link "show questions tagged 'race-condition'": race-condition
+  - link "SuperBald's user avatar":
+    - img "SuperBald's user avatar"
+  - link "SuperBald"
+  - list:
+    - listitem: "109"
+  - time: asked 16 mins ago
+  - text: "-1 votes 0 answers 13 views"
+  - heading "I cannot understand where i mistake. Please help me to solve" [level=3]:
+    - link "I cannot understand where i mistake. Please help me to solve"
+  - text: Please help me to solve the laravel problem.I waste time on nearly 20 min. I ann't catch up the problem. Please give answer and tell me why.It's laravel 12 login and logout problem where use ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'laravel'": laravel
+  - link "kazi siam's user avatar":
+    - img "kazi siam's user avatar"
+  - link "kazi siam"
+  - list:
+    - listitem: "1"
+  - time: asked 16 mins ago
+  - text: 0 votes 0 answers 6 views
+  - 'heading "RabbitMQ Error: \"PRECONDITION_FAILED - reply consumer cannot acknowledge\" Code: 406" [level=3]':
+    - 'link "RabbitMQ Error: \"PRECONDITION_FAILED - reply consumer cannot acknowledge\" Code: 406"'
+  - text: I'm trying to get a response from a webhook and send it to rabbitmq if it works, consume it with ack if not, with nack to repeat the webhook process for payments or document validations, but I'm not ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'node.js'": node.js
+    - listitem:
+      - link "show questions tagged 'rabbitmq'": rabbitmq
+    - listitem:
+      - link "show questions tagged 'nestjs'": nestjs
+    - listitem:
+      - link "show questions tagged 'webhooks'": webhooks
+  - link "John Maciel Holanda's user avatar":
+    - img "John Maciel Holanda's user avatar"
+  - link "John Maciel Holanda"
+  - list:
+    - listitem: "1"
+  - time: asked 26 mins ago
+  - text: 0 votes 1 answer 15 views
+  - heading "NullPointerException when adding elements to ArrayList in Java? [duplicate]" [level=3]:
+    - link "NullPointerException when adding elements to ArrayList in Java? [duplicate]"
+  - text: I am trying to build a simple simulation in Java that uses an ArrayList to keep track of active objects. However, when I attempt to add elements to the list, the program throws a NullPointerException. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'oop'": oop
+    - listitem:
+      - link "show questions tagged 'arraylist'": arraylist
+    - listitem:
+      - link "show questions tagged 'nullpointerexception'": nullpointerexception
+  - link "Shreya Chaudhari's user avatar":
+    - img "Shreya Chaudhari's user avatar"
+  - link "Shreya Chaudhari"
+  - list:
+    - listitem: "1"
+  - time: asked 30 mins ago
+  - text: 0 votes 0 answers 18 views
+  - heading "Flutter app targeting API level 35 still rejected by Play Store with \"App must target Android API level 33 or higher\" warning" [level=3]:
+    - link "Flutter app targeting API level 35 still rejected by Play Store with \"App must target Android API level 33 or higher\" warning"
+  - text: Flutter app targeting API level 35 still rejected by Play Store with "App must target Android API level 33 or higher" warning I am developing a Flutter application using Flutter SDK 3.32.0. ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'updates'": updates
+  - link "jay's user avatar":
+    - img "jay's user avatar"
+  - link "jay"
+  - list:
+    - listitem: "1"
+  - time: asked 47 mins ago
+  - text: "-1 votes 0 answers 28 views"
+  - 'heading "unsigned long disconnected:1; : why this code use unsigned long for 1bit" [level=3]':
+    - 'link "unsigned long disconnected:1; : why this code use unsigned long for 1bit"'
+  - text: "struct usb_skel { ... unsigned long disconnected:1; ... }; when i analize the usb driver code in linux to make custom usb driver, i can see \"unsigned long disconnected:1\" ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'c'": c
+    - listitem:
+      - link "show questions tagged 'linux'": linux
+    - listitem:
+      - link "show questions tagged 'kernel'": kernel
+  - link "const's user avatar":
+    - img "const's user avatar"
+  - link "const"
+  - list:
+    - listitem: "1"
+  - time: asked 51 mins ago
+  - text: 0 votes 2 answers 18 views
+  - heading "What's the recommended way to handle form validation in a Next.js checkout page?" [level=3]:
+    - link "What's the recommended way to handle form validation in a Next.js checkout page?"
+  - text: I'm building a checkout page for my mini E-commerce store using Next.js and Tailwind CSS. The form includes fields like name, email, shipping address, and payment method (simulated as "Cash on ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'next.js'": next.js
+    - listitem:
+      - link "show questions tagged 'tailwind-css'": tailwind-css
+    - listitem:
+      - link "show questions tagged 'formik'": formik
+    - listitem:
+      - link "show questions tagged 'react-hook-form'": react-hook-form
+    - listitem:
+      - link "show questions tagged 'formvalidation-plugin'": formvalidation-plugin
+  - link "T Naresh's user avatar":
+    - img "T Naresh's user avatar"
+  - link "T Naresh"
+  - list:
+    - listitem: "1"
+  - time: asked 51 mins ago
+  - text: 0 votes 1 answer 29 views
+  - heading "Why is Tailwind CSS breaking my existing CSS Code?" [level=3]:
+    - link "Why is Tailwind CSS breaking my existing CSS Code?"
+  - text: "Summary: Existing CSS code for setting an HTML element's width to 100% of viewport width fails when tailwindcss is added. For an element who's display is set to display: flex; the children being ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'responsive-design'": responsive-design
+    - listitem:
+      - link "show questions tagged 'tailwind-css'": tailwind-css
+  - link "Ishan Sathe's user avatar":
+    - img "Ishan Sathe's user avatar"
+  - link "Ishan Sathe"
+  - list:
+    - listitem: "31"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 16 views
+  - heading "How to convert cubemap to equirectangular projection JavaScript" [level=3]:
+    - link "How to convert cubemap to equirectangular projection JavaScript"
+  - text: I need to convert these six separate cubemap tiles to an equirectangular projection. I'm not familiar with THREE or anything, I just want to use these images with photo-sphere-viewer. function ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'three.js'": three.js
+    - listitem:
+      - link "show questions tagged '3d'": 3d
+    - listitem:
+      - link "show questions tagged 'photo'": photo
+  - link "Miro's user avatar":
+    - img "Miro's user avatar"
+  - link "Miro"
+  - list:
+    - listitem: "33"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1613291"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Stack Overflow is helping you learn to code with new resources"
+    - listitem:
+      - link "Off with your CMS’s head! Composability and security in headless CMS"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Spevacus has joined us as a Community Manager"
+    - listitem:
+      - link "Introducing a new proactive anti-spam measure"
+    - listitem:
+      - link "New comment UI experiment graduation"
+    - listitem:
+      - link "New and improved coding challenges"
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 36k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 25k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 21k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "How to end mob silencing? Targeted Canceling? Negative Votes require Feedback suggestion"
+    - listitem:
+      - link "How would a Callan-Rubakov based drive work?"
+    - listitem:
+      - link "Using Python Code as tool in QGIS"
+    - listitem:
+      - link "What was so bad about what Kimmel said about Charlie Kirk?"
+    - listitem:
+      - link "Analyzing test result using test statistic vs p-value?"
+    - listitem:
+      - link "Does every ultrafilter on real numbers contain a meager set?"
+    - listitem:
+      - link "How does energy abundance affect materials science?"
+    - listitem:
+      - link "Can I ask to postpone publication after acceptance?"
+    - listitem:
+      - link "What happens when a creature with the See Invisibility spell is blinded?"
+    - listitem:
+      - link "Why is my dryer tripping its breaker after a period of use?"
+    - listitem:
+      - link "Is there a way to name 1,4-dimethylcyclohexan-1-ol in a way that indicates the methyl groups must be cis?"
+    - listitem:
+      - link "Incorrect spath3 \"split at\" mehtod with a continued line?"
+    - listitem:
+      - link "Classifying Lie algebras over a finite field"
+    - listitem:
+      - 'link "Scalars, Vectors, Tensors: are they all?"'
+    - listitem:
+      - link "What is the legal ramification, if any, of this traffic sign in Sofia, Bulgaria?"
+    - listitem:
+      - link "Is the yeast used in chicken breading yeast or yeast extract"
+    - listitem:
+      - link "Mystery Canon EF adapter with two cables?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.9.19.34211
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
