@@ -1,0 +1,558 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale NZ in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,199,365 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 26"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 4 views
+  - heading "How to safely decompress gzip-encoded WebSocket messages in Python?" [level=3]:
+    - link "How to safely decompress gzip-encoded WebSocket messages in Python?"
+  - text: "I am receiving WebSocket messages from an exchange API, which are compressed using gzip. I’m trying to decompress the incoming binary data in Python, but occasionally I get errors like: zlib.error: ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'websocket'": websocket
+    - listitem:
+      - link "show questions tagged 'gzip'": gzip
+  - link "Naitik Mittal's user avatar":
+    - img "Naitik Mittal's user avatar"
+  - link "Naitik Mittal"
+  - list:
+    - listitem: "1"
+  - time: asked 3 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "How to replicate SMR from the SEER MP-SIR session" [level=3]:
+    - link "How to replicate SMR from the SEER MP-SIR session"
+  - text: I'm trying to replicate the standardized mortality ratios (SMRs) from the SEER's MP-SIR session for disease X. I've managed to obtain the same number of persons, events (all-cause mortality), and ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'r'": r
+    - listitem:
+      - link "show questions tagged 'statistics'": statistics
+    - listitem:
+      - link "show questions tagged 'methodology'": methodology
+  - link "Bryan's user avatar":
+    - img "Bryan's user avatar"
+  - link "Bryan"
+  - list:
+    - listitem: "109"
+  - time: asked 15 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "ESP32 with WiFiManager does not reconnect properly after first connection" [level=3]:
+    - link "ESP32 with WiFiManager does not reconnect properly after first connection"
+  - text: "I’m working on an ESP32 project that uses WiFiManager (https://github.com/tzapu/WiFiManager). The first connection works fine: when there are no saved credentials, the ESP32 starts an Access Point, I ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'esp32'": esp32
+    - listitem:
+      - link "show questions tagged 'arduino-esp32'": arduino-esp32
+    - listitem:
+      - link "show questions tagged 'wifimanager'": wifimanager
+    - listitem:
+      - link "show questions tagged 'lvgl'": lvgl
+  - link "nima's user avatar":
+    - img "nima's user avatar"
+  - link "nima"
+  - list:
+    - listitem: "13"
+  - time: asked 23 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "How to replace Replace a space character with a &#160; inside a xhtml file in an ePub (e-book)" [level=3]:
+    - link "How to replace Replace a space character with a &#160; inside a xhtml file in an ePub (e-book)"
+  - text: I am augmenting content of a book in ePub format. My task is to make all single-letter words not to hand at the end of a line in paragraphs (<p>) or header ('' to <h6>) elements. To do ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'laravel'": laravel
+    - listitem:
+      - link "show questions tagged 'parsing'": parsing
+  - link "Peter's user avatar":
+    - img "Peter's user avatar"
+  - link "Peter"
+  - list:
+    - listitem: 2,711
+  - time: asked 23 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Building AOSP for Pixel 9" [level=3]:
+    - link "Building AOSP for Pixel 9"
+  - text: I'm trying to build Android AOSP 15 for my pixel 9 device. I'm getting the below error when giving the lunch command bruce@uxtcium:/mnt/store/code/android-15.0.0_r36$ source build/envsetup.sh bruce@...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'pixel'": pixel
+    - listitem:
+      - link "show questions tagged 'android-source'": android-source
+  - link "Jacob Abraham's user avatar":
+    - img "Jacob Abraham's user avatar"
+  - link "Jacob Abraham"
+  - list:
+    - listitem: "944"
+  - time: asked 23 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "How to load DINOv3 weights with RoPE (rope_embed) into ViT models using absolute positional embedding (pos_embed)?" [level=3]:
+    - link "How to load DINOv3 weights with RoPE (rope_embed) into ViT models using absolute positional embedding (pos_embed)?"
+  - text: I have a DINOv3 weight file (.pth) that uses Rotary Position Embedding (rope_embed). However, all public ViT implementations (e.g., from timm library) use absolute positional embedding (pos_embed) by ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+  - link "sir humphrey688's user avatar":
+    - img "sir humphrey688's user avatar"
+  - link "sir humphrey688"
+  - list:
+    - listitem: "1"
+  - time: asked 23 mins ago
+  - text: 0 votes 0 answers 22 views
+  - heading "XValues code and Values code of Chart needs to be repaired" [level=3]:
+    - link "XValues code and Values code of Chart needs to be repaired"
+  - text: "Please run the following code: Sub Macro1() Sheets.Add After:=Sheets(Sheets.Count) ActiveSheet.Range(\"A1\").Value = \"Region\" ActiveSheet.Range(&..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'excel'": excel
+    - listitem:
+      - link "show questions tagged 'vba'": vba
+    - listitem:
+      - link "show questions tagged 'charts'": charts
+  - link "Michael Scofield's user avatar":
+    - img "Michael Scofield's user avatar"
+  - link "Michael Scofield"
+  - list:
+    - listitem: "121"
+  - time: asked 34 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Flask python generate a white web page" [level=3]:
+    - link "Flask python generate a white web page"
+  - text: "I'm trying a small start with flaks and web tools, but the html, css does not show in the page, just a blank page, I need an explanation please, I'm using VSCode, this is my code : Project structure : ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'flask'": flask
+  - link "Momo's user avatar":
+    - img "Momo's user avatar"
+  - link "Momo"
+  - list:
+    - listitem: "1"
+  - time: asked 34 mins ago
+  - text: "-1 votes 0 answers 6 views"
+  - heading "How to implement Micro-Frontends in Next.js now that Module Federation is deprecated?" [level=3]:
+    - link "How to implement Micro-Frontends in Next.js now that Module Federation is deprecated?"
+  - text: I’m trying to set up a micro-frontend architecture with Next.js. I saw that solutions using Webpack Module Federation were common before, but it seems like support is now deprecated or discouraged in ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'next.js'": next.js
+  - link "Aghsat front's user avatar":
+    - img "Aghsat front's user avatar"
+  - link "Aghsat front"
+  - list:
+    - listitem: "1"
+  - time: asked 35 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "How do I hide navigation buttons for a main slide in a series of PowerPoint slides until the viewer has viewed the all of the corresponding slides?" [level=3]:
+    - link "How do I hide navigation buttons for a main slide in a series of PowerPoint slides until the viewer has viewed the all of the corresponding slides?"
+  - text: "Short Summary: On the main slide (slide20), I want the user to click through all the examples - any order - (slides 21-24). I have navigation buttons on slide 20 that I want to stay hidden until the ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'vba'": vba
+    - listitem:
+      - link "show questions tagged 'powerpoint'": powerpoint
+    - listitem:
+      - link "show questions tagged 'powerpoint-2016'": powerpoint-2016
+  - link "user31527793's user avatar":
+    - img "user31527793's user avatar"
+  - link "user31527793"
+  - list:
+    - listitem: "1"
+  - time: asked 36 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "How does ECS Fargate's spread placement strategy tolerate AZ failure with 2 tasks vs 4 tasks?" [level=3]:
+    - link "How does ECS Fargate's spread placement strategy tolerate AZ failure with 2 tasks vs 4 tasks?"
+  - text: I'm trying to understand how the spread placement strategy in Amazon ECS (Fargate) behaves in practice when simulating an Availability Zone (AZ) failure. I’m running an ECS Fargate service with a ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'amazon-ecs'": amazon-ecs
+    - listitem:
+      - link "show questions tagged 'gremlin'": gremlin
+    - listitem:
+      - link "show questions tagged 'aws-fargate'": aws-fargate
+  - link "Aarti Nagdev's user avatar":
+    - img "Aarti Nagdev's user avatar"
+  - link "Aarti Nagdev"
+  - list:
+    - listitem: "1"
+  - time: asked 38 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "VBA RightClick on a selected region" [level=3]:
+    - link "VBA RightClick on a selected region"
+  - text: I am writing code in VBA for excel. I selected an area - let's say it is A1:E1. Now I am rightclicking in this selected area. Is there a way that VBA recognizes in which particular cell I rightclicked....
+  - list:
+    - listitem:
+      - link "show questions tagged 'vba'": vba
+    - listitem:
+      - link "show questions tagged 'right-click'": right-click
+  - link "Philippe Zivan Sussholz's user avatar":
+    - img "Philippe Zivan Sussholz's user avatar"
+  - link "Philippe Zivan Sussholz"
+  - list:
+    - listitem: "21"
+  - time: asked 39 mins ago
+  - text: "-1 votes 0 answers 11 views"
+  - heading "How to align top/bottom ServiceCards with RangeBar steps and connector lines?" [level=3]:
+    - link "How to align top/bottom ServiceCards with RangeBar steps and connector lines?"
+  - text: "I'm building a React component where I have: A horizontal RangeBar with multiple steps. ServiceCard components that need to be aligned with specific steps: Top row → odd-indexed ServiceCards Bottom ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'tailwind-css'": tailwind-css
+  - link "Naimur Rahman Naim's user avatar":
+    - img "Naimur Rahman Naim's user avatar"
+  - link "Naimur Rahman Naim"
+  - list:
+    - listitem: "1"
+  - time: asked 41 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "I am not able to get the login_hint or domain_hint from the b2c custom policy request (Non UI interactive mode.)" [level=3]:
+    - link "I am not able to get the login_hint or domain_hint from the b2c custom policy request (Non UI interactive mode.)"
+  - text: I am not able to get the login_hint or domain_hint from the b2c custom policy request. I have a UI application to capture email. Form the application I made request to custom policy with query ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'azure-ad-b2c-custom-policy'": azure-ad-b2c-custom-policy
+  - link "Senthil Kumar's user avatar":
+    - img "Senthil Kumar's user avatar"
+  - link "Senthil Kumar"
+  - list:
+    - listitem: "1"
+  - time: asked 43 mins ago
+  - text: 0 votes 0 answers 19 views
+  - heading "How to remove all text from inside html elements of certain types in a html file (in ePub)" [level=3]:
+    - link "How to remove all text from inside html elements of certain types in a html file (in ePub)"
+  - text: Situation My goal is to remove ALL text from a html file. The file is a part of an ePub (electronic book) Example input and output (It is a chapter of a novel, contained within a single xhtml file.) &...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'laravel'": laravel
+    - listitem:
+      - link "show questions tagged 'parsing'": parsing
+  - link "Peter's user avatar":
+    - img "Peter's user avatar"
+  - link "Peter"
+  - list:
+    - listitem: 2,711
+  - time: asked 47 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1613291"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Stack Overflow is helping you learn to code with new resources"
+    - listitem:
+      - link "Off with your CMS’s head! Composability and security in headless CMS"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Spevacus has joined us as a Community Manager"
+    - listitem:
+      - link "Introducing a new proactive anti-spam measure"
+    - listitem:
+      - link "New comment UI experiment graduation"
+    - listitem:
+      - link "New and improved coding challenges"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 25k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 16k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 11k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "How to completely disable Google Chrome page translate function?"
+    - listitem:
+      - link "What is this theorem in Egorov 1981?"
+    - listitem:
+      - link "Trilogy set on a very unusual human colony. According to the law, only a certain quota of scientists (perhaps 50) are allowed to live on the planet"
+    - listitem:
+      - link "What species of plum is this? (France, mid-September)"
+    - listitem:
+      - link "Why does temperature increase mass?"
+    - listitem:
+      - link "Historic mistake in sign of KdV equation"
+    - listitem:
+      - link "Are staggered rafters a problem?"
+    - listitem:
+      - link "Toilet seat positioning on thunder box"
+    - listitem:
+      - 'link "\"Saying who or what did the action would be clearer\": passive voice vs. active voice in a technical document/checklist?"'
+    - listitem:
+      - link "Alien invasion using plant soporific to render population unconscious, ruined by immune man"
+    - listitem:
+      - link "The Number on the Card"
+    - listitem:
+      - link "post hoc tests after running repeated measures ANOVA"
+    - listitem:
+      - link "How does energy abundance affect materials science?"
+    - listitem:
+      - link "How to typeset the complete structure of deeply nested formulas?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.9.19.34211
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
