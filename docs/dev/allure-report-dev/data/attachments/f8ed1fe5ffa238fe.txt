@@ -1,0 +1,557 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale NZ in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,199,805 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 24"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 3 views
+  - heading "How to nclude a file with shadow-cljs/inline, but preprocess it first?" [level=3]:
+    - link "How to nclude a file with shadow-cljs/inline, but preprocess it first?"
+  - text: Shadow-cljs has a resource loader that can include literal files into the Clojurescript code (ns app.my (:require [shadow.resource :as rc])) (rc/inline "file.txt") I need a macro that ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'clojure'": clojure
+    - listitem:
+      - link "show questions tagged 'macros'": macros
+    - listitem:
+      - link "show questions tagged 'lisp'": lisp
+    - listitem:
+      - link "show questions tagged 'clojurescript'": clojurescript
+    - listitem:
+      - link "show questions tagged 'shadow-cljs'": shadow-cljs
+  - link "user2649762's user avatar":
+    - img "user2649762's user avatar"
+  - link "user2649762"
+  - list:
+    - listitem: "581"
+  - time: asked 1 min ago
+  - text: 0 votes 0 answers 6 views
+  - heading "How do I find my websocket url of my domain?" [level=3]:
+    - link "How do I find my websocket url of my domain?"
+  - text: Is there any way to find my websocket url from my domain (e.g. example.com)? I have done some research on this and could not find anything. I do not know what to do next is there anyone willing to ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'websocket'": websocket
+  - link "gz200's user avatar":
+    - img "gz200's user avatar"
+  - link "gz200"
+  - list:
+    - listitem: "1"
+  - time: asked 4 mins ago
+  - text: "-1 votes 0 answers 7 views"
+  - heading "Si por error borre un archivo de Python en jupyter, pero le di en guardar como" [level=3]:
+    - link "Si por error borre un archivo de Python en jupyter, pero le di en guardar como"
+  - text: Llevaba una semana trabajando en un programa en Python jupyter, al terminar quería guardarlo y descargarlo pero accidentalmente le pique en "clóset AND shut down Notebook", cómo podría ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python-3.x'": python-3.x
+  - link "Uriel Montes Cruz's user avatar":
+    - img "Uriel Montes Cruz's user avatar"
+  - link "Uriel Montes Cruz"
+  - list:
+    - listitem: "1"
+  - time: asked 4 mins ago
+  - text: "-1 votes 0 answers 9 views"
+  - heading "OneDrive for Business - terminating employee access" [level=3]:
+    - link "OneDrive for Business - terminating employee access"
+  - text: I have a company which utilises OneDrive for Business through Office365. I have a couple of employees who work from home on their own personal computers. I need to put into place a process whereby if ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'office365'": office365
+    - listitem:
+      - link "show questions tagged 'ms-office'": ms-office
+    - listitem:
+      - link "show questions tagged 'onedrive'": onedrive
+  - link "DWE's user avatar":
+    - img "DWE's user avatar"
+  - link "DWE"
+  - list:
+    - listitem: "165"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 5 views
+  - 'heading "Why does Streamlit throw ImportError: cannot import name ''get_all_transactions_by_user'' from ''db'' even though the function exists?" [level=3]':
+    - 'link "Why does Streamlit throw ImportError: cannot import name ''get_all_transactions_by_user'' from ''db'' even though the function exists?"'
+  - text: I’m building a personal finance management app in Streamlit with multiple pages (dashboard.py, transactions.py, budget.py, export.py). I have a db.py file that contains all database functions, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'sqlite'": sqlite
+    - listitem:
+      - link "show questions tagged 'import'": import
+    - listitem:
+      - link "show questions tagged 'module'": module
+    - listitem:
+      - link "show questions tagged 'streamlit'": streamlit
+  - link "Srijan Roy's user avatar":
+    - img "Srijan Roy's user avatar"
+  - link "Srijan Roy"
+  - list:
+    - listitem: "1"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "MS SQL Server on M.2 NVMe SSD" [level=3]:
+    - link "MS SQL Server on M.2 NVMe SSD"
+  - text: Maybe somebody is willing to give some help. I have a web server. I thought the best way to give it a bit of extra guts, is to install a high-speed M.2 NVMe SSD. I used a PCI card. All goes well ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'sql'": sql
+    - listitem:
+      - link "show questions tagged 'sql-server'": sql-server
+    - listitem:
+      - link "show questions tagged 'nvme'": nvme
+  - link "Herman Badenhorst's user avatar":
+    - img "Herman Badenhorst's user avatar"
+  - link "Herman Badenhorst"
+  - list:
+    - listitem: "21"
+  - time: asked 7 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "Waveshare ESP32-S3 7\" LCD — SD Card + LVGL = Broken" [level=3]:
+    - link "Waveshare ESP32-S3 7\" LCD — SD Card + LVGL = Broken"
+  - text: "I'm using the Waveshare ESP32-S3 7\" LCD with GT911 touch and a built-in SPI SD card. The kit has fixed wiring for the display, touch, and SD, so I can't change the pin mapping. Here's the issue: *..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'esp32'": esp32
+    - listitem:
+      - link "show questions tagged 'touchscreen'": touchscreen
+    - listitem:
+      - link "show questions tagged 'esp-idf'": esp-idf
+  - link "amirre's user avatar":
+    - img "amirre's user avatar"
+  - link "amirre"
+  - list:
+    - listitem: "31"
+  - time: asked 8 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "React Native build fails after updating compileSdkVersion from 34 to 35 - Babel private methods error" [level=3]:
+    - link "React Native build fails after updating compileSdkVersion from 34 to 35 - Babel private methods error"
+  - text: "Question body: \"I'm trying to update my React Native project's compileSdkVersion from 34 to 35, but I'm encountering a Babel compilation error: Class private methods are not enabled. Please add `@..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+  - link "Siva_Stu's user avatar":
+    - img "Siva_Stu's user avatar"
+  - link "Siva_Stu"
+  - list:
+    - listitem: "29"
+  - time: asked 8 mins ago
+  - text: 1 vote 0 answers 6 views
+  - heading "git difftool report identical content?" [level=3]:
+    - link "git difftool report identical content?"
+  - text: "I often use the following command to compare git commits: git difftool -t meld --dir-diff 456e86fbe 040564acf Today, for the first time I experience that it did not start meld, did not say anything, ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'git'": git
+  - link "sdbbs's user avatar":
+    - img "sdbbs's user avatar"
+  - link "sdbbs"
+  - list:
+    - listitem: 5,800
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 8 views
+  - 'heading "How do I fix \"ImportError: cannot import name ''get_all_transactions_by_user'' from ''db''\" in Streamlit?" [level=3]':
+    - 'link "How do I fix \"ImportError: cannot import name ''get_all_transactions_by_user'' from ''db''\" in Streamlit?"'
+  - text: "I am building a Streamlit-based personal finance management app. In one of my pages, I get the following error: ImportError: cannot import name 'get_all_transactions_by_user' from 'db' I have db.py ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'sqlite'": sqlite
+    - listitem:
+      - link "show questions tagged 'import'": import
+    - listitem:
+      - link "show questions tagged 'streamlit'": streamlit
+  - link "Srijan Roy's user avatar":
+    - img "Srijan Roy's user avatar"
+  - link "Srijan Roy"
+  - list:
+    - listitem: "1"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 10 views
+  - heading "Why does HttpSendHttpResponse with CachePolicy not cache responses in HTTP.sys?" [level=3]:
+    - link "Why does HttpSendHttpResponse with CachePolicy not cache responses in HTTP.sys?"
+  - text: I am writing an HTTP server in Delphi on top of HTTP.sys. I want to let the kernel cache certain GET responses so they are served directly without my code seeing the request again. Here’s the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'windows'": windows
+    - listitem:
+      - link "show questions tagged 'winapi'": winapi
+    - listitem:
+      - link "show questions tagged 'iis'": iis
+    - listitem:
+      - link "show questions tagged 'http.sys'": http.sys
+    - listitem:
+      - link "show questions tagged 'httpsys'": httpsys
+  - link "zeus's user avatar":
+    - img "zeus's user avatar"
+  - link "zeus"
+  - list:
+    - listitem: 13.3k
+  - time: asked 12 mins ago
+  - text: 0 votes 0 answers 7 views
+  - 'heading "Nuxt 3 to 4 migration : will it fix memory issues?" [level=3]':
+    - 'link "Nuxt 3 to 4 migration : will it fix memory issues?"'
+  - text: I have a Nuxt 3 production app hosted on Scalingo (it's like Heroku but is a french company) I have so many container crashes because of memory issues when a lot of people are browsing the website. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'memory'": memory
+    - listitem:
+      - link "show questions tagged 'nuxt.js'": nuxt.js
+    - listitem:
+      - link "show questions tagged 'nuxt3.js'": nuxt3.js
+  - link "Sw0ut's user avatar":
+    - img "Sw0ut's user avatar"
+  - link "Sw0ut"
+  - list:
+    - listitem: "800"
+  - time: asked 15 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "Why can't successfully kmalloc pages in this case?" [level=3]:
+    - link "Why can't successfully kmalloc pages in this case?"
+  - text: "See the below logs, A critical kernel driver cannot apply for a large block of continuous memory and then panic: [29001.362425] kworker/u12:4: page allocation failure: order:4, mode:0x40dc0(GFP_KERNEL|..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'linux'": linux
+    - listitem:
+      - link "show questions tagged 'memory'": memory
+    - listitem:
+      - link "show questions tagged 'panic'": panic
+  - link "wonderzyp's user avatar":
+    - img "wonderzyp's user avatar"
+  - link "wonderzyp"
+  - list:
+    - listitem: "1"
+  - time: asked 15 mins ago
+  - text: "-2 votes 0 answers 19 views"
+  - heading "I am experiencing an issue in my React Native Expo app" [level=3]:
+    - link "I am experiencing an issue in my React Native Expo app"
+  - text: "When I scan the QR code using the Expo app, a blue screen appears on my device displaying the message: \"Something went wrong. Please try again later.\" I have confirmed that both my PC and ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+    - listitem:
+      - link "show questions tagged 'expo'": expo
+  - link "Gaurav jaiswal's user avatar":
+    - img "Gaurav jaiswal's user avatar"
+  - link "Gaurav jaiswal"
+  - list:
+    - listitem: "1"
+  - time: asked 22 mins ago
+  - text: "-1 votes 0 answers 7 views"
+  - heading "\"arm-linux-gnueabi-gcc\" not found when compiling rust c binds" [level=3]:
+    - link "\"arm-linux-gnueabi-gcc\" not found when compiling rust c binds"
+  - text: "Trying to fun some c binds i made in rust with \"cargo build --release --target arm-unknown-linux-gnueabi\" but im met with the error \"error occurred in cc-rs: failed to find tool \"..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c'": c
+    - listitem:
+      - link "show questions tagged 'rust'": rust
+    - listitem:
+      - link "show questions tagged 'bindgen'": bindgen
+    - listitem:
+      - link "show questions tagged 'arm-linux-gnueabi-g++'": arm-linux-gnueabi-g++
+  - link "jplo's user avatar":
+    - img "jplo's user avatar"
+  - link "jplo"
+  - list:
+    - listitem: "1"
+  - time: asked 22 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1613321"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Democratizing your data access with AI agents"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Spevacus has joined us as a Community Manager"
+    - listitem:
+      - link "Introducing a new proactive anti-spam measure"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "New comment UI experiment graduation"
+    - listitem:
+      - link "New and improved coding challenges"
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 36k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 16k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 11k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "front chain ring change while keeping existing derailleur"
+    - listitem:
+      - link "What is a closed condition?"
+    - listitem:
+      - link "Sound of 'c' in 'sac' in 'Le sac est blanc.'"
+    - listitem:
+      - link "Was Leonardo da Vinci recognized as an inventor during his lifetime, or mainly as an artist?"
+    - listitem:
+      - link "What is the average formula for interacting picture at positive temperature?"
+    - listitem:
+      - link "Solana program updating and upgrading"
+    - listitem:
+      - link "Practical implication of photo ID requirement for DB group tickets"
+    - listitem:
+      - link "Correct usage of \"resolution\" associated with \"high\" and \"low\""
+    - listitem:
+      - link "Need to determine the volume of sugar dissolved into water for simple syrup"
+    - listitem:
+      - link "Can I double-dip on Torbran's added damage in this scenario?"
+    - listitem:
+      - link "What spider is this. Found in Milwaukee WI"
+    - listitem:
+      - link "How can I draw this box in 3D ? I am unhappy with that I have"
+    - listitem:
+      - link "What is the practical impact of recognising Palestine as a state?"
+    - listitem:
+      - link "pam_mount results not available in pam_exec"
+    - listitem:
+      - link "What does 我都晕肉了 mean?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.9.22.34276
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
