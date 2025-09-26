@@ -1,0 +1,573 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale JP in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,200,210 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 22"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 6 views
+  - heading "C function does work when called and does turn led on or use uart" [level=3]:
+    - link "C function does work when called and does turn led on or use uart"
+  - text: Ok so I am making an OS kernel for an RP 2040 I have used microcontrollers before I actually have many of them, but I’ve never gone this low level only very few times so forgive me if my code is crap ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c'": c
+    - listitem:
+      - link "show questions tagged 'assembly'": assembly
+    - listitem:
+      - link "show questions tagged 'arm'": arm
+    - listitem:
+      - link "show questions tagged 'linker-scripts'": linker-scripts
+    - listitem:
+      - link "show questions tagged 'rp2040'": rp2040
+  - link "Mike's user avatar":
+    - img "Mike's user avatar"
+  - link "Mike"
+  - list:
+    - listitem: "13"
+  - time: asked 3 mins ago
+  - text: "-1 votes 0 answers 9 views"
+  - heading "how does CORS help if you are using CSRF token for protection" [level=3]:
+    - link "how does CORS help if you are using CSRF token for protection"
+  - text: well as far as i understand cors is to protect cross domain requests on browsers only however, as a side effect it protects from /get endpoint csrf by hiding responses from your server on not allowed ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'cors'": cors
+    - listitem:
+      - link "show questions tagged 'csrf'": csrf
+  - link "GOURAB MONDAL's user avatar":
+    - img "GOURAB MONDAL's user avatar"
+  - link "GOURAB MONDAL"
+  - list:
+    - listitem: "9"
+  - time: asked 6 mins ago
+  - text: "-1 votes 0 answers 10 views"
+  - heading "how do i create a sort function on a table?" [level=3]:
+    - link "how do i create a sort function on a table?"
+  - text: "The page is here for reference: https://songscape-helgasonpete.replit.app/artist/clarencewilliams.html I have two tables that are activated by hitting the two buttons. But I want to be able to sort ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'arrays'": arrays
+  - link "Pete Helgason's user avatar":
+    - img "Pete Helgason's user avatar"
+  - link "Pete Helgason"
+  - list:
+    - listitem: "1"
+  - time: asked 7 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Assign Independent Axis for different groups of Y-axis fields in the same layer" [level=3]:
+    - link "Assign Independent Axis for different groups of Y-axis fields in the same layer"
+  - text: "I am trying to build something like this: Grouped Shared Axis Example I want to assign an independent Y-axis to just a specific group of Y-axis fields in the same layer. But I cannot seem to make ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'vega-lite'": vega-lite
+    - listitem:
+      - link "show questions tagged 'vega'": vega
+    - listitem:
+      - link "show questions tagged 'vega-lite-api'": vega-lite-api
+    - listitem:
+      - link "show questions tagged 'vega-embed'": vega-embed
+  - link "VIKRANT Ramesh's user avatar":
+    - img "VIKRANT Ramesh's user avatar"
+  - link "VIKRANT Ramesh"
+  - list:
+    - listitem: "1"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 19 views
+  - heading "Issue with SwiftData inheritance (iOS 26)" [level=3]:
+    - link "Issue with SwiftData inheritance (iOS 26)"
+  - text: "Every time I insert a subclass (MYShapeLayer) into the model context, the app crashes with an error: DesignerPlayground crashed due to fatalError in BackingData.swift at line 908. Never access a full ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'swiftui'": swiftui
+    - listitem:
+      - link "show questions tagged 'swiftdata'": swiftdata
+  - link "Mohammed's user avatar":
+    - img "Mohammed's user avatar"
+  - link "Mohammed"
+  - list:
+    - listitem: 1,504
+  - time: asked 23 mins ago
+  - text: "-3 votes 0 answers 23 views"
+  - heading "Play Feature Delivery module installed but not listed in getInstalledModules() on Android 10 and below [closed]" [level=3]:
+    - link "Play Feature Delivery module installed but not listed in getInstalledModules() on Android 10 and below [closed]"
+  - text: "I have implemented Play Feature Delivery in my game (built with Cocos2dx). On Android 11, 12, 13, 14, and 15 everything works fine: the module downloads, status changes to INSTALLED, and ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'google-play'": google-play
+    - listitem:
+      - link "show questions tagged 'cocos2d-x'": cocos2d-x
+  - link "Bakwan's user avatar":
+    - img "Bakwan's user avatar"
+  - link "Bakwan"
+  - list:
+    - listitem: "1"
+  - time: asked 27 mins ago
+  - text: 0 votes 0 answers 19 views
+  - heading "Getting error while distribute app to firebase using Azure pipeline" [level=3]:
+    - link "Getting error while distribute app to firebase using Azure pipeline"
+  - text: "After iOS build pipeline in Azure pipeline, I am running 'Distribute app to firebase' task but it fails with below error ##[error]IPA file not found at /Users/runner/work/1/a/FinalIPA/ggg.ipa. ..."
+  - link
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'firebase'": firebase
+    - listitem:
+      - link "show questions tagged 'azure-devops'": azure-devops
+  - link "Salman's user avatar":
+    - img "Salman's user avatar"
+  - link "Salman"
+  - list:
+    - listitem: 1,993
+  - time: asked 33 mins ago
+  - text: 0 votes 0 answers 17 views
+  - heading "Why do these markers still appear, and what is the proper way to remove or hide them?" [level=3]:
+    - link "Why do these markers still appear, and what is the proper way to remove or hide them?"
+  - text: "I want to remove the marker in the screenshot below, I'm using lightning-tabset in LWC, and I see unwanted markers/dots in the tabs I’ve tried several CSS approaches to remove the markers, including: ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'salesforce-lightning'": salesforce-lightning
+    - listitem:
+      - link "show questions tagged 'lwc'": lwc
+  - link "Harsh Gangwar's user avatar":
+    - img "Harsh Gangwar's user avatar"
+  - link "Harsh Gangwar"
+  - list:
+    - listitem: "9"
+  - time: asked 33 mins ago
+  - text: 0 votes 0 answers 27 views
+  - heading "How can I extend a table vertically without affecting the content in CSS?" [level=3]:
+    - link "How can I extend a table vertically without affecting the content in CSS?"
+  - text: I am building a table with HTML, but I am having problems with the CSS. Initially, it appears that the height of the table is not proportional to what it should occupy on the screen (Initial table ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'dynamic-programming'": dynamic-programming
+  - link "SbordaDev's user avatar":
+    - img "SbordaDev's user avatar"
+  - link "SbordaDev"
+  - list:
+    - listitem: "1"
+  - time: asked 38 mins ago
+  - text: "-1 votes 0 answers 22 views"
+  - 'heading "View in WindowManager Flickers on Animated Height Change with `WRAP_CONTENT`" [level=3]':
+    - 'link "View in WindowManager Flickers on Animated Height Change with `WRAP_CONTENT`"'
+  - text: I am trying to create a system overlay using WindowManager. This overlay contains a ComposeView which, in turn, hosts a Composable that animates its height. My WindowManager.LayoutParams for the view'...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'android-jetpack-compose'": android-jetpack-compose
+    - listitem:
+      - link "show questions tagged 'android-view'": android-view
+    - listitem:
+      - link "show questions tagged 'android-custom-view'": android-custom-view
+    - listitem:
+      - link "show questions tagged 'android-windowmanager'": android-windowmanager
+  - link "Harsh Ranjan's user avatar":
+    - img "Harsh Ranjan's user avatar"
+  - link "Harsh Ranjan"
+  - list:
+    - listitem: "11"
+  - time: asked 41 mins ago
+  - text: 0 votes 0 answers 19 views
+  - heading "Slice direction of unconstrained std_logic_vector" [level=3]:
+    - link "Slice direction of unconstrained std_logic_vector"
+  - text: "I have a component with unconstrained std_logic_vector (ADDRA : in std_logic_vector). When I use this in a port map, I did this ADDRA(9 downto 0) => DpSysAddrTrunc(9 downto 0). I'm using Lattice, ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'vhdl'": vhdl
+  - link "maximus's user avatar":
+    - img "maximus's user avatar"
+  - link "maximus"
+  - list:
+    - listitem: "174"
+  - time: asked 50 mins ago
+  - text: "-3 votes 0 answers 38 views"
+  - heading "Unexpected GIT conlicts in a common situation [closed]" [level=3]:
+    - link "Unexpected GIT conlicts in a common situation [closed]"
+  - text: "Suppose we have branch A: develop <- A Then we need to start a separate feature, which needs A, before it is merged: develop <- A <- B Then we finish working on A and: rebase B onto A, so ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'git'": git
+    - listitem:
+      - link "show questions tagged 'rebase'": rebase
+  - link "noname7619's user avatar":
+    - img "noname7619's user avatar"
+  - link "noname7619"
+  - list:
+    - listitem: 3,828
+  - time: asked 58 mins ago
+  - text: "-2 votes 0 answers 41 views"
+  - heading "iOS 26 - Gradient in Liquid Glass effect [closed]" [level=3]:
+    - link "iOS 26 - Gradient in Liquid Glass effect [closed]"
+  - text: Some buttons in iOS 26, seem to use a gradient with Liquid Glass. However, using the .glassEffect, it's only possible to give a Color to tint the button. Is it possible to add a gradient to use a ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'swiftui'": swiftui
+    - listitem:
+      - link "show questions tagged 'ios26'": ios26
+    - listitem:
+      - link "show questions tagged 'liquid-glass'": liquid-glass
+  - link "Jorge Costa's user avatar":
+    - img "Jorge Costa's user avatar"
+  - link "Jorge Costa"
+  - list:
+    - listitem: "345"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 29 views
+  - heading "iOS 26 - How to make a Widget using Clear Liquid Glass as background?" [level=3]:
+    - link "iOS 26 - How to make a Widget using Clear Liquid Glass as background?"
+  - text: "The HomeKit and Battery Status widget in iOS 26 has a clear background. However, trying to manipulate the .containerBackground(for: .widget) using the .glassEffect doesn't work. Does Apple allow ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'swiftui'": swiftui
+    - listitem:
+      - link "show questions tagged 'widgetkit'": widgetkit
+    - listitem:
+      - link "show questions tagged 'ios26'": ios26
+  - link "Jorge Costa's user avatar":
+    - img "Jorge Costa's user avatar"
+  - link "Jorge Costa"
+  - list:
+    - listitem: "345"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 16 views
+  - heading "mongodb vector search, first query is taking much time" [level=3]:
+    - link "mongodb vector search, first query is taking much time"
+  - text: Query graph I am using mongodb atlas vector search. I am facing cold start issue. Whenever I use vector search for first time in a while, it takes much time (around 6-7 seconds). But after that , the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'mongodb'": mongodb
+    - listitem:
+      - link "show questions tagged 'vector'": vector
+    - listitem:
+      - link "show questions tagged 'mongodb-atlas'": mongodb-atlas
+    - listitem:
+      - link "show questions tagged 'vector-search'": vector-search
+  - link "Sudarshan Dhatrak's user avatar":
+    - img "Sudarshan Dhatrak's user avatar"
+  - link "Sudarshan Dhatrak"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1613348"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Democratizing your data access with AI agents"
+    - listitem:
+      - link "The history and future of software development (part 1)"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Spevacus has joined us as a Community Manager"
+    - listitem:
+      - link "Introducing a new proactive anti-spam measure"
+    - listitem:
+      - link "New and improved coding challenges"
+    - listitem:
+      - link "New comment UI experiment graduation"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 36k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 28k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 21k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Where was the Kenya sequence in The Crown Episode 1 filmed?"
+    - listitem:
+      - link "How to remove noise suppression from microphone on a laptop?"
+    - listitem:
+      - link "Changing size of math environments"
+    - listitem:
+      - link "Identifying voltage regulator on induction hob (marked FF 04)"
+    - listitem:
+      - link "Traveling by car on train in Germany"
+    - listitem:
+      - link "How to crack ECC using halving"
+    - listitem:
+      - link "Why weren’t Prince Philip’s sisters invited to his wedding to Princess Elizabeth?"
+    - listitem:
+      - link "Does pseudo-vitae revenants produce replenish vitae in Kindred?"
+    - listitem:
+      - link "What happened to all of the energy created at the Big Bang when the matter and antimatter annihilated each other?"
+    - listitem:
+      - link "Time traveler named Tom/John forgets device, Penelope Weschler, machine harvests Earth's spin"
+    - listitem:
+      - link "How Create a math symbol"
+    - listitem:
+      - link "Does logic disprove that Time exists?"
+    - listitem:
+      - link "Find non-trivial improvement after submitting"
+    - listitem:
+      - link "Stretch an elastic band around three nails so that it relaxes when any nail is removed"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.9.25.34480
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
