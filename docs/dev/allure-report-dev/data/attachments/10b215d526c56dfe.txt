@@ -1,0 +1,559 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale CA in dev Einvironment and Realm america
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,197,968 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 20"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 7 views
+  - heading "In Apple device management, how to send declaration class configuration, such as SoftwareUpdateSettings?" [level=3]:
+    - link "In Apple device management, how to send declaration class configuration, such as SoftwareUpdateSettings?"
+  - text: "Apple official document address: https://developer.apple.com/documentation/devicemanagement/softwareupdatesettings description: The official documentation provides a sample configuration description ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'iphone'": iphone
+    - listitem:
+      - link "show questions tagged 'mdm'": mdm
+  - link "yong.ma's user avatar":
+    - img "yong.ma's user avatar"
+  - link "yong.ma"
+  - list:
+    - listitem: "1"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "VsCode terminal issue in mac m1" [level=3]:
+    - link "VsCode terminal issue in mac m1"
+  - text: "/dev/fd/13:18: command not found: compdef , this is showing up in my vs code terminal in mac m1, how to resolve? I tried echo $SHELL and zsh-f and /bin/zsh -f : but nothing is happening also tried ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'macos'": macos
+    - listitem:
+      - link "show questions tagged 'terminal'": terminal
+    - listitem:
+      - link "show questions tagged 'zsh'": zsh
+  - link "Ayush chandel's user avatar":
+    - img "Ayush chandel's user avatar"
+  - link "Ayush chandel"
+  - list:
+    - listitem: "1"
+  - time: asked 8 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "How to generate SEO-friendly markup for a Discuz! forum to improve ranking?" [level=3]:
+    - link "How to generate SEO-friendly markup for a Discuz! forum to improve ranking?"
+  - text: I’m currently managing a Discuz-based forum website(text) and I’m trying to improve its visibility on search engines. I’ve already implemented some basic SEO strategies such as meta tags, sitemap ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'html'": html
+  - link "hank's user avatar":
+    - img "hank's user avatar"
+  - link "hank"
+  - list:
+    - listitem: "1"
+  - time: asked 19 mins ago
+  - text: 0 votes 0 answers 4 views
+  - heading "Rendering many overlapping points with tippecanoe" [level=3]:
+    - link "Rendering many overlapping points with tippecanoe"
+  - text: I am building tiles from geoJson file only made of points, and would like at the maximum zoom to be sure to include all points in the highest resolution zoom. However, I have overlapping points, which ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'maplibre-gl'": maplibre-gl
+    - listitem:
+      - link "show questions tagged 'tippecanoe'": tippecanoe
+  - link "leparc's user avatar":
+    - img "leparc's user avatar"
+  - link "leparc"
+  - list:
+    - listitem: "192"
+  - time: asked 22 mins ago
+  - text: 1 vote 0 answers 23 views
+  - heading "What is lazy copy in java? Someone please explain it with an example" [level=3]:
+    - link "What is lazy copy in java? Someone please explain it with an example"
+  - text: What is lazy copy in Java? I am confused about lazy copy in Java. When we have shallow and deep copies, then why do we need lazy copy? I tried to understand the difference between shallow copy and ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'oop'": oop
+  - link "Neeta Purohit's user avatar":
+    - img "Neeta Purohit's user avatar"
+  - link "Neeta Purohit"
+  - list:
+    - listitem: "11"
+  - time: asked 34 mins ago
+  - text: 0 votes 0 answers 13 views
+  - 'heading "GitLab on Ubuntu: Browser always redirects http://git.brian.dev to https://git.brian.dev" [level=3]':
+    - 'link "GitLab on Ubuntu: Browser always redirects http://git.brian.dev to https://git.brian.dev"'
+  - text: "I’m configuring a self-hosted GitLab server on my laptop (Ubuntu). My Wi-Fi IP is 192.168.x.x. I added this line in /etc/hosts: 192.168.x.x git.brian.dev In GitLab configuration (/etc/gitlab/gitlab...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'ubuntu'": ubuntu
+    - listitem:
+      - link "show questions tagged 'browser'": browser
+    - listitem:
+      - link "show questions tagged 'gitlab'": gitlab
+    - listitem:
+      - link "show questions tagged 'configuration'": configuration
+    - listitem:
+      - link "show questions tagged 'host'": host
+  - link "user24809983's user avatar":
+    - img "user24809983's user avatar"
+  - link "user24809983"
+  - list:
+    - listitem: "1"
+  - time: asked 39 mins ago
+  - text: 0 votes 0 answers 15 views
+  - 'heading "Performance Issues with DevExtreme Angular Components (v25.1): Inefficient Hover Class Manipulation on DOM Elements" [level=3]':
+    - 'link "Performance Issues with DevExtreme Angular Components (v25.1): Inefficient Hover Class Manipulation on DOM Elements"'
+  - text: "Angular version: 20 DevExtreme version: 25.1.3 Browser(s) affected: Chrome 120+, Firefox 119+ Platform: Web (no specific framework beyond Angular) I'm experiencing significant performance bottlenecks ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'angular'": angular
+    - listitem:
+      - link "show questions tagged 'typescript'": typescript
+    - listitem:
+      - link "show questions tagged 'devexpress'": devexpress
+    - listitem:
+      - link "show questions tagged 'devextreme'": devextreme
+  - link "engboustani's user avatar":
+    - img "engboustani's user avatar"
+  - link "engboustani"
+  - list:
+    - listitem: "1"
+  - time: asked 43 mins ago
+  - text: "-1 votes 0 answers 22 views"
+  - heading "Any good sources/course/tutorials to learn Numpy [closed]" [level=3]:
+    - link "Any good sources/course/tutorials to learn Numpy [closed]"
+  - text: Please help me find a good tutorial or a course for NumPy. I am very new to this, though I have basic programming skills. I tried finding tutorials, but I am unsure which one to start with. Some are ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'numpy'": numpy
+  - link "Ankan Chatterjee's user avatar":
+    - img "Ankan Chatterjee's user avatar"
+  - link "Ankan Chatterjee"
+  - list:
+    - listitem: "1"
+  - time: asked 45 mins ago
+  - text: 0 votes 0 answers 13 views
+  - heading "AEM forms add a row between two existing rows" [level=3]:
+    - link "AEM forms add a row between two existing rows"
+  - text: "The below form calc script stops after first iteration. Following lines not perform: // Uncheck the checkbox of the inserted row // Update row count after insertion // Skip to the next row after ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'forms'": forms
+    - listitem:
+      - link "show questions tagged 'aem'": aem
+  - link "Krm Ynk's user avatar":
+    - img "Krm Ynk's user avatar"
+  - link "Krm Ynk"
+  - list:
+    - listitem: "1"
+  - time: asked 47 mins ago
+  - text: 0 votes 1 answer 20 views
+  - heading "Axes bug fix in Unity 3D" [level=3]:
+    - link "Axes bug fix in Unity 3D"
+  - text: You can see that the player rig has the axes bug not the prefab I have added 0.5 to the current position I was doing a unity course(Game Dev.Tv) and I happen to know that my Z axis is not correct. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'unity-game-engine'": unity-game-engine
+  - link "Akshat Mittal's user avatar":
+    - img "Akshat Mittal's user avatar"
+  - link "Akshat Mittal"
+  - list:
+    - listitem: "1"
+  - time: asked 54 mins ago
+  - text: 0 votes 0 answers 18 views
+  - heading "How to add a toolbar item or button when the searchbar is open like the files app in IOS 26?" [level=3]:
+    - link "How to add a toolbar item or button when the searchbar is open like the files app in IOS 26?"
+  - text: "Like in the image, when the search area is open, a button appears. How can I do this . var body: some View { NavigationStack { VStack(spacing: 0) { ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'swiftui'": swiftui
+    - listitem:
+      - link "show questions tagged 'swift3'": swift3
+    - listitem:
+      - link "show questions tagged 'searchable'": searchable
+    - listitem:
+      - link "show questions tagged 'ios26'": ios26
+  - link "Hafizur Rahman's user avatar":
+    - img "Hafizur Rahman's user avatar"
+  - link "Hafizur Rahman"
+  - list:
+    - listitem: "41"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 17 views
+  - 'heading "OptaPlanner: Solver Config XML does not exist as a classpath resource" [level=3]':
+    - 'link "OptaPlanner: Solver Config XML does not exist as a classpath resource"'
+  - text: "I have a weird error in my project where the Solver Config XML file is not found even though it is 100% there. When this line gets executed: SolverFactory<ExamScheduleSolution> solverFactory = ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'optaplanner'": optaplanner
+  - link "iTurki's user avatar":
+    - img "iTurki's user avatar"
+  - link "iTurki"
+  - list:
+    - listitem: 16.4k
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 13 views
+  - heading "\"HiveServer2 fails to start on Windows due to Unable to create directory file:\\C:\\hive\\tmp\\resources despite correct hive-site.xml configuration\"" [level=3]:
+    - link "\"HiveServer2 fails to start on Windows due to Unable to create directory file:\\C:\\hive\\tmp\\resources despite correct hive-site.xml configuration\""
+  - text: "Body I am setting up Apache Hive 3.1.2 on Windows 11 (64-bit) with Hadoop 3.3.x and MySQL 9.4 as the metastore. Java: OpenJDK 1.8.0_401 (64-bit, HotSpot) MySQL Connector/J: mysql-connector-j-9.4.0.jar ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'mysql'": mysql
+    - listitem:
+      - link "show questions tagged 'apache-spark'": apache-spark
+    - listitem:
+      - link "show questions tagged 'hadoop'": hadoop
+    - listitem:
+      - link "show questions tagged 'hive'": hive
+  - link "user31562336's user avatar":
+    - img "user31562336's user avatar"
+  - link "user31562336"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 2 answers 26 views
+  - heading "PostgreSql Database Design" [level=3]:
+    - link "PostgreSql Database Design"
+  - text: While designing social media application, i want my my users to have unique email and unique username, but the problem is, I am providing an otp verification and my table have coulmn id int primary ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'database'": database
+    - listitem:
+      - link "show questions tagged 'postgresql'": postgresql
+    - listitem:
+      - link "show questions tagged 'go'": go
+    - listitem:
+      - link "show questions tagged 'go-gorm'": go-gorm
+    - listitem:
+      - link "show questions tagged 'go-gin'": go-gin
+  - link "Ansal's user avatar":
+    - img "Ansal's user avatar"
+  - link "Ansal"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 1 answer 19 views
+  - heading "How come this site can autoplay MP3 in any browsers?" [level=3]:
+    - link "How come this site can autoplay MP3 in any browsers?"
+  - text: This website really can autoplay mp3 automatically in firefox and other browsers. Not like others code, which failed in firefox. The mp3 is not autoplayed at the landing page. But as I click the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'web'": web
+    - listitem:
+      - link "show questions tagged 'audio'": audio
+    - listitem:
+      - link "show questions tagged 'autoplay'": autoplay
+  - link "Hendri Gunawan's user avatar":
+    - img "Hendri Gunawan's user avatar"
+  - link "Hendri Gunawan"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1613198"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "The history and future of software development (part 1)"
+    - listitem:
+      - link "Getting Backstage in front of a shifting dev experience"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Spevacus has joined us as a Community Manager"
+    - listitem:
+      - link "Introducing a new proactive anti-spam measure"
+    - listitem:
+      - link "New and improved coding challenges"
+    - listitem:
+      - link "New comment UI experiment graduation"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 65k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 28k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "PHP" [level=1]:
+    - link "PHP"
+  - text: 16k Members
+  - button "Join"
+  - text: A collective where developers working with PHP can learn and connect about the open source scripting language.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "How to use cursed items without upsetting the player?"
+    - listitem:
+      - link "Does clipping distortion affect the information contained within a frequency-modulated signal?"
+    - listitem:
+      - link "Another way to draw RegionDifference of a cylinder and Cuboid"
+    - listitem:
+      - link "Best solution to prevent loop between tables for granular relations"
+    - listitem:
+      - link "Riffle a list of binary functions into list of arguments to produce a result"
+    - listitem:
+      - link "Proving a certain Cantor cube is a complete metric space (by definition) - proof verification"
+    - listitem:
+      - link "Can a state ever, under any circumstance, execute an ICC arrest warrant in international waters?"
+    - listitem:
+      - link "ICC in Hague not prosecuting an individual brought before them in a questionable manner?"
+    - listitem:
+      - link "Is it ok to place components \"inside\" the PCB"
+    - listitem:
+      - link "Why is the definite article used in “Mi deporte favorito es el fútbol”?"
+    - listitem:
+      - link "Numbers Interpreted in Smallest Valid Base"
+    - listitem:
+      - link "Is this commentary on the Greek of Mark 1:19-20 accurate?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.9.26.34547
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: .
+    - button "Accept all cookies"
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
