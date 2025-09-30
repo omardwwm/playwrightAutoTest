@@ -1,0 +1,543 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale NZ in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Join Stack Overflow' })
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Teams
+      - paragraph: Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+      - link "Try Teams for free"
+      - link "Explore Teams"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,198,298 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 17"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 3 views
+  - heading "How can I include the file name (or origin) where a function is executed?" [level=3]:
+    - link "How can I include the file name (or origin) where a function is executed?"
+  - text: I have event bus for mFEs and i want to add filename to each dispatched object to know from where dispatched event comes. i have solution which looks ugly, in dispatch function every time create Error ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'typescript'": typescript
+  - link "Gregster's user avatar":
+    - img "Gregster's user avatar"
+  - link "Gregster"
+  - list:
+    - listitem: "69"
+  - time: asked 1 min ago
+  - text: 0 votes 0 answers 3 views
+  - heading "AWS Autoscaling Group Mixed Instance Priority. On-Demand and Spot" [level=3]:
+    - link "AWS Autoscaling Group Mixed Instance Priority. On-Demand and Spot"
+  - text: I'm using Terragrunt to build my Autoscaling Group. I'm using a Mixed Instance Policy. I'm setting the on_demand_base_capacity to 1 (So there is at least 1 on-demand instance) I'm setting the ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'amazon-web-services'": amazon-web-services
+    - listitem:
+      - link "show questions tagged 'aws-auto-scaling'": aws-auto-scaling
+    - listitem:
+      - link "show questions tagged 'launch-template'": launch-template
+  - link "Wasca's user avatar":
+    - img "Wasca's user avatar"
+  - link "Wasca"
+  - list:
+    - listitem: "1"
+  - time: asked 1 min ago
+  - text: 0 votes 0 answers 3 views
+  - heading "Why does downloading CAMS data sometimesis is slow?" [level=3]:
+    - link "Why does downloading CAMS data sometimesis is slow?"
+  - text: I have an operational workflow that downloads daily CAMS data (on Rocky Linux). Normally, the job has been completed within 2.5–3 hours. However, on some days every month, the download is extremely ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'linux'": linux
+    - listitem:
+      - link "show questions tagged 'lftp'": lftp
+  - link "Dimitris Tsiaousidis's user avatar":
+    - img "Dimitris Tsiaousidis's user avatar"
+  - link "Dimitris Tsiaousidis"
+  - list:
+    - listitem: "96"
+  - time: asked 3 mins ago
+  - text: "-1 votes 0 answers 6 views"
+  - heading "How do do Litestream restore with Kamal in ServiceStack" [level=3]:
+    - link "How do do Litestream restore with Kamal in ServiceStack"
+  - text: This Service Stack article explains how to implement Litestream for replication and restoration of the SQLite db. Specifically, it uses the "depends_on" feature of docker-compose to ensure ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'servicestack'": servicestack
+    - listitem:
+      - link "show questions tagged 'kamal'": kamal
+  - link "Shawn de Wet's user avatar":
+    - img "Shawn de Wet's user avatar"
+  - link "Shawn de Wet"
+  - list:
+    - listitem: 6,064
+  - time: asked 4 mins ago
+  - text: 0 votes 0 answers 5 views
+  - heading "How can i change my Spark session in Databricks Community Edition?" [level=3]:
+    - link "How can i change my Spark session in Databricks Community Edition?"
+  - text: I want to change my spark session from 'pyspark.sql.connect.dataframe.DataFrame' to 'pyspark.sql.dataframe.DataFrame' so that I can run StringIndexer and VectorAssembler. If I run it in pyspark.sql....
+  - list:
+    - listitem:
+      - link "show questions tagged 'apache-spark'": apache-spark
+    - listitem:
+      - link "show questions tagged 'pyspark'": pyspark
+    - listitem:
+      - link "show questions tagged 'databricks'": databricks
+    - listitem:
+      - link "show questions tagged 'databricks-community-edition'": databricks-community-edition
+  - link "Nalini Panwar's user avatar":
+    - img "Nalini Panwar's user avatar"
+  - link "Nalini Panwar"
+  - list:
+    - listitem: "7"
+  - time: asked 4 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "how is the ref-safe-context determined in c# when ref assigning to local variables" [level=3]:
+    - link "how is the ref-safe-context determined in c# when ref assigning to local variables"
+  - text: I am a beginner in C# trying to figure out how ref-safe-context is defined in C#. I declared a function Foo which didn't work since it tries to ref assign a variable with declaration-block to a ref ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'c#'": c#
+    - listitem:
+      - link "show questions tagged '.net'": .net
+    - listitem:
+      - link "show questions tagged 'scope'": scope
+    - listitem:
+      - link "show questions tagged 'clr'": clr
+    - listitem:
+      - link "show questions tagged 'ref'": ref
+  - link "Louis Nicolas Davout's user avatar":
+    - img "Louis Nicolas Davout's user avatar"
+  - link "Louis Nicolas Davout"
+  - list:
+    - listitem: "1"
+  - time: asked 6 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "Kubernetes Jobs undesirably automatically deleted" [level=3]:
+    - link "Kubernetes Jobs undesirably automatically deleted"
+  - text: As per the documentation, when a Job completes successfully, the Job object as well as the Pod objects created by the Job are not automatically deleted. This is useful so that you can look at the logs:...
+  - list:
+    - listitem:
+      - link "show questions tagged 'kubernetes'": kubernetes
+  - link "YoavKlein's user avatar":
+    - img "YoavKlein's user avatar"
+  - link "YoavKlein"
+  - list:
+    - listitem: 2,855
+  - time: asked 14 mins ago
+  - text: "-1 votes 1 answer 35 views"
+  - heading "Git push getting rejected" [level=3]:
+    - link "Git push getting rejected"
+  - text: "From my code I am doing Git push which is getting rejected due to below error. Error mentions: Remote changes need to be merged before pushing. Do I need to force push or rebase before push, using git ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'git'": git
+  - link "Salman's user avatar":
+    - img "Salman's user avatar"
+  - link "Salman"
+  - list:
+    - listitem: 2,003
+  - time: asked 15 mins ago
+  - text: "-1 votes 1 answer 22 views"
+  - heading "TOTP codes invalid on some devices (time is correct) [closed]" [level=3]:
+    - link "TOTP codes invalid on some devices (time is correct) [closed]"
+  - text: I’ve deployed TOTP authentication for a few hundred users. Most of them log in successfully with 6-digit TOTP codes from their authenticator apps. For a few users, however, codes generated on their ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'totp'": totp
+  - link "Florent2's user avatar":
+    - img "Florent2's user avatar"
+  - link "Florent2"
+  - list:
+    - listitem: 3,511
+  - time: asked 19 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "Why won't my Netbeans 12.4 open on my Macbook M1 Air?" [level=3]:
+    - link "Why won't my Netbeans 12.4 open on my Macbook M1 Air?"
+  - text: As the title states, my Netbeans refuses to open; it has the opening loading prompt but it closes as soon as the text says "Done loading modules". I currently have the newest versions of ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'macos'": macos
+    - listitem:
+      - link "show questions tagged 'netbeans'": netbeans
+    - listitem:
+      - link "show questions tagged 'java-8'": java-8
+    - listitem:
+      - link "show questions tagged 'netbeans-12'": netbeans-12
+  - link "juan miguel quilantang's user avatar":
+    - img "juan miguel quilantang's user avatar"
+  - link "juan miguel quilantang"
+  - list:
+    - listitem: "1"
+  - time: asked 20 mins ago
+  - text: "-1 votes 0 answers 10 views"
+  - heading "Error when importing agents module from parent directory" [level=3]:
+    - link "Error when importing agents module from parent directory"
+  - text: I am trying to get started in Python and working on a simple program that uses the AIMA library. I have imported the AIMA library and all files are contained in a parent directory. I have created a ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'subdirectory'": subdirectory
+  - link "Brian Barry's user avatar":
+    - img "Brian Barry's user avatar"
+  - link "Brian Barry"
+  - list:
+    - listitem: "1"
+  - time: asked 21 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "How to prevent the touch keyboard in Windows from opening for the Touch machines?" [level=3]:
+    - link "How to prevent the touch keyboard in Windows from opening for the Touch machines?"
+  - text: I am building a custom keyboard for my WinUI3 application for Touch machines. I couldn't prevent the default Touch Keyboard from opening when a textbox receives focus. I tried the following approach ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'winui-3'": winui-3
+    - listitem:
+      - link "show questions tagged 'winui'": winui
+    - listitem:
+      - link "show questions tagged 'winui-xaml'": winui-xaml
+  - link "Bevara Satyasairam's user avatar":
+    - img "Bevara Satyasairam's user avatar"
+  - link "Bevara Satyasairam"
+  - list:
+    - listitem: "203"
+  - time: asked 23 mins ago
+  - text: "-1 votes 0 answers 26 views"
+  - heading "Why output of this C++ simple code example for invalid reference test is not 0? [duplicate]" [level=3]:
+    - link "Why output of this C++ simple code example for invalid reference test is not 0? [duplicate]"
+  - text: "i wanted to create C++ application that simulates case when reference is invalid (dangling). Code below: #include <stdio.h> class dangling_reference { public: dangling_reference(int ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+  - link "Stefan Anonim's user avatar":
+    - img "Stefan Anonim's user avatar"
+  - link "Stefan Anonim"
+  - list:
+    - listitem: "1"
+  - time: asked 25 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Coldfusion IsPDFFile stopped working with the latest update CF 2021 with 22 update" [level=3]:
+    - link "Coldfusion IsPDFFile stopped working with the latest update CF 2021 with 22 update"
+  - text: Coldfusion's latest update for CF 2021 enterprise (update 22) has broken the IsPDFFile function. Now the function always returns false (or No), even when the PDF file is valid. Can you guys please ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'coldfusion-2021'": coldfusion-2021
+  - link "Mike Striker's user avatar":
+    - img "Mike Striker's user avatar"
+  - link "Mike Striker"
+  - list:
+    - listitem: "94"
+  - time: asked 30 mins ago
+  - text: "-2 votes 0 answers 8 views"
+  - heading "Unable to retrieve LIFF ID token on iOS (works on Android) in Spring Boot + jQuery chat app [closed]" [level=3]:
+    - link "Unable to retrieve LIFF ID token on iOS (works on Android) in Spring Boot + jQuery chat app [closed]"
+  - text: I am building an application with Java Spring Boot + Jquery using LiffSDK for my chat application. @GetMapping public String init(@RequestParam String liffChannelId, @RequestParam String ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'jquery'": jquery
+    - listitem:
+      - link "show questions tagged 'spring'": spring
+    - listitem:
+      - link "show questions tagged 'spring-boot'": spring-boot
+    - listitem:
+      - link "show questions tagged 'thymeleaf'": thymeleaf
+  - link "Daniel Nguyen's user avatar":
+    - img "Daniel Nguyen's user avatar"
+  - link "Daniel Nguyen"
+  - list:
+    - listitem: "1"
+  - time: asked 33 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1613220"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Making your code base better will make your code coverage worse"
+    - listitem:
+      - link "As your AI gets smarter, so must your API"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Spevacus has joined us as a Community Manager"
+    - listitem:
+      - link "Introducing a new proactive anti-spam measure"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+    - listitem:
+      - link "New comment UI experiment graduation"
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 65k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 28k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 25k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Proof of every Highly Abundant Number greater than 3 is Even"
+    - listitem:
+      - link "What were \"milk bars\" in 1920s Japan?"
+    - listitem:
+      - link "What is the feature between the Attendant Call and Ground Call push buttons on a B737 overhead panel?"
+    - listitem:
+      - link "Classical PDE theorems on manifolds with boundary"
+    - listitem:
+      - link "Is it ok to place components \"inside\" the PCB"
+    - listitem:
+      - link "Is it a good idea to use a quadruped robot on the next Mars exploration mission?"
+    - listitem:
+      - link "Do we need the author's permission for reference"
+    - listitem:
+      - link "Why is a client device not using a mobile hotspot device's DNS settings (AdGuard or NextDNS) as expected?"
+    - listitem:
+      - link "SMILES code of this compound with placeholders [*]"
+    - listitem:
+      - link "Childhood book with a girl obsessed with homonyms who adopts a stray dog but gives it back to its owners"
+    - listitem:
+      - link "how is bash autocompletion tied to dbus and how can I stop it?"
+    - listitem:
+      - link "With line sustain pedal markings, do I release the pedal at the beginning or end of the last note?"
+    - listitem:
+      - link "Discussing strategy reduces winning chances of everyone!"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Products" [level=5]:
+      - link "Products"
+    - list:
+      - listitem:
+        - link "Teams"
+      - listitem:
+        - link "Advertising"
+      - listitem:
+        - link "Talent"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.9.29.34634
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By continuing to use this website, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: . By exiting this window, default cookies will be accepted. To reject cookies, select an option from below.
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+    - button "Close"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
