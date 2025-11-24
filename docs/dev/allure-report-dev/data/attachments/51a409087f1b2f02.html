@@ -1,0 +1,576 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale JP in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('#signup-modal-container #signup-modal-title')
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Stack Internal
+      - img
+      - paragraph:
+        - text: Stack Overflow for Teams is now called
+        - strong: Stack Internal
+        - text: . Bring the best of human thought and AI automation together at your work.
+      - link "Try for free"
+      - link "Learn more"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,189,530 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 10"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 2 views
+  - heading "I use only the default oauth scope for my google workspace marketplace addon..should i still handle granular consent (before Dec 1, 2025)" [level=3]:
+    - link "I use only the default oauth scope for my google workspace marketplace addon..should i still handle granular consent (before Dec 1, 2025)"
+  - text: My addon dosen't require any additional scope while installing (only the default scopes Email and Profile...But google has sent me mail to handle granular consent withing Dec 1 2025,...is it due to an ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'google-oauth'": google-oauth
+    - listitem:
+      - link "show questions tagged 'google-workspace-add-ons'": google-workspace-add-ons
+  - link "shailesh kumar's user avatar":
+    - img "shailesh kumar's user avatar"
+  - link "shailesh kumar"
+  - list:
+    - listitem: "1"
+  - time: asked 33 secs ago
+  - text: 0 votes 0 answers 2 views
+  - heading "How to implement numerical optimization, such as a Golden-section search" [level=3]:
+    - link "How to implement numerical optimization, such as a Golden-section search"
+  - text: I'm trying to match my shape to a specific volume. To do that, I'm optimizing my input parameter to minimize an error value that I calculate from the square of the difference between the target and ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'openscad'": openscad
+  - link "James CAD's user avatar":
+    - img "James CAD's user avatar"
+  - link "James CAD"
+  - list:
+    - listitem: "1"
+  - time: asked 1 min ago
+  - text: 0 votes 0 answers 3 views
+  - 'heading "DocuSign Sandbox: “ENVELOPE_ALLOWANCE_EXCEEDED” After 114 Envelopes and Trial Account Cannot Create Integration Key" [level=3]':
+    - 'link "DocuSign Sandbox: “ENVELOPE_ALLOWANCE_EXCEEDED” After 114 Envelopes and Trial Account Cannot Create Integration Key"'
+  - text: I am working with a DocuSign sandbox (developer) environment to integrate embedded signing and webhook functionality into a Django REST Framework application. Initially, I was able to send envelopes ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'django-rest-framework'": django-rest-framework
+    - listitem:
+      - link "show questions tagged 'docusignapi'": docusignapi
+    - listitem:
+      - link "show questions tagged 'docusignconnect'": docusignconnect
+  - link "K Vinay's user avatar":
+    - img "K Vinay's user avatar"
+  - link "K Vinay"
+  - list:
+    - listitem: "1"
+  - time: asked 2 mins ago
+  - text: 0 votes 0 answers 3 views
+  - heading "MiniMagick/ImageMagick produces Grayscale PDFs(contains colourful images) inside Docker, but Color PDFs Locally (Rails 8)" [level=3]:
+    - link "MiniMagick/ImageMagick produces Grayscale PDFs(contains colourful images) inside Docker, but Color PDFs Locally (Rails 8)"
+  - text: The Problem Statement My Rails 8 application uses MiniMagick to composite multiple color JPEG/PNG images onto a single blank page, draw bounding boxes, and output the result as a PDF. When running the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'ruby-on-rails'": ruby-on-rails
+    - listitem:
+      - link "show questions tagged 'docker'": docker
+    - listitem:
+      - link "show questions tagged 'pdf'": pdf
+    - listitem:
+      - link "show questions tagged 'imagemagick'": imagemagick
+    - listitem:
+      - link "show questions tagged 'minimagick'": minimagick
+  - link "Ajit Dhanje's user avatar":
+    - img "Ajit Dhanje's user avatar"
+  - link "Ajit Dhanje"
+  - list:
+    - listitem: "11"
+  - time: asked 2 mins ago
+  - text: 0 votes 0 answers 6 views
+  - heading "Some problems encountered when using Aeron" [level=3]:
+    - link "Some problems encountered when using Aeron"
+  - text: When both the sender and receiver are deployed on the same intranet, regardless of the data transmission frequency (0~256MB/s), the transmission time is always less than 2ms. When the sender and ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'aeron'": aeron
+  - link "mtdykxa's user avatar":
+    - img "mtdykxa's user avatar"
+  - link "mtdykxa"
+  - list:
+    - listitem: "1"
+  - time: asked 9 mins ago
+  - text: 1 vote 0 answers 15 views
+  - heading "Why is my CSS outline appearing on input for both mouse click and keyboard focus despite using :focus-visible?" [level=3]:
+    - link "Why is my CSS outline appearing on input for both mouse click and keyboard focus despite using :focus-visible?"
+  - text: "I have a simple HTML page with an input element: <!DOCTYPE html> <html> <head> <title>Hello World!</title> <link rel=\"stylesheet\" href=\"styles...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'accessibility'": accessibility
+  - link "user20042604's user avatar":
+    - img "user20042604's user avatar"
+  - link "user20042604"
+  - list:
+    - listitem: "73"
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Where is the yjs.js UMD bundle in the latest Yjs releases? VS Code Webview cannot load ESM" [level=3]:
+    - link "Where is the yjs.js UMD bundle in the latest Yjs releases? VS Code Webview cannot load ESM"
+  - text: "I'm developing a VS Code extension that loads Yjs inside a WebView. VS Code WebViews cannot import ES modules due to CSP restrictions, so I cannot use: import * as Y from \"https://esm.run/yjs&..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'webrtc'": webrtc
+    - listitem:
+      - link "show questions tagged 'vscode-extensions'": vscode-extensions
+    - listitem:
+      - link "show questions tagged 'content-security-policy'": content-security-policy
+    - listitem:
+      - link "show questions tagged 'yjs'": yjs
+  - link "dont stalk's user avatar":
+    - img "dont stalk's user avatar"
+  - link "dont stalk"
+  - list:
+    - listitem: "1"
+  - time: asked 11 mins ago
+  - text: "-2 votes 1 answer 38 views"
+  - heading "Why does console.log run slower when logging large nested objects compared to JSON.stringify?" [level=3]:
+    - link "Why does console.log run slower when logging large nested objects compared to JSON.stringify?"
+  - text: "I noticed something strange while debugging a performance issue - When I log a deeply nested object using console.log, it feels significantly slower compared to logging JSON.stringify(obj). Example: ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+  - link "Himanshu Sachan's user avatar":
+    - img "Himanshu Sachan's user avatar"
+  - link "Himanshu Sachan"
+  - list:
+    - listitem: "11"
+  - time: asked 31 mins ago
+  - text: Best practices 0 votes 1 replies 17 views
+  - heading "How to integrate a new authentication microservice (v2) with a legacy monolithic system (v1)?" [level=3]:
+    - link "How to integrate a new authentication microservice (v2) with a legacy monolithic system (v1)?"
+  - text: We currently have a new microservice that handles authentication, authorization (RBAC), and KYC as part of our v2 architecture. We also have an older legacy system (v1) which is fully monolithic — ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'authentication'": authentication
+    - listitem:
+      - link "show questions tagged 'jwt'": jwt
+    - listitem:
+      - link "show questions tagged 'architecture'": architecture
+    - listitem:
+      - link "show questions tagged 'microservices'": microservices
+    - listitem:
+      - link "show questions tagged 'grpc'": grpc
+  - link "Sahar Parsaifar's user avatar":
+    - img "Sahar Parsaifar's user avatar"
+  - link "Sahar Parsaifar"
+  - list:
+    - listitem: "11"
+  - time: asked 34 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "Why Swift Testing require execution in MainActor?" [level=3]:
+    - link "Why Swift Testing require execution in MainActor?"
+  - text: "The code below is located in the application module: enum API {} extension API { protocol Endpoint: Sendable { var basePath: String { get } var apiName: String { get } var ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'swift-testing'": swift-testing
+  - link "Nikolai Nagornyi's user avatar":
+    - img "Nikolai Nagornyi's user avatar"
+  - link "Nikolai Nagornyi"
+  - list:
+    - listitem: 1,480
+  - time: asked 47 mins ago
+  - text: 0 votes 0 answers 18 views
+  - heading "Dot Notation in GML and how do I use this.function()" [level=3]:
+    - link "Dot Notation in GML and how do I use this.function()"
+  - text: "I'm making a script using GML. I'm quite new to GML but already have some experience in Python and a little bit in C languages. Is this even correct? function tooltip() { var this = {}; ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'game-maker'": game-maker
+    - listitem:
+      - link "show questions tagged 'gml'": gml
+    - listitem:
+      - link "show questions tagged 'game-maker-language'": game-maker-language
+  - link "Ayeah755's user avatar":
+    - img "Ayeah755's user avatar"
+  - link "Ayeah755"
+  - list:
+    - listitem: "1"
+  - time: asked 51 mins ago
+  - text: 0 votes 0 answers 14 views
+  - 'heading "Transcoder API – repeated code: 13 \"Internal error occurred\" when MP3 audio is involved (audio‑only + video+audio mix)" [level=3]':
+    - 'link "Transcoder API – repeated code: 13 \"Internal error occurred\" when MP3 audio is involved (audio‑only + video+audio mix)"'
+  - text: "I’m building an automated pipeline around the Transcoder API and I’m consistently hitting: \"error\": { \"code\": 13, \"message\": \"Internal error occurred.\" } ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'google-cloud-platform'": google-cloud-platform
+    - listitem:
+      - link "show questions tagged 'google-cloud-transcoder'": google-cloud-transcoder
+  - link "Alexander Pochinok Apoch's user avatar":
+    - img "Alexander Pochinok Apoch's user avatar"
+  - link "Alexander Pochinok Apoch"
+  - list:
+    - listitem: "1"
+  - time: asked 53 mins ago
+  - text: 0 votes 0 answers 16 views
+  - heading "SQLSTATE[08S01] Exception is Always Thrown When New Processes Are Created" [level=3]:
+    - link "SQLSTATE[08S01] Exception is Always Thrown When New Processes Are Created"
+  - text: Horizon Version 5.40.1 Laravel Version 11.46.1 | 12.10.1 PHP Version 8.4.14 Redis Driver PhpRedis Redis Version phpRedis 6.3.0 Database Driver & Version pdo_sqlsrv 5.12.0, ODBC Driver 18 for SQL ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'laravel'": laravel
+  - link "logan's user avatar":
+    - img "logan's user avatar"
+  - link "logan"
+  - list:
+    - listitem: "1"
+  - time: asked 55 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "How can I update multiple Elementor button links globally from one place in WordPress?" [level=3]:
+    - link "How can I update multiple Elementor button links globally from one place in WordPress?"
+  - text: My site contains many download buttons (Elementor buttons) that all point to a .exe file download URL. I want to change the download link from one central place, and automatically update all download ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'php'": php
+    - listitem:
+      - link "show questions tagged 'wordpress'": wordpress
+    - listitem:
+      - link "show questions tagged 'cpanel'": cpanel
+    - listitem:
+      - link "show questions tagged 'elementor'": elementor
+  - link "Nicer Ata's user avatar":
+    - img "Nicer Ata's user avatar"
+  - link "Nicer Ata"
+  - list:
+    - listitem: "1"
+  - time: asked 56 mins ago
+  - text: 1 vote 0 answers 13 views
+  - heading "Printing to VGA in protected mode crashes system" [level=3]:
+    - link "Printing to VGA in protected mode crashes system"
+  - text: As you can see down at bottom on my stage 2 boot loader, I have a VGA write thing (Prints out "Starting kernel...", but when I use it, the system starts to boot loop, I have no idea why this ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'assembly'": assembly
+    - listitem:
+      - link "show questions tagged 'x86'": x86
+    - listitem:
+      - link "show questions tagged 'x86-16'": x86-16
+    - listitem:
+      - link "show questions tagged 'bootloader'": bootloader
+    - listitem:
+      - link "show questions tagged 'bare-metal'": bare-metal
+  - link "Connor Thomson's user avatar":
+    - img "Connor Thomson's user avatar"
+  - link "Connor Thomson"
+  - list:
+    - listitem: "11"
+  - time: asked 56 mins ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1612636"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Community Products roadmap update, November 2025"
+    - listitem:
+      - link "Only you can stop AI database drops"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "We’re releasing our proactive anti-spam measure network-wide"
+    - listitem:
+      - link "Chat room owners can now establish room guidelines"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 66k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 37k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "R Language" [level=1]:
+    - link "R Language"
+  - text: 15k Members
+  - button "Join"
+  - text: A collective where data scientists and AI researchers gather to find, share, and learn about R and other subtags like knitr and dplyr.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "How can I use sed to chain append lines from a text file, add it as a suffix to the text on the same lines numbers on another file, and so on?"
+    - listitem:
+      - link "How to express a series of coughs when you have a cough?"
+    - listitem:
+      - link "What exactly is different about the slice of space and lightcone concept in special relativity?"
+    - listitem:
+      - link "SF book series about a wandering space monk called Brother Paul"
+    - listitem:
+      - link "Can you bypass PIN requirement of FIDO token protected LUKS device with hex editor?"
+    - listitem:
+      - link "What is the correct definition of a limit point in real analysis?"
+    - listitem:
+      - link "How to automatically refresh or reload Import CSV node data?"
+    - listitem:
+      - link "how to shade an region bounded by curves"
+    - listitem:
+      - link "Can military personnel disobey illegal orders under U.S. law?"
+    - listitem:
+      - link "Whose responsibility is it to destroy a C++20 coroutine that throws from its initial suspend?"
+    - listitem:
+      - link "Reference request for a proof of Cayley's tree counting formula via the representation theory of the symmetric group"
+    - listitem:
+      - link "Does Hebrew really have 7 words for gold?"
+    - listitem:
+      - link "Do NPCs have Will in Chuubo's?"
+    - listitem:
+      - link "Looking for a book for teenagers involving heaven and hell"
+    - listitem:
+      - link "Descriptive Grid"
+    - listitem:
+      - link "Nonseparable Hoffmann-Jørgensen metric space"
+    - listitem:
+      - link "Is a differential pair stage of an opamp still useful with single ended input"
+    - listitem:
+      - link "Proving an order relation between two concrete real numbers (Lean)"
+    - listitem:
+      - link "Center of a finite perfect group"
+    - listitem:
+      - link "Trying to install floating sink but plumbing between studs prevents usual wood backing. What are my options?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Business" [level=5]:
+      - link "Business"
+    - list:
+      - listitem:
+        - link "Stack Internal"
+      - listitem:
+        - link "Stack Data Licensing"
+      - listitem:
+        - link "Stack Ads"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.11.21.37165
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By continuing to use this website, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: . By exiting this window, default cookies will be accepted. To reject cookies, select an option from below.
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+    - button "Close"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
