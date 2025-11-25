@@ -1,0 +1,585 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale JP in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('#signup-modal-container #signup-modal-title')
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Stack Internal
+      - img
+      - paragraph:
+        - text: Stack Overflow for Teams is now called
+        - strong: Stack Internal
+        - text: . Bring the best of human thought and AI automation together at your work.
+      - link "Try for free"
+      - link "Learn more"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,189,724 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 9"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 8 views
+  - 'heading "React Navigation: \"Nested NavigationContainer\" error and app stuck on loading screen" [level=3]':
+    - 'link "React Navigation: \"Nested NavigationContainer\" error and app stuck on loading screen"'
+  - text: "Environment React Native: 0.69 @react-navigation/native: 5.9.8 @react-navigation/stack: 5.14.9 @react-navigation/bottom-tabs: 5.11.15 Problem My app gets stuck on the loading screen. I'm getting ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+  - link "Tiffany Liu's user avatar":
+    - img "Tiffany Liu's user avatar"
+  - link "Tiffany Liu"
+  - list:
+    - listitem: "1"
+  - time: asked 5 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Is there any function to remove litespeed_docref from heaader in WordPress website" [level=3]:
+    - link "Is there any function to remove litespeed_docref from heaader in WordPress website"
+  - text: I am looking to remove <script data-no-optimize="1">var litespeed_docref=sessionStorage.getItem("litespeed_docref");litespeed_docref&&(Object.defineProperty(document,&...
+  - list:
+    - listitem:
+      - link "show questions tagged 'wordpress'": wordpress
+    - listitem:
+      - link "show questions tagged 'function'": function
+  - link "user31225's user avatar":
+    - img "user31225's user avatar"
+  - link "user31225"
+  - list:
+    - listitem: "7"
+  - time: asked 11 mins ago
+  - text: Advice 0 votes 0 replies 10 views
+  - heading "Driving Digital Accessibility with Progressive Web App Solutions by Oodles Technologies" [level=3]:
+    - link "Driving Digital Accessibility with Progressive Web App Solutions by Oodles Technologies"
+  - text: Progressive Web Apps have emerged as a powerful solution for businesses seeking fast, reliable, and engaging digital experiences without the limitations of traditional mobile apps. PWAs combine the ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+    - listitem:
+      - link "show questions tagged 'entity-framework'": entity-framework
+    - listitem:
+      - link "show questions tagged 'mobile'": mobile
+  - link "user31848823's user avatar":
+    - img "user31848823's user avatar"
+  - link "user31848823"
+  - list:
+    - listitem: "1"
+  - time: asked 11 mins ago
+  - text: "-1 votes 0 answers 19 views"
+  - heading "Tree view context menu is very inconsistent. The context menu sometimes only displays after scrolling and sometimes doesn't seem to dispaly at all" [level=3]:
+    - link "Tree view context menu is very inconsistent. The context menu sometimes only displays after scrolling and sometimes doesn't seem to dispaly at all"
+  - text: So as mentioned in the subject line the tree view context menu is very inconsistent where sometimes the context menu display only after scrolling and at other times it shows instantly! Please view the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'contextmenu'": contextmenu
+    - listitem:
+      - link "show questions tagged 'blazor-webassembly'": blazor-webassembly
+    - listitem:
+      - link "show questions tagged 'mudblazor'": mudblazor
+  - link "Tim Kruger's user avatar":
+    - img "Tim Kruger's user avatar"
+  - link "Tim Kruger"
+  - list:
+    - listitem: "913"
+  - time: asked 17 mins ago
+  - text: Advice 0 votes 0 replies 12 views
+  - heading "When using TensorDictPrioritizedReplayBuffer, should i apply the priority weight manually or not?" [level=3]:
+    - link "When using TensorDictPrioritizedReplayBuffer, should i apply the priority weight manually or not?"
+  - text: With Prioritized Experience Replay (PER), we use Beta parameter so we can find weight that will be used to offset the bias introduced by PER. Now, with PyTorch's TensorDictPrioritizedReplayBuffer, i ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'pytorch'": pytorch
+    - listitem:
+      - link "show questions tagged 'reinforcement-learning'": reinforcement-learning
+    - listitem:
+      - link "show questions tagged 'loss-function'": loss-function
+  - link "Bejo's user avatar":
+    - img "Bejo's user avatar"
+  - link "Bejo"
+  - list:
+    - listitem: "13"
+  - time: asked 22 mins ago
+  - text: 0 votes 0 answers 17 views
+  - heading "MySQL persistent 5 second delay [closed]" [level=3]:
+    - link "MySQL persistent 5 second delay [closed]"
+  - text: I can't seem to resolve this issue, but my website takes around 5 seconds to load. I thought it might be a DNS issue, but even when I use the IP address, it still takes just as long. I found this ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'mysql'": mysql
+    - listitem:
+      - link "show questions tagged 'ubuntu'": ubuntu
+  - link "Michael Murray's user avatar":
+    - img "Michael Murray's user avatar"
+  - link "Michael Murray"
+  - list:
+    - listitem: "1"
+  - time: asked 22 mins ago
+  - text: 0 votes 0 answers 12 views
+  - 'heading "CSS Grid auto-fit + minmax(): item with long unbroken text overflows and forces horizontal scroll" [level=3]':
+    - 'link "CSS Grid auto-fit + minmax(): item with long unbroken text overflows and forces horizontal scroll"'
+  - text: Here’s the 100% clean, ready-to-post version that will go through without any warning. Just copy everything from Title down and paste directly into Stack Overflow — it’s already perfectly formatted. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'responsive-design'": responsive-design
+    - listitem:
+      - link "show questions tagged 'css-grid'": css-grid
+    - listitem:
+      - link "show questions tagged 'overflow'": overflow
+  - link "Panki Dodiya's user avatar":
+    - img "Panki Dodiya's user avatar"
+  - link "Panki Dodiya"
+  - list:
+    - listitem: "1"
+  - time: asked 26 mins ago
+  - text: 0 votes 0 answers 12 views
+  - 'heading "java.lang.ClassNotFoundException: okio.Buffer when using OkHttp inside Eclipse plugin (OSGi)" [level=3]':
+    - 'link "java.lang.ClassNotFoundException: okio.Buffer when using OkHttp inside Eclipse plugin (OSGi)"'
+  - text: "am developing an Eclipse plugin (OSGi environment) and trying to use OkHttp 4.11.0 to send HTTP requests. However, I get the following runtime error: java.lang.ClassNotFoundException: okio.Buffer ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'eclipse'": eclipse
+    - listitem:
+      - link "show questions tagged 'eclipse-plugin'": eclipse-plugin
+    - listitem:
+      - link "show questions tagged 'okhttp'": okhttp
+    - listitem:
+      - link "show questions tagged 'osgi-bundle'": osgi-bundle
+  - link "kiruba T's user avatar":
+    - img "kiruba T's user avatar"
+  - link "kiruba T"
+  - list:
+    - listitem: "1"
+  - time: asked 39 mins ago
+  - text: "-1 votes 0 answers 25 views"
+  - heading "Flutter auto back issue in ios" [level=3]:
+    - link "Flutter auto back issue in ios"
+  - text: I'm experiencing an issue in my flutter app that it automatically gets back to previous screen but not happening everytime it happens somethime and in android only
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'dart'": dart
+    - listitem:
+      - link "show questions tagged 'navigation'": navigation
+    - listitem:
+      - link "show questions tagged 'flutter-getx'": flutter-getx
+    - listitem:
+      - link "show questions tagged 'mobile-development'": mobile-development
+  - link "smit dev's user avatar":
+    - img "smit dev's user avatar"
+  - link "smit dev"
+  - list:
+    - listitem: "1"
+  - time: asked 51 mins ago
+  - text: "-1 votes 0 answers 17 views"
+  - heading "libpyjini.so not found - White screen on smartphone" [level=3]:
+    - link "libpyjini.so not found - White screen on smartphone"
+  - text: "I'm trying to generate an APK build, and I'm getting the following error: #Resumo do Erro: nativeloader: Load libpyjni.so using class loader ns clns-4 (...) dlopen failed: library \"libpyjni.so&..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'build'": build
+    - listitem:
+      - link "show questions tagged 'apk'": apk
+    - listitem:
+      - link "show questions tagged 'flet'": flet
+  - link "Sergio Souza's user avatar":
+    - img "Sergio Souza's user avatar"
+  - link "Sergio Souza"
+  - list:
+    - listitem: "1"
+  - time: asked 55 mins ago
+  - text: 0 votes 1 answer 22 views
+  - heading "How to properly highlight text in expo?" [level=3]:
+    - link "How to properly highlight text in expo?"
+  - text: "I would like to highlight a multiline text in a expo app by changing the text's background color. there i can like the image highlight color. my code: import HighlightText from &..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'react-native'": react-native
+    - listitem:
+      - link "show questions tagged 'mobile'": mobile
+    - listitem:
+      - link "show questions tagged 'expo'": expo
+  - link "Rasel Babu's user avatar":
+    - img "Rasel Babu's user avatar"
+  - link "Rasel Babu"
+  - list:
+    - listitem: "1"
+  - time: asked 57 mins ago
+  - text: 0 votes 0 answers 11 views
+  - heading "How to run VBA scripts only in the Word document I'm currently editing?" [level=3]:
+    - link "How to run VBA scripts only in the Word document I'm currently editing?"
+  - text: "I have this code: Private WithEvents App As Word.Application Private Sub Document_Open() Set App = Word.Application End Sub Private Sub Document_New() Set App = Word.Application End Sub ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'vba'": vba
+    - listitem:
+      - link "show questions tagged 'ms-word'": ms-word
+  - link "Wei-ying Chen's user avatar":
+    - img "Wei-ying Chen's user avatar"
+  - link "Wei-ying Chen"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: Tooling 1 vote 0 replies 15 views
+  - heading "Looking for a test management tool with fast test run logs and clean test case organization" [level=3]:
+    - link "Looking for a test management tool with fast test run logs and clean test case organization"
+  - text: I’m evaluating test management tools for a small QA team and trying to find something lightweight yet reliable for test case organization and test run tracking. Some of the traditional options I’ve ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'testing'": testing
+    - listitem:
+      - link "show questions tagged 'automated-tests'": automated-tests
+  - link "Matt Calder's user avatar":
+    - img "Matt Calder's user avatar"
+  - link "Matt Calder"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: Best practices 0 votes 1 replies 17 views
+  - heading "Custom annotation for performing customized injection logic" [level=3]:
+    - link "Custom annotation for performing customized injection logic"
+  - text: "Spring 5.3 Use case: I’ve got an annotation public @interface MyInject { String region(); String type(); } I want to use this annotation in a similar fashion to @Resource(“beanName”) but ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'spring'": spring
+    - listitem:
+      - link "show questions tagged 'dependency-injection'": dependency-injection
+  - link "St.Antario's user avatar":
+    - img "St.Antario's user avatar"
+  - link "St.Antario"
+  - list:
+    - listitem: 27.7k
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 25 views
+  - heading "insert sample data into a postgresql in docker container not working" [level=3]:
+    - link "insert sample data into a postgresql in docker container not working"
+  - text: I am running a postgresql in docker container and trying to insert some sample data into this database. prepare_source_data.sql exists in the host environment. here I tried docker exec -it postgres ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'postgresql'": postgresql
+    - listitem:
+      - link "show questions tagged 'docker'": docker
+    - listitem:
+      - link "show questions tagged 'containers'": containers
+  - link "user824624's user avatar":
+    - img "user824624's user avatar"
+  - link "user824624"
+  - list:
+    - listitem: 8,168
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1612649"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Community Products roadmap update, November 2025"
+    - listitem:
+      - link "Only you can stop AI database drops"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "We’re releasing our proactive anti-spam measure network-wide"
+    - listitem:
+      - link "Chat room owners can now establish room guidelines"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 66k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 29k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 22k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "What's the name of this special chair?"
+    - listitem:
+      - link "Is there any liability associated with chatbots that pretend to be human?"
+    - listitem:
+      - link "Button naming convention for web app buttons that open view/edit modals"
+    - listitem:
+      - link "Is possible to discover an ip used by interface, if ip range is not know, maybe using arp?"
+    - listitem:
+      - link "Which atmospheric simulation paper was Space Station 13 based on?"
+    - listitem:
+      - link "Substitute patterns with values from lists"
+    - listitem:
+      - link "News API in Python"
+    - listitem:
+      - link "How do I fix the \"turned off for managed browsers\" error when trying to enable secure DNS in Edge?"
+    - listitem:
+      - link "Does the passport one use to enter and leave a country sometimes determine which passport one must use when entering the next country?"
+    - listitem:
+      - link "What is constantly taking space on my computer?"
+    - listitem:
+      - link "Difference in strength between drop beam and flush beam?"
+    - listitem:
+      - link "Are properties and sets of the same type in Russell’s theory of types?"
+    - listitem:
+      - link "Advice for approaching a co-advisor"
+    - listitem:
+      - link "Advice on seculars \"changing meanings\" to allow for sin"
+    - listitem:
+      - link "Assuming that production isn't a problem, what would be the easiest antimatter element to store and contain?"
+    - listitem:
+      - link "How to Cap a Mixed Metal Gas Line"
+    - listitem:
+      - link "Force Evince Document Viewer to open maximized"
+    - listitem:
+      - link "Does Hebrew really have 7 words for gold?"
+    - listitem:
+      - link "What term describes a person who always remains ill?"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Business" [level=5]:
+      - link "Business"
+    - list:
+      - listitem:
+        - link "Stack Internal"
+      - listitem:
+        - link "Stack Data Licensing"
+      - listitem:
+        - link "Stack Ads"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.11.24.37235
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By continuing to use this website, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: . By exiting this window, default cookies will be accepted. To reject cookies, select an option from below.
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+    - button "Close"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
