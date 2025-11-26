@@ -1,0 +1,558 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Go home page KO for Locale NZ in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('#signup-modal-container #signup-modal-title')
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingKO (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:27:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/homeNP.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Stack Internal
+      - img
+      - paragraph:
+        - text: Stack Overflow for Teams is now called
+        - strong: Stack Internal
+        - text: . Bring the best of human thought and AI automation together at your work.
+      - link "Try for free"
+      - link "Learn more"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,189,874 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 6"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: "-1 votes 0 answers 6 views"
+  - heading "Why does my Python function return None even though it executes without errors?" [level=3]:
+    - link "Why does my Python function return None even though it executes without errors?"
+  - text: "I'm trying to return a value from a Python function, but instead I keep getting None. Here is my code: def add(a, b): result = a + b print(result) x = add(5, 10) print(x) Expected output: 15 ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+  - link "Risho Enr's user avatar":
+    - img "Risho Enr's user avatar"
+  - link "Risho Enr"
+  - list:
+    - listitem: "1"
+  - time: asked 5 mins ago
+  - text: 0 votes 1 answer 18 views
+  - 'heading "wsl: Permission denied on using pyenv" [level=3]':
+    - 'link "wsl: Permission denied on using pyenv"'
+  - text: "Problem I recently installed pyenv on wsl(24.04) and tried to set python version on local directory, but I got this error: $ pyenv local 3.14.0 ~/.pyenv/libexec/pyenv-version-file-write: line 37: ...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'windows-subsystem-for-linux'": windows-subsystem-for-linux
+    - listitem:
+      - link "show questions tagged 'pyenv'": pyenv
+    - listitem:
+      - link "show questions tagged 'venv'": venv
+  - link "nishio ken1's user avatar":
+    - img "nishio ken1's user avatar"
+  - link "nishio ken1"
+  - list:
+    - listitem: "1"
+  - time: asked 14 mins ago
+  - text: 0 votes 0 answers 12 views
+  - heading "Is there a blog / mailing list for updates to the \"IAP on Google Cloud Run\" preview?" [level=3]:
+    - link "Is there a blog / mailing list for updates to the \"IAP on Google Cloud Run\" preview?"
+  - text: "SUMMARY: I have started testing out the \"IAP for Cloud Run\" feature (which is nice, I want something that will auto-scale to 0 for various personal projects / proto-types). But today I spent ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'google-cloud-run'": google-cloud-run
+    - listitem:
+      - link "show questions tagged 'google-iap'": google-iap
+  - link "ELee's user avatar":
+    - img "ELee's user avatar"
+  - link "ELee"
+  - list:
+    - listitem: "83"
+  - time: asked 17 mins ago
+  - text: 0 votes 0 answers 9 views
+  - heading "When using Material 3's Dynamic Color feature, almost all text in my app becomes too faded" [level=3]:
+    - link "When using Material 3's Dynamic Color feature, almost all text in my app becomes too faded"
+  - text: "Other apps don't have this issue. Fallback theme (without dynamic color) is generated with the Material Theme Builder. I just use this in my Application class: DynamicColors...."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'material-design'": material-design
+    - listitem:
+      - link "show questions tagged 'android-xml'": android-xml
+    - listitem:
+      - link "show questions tagged 'material-components'": material-components
+  - link "MrCookie's user avatar":
+    - img "MrCookie's user avatar"
+  - link "MrCookie"
+  - list:
+    - listitem: "101"
+  - time: asked 20 mins ago
+  - text: "-4 votes 0 answers 19 views"
+  - heading "What's the use of http status code like 30X and few headers like <Etags> in react application? [closed]" [level=3]:
+    - link "What's the use of http status code like 30X and few headers like <Etags> in react application? [closed]"
+  - text: I’m trying to understand how HTTP redirect status codes (300, 301, 302, 303, 307, 308) and ETag caching (weak vs. strong validators) actually apply in a React SPA. On the server side, I understand the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'single-page-application'": single-page-application
+    - listitem:
+      - link "show questions tagged 'web-frontend'": web-frontend
+  - link "shawnMarkus's user avatar":
+    - img "shawnMarkus's user avatar"
+  - link "shawnMarkus"
+  - list:
+    - listitem: "35"
+  - time: asked 24 mins ago
+  - text: 3 votes 1 answer 41 views
+  - heading "C++ implicit conversion from size_t to double fails" [level=3]:
+    - link "C++ implicit conversion from size_t to double fails"
+  - text: "Consider this code #include <cstddef> #include <iostream> const double cash = 1000; int main() { size_t my_size_t_value = 2; double my_double_value = -my_size_t_value*..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'negative-integer'": negative-integer
+  - link "Joe Chakra's user avatar":
+    - img "Joe Chakra's user avatar"
+  - link "Joe Chakra"
+  - list:
+    - listitem: "76"
+  - time: asked 27 mins ago
+  - text: 0 votes 1 answer 15 views
+  - heading "Whisper-Server can't read data" [level=3]:
+    - link "Whisper-Server can't read data"
+  - text: I am using Whisper CPP to perform recognition on small wav files, on Windows. The same files passed to whisper-cli fail with whisper-server, whether sent by curl, javascript fetch or else. The failure ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'windows'": windows
+    - listitem:
+      - link "show questions tagged 'whisper'": whisper
+  - link "resle's user avatar":
+    - img "resle's user avatar"
+  - link "resle"
+  - list:
+    - listitem: 2,416
+  - time: asked 27 mins ago
+  - text: 0 votes 0 answers 16 views
+  - heading "Getting Firebase Auth custom claims in SSR application server-side" [level=3]:
+    - link "Getting Firebase Auth custom claims in SSR application server-side"
+  - text: "I want to get the custom claims for a user in a react-router app on the loader/action that run on the server. To do that, I am calling the User's method getIdTokenResult(false): const authIdToken = ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'firebase'": firebase
+    - listitem:
+      - link "show questions tagged 'firebase-authentication'": firebase-authentication
+  - link "jigjig's user avatar":
+    - img "jigjig's user avatar"
+  - link "jigjig"
+  - list:
+    - listitem: "1"
+  - time: asked 34 mins ago
+  - text: "-2 votes 0 answers 15 views"
+  - 'heading "Alexa Smart Home Skill: Device shows “Unresponsive” in Alexa app even though directives work (Need correct way to report state) [closed]" [level=3]':
+    - 'link "Alexa Smart Home Skill: Device shows “Unresponsive” in Alexa app even though directives work (Need correct way to report state) [closed]"'
+  - text: I am developing an Alexa Smart Home Skill using AWS Lambda. My devices are discovered successfully and voice commands (TurnOn/TurnOff, brightness, fan speed, etc.) work properly. However, in the Alexa ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'aws-lambda'": aws-lambda
+    - listitem:
+      - link "show questions tagged 'alexa-skills-kit'": alexa-skills-kit
+  - link "Hari Prasad Reddy Kudamala's user avatar":
+    - img "Hari Prasad Reddy Kudamala's user avatar"
+  - link "Hari Prasad Reddy Kudamala"
+  - list:
+    - listitem: "1"
+  - time: asked 43 mins ago
+  - text: 1 vote 0 answers 11 views
+  - heading "No longer see trace/span IDs after upgrading to spring boot 4" [level=3]:
+    - link "No longer see trace/span IDs after upgrading to spring boot 4"
+  - text: "After upgrading to spring boot 4 I don't see any span/trace ids in my logs where I used to @GetMapping fun hello(): String { logger.info(\"Hello World!\") return \"..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'spring-boot'": spring-boot
+    - listitem:
+      - link "show questions tagged 'spring-micrometer'": spring-micrometer
+  - link "msosa's user avatar":
+    - img "msosa's user avatar"
+  - link "msosa"
+  - list:
+    - listitem: "11"
+  - time: asked 45 mins ago
+  - text: "-1 votes 0 answers 18 views"
+  - heading "Google Colab Disk Full issue" [level=3]:
+    - link "Google Colab Disk Full issue"
+  - text: How should I clear the google-colab disk completely ? what are the steps ? How can i track the individual details of that disk which file/ projects is consuming how much GB ? I tried to get the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'google-colaboratory'": google-colaboratory
+    - listitem:
+      - link "show questions tagged 'google-cloud-colab-enterprise'": google-cloud-colab-enterprise
+  - link "low_code's user avatar":
+    - img "low_code's user avatar"
+  - link "low_code"
+  - list:
+    - listitem: "1"
+  - time: asked 50 mins ago
+  - text: "-1 votes 0 answers 22 views"
+  - heading "Spring Aspect Method Not Called" [level=3]:
+    - link "Spring Aspect Method Not Called"
+  - text: "I am trying to create a Spring Aspect Around method but it is not getting called. In my GeoLocationUpdateService.java: @Autowired private GeocoderService geocoderService; ... geocoderService...."
+  - list:
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'spring'": spring
+  - link "Axion's user avatar":
+    - img "Axion's user avatar"
+  - link "Axion"
+  - list:
+    - listitem: "1"
+  - time: asked 52 mins ago
+  - text: "-1 votes 0 answers 19 views"
+  - heading "handling lnk2019 with third-party libraries" [level=3]:
+    - link "handling lnk2019 with third-party libraries"
+  - text: "Tools: Visual Studio 2022 , vcpkg (with using vcpkg integrate install commands) and here is how I organized my project WPF Project (Main Application) Serves as the User Interface (UI) layer. C++/CLI ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c++'": c++
+    - listitem:
+      - link "show questions tagged 'c++-cli'": c++-cli
+    - listitem:
+      - link "show questions tagged 'static-libraries'": static-libraries
+    - listitem:
+      - link "show questions tagged 'linker-errors'": linker-errors
+  - link "no noh's user avatar":
+    - img "no noh's user avatar"
+  - link "no noh"
+  - list:
+    - listitem: "1"
+  - time: asked 53 mins ago
+  - text: 0 votes 0 answers 15 views
+  - heading "QTableview in PySide6 calls data() multiple times for rows that should not be visible" [level=3]:
+    - link "QTableview in PySide6 calls data() multiple times for rows that should not be visible"
+  - text: I have tested QTableview in pyside6 using the code below. When QTableview gets focus and we minimize the window when we restore the window suddenly the data() procedure can be called multiple times ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'qtableview'": qtableview
+    - listitem:
+      - link "show questions tagged 'pyside6'": pyside6
+  - link "Ongky's user avatar":
+    - img "Ongky's user avatar"
+  - link "Ongky"
+  - list:
+    - listitem: "39"
+  - time: asked 57 mins ago
+  - text: 0 votes 0 answers 19 views
+  - heading "Quasar build not displaying .webp images after deployment (but files exist in folder)" [level=3]:
+    - link "Quasar build not displaying .webp images after deployment (but files exist in folder)"
+  - text: I’m building a website using Quasar Framework (Vue), and I’m having trouble with .webp images after deployment. Everything works perfectly in development mode. When I run quasar build, the .webp ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'vue.js'": vue.js
+    - listitem:
+      - link "show questions tagged 'vuejs3'": vuejs3
+    - listitem:
+      - link "show questions tagged 'quasar-framework'": quasar-framework
+    - listitem:
+      - link "show questions tagged 'quasar'": quasar
+  - link "Swarup Dhavan's user avatar":
+    - img "Swarup Dhavan's user avatar"
+  - link "Swarup Dhavan"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1612659"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "Only you can stop AI database drops"
+    - listitem:
+      - link "You’re probably underutilizing your GPUs"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "We’re releasing our proactive anti-spam measure network-wide"
+    - listitem:
+      - link "Chat room owners can now establish room guidelines"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 37k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 29k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "CI/CD" [level=1]:
+    - link "CI/CD"
+  - text: 22k Members
+  - button "Join"
+  - text: A collective where developers focused on continuous integration, delivery, and deployment can find, share, and learn about simultaneous development.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Editing a mesh to turn a single tri into a quad?"
+    - listitem:
+      - link "Wild Turkeys in TikZ"
+    - listitem:
+      - link "In Stepwise regression, should one use R² or adjusted R² to describe the change in explained variance contributed by each variable?"
+    - listitem:
+      - link "Did Microsoft Windows popularize Klondike solitaire?"
+    - listitem:
+      - link "Invariance of the interval in Schutz - maths error?"
+    - listitem:
+      - link "Not detained but not free to go"
+    - listitem:
+      - link "Plane accelerate in stationary air vs stationary plane in accelerating airflow?"
+    - listitem:
+      - link "Why are the projection functors in the definition of the product of categories explicitly defined?"
+    - listitem:
+      - link "Was the second copy of the FAT ever used for anything?"
+    - listitem:
+      - link "Why doesn't leaked confidential information often result in prosecutions for the leaker(s)?"
+    - listitem:
+      - link "reformat data for PCA with AWK"
+    - listitem:
+      - link "Approximate set of finite Lebesgue measure by finite union of open intervals"
+    - listitem:
+      - link "Short film about man that saw gore and blood as cake/candy/good instead of disturbing"
+    - listitem:
+      - link "What term describes a person who always remains ill?"
+    - listitem:
+      - link "Can there be a continuous function with infinite derivative everywhere?"
+    - listitem:
+      - link "Can I find the IP address used by an interface, if its IP range is not known, maybe using arp?"
+    - listitem:
+      - link "Advice for approaching a co-advisor"
+    - listitem:
+      - link "Ubuntu 24.04 How to start Firefox in Startup Application"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Business" [level=5]:
+      - link "Business"
+    - list:
+      - listitem:
+        - link "Stack Internal"
+      - listitem:
+        - link "Stack Data Licensing"
+      - listitem:
+        - link "Stack Ads"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.11.24.37235
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By continuing to use this website, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: . By exiting this window, default cookies will be accepted. To reject cookies, select an option from below.
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+    - button "Close"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+> 27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
