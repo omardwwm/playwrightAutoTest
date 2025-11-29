@@ -1,0 +1,567 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale JP in dev Einvironment and Realm asia
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('#signup-modal-container #signup-modal-title')
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Stack Internal
+      - img
+      - paragraph:
+        - text: Stack Overflow for Teams is now called
+        - strong: Stack Internal
+        - text: . Bring the best of human thought and AI automation together at your work.
+      - link "Try for free"
+      - link "Learn more"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,188,265 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 11"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 6 views
+  - heading "Clicking on a button inside a Power Apps gallery will referecne the row below on published app at certain stage of my code execution" [level=3]:
+    - link "Clicking on a button inside a Power Apps gallery will referecne the row below on published app at certain stage of my code execution"
+  - text: I have 2 SharePoint online lists:- SpareParts SparePartIndividual which store the spare part Id for parent item inside a column named "Spare Part ID". The Power Apps canvas's gallery has a ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'powerapps'": powerapps
+    - listitem:
+      - link "show questions tagged 'powerapps-canvas'": powerapps-canvas
+    - listitem:
+      - link "show questions tagged 'powerapps-formula'": powerapps-formula
+  - link "John John's user avatar":
+    - img "John John's user avatar"
+  - link "John John"
+  - list:
+    - listitem: 7,351
+  - time: asked 10 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "Dropping optional borrow in structure" [level=3]:
+    - link "Dropping optional borrow in structure"
+  - text: I am writing a scripting language in rust, and I'm pretty new to the language. When I compile source into byte code I move the compiled symbols (Chunk) out of the function. I am also lazy and don't ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'rust'": rust
+    - listitem:
+      - link "show questions tagged 'borrow-checker'": borrow-checker
+  - link "NongusStudios's user avatar":
+    - img "NongusStudios's user avatar"
+  - link "NongusStudios"
+  - list:
+    - listitem: "147"
+  - time: asked 11 mins ago
+  - text: "-1 votes 0 answers 8 views"
+  - heading "map not loading, what could be the problem?" [level=3]:
+    - link "map not loading, what could be the problem?"
+  - text: I’m building a checkout page with React (Vite + TailwindCSS + Redux) and using React‑Leaflet for the delivery location map. The map renders, but only the marker shows — no roads or tiles are displayed....
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'leaflet'": leaflet
+  - link "Junaed Mustofa Chowdhury's user avatar":
+    - img "Junaed Mustofa Chowdhury's user avatar"
+  - link "Junaed Mustofa Chowdhury"
+  - list:
+    - listitem: "1"
+  - time: asked 20 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Scope Tailwind to certain element" [level=3]:
+    - link "Scope Tailwind to certain element"
+  - text: New to Tailwind and I am asking this as Tailwind is defined as a framework. Not sure if it's feasible but can we scope tailwind to particular div? Putting this in a bit detail as you can understand ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'tailwind-css'": tailwind-css
+  - link "joseph son's user avatar":
+    - img "joseph son's user avatar"
+  - link "joseph son"
+  - list:
+    - listitem: "33"
+  - time: asked 20 mins ago
+  - text: 0 votes 0 answers 14 views
+  - heading "How save specific strings and then put next to lines?" [level=3]:
+    - link "How save specific strings and then put next to lines?"
+  - text: "I'm parsing a file using powershell 5.1 and I almost get my goal but I need help in this part. The input file is like this: CODE=MMH4 description=beg somedata - dduik CODE=PPH2 description=beg Area1 -..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'powershell'": powershell
+    - listitem:
+      - link "show questions tagged 'parsing'": parsing
+  - link "Rasec Malkic's user avatar":
+    - img "Rasec Malkic's user avatar"
+  - link "Rasec Malkic"
+  - list:
+    - listitem: "747"
+  - time: asked 29 mins ago
+  - text: 0 votes 0 answers 7 views
+  - heading "How do I categorize products by price and display them on different pages using JavaScript?" [level=3]:
+    - link "How do I categorize products by price and display them on different pages using JavaScript?"
+  - text: "I am building a shopping website for my stationery shop. I have items like pen, pencil, book, copy, scale, bat, ball, etc. I want to categorize products into price ranges: Budget (₹10–₹100) Mid-..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+  - link "Nikhil kumar jaiswal's user avatar":
+    - img "Nikhil kumar jaiswal's user avatar"
+  - link "Nikhil kumar jaiswal"
+  - list:
+    - listitem: "1"
+  - time: asked 30 mins ago
+  - text: "-4 votes 0 answers 22 views"
+  - heading "What motivated you to choose software development as a career [closed]" [level=3]:
+    - link "What motivated you to choose software development as a career [closed]"
+  - text: I’m trying to understand what factors influence people’s choices. Could you explain what specifically motivated you to choose software development as your career path—such as personal interests, ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'sql'": sql
+    - listitem:
+      - link "show questions tagged 'python-2.7'": python-2.7
+  - link "Likitha Reddy's user avatar":
+    - img "Likitha Reddy's user avatar"
+  - link "Likitha Reddy"
+  - list:
+    - listitem: "1"
+  - time: asked 32 mins ago
+  - text: Advice 0 votes 2 replies 41 views
+  - heading "HTML static webpage - how would I have any of the files present in a particular directory be selected in a src" [level=3]:
+    - link "HTML static webpage - how would I have any of the files present in a particular directory be selected in a src"
+  - text: How would I go about, in an HTML webpage, having a random file in a specific directory be selected in a src? My intent is to have a randomized audio file autoplay whenever I open any webpage on my ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'java'": java
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'css'": css
+  - link "utternovice's user avatar":
+    - img "utternovice's user avatar"
+  - link "utternovice"
+  - list:
+    - listitem: "1"
+  - time: asked 58 mins ago
+  - text: "-8 votes 0 answers 25 views"
+  - heading "Is there a group of prompts to help make sure AI code is DRY and efficient? [closed]" [level=3]:
+    - link "Is there a group of prompts to help make sure AI code is DRY and efficient? [closed]"
+  - text: I just made an app in typescript and it seems solid but I was just wondering if anyone has al list of prompts to verify or improve code with tests, making sure it is dry or to test security flaws. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'typescript'": typescript
+    - listitem:
+      - link "show questions tagged 'testing'": testing
+    - listitem:
+      - link "show questions tagged 'dry'": dry
+  - link "SupremeA's user avatar":
+    - img "SupremeA's user avatar"
+  - link "SupremeA"
+  - list:
+    - listitem: 1,605
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 24 views
+  - heading "In a MongoDB transaction, are index entries updated immediately when an indexed field is modified?" [level=3]:
+    - link "In a MongoDB transaction, are index entries updated immediately when an indexed field is modified?"
+  - text: I’m working with MongoDB transactions (Node.js, replica set). Inside a transaction, I update a document in a way that changes the value of a field that is covered by an index. Later in the same ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'mongodb'": mongodb
+    - listitem:
+      - link "show questions tagged 'mongodb-query'": mongodb-query
+    - listitem:
+      - link "show questions tagged 'transactions'": transactions
+    - listitem:
+      - link "show questions tagged 'mongodb-indexes'": mongodb-indexes
+    - listitem:
+      - link "show questions tagged 'acid'": acid
+  - link "Bear Bile Farming is Torture's user avatar":
+    - img "Bear Bile Farming is Torture's user avatar"
+  - link "Bear Bile Farming is Torture"
+  - list:
+    - listitem: 5,435
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 23 views
+  - heading "Device Admin APK checksum mismatch when provisioning via QR on a fresh Android device" [level=3]:
+    - link "Device Admin APK checksum mismatch when provisioning via QR on a fresh Android device"
+  - text: I'm trying to provision an Android Device Admin app on a completely fresh device using a QR code. Previously, I encountered an error about missing components, but now the app fails with a checksum ...
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'kotlin'": kotlin
+    - listitem:
+      - link "show questions tagged 'device-owner'": device-owner
+  - link "Rasal's user avatar":
+    - img "Rasal's user avatar"
+  - link "Rasal"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 14 views
+  - heading "AuthRetryableFetchException + HandshakeException after app resumes from long background (Flutter, supabase_flutter ^2.10.3)" [level=3]:
+    - link "AuthRetryableFetchException + HandshakeException after app resumes from long background (Flutter, supabase_flutter ^2.10.3)"
+  - text: "After the app stays in the background for 6–8 hours or overnight, all Supabase requests fail with: AuthRetryableFetchException(message: HandshakeException: Connection terminated during handshake, ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'http'": http
+    - listitem:
+      - link "show questions tagged 'supabase'": supabase
+    - listitem:
+      - link "show questions tagged 'supabase-flutter'": supabase-flutter
+  - link "vishal visvakarma's user avatar":
+    - img "vishal visvakarma's user avatar"
+  - link "vishal visvakarma"
+  - list:
+    - listitem: "13"
+  - time: asked 1 hour ago
+  - text: Advice 0 votes 0 replies 14 views
+  - heading "Flutter build issues" [level=3]:
+    - link "Flutter build issues"
+  - text: I have a old laptop and I started my journey in flutter .The problem is with flutter build .every time I run flutter build command firstly it takes much time I also tried to change my local. ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'flutter'": flutter
+    - listitem:
+      - link "show questions tagged 'kotlin'": kotlin
+  - link "PrimeDevs's user avatar":
+    - img "PrimeDevs's user avatar"
+  - link "PrimeDevs"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: "-1 votes 1 answer 21 views"
+  - heading "Failed to fetch when GETting json file from backend using Jwt Token" [level=3]:
+    - link "Failed to fetch when GETting json file from backend using Jwt Token"
+  - text: I am using a spring boot as backend and react frontend to create a website and I am encountering an error when fetching a user profile using browser from the backend.After login i managed to generate ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'jwt'": jwt
+    - listitem:
+      - link "show questions tagged 'fetch-api'": fetch-api
+  - link "mohamed yusuph's user avatar":
+    - img "mohamed yusuph's user avatar"
+  - link "mohamed yusuph"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 1 vote 0 answers 45 views
+  - heading "How can I display the Arabic language fonts?" [level=3]:
+    - link "How can I display the Arabic language fonts?"
+  - text: I use my custom Arabic font in jsPDF, but characters for this font show me wrong. I hear The IranNastaliq font uses the 'cswh' feature for such ligatures. 'cswh' is default-off according to the ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'html'": html
+    - listitem:
+      - link "show questions tagged 'css'": css
+    - listitem:
+      - link "show questions tagged 'pdf'": pdf
+    - listitem:
+      - link "show questions tagged 'jspdf'": jspdf
+  - link "Chris Sermanni's user avatar":
+    - img "Chris Sermanni's user avatar"
+  - link "Chris Sermanni"
+  - list:
+    - listitem: "23"
+  - time: asked 1 hour ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1612551"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "You’re probably underutilizing your GPUs"
+    - listitem:
+      - link "Lightning-as-a-service for agriculture"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Chat room owners can now establish room guidelines"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 37k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "Microsoft Azure" [level=1]:
+    - link "Microsoft Azure"
+  - text: 29k Members
+  - button "Join"
+  - text: A collective for developers to engage, share, and learn about Microsoft Azure’s open-source frameworks, languages, and platform. This collective is organized and managed by the Stack Overflow community.
+  - heading "Mobile Development" [level=1]:
+    - link "Mobile Development"
+  - text: 26k Members
+  - button "Join"
+  - text: A collective for developers who want to share their knowledge and learn more about mobile development practices and platforms
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "Single point in a figure on beamer"
+    - listitem:
+      - link "Why did I freeze to death even though I had cold resistance?"
+    - listitem:
+      - link "Why did Jesus say that he is the light of the world while in it?"
+    - listitem:
+      - link "Simple current source with bjt"
+    - listitem:
+      - link "What damages are recoverable for late delivery of a package?"
+    - listitem:
+      - link "What is the maximum number of damage types for a single attack?"
+    - listitem:
+      - link "Software serial and RS485"
+    - listitem:
+      - link "Why do I get so many applications from Mekelle university students?"
+    - listitem:
+      - link "If photons are the carriers of the electromagnetic force, why isn't electricity made of photons?"
+    - listitem:
+      - link "What is the difference between V-inf+ことない and V-stem+ない"
+    - listitem:
+      - link "Undecidable Checkmate"
+    - listitem:
+      - link "Difference between VOR approach (with DME required) and VOR DME approach?"
+    - listitem:
+      - link "Manga involving the MC playing a computer game connected to a medieval fantasy world"
+    - listitem:
+      - link "constexpr self-referencing struct"
+    - listitem:
+      - link "How should I apply Cure Wounds to a Find Steed mount?"
+    - listitem:
+      - link "About \\def parameter list"
+    - listitem:
+      - link "A (probably wrong) proof that the fundamental Poisson brackets are independent of the special choice of the canonical variables"
+    - listitem:
+      - link "What physical changes to the mouth would cause problems with articulation?"
+    - listitem:
+      - 'link "Magic item feedback: Karmic Ring"'
+    - listitem:
+      - link "Diagnosing non-operational wired doorbell"
+    - listitem:
+      - 'link "stim: why would order of CNOT operations affect detectors"'
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Business" [level=5]:
+      - link "Business"
+    - list:
+      - listitem:
+        - link "Stack Internal"
+      - listitem:
+        - link "Stack Data Licensing"
+      - listitem:
+        - link "Stack Ads"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.11.27.37399
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By continuing to use this website, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: . By exiting this window, default cookies will be accepted. To reject cookies, select an option from below.
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+    - button "Close"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
