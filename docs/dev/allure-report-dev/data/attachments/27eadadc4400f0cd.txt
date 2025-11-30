@@ -1,0 +1,578 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale GB in dev Einvironment and Realm europe
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+    1) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('#signup-modal-container #signup-modal-title')
+    2) <h1 class="s-modal--header" id="signup-modal-title">…</h1> aka locator('h1').filter({ hasText: 'Let\'s set up your homepage' })
+
+Call log:
+  - expect.toBeHidden with timeout 50000ms
+  - waiting for locator('#signup-modal-title')
+
+    at HomePage.checkH1HeadingOK (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:31:60)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:11:18
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Skip to main content"
+  - link "Stack Overflow"
+  - link "About"
+  - button "Products"
+  - link "For Teams"
+  - search:
+    - combobox "Search"
+  - navigation "Topbar":
+    - list:
+      - listitem
+      - listitem
+      - listitem:
+        - link "Log in"
+      - listitem:
+        - link "Sign up"
+- navigation "Primary":
+  - list:
+    - listitem:
+      - list:
+        - listitem:
+          - link "Home"
+        - listitem:
+          - link "Questions"
+        - listitem:
+          - link "AI Assist Labs"
+        - listitem:
+          - link "Tags"
+        - listitem
+        - listitem:
+          - link "Challenges"
+        - listitem:
+          - link "Chat" [expanded]
+        - listitem:
+          - link "Articles"
+        - listitem:
+          - link "Users"
+        - listitem
+        - listitem:
+          - link "Jobs"
+        - listitem:
+          - link "Companies"
+        - listitem:
+          - button "Collectives"
+        - listitem:
+          - paragraph:
+            - text: Communities for your favorite technologies.
+            - link "Explore all Collectives"
+    - listitem:
+      - text: Stack Internal
+      - img
+      - paragraph:
+        - text: Stack Overflow for Teams is now called
+        - strong: Stack Internal
+        - text: . Bring the best of human thought and AI automation together at your work.
+      - link "Try for free"
+      - link "Learn more"
+- main:
+  - heading "Newest Questions" [level=1]
+  - link "Ask Question"
+  - text: 24,188,351 questions
+  - link "Newest"
+  - link "Active"
+  - link "Bountied 13"
+  - link "Unanswered"
+  - button "More"
+  - button "Filter"
+  - text: 0 votes 0 answers 9 views
+  - heading "OpenAPI Spec client fail to compile with ambiguous types" [level=3]:
+    - link "OpenAPI Spec client fail to compile with ambiguous types"
+  - text: "I downloaded the OpenAI's OpenAPI Spec file and tried to generate and compile the client and faced a few issues and wonder if anyone knows the fix for it. This is the specification: https://app...."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'openai-api'": openai-api
+    - listitem:
+      - link "show questions tagged 'openapi-generator'": openapi-generator
+  - link "MaduKan's user avatar":
+    - img "MaduKan's user avatar"
+  - link "MaduKan"
+  - list:
+    - listitem: "896"
+  - time: asked 15 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "How to push data from device to my digital ocean cloud server using zkteco senseface 2a which has adms" [level=3]:
+    - link "How to push data from device to my digital ocean cloud server using zkteco senseface 2a which has adms"
+  - text: I am working on the node js attendance project, so now i have to setup a zkteco machin, when user swipe the card the data will push directly from device to the digital ocean cloud server. I am using ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'node.js'": node.js
+    - listitem:
+      - link "show questions tagged 'push'": push
+    - listitem:
+      - link "show questions tagged 'zkteco'": zkteco
+  - link "Maktum's user avatar":
+    - img "Maktum's user avatar"
+  - link "Maktum"
+  - list:
+    - listitem: "56"
+  - time: asked 17 mins ago
+  - text: 0 votes 0 answers 16 views
+  - heading "In Odoo.sh production branch is not updating. How to fix Odoo.sh branch error?" [level=3]:
+    - link "In Odoo.sh production branch is not updating. How to fix Odoo.sh branch error?"
+  - text: You know I have built a website using Odoo custom module. I have published the site using Odoo.sh + Cloudflare. It was working fine, and I can access the site globally. But suddenly it's stopped ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'web'": web
+    - listitem:
+      - link "show questions tagged 'odoo'": odoo
+    - listitem:
+      - link "show questions tagged 'odoo.sh'": odoo.sh
+  - link "Kafiul Islam's user avatar":
+    - img "Kafiul Islam's user avatar"
+  - link "Kafiul Islam"
+  - list:
+    - listitem: "134"
+  - time: asked 39 mins ago
+  - text: 0 votes 0 answers 19 views
+  - heading "iOS 26 glass effect does not center align an image in toolbar in landscape mode" [level=3]:
+    - link "iOS 26 glass effect does not center align an image in toolbar in landscape mode"
+  - text: "I have this code in SwiftUI: import SwiftUI struct ContentView: View { var body: some View { NavigationStack { VStack { Image(systemName: \"globe\") ..."
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'ios'": ios
+    - listitem:
+      - link "show questions tagged 'swift'": swift
+    - listitem:
+      - link "show questions tagged 'swiftui'": swiftui
+  - link "HL666's user avatar":
+    - img "HL666's user avatar"
+  - link "HL666"
+  - list:
+    - listitem: "336"
+  - time: asked 47 mins ago
+  - text: 0 votes 0 answers 8 views
+  - heading "Chrome throws “Failed to connect to MetaMask” even though my React project does NOT use crypto/web3 (Opera works fine)" [level=3]:
+    - link "Chrome throws “Failed to connect to MetaMask” even though my React project does NOT use crypto/web3 (Opera works fine)"
+  - text: "enter image description here I’m building a normal React project (not related to blockchain, crypto, or MetaMask). However, Chrome gives this uncaught error in the console: Failed to connect to ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'reactjs'": reactjs
+    - listitem:
+      - link "show questions tagged 'google-chrome'": google-chrome
+    - listitem:
+      - link "show questions tagged 'google-chrome-extension'": google-chrome-extension
+    - listitem:
+      - link "show questions tagged 'metamask'": metamask
+  - link "Philip Chege's user avatar":
+    - img "Philip Chege's user avatar"
+  - link "Philip Chege"
+  - list:
+    - listitem: "1"
+  - time: asked 55 mins ago
+  - text: "-1 votes 0 answers 10 views"
+  - heading "Which compiler optimizations can break code without volatile when calling through function pointers?" [level=3]:
+    - link "Which compiler optimizations can break code without volatile when calling through function pointers?"
+  - text: "Here is the code: void (*volatile sys_func)(void); void main(int argc, char **argv) { int i, j; for (j = 0; j < 3; ++j) { for (i = 0; i < 10000; ++i); sys_func(); } ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'c'": c
+    - listitem:
+      - link "show questions tagged 'operating-system'": operating-system
+    - listitem:
+      - link "show questions tagged 'compiler-optimization'": compiler-optimization
+    - listitem:
+      - link "show questions tagged 'volatile'": volatile
+  - link "chav1s's user avatar":
+    - img "chav1s's user avatar"
+  - link "chav1s"
+  - list:
+    - listitem: "39"
+  - time: asked 56 mins ago
+  - text: "-3 votes 0 answers 14 views"
+  - heading "On Prem Server's Performance Monitoring [closed]" [level=3]:
+    - link "On Prem Server's Performance Monitoring [closed]"
+  - text: How can I design and implement a fully on-premises observability architecture for a virtualized datacenter—where a single physical host runs multiple sub-servers—and ensure that I can centrally and ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'performance'": performance
+    - listitem:
+      - link "show questions tagged 'security'": security
+    - listitem:
+      - link "show questions tagged 'operating-system'": operating-system
+    - listitem:
+      - link "show questions tagged 'monitoring'": monitoring
+    - listitem:
+      - link "show questions tagged 'on-premise'": on-premise
+  - link "John Benny Kancherla's user avatar":
+    - img "John Benny Kancherla's user avatar"
+  - link "John Benny Kancherla"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: "-2 votes 0 answers 19 views"
+  - heading "Detecting changes to dictionary keys in Python without continuous polling [closed]" [level=3]:
+    - link "Detecting changes to dictionary keys in Python without continuous polling [closed]"
+  - text: I am working on a configuration manager in python that loads settings into a dictionary and updates them dynamically during runtime. The issue I am facing is detecting when keys inside the dictionary ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'dictionary'": dictionary
+    - listitem:
+      - link "show questions tagged 'events'": events
+    - listitem:
+      - link "show questions tagged 'observer-pattern'": observer-pattern
+  - link "Jahnavi Sanku's user avatar":
+    - img "Jahnavi Sanku's user avatar"
+  - link "Jahnavi Sanku"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 9 views
+  - heading "Firebase Firestore Enterprise edition - Set rules for users in the database" [level=3]:
+    - link "Firebase Firestore Enterprise edition - Set rules for users in the database"
+  - text: How to create the rules and connect (read / write using the firestore database) from an android app? Google Firestore Editions Overview val db = Firebase.firestore val userData = hashMapOf( "...
+  - link
+  - link
+  - list:
+    - listitem:
+      - link "show questions tagged 'android'": android
+    - listitem:
+      - link "show questions tagged 'firebase'": firebase
+    - listitem:
+      - link "show questions tagged 'google-cloud-firestore'": google-cloud-firestore
+    - listitem:
+      - link "show questions tagged 'android-jetpack-compose'": android-jetpack-compose
+  - link "Joseph Wambura's user avatar":
+    - img "Joseph Wambura's user avatar"
+  - link "Joseph Wambura"
+  - list:
+    - listitem: 3,546
+  - time: asked 1 hour ago
+  - text: 0 votes 0 answers 22 views
+  - heading "Can you explain why Rust compiler doesn't see this trait item?" [level=3]:
+    - link "Can you explain why Rust compiler doesn't see this trait item?"
+  - text: "I have to make a small modification to a Rust code, but I don't know this particular language. Here is a small struct Terminator: use std::time::Duration; use jagua_rs::Instant; /// Generic trait for ..."
+  - list:
+    - listitem:
+      - link "show questions tagged 'rust'": rust
+    - listitem:
+      - link "show questions tagged 'traits'": traits
+  - link "Paul Jurczak's user avatar":
+    - img "Paul Jurczak's user avatar"
+  - link "Paul Jurczak"
+  - list:
+    - listitem: 8,630
+  - time: asked 1 hour ago
+  - text: "-2 votes 0 answers 19 views"
+  - heading "Visual Studio lists errors for files which don't exist" [level=3]:
+    - link "Visual Studio lists errors for files which don't exist"
+  - text: I'm working on an ASP.NET Core MVC project in .NET version 10.0.100, but I'm getting some errors for a class named CustomAuthenticationTicket.cs which used to be in MelliMaharat.Web.Middlewares ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'visual-studio'": visual-studio
+  - link "M. Nazarkhani's user avatar":
+    - img "M. Nazarkhani's user avatar"
+  - link "M. Nazarkhani"
+  - list:
+    - listitem: "74"
+  - time: asked 1 hour ago
+  - text: "-4 votes 0 answers 20 views"
+  - heading "How to get pinescript read ta codes [closed]" [level=3]:
+    - link "How to get pinescript read ta codes [closed]"
+  - text: I have a script which reads lowest lows and highest high. What I want now is to do a draw on liquidity alert where a candle low is below previous ta.lowest and closes above ta.lowest. Here's what I ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'pine-script-v5'": pine-script-v5
+  - link "Steven Bold's user avatar":
+    - img "Steven Bold's user avatar"
+  - link "Steven Bold"
+  - list:
+    - listitem: "1"
+  - time: asked 1 hour ago
+  - text: 0 votes 1 answer 28 views
+  - heading "Pyrogram does not recognize message_entities" [level=3]:
+    - link "Pyrogram does not recognize message_entities"
+  - text: I have a problem with forwarding messages with caption_entities. Attached below is the code that I use to make the transfer itself, as well as the result of its operation. The result shows that ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'python'": python
+    - listitem:
+      - link "show questions tagged 'debugging'": debugging
+    - listitem:
+      - link "show questions tagged 'telegram'": telegram
+    - listitem:
+      - link "show questions tagged 'aiogram'": aiogram
+    - listitem:
+      - link "show questions tagged 'pyrogram'": pyrogram
+  - link "user31645108's user avatar":
+    - img "user31645108's user avatar"
+  - link "user31645108"
+  - list:
+    - listitem: "59"
+  - time: asked 1 hour ago
+  - text: "-6 votes 0 answers 29 views"
+  - heading "Dont know what this is [closed]" [level=3]:
+    - link "Dont know what this is [closed]"
+  - text: 1:"$Sreact.fragment" 6:I[97215,[],""] 7:I[61123,[],""] 9:I[57468,[],"OutletBoundary"] b:I[57468,[],"MetadataBoundary"] d:I[57468,[],"...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+  - link "Jay Geezy's user avatar":
+    - img "Jay Geezy's user avatar"
+  - link "Jay Geezy"
+  - list:
+    - listitem: "1"
+  - time: asked 2 hours ago
+  - text: 0 votes 0 answers 22 views
+  - heading "How to do a previous/next function?" [level=3]:
+    - link "How to do a previous/next function?"
+  - text: I've been working on this personal website and I had this section where I blog post, but instead of having an never ending blocks of post that you would have to scroll down, i wanted to implement a ...
+  - list:
+    - listitem:
+      - link "show questions tagged 'javascript'": javascript
+    - listitem:
+      - link "show questions tagged 'function'": function
+    - listitem:
+      - link "show questions tagged 'notepad++'": notepad++
+    - listitem:
+      - link "show questions tagged 'web-testing'": web-testing
+  - link "Shalieen2448's user avatar":
+    - img "Shalieen2448's user avatar"
+  - link "Shalieen2448"
+  - list:
+    - listitem: "1"
+  - time: asked 2 hours ago
+  - link "15"
+  - link "30"
+  - link "50"
+  - text: per page 1
+  - link "2"
+  - link "3"
+  - link "4"
+  - link "5"
+  - text: …
+  - link "1612557"
+  - link "Next"
+- complementary "sidebar":
+  - list:
+    - listitem: The Overflow Blog
+    - listitem:
+      - link "You’re probably underutilizing your GPUs"
+    - listitem:
+      - link "Lightning-as-a-service for agriculture"
+    - listitem: Featured on Meta
+    - listitem:
+      - link "Chat room owners can now establish room guidelines"
+    - listitem:
+      - 'link "Policy: Generative AI (e.g., ChatGPT) is banned"'
+  - text: Collectives
+  - link "see all"
+  - heading "Google Cloud" [level=1]:
+    - link "Google Cloud"
+  - text: 66k Members
+  - button "Join"
+  - text: A collective for developers who utilize Google Cloud’s infrastructure and platform capabilities. This collective is organized and managed by the Stack Overflow community.
+  - heading "AWS" [level=1]:
+    - link "AWS"
+  - text: 37k Members
+  - button "Join"
+  - text: A collective for developers who utilize Amazon Web Services' infrastructure and platform capabilities. The AWS Collective is organized and managed by the Stack Overflow community as a resource for developers.
+  - heading "NLP" [level=1]:
+    - link "NLP"
+  - text: 12k Members
+  - button "Join"
+  - text: A collective focused on NLP (natural language processing), the transformation or extraction of useful information from natural language data.
+  - button "Report this ad"
+  - button "Report this ad"
+  - heading "Hot Network Questions" [level=4]:
+    - link "Hot Network Questions"
+  - list:
+    - listitem:
+      - link "A novel where a time traveler arrived by mistake at the peak of the Black Death"
+    - listitem:
+      - link "algorithm2e - Functional programming style match-with using custom Switch"
+    - listitem:
+      - link "Resolving skyscraper sheaves on a quadric using spinor bundles"
+    - listitem:
+      - link "How to run a command in a terminal only if the previous commands succeed?"
+    - listitem:
+      - link "What does \"origin of the world\" vulgo \"Big Bang\" mean?"
+    - listitem:
+      - link "Using ASCII Art & pxpic"
+    - listitem:
+      - link "Why optional studs on MTB shoes?"
+    - listitem:
+      - link "Why does JavaScript use autoboxing?"
+    - listitem:
+      - link "Can I backup Legends Arceus save file to use, in case I want to format my Switch?"
+    - listitem:
+      - link "Visualizing Different Coordinate Representations of Complex Numbers"
+    - listitem:
+      - link "Can you help me identify this location from 1918?"
+    - listitem:
+      - link "Making a case for a defensive infantry wedge formation"
+    - listitem:
+      - link "How to deserialize the account in rust fronted?"
+    - listitem:
+      - link "Define Min and Max Values in Geometry Nodes Relatively to Another Mesh"
+    - listitem:
+      - link "The Airbus A320 that pitched down due to solar radiation recently. Why did that happen? I thought the computers vote the corrupted one out and ignore?"
+    - listitem:
+      - link "How can I bend or deform an object to create a concave or pincushion shape?"
+    - listitem:
+      - link "Is a proper wire nut connection possible if wires don’t twist?"
+    - listitem:
+      - link "Find Extreme UV data source for the Sun"
+    - listitem:
+      - link "Problem with the proof of Theorem 5.1.2 in Mac Lane's \"Categories for the Working Mathematician\"?"
+    - listitem:
+      - link "Printing Service is not available after software update on 24.04"
+  - link "more hot questions"
+- contentinfo:
+  - link "Stack Overflow"
+  - navigation "Footer":
+    - heading "Stack Overflow" [level=5]:
+      - link "Stack Overflow"
+    - list:
+      - listitem:
+        - link "Questions"
+      - listitem:
+        - link "Help"
+      - listitem:
+        - link "Chat"
+    - heading "Business" [level=5]:
+      - link "Business"
+    - list:
+      - listitem:
+        - link "Stack Internal"
+      - listitem:
+        - link "Stack Data Licensing"
+      - listitem:
+        - link "Stack Ads"
+    - heading "Company" [level=5]:
+      - link "Company"
+    - list:
+      - listitem:
+        - link "About"
+      - listitem:
+        - link "Press"
+      - listitem:
+        - link "Work Here"
+      - listitem:
+        - link "Legal"
+      - listitem:
+        - link "Privacy Policy"
+      - listitem:
+        - link "Terms of Service"
+      - listitem:
+        - link "Contact Us"
+      - listitem:
+        - button "Your Privacy Choices"
+      - listitem:
+        - link "Cookie Policy"
+    - heading "Stack Exchange Network" [level=5]:
+      - link "Stack Exchange Network"
+    - list:
+      - listitem:
+        - link "Technology"
+      - listitem:
+        - link "Culture & recreation"
+      - listitem:
+        - link "Life & arts"
+      - listitem:
+        - link "Science"
+      - listitem:
+        - link "Professional"
+      - listitem:
+        - link "Business"
+      - listitem:
+        - link "API"
+      - listitem:
+        - link "Data"
+  - list:
+    - listitem:
+      - link "Blog"
+    - listitem:
+      - link "Facebook"
+    - listitem:
+      - link "Twitter"
+    - listitem:
+      - link "LinkedIn"
+    - listitem:
+      - link "Instagram"
+  - paragraph:
+    - text: Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under
+    - link "CC BY-SA"
+    - text: . rev 2025.11.27.37399
+- region "Cookie banner":
+  - dialog "Privacy":
+    - text: By continuing to use this website, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our
+    - link "Cookie Policy"
+    - text: . By exiting this window, default cookies will be accepted. To reject cookies, select an option from below.
+    - button "Necessary cookies only"
+    - button "Customize settings, Opens the preference center dialog": Customize settings
+    - button "Close"
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+  23 |     await this.page.waitForLoadState("networkidle");
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+> 31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+     |                                                            ^ Error: expect.toBeHidden: Error: strict mode violation: locator('#signup-modal-title') resolved to 2 elements:
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
