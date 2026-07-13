@@ -1,0 +1,680 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: GO HOME PAGE OK for Locale GB in int Einvironment and Realm europe
+- Location: /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:8:1
+
+# Error details
+
+```
+Error: page.waitForLoadState: Test timeout of 30000ms exceeded.
+=========================== logs ===========================
+  "commit" event fired
+  "domcontentloaded" event fired
+  "load" event fired
+============================================================
+    at HomePage.goto (/home/runner/work/playwrightAutoTest/playwrightAutoTest/pages/homePage.js:23:21)
+    at /home/runner/work/playwrightAutoTest/playwrightAutoTest/tests/home.spec.js:10:3
+```
+
+# Page snapshot
+
+```yaml
+- navigation "Shortcuts menu":
+  - heading "Skip to" [level=2]
+  - list "Skip to":
+    - listitem:
+      - link "main content": Main content
+  - heading "Keyboard shortcuts" [level=2]
+  - list "Keyboard shortcuts":
+    - listitem:
+      - link "Search, alt, forward slash"
+    - listitem:
+      - link "Cart, shift, alt, c"
+    - listitem:
+      - link "Home, shift, alt, h"
+    - listitem:
+      - link "Your orders, shift, alt, o"
+    - listitem:
+      - button "Show/hide shortcuts, shift, alt, z"
+  - text: To move between items, use your keyboard's up or down arrows.
+- banner:
+  - navigation "Primary":
+    - link "Amazon"
+    - button "Delivering to Chicago 60602 Update location"
+    - search:
+      - text: All
+      - combobox "Select the department you want to search in":
+        - option "All Departments" [selected]
+        - option "Alexa Skills"
+        - option "Amazon Autos"
+        - option "Amazon Devices"
+        - option "Amazon Fresh"
+        - option "Amazon Global Store"
+        - option "Amazon Haul"
+        - option "Amazon One Medical"
+        - option "Amazon Pharmacy"
+        - option "Amazon Resale"
+        - option "Appliances"
+        - option "Apps & Games"
+        - option "Arts, Crafts & Sewing"
+        - option "Audible Books & Originals"
+        - option "Automotive Parts & Accessories"
+        - option "Baby"
+        - option "Beauty & Personal Care"
+        - option "Books"
+        - option "CDs & Vinyl"
+        - option "Cell Phones & Accessories"
+        - option "Clothing, Shoes & Jewelry"
+        - option "Women's Clothing, Shoes & Jewelry"
+        - option "Men's Clothing, Shoes & Jewelry"
+        - option "Girl's Clothing, Shoes & Jewelry"
+        - option "Boy's Clothing, Shoes & Jewelry"
+        - option "Baby Clothing, Shoes & Jewelry"
+        - option "Collectibles & Fine Art"
+        - option "Computers"
+        - option "Credit and Payment Cards"
+        - option "Digital Music"
+        - option "Electronics"
+        - option "Garden & Outdoor"
+        - option "Gift Cards"
+        - option "Grocery & Gourmet Food"
+        - option "Handmade"
+        - option "Health, Household & Baby Care"
+        - option "Home & Business Services"
+        - option "Home & Kitchen"
+        - option "Industrial & Scientific"
+        - option "Just for Prime"
+        - option "Kindle Store"
+        - option "Luggage & Travel Gear"
+        - option "Luxury Stores"
+        - option "Magazine Subscriptions"
+        - option "Movies & TV"
+        - option "Musical Instruments"
+        - option "Office Products"
+        - option "Pet Supplies"
+        - option "Premium Beauty"
+        - option "Prime Video"
+        - option "Same-Day Store"
+        - option "Smart Home"
+        - option "Software"
+        - option "Sports & Outdoors"
+        - option "Subscribe & Save"
+        - option "Subscription Boxes"
+        - option "Tools & Home Improvement"
+        - option "Toys & Games"
+        - option "Under $10"
+        - option "Video Games"
+        - option "Vons"
+        - option "Whole Foods Market"
+      - searchbox "Search Amazon"
+      - button "Go"
+    - link "Choose a language for shopping in Amazon United States. The current selection is English (EN).":
+      - img "United States"
+      - text: EN
+    - button "Expand to Change Language or Country"
+    - link "Hello, sign in Account & Lists"
+    - button "Expand Account and Lists"
+    - link "Returns & Orders"
+    - link "0 items in cart"
+    - button "Open All Categories Menu": All
+    - list:
+      - listitem:
+        - link "Health AI"
+      - listitem:
+        - link "Amazon Haul"
+      - listitem:
+        - link "Medical Care"
+        - button "Medical Care Details"
+      - listitem:
+        - link "Amazon Basics"
+      - listitem:
+        - link "Best Sellers"
+      - listitem:
+        - link "Prime"
+        - button "Prime Details"
+      - listitem:
+        - link "Today's Deals"
+      - listitem:
+        - link "New Releases"
+      - listitem:
+        - link "Books"
+      - listitem:
+        - link "Groceries"
+        - button "Groceries Details"
+      - listitem:
+        - link "Whole Foods"
+      - listitem:
+        - link "Gift Cards"
+        - button "Gift Cards Details"
+      - listitem:
+        - link "Sell"
+      - listitem:
+        - link "Music"
+      - listitem:
+        - link "Registry"
+      - listitem:
+        - link "Fashion"
+      - listitem:
+        - link "Amazon Home"
+        - button "Amazon Home Details"
+      - listitem:
+        - link "Automotive"
+      - listitem:
+        - link "Toys & Games"
+        - button "Toys & Games Details"
+      - listitem:
+        - link "Home Improvement"
+        - button "Home Improvement Details"
+      - listitem:
+        - link "Sports & Outdoors"
+      - listitem:
+        - link "Baby"
+      - listitem:
+        - link "Smart Home"
+      - listitem:
+        - link "Shop By Interest"
+      - listitem:
+        - link "Pharmacy"
+      - listitem:
+        - link "Kindle Books"
+      - listitem:
+        - link "Luxury"
+      - listitem:
+        - link "Beauty & Personal Care"
+- main:
+  - list:
+    - listitem:
+      - link "Great prices on school supplies Great prices on school supplies":
+        - heading "Great prices on school supplies" [level=3]
+        - img "Great prices on school supplies"
+    - listitem:
+      - link "New release World’s smallest smart ring Oura Ring":
+        - text: New release
+        - heading "World’s smallest smart ring" [level=3]
+        - img "Oura Ring"
+      - link "World’s smallest smart ring"
+      - region "Video Player": Video Player is loading.
+    - listitem:
+      - link "Premium brands Summer wedding guest styles Summer wedding guest styles":
+        - text: Premium brands
+        - heading "Summer wedding guest styles" [level=3]
+        - img "Summer wedding guest styles"
+    - listitem:
+      - link "Get ready for school Shop our Top 26+ kids' backpacks":
+        - text: Get ready for school
+        - heading "Shop our Top 26+ kids' backpacks" [level=3]
+      - list:
+        - listitem:
+          - link "JanSport SuperBreak One Backpack - Durable, Lightweight Bag with 1 Main Compartment, Front Utility Pocket with Built-in Organizer, Premium Backpack, Flower Market":
+            - img "JanSport SuperBreak One Backpack - Durable, Lightweight Bag with 1 Main Compartment, Front Utility Pocket with Built-in Organizer, Premium Backpack, Flower Market"
+        - listitem:
+          - link "Cotton Campus Backpack, Garden Green Leaf, One Size":
+            - img "Cotton Campus Backpack, Garden Green Leaf, One Size"
+        - listitem:
+          - link "Vans Old Skool Sport Backpack | Unisex Everyday Laptop Bag, 15\" Computer Sleeve, Front Pocket,Racing Red/Antelope,One Size":
+            - img "Vans Old Skool Sport Backpack | Unisex Everyday Laptop Bag, 15\" Computer Sleeve, Front Pocket,Racing Red/Antelope,One Size"
+        - listitem:
+          - link "Nike Unisex Brasilia 9.5 Training Backpack (Medium, 24L), University Red/Black/White, MISC":
+            - img "Nike Unisex Brasilia 9.5 Training Backpack (Medium, 24L), University Red/Black/White, MISC"
+    - listitem:
+      - link "Upgrades for college Top 26 speakers & headphones":
+        - text: Upgrades for college
+        - heading "Top 26 speakers & headphones" [level=3]
+      - list:
+        - listitem:
+          - link "JBL Grip - Compact Bluetooth Speaker with Bold JBL Pro Sound and Ambient Light, up to 14 Hours of Playtime, Water, Dust and Drop-Proof (IP68), & Multi-Speaker Connection with Auracast™ (Purple)":
+            - img "JBL Grip - Compact Bluetooth Speaker with Bold JBL Pro Sound and Ambient Light, up to 14 Hours of Playtime, Water, Dust and Drop-Proof (IP68), & Multi-Speaker Connection with Auracast™ (Purple)"
+        - listitem:
+          - link "Bose QuietComfort Ultra Bluetooth Headphones, Wireless Headphones with Spatial Audio, Over Ear Noise Cancelling with Mic, Up to 24 Hours of Playtime, Deep Plum - Limited Edition Color":
+            - img "Bose QuietComfort Ultra Bluetooth Headphones, Wireless Headphones with Spatial Audio, Over Ear Noise Cancelling with Mic, Up to 24 Hours of Playtime, Deep Plum - Limited Edition Color"
+        - listitem:
+          - link "JBL Clip 5 - Ultra-Portable, Waterproof & Dustproof Bluetooth Speaker, Big JBL Pro Sound with Punchy bass, Integrated Carabiner, Up to 12 Hours of Play, Made in Part with Recycled Materials (Red)":
+            - img "JBL Clip 5 - Ultra-Portable, Waterproof & Dustproof Bluetooth Speaker, Big JBL Pro Sound with Punchy bass, Integrated Carabiner, Up to 12 Hours of Play, Made in Part with Recycled Materials (Red)"
+        - listitem:
+          - link "JBL Go 4 - Ultra-Portable, Waterproof and Dustproof Bluetooth Speaker, Big JBL Pro Sound with Punchy bass, 7-Hour Built-in Battery, Made in Part with Recycled Materials (Pink)":
+            - img "JBL Go 4 - Ultra-Portable, Waterproof and Dustproof Bluetooth Speaker, Big JBL Pro Sound with Punchy bass, 7-Hour Built-in Battery, Made in Part with Recycled Materials (Pink)"
+    - listitem:
+      - link "New on Amazon! Shop basics built to last Duluth New on Amazon! Shop basics built to last":
+        - text: New on Amazon!
+        - heading "Shop basics built to last" [level=3]
+        - img "Duluth"
+        - img "New on Amazon! Shop basics built to last"
+    - listitem "Loading more"
+  - link "Get your dorm essentials - Shop more for college":
+    - heading "Get your dorm essentials" [level=3]
+  - list:
+    - listitem:
+      - link "Storage":
+        - img "Storage"
+        - text: Storage
+    - listitem:
+      - link "Bath":
+        - img "Bath"
+        - text: Bath
+    - listitem:
+      - link "Decor":
+        - img "Decor"
+        - text: Decor
+    - listitem:
+      - link "Bedding":
+        - img "Bedding"
+        - text: Bedding
+  - link "Pre-loved summer picks - Shop Amazon Luxury":
+    - heading "Pre-loved summer picks" [level=3]
+  - list:
+    - listitem:
+      - link "Chanel":
+        - img "Chanel"
+        - text: Chanel
+    - listitem:
+      - link "Cartier":
+        - img "Cartier"
+        - text: Cartier
+    - listitem:
+      - link "Van Cleef & Arpels":
+        - img "Van Cleef & Arpels"
+        - text: Van Cleef & Arpels
+    - listitem:
+      - link "Louis Vuitton":
+        - img "Louis Vuitton"
+        - text: Louis Vuitton
+  - link "Summer fitness must-haves - Shop exercise finds":
+    - heading "Summer fitness must-haves" [level=3]
+  - list:
+    - listitem:
+      - link "Water bottles":
+        - img "Water bottles"
+        - text: Water bottles
+    - listitem:
+      - link "Strength":
+        - img "Strength"
+        - text: Strength
+    - listitem:
+      - link "Running":
+        - img "Running"
+        - text: Running
+    - listitem:
+      - link "Yoga":
+        - img "Yoga"
+        - text: Yoga
+  - link "Shop by grade - Shop more for school":
+    - heading "Shop by grade" [level=3]
+  - list:
+    - listitem:
+      - link "Pre-K & Kindergarten":
+        - img "Pre-K & Kindergarten"
+        - text: Pre-K & Kindergarten
+    - listitem:
+      - link "Elementary School":
+        - img "Elementary School"
+        - text: Elementary School
+    - listitem:
+      - link "Middle School":
+        - img "Middle School"
+        - text: Middle School
+    - listitem:
+      - link "High School":
+        - img "High School"
+        - text: High School
+  - link "Premium summer picks - Shop the collection":
+    - heading "Premium summer picks" [level=3]
+  - list:
+    - listitem:
+      - link "Summer edit":
+        - img "Summer edit"
+        - text: Summer edit
+    - listitem:
+      - link "Getaway-ready":
+        - img "Getaway-ready"
+        - text: Getaway-ready
+    - listitem:
+      - link "Backyard living":
+        - img "Backyard living"
+        - text: Backyard living
+    - listitem:
+      - link "Top 100+":
+        - img "Top 100+"
+        - text: Top 100+
+  - link "College picks under $25 - Shop more for college":
+    - heading "College picks under $25" [level=3]
+  - list:
+    - listitem:
+      - link "Laundry":
+        - img "Laundry"
+        - text: Laundry
+    - listitem:
+      - link "Beauty & self care":
+        - img "Beauty & self care"
+        - text: Beauty & self care
+    - listitem:
+      - link "Water bottles":
+        - img "Water bottles"
+        - text: Water bottles
+    - listitem:
+      - link "Kitchen":
+        - img "Kitchen"
+        - text: Kitchen
+  - link "Women's summer fashion - Shop warm-weather must-haves":
+    - heading "Women's summer fashion" [level=3]
+  - list:
+    - listitem:
+      - link "Dresses":
+        - img "Dresses"
+        - text: Dresses
+    - listitem:
+      - link "Shoes":
+        - img "Shoes"
+        - text: Shoes
+    - listitem:
+      - link "Accessories":
+        - img "Accessories"
+        - text: Accessories
+    - listitem:
+      - link "Swim":
+        - img "Swim"
+        - text: Swim
+  - link "Golden hour glam - Shop luxury fashion":
+    - heading "Golden hour glam" [level=3]
+  - list:
+    - listitem:
+      - link "Clothing":
+        - img "Clothing"
+        - text: Clothing
+    - listitem:
+      - link "Bags":
+        - img "Bags"
+        - text: Bags
+    - listitem:
+      - link "Jewelry":
+        - img "Jewelry"
+        - text: Jewelry
+    - listitem:
+      - link "Shoes":
+        - img "Shoes"
+        - text: Shoes
+- complementary "Your recently viewed items and featured recommendations"
+- button "Back to top"
+- heading "Get to Know Us" [level=6]
+- list:
+  - listitem:
+    - link "Careers"
+  - listitem:
+    - link "Amazon Newsletter"
+  - listitem:
+    - link "About Amazon"
+  - listitem:
+    - link "Accessibility"
+  - listitem:
+    - link "Sustainability"
+  - listitem:
+    - link "Press Center"
+  - listitem:
+    - link "Investor Relations"
+  - listitem:
+    - link "Amazon Devices"
+  - listitem:
+    - link "Amazon Science"
+- heading "Make Money with Us" [level=6]
+- list:
+  - listitem:
+    - link "Sell on Amazon"
+  - listitem:
+    - link "Sell apps on Amazon"
+  - listitem:
+    - link "Supply to Amazon"
+  - listitem:
+    - link "Protect & Build Your Brand"
+  - listitem:
+    - link "Become an Affiliate"
+  - listitem:
+    - link "Become a Delivery Driver"
+  - listitem:
+    - link "Start a Package Delivery Business"
+  - listitem:
+    - link "Advertise Your Products"
+  - listitem:
+    - link "Self-Publish with Us"
+  - listitem:
+    - link "Become an Amazon Hub Partner"
+  - listitem:
+    - link "See More Ways to Make Money"
+- heading "Amazon Payment Products" [level=6]
+- list:
+  - listitem:
+    - link "Amazon Visa"
+  - listitem:
+    - link "Amazon Store Card"
+  - listitem:
+    - link "Amazon Secured Card"
+  - listitem:
+    - link "Amazon Business Card"
+  - listitem:
+    - link "Shop with Points"
+  - listitem:
+    - link "Credit Card Marketplace"
+  - listitem:
+    - link "Reload Your Balance"
+  - listitem:
+    - link "Gift Cards"
+  - listitem:
+    - link "Amazon Currency Converter"
+- heading "Let Us Help You" [level=6]
+- list:
+  - listitem:
+    - link "Your Account"
+  - listitem:
+    - link "Your Orders"
+  - listitem:
+    - link "Shipping Rates & Policies"
+  - listitem:
+    - link "Amazon Prime"
+  - listitem:
+    - link "Returns & Replacements"
+  - listitem:
+    - link "Manage Your Content and Devices"
+  - listitem:
+    - link "Recalls and Product Safety Alerts"
+  - listitem:
+    - link "Registry & Gift List"
+  - listitem:
+    - link "Help"
+- link "Amazon US Home"
+- link "Choose a language for shopping. Current selection is English.": English
+- button "Expand to Change Language or Country"
+- button "Choose a country/region for shopping. The current selection is United States.": United States
+- navigation "More on Amazon":
+  - list:
+    - listitem:
+      - link "Amazon Music Stream millions of songs":
+        - heading "Amazon Music" [level=5]
+        - text: Stream millions of songs
+    - listitem:
+      - link "Amazon Ads Reach customers wherever they spend their time":
+        - heading "Amazon Ads" [level=5]
+        - text: Reach customers wherever they spend their time
+    - listitem:
+      - link "6pm Score deals on fashion brands":
+        - heading "6pm" [level=5]
+        - text: Score deals on fashion brands
+    - listitem:
+      - link "AbeBooks Books, art & collectibles":
+        - heading "AbeBooks" [level=5]
+        - text: Books, art & collectibles
+    - listitem:
+      - link "ACX Audiobook Publishing Made Easy":
+        - heading "ACX" [level=5]
+        - text: Audiobook Publishing Made Easy
+    - listitem:
+      - link "Sell on Amazon Start a Selling Account":
+        - heading "Sell on Amazon" [level=5]
+        - text: Start a Selling Account
+    - listitem:
+      - link "Veeqo Shipping Software Inventory Management":
+        - heading "Veeqo" [level=5]
+        - text: Shipping Software Inventory Management
+  - list:
+    - listitem:
+      - link "Amazon Business Everything For Your Business":
+        - heading "Amazon Business" [level=5]
+        - text: Everything For Your Business
+    - listitem:
+      - link "Amazon Fresh Groceries & More Right To Your Door":
+        - heading "Amazon Fresh" [level=5]
+        - text: Groceries & More Right To Your Door
+    - listitem:
+      - link "AmazonGlobal Ship Orders Internationally":
+        - heading "AmazonGlobal" [level=5]
+        - text: Ship Orders Internationally
+    - listitem:
+      - link "Home Services Experienced Pros Happiness Guarantee":
+        - heading "Home Services" [level=5]
+        - text: Experienced Pros Happiness Guarantee
+    - listitem:
+      - link "Amazon Web Services Scalable Cloud Computing Services":
+        - heading "Amazon Web Services" [level=5]
+        - text: Scalable Cloud Computing Services
+    - listitem:
+      - link "Audible Listen to Books & Original Audio Performances":
+        - heading "Audible" [level=5]
+        - text: Listen to Books & Original Audio Performances
+    - listitem:
+      - link "Box Office Mojo Find Movie Box Office Data":
+        - heading "Box Office Mojo" [level=5]
+        - text: Find Movie Box Office Data
+  - list:
+    - listitem:
+      - link "Goodreads Book reviews & recommendations":
+        - heading "Goodreads" [level=5]
+        - text: Book reviews & recommendations
+    - listitem:
+      - link "IMDb Movies, TV & Celebrities":
+        - heading "IMDb" [level=5]
+        - text: Movies, TV & Celebrities
+    - listitem:
+      - link "IMDbPro Get Info Entertainment Professionals Need":
+        - heading "IMDbPro" [level=5]
+        - text: Get Info Entertainment Professionals Need
+    - listitem:
+      - link "Kindle Direct Publishing Indie Digital & Print Publishing Made Easy":
+        - heading "Kindle Direct Publishing" [level=5]
+        - text: Indie Digital & Print Publishing Made Easy
+    - listitem:
+      - link "Amazon Photos Unlimited Photo Storage Free With Prime":
+        - heading "Amazon Photos" [level=5]
+        - text: Unlimited Photo Storage Free With Prime
+    - listitem:
+      - link "Prime Video Direct Video Distribution Made Easy":
+        - heading "Prime Video Direct" [level=5]
+        - text: Video Distribution Made Easy
+    - listitem:
+      - link "Shopbop Designer Fashion Brands":
+        - heading "Shopbop" [level=5]
+        - text: Designer Fashion Brands
+  - list:
+    - listitem:
+      - link "Amazon Resale Great Deals on Quality Used Products":
+        - heading "Amazon Resale" [level=5]
+        - text: Great Deals on Quality Used Products
+    - listitem:
+      - link "Whole Foods Market America’s Healthiest Grocery Store":
+        - heading "Whole Foods Market" [level=5]
+        - text: America’s Healthiest Grocery Store
+    - listitem:
+      - link "Woot! Deals and Shenanigans":
+        - heading "Woot!" [level=5]
+        - text: Deals and Shenanigans
+    - listitem:
+      - link "Zappos Shoes & Clothing":
+        - heading "Zappos" [level=5]
+        - text: Shoes & Clothing
+    - listitem:
+      - link "Ring Smart Home Security Systems":
+        - heading "Ring" [level=5]
+        - text: Smart Home Security Systems
+    - listitem:
+      - link "eero WiFi Stream 4K Video in Every Room":
+        - heading "eero WiFi" [level=5]
+        - text: Stream 4K Video in Every Room
+    - listitem:
+      - link "Blink Smart Security for Every Home":
+        - heading "Blink" [level=5]
+        - text: Smart Security for Every Home
+  - list:
+    - listitem:
+      - link "Neighbors App Real-Time Crime & Safety Alerts":
+        - heading "Neighbors App" [level=5]
+        - text: Real-Time Crime & Safety Alerts
+    - listitem:
+      - link "PillPack Pharmacy Simplified":
+        - heading "PillPack" [level=5]
+        - text: Pharmacy Simplified
+    - listitem:
+      - link "Amazon Renewed Refurbished tech you can trust":
+        - heading "Amazon Renewed" [level=5]
+        - text: Refurbished tech you can trust
+- list:
+  - listitem:
+    - link "Conditions of Use"
+  - listitem:
+    - link "Privacy Notice"
+  - listitem:
+    - link "Consumer Health Data Privacy Disclosure"
+  - listitem:
+    - link "Your Ads Privacy Choices"
+  - listitem
+- text: © 1996-2026, Amazon.com, Inc. or its affiliates
+```
+
+# Test source
+
+```ts
+   1 | // homePage.js
+   2 | const { expect } = require("@playwright/test");
+   3 | const { loadConfig } = require("../utils/loadConfig");
+   4 |
+   5 | exports.HomePage = class HomePage {
+   6 |   /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |   constructor(page) {
+  10 |     this.page = page;
+  11 |   }
+  12 |
+  13 |   async goto() {
+  14 |     const environment = process.env.ENVIRONMENT;
+  15 |     // const locale = process.env.LOCALE;
+  16 |     const realm = process.env.REALM;
+  17 |     const config = loadConfig(realm, environment);
+  18 |     const url = config.baseUrl;
+  19 |     console.log(config);
+  20 |     await this.page.goto(url);
+  21 |     await this.page.waitForLoadState("domcontentloaded");
+  22 |     await this.page.waitForLoadState("load");
+> 23 |     await this.page.waitForLoadState("networkidle");
+     |                     ^ Error: page.waitForLoadState: Test timeout of 30000ms exceeded.
+  24 |   }
+  25 |
+  26 |   async checkH1HeadingKO() {
+  27 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  28 |   }
+  29 |
+  30 |   async checkH1HeadingOK() {
+  31 |     await expect(this.page.locator("#signup-modal-title")).toBeHidden();
+  32 |   }
+  33 |
+  34 |   async failedTest() {
+  35 |     expect(1).toEqual(2);
+  36 |   }
+  37 |
+  38 |   async envTest(envVar) {
+  39 |     expect(envVar).toStrictEqual("Env test");
+  40 |   }
+  41 | };
+  42 |
+```
